@@ -24,13 +24,13 @@
     `<div class="g-heading"><div><p class="eyebrow">${en}</p><h2>${title}</h2></div><p>${desc}</p></div>`;
   function homeSignal(id, note) {
     const x = m(id);
-    return `<article class="g-home-signal" data-growth-metric="${{id}">
-      <span>${{esc(x.platform)} · ${{note}</span>
-      <button type="button" data-evidence="${{id}" aria-label="${{esc(x.label)} ${{esc(x.display)}，查看数据口径">
-        <strong>${{esc(x.display)}</strong>
-        <b>${{esc(x.label)}</b>
+    return `<article class="g-home-signal" data-growth-metric="${id}">
+      <span>${esc(x.platform)} · ${note}</span>
+      <button type="button" data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，查看数据口径">
+        <strong>${esc(x.display)}</strong>
+        <b>${esc(x.label)}</b>
       </button>
-      <small>${{esc(x.window)}</small>
+      <small>${esc(x.window)}</small>
     </article>`;
   }
   function homeGrowthStory() {
@@ -67,7 +67,7 @@
       },
     ];
     return `<section class="g-module g-home-story" id="growth-story">
-      ${{header(
+      ${header(
         "SOCIAL GROWTH / MANAGEMENT STORY",
         "从账号起盘，到内容与社群增长。",
         "2025.04–2026.09 担任社媒负责人 / 管理组长，负责 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容策略和团队交付。",
@@ -80,18 +80,18 @@
           <div class="g-home-owner-tags"><i>Facebook</i><i>Instagram</i><i>Facebook Group</i><i>Shopify 承接</i></div>
         </div>
         <div class="g-home-signals">
-          ${{signals.map(([id, note]) => homeSignal(id, note)).join("")}
+          ${signals.map(([id, note]) => homeSignal(id, note)).join("")}
         </div>
       </div>
       <div class="g-home-stage-grid">
-        ${{stages.map((s) => `<article class="g-home-stage">
-          <span>${{s.no} / ${{s.label}</span>
-          <h3>${{s.title}</h3>
-          <p>${{s.copy}</p>
-          ${{s.proof ? `<div class="g-home-stage-proof">
+        ${stages.map((s) => `<article class="g-home-stage">
+          <span>${s.no} / ${s.label}</span>
+          <h3>${s.title}</h3>
+          <p>${s.copy}</p>
+          ${s.proof ? `<div class="g-home-stage-proof">
             <strong>0 → 8K+</strong>
             <span>账号规模阶段记录 · 字段与日期待核</span>
-            ${{evidence("fb-size")}
+            ${evidence("fb-size")}
           </div>` : ""}
         </article>`).join("")}
       </div>
@@ -267,13 +267,13 @@
         <p class="eyebrow">B2B / FACEBOOK AUDIENCE</p>
         <h3>任期内的粉丝规模记录</h3>
         <div class="g-endpoints">
-          <span><b>${{esc(x.comparisonValues.start)}</b><small>任职早期记录</small></span>
+          <span><b>${esc(x.comparisonValues.start)}</b><small>任职早期记录</small></span>
           <i aria-hidden="true">→</i>
-          <span><b>${{esc(x.comparisonValues.end)}</b><small>任职后期记录</small></span>
+          <span><b>${esc(x.comparisonValues.end)}</b><small>任职后期记录</small></span>
         </div>
-        <p>${{esc(x.window)}</p>
+        <p>${esc(x.window)}</p>
         <p>此项属于 B2B 任期账号，不与海外消费品牌社媒矩阵合并；账号范围和采样日期未注明，不反算净增量或增长率。</p>
-        ${{evidence("fb-follower-scale")}
+        ${evidence("fb-follower-scale")}
       </article>
     </section>`;
   }
@@ -449,15 +449,15 @@
   }
   function growth() {
     return `<section class="g-module g-growth" id="growth-overview">
-      ${{header(
+      ${header(
         "GROWTH / EVIDENCE FIRST",
         "社媒增长：历史变化与页面表现",
         "按平台、账号和统计阶段阅读已有记录；不同指标不放在同一尺度上比较，也不把阶段汇总推算成月度趋势。",
       )}
-      ${{historicalGrowth()}
-      ${{facebookSnapshot()}
-      ${{trends()}
-      ${{anchors()}
+      ${historicalGrowth()}
+      ${facebookSnapshot()}
+      ${trends()}
+      ${anchors()}
     </section>`;
   }
   function editorial() {
@@ -472,7 +472,7 @@
   }
   function social() {
     return `<section class="g-module g-social-story" id="social-foundation">
-      ${{header(
+      ${header(
         "SOCIAL MEDIA MANAGEMENT / 2025.04—2026.09",
         "从账号矩阵到内容经营，建立一套可持续的社媒管理机制。",
         "负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略与小组交付；将平台定位、内容规划、活动组织、社群反馈和数据复盘连接起来。",
@@ -486,22 +486,64 @@
         <span>OPERATING JOURNEY / 管理链路</span>
         <h3>八个管理节点，把策略转成日常交付。</h3>
       </div>
-      <div class="g-foundation">${{socialSteps.map((x, i) => `<article>
-        <span>0${{i + 1} / ${{x[0]}</span>
-        <h3>${{x[1]}</h3>
-        <p>${{x[2]}</p>
-        ${{x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号规模记录 · 字段与日期待核</small>${{evidence("fb-size")}</div>` : ""}
-        <small>${{P.statuses[x[3]]}</small>
+      <div class="g-foundation">${socialSteps.map((x, i) => `<article>
+        <span>0${i + 1} / ${x[0]}</span>
+        <h3>${x[1]}</h3>
+        <p>${x[2]}</p>
+        ${x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号规模记录 · 字段与日期待核</small>${evidence("fb-size")}</div>` : ""}
+        <small>${P.statuses[x[3]]}</small>
       </article>`).join("")}</div>
       <div class="g-social-pillar-block">
         <div><span>CONTENT PILLARS / 内容支柱</span><h3>五类内容，围绕用户任务组织。</h3></div>
-        <div class="g-pillars">${{["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${{i + 1}</b>${{x}</span>`).join("")}</div>
+        <div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div>
       </div>
     </section>
-    ${{editorial()}
-    ${{campaignWall()}
-    ${{communitySummary()}
-    ${{socialLoop()}
+    ${editorial()}
+    ${campaignWall()}
+    ${communitySummary()}
+    ${socialLoop()}`;
+  }
+  function communitySummary() {
+    const ids = ["group", "group-members", "group-posters", "group-viewers"];
+    return `<section class="g-module g-social-community-summary" id="social-community-summary">
+      ${header(
+        "FACEBOOK GROUP / COMMUNITY",
+        "把社群做成用户参与与问题反馈的入口。",
+        "围绕教程、投票、清洁挑战、UGC 投稿和问题答疑组织参与；把高频问题回流到 FAQ、内容选题与产品信息核验。",
+      )}
+      <div class="g-social-community-grid">${ids.map((id) => {
+        const x = m(id);
+        return `<article class="g-social-community-card" data-growth-metric="${id">
+          <span>${esc(x.label)</span>
+          <strong>${esc(x.display) <small>${esc(x.unit)</small></strong>
+          <p>${esc(x.window)</p>
+          ${evidence(id)
+        </article>`;
+      }).join("")}</div>
+      <p class="g-social-community-note">
+        +227 为独立阶段新增；4,009 为采集日期未注明的成员快照；146 与 34,387 为 2025/11/02–2026/09/30 所选范围的平台字段。统计窗口与字段不同，不合并为增长率或活跃率。
+      </p>
+      <div class="g-social-community-actions">
+        <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
+        <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
+      </div>
+    </section>`;
+  }
+  function socialLoop() {
+    return `<section class="g-module g-social-loop">
+      ${header(
+        "PERFORMANCE REVIEW / CONTINUOUS IMPROVEMENT",
+        "复盘的终点，是下一轮内容决策。",
+        "把平台表现、链接动作与社群反馈拆开观察，再回到内容规划；不将点击直接解释为成交，也不将反馈样本外推为普遍结论。",
+      )}
+      ${pathSteps([
+        ["读取平台信号", "分别看曝光 / 浏览、互动与链接点击"],
+        ["归类用户反馈", "整理评论、社群问题与常见使用场景"],
+        ["核验产品事实", "与产品及电商协同确认信息和承接"],
+        ["回流内容计划", "更新 FAQ、内容支柱与下一轮选题"],
+      ])}
+    </section>`;
+  }
   function topicPanel(index = 0) {
     const t = topics[index];
     return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p><small>文案样例为本次概念创作，非历史帖子、真实用户发言或活动成果。</small></div>`;
