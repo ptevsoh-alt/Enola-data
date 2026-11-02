@@ -1,0 +1,222 @@
+{
+  "passed": 54,
+  "total": 54,
+  "checks": [
+    {
+      "name": "approved data and stylesheet unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "all approved app copy and markup retained with only integration and modal cleanup insertions",
+      "status": "PASS"
+    },
+    {
+      "name": "index copy retained with stylesheet and script additions only",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: home",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: cases",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/gtm",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/social",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/community",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/brand",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/operations",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/seo",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/amazon",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/creative",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/crm",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/creator",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/social",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/community",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/search",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/commerce",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: experience",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: capabilities",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: about",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: contact",
+      "status": "PASS"
+    },
+    {
+      "name": "eight social management stages",
+      "status": "PASS"
+    },
+    {
+      "name": "editorial and campaign planning separated",
+      "status": "PASS"
+    },
+    {
+      "name": "no fabricated trend path or series",
+      "status": "PASS"
+    },
+    {
+      "name": "Instagram filter preserves metric identities",
+      "status": "PASS"
+    },
+    {
+      "name": "new KPI invokes existing evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "route closes evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "same case chapter route closes image modal",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 0",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 1",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 2",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 3",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 4",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 5",
+      "status": "PASS"
+    },
+    {
+      "name": "community feedback and onboarding present",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 0",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 0",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 1",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 1",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 2",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 2",
+      "status": "PASS"
+    },
+    {
+      "name": "route closes added campaign modal",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate accepts complete dated data contract",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects missing scope",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects unverified source",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects one aggregate",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects duplicate date",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects non-numeric",
+      "status": "PASS"
+    },
+    {
+      "name": "no runtime exceptions",
+      "status": "PASS"
+    }
+  ]
+}

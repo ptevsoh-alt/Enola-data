@@ -1,0 +1,30 @@
+[
+  {
+    "width": 1440,
+    "chartPass": true,
+    "cards": 4,
+    "decorated": 2,
+    "casesPass": true
+  },
+  {
+    "width": 390,
+    "chartPass": true,
+    "cards": 4,
+    "decorated": 2,
+    "casesPass": true
+  },
+  {
+    "width": 375,
+    "chartPass": true,
+    "cards": 4,
+    "decorated": 2,
+    "casesPass": true
+  },
+  {
+    "width": 360,
+    "chartPass": true,
+    "cards": 4,
+    "decorated": 2,
+    "casesPass": true
+  }
+]

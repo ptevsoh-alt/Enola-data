@@ -3,7 +3,7 @@ on:
   push:
     branches: [main]
   pull_request:
-    branches: [main]
+    branches: [main, refactor/visual-case-portfolio-20261102]
   workflow_dispatch:
 permissions:
   contents: read
