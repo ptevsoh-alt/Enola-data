@@ -181,18 +181,18 @@
       "fb-follows",
     ];
     return `<section class="g-snapshot-chart" aria-label="Facebook 页面关键数据">
-      ${{header(
+      ${header(
         "FACEBOOK PAGE / 后台截图记录",
         "Facebook 页面关键数据",
         "浏览量、内容互动、链接点击、页面访问和关注次数分别展示，帮助看清内容触达、用户互动与导流表现。",
       )}
-      <div class="g-snapshot-grid">${{ids
+      <div class="g-snapshot-grid">${ids
         .map((id) => {
           const x = m(id);
           const change = x.changeDisplay
             ? `<div class="g-snapshot-change">
                 <span>后台显示变化</span>
-                <strong>${{esc(x.changeDisplay)}</strong>
+                <strong>${esc(x.changeDisplay)}</strong>
                 <small>比较周期未注明</small>
               </div>`
             : `<div class="g-snapshot-change is-muted">
@@ -200,18 +200,18 @@
                 <strong>未提供</strong>
                 <small>截图未提供可核验的变化值</small>
               </div>`;
-          return `<article class="g-snapshot-card" data-growth-metric="${{id}">
+          return `<article class="g-snapshot-card" data-growth-metric="${id}">
             <div class="g-snapshot-card-top">
-              <b>${{esc(x.label)}</b>
-              <small>${{esc(P.statuses[x.status])}</small>
+              <b>${esc(x.label)}</b>
+              <small>${esc(P.statuses[x.status])}</small>
             </div>
             <div class="g-snapshot-value">
-              <strong>${{esc(x.display)}</strong>
-              <span>${{esc(x.unit)}</span>
+              <strong>${esc(x.display)}</strong>
+              <span>${esc(x.unit)}</span>
             </div>
-            ${{change}
-            <p class="g-snapshot-period">统计范围：${{esc(x.window)}</p>
-            <button type="button" data-evidence="${{id}" aria-label="${{esc(x.label)}，查看字段定义与来源">查看字段定义与来源 ↗</button>
+            ${change}
+            <p class="g-snapshot-period">统计范围：${esc(x.window)}</p>
+            <button type="button" data-evidence="${id}" aria-label="${esc(x.label)}，查看字段定义与来源">查看字段定义与来源 ↗</button>
           </article>`;
         })
         .join("")}</div>
@@ -223,18 +223,18 @@
   function historyCard(id) {
     const x = m(id);
     const pending = x.status === "PENDING";
-    const value = id === "group" ? `${{x.display} 人` : x.display;
-    return `<article class="g-history-card" data-growth-metric="${{id}">
+    const value = id === "group" ? `${x.display} 人` : x.display;
+    return `<article class="g-history-card" data-growth-metric="${id}">
       <div class="g-history-meta">
-        <span>${{esc(x.platform)}</span>
-        <small class="${{pending ? "is-pending" : "is-documented"}">${{esc(P.statuses[x.status])}</small>
+        <span>${esc(x.platform)}</span>
+        <small class="${pending ? "is-pending" : "is-documented"}">${esc(P.statuses[x.status])}</small>
       </div>
-      <button type="button" class="g-history-main" data-evidence="${{id}" aria-label="${{esc(x.label)} ${{esc(value)}，查看证据">
-        <span>${{esc(x.label)}</span>
-        <strong>${{esc(value)}</strong>
+      <button type="button" class="g-history-main" data-evidence="${id}" aria-label="${esc(x.label)} ${esc(value)}，查看证据">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(value)}</strong>
       </button>
-      <p>${{esc(x.window)}</p>
-      <small>${{esc(x.limits)}</small>
+      <p>${esc(x.window)}</p>
+      <small>${esc(x.limits)}</small>
     </article>`;
   }
   function historicalGrowth() {
@@ -260,19 +260,19 @@
       },
     ];
     return `<section class="g-history-growth">
-      ${{header(
+      ${header(
         "HISTORICAL GROWTH / 过往项目",
         "过往项目中的增长记录",
         "以下数据来自不同平台、账号和统计阶段，按原始记录分别呈现，不合并成一条增长曲线，也不按百分比排名。",
       )}
-      <div class="g-history-groups">${{groups
+      <div class="g-history-groups">${groups
         .map(
           (g) => `<section class="g-history-group">
             <div class="g-history-group-heading">
-              <h3>${{g.title}</h3>
-              <p>${{g.note}</p>
+              <h3>${g.title}</h3>
+              <p>${g.note}</p>
             </div>
-            <div class="g-history-cards">${{g.ids.map(historyCard).join("")}</div>
+            <div class="g-history-cards">${g.ids.map(historyCard).join("")}</div>
           </section>`,
         )
         .join("")}</div>
@@ -353,18 +353,18 @@
       "ig-event-engagement-change",
     ];
     return `<section class="g-module g-growth" id="growth-overview">
-      ${{header(
+      ${header(
         "GROWTH / EVIDENCE FIRST",
         home ? "把阶段成果与增长信号放在前面。" : "从历史变化到页面表现，读懂社媒增长。",
         home
           ? "历史阶段总量与变化记录分开展示，每项数据保留来源和证据入口。"
           : "先看过往阶段的变化记录，再看 Facebook 页面汇总值；不同指标分别呈现，不放在同一尺度上比较。",
       )}
-      ${{home ? `<div class="g-kpi-grid">${{homeMetrics.map(metric).join("")}</div>` : ""}
-      ${{stage()}
-      ${{home ? "" : historicalGrowth() + facebookSnapshot()}
-      ${{trends()}
-      ${{home ? "" : anchors()}
+      ${home ? `<div class="g-kpi-grid">${homeMetrics.map(metric).join("")}</div>` : ""}
+      ${stage()}
+      ${home ? "" : historicalGrowth() + facebookSnapshot()}
+      ${trends()}
+      ${home ? "" : anchors()}
     </section>`;
   }
   function editorial() {
