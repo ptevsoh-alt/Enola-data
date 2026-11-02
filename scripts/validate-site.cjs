@@ -7,6 +7,12 @@ check('six business domains',Object.keys(p.domains).length===6);
 check('38 unique metrics',p.metrics.length===38&&new Set(p.metrics.map(m=>m.id)).size===38);
 check('all metric-to-case links resolve',p.metrics.every(m=>p.cases.some(c=>c.id===m.caseId)));
 check('all case metric references resolve',p.cases.every(c=>c.metrics.every(id=>p.metrics.some(m=>m.id===id))));
+check('10 case storylines with four stages',p.caseNarratives&&p.cases.length===10&&p.cases.every(c=>p.caseNarratives[c.id]?.stages?.length===4));
+check('case evidence groups resolve and cover case metrics',p.cases.every(c=>{const ids=(p.caseNarratives?.[c.id]?.evidenceGroups||[]).flatMap(g=>g.metrics||[]);return ids.length===c.metrics.length&&new Set(ids).size===ids.length&&c.metrics.every(id=>ids.includes(id))&&ids.every(id=>p.metrics.some(m=>m.id===id));}));
+check('case narrative and data center are cross-linked',app.includes('domain-case-bridge')&&app.includes('case-evidence-group')&&app.includes('从数据回到业务动作'));
+check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
+check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
+
 check('all capability links resolve',p.capabilities.every(c=>p.cases.some(x=>x.id===c[3])));
 check('all experience links resolve',p.experiences.every(c=>p.cases.some(x=>x.id===c.caseId)));
 const expectedExperience=[['2025.04—2026.09','碳宝贝科技有限公司','社媒负责人 / 社媒管理组长'],['2023.11—2025.03','瑞音博科技有限公司','海外渠道 / 市场推广'],['2022.07—2023.10','韵衫科技有限公司','亚马逊运营专员'],['2020.12—2022.06','传盛科技有限公司','资深亚马逊运营专员']];
