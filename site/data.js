@@ -8,7 +8,7 @@ window.PORTFOLIO = {
   {id:'visits',domain:'social',label:'访问',value:31000,display:'31K',unit:'次',platform:'Meta（字段待确认）',window:'2025 年阶段汇总（简历记录）',status:'PENDING',source:'历史项目阶段数据汇总',definition:'历史汇总中的访问次数；目前无法确认对应主页访问、网站访问或其他平台字段。',limits:'不换算为网站会话或独立访客。',caseId:'social'},
   {id:'follows',domain:'social',label:'关注',value:5795,display:'5,795',unit:'待核',platform:'Meta（字段待确认）',window:'2025 年阶段汇总（简历记录）',status:'PENDING',source:'历史项目阶段数据汇总',definition:'历史汇总中的关注数；目前无法确认是新增关注、净增关注还是账号存量。',limits:'不与 Facebook 账号规模 8K+ 或其他平台关注数据合并。',caseId:'social'},
   {id:'fb-views',domain:'social',label:'Facebook 页面浏览量',value:1382000,display:'138.2万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',definition:'后台显示的“浏览量”汇总值，沿用平台原字段；不等同于曝光、覆盖人数或独立访客。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-viewers',domain:'social',label:'Facebook 浏览人数',value:null,display:'--',unit:'未提供',platform:'Facebook 页面分析',window:'截图未标注完整统计周期。',status:'PENDING',source:'Facebook 页面分析后台截图记录（原图不公开）；截图数值显示“--”。',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',definition:'后台“浏览人数”字段在截图中显示为“--”，没有可展示的有效数值。',limits:'当前截图没有提供该项数值，因此不以 0 代替。',caseId:'social',fieldVerification:'PENDING'},
+  {id:'fb-viewers',domain:'social',label:'Facebook 浏览人数',value:null,display:'--',unit:'未提供',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'PENDING',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）；截图数值显示“--”。',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',definition:'后台“浏览人数”字段在截图中显示为“--”，没有可展示的有效数值。',limits:'当前截图没有提供该项数值，因此不以 0 代替。',caseId:'social',fieldVerification:'PENDING'},
   {id:'fb-content-interactions',domain:'social',label:'Facebook 内容互动次数',value:53000,display:'5.3万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1,358.3%',changeNote:'截图显示 +1,358.3%；未标注比较周期，不解释为同比或环比。',definition:'Facebook 页面分析后台显示的“内容互动次数”汇总值，沿用平台原字段，表示互动次数，不代表互动人数。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与 Meta 2025 年阶段互动数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
   {id:'fb-link-clicks',domain:'social',label:'Facebook 链接点击量',value:7364,display:'7,364',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1.7万%',changeNote:'截图显示 +1.7 万%；未标注比较周期，不解释为同比或环比。',definition:'后台显示的链接点击次数。截图另显示 3 月 6 日单日点击 30 次，该单日记录不代表全期趋势。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
   {id:'fb-visits',domain:'social',label:'Facebook 页面访问量',value:54000,display:'5.4万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1,517.8%',changeNote:'截图显示 +1,517.8%；未标注比较周期，不解释为同比或环比。',definition:'后台显示的“访问量”汇总值，沿用平台原字段。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
@@ -54,6 +54,383 @@ window.PORTFOLIO = {
  {id:'creative',no:'09',title:'创意策略与视频内容质量管理',subtitle:'Creative / Video',category:'Creative / TVC',kind:'special',status:'CONCEPT',image:3,role:'参与品牌宣传片、产品视频和演示内容的创意策划与脚本 / 视觉审核；本专题以概念工作物展示创意管理方法。',scope:'真实经历支持品牌视频与产品演示内容协同；当前分镜和概念视觉属于能力展示样张，不是历史已投放成品。',problem:'创意内容既要吸引注意，也要让用户理解产品价值。若只有情绪或视觉冲击，没有清晰的使用场景、产品证明和下一步，素材很难服务于品牌教育或购买决策。',decision:'先明确受众、传播阶段和内容任务，再决定采用情绪叙事、功能演示、UGC 还是产品对比；每个镜头都要承担信息、情绪或证明任务，不能为了画面变化牺牲产品事实和操作连续性。',plan:'按“传播目标—核心 Hook—故事 / 演示逻辑—脚本与分镜—关键帧—版本适配—发布前审核”组织创意。为每个镜头明确人物、场景、动作、产品状态、字幕、旁白和 CTA。',resources:'协调产品、文案、设计、视频及外部制作方；产品端确认功能与操作条件，创意侧负责叙事和画面，营销侧审核受众适配、卖点准确性、品牌一致性和渠道版本。',execution:'结合品牌宣传片和产品演示经历，展示如何把卖点转为开场 Hook、场景冲突、产品行动、结果证明和 CTA；通过脚本评审、分镜检查、字幕校对及横竖屏适配控制内容质量。',result:'本页交付创意 Brief、分镜结构和内容验收方法，属于概念 / 重构工作物。没有可核验的历史播放量、完播率、点击或销售结果，不作为已投放案例。',review:'创意效果需结合素材版本、投放受众、平台、预算、播放窗口和转化目标评估。当前重点展示创意判断与审核能力，不以概念分镜推导历史广告效果。',layout:'creative',work:'storyboard',metrics:[]},
  {id:'crm',no:'10',title:'EDM 与用户生命周期规划',subtitle:'CRM / Lifecycle',category:'CRM / Lifecycle',kind:'special',status:'CONCEPT',role:'具备 EDM 选题与站点内容协同经历；本专题展示用户旅程、触发规则、频控和会员机制的规划能力。',scope:'简历支持 SEO、Pillar Blog、FAQ 与 EDM 选题协同；自动化 Flow、会员系统启用、发送结果和复购收入没有可核实证据，按概念方案呈现。',problem:'不同用户处于不同决策阶段，统一发送同一促销信息容易造成打扰、重复触达和优惠冲突。生命周期运营需要先厘清用户状态、同意记录、触发条件、发送责任与排除规则。',decision:'先建立单一的用户状态与发送责任，再设计 Welcome、Browse / Cart、Post-Purchase、Winback 等触发路径；Consent、频控、排除条件和优惠规则必须先于自动化上线确认。',plan:'按“用户状态识别—触发条件—受众与排除—内容波次—站内承接—发送 QA—结果复盘”规划；积分、VIP 和 Referral 规则分别定义获取、使用、到期、奖励与反作弊条件。',resources:'需要 Shopify 订单与客户数据、邮件平台、同意记录、产品信息、客服和运营负责人共同确认；没有核验系统权限、DNS、发送域名和 Flow 状态前，不声称已上线。',execution:'以用户旅程图、邮件主题与内容框架、触发条件、频控和会员规则展示规划方法；把社媒、Blog、FAQ 与商品页信息纳入内容一致性检查，避免邮件承诺与站点政策不一致。',result:'当前可展示生命周期旅程、邮件波次与会员机制的规划工作物；实际自动化发送、名单增长、复购率、留存率及会员收入暂无可核结果。',review:'正式上线前需完成发送域名与 DNS、Consent、名单治理、优惠冲突、频控、排除逻辑和测试发送验收。方案完成不等于系统启用，更不等于产生收入。',layout:'crm',work:'crm',metrics:['retention']}
  ],
+ caseNarratives:{
+  "gtm": {
+    "headline": "从用户购买顾虑出发，建立产品卖点与上市内容的统一表达。",
+    "summary": "将用户研究、产品定位、可信证明、渠道内容和上市协同连成一条工作链，让参数、用户利益与传播表达保持一致。",
+    "stages": [
+      {
+        "title": "识别购买任务",
+        "detail": "整理 Review / VOC、竞品功能与价格、站内搜索及社群问题，归纳目标人群、使用场景和购买顾虑。"
+      },
+      {
+        "title": "组织卖点与证明",
+        "detail": "按 FABA 建立特征、优势、用户利益与场景层级；用 FABE / RTB 匹配证明，并由产品端核验参数和适用边界。"
+      },
+      {
+        "title": "推进上市交付",
+        "detail": "围绕预热、上市、持续推广拆解 KV、演示视频、FAQ、商品页和 Creator Brief，明确输入、审核与发布节点。"
+      },
+      {
+        "title": "检视阶段表现",
+        "detail": "参与 4 条核心产品线上市传播；简历记录相关内容上线期间销量约 +3%，但未提供对照期与归因数据。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "产品上市阶段表现",
+        "description": "简历记录相关产品内容上线期间销量约 +3%。该数据作为阶段结果呈现，不推断单一素材或单一渠道贡献。",
+        "metrics": [
+          "product-sales-stage"
+        ]
+      }
+    ],
+    "evidenceNote": "约 +3% 是简历记录的产品上线阶段销量变化；产品范围、对照期和归因方式未注明，不反推增量销量或营销 ROI。"
+  },
+  "social": {
+    "headline": "把 Facebook、Instagram 与社群放进同一套内容经营机制，而不是重复发帖。",
+    "summary": "按平台角色配置内容任务，以季度主题、月度日历、周度审核和月度复盘管理内容交付，并将评论与社群问题回流到选题和 FAQ。",
+    "stages": [
+      {
+        "title": "明确平台任务",
+        "detail": "Facebook 承担品牌信息与链接导流；Instagram 承接产品视觉演示和活动内容；Facebook Group 用于用户交流与问题收集。"
+      },
+      {
+        "title": "建立内容支柱",
+        "detail": "围绕产品演示、家庭清洁场景、教程与 FAQ、互动活动和 UGC 组织内容，避免不同平台简单复制同一条素材。"
+      },
+      {
+        "title": "组织团队交付",
+        "detail": "季度确定传播主题，月度拆解内容日历；安排选题与任务分工，审核脚本、视觉和产品事实，并协调产品、设计、视频、电商及 Creator。"
+      },
+      {
+        "title": "回看传播结果",
+        "detail": "分别观察展示、互动、访问、链接点击和关注变化；将平台反馈用于调整 CTA、FAQ 与下一轮选题，不把不同统计周期合并。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "Meta 2025 年阶段汇总",
+        "description": "反映该阶段的内容展示与互动规模；与 Facebook Page 后台截图数据分开展示。",
+        "metrics": [
+          "impressions",
+          "engagements"
+        ]
+      },
+      {
+        "title": "Facebook Page Insights 后台截图",
+        "description": "平台截图记录的浏览、内容互动、链接点击、访问和关注次数；账号名称未显示，完整统计周期未显示。",
+        "metrics": [
+          "fb-views",
+          "fb-content-interactions",
+          "fb-link-clicks",
+          "fb-visits",
+          "fb-follows"
+        ]
+      },
+      {
+        "title": "其他平台与历史阶段变化",
+        "description": "简历及历史项目记录的 Facebook 覆盖、链接点击和 Instagram 活动表现；比较窗口与账号范围未完整保留。",
+        "metrics": [
+          "engagement-change",
+          "fb-reach",
+          "fb-link-click-change",
+          "ig-event-engagement-change",
+          "ig-follower-change"
+        ]
+      }
+    ],
+    "evidenceNote": "三组数据的统计周期、账号范围和平台字段不一致。可分别观察展示规模、互动、访问、点击和关注变化，但不能合并成统一的 Meta 总量，也不能据此证明某一内容支柱带来的增量。"
+  },
+  "community": {
+    "headline": "把社群从成员规模管理，推进到参与、反馈与内容共创。",
+    "summary": "以教程、投票、清洁挑战和 UGC 投稿建立参与入口，再把高频问题整理为 FAQ 与下一轮内容选题；成员规模、查看人数和发帖评论人数分别观察。",
+    "stages": [
+      {
+        "title": "设计参与入口",
+        "detail": "围绕真实清洁问题组织教程、投票、清洁挑战和 UGC 投稿，让成员知道可以分享什么、如何参与。"
+      },
+      {
+        "title": "管理活动过程",
+        "detail": "明确活动主题、参与规则、投稿格式和审核条件；维护讨论与答疑，核对产品信息和展示结果。"
+      },
+      {
+        "title": "治理内容授权",
+        "detail": "将活动参与与品牌商业使用授权分开处理；确认使用平台、期限、范围、署名和撤回方式后再使用投稿。"
+      },
+      {
+        "title": "回流用户反馈",
+        "detail": "把高频问题沉淀为 FAQ 和内容选题，将使用场景与产品疑问反馈给相关团队。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "阶段成员新增",
+        "description": "历史简历记录的一个阶段新增人数；具体统计起止时间未注明。",
+        "metrics": [
+          "group"
+        ]
+      },
+      {
+        "title": "成员规模快照",
+        "description": "后台截图时显示的社群成员总数，不代表截图所选期间的新增人数。",
+        "metrics": [
+          "group-members"
+        ]
+      },
+      {
+        "title": "所选期间的参与与查看",
+        "description": "后台原字段分别记录发帖和评论人数、查看人数；两者不是发帖次数，也不直接构成活跃率。",
+        "metrics": [
+          "group-posters",
+          "group-viewers"
+        ]
+      }
+    ],
+    "evidenceNote": "+227 是独立阶段新增记录；4,009 是成员规模快照；146 与 34,387 是 2025/11/02–2026/09/30 所选范围内的不同平台字段。它们反映不同维度，不能相加或换算为社群活跃率。"
+  },
+  "brand": {
+    "headline": "先统一品牌主张与产品事实，再让不同渠道各自完成传播任务。",
+    "summary": "以品牌价值、用户利益、产品证明和视觉规范建立共同信息基础，再将 Social、PR、Creator、官网与展会触点分工。",
+    "stages": [
+      {
+        "title": "梳理品牌信息",
+        "detail": "明确品牌故事、核心价值、目标受众、产品利益和可引用的可信证明。"
+      },
+      {
+        "title": "建立传播结构",
+        "detail": "整理 Brand House、Message House、产品卖点、FAQ 与视觉规范，确保不同团队使用同一套事实。"
+      },
+      {
+        "title": "分配渠道任务",
+        "detail": "Social 负责持续沟通，PR 负责媒体信息，Creator 展示场景体验，官网与商品页承接产品问题和选型。"
+      },
+      {
+        "title": "管理资产交付",
+        "detail": "参与品牌故事、VI / Logo / IP、品牌画册、宣传片、产品演示、媒体资料和 Creator Brief 的内容协同与审核。"
+      }
+    ],
+    "evidenceGroups": [],
+    "evidenceNote": "可展示的交付包括品牌内容资产、产品传播素材、FAQ、媒体资料、Creator Brief 和跨渠道协同。当前没有可核验的媒体刊发数、Earned Reach 或 Share of Voice，因此不把社媒曝光写成 PR 成果。"
+  },
+  "operations": {
+    "headline": "把跨部门营销任务拆成有负责人、有输入、有验收的交付流程。",
+    "summary": "围绕目标、工作包、Owner、依赖、审核与发布 Gate 组织项目，提前核对产品事实、素材权限和页面承接，减少制作后段才暴露的问题。",
+    "stages": [
+      {
+        "title": "季度确定优先级",
+        "detail": "根据业务重点确定传播主题、主推产品和用户教育任务，明确阶段目标与资源优先级。"
+      },
+      {
+        "title": "月度拆分工作包",
+        "detail": "将主题拆成内容日历、项目 Brief、素材需求、负责人、审核人、交付日期和渠道 CTA。"
+      },
+      {
+        "title": "周度跟进质量",
+        "detail": "跟进脚本、设计、视频与产品审核；检查参数、事实主张、字幕、版权、链接、追踪和素材版本。"
+      },
+      {
+        "title": "复盘并更新机制",
+        "detail": "按交付节点、审核问题、版本变更、发布表现和跨部门依赖复盘，把重复问题回写 Brief 模板与审核清单。"
+      }
+    ],
+    "evidenceGroups": [],
+    "evidenceNote": "可确认的管理职责包括小组任务分配、创意评审、脚本与视觉审核、外部合作沟通及周 / 月复盘。团队人数、预算审批权限、准时交付率和效率提升数据未提供，因此案例聚焦真实管理动作与交付机制。"
+  },
+  "b2b": {
+    "headline": "从客户筛选到商务跟进，分层管理海外 B2B 获客过程。",
+    "summary": "结合客户类型、采购需求和产品适配度开展分层触达，使用 CRM / ERP 记录来源、意向、询盘阶段和下一步动作，并协同展会、报价与交付。",
+    "stages": [
+      {
+        "title": "研究与筛选客户",
+        "detail": "根据客户类型、采购场景、产品匹配度和需求信号筛选目标对象，区分普通触达与有效商机。"
+      },
+      {
+        "title": "分层触达与沟通",
+        "detail": "组合 Google、LinkedIn、Facebook、Instagram 和 EDM 进行客户触达，记录来源、回复、采购意向和下一步动作。"
+      },
+      {
+        "title": "推进询盘与履约",
+        "detail": "参与展会预热、现场沟通和会后跟进，协同需求确认、报价、合同、交期、回款及售前售后问题。"
+      },
+      {
+        "title": "按阶段复盘业务",
+        "detail": "分别观察潜客触达、邮件打开、线索转化、成交额和渠道受众增长，不把不同样本拼成未经验证的销售漏斗。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "客户触达与邮件沟通",
+        "description": "简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%；没有匹配的发送批次与客户去重口径。",
+        "metrics": [
+          "b2b-reach",
+          "b2b-email-open"
+        ]
+      },
+      {
+        "title": "线索与交易结果",
+        "description": "简历阶段记录线索转化约 3%、月度成交额约 30 万元；转化分母与成交核算口径未完整保留。",
+        "metrics": [
+          "b2b-lead-conversion",
+          "b2b-sales"
+        ]
+      },
+      {
+        "title": "渠道受众增长",
+        "description": "LinkedIn 月粉丝增长约 35%；Facebook 粉丝规模记录为 400+ 至 1,900+，不计算未提供日期的增长率。",
+        "metrics": [
+          "linkedin-follower-change",
+          "fb-follower-scale"
+        ]
+      }
+    ],
+    "evidenceNote": "触达、邮件打开、线索转化和成交额来自任期阶段记录，但没有匹配的发送批次、线索分母和月份。可分别说明客户开发链路的关键结果，不将这些值拼接为同一批客户的完整漏斗。"
+  },
+  "seo": {
+    "headline": "围绕搜索意图组织内容集群，让 Blog、FAQ 与商品页各自承担任务。",
+    "summary": "从关键词主题、用户疑问和购买顾虑出发，规划 Pillar Blog、细分文章、FAQ、商品页与 EDM 的内容关系，并明确页面承接。",
+    "stages": [
+      {
+        "title": "识别搜索需求",
+        "detail": "结合关键词主题、搜索意图、社媒评论和购买问题，确定用户在了解、比较和选型阶段的内容需求。"
+      },
+      {
+        "title": "规划主题集群",
+        "detail": "以 Pillar Blog 组织核心主题，细分文章回答具体问题，FAQ 处理高频疑虑，避免内容重复。"
+      },
+      {
+        "title": "连接站点触点",
+        "detail": "为内容标注目标查询、页面任务、内部链接和 CTA，并与 Shopify 商品页、FAQ 和 EDM 选题协同。"
+      },
+      {
+        "title": "分开衡量结果",
+        "detail": "自然搜索收入份额与 GSC 点击变化分别观察；内容目录规划不等于文章全部发布或已经带来收入。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "自然搜索收入结构",
+        "description": "历史站点渠道报告记录自然搜索收入份额 82.46%；统计窗口、归因模型和收入定义未完整保留。",
+        "metrics": [
+          "organic-share"
+        ]
+      },
+      {
+        "title": "Google 搜索点击变化",
+        "description": "历史 GSC 汇总记录点击环比约 +20%；两期月份和点击原值未提供，不绘制月度趋势。",
+        "metrics": [
+          "gsc"
+        ]
+      }
+    ],
+    "evidenceNote": "82.46% 反映自然搜索渠道收入结构；约 +20% 反映 GSC 点击变化。统计月份和原始值未提供，不能将两项合并成搜索增长曲线，也不能证明尚未确认发布的内容规划直接带来该结果。"
+  },
+  "amazon": {
+    "headline": "把商品页、广告、库存和用户反馈放进同一套店铺经营复盘。",
+    "summary": "从 Listing 信息架构和搜索词研究切入，结合 CPC、促销、库存、售后和用户评价，分别判断流量、转化与经营质量。",
+    "stages": [
+      {
+        "title": "搭建商品信息",
+        "detail": "研究竞品和搜索词，规划 Listing、A+、Store 与 Posts 的卖点顺序、场景表达和信任要素。"
+      },
+      {
+        "title": "管理搜索投放",
+        "detail": "建立 CPC 关键词结构，结合曝光、CTR、CPC、CVR、ACOS 和销售反馈识别流量或页面问题。"
+      },
+      {
+        "title": "协同经营动作",
+        "detail": "同步促销、库存、买家沟通、售后和账户健康，避免只增加广告投入而忽略履约与利润。"
+      },
+      {
+        "title": "复盘经营质量",
+        "detail": "分别观察销售额、转化率、利润率、投诉率、好评率和站外新增粉丝，按各自定义解释结果。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "销售与转化表现",
+        "description": "简历阶段记录销售额约 +10%、转化率变化约 +5%、项目利润率约 30%；CVR 变化和利润率核算口径未完整注明。",
+        "metrics": [
+          "amazon-sales",
+          "amazon-cvr",
+          "amazon-profit-margin"
+        ]
+      },
+      {
+        "title": "用户反馈表现",
+        "description": "简历记录投诉率下降约 5%、好评率提升约 5%；变化是相对比例还是百分点未注明。",
+        "metrics": [
+          "amazon-complaint-change",
+          "amazon-review-change"
+        ]
+      },
+      {
+        "title": "站外受众积累",
+        "description": "站外社媒与 KOL / 服务商合作累计新增粉丝 800+；平台构成和去重方式未注明。",
+        "metrics": [
+          "amazon-offsite-followers"
+        ]
+      }
+    ],
+    "evidenceNote": "销售额、转化率、利润率、投诉率、好评率和站外粉丝是不同经营维度。CVR 与投诉 / 好评变化未明确百分点或相对比例，利润率成本范围未注明；不据此反推广告 ROI 或单一渠道贡献。"
+  },
+  "creative": {
+    "headline": "先确定传播任务，再决定 Hook、故事结构与产品证明方式。",
+    "summary": "将创意判断拆成受众、传播阶段、核心主张、镜头任务、产品事实和渠道版本，确保画面吸引力与信息准确性同时成立。",
+    "stages": [
+      {
+        "title": "明确传播任务",
+        "detail": "确认受众、传播阶段、用户问题、核心主张、证明方式和 CTA，再选择情绪叙事、功能演示、UGC 或对比形式。"
+      },
+      {
+        "title": "组织脚本与镜头",
+        "detail": "为每个镜头明确人物、场景、动作、产品状态、信息任务和情绪作用，串联 Hook、过程、证明与收束。"
+      },
+      {
+        "title": "控制产品事实",
+        "detail": "核对产品结构、操作条件、功能表现、字幕和旁白；镜头变化不能改变产品事实或制造不真实的使用结果。"
+      },
+      {
+        "title": "完成版本验收",
+        "detail": "针对横竖屏检查构图、字幕安全区、标题、声音、CTA 和落地页；概念分镜与历史投放成品分开呈现。"
+      }
+    ],
+    "evidenceGroups": [],
+    "evidenceNote": "本专题展示创意 Brief、脚本、分镜、关键帧和视频验收方法；分镜与概念视觉属于能力展示样张，不是历史已投放成品。没有可核验的播放量、完播率、点击或销售结果。"
+  },
+  "crm": {
+    "headline": "先治理用户状态、发送责任与 Consent，再规划生命周期触达。",
+    "summary": "围绕订阅、浏览、加购、购后、会员和召回状态规划触发路径，并把频控、排除条件、优惠规则与发送 Owner 放在上线前检查。",
+    "stages": [
+      {
+        "title": "识别用户状态",
+        "detail": "区分订阅、浏览、加购、购买后、会员和召回状态，明确每个状态可使用的数据与同意条件。"
+      },
+      {
+        "title": "规划触发路径",
+        "detail": "围绕 Welcome、Browse / Cart、Post-Purchase 和 Winback 设计触发条件、邮件波次与站内承接。"
+      },
+      {
+        "title": "建立发送治理",
+        "detail": "明确发送 Owner、受众排除、频控、Consent、优惠冲突和退订规则；先治理重复发送，再开放自动化。"
+      },
+      {
+        "title": "验收上线与结果",
+        "detail": "核验发送域名、DNS、平台权限、名单治理和测试发送；将方案、系统启用、实际发送与复购结果分开记录。"
+      }
+    ],
+    "evidenceGroups": [
+      {
+        "title": "生命周期运营结果",
+        "description": "当前没有实际邮件发送、复购或留存统计；该项仅作为待衡量指标，不代表 Flow 已启用。",
+        "metrics": [
+          "retention"
+        ]
+      }
+    ],
+    "evidenceNote": "目前可以展示用户旅程、邮件波次、触发条件、Consent、频控和会员规则规划；实际自动化发送、名单增长、复购、留存及会员收入暂无可核结果。"
+  }
+},
  capabilities:[
  ['品牌策略','Brand Strategy','从业务目标、目标市场和用户认知出发，明确品牌定位、价值主张、传播主线与可信证明；将品牌故事、视觉资产和产品信息转化为 Social、PR、商品页与活动可复用的统一表达。','brand'],
  ['市场与用户研究','Market & Consumer Insight','综合 Review / VOC、竞品功能与价格、搜索意图、社群问题及客户反馈，识别用户任务、购买障碍和高关注场景；把研究结论转成受众优先级、信息层级、内容选题和销售沟通材料。','gtm'],
