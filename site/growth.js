@@ -172,7 +172,7 @@
   function stage() {
     return `<div class="g-stage-grid"><article class="g-stage-card"><p class="eyebrow">SOCIAL FOUNDATION / 历史阶段记录</p><h3>从零建设，先交代口径。</h3><div class="g-endpoints"><span><b>0</b><small>起始规模记录</small></span><i aria-hidden="true">→</i><span><b>8K+</b><small>期末规模描述</small></span></div><p>${esc(m("fb-size").window)} · ${P.statuses[m("fb-size").status]}</p><p>对应账号字段待核。此为阶段记录，不是连续趋势；零基期不计算增长率。</p>${evidence("fb-size")}</article><article class="g-stage-card"><p class="eyebrow">B2B TENURE / 独立账号阶段</p><h3>阶段规模，保留原有下界。</h3><div class="g-endpoints"><span><b>400+</b><small>任职早期记录</small></span><i aria-hidden="true">→</i><span><b>1,900+</b><small>任职后期记录</small></span></div><p>${esc(m("fb-follower-scale").window)}</p><p>来自 B2B 任期，非北美消费品牌同一账号。没有精确原值、日期和账号范围，不反算净增量或增长率。</p>${evidence("fb-follower-scale")}</article></div>`;
   }
-  function snapshotChart() {
+  function facebookSnapshot() {
     const ids = [
       "fb-views",
       "fb-content-interactions",
@@ -180,21 +180,124 @@
       "fb-visits",
       "fb-follows",
     ];
-    const max = m("fb-views").value;
-    return `<figure class="g-snapshot-chart"><p class="eyebrow">FACEBOOK PAGE / 单期汇总</p><h3>内容表现的数量级，按原字段对照。</h3><p>独立字段的次数对照，非转化漏斗、非表现排名。完整窗口未显示，不与 Meta 汇总或其他平台合并。</p><div class="g-chart-scale"><span>0 次</span><span>约 69.1 万次</span><span>138.2 万次</span></div><div class="g-bar-grid">${ids
-      .map((id) => {
-        const x = m(id);
-        return `<button class="g-bar-row" data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，查看证据"><span>${esc(x.label)}</span><span class="g-bar-track" style="--value:${(x.value / max) * 100}%"><i></i></span><b>${esc(x.display)}</b></button>`;
-      })
-      .join(
-        "",
-      )}</div><div class="g-chart-legend"><span><i></i>深绿</span><span><i></i>赭色</span><small>交替区分字段行，不表示涨跌或表现等级</small></div><figcaption>来源：Facebook 页面分析后台截图记录（原图不公开）。线性轴，单位：次数；不同动作不能相加。点击每行查看原始定义、统计窗口与证据。</figcaption></figure>`;
+    return `<section class="g-snapshot-chart" aria-label="Facebook 页面关键数据">
+      ${{header(
+        "FACEBOOK PAGE / 后台截图记录",
+        "Facebook 页面关键数据",
+        "浏览量、内容互动、链接点击、页面访问和关注次数分别展示，帮助看清内容触达、用户互动与导流表现。",
+      )}
+      <div class="g-snapshot-grid">${{ids
+        .map((id) => {
+          const x = m(id);
+          const change = x.changeDisplay
+            ? `<div class="g-snapshot-change">
+                <span>后台显示变化</span>
+                <strong>${{esc(x.changeDisplay)}</strong>
+                <small>比较周期未注明</small>
+              </div>`
+            : `<div class="g-snapshot-change is-muted">
+                <span>历史对照</span>
+                <strong>未提供</strong>
+                <small>截图未提供可核验的变化值</small>
+              </div>`;
+          return `<article class="g-snapshot-card" data-growth-metric="${{id}">
+            <div class="g-snapshot-card-top">
+              <b>${{esc(x.label)}</b>
+              <small>${{esc(P.statuses[x.status])}</small>
+            </div>
+            <div class="g-snapshot-value">
+              <strong>${{esc(x.display)}</strong>
+              <span>${{esc(x.unit)}</span>
+            </div>
+            ${{change}
+            <p class="g-snapshot-period">统计范围：${{esc(x.window)}</p>
+            <button type="button" data-evidence="${{id}" aria-label="${{esc(x.label)}，查看字段定义与来源">查看字段定义与来源 ↗</button>
+          </article>`;
+        })
+        .join("")}</div>
+      <p class="g-snapshot-footnote">
+        来源：Facebook 页面分析后台截图记录（原图不公开）。截图未显示完整统计日期及比较周期；百分比沿用后台显示值，暂不标注同比或环比，也不反推前期绝对数。不同指标分别阅读，不作横向排名。
+      </p>
+    </section>`;
+  }
+  function historyCard(id) {
+    const x = m(id);
+    const pending = x.status === "PENDING";
+    const value = id === "group" ? `${{x.display} 人` : x.display;
+    return `<article class="g-history-card" data-growth-metric="${{id}">
+      <div class="g-history-meta">
+        <span>${{esc(x.platform)}</span>
+        <small class="${{pending ? "is-pending" : "is-documented"}">${{esc(P.statuses[x.status])}</small>
+      </div>
+      <button type="button" class="g-history-main" data-evidence="${{id}" aria-label="${{esc(x.label)} ${{esc(value)}，查看证据">
+        <span>${{esc(x.label)}</span>
+        <strong>${{esc(value)}</strong>
+      </button>
+      <p>${{esc(x.window)}</p>
+      <small>${{esc(x.limits)}</small>
+    </article>`;
+  }
+  function historicalGrowth() {
+    const groups = [
+      {
+        title: "Meta / Facebook",
+        note: "平台阶段变化记录",
+        ids: ["engagement-change", "fb-reach", "fb-link-click-change"],
+      },
+      {
+        title: "Instagram / LinkedIn",
+        note: "活动期与任期记录",
+        ids: [
+          "ig-event-engagement-change",
+          "ig-follower-change",
+          "linkedin-follower-change",
+        ],
+      },
+      {
+        title: "Facebook Group",
+        note: "社群成员增长记录",
+        ids: ["group", "group-month"],
+      },
+    ];
+    return `<section class="g-history-growth">
+      ${{header(
+        "HISTORICAL GROWTH / 过往项目",
+        "过往项目中的增长记录",
+        "以下数据来自不同平台、账号和统计阶段，按原始记录分别呈现，不合并成一条增长曲线，也不按百分比排名。",
+      )}
+      <div class="g-history-groups">${{groups
+        .map(
+          (g) => `<section class="g-history-group">
+            <div class="g-history-group-heading">
+              <h3>${{g.title}</h3>
+              <p>${{g.note}</p>
+            </div>
+            <div class="g-history-cards">${{g.ids.map(historyCard).join("")}</div>
+          </section>`,
+        )
+        .join("")}</div>
+      <p class="g-history-footnote">
+        注：部分历史记录未保留比较基期、起止日期或账号范围；标注“待核”的项目不作为已验证增长成果。点击数据可查看来源、定义与限制。
+      </p>
+    </section>`;
   }
   function anchors() {
     return `<div class="g-evidence-anchors"><div><p class="eyebrow">TIME ANCHORS / 活动与数据</p><h3>知道发生了什么，也说明尚缺什么。</h3></div><article><span>已知年份 / 2025</span><b>Meta 阶段汇总</b><p>曝光与互动有历史汇总，缺少逐期原值。</p>${evidence("impressions")}</article><article><span>活动节点 / 日期待补</span><b>Instagram 活动期互动变化</b><p>原记录 +1,870.9%；具体活动、比较基期与日期未注明。不绑定到任一概念活动。</p>${evidence("ig-event-engagement-change")}</article><article><span>社群窗口 / 2025/11/02–2026/09/30</span><b>查看与参与分别记录</b><p>平台截图所选分析范围，不是活动举办日期。无活动级归因。</p>${evidence("group-posters")}</article></div>`;
   }
   function trends() {
-    return `<section class="g-trend-status" aria-label="趋势数据状态"><div><p class="eyebrow">TREND READINESS</p><h3>增长判断，需要连续证据。</h3><p>现有 38 项指标没有可核验的连续日期序列，当前使用阶段与汇总展示。</p></div><div class="g-readiness"><span><b>01</b>日期与原值</span><span><b>02</b>同一账号与字段</span><span><b>03</b>一致窗口与来源</span><strong>连续数据待补 · 不绘制趋势线</strong></div></section>`;
+    return `<section class="g-trend-status" aria-label="趋势数据状态">
+      <div>
+        <p class="eyebrow">TREND READINESS</p>
+        <h3>时间趋势，等同口径数据齐备再画。</h3>
+        <p>现有资料缺少同一账号、同一字段、同一统计窗口的连续日期记录，因此暂不绘制折线；已有阶段变化按原始记录单独展示。</p>
+      </div>
+      <div class="g-readiness">
+        <span><b>01</b>连续日期与原值</span>
+        <span><b>02</b>同一账号与字段</span>
+        <span><b>03</b>一致统计窗口</span>
+        <strong>连续数据待补 · 不绘制趋势线</strong>
+      </div>
+    </section>`;
   }
   const platformGroups = {
     Meta: ["impressions", "engagements", "er"],
@@ -243,7 +346,26 @@
     )}<p class="caption">社群反馈 → 用户问题归类 → 产品事实核对 → FAQ / 内容选题 → 下一轮讨论与验证。</p></section>`;
   }
   function growth(home = false) {
-    return `<section class="g-module g-growth" id="growth-overview">${header("GROWTH / EVIDENCE FIRST", home ? "让增长信号成为视觉焦点。" : "阶段变化与内容表现。", "汇总、快照、变化率分开呈现；每张卡保留原始窗口和证据入口。")}<div class="g-kpi-grid">${(home ? ["impressions", "engagements", "fb-reach", "ig-event-engagement-change"] : ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-follows"]).map(metric).join("")}</div>${stage()}${home ? "" : snapshotChart()}${trends()}${home ? "" : anchors()}</section>`;
+    const homeMetrics = [
+      "impressions",
+      "engagements",
+      "engagement-change",
+      "ig-event-engagement-change",
+    ];
+    return `<section class="g-module g-growth" id="growth-overview">
+      ${{header(
+        "GROWTH / EVIDENCE FIRST",
+        home ? "把阶段成果与增长信号放在前面。" : "从历史变化到页面表现，读懂社媒增长。",
+        home
+          ? "历史阶段总量与变化记录分开展示，每项数据保留来源和证据入口。"
+          : "先看过往阶段的变化记录，再看 Facebook 页面汇总值；不同指标分别呈现，不放在同一尺度上比较。",
+      )}
+      ${{home ? `<div class="g-kpi-grid">${{homeMetrics.map(metric).join("")}</div>` : ""}
+      ${{stage()}
+      ${{home ? "" : historicalGrowth() + facebookSnapshot()}
+      ${{trends()}
+      ${{home ? "" : anchors()}
+    </section>`;
   }
   function editorial() {
     return `<section class="g-module g-editorial">${header("EDITORIAL SYSTEM", "内容日历，也是团队交付计划。", "相对节点为重构流程，不是历史活动日历；未指定具体活动日期或发布日期。")}<div class="g-editorial-grid"><article><span>QUARTER / 季度</span><h3>主题与产品重点</h3><p>主推产品、用户问题、内容目标、资源优先级。</p></article><article><span>MONTH / 月度</span><h3>内容与平台编排</h3><p>选题、形式、负责人、素材需求、CTA、承接页面。</p></article><article><span>WEEK / 周度</span><h3>审核与依赖管理</h3><p>脚本、设计、视频、事实、权限、发布状态。</p></article></div>${pathSteps(
