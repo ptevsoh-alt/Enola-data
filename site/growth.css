@@ -1060,7 +1060,9 @@
   .g-history-growth {
     padding: 22px 16px;
   }
-  .g-snapshot-grid,
+  .g-snapshot-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
   .g-history-groups {
     grid-template-columns: 1fr;
   }
@@ -1128,6 +1130,12 @@
 }
 @media (max-width: 720px) {
   .g-evidence-anchors {
+    grid-template-columns: 1fr;
+  }
+}
+
+@media (max-width: 480px) {
+  .g-snapshot-grid {
     grid-template-columns: 1fr;
   }
 }
