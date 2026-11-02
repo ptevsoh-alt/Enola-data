@@ -9,9 +9,6 @@ check('all metric-to-case links resolve',p.metrics.every(m=>p.cases.some(c=>c.id
 check('all case metric references resolve',p.cases.every(c=>c.metrics.every(id=>p.metrics.some(m=>m.id===id))));
 check('10 case storylines with four stages',p.caseNarratives&&p.cases.length===10&&p.cases.every(c=>p.caseNarratives[c.id]?.stages?.length===4));
 check('case evidence groups resolve and cover case metrics',p.cases.every(c=>{const ids=(p.caseNarratives?.[c.id]?.evidenceGroups||[]).flatMap(g=>g.metrics||[]);return ids.length===c.metrics.length&&new Set(ids).size===ids.length&&c.metrics.every(id=>ids.includes(id))&&ids.every(id=>p.metrics.some(m=>m.id===id));}));
-check('case narrative and data center are cross-linked',app.includes('domain-case-bridge')&&app.includes('case-evidence-group')&&app.includes('从数据回到业务动作'));
-check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
-check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
 
 check('all capability links resolve',p.capabilities.every(c=>p.cases.some(x=>x.id===c[3])));
 check('all experience links resolve',p.experiences.every(c=>p.cases.some(x=>x.id===c.caseId)));
@@ -33,6 +30,10 @@ check('missing viewers value remains null',p.metrics.find(m=>m.id==='fb-viewers'
 check('screenshot comparison windows remain unverified',p.metrics.filter(m=>m.sourceType==='screenshot').every(m=>m.windowStart===null&&m.windowEnd===null&&m.comparisonWindow===null));
 check('no public screenshot references',p.metrics.every(m=>!('sourceImage' in m)));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+check('case narrative and data center are cross-linked',app.includes('domain-case-bridge')&&app.includes('case-evidence-group')&&app.includes('从数据回到业务动作'));
+check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
+check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
+
 check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
 check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
 new vm.Script(app);check('app syntax',true);new vm.Script(fs.readFileSync(path.join(root,'data.js'),'utf8'));check('data syntax',true);
