@@ -93,14 +93,59 @@ const fs = require("fs"),
       assert.equal(clone.textContent, old.d.querySelector("main").textContent);
     });
   }
+  await route("/home");
+  check("homepage presents three independent growth records and a four-stage operating story", () => {
+    assert.ok(d.querySelector("#growth-story"));
+    assert.equal(d.querySelectorAll(".g-home-signal").length, 3);
+    assert.deepEqual(
+      [...d.querySelectorAll(".g-home-signal")].map((x) => x.dataset.growthMetric),
+      ["engagement-change", "ig-event-engagement-change", "group"],
+    );
+    assert.equal(d.querySelectorAll(".g-home-stage").length, 4);
+    assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("0 → 8K+"));
+    assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("字段与日期待核"));
+    assert.ok(d.querySelector(".g-home-story-footnote").textContent.includes("不是同一时间序列"));
+    assert.ok(d.querySelector(".results-band").textContent.includes("96.5万"));
+    assert.ok(d.querySelector(".results-band").textContent.includes("3.7万"));
+  });
   await route("/case/social");
-  check("eight social management stages", () =>
-    assert.equal(d.querySelectorAll(".g-foundation>article").length, 8),
-  );
-  check("editorial and campaign planning separated", () => {
+  check("eight social management stages form one end-to-end journey", () => {
+    assert.equal(d.querySelectorAll(".g-foundation>article").length, 8);
+    assert.ok(d.querySelector(".g-social-story").textContent.includes("社媒负责人 / 管理组长"));
+    assert.ok(d.querySelector(".g-foundation").textContent.includes("Facebook Group 社群运营"));
+    assert.ok(d.querySelector(".g-foundation").textContent.includes("数据复盘与持续迭代"));
+  });
+  check("social management case shows ownership and collaboration", () => {
+    assert.equal(d.querySelectorAll(".g-social-ownership>article").length, 3);
+    assert.ok(d.querySelector(".g-social-ownership").textContent.includes("产品、设计、视频、电商"));
+  });
+  check("editorial and campaign planning are connected to the social case", () => {
     assert.ok(d.querySelector(".g-editorial"));
     assert.ok(d.querySelector(".g-campaign-wall"));
+    assert.ok(d.querySelector(".g-social-loop"));
   });
+  check("Facebook Group operation is integrated with four distinct source fields", () => {
+    assert.equal(d.querySelectorAll(".g-social-community-card").length, 4);
+    assert.deepEqual(
+      [...d.querySelectorAll(".g-social-community-card")].map((x) => x.dataset.growthMetric),
+      ["group", "group-members", "group-posters", "group-viewers"],
+    );
+    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("不合并为增长率或活跃率"));
+    assert.ok(d.querySelector('.g-social-community-actions a[href="#/case/community"]'));
+  });
+  check("B2B Facebook follower scale is not mixed into the social case", () => {
+    assert.equal(d.querySelectorAll('[data-growth-metric="fb-follower-scale"]').length, 0);
+    assert.equal(d.querySelectorAll('[data-growth-metric="linkedin-follower-change"]').length, 0);
+  });
+  const communityEvidence = d.querySelector(
+    '.g-social-community-card[data-growth-metric="group-posters"] [data-evidence]',
+  );
+  communityEvidence.focus();
+  communityEvidence.click();
+  check("integrated community metric opens the evidence drawer", () =>
+    assert.ok(d.querySelector("#evidence-dialog").open),
+  );
+  d.querySelector('[data-close="evidence-dialog"]').click();
   check("no fabricated trend path or series", () => {
     assert.equal(w.PORTFOLIO_GROWTH.series.length, 0);
     assert.ok(
@@ -127,6 +172,12 @@ const fs = require("fs"),
   check("route closes evidence drawer", () =>
     assert.equal(d.querySelector("#evidence-dialog").open, false),
   );
+  await route("/data/b2b");
+  check("B2B Facebook follower scale stays on the B2B data page", () => {
+    assert.ok(d.querySelector(".g-b2b-stage"));
+    assert.ok(d.querySelector(".g-b2b-stage").textContent.includes("400+"));
+    assert.ok(d.querySelector(".g-b2b-stage").textContent.includes("1,900+"));
+  });
   await route("/case/gtm");
   d.querySelector("[data-image]").click();
   await route("/case/gtm/strategy");
@@ -183,10 +234,12 @@ const fs = require("fs"),
       d.querySelector('.g-snapshot-card[data-growth-metric="fb-views"]').textContent.includes("未提供"),
     );
   });
-  check("historical growth is grouped by channel rather than ranked on a shared scale", () => {
-    assert.equal(d.querySelectorAll(".g-history-card").length, 8);
+  check("social historical growth is grouped by social channel without B2B metrics", () => {
+    assert.equal(d.querySelectorAll(".g-history-card").length, 7);
     assert.equal(d.querySelectorAll(".g-history-group").length, 3);
     assert.ok(d.querySelector(".g-history-growth").textContent.includes("不按百分比排名"));
+    assert.ok(d.querySelector(".g-history-growth").textContent.includes("Instagram"));
+    assert.ok(!d.querySelector(".g-history-growth").textContent.includes("LinkedIn"));
     assert.deepEqual(
       [...d.querySelectorAll(".g-history-card")].map((x) => x.dataset.growthMetric),
       [
@@ -195,7 +248,6 @@ const fs = require("fs"),
         "fb-link-click-change",
         "ig-event-engagement-change",
         "ig-follower-change",
-        "linkedin-follower-change",
         "group",
         "group-month",
       ],
