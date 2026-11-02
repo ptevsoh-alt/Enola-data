@@ -38,6 +38,9 @@ check('case narrative and data center are cross-linked',app.includes('domain-cas
 check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
 check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
 check('Creator case and data page have dedicated visuals',app.includes('creatorWorkflow')&&app.includes('creatorOpsVisual')&&css.includes('.creator-flow')&&css.includes('.creator-source-grid'));
+check('homepage editorial and management visuals present',app.includes('hero-focus-list')&&app.includes('management-strip')&&css.includes('.hero-signature')&&css.includes('.management-grid'));
+check('product architecture and Creator console visuals present',app.includes('productMessageArchitecture')&&app.includes('creatorOperationsVisual')&&css.includes('.product-role-grid')&&css.includes('.creator-console-steps'));
+check('social aggregate comparison remains non-trend',app.includes('socialComparisonChart')&&app.includes('互动 / 曝光的汇总比值')&&css.includes('.comparison-bars'));
 
 check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
 check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
