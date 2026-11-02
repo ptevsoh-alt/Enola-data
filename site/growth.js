@@ -348,8 +348,8 @@
         ids: ["engagement-change", "fb-reach", "fb-link-click-change"],
       },
       {
-        title: "Instagram / LinkedIn",
-        note: "活动期与任期记录",
+        title: "Instagram",
+        note: "活动期与历史阶段记录",
         ids: [
           "ig-event-engagement-change",
           "ig-follower-change",
@@ -365,7 +365,7 @@
       ${header(
         "HISTORICAL GROWTH / 过往项目",
         "过往项目的增长表现",
-        "这里汇总 Meta、Facebook、Instagram、LinkedIn 和社群的历史记录。平台、账号和统计周期并不完全相同，因此分组展示，不按百分比排名。",
+        "这里汇总 Meta、Facebook、Instagram 与社群的历史记录。平台、账号和统计周期并不完全相同，因此分组展示，不按百分比排名。",
       )}
       <div class="g-history-groups">${groups
         .map(
@@ -513,11 +513,11 @@
       )}
       <div class="g-social-community-grid">${ids.map((id) => {
         const x = m(id);
-        return `<article class="g-social-community-card" data-growth-metric="${id">
-          <span>${esc(x.label)</span>
-          <strong>${esc(x.display) <small>${esc(x.unit)</small></strong>
-          <p>${esc(x.window)</p>
-          ${evidence(id)
+        return `<article class="g-social-community-card" data-growth-metric="${id}">
+          <span>${esc(x.label)}</span>
+          <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+          <p>${esc(x.window)}</p>
+          ${evidence(id)}
         </article>`;
       }).join("")}</div>
       <p class="g-social-community-note">
