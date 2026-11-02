@@ -134,23 +134,29 @@ function creatorWorkflow(mode='case'){
 
 function productMessageArchitecture(){
  const roles=[
-  ['全屋干式吸尘','宠物毛发、地毯细尘与硬地碎屑','WHOLE-HOME VACUUMING'],
-  ['一步式硬地清洁','吸尘、刷洗与拖地任务整合','ONE-PASS FLOOR CARE'],
-  ['无线刷拖切换','拖布与刷头按任务切换','CORDLESS SCRUB & MOP'],
-  ['长时间硬地护理','围绕连续清洁组织供电与补水','EXTENDED FLOOR CARE'],
-  ['顽固地面污渍','双头刷拖与稳定握持','STUBBORN STAIN CONTROL'],
-  ['边角定点去污','单头集中摩擦与角度调节','TARGETED SCRUBBING'],
-  ['高低位全屋深刷','长柄、多刷头与角度调节','WHOLE-HOME DEEP CLEAN'],
-  ['厨房局部细节','手持动力与多刷头适配','HANDHELD DETAIL CLEANING'],
-  ['户外炉篦清洁','无线旋转刷头与照明','OUTDOOR GRILL CLEANING']
+  ['全屋干式吸尘','V1 类别','60KPa + 2L + 180°贴地','WHOLE-HOME DRY VACUUMING'],
+  ['一步式硬地清洁','吸拖一体类别','25KPa 吸力 + 双盘旋转 + 喷水','ONE-PASS HARD-FLOOR CLEANING'],
+  ['无线刷拖切换','双头旋转拖把类别','双头主动旋转 + 可换电','CORDLESS SCRUB-AND-MOP'],
+  ['持续供电硬地护理','双头旋转拖把类别','800 RPM + 300ml + 180°贴地','CONTINUOUS-POWER FLOOR CARE'],
+  ['顽固污渍稳定控制','双头旋转拖把类别','800 RPM + D 型把手','STABLE CONTROL FOR STUBBORN STAINS'],
+  ['边角与定点去污','单头清洁刷类别','集中刷洗 + 可调角度','TARGETED CLEANING FOR CORNERS'],
+  ['高速全屋深刷','长柄清洁刷类别','1200 RPM + 50 in + 8-in-1','WHOLE-HOME DEEP SCRUBBING'],
+  ['厨房与局部细节','手持清洁刷类别','300 / 400 / 600 RPM + 双电','HANDHELD DETAIL CLEANING'],
+  ['户外炉篦残渣清洁','电动 BBQ Brush 类别','100W + 770 RPM + LED','OUTDOOR GRILL RESIDUE CLEANING']
  ];
  const pillars=[
   ['动力替代重复动作','POWER REPLACES REPETITION','让电机承担吸、刷、旋、拖等高频动作，用户主要负责引导与控制。'],
-  ['不同任务，使用不同工具','THE RIGHT TOOL FOR EACH JOB','从全屋吸尘到浴室深刷、细节清洁与户外维护，明确产品角色。'],
-  ['参数可见，效果可感知','VISIBLE POWER AND CONTROL','把动力、容量、照明和状态显示转成易理解的使用信息。']
+  ['不同任务，使用不同工具','THE RIGHT TOOL FOR EACH JOB','从全屋吸尘、硬地护理到浴室深刷、细节清洁与户外烧烤，产品角色清晰。'],
+  ['参数可见，效果可感知','VISIBLE POWER AND CONTROL','明确吸力、转速、容量、照明和显示，让清洁过程更容易理解与掌控。']
  ];
- const secondary=['减少工具与步骤切换','人体工学与低位覆盖','动力按任务难度分级','多场景工具组合','无线移动与可视状态'];
- return '<div class="product-architecture"><div class="product-brand-core"><p class="eyebrow">BRAND MESSAGE / 品牌传播总纲</p><h3>从清洁参数，到真实生活价值</h3><p>以动力、人体工学与任务化设计，减少手工摩擦、工具切换和清洁姿势负担。</p></div><div class="product-pillars">'+pillars.map((x,i)=>'<article><span>0'+(i+1)+'</span><h4>'+x[0]+'</h4><b>'+x[1]+'</b><p>'+x[2]+'</p></article>').join('')+'</div><div class="product-secondary"><b>次级价值层</b>'+secondary.map(x=>'<span>'+x+'</span>').join('')+'</div><div class="product-role-head"><div><p class="eyebrow">PORTFOLIO ROLE / 产品矩阵</p><h3>九类清洁任务，九种清晰角色</h3></div><span class="small muted">来源：双语卖点文档第 2–3、22 页</span></div><div class="product-role-grid">'+roles.map((x,i)=>'<article><span class="role-no">'+String(i+1).padStart(2,'0')+'</span><h4>'+x[0]+'</h4><p>'+x[1]+'</p><small>'+x[2]+'</small></article>').join('')+'</div><div class="product-touchpoints"><span>产品事实</span><i>→</i><span>用户任务</span><i>→</i><span>主次级卖点</span><i>→</i><span>内容与渠道</span><i>→</i><span>效果复盘</span></div><p class="source-footnote">内容依据《对外产品宣传主次级卖点（中英文双语版）》第 2–3、22 页整理。此处展示信息架构与任务定位；单品数值参数未直接迁入，须先完成产品规格版本核对。</p></div>';
+ const secondary=[
+  ['减少切换','FEWER SWITCHES','减少工具与步骤切换'],
+  ['人体工学','ERGONOMICS','改善高位、低位与长时间操作'],
+  ['动力分级','TASK-MATCHED POWER','动力与清洁任务难度相匹配'],
+  ['场景覆盖','BROAD COVERAGE','地板、地毯、厨房、浴室、缝隙、车轮与烧烤炉'],
+  ['家庭体验','EVERYDAY COMFORT','无线移动、主动旋转、按需喷水与可视状态']
+ ];
+ return '<div class="product-architecture"><div class="product-brand-core"><p class="eyebrow">BRAND MESSAGE / 品牌传播总纲</p><h3>从清洁参数，到真实生活价值</h3><p>以清洁动力、人体工学与任务化产品设计，减少手工摩擦、工具切换和清洁姿势负担。</p></div><div class="product-pillars">'+pillars.map((x,i)=>'<article><span>0'+(i+1)+'</span><h4>'+x[0]+'</h4><b>'+x[1]+'</b><p>'+x[2]+'</p></article>').join('')+'</div><div class="product-secondary"><b>次级卖点</b>'+secondary.map(x=>'<article><strong>'+x[0]+'</strong><small>'+x[1]+'</small><span>'+x[2]+'</span></article>').join('')+'</div><div class="product-role-head"><div><p class="eyebrow">PORTFOLIO ROLE / 产品矩阵</p><h3>九类产品任务，九个清晰的传播角色</h3></div><span class="small muted">按匿名产品类别展示</span></div><div class="product-role-grid">'+roles.map((x,i)=>'<article><span class="role-no">'+String(i+1).padStart(2,'0')+'</span><small class="role-category">'+x[1]+'</small><h4>'+x[0]+'</h4><p>'+x[2]+'</p><small class="role-en">'+x[3]+'</small></article>').join('')+'</div><div class="product-touchpoints"><span>产品事实</span><i>→</i><span>用户任务</span><i>→</i><span>主次级卖点</span><i>→</i><span>内容与渠道</span><i>→</i><span>效果复盘</span></div><p class="source-footnote">来源：本次提供的《对外产品宣传主次级卖点（中英文双语版）》第 2–3 页。产品名称已匿名化，传播参数按该文件版本保留；此处为信息架构展示，不替代独立规格表核验。</p></div>';
 }
 function creatorOperationsVisual(){
  const steps=[
@@ -167,7 +173,9 @@ function creatorOperationsVisual(){
 }
 function socialComparisonChart(){
  const ratio=(37000/965000*100).toFixed(1);
- return '<div class="chart-sheet social-comparison-sheet"><p class="eyebrow">META / 2025 SUMMARY</p><h2>曝光与互动规模</h2><p class="small">2025 年阶段汇总；两个指标来自同一历史汇总记录，账号范围与原报表字段仍待核。</p><figure><div class="comparison-bars" role="img" aria-label="曝光 965K 次，互动 37K 次；互动除以曝光约为 3.8%，仅为暂算比值。"><div class="comparison-row"><span>曝光</span><div class="comparison-track"><i style="width:100%"></i></div><b>965K</b></div><div class="comparison-row"><span>互动</span><div class="comparison-track"><i style="width:3.8342%"></i></div><b>37K</b></div></div><div class="ratio-callout"><strong>≈'+ratio+'%</strong><span>互动 / 曝光的汇总比值 · 暂算</span><button data-evidence="er">查看计算口径 ↗</button></div><figcaption class="small muted">互动次数不等于互动人数；该比例不是已核验的正式 ER，也不证明互动带来成交。</figcaption></figure><details><summary>查看计算与口径</summary><p>37,000 ÷ 965,000 ≈ 3.8%。只有账号范围、统计窗口和平台字段一致时，该比值才可作为正式互动率；当前仅作暂算。</p></details></div>';
+ const pageIds=['fb-views','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows'];
+ const pageCards=pageIds.map(id=>{const m=metricBy(id);return '<article class="fb-snapshot-card"><strong>'+m.display+'</strong><span>'+m.label+'</span><small>'+(m.changeDisplay||'后台汇总值')+'</small></article>';}).join('');
+ return '<div class="social-data-story"><section class="chart-sheet social-comparison-sheet"><div class="social-panel-heading"><div><p class="eyebrow">META / 2025 SUMMARY</p><h2>年度阶段汇总：曝光与互动规模</h2><p class="small">同一历史汇总记录中的两项指标。账号范围与原始报表字段尚未完整保留。</p></div><span class="source-chip">来源 A · 2025 汇总</span></div><figure><div class="comparison-bars" role="img" aria-label="曝光 965K 次，互动 37K 次；互动除以曝光约为 3.8%，仅为暂算比值。"><div class="comparison-row"><span>曝光</span><div class="comparison-track"><i style="width:100%"></i></div><b>965K</b></div><div class="comparison-row"><span>互动</span><div class="comparison-track"><i style="width:3.8342%"></i></div><b>37K</b></div></div><div class="ratio-callout"><strong>≈'+ratio+'%</strong><span>互动 / 曝光的汇总比值 · 暂算</span><button data-evidence="er">查看计算口径 ↗</button></div><figcaption class="small muted">互动次数不等于互动人数；该比例不是已核验的正式 ER，也不证明互动带来成交。</figcaption></figure><details><summary>查看计算与口径</summary><p>37,000 ÷ 965,000 ≈ 3.8%。只有账号范围、统计窗口和平台字段一致时，该比值才可作为正式互动率；当前仅作暂算。</p></details></section><section class="chart-sheet fb-page-snapshot"><div class="social-panel-heading"><div><p class="eyebrow">FACEBOOK PAGE INSIGHTS / SCREENSHOT SNAPSHOT</p><h2>页面后台截图：独立汇总视图</h2><p class="small">账号名称未显示；截图未标注完整统计窗口。以下数据不与 Meta 2025 汇总合并。</p></div><span class="source-chip">来源 B · 后台截图</span></div><div class="fb-snapshot-grid">'+pageCards+'</div><p class="source-footnote">截图变化字段按原样保留，不解释为同比或环比；链接点击量、页面访问量与关注次数不代表去重用户数。当前不补造比较基期或日期趋势。</p><a class="text-link" href="#/case/social">查看社媒策略、内容管理与复盘 ↗</a></section></div>';
 }
 function creatorDataMap(){
  return '<div class="chart-sheet creator-data-map"><p class="eyebrow">CREATOR DATA MODEL</p><h2>达人内容经营的数据结构</h2><p class="small">200 条内容记录、226 位窗口内活跃达人、107 条有 GMV 的合作分别对应不同业务对象，不能相互作为分母。</p><div class="creator-entity-grid"><article><strong>内容表现</strong><p>播放 · 点赞 · 评论 · 收藏 · 转发 · 互动率</p><small>内容库记录</small></article><article><strong>达人与合作</strong><p>达人档案 · 活跃窗口 · 合作状态 · 专属码</p><small>达人 / 合作记录</small></article><article><strong>授权与归因</strong><p>达标状态 · 广告权限 / code · 订单 · GMV</p><small>授权 / 商业结果</small></article></div><div class="creator-flowline"><span>达人资源池</span><i>→</i><span>合作记录</span><i>→</i><span>内容库</span><i>→</i><span>授权核验</span><i>→</i><span>订单 / GMV</span></div><p class="source-footnote">来源：2026-10-30 飞书表只读导入说明及内容库截图。表内未显示佣金字段；截图未显示 GMV 总额与按月明细。</p></div>';
