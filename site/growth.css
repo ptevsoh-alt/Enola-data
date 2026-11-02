@@ -657,11 +657,6 @@
   font-size: 13px;
   line-height: 1.45;
 }
-.g-snapshot-card-top small {
-  flex: 0 0 auto;
-  font-size: 9px;
-  color: var(--muted);
-}
 .g-snapshot-value {
   display: flex;
   align-items: baseline;
@@ -703,12 +698,6 @@
 .g-snapshot-change.is-muted > strong {
   color: var(--muted);
   font: 600 13px var(--sans);
-}
-.g-snapshot-period {
-  margin: 0;
-  font-size: 10px;
-  line-height: 1.5;
-  color: var(--muted);
 }
 .g-snapshot-card > button {
   align-self: flex-start;
