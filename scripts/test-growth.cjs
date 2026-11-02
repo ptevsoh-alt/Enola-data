@@ -158,6 +158,8 @@ const fs = require("fs"),
   await route("/case/social");
   check("Facebook page snapshot uses five independent metric cards", () => {
     assert.equal(d.querySelectorAll(".g-snapshot-card").length, 5);
+    assert.equal(d.querySelectorAll(".g-snapshot-period").length, 0);
+    assert.equal(d.querySelectorAll(".g-snapshot-card-top small").length, 0);
     assert.deepEqual(
       [...d.querySelectorAll(".g-snapshot-card")].map((x) => x.dataset.growthMetric),
       ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "fb-follows"],
