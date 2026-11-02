@@ -134,7 +134,7 @@ function creatorWorkflow(mode='case'){
 
 function productMessageArchitecture(){
  const roles=[
-  ['全屋干式吸尘','V1 类别','60KPa + 2L + 180°贴地','WHOLE-HOME DRY VACUUMING'],
+  ['全屋干式吸尘','全屋吸尘设备','60KPa + 2L + 180°贴地','WHOLE-HOME DRY VACUUMING'],
   ['一步式硬地清洁','吸拖一体类别','25KPa 吸力 + 双盘旋转 + 喷水','ONE-PASS HARD-FLOOR CLEANING'],
   ['无线刷拖切换','双头旋转拖把类别','双头主动旋转 + 可换电','CORDLESS SCRUB-AND-MOP'],
   ['持续供电硬地护理','双头旋转拖把类别','800 RPM + 300ml + 180°贴地','CONTINUOUS-POWER FLOOR CARE'],
@@ -142,7 +142,7 @@ function productMessageArchitecture(){
   ['边角与定点去污','单头清洁刷类别','集中刷洗 + 可调角度','TARGETED CLEANING FOR CORNERS'],
   ['高速全屋深刷','长柄清洁刷类别','1200 RPM + 50 in + 8-in-1','WHOLE-HOME DEEP SCRUBBING'],
   ['厨房与局部细节','手持清洁刷类别','300 / 400 / 600 RPM + 双电','HANDHELD DETAIL CLEANING'],
-  ['户外炉篦残渣清洁','电动 BBQ Brush 类别','100W + 770 RPM + LED','OUTDOOR GRILL RESIDUE CLEANING']
+  ['户外炉篦残渣清洁','户外电动清洁刷','100W + 770 RPM + LED','OUTDOOR GRILL RESIDUE CLEANING']
  ];
  const pillars=[
   ['动力替代重复动作','POWER REPLACES REPETITION','让电机承担吸、刷、旋、拖等高频动作，用户主要负责引导与控制。'],
