@@ -36,13 +36,13 @@
   },
   {
     "file": "growth.css",
-    "bytes": 21045,
-    "sha256": "adb04e61a3ab9c69341e176508bcf654738575e47cca9fe0eae1d2bb7128b8cd"
+    "bytes": 20857,
+    "sha256": "aff02d4c3101a2c9732ef5b0c059e2d4f3499a74d29acf0d1529a472383bceee"
   },
   {
     "file": "growth.js",
-    "bytes": 30502,
-    "sha256": "d72e10e120780289c08dcdb98089dff29473ec7451484429853e37c9061a6f7f"
+    "bytes": 30435,
+    "sha256": "4478ad7fe4f0f8a4524864da54e269ce6c29f4cc9f2ea425d08c8ac03edc01db"
   },
   {
     "file": "index.html",
