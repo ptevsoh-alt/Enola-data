@@ -22,53 +22,144 @@
   };
   const header = (en, title, desc) =>
     `<div class="g-heading"><div><p class="eyebrow">${en}</p><h2>${title}</h2></div><p>${desc}</p></div>`;
+  function homeSignal(id, note) {
+    const x = m(id);
+    return `<article class="g-home-signal" data-growth-metric="${{id}">
+      <span>${{esc(x.platform)} · ${{note}</span>
+      <button type="button" data-evidence="${{id}" aria-label="${{esc(x.label)} ${{esc(x.display)}，查看数据口径">
+        <strong>${{esc(x.display)}</strong>
+        <b>${{esc(x.label)}</b>
+      </button>
+      <small>${{esc(x.window)}</small>
+    </article>`;
+  }
+  function homeGrowthStory() {
+    const signals = [
+      ["engagement-change", "独立比较阶段"],
+      ["ig-event-engagement-change", "独立活动阶段"],
+      ["group", "独立社群阶段"],
+    ];
+    const stages = [
+      {
+        no: "01",
+        label: "FOUNDATION / 账号起盘",
+        title: "先明确平台任务，再搭建账号矩阵。",
+        copy: "负责 Facebook、Instagram 品牌账号与美国 Facebook Group。Facebook 承接品牌信息和链接导流；Instagram 组织产品演示与活动内容；Group 承接交流和问题反馈。",
+        proof: true,
+      },
+      {
+        no: "02",
+        label: "CONTENT SYSTEM / 内容体系",
+        title: "用内容支柱和排期，稳定团队供给。",
+        copy: "围绕产品演示、家庭清洁场景、教程与 FAQ、互动挑战、UGC 建立选题体系；季度定主题，月度排内容日历，周度审核脚本、视觉、产品事实与发布状态。",
+      },
+      {
+        no: "03",
+        label: "CAMPAIGN / 活动传播",
+        title: "把主题内容拆成可协同的活动工作包。",
+        copy: "围绕目标、用户洞察、Big Idea、参与机制、平台组合、素材、发布节奏与复盘指标组织活动；概念方案与历史活动数据分开展示，不做未经证实的活动归因。",
+      },
+      {
+        no: "04",
+        label: "COMMUNITY / 社群经营",
+        title: "让用户参与和问题反馈回到内容计划。",
+        copy: "通过教程、投票、清洁挑战、UGC 投稿和问题答疑建立参与入口；将高频问题整理为 FAQ 和下一轮选题，形成内容、社群与产品信息之间的反馈回路。",
+      },
+    ];
+    return `<section class="g-module g-home-story" id="growth-story">
+      ${{header(
+        "SOCIAL GROWTH / MANAGEMENT STORY",
+        "从账号起盘，到内容与社群增长。",
+        "2025.04–2026.09 担任社媒负责人 / 管理组长，负责 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容策略和团队交付。",
+      )}
+      <div class="g-home-story-intro">
+        <div class="g-home-owner">
+          <span>ROLE / 管理职责</span>
+          <h3>社媒负责人<br>管理组长</h3>
+          <p>把平台分工、内容规划、跨团队制作、活动组织与数据复盘连接起来；协作社媒小组、产品、设计、视频、电商及 Creator / KOL。</p>
+          <div class="g-home-owner-tags"><i>Facebook</i><i>Instagram</i><i>Facebook Group</i><i>Shopify 承接</i></div>
+        </div>
+        <div class="g-home-signals">
+          ${{signals.map(([id, note]) => homeSignal(id, note)).join("")}
+        </div>
+      </div>
+      <div class="g-home-stage-grid">
+        ${{stages.map((s) => `<article class="g-home-stage">
+          <span>${{s.no} / ${{s.label}</span>
+          <h3>${{s.title}</h3>
+          <p>${{s.copy}</p>
+          ${{s.proof ? `<div class="g-home-stage-proof">
+            <strong>0 → 8K+</strong>
+            <span>账号规模阶段记录 · 字段与日期待核</span>
+            ${{evidence("fb-size")}
+          </div>` : ""}
+        </article>`).join("")}
+      </div>
+      <div class="g-home-rhythm">
+        <div>
+          <span>MANAGEMENT RHYTHM / 管理节奏</span>
+          <h3>季度定方向，月度排内容，周度管交付。</h3>
+          <p>把策略转成明确的任务、负责人、素材依赖和审核节点。</p>
+        </div>
+        <div class="g-home-rhythm-items">
+          <article><b>季度 / 主题规划</b><p>产品重点、用户问题、内容目标与资源优先级。</p></article>
+          <article><b>月度 / 内容日历</b><p>平台、选题、形式、负责人、素材、CTA 与承接页面。</p></article>
+          <article><b>周度 / 交付复盘</b><p>脚本、视觉、视频、事实、权限、链接与发布状态。</p></article>
+        </div>
+      </div>
+      <p class="g-home-story-footnote">
+        上方三项变化记录来自不同平台与统计阶段：Meta 互动比较阶段、Instagram 独立活动阶段、Facebook Group 独立新增阶段。它们不是同一时间序列，不作横向排名或活动归因；0→8K+ 的账号字段仍待核。
+      </p>
+    </section>`;
+  }
   const socialSteps = [
     [
       "Social Media Foundation",
-      "账号基础搭建",
-      "历史记录含 0→8K+ 的账号规模描述，字段和日期待核；建号、资料配置与权限分工仅作流程重构，不作为已验证建号日志。",
+      "账号基础与矩阵搭建",
+      "推动 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容体系从 0 到 1；0→8K+ 账号规模记录的字段与起止日期待核。",
       "PENDING",
+      true,
     ],
     [
       "Channel Positioning",
-      "平台定位",
-      "Facebook 承接品牌信息与链接导流；Instagram 组织视觉演示与活动；Group 促进交流与问题反馈。",
+      "平台角色与渠道分工",
+      "Facebook 承接品牌信息和链接导流；Instagram 组织产品视觉演示与活动内容；Group 承接用户交流和问题反馈。",
       "RECONSTRUCTED",
     ],
     [
       "Content Pillars",
-      "内容支柱",
-      "产品演示、家庭场景、教程与 FAQ、互动挑战、UGC，围绕用户任务组织选题。",
+      "建立内容支柱",
+      "围绕产品演示、家庭清洁场景、教程与 FAQ、互动挑战、UGC 与用户反馈组织选题。",
       "RECONSTRUCTED",
     ],
     [
       "Editorial Calendar",
-      "季度与月度排期",
-      "季度确定产品与主题；月度明确内容形式、负责人、素材需求、CTA 与站点承接。",
+      "季度主题与月度日历",
+      "季度确定主题与产品重点；月度安排选题、形式、负责人、素材、CTA 与站点承接；周度跟进制作与发布状态。",
       "RECONSTRUCTED",
     ],
     [
-      "Content Strategy",
-      "策划与平台适配",
-      "策划 → 脚本 → 视觉 → 产品事实核验 → 平台版本 → 发布审核，协调制作与审核输入。",
+      "Cross-functional Delivery",
+      "跨团队任务与质量管理",
+      "协调社媒小组、产品、设计、视频、电商与 Creator / KOL；明确事实提供、制作、审核和发布分工。",
       "RECONSTRUCTED",
     ],
     [
-      "Online Campaigns",
-      "独立活动工作包",
-      "将活动目标、参与机制、素材组合、发布节奏与复盘要求从日常内容中拆出。",
+      "Campaign Operations",
+      "线上活动工作包",
+      "将活动目标、用户洞察、Big Idea、参与机制、平台组合、素材、发布节奏和复盘指标拆成独立工作包。",
       "RECONSTRUCTED",
     ],
     [
-      "Brand Collaboration",
-      "联合传播方法",
-      "合作对象、共同主张、双方资产与授权须分别确认。这里只展示联合传播框架，不声称已有特定品牌合作。",
-      "CONCEPT",
+      "Facebook Community",
+      "Facebook Group 社群运营",
+      "通过教程、投票、清洁挑战、UGC 与答疑组织参与；把高频问题整理为 FAQ 和下一轮内容选题。",
+      "RECONSTRUCTED",
     ],
     [
       "Performance Review",
-      "数据复盘",
-      "按平台与来源阅读展示、互动、点击及反馈；将证据不足的判断保留为待核问题，回流内容日历。",
+      "数据复盘与持续迭代",
+      "分别查看展示、互动、链接点击与社群反馈；不把不同账号和统计窗口拼成增长曲线或成交归因。",
       "RECONSTRUCTED",
     ],
   ];
@@ -169,8 +260,22 @@
   function pathSteps(items) {
     return `<ol class="g-path">${items.map((x, i) => `<li><span>0${i + 1}</span><b>${x[0]}</b><p>${x[1]}</p></li>`).join("")}</ol>`;
   }
-  function stage() {
-    return `<div class="g-stage-grid"><article class="g-stage-card"><p class="eyebrow">SOCIAL FOUNDATION / 历史阶段记录</p><h3>从零建设，先交代口径。</h3><div class="g-endpoints"><span><b>0</b><small>起始规模记录</small></span><i aria-hidden="true">→</i><span><b>8K+</b><small>期末规模描述</small></span></div><p>${esc(m("fb-size").window)} · ${P.statuses[m("fb-size").status]}</p><p>对应账号字段待核。此为阶段记录，不是连续趋势；零基期不计算增长率。</p>${evidence("fb-size")}</article><article class="g-stage-card"><p class="eyebrow">B2B TENURE / 独立账号阶段</p><h3>阶段规模，保留原有下界。</h3><div class="g-endpoints"><span><b>400+</b><small>任职早期记录</small></span><i aria-hidden="true">→</i><span><b>1,900+</b><small>任职后期记录</small></span></div><p>${esc(m("fb-follower-scale").window)}</p><p>来自 B2B 任期，非北美消费品牌同一账号。没有精确原值、日期和账号范围，不反算净增量或增长率。</p>${evidence("fb-follower-scale")}</article></div>`;
+  function b2bStage() {
+    const x = m("fb-follower-scale");
+    return `<section class="g-stage-grid g-b2b-stage">
+      <article class="g-stage-card">
+        <p class="eyebrow">B2B / FACEBOOK AUDIENCE</p>
+        <h3>任期内的粉丝规模记录</h3>
+        <div class="g-endpoints">
+          <span><b>${{esc(x.comparisonValues.start)}</b><small>任职早期记录</small></span>
+          <i aria-hidden="true">→</i>
+          <span><b>${{esc(x.comparisonValues.end)}</b><small>任职后期记录</small></span>
+        </div>
+        <p>${{esc(x.window)}</p>
+        <p>此项属于 B2B 任期账号，不与海外消费品牌社媒矩阵合并；账号范围和采样日期未注明，不反算净增量或增长率。</p>
+        ${{evidence("fb-follower-scale")}
+      </article>
+    </section>`;
   }
   function facebookSnapshot() {
     const ids = [
@@ -248,7 +353,6 @@
         ids: [
           "ig-event-engagement-change",
           "ig-follower-change",
-          "linkedin-follower-change",
         ],
       },
       {
@@ -343,26 +447,17 @@
       ],
     )}<p class="caption">社群反馈 → 用户问题归类 → 产品事实核对 → FAQ / 内容选题 → 下一轮讨论与验证。</p></section>`;
   }
-  function growth(home = false) {
-    const homeMetrics = [
-      "impressions",
-      "engagements",
-      "engagement-change",
-      "ig-event-engagement-change",
-    ];
+  function growth() {
     return `<section class="g-module g-growth" id="growth-overview">
-      ${header(
+      ${{header(
         "GROWTH / EVIDENCE FIRST",
-        home ? "把阶段成果与增长信号放在前面。" : "社媒增长：历史变化与页面表现",
-        home
-          ? "历史阶段总量与变化记录分开展示，每项数据保留来源和证据入口。"
-          : "先看历史项目中的阶段变化，再看 Facebook 页面后台数据。不同平台、账号和统计周期分开展示，不把不同指标直接比较。",
+        "社媒增长：历史变化与页面表现",
+        "按平台、账号和统计阶段阅读已有记录；不同指标不放在同一尺度上比较，也不把阶段汇总推算成月度趋势。",
       )}
-      ${home ? `<div class="g-kpi-grid">${homeMetrics.map(metric).join("")}</div>` : ""}
-      ${stage()}
-      ${home ? "" : historicalGrowth() + facebookSnapshot()}
-      ${trends()}
-      ${home ? "" : anchors()}
+      ${{historicalGrowth()}
+      ${{facebookSnapshot()}
+      ${{trends()}
+      ${{anchors()}
     </section>`;
   }
   function editorial() {
@@ -376,8 +471,37 @@
     )}<p class="caption">内容表现复盘维度：内容支柱 / 形式 / Hook / CTA / 平台窗口。现有数据没有逐条内容明细，不虚构最佳内容排名。</p></section>`;
   }
   function social() {
-    return `<section class="g-module" id="social-foundation">${header("SOCIAL MEDIA / 0 TO 1", "从账号基础，到内容经营。", "新增管理链路按原有职责整理；建号过程、品牌合作与活动成果的证据状态分别标注。")}<div class="g-foundation">${socialSteps.map((x, i) => `<article><span>0${i + 1} / ${x[0]}</span><h3>${x[1]}</h3><p>${x[2]}</p><small>${P.statuses[x[3]]}</small></article>`).join("")}</div><div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div></section>${editorial()}${campaignWall()}${platformView()}`;
-  }
+    return `<section class="g-module g-social-story" id="social-foundation">
+      ${{header(
+        "SOCIAL MEDIA MANAGEMENT / 2025.04—2026.09",
+        "从账号矩阵到内容经营，建立一套可持续的社媒管理机制。",
+        "负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略与小组交付；将平台定位、内容规划、活动组织、社群反馈和数据复盘连接起来。",
+      )}
+      <div class="g-social-ownership">
+        <article><span>ROLE / 本人职责</span><b>社媒负责人 / 管理组长</b><p>制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本与视觉审核及周 / 月复盘。</p></article>
+        <article><span>CHANNELS / 平台分工</span><b>Facebook · Instagram · Group</b><p>品牌信息与链接导流、产品视觉演示与活动沟通、用户交流与问题反馈分别承接。</p></article>
+        <article><span>COLLABORATION / 跨部门协作</span><b>从输入到发布的责任分工</b><p>协同社媒小组、产品、设计、视频、电商与 Creator / KOL，明确事实提供、制作、审核和发布责任。</p></article>
+      </div>
+      <div class="g-social-flow-heading">
+        <span>OPERATING JOURNEY / 管理链路</span>
+        <h3>八个管理节点，把策略转成日常交付。</h3>
+      </div>
+      <div class="g-foundation">${{socialSteps.map((x, i) => `<article>
+        <span>0${{i + 1} / ${{x[0]}</span>
+        <h3>${{x[1]}</h3>
+        <p>${{x[2]}</p>
+        ${{x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号规模记录 · 字段与日期待核</small>${{evidence("fb-size")}</div>` : ""}
+        <small>${{P.statuses[x[3]]}</small>
+      </article>`).join("")}</div>
+      <div class="g-social-pillar-block">
+        <div><span>CONTENT PILLARS / 内容支柱</span><h3>五类内容，围绕用户任务组织。</h3></div>
+        <div class="g-pillars">${{["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${{i + 1}</b>${{x}</span>`).join("")}</div>
+      </div>
+    </section>
+    ${{editorial()}
+    ${{campaignWall()}
+    ${{communitySummary()}
+    ${{socialLoop()}
   function topicPanel(index = 0) {
     const t = topics[index];
     return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p><small>文案样例为本次概念创作，非历史帖子、真实用户发言或活动成果。</small></div>`;
@@ -455,15 +579,19 @@
     if (page === "home") {
       main
         .querySelector(".discipline-strip")
-        ?.insertAdjacentHTML("afterend", growth(true));
+        ?.insertAdjacentHTML("afterend", homeGrowthStory());
       main
         .querySelector(".contact-band")
         ?.insertAdjacentHTML("beforebegin", campaignWall());
     }
     if (page === "case" && id === "social") {
-      main
-        .querySelector("#execution>div:last-child")
-        ?.insertAdjacentHTML("beforeend", social());
+      const execution = main.querySelector("#execution>div:last-child");
+      const legacyGrid = execution?.querySelector(".deliverable-grid");
+      if (legacyGrid) {
+        legacyGrid.setAttribute("data-social-legacy-grid-hidden", "true");
+        legacyGrid.nextElementSibling?.setAttribute("data-social-legacy-caption-hidden", "true");
+        legacyGrid.insertAdjacentHTML("beforebegin", social());
+      }
       main
         .querySelector("#results>div:last-child")
         ?.insertAdjacentHTML("beforeend", growth());
@@ -490,7 +618,9 @@
           .querySelector(".page")
           ?.insertAdjacentHTML("beforeend", participation() + association());
       else if (domain === "b2b")
-        main.querySelector(".page")?.insertAdjacentHTML("beforeend", stage());
+        main
+          .querySelector(".page")
+          ?.insertAdjacentHTML("beforeend", b2bStage());
     }
     decorateCovers(main);
   };
