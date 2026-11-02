@@ -1,0 +1,52 @@
+[
+  {
+    "file": ".nojekyll",
+    "bytes": 0,
+    "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+  },
+  {
+    "file": "app.js",
+    "bytes": 45851,
+    "sha256": "039bd67023c64825eaf5ae066aaf8fd716ca81c7ebd83fc2439652ac6c30521f"
+  },
+  {
+    "file": "assets\\concept-01.png",
+    "bytes": 1279261,
+    "sha256": "40fd357498976f6a005e019c681df3a1e811645c25af9b62b0a1a33f717a8dd2"
+  },
+  {
+    "file": "assets\\concept-02.png",
+    "bytes": 1269475,
+    "sha256": "8ee462403d6643cd90b13e1d7f505d7b79f12929fc182635e7a629fb939fa9b7"
+  },
+  {
+    "file": "assets\\concept-03.png",
+    "bytes": 1275214,
+    "sha256": "bb04f0f70bdfd4e25e2a74dce689bcf928159bd64e205d37c2f14e9235d468c9"
+  },
+  {
+    "file": "assets\\favicon.svg",
+    "bytes": 199,
+    "sha256": "fb2d4c1d4cb6fe65445725b2c888b4d6e3c41e574741166b2b9a711b13c7074a"
+  },
+  {
+    "file": "data.js",
+    "bytes": 29842,
+    "sha256": "9f6ab4dc202b0022d90f73d1c1f16b815ace6c114ab9412ac3db996bf2f8a0bd"
+  },
+  {
+    "file": "index.html",
+    "bytes": 2682,
+    "sha256": "1aaf7917fd05527028c08199bf60660baf4d096b044ca28bad5ec21215e52169"
+  },
+  {
+    "file": "robots.txt",
+    "bytes": 23,
+    "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+  },
+  {
+    "file": "styles.css",
+    "bytes": 31486,
+    "sha256": "b4405424e266b837ea30d07be3090784c7cf02b02ad16ab9945522cc09691d8c"
+  }
+]
