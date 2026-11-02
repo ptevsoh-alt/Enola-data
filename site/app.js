@@ -115,14 +115,32 @@ function visualStructure(c){
  const rows=c.layout==='social'?[['季度','主题与内容支柱'],['月度','日历与渠道分工'],['周度','制作与审核'],['复盘','数据与问题回流']]:c.layout==='community'?[['参与','教程与问题'],['投稿','条件与过程'],['授权','范围与用途'],['回流','FAQ 与内容']]:c.layout==='b2b'?[['研究','客户适配与需求'],['触达','渠道与下一步'],['协同','商务与交付'],['复盘','分项业务记录']]:[['表达','Listing / A+'],['流量','搜索词与 CPC'],['经营','库存与促销'],['复盘','页面与数据']];
  return `<div class="channel-matrix">${rows.map(x=>`<article><h3>${x[0]}</h3><p>${x[1]}</p></article>`).join('')}</div><p class="small muted" style="margin-top:16px">RECONSTRUCTED · 工作结构重构；不作为历史执行日志或业务漏斗。</p>`;
 }
-function casePage(c){currentCase=c;return `<div class="wrap"><header class="case-head"><div class="breadcrumb"><a href="#/${c.kind==='main'?'cases':'special'}">${c.kind==='main'?'案例中心':'专题项目'}</a><span>/</span><span>${c.subtitle}</span></div><div class="case-heading"><div class="case-number">${c.no}</div><div><p class="eyebrow">${c.subtitle}</p><h1>${c.title}</h1>${badge(c.status)}</div></div><div class="case-meta"><div><b>承担角色与职责边界</b>${c.role}</div><div><b>项目范围与证据边界</b>${c.scope}</div></div></header>
+function caseStoryline(c){
+ const n=P.caseNarratives?.[c.id];if(!n)return '';
+ return `<section class="case-storyline" aria-label="项目工作路径"><div class="case-story-heading"><p class="eyebrow">PROJECT LOGIC</p><h2>${n.headline}</h2><p>${n.summary}</p></div><ol class="case-story-steps">${n.stages.map((s,i)=>`<li><span class="story-step-number">${String(i+1).padStart(2,'0')}</span><h3>${s.title}</h3><p>${s.detail}</p></li>`).join('')}</ol></section>`;
+}
+function caseEvidence(c){
+ const n=P.caseNarratives?.[c.id];if(!n)return '';
+ const groups=n.evidenceGroups||[];
+ const blocks=groups.map(g=>{
+  const items=g.metrics.map(id=>metricBy(id)).filter(Boolean);if(!items.length)return '';
+  const domain=items[0].domain;
+  return `<section class="case-evidence-group"><div class="case-evidence-head"><div><h3>${g.title}</h3><p>${g.description}</p></div><a class="text-link" href="#/data/${domain}">查看该组指标 ↗</a></div><div class="result-grid">${items.map(metricCard).join('')}</div></section>`;
+ }).join('');
+ return `<div class="case-evidence"><div class="case-evidence-intro"><p class="eyebrow">RESULTS / EVIDENCE</p><h3>与项目对应的业务指标</h3></div>${blocks||`<div class="case-evidence-empty"><b>可展示的工作结果</b><p>${n.evidenceNote}</p></div>`}${blocks?`<p class="case-evidence-note">${n.evidenceNote}</p>`:''}</div>`;
+}
+function casePage(c){
+ currentCase=c;
+ return `<div class="wrap"><header class="case-head"><div class="breadcrumb"><a href="#/${c.kind==='main'?'cases':'special'}">${c.kind==='main'?'案例中心':'专题项目'}</a><span>/</span><span>${c.subtitle}</span></div><div class="case-heading"><div class="case-number">${c.no}</div><div><p class="eyebrow">${c.subtitle}</p><h1>${c.title}</h1>${badge(c.status)}</div></div><div class="case-meta"><div><b>负责工作</b>${c.role}</div><div><b>项目范围</b>${c.scope}</div></div></header>
+ ${caseStoryline(c)}
  <div class="case-content"><aside class="chapter-nav" aria-label="案例章节"><a href="#/case/${c.id}/overview">01 业务背景</a><a href="#/case/${c.id}/decision">02 策略判断</a><a href="#/case/${c.id}/planning">03 资源协同</a><a href="#/case/${c.id}/work">04 关键交付</a><a href="#/case/${c.id}/results">05 结果复盘</a></aside><article>
  <section id="overview" class="chapter"><h2>业务背景与关键挑战</h2>${c.image?`<div class="case-cover">${art(c.image,c.subtitle+'概念视觉')}<div><h2>${c.subtitle}</h2><p>${c.problem}</p>${badge(c.image===3?'CONCEPT':'RECONSTRUCTED')}</div></div>`:`<p>${c.problem}</p>`}</section>
  <section id="decision" class="chapter"><h2>关键判断与策略选择</h2><blockquote class="decision-quote">${c.decision}</blockquote></section>
  <section id="planning" class="chapter"><h2>目标拆解与资源协同</h2><div class="prose-grid"><div><h3>工作拆解与阶段安排</h3><p>${c.plan}</p></div><div><h3>资源配置与协作机制</h3><p>${c.resources}</p></div></div>${visualStructure(c)}</section>
  <section id="work" class="chapter"><div class="section-head"><h2>关键工作与管理交付</h2><button class="text-link" data-work="${c.work}">展开阅读 ↗</button></div><p>${c.execution}</p>${workHtml(c.work)}</section>
- <section id="results" class="chapter"><h2>业务结果与复盘判断</h2><p>${c.result}</p>${c.metrics.length?`<div class="result-grid">${c.metrics.map(id=>metricCard(metricBy(id))).join('')}</div>`:''}${c.id==='seo'?donutChart('case'):''}<div class="note">${c.review}</div><a class="text-link" href="#/data/${c.metrics.length?metricBy(c.metrics[0]).domain:'social'}">查看独立数据中心 ↗</a></section>
- </article></div><div class="case-end"><a class="text-link" href="#/${c.kind==='main'?'cases':'special'}">← 返回${c.kind==='main'?'案例中心':'专题项目'}</a>${caseLink(P.cases[(P.cases.indexOf(c)+1)%P.cases.length].id,'下一个项目')}</div></div>`}
+ <section id="results" class="chapter"><h2>阶段结果与业务复盘</h2><p>${c.result}</p>${caseEvidence(c)}<div class="note"><b>下一轮复盘重点</b><p>${c.review}</p></div>${c.metrics.length?`<a class="text-link" href="#/data/${metricBy(c.metrics[0]).domain}">查看本案例对应数据 ↗</a>`:''}</section>
+ </article></div><div class="case-end"><a class="text-link" href="#/${c.kind==='main'?'cases':'special'}">← 返回${c.kind==='main'?'案例中心':'专题项目'}</a>${caseLink(P.cases[(P.cases.indexOf(c)+1)%P.cases.length].id,'下一个项目')}</div></div>`;
+}
 
 function donutChart(prefix='data'){
  const v=metricBy('organic-share').value,circ=2*Math.PI*74,dash=circ*v/100;
@@ -153,7 +171,10 @@ function updateData(){
   domain==='b2b'?'100+ 触达、约 3% 线索转化和月成交约 30 万元没有匹配的统计月份与分母，不制作完整销售漏斗。':
   domain==='commerce'?'销售额变化、CVR 变化和利润率分别展示；不反推基期，也不据此计算广告 ROI。':
   '目前没有实际发送和复购记录，暂不展示留存或会员收入变化。';
- $('#data-panel').innerHTML=`<div class="data-kpis" aria-label="${P.domains[domain]}指标">${metrics.map(metricCard).join('')}</div><div class="data-chart-layout">${chart}<aside class="data-note"><p class="eyebrow">业务表现</p><h3 style="margin-top:14px">这些数字说明了什么</h3><p>${domainNote}</p><details><summary>数据如何阅读？</summary><p>趋势图只使用有两个以上真实时间或阶段记录的数据。其余指标保留原始汇总值，不将平均值或百分比变化拆成虚构月份。</p></details><details><summary>比较变化时看什么？</summary><p>${comparisonNote}</p></details><details><summary>如何查看指标来源？</summary><p>点击指标卡，可查看平台字段、统计窗口、来源摘要和必要说明。后台截图原图不公开。</p></details></aside></div><div class="pending-components"><article><h3>趋势图</h3><p>目前仅对具备两个阶段记录的 Facebook 粉丝规模展示变化线；曝光、互动、搜索点击和销售额等数据仍按原始统计窗口分别呈现。</p></article><article><h3>指标口径</h3><p>Facebook Page、Facebook Group、Instagram、B2B 和 Amazon 分开统计。截图汇总值不与其他周期的 Meta 汇总值相加或合并比较。</p></article></div>`;
+ const domainCaseIds={social:'social',community:'community',search:'seo',b2b:'b2b',commerce:'amazon',lifecycle:'crm'};
+ const relatedCase=caseBy(domainCaseIds[domain]),relatedStory=P.caseNarratives?.[relatedCase?.id];
+ const caseBridge=relatedCase?`<section class="domain-case-bridge"><div><p class="eyebrow">从数据回到业务动作</p><h3>${relatedCase.title}</h3><p>${relatedStory?.summary||relatedCase.execution}</p></div><a class="text-link" href="#/case/${relatedCase.id}">查看策略、团队交付与复盘 ↗</a></section>`:'';
+ $('#data-panel').innerHTML=`<div class="data-kpis" aria-label="${P.domains[domain]}指标">${metrics.map(metricCard).join('')}</div><div class="data-chart-layout">${chart}<aside class="data-note"><p class="eyebrow">业务表现</p><h3 style="margin-top:14px">这些数字说明了什么</h3><p>${domainNote}</p><details><summary>数据如何阅读？</summary><p>趋势图只使用有两个以上真实时间或阶段记录的数据。其余指标保留原始汇总值，不将平均值或百分比变化拆成虚构月份。</p></details><details><summary>比较变化时看什么？</summary><p>${comparisonNote}</p></details><details><summary>如何查看指标来源？</summary><p>点击指标卡，可查看平台字段、统计窗口、来源摘要和必要说明。后台截图原图不公开。</p></details></aside></div>${caseBridge}<div class="pending-components"><article><h3>趋势图</h3><p>目前仅对具备两个阶段记录的 Facebook 粉丝规模展示变化线；曝光、互动、搜索点击和销售额等数据仍按原始统计窗口分别呈现。</p></article><article><h3>指标口径</h3><p>Facebook Page、Facebook Group、Instagram、B2B 和 Amazon 分开统计。截图汇总值不与其他周期的 Meta 汇总值相加或合并比较。</p></article></div>`;
  document.querySelectorAll('[data-domain]').forEach(b=>b.setAttribute('aria-pressed',String(b.dataset.domain===domain)));
 }
 function capabilities(){return `<div class="wrap">${pageHead('能力展示','覆盖产品营销、社媒运营、品牌传播与商业渠道。','实际工作包括 4 条核心产品线的卖点整理与上市传播、Facebook / Instagram 内容运营、美国 Facebook Group 社群活动、品牌与 Creator 协同、SEO 内容规划、海外 B2B 客户开发及 Amazon 店铺经营。')}<section class="cap-list" style="padding-bottom:55px">${capArticles()}</section><section class="section"><div class="section-head"><h2>社媒团队与项目交付方式</h2><a href="#/case/operations">查看项目管理案例 ↗</a></div><div class="prose-grid"><div><h3>季度定方向，月度排内容</h3><p>季度先确定主推产品、传播主题和用户教育重点；月度日历再拆成 Facebook / Instagram / Group 的内容支柱、选题、形式、素材需求、负责人和发布时间。每条内容明确 Hook、核心信息、演示证明和 CTA。</p></div><div><h3>周度审核，月度复盘</h3><p>制作阶段检查脚本、画面、产品事实、字幕、链接和素材授权；发布后分别查看曝光、互动、链接点击和站点承接。复盘结论回写下一轮选题、创意 Brief 和资源安排。</p></div></div></section></div>`}
