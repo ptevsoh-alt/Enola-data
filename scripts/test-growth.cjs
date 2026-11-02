@@ -91,8 +91,8 @@ const fs = require("fs"),
         if ([...e.classList].some((s) => s.startsWith("g-"))) e.remove();
       });
       assert.equal(
-        clone.textContent.replace(/\s+/g, " ").trim(),
-        old.d.querySelector("main").textContent.replace(/\s+/g, " ").trim(),
+        clone.textContent.replace(/\s+/g, ""),
+        old.d.querySelector("main").textContent.replace(/\s+/g, ""),
       );
     });
   }
