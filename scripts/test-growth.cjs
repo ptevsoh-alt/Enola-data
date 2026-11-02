@@ -156,6 +156,63 @@ const fs = require("fs"),
     );
   });
   await route("/case/social");
+  check("Facebook page snapshot uses five independent metric cards", () => {
+    assert.equal(d.querySelectorAll(".g-snapshot-card").length, 5);
+    assert.deepEqual(
+      [...d.querySelectorAll(".g-snapshot-card")].map((x) => x.dataset.growthMetric),
+      ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "fb-follows"],
+    );
+    assert.equal(d.querySelectorAll(".g-bar-row, .g-chart-scale").length, 0);
+    assert.ok(!d.querySelector(".g-snapshot-chart").textContent.includes("内容表现的数量级"));
+  });
+  check("Facebook backend change values stay attached to their own fields", () => {
+    const expected = new Map([
+      ["fb-content-interactions", "↑ 1,358.3%"],
+      ["fb-link-clicks", "↑ 1.7万%"],
+      ["fb-visits", "↑ 1,517.8%"],
+      ["fb-follows", "↑ 2,129.2%"],
+    ]);
+    for (const [id, value] of expected) {
+      const card = d.querySelector(`.g-snapshot-card[data-growth-metric="${id}"]`);
+      assert.ok(card.textContent.includes(value), id);
+      assert.ok(card.textContent.includes("比较周期未注明"), id);
+    }
+    assert.ok(
+      d.querySelector('.g-snapshot-card[data-growth-metric="fb-views"]').textContent.includes("未提供"),
+    );
+  });
+  check("historical growth is grouped by channel rather than ranked on a shared scale", () => {
+    assert.equal(d.querySelectorAll(".g-history-card").length, 8);
+    assert.equal(d.querySelectorAll(".g-history-group").length, 3);
+    assert.ok(d.querySelector(".g-history-growth").textContent.includes("不合并成一条增长曲线"));
+    assert.deepEqual(
+      [...d.querySelectorAll(".g-history-card")].map((x) => x.dataset.growthMetric),
+      [
+        "engagement-change",
+        "fb-reach",
+        "fb-link-click-change",
+        "ig-event-engagement-change",
+        "ig-follower-change",
+        "linkedin-follower-change",
+        "group",
+        "group-month",
+      ],
+    );
+  });
+  check("unverified monthly group growth remains visibly pending", () => {
+    assert.ok(
+      d.querySelector('.g-history-card[data-growth-metric="group-month"] .is-pending'),
+    );
+  });
+  const snapshotEvidence = d.querySelector(
+    '.g-snapshot-card[data-growth-metric="fb-content-interactions"] [data-evidence]',
+  );
+  snapshotEvidence.focus();
+  snapshotEvidence.click();
+  check("snapshot metric still opens the existing evidence drawer", () =>
+    assert.ok(d.querySelector("#evidence-dialog").open),
+  );
+  d.querySelector('[data-close="evidence-dialog"]').click();
   for (let i = 0; i < 3; i++) {
     d.querySelector(`[data-g-campaign="${i}"]`).click();
     check("campaign fields " + i, () => {
