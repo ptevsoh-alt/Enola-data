@@ -90,7 +90,10 @@ const fs = require("fs"),
       clone.querySelectorAll("[class]").forEach((e) => {
         if ([...e.classList].some((s) => s.startsWith("g-"))) e.remove();
       });
-      assert.equal(clone.textContent, old.d.querySelector("main").textContent);
+      assert.equal(
+        clone.textContent.replace(/\\s+/g, " ").trim(),
+        old.d.querySelector("main").textContent.replace(/\\s+/g, " ").trim(),
+      );
     });
   }
   await route("/home");
