@@ -184,7 +184,7 @@
       ${header(
         "FACEBOOK PAGE / 后台截图记录",
         "Facebook 页面关键数据",
-        "浏览量、内容互动、链接点击、页面访问和关注次数分别展示，帮助看清内容触达、用户互动与导流表现。",
+        "浏览量、互动次数、链接点击、页面访问和关注次数分别呈现。每项数据保留自己的变化记录，不把不同指标放在同一尺度上比较。",
       )}
       <div class="g-snapshot-grid">${ids
         .map((id) => {
@@ -203,20 +203,18 @@
           return `<article class="g-snapshot-card" data-growth-metric="${id}">
             <div class="g-snapshot-card-top">
               <b>${esc(x.label)}</b>
-              <small>${esc(P.statuses[x.status])}</small>
             </div>
             <div class="g-snapshot-value">
               <strong>${esc(x.display)}</strong>
               <span>${esc(x.unit)}</span>
             </div>
             ${change}
-            <p class="g-snapshot-period">统计范围：${esc(x.window)}</p>
             <button type="button" data-evidence="${id}" aria-label="${esc(x.label)}，查看字段定义与来源">查看字段定义与来源 ↗</button>
           </article>`;
         })
         .join("")}</div>
       <p class="g-snapshot-footnote">
-        来源：Facebook 页面分析后台截图记录（原图不公开）。截图未显示完整统计日期及比较周期；百分比沿用后台显示值，暂不标注同比或环比，也不反推前期绝对数。不同指标分别阅读，不作横向排名。
+        这些数字来自 Facebook 页面分析后台截图（原图不公开）。截图未显示完整统计日期和比较周期；百分比沿用后台原始变化值，不标注同比或环比，也不反推前期绝对数。页面浏览量没有可核验的对照值。
       </p>
     </section>`;
   }
@@ -262,8 +260,8 @@
     return `<section class="g-history-growth">
       ${header(
         "HISTORICAL GROWTH / 过往项目",
-        "过往项目中的增长记录",
-        "以下数据来自不同平台、账号和统计阶段，按原始记录分别呈现，不合并成一条增长曲线，也不按百分比排名。",
+        "过往项目的增长表现",
+        "这里汇总 Meta、Facebook、Instagram、LinkedIn 和社群的历史记录。平台、账号和统计周期并不完全相同，因此分组展示，不按百分比排名。",
       )}
       <div class="g-history-groups">${groups
         .map(
@@ -277,7 +275,7 @@
         )
         .join("")}</div>
       <p class="g-history-footnote">
-        注：部分历史记录未保留比较基期、起止日期或账号范围；标注“待核”的项目不作为已验证增长成果。点击数据可查看来源、定义与限制。
+        比较基期、起止日期或账号范围未完整保留的项目，仅展示原始记录；标注“待核”的数据不作为已验证成果。点击数据可查看来源、定义与限制。
       </p>
     </section>`;
   }
@@ -288,8 +286,8 @@
     return `<section class="g-trend-status" aria-label="趋势数据状态">
       <div>
         <p class="eyebrow">TREND READINESS</p>
-        <h3>时间趋势，等同口径数据齐备再画。</h3>
-        <p>现有资料缺少同一账号、同一字段、同一统计窗口的连续日期记录，因此暂不绘制折线；已有阶段变化按原始记录单独展示。</p>
+        <h3>趋势图暂不绘制</h3>
+        <p>目前缺少同一账号、同一指标、同一统计周期的连续日期数据。先保留已有阶段变化；补齐日期和原值后，再制作时间趋势对比。</p>
       </div>
       <div class="g-readiness">
         <span><b>01</b>连续日期与原值</span>
@@ -355,10 +353,10 @@
     return `<section class="g-module g-growth" id="growth-overview">
       ${header(
         "GROWTH / EVIDENCE FIRST",
-        home ? "把阶段成果与增长信号放在前面。" : "从历史变化到页面表现，读懂社媒增长。",
+        home ? "把阶段成果与增长信号放在前面。" : "社媒增长：历史变化与页面表现",
         home
           ? "历史阶段总量与变化记录分开展示，每项数据保留来源和证据入口。"
-          : "先看过往阶段的变化记录，再看 Facebook 页面汇总值；不同指标分别呈现，不放在同一尺度上比较。",
+          : "先看历史项目中的阶段变化，再看 Facebook 页面后台数据。不同平台、账号和统计周期分开展示，不把不同指标直接比较。",
       )}
       ${home ? `<div class="g-kpi-grid">${homeMetrics.map(metric).join("")}</div>` : ""}
       ${stage()}
