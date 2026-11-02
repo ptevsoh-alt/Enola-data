@@ -186,7 +186,7 @@ const fs = require("fs"),
   check("historical growth is grouped by channel rather than ranked on a shared scale", () => {
     assert.equal(d.querySelectorAll(".g-history-card").length, 8);
     assert.equal(d.querySelectorAll(".g-history-group").length, 3);
-    assert.ok(d.querySelector(".g-history-growth").textContent.includes("不合并成一条增长曲线"));
+    assert.ok(d.querySelector(".g-history-growth").textContent.includes("不按百分比排名"));
     assert.deepEqual(
       [...d.querySelectorAll(".g-history-card")].map((x) => x.dataset.growthMetric),
       [
