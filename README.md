@@ -1,21 +1,27 @@
-# Huang Wenlin — Portfolio
+# 黄文琳 — A · Editorial Portfolio
 
-This repository is the dedicated GitHub Pages deployment target for the standalone portfolio.
+海外品牌营销、GTM、产品营销与整合营销管理个人作品集。
 
-## Release status
+## 发布状态
 
-- Repository target and write permissions verified.
-- Static portfolio release package prepared and locally validated.
-- Website source files and assets have **not yet been uploaded**; this README is the only committed file at this stage.
-- GitHub Pages has not yet been activated or verified.
+当前变更为正式发布准备：网站源文件已整理到 `site/`；GitHub Actions 先验证后部署。合并后以本仓库 Actions 运行结果及实际 HTTP 验收为最终发布依据。
 
-## Deployment
+目标地址：https://ptevsoh-alt.github.io/Enola-data/
 
-Upload the contents of the prepared deployment package to the repository root on `main`. Then open **Settings → Pages → Build and deployment**, select **GitHub Actions** as the source, and push the deployment workflow. The workflow will assemble and publish the static site.
+## 部署与验证
 
-## Public evidence policy
+- 原生 HTML / CSS / JavaScript，无构建依赖。
+- 执行 `node scripts/validate-site.cjs` 验证源文件、数据与公开隐私边界。
+- PR 只运行验证。main 的 push 或手动运行在验证通过后部署 `site/`。
+- Node.js 22，GitHub 官方 Pages Actions，环境为 `github-pages`。
+- Hash 路由及相对路径支持项目子目录，直接进入 `/#/case/gtm` 等地址。
 
-- Portfolio metrics retain their source labels, time windows, evidence status, definitions, and limitations.
-- Missing values remain missing; they are not converted to zero.
-- Raw Facebook dashboard screenshots are not included in the public site. The public evidence drawer records the source and caveats without exposing the original screenshots.
-- Concept artwork is labeled as concept work, not historical campaign output.
+## 公开证据政策
+
+- 原始 Facebook 后台截图不进入公开仓库、网站或部署 Artifact。证据抽屉仅展示文字摘要、来源类型、统计窗口、字段定义、状态与限制。
+- 26 项指标独立维护，分为 6 个业务域。缺失值保留 null，不以 0 替代。没有真实序列或匹配口径时，不制造趋势、转化率与漏斗。
+- DOCUMENTED / PENDING 不升级为 VERIFIED；不同窗口和业务链不拼接。
+- 概念图标注 CONCEPT；重构工作物不冒充历史原件；未来计划不声称已执行。
+- 不包含内部审计目录、后台截图、真实客户资料、环境配置、跟踪脚本、发送表单或虚构联系方式。
+
+公开文件校验见 `PUBLIC_ASSETS.json`。历史基准提交 `4bd1e0f4d266712d5d8a563905ebb151449ff209` 只有说明文件，没有上一版已上线网站；回退到该提交代表撤回本次网站内容，并非恢复旧网站。
