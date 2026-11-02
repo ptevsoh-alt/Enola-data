@@ -26,9 +26,9 @@ check('Facebook Group metrics isolated',groupIds.every(id=>p.metrics.some(m=>m.i
 check('missing viewers value remains null',p.metrics.find(m=>m.id==='fb-viewers').value===null);
 check('screenshot comparison windows remain unverified',p.metrics.filter(m=>m.sourceType==='screenshot').every(m=>m.windowStart===null&&m.windowEnd===null&&m.comparisonWindow===null));
 check('no public screenshot references',p.metrics.every(m=>!('sourceImage' in m)));
+const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
 check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
-const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
 new vm.Script(app);check('app syntax',true);new vm.Script(fs.readFileSync(path.join(root,'data.js'),'utf8'));check('data syntax',true);
 check('no remote dependencies',![app,css,html].some(s=>/https?:\/\//.test(s)));
 check('reduced motion support',css.includes('prefers-reduced-motion:reduce'));
