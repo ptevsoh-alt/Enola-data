@@ -31,7 +31,7 @@ check('no public evidence directory',!fs.existsSync(path.join(root,'assets/evide
 check('public copy has no internal repository labels',!/(Enola-marketing|R2\.2|V5 匿名|本地审核预览)/.test(app+html));
 const result={checks,passed:checks.filter(c=>c.status==='PASS').length,total:checks.length,caseCount:p.cases.length,metricCount:p.metrics.length};
 
-console.log(JSON.stringify({passed:result.passed,total:result.total}));
+
 
 const publicFiles=[]; function walk(d){for(const entry of fs.readdirSync(d,{withFileTypes:true})){const f=path.join(d,entry.name);entry.isDirectory()?walk(f):publicFiles.push(f)}} walk(root);
 check('no local paths or private labels',publicFiles.filter(f=>/\.(html|js|css|txt)$/.test(f)).every(f=>!/(?:[CD]:[\\/]|file:\/\/|Enola-marketing|Qimedo-Shopify-Codex|sourceImage|assets\/evidence\/)/.test(fs.readFileSync(f,'utf8'))));

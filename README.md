@@ -4,7 +4,7 @@
 
 ## 发布状态
 
-当前变更为正式发布准备：网站源文件已整理到 `site/`；GitHub Actions 先验证后部署。合并后以本仓库 Actions 运行结果及实际 HTTP 验收为最终发布依据。
+已于 2026-11-02 发布至 GitHub Pages。正式部署运行 [41383732032](https://github.com/ptevsoh-alt/Enola-data/actions/runs/41383732032) 第二次尝试成功；首页、样式、脚本与三张概念图均经真实线上访问返回 HTTP 200。桌面与移动端已完成页面及主要交互回归。
 
 目标地址：https://ptevsoh-alt.github.io/Enola-data/
 
