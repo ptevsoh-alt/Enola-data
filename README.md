@@ -1,29 +1,23 @@
-# 黄文琳｜海外市场与品牌营销作品集
+# 黄文琳｜视觉案例作品集
 
-个人作品集，展示海外社媒策略与团队管理、产品营销与上市传播、品牌整合传播、海外 B2B 客户开发及 Amazon 店铺经营经历。
+以项目封面、策略图、流程图、协作看板与数据图表呈现品牌战略、PMM、GTM、IMC、PR、团队管理及跨部门交付。
 
-**在线作品集：** https://ptevsoh-alt.github.io/Enola-data/
+11 个案例均包含 Background、Insight、Strategy、Execution、Management Contribution、Results、Evidence。
 
-## 内容结构
+企业与品牌身份匿名化。创作者合作仅公开策略、筛选、流程、内容治理与授权机制，公开数据不包含详细运营记录。38 项其他指标保留原有数值、来源、定义、窗口、限制和证据状态；重构与概念工作物不代表历史成果。
 
-- **首页：** 职业经历、代表性成果与重点项目
-- **案例：** 产品营销与 GTM、社媒增长、社群经营、品牌 IMC、营销项目管理
-- **专题：** 海外 B2B、SEO 内容、Amazon 经营、视频创意、EDM 生命周期与 Creator 达人合作管理
-- **数据：** Meta / Facebook / Instagram、Facebook Group、Creator 达人合作、GSC、B2B 与 Amazon 指标
-- **能力与经历：** 工作职责、协作范围、项目交付及职业时间线
+## 本地预览与检查
 
-## 数据展示原则
+需要 Node.js 22 或更新版本。
 
-- 指标保留平台字段、统计周期和来源摘要。
-- 不同平台、账号、任期和业务类型分开展示。
-- 有连续、同口径日期数据时使用折线趋势；阶段汇总以结果卡呈现，不补造中间月份。
-- 后台截图仅展示文字来源摘要，原图不公开。
-- 历史资料、经历重构和概念方案分别标注。
+```sh
+npm ci
+npm test
+npm run preview
+```
 
-## 技术与部署
+预览地址为 http://127.0.0.1:8174/ 。只发布 `site/`。资产清单为 `PUBLIC_ASSETS.json`；修改网站后执行 `node scripts/update-manifest.cjs`。
 
-- 原生 HTML / CSS / JavaScript，无构建依赖。
-- 执行 `node scripts/validate-site.cjs` 检查页面、案例、指标和公开资产。
-- GitHub Pages 由 GitHub Actions 部署 `site/` 目录。
-- Hash 路由支持直接进入案例页面，例如 `/#/case/gtm`。
-- 公开资源校验清单见 `PUBLIC_ASSETS.json`。
+PR 只执行校验，不部署。此次改造不自动合并或发布；现有 main 发布流程由仓库维护者控制。
+
+视觉验收与专业能力应用说明见 `qa/ACCEPTANCE.md`。

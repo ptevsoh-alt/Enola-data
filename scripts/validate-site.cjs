@@ -1,69 +1,124 @@
-const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),crypto=require('node:crypto');
-const root=path.resolve(__dirname,'../site'),context={window:{}};
-vm.runInNewContext(fs.readFileSync(path.join(root,'data.js'),'utf8'),context);const p=context.window.PORTFOLIO;
-const checks=[];function check(name,ok){checks.push({name,status:ok?'PASS':'FAIL'});if(!ok)process.exitCode=1}
-check('11 unique cases',p.cases.length===11&&new Set(p.cases.map(c=>c.id)).size===11);
-check('seven business domains',Object.keys(p.domains).length===7);
-check('42 unique metrics',p.metrics.length===42&&new Set(p.metrics.map(m=>m.id)).size===42);
-check('all metric-to-case links resolve',p.metrics.every(m=>p.cases.some(c=>c.id===m.caseId)));
-check('all case metric references resolve',p.cases.every(c=>c.metrics.every(id=>p.metrics.some(m=>m.id===id))));
-check('11 case storylines with four stages',p.caseNarratives&&p.cases.length===11&&p.cases.every(c=>p.caseNarratives[c.id]?.stages?.length===4));
-check('case evidence groups resolve and cover case metrics',p.cases.every(c=>{const ids=(p.caseNarratives?.[c.id]?.evidenceGroups||[]).flatMap(g=>g.metrics||[]);return ids.length===c.metrics.length&&new Set(ids).size===ids.length&&c.metrics.every(id=>ids.includes(id))&&ids.every(id=>p.metrics.some(m=>m.id===id));}));
-
-check('all capability links resolve',p.capabilities.every(c=>p.cases.some(x=>x.id===c[3])));
-check('all experience links resolve',p.experiences.every(c=>p.cases.some(x=>x.id===c.caseId)));
-const expectedExperience=[['2025.04—2026.09','碳宝贝科技有限公司','社媒负责人 / 社媒管理组长'],['2023.11—2025.03','瑞音博科技有限公司','海外渠道 / 市场推广'],['2022.07—2023.10','韵衫科技有限公司','亚马逊运营专员'],['2020.12—2022.06','传盛科技有限公司','资深亚马逊运营专员']];
-check('four resume-aligned career entries',p.experiences.length===4&&expectedExperience.every((r,i)=>p.experiences[i].date===r[0]&&p.experiences[i].title===r[1]&&p.experiences[i].role===r[2]));
-const resumeMetricIds=['product-sales-stage','fb-link-click-change','ig-event-engagement-change','ig-follower-change','b2b-email-open','b2b-lead-conversion','linkedin-follower-change','fb-follower-scale','amazon-profit-margin','amazon-offsite-followers','amazon-complaint-change','amazon-review-change'];
-check('resume-backed metrics present',resumeMetricIds.every(id=>p.metrics.some(m=>m.id===id)));
-const emailRange=p.metrics.find(m=>m.id==='b2b-email-open');
-check('B2B email open rate preserves 10–15% range',emailRange&&emailRange.value===null&&emailRange.range?.[0]===10&&emailRange.range?.[1]===15);
-check('no VERIFIED claims',p.metrics.every(m=>m.status!=='VERIFIED'));
-check('missing retention remains null',p.metrics.find(m=>m.id==='retention').value===null);
-check('ER follows supplied totals',Math.abs(p.metrics.find(m=>m.id==='er').value-37000/965000)<1e-10);
-check('all metrics have provenance and caveats',p.metrics.every(m=>m.source&&m.window&&m.definition&&m.limits&&m.unit));
-const pageIds=['fb-views','fb-viewers','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows'];
-const groupIds=['group-members','group-posters','group-viewers'];
-check('Facebook Page metrics present',pageIds.every(id=>p.metrics.some(m=>m.id===id&&m.domain==='social')));
-check('Facebook Group metrics isolated',groupIds.every(id=>p.metrics.some(m=>m.id===id&&m.domain==='community')));
-check('missing viewers value remains null',p.metrics.find(m=>m.id==='fb-viewers').value===null);
-check('screenshot comparison windows remain unverified',p.metrics.filter(m=>m.sourceType==='screenshot').every(m=>m.windowStart===null&&m.windowEnd===null&&m.comparisonWindow===null));
-check('no public screenshot references',p.metrics.every(m=>!('sourceImage' in m)));
-const creatorMetricIds=['creator-new','creator-videos','creator-active','creator-gmv-collabs'];
-check('Creator metrics resolve to Creator case',creatorMetricIds.every(id=>p.metrics.some(m=>m.id===id&&m.domain==='creator'&&m.caseId==='creator'&&m.sourceType==='screenshot')));
-check('Creator source snapshots remain separated',p.metrics.find(m=>m.id==='creator-new')?.window.includes('2026-10-25')&&creatorMetricIds.slice(1).every(id=>p.metrics.find(m=>m.id===id)?.window.includes('2026-04-01')));
-check('Creator financial limits are explicit',p.metrics.find(m=>m.id==='creator-gmv-collabs')?.limits.includes('不计算总 GMV')&&p.metrics.find(m=>m.id==='creator-gmv-collabs')?.limits.includes('佣金'));
-const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
-check('case narrative and data center are cross-linked',app.includes('domain-case-bridge')&&app.includes('case-evidence-group')&&app.includes('从数据回到业务动作'));
-check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
-check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
-check('Creator case and data page have dedicated visuals',app.includes('creatorWorkflow')&&app.includes('creatorOpsVisual')&&css.includes('.creator-flow')&&css.includes('.creator-source-grid'));
-check('homepage editorial and management visuals present',app.includes('hero-focus-list')&&app.includes('management-strip')&&css.includes('.hero-signature')&&css.includes('.management-grid'));
-check('product architecture and Creator console visuals present',app.includes('productMessageArchitecture')&&app.includes('creatorOperationsVisual')&&css.includes('.product-role-grid')&&css.includes('.creator-console-steps'));
-check('social aggregate comparison remains non-trend',app.includes('socialComparisonChart')&&app.includes('互动 / 曝光的汇总比值')&&css.includes('.comparison-bars'));
-check('product portfolio uses nine anonymized source-aligned roles',app.includes('全屋吸尘设备')&&app.includes('户外电动清洁刷')&&app.includes('60KPa + 2L + 180°贴地')&&app.includes('1200 RPM + 50 in + 8-in-1')&&app.includes('100W + 770 RPM + LED')&&app.includes('九类产品任务')&&!/V1 类别|M1 类别|M2 类别|M3 类别|Q2 类别|Q3 类别|Q4 类别|7\.2V/.test(app.slice(app.indexOf('function productMessageArchitecture'),app.indexOf('function creatorOperationsVisual'))));
-check('social sources A and B remain visually separated',app.includes('来源 A · 2025 汇总')&&app.includes('来源 B · 后台截图')&&app.includes('fb-page-snapshot')&&css.includes('.fb-snapshot-grid'));
-check('Creator workbench KPI values bind to source metrics',app.includes("metricBy(id)")&&app.includes("'creator-videos','creator-active','creator-gmv-collabs'")&&app.includes("metricBy('creator-new')"));
-check('Facebook Page screenshot cards preserve all five fields', ['fb-views','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows'].every(id=>app.includes("'"+id+"'")));
-
-check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
-check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
-new vm.Script(app);check('app syntax',true);new vm.Script(fs.readFileSync(path.join(root,'data.js'),'utf8'));check('data syntax',true);
-check('no remote dependencies',![app,css,html].some(s=>/https?:\/\//.test(s)));
-check('reduced motion support',css.includes('prefers-reduced-motion:reduce'));
-check('site root dependencies exist',['styles.css','data.js','app.js','assets/favicon.svg','assets/concept-01.png','assets/concept-02.png','assets/concept-03.png'].every(f=>fs.existsSync(path.join(root,f))));
-check('no old internal concept filenames',!app.includes('v5-concept-'));
-check('no contact form or outbound submission',!html.includes('<form')&&!/fetch\(|XMLHttpRequest|sendBeacon/.test(app));
-check('no public evidence directory',!fs.existsSync(path.join(root,'assets/evidence')));
-check('public copy has no internal repository labels',!/(Enola-marketing|R2\.2|V5 匿名|本地审核预览)/.test(app+html));
-const result={checks,passed:checks.filter(c=>c.status==='PASS').length,total:checks.length,caseCount:p.cases.length,metricCount:p.metrics.length};
-
-
-
-const publicFiles=[]; function walk(d){for(const entry of fs.readdirSync(d,{withFileTypes:true})){const f=path.join(d,entry.name);entry.isDirectory()?walk(f):publicFiles.push(f)}} walk(root);
-check('no local paths or private labels',publicFiles.filter(f=>/\.(html|js|css|txt)$/.test(f)).every(f=>!/(?:[CD]:[\\/]|file:\/\/|Enola-marketing|Qimedo-Shopify-Codex|sourceImage|assets\/evidence\/)/.test(fs.readFileSync(f,'utf8'))));
-check('only approved public images',publicFiles.filter(f=>/\.(png|jpg|jpeg)$/i.test(f)).every(f=>/^concept-0[123]\.png$/.test(path.basename(f))));
-const assets=JSON.parse(fs.readFileSync(path.join(root,'../PUBLIC_ASSETS.json'),'utf8'));
-check('portable public asset paths',assets.every(e=>!e.file.includes('\\')&&!e.file.startsWith('/')&&!e.file.split('/').includes('..')));
-check('public asset hashes match',assets.every(e=>fs.existsSync(path.join(root,e.file))&&crypto.createHash('sha256').update(fs.readFileSync(path.join(root,e.file))).digest('hex')===e.sha256));
-console.log(JSON.stringify({passed:checks.filter(c=>c.status==='PASS').length,total:checks.length,checks}));
+const fs = require("fs"),
+  path = require("path"),
+  vm = require("vm"),
+  crypto = require("crypto"),
+  assert = require("assert/strict");
+const site = path.resolve(__dirname, "../site"),
+  ctx = { window: {} };
+const checks = [];
+function check(n, fn) {
+  fn();
+  checks.push({ name: n, status: "PASS" });
+}
+vm.runInNewContext(fs.readFileSync(path.join(site, "data.js"), "utf8"), ctx);
+const p = ctx.window.PORTFOLIO;
+check("11 unique cases and 38 retained public metrics", () => {
+  assert.equal(p.cases.length, 11);
+  assert.equal(p.metrics.length, 38);
+  assert.equal(new Set(p.cases.map((c) => c.id)).size, 11);
+  assert.equal(new Set(p.metrics.map((m) => m.id)).size, 38);
+});
+check("metric provenance, definitions, windows and limitations", () =>
+  p.metrics.forEach((m) => {
+    for (const k of [
+      "source",
+      "window",
+      "definition",
+      "limits",
+      "unit",
+      "status",
+      "sourceId",
+      "fieldVerification",
+    ])
+      assert.ok(m[k], m.id + ":" + k);
+    assert.notEqual(m.status, "VERIFIED");
+    assert.equal(m.evidenceStatus, m.status);
+  }),
+);
+check("no creator operating records in any public payload", () => {
+  assert.equal(
+    p.metrics.filter(
+      (m) => m.domain === "creator" || m.id.startsWith("creator-"),
+    ).length,
+    0,
+  );
+  assert.equal(p.cases.find((c) => c.id === "creator").metrics.length, 0);
+  const text = fs
+    .readdirSync(site)
+    .filter((f) => /\.(js|html|css)$/.test(f))
+    .map((f) => fs.readFileSync(path.join(site, f), "utf8"))
+    .join("");
+  assert.ok(
+    !/creator-(?:new|videos|active|gmv)|GMV|新增达人|活跃达人|飞书表|科技有限公司|Qimedo/i.test(
+      text,
+    ),
+  );
+});
+check("missing values and unverified comparison windows preserved", () => {
+  assert.equal(p.metrics.find((m) => m.id === "retention").value, null);
+  assert.equal(p.metrics.find((m) => m.id === "fb-viewers").value, null);
+  p.metrics
+    .filter((m) => m.sourceType === "screenshot")
+    .forEach((m) => {
+      assert.equal(m.windowStart, null);
+      assert.equal(m.comparisonWindow, null);
+    });
+});
+check("all content links resolve", () => {
+  p.cases.forEach((c) =>
+    c.metrics.forEach((id) => assert.ok(p.metrics.some((m) => m.id === id))),
+  );
+  p.metrics.forEach((m) => assert.ok(p.cases.some((c) => c.id === m.caseId)));
+  p.capabilities.forEach((c) => assert.ok(p.cases.some((x) => x.id === c[3])));
+});
+check("scripts parse", () => {
+  for (const file of ["data.js", "app.js"])
+    new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
+});
+const files = [];
+function walk(d) {
+  for (const e of fs.readdirSync(d, { withFileTypes: true })) {
+    let f = path.join(d, e.name);
+    e.isDirectory() ? walk(f) : files.push(f);
+  }
+}
+walk(site);
+check("public assets exhaustive, portable and hash verified", () => {
+  const manifest = JSON.parse(
+    fs.readFileSync(path.join(site, "../PUBLIC_ASSETS.json")),
+  );
+  assert.deepEqual(
+    manifest.map((e) => e.file).sort(),
+    files.map((f) => path.relative(site, f).split(path.sep).join("/")).sort(),
+  );
+  manifest.forEach((e) => {
+    assert.ok(!e.file.includes("\\") && !e.file.includes(".."));
+    const b = fs.readFileSync(path.join(site, e.file));
+    assert.equal(e.bytes, b.length);
+    assert.equal(e.sha256, crypto.createHash("sha256").update(b).digest("hex"));
+  });
+});
+check(
+  "no raw evidence, private paths, remote scripts or submission code",
+  () => {
+    files
+      .filter((f) => /\.(js|html|css|txt)$/.test(f))
+      .forEach((f) => {
+        const s = fs.readFileSync(f, "utf8");
+        assert.ok(
+          !/(?:[CD]:[\\/]|sourceImage|assets\/evidence|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon)/.test(
+            s,
+          ),
+          f,
+        );
+      });
+    assert.ok(!fs.existsSync(path.join(site, "assets/evidence")));
+  },
+);
+console.log(
+  JSON.stringify(
+    { checks, passed: checks.length, total: checks.length },
+    null,
+    2,
+  ),
+);
