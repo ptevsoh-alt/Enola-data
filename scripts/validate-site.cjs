@@ -4,11 +4,17 @@ vm.runInNewContext(fs.readFileSync(path.join(root,'data.js'),'utf8'),context);co
 const checks=[];function check(name,ok){checks.push({name,status:ok?'PASS':'FAIL'});if(!ok)process.exitCode=1}
 check('10 unique cases',p.cases.length===10&&new Set(p.cases.map(c=>c.id)).size===10);
 check('six business domains',Object.keys(p.domains).length===6);
-check('26 unique metrics',p.metrics.length===26&&new Set(p.metrics.map(m=>m.id)).size===26);
+check('38 unique metrics',p.metrics.length===38&&new Set(p.metrics.map(m=>m.id)).size===38);
 check('all metric-to-case links resolve',p.metrics.every(m=>p.cases.some(c=>c.id===m.caseId)));
 check('all case metric references resolve',p.cases.every(c=>c.metrics.every(id=>p.metrics.some(m=>m.id===id))));
 check('all capability links resolve',p.capabilities.every(c=>p.cases.some(x=>x.id===c[3])));
 check('all experience links resolve',p.experiences.every(c=>p.cases.some(x=>x.id===c.caseId)));
+const expectedExperience=[['2025.04—2026.09','碳宝贝科技有限公司','社媒负责人 / 社媒管理组长'],['2023.11—2025.03','瑞音博科技有限公司','海外渠道 / 市场推广'],['2022.07—2023.10','韵衫科技有限公司','亚马逊运营专员'],['2020.12—2022.06','传盛科技有限公司','资深亚马逊运营专员']];
+check('four resume-aligned career entries',p.experiences.length===4&&expectedExperience.every((r,i)=>p.experiences[i].date===r[0]&&p.experiences[i].title===r[1]&&p.experiences[i].role===r[2]));
+const resumeMetricIds=['product-sales-stage','fb-link-click-change','ig-event-engagement-change','ig-follower-change','b2b-email-open','b2b-lead-conversion','linkedin-follower-change','fb-follower-scale','amazon-profit-margin','amazon-offsite-followers','amazon-complaint-change','amazon-review-change'];
+check('resume-backed metrics present',resumeMetricIds.every(id=>p.metrics.some(m=>m.id===id)));
+const emailRange=p.metrics.find(m=>m.id==='b2b-email-open');
+check('B2B email open rate preserves 10–15% range',emailRange&&emailRange.value===null&&emailRange.range?.[0]===10&&emailRange.range?.[1]===15);
 check('no VERIFIED claims',p.metrics.every(m=>m.status!=='VERIFIED'));
 check('missing retention remains null',p.metrics.find(m=>m.id==='retention').value===null);
 check('ER follows supplied totals',Math.abs(p.metrics.find(m=>m.id==='er').value-37000/965000)<1e-10);
@@ -21,6 +27,8 @@ check('missing viewers value remains null',p.metrics.find(m=>m.id==='fb-viewers'
 check('screenshot comparison windows remain unverified',p.metrics.filter(m=>m.sourceType==='screenshot').every(m=>m.windowStart===null&&m.windowEnd===null&&m.comparisonWindow===null));
 check('no public screenshot references',p.metrics.every(m=>!('sourceImage' in m)));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
+check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
 new vm.Script(app);check('app syntax',true);new vm.Script(fs.readFileSync(path.join(root,'data.js'),'utf8'));check('data syntax',true);
 check('no remote dependencies',![app,css,html].some(s=>/https?:\/\//.test(s)));
 check('reduced motion support',css.includes('prefers-reduced-motion:reduce'));
