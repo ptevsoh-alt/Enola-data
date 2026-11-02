@@ -36,4 +36,7 @@ const result={checks,passed:checks.filter(c=>c.status==='PASS').length,total:che
 const publicFiles=[]; function walk(d){for(const entry of fs.readdirSync(d,{withFileTypes:true})){const f=path.join(d,entry.name);entry.isDirectory()?walk(f):publicFiles.push(f)}} walk(root);
 check('no local paths or private labels',publicFiles.filter(f=>/\.(html|js|css|txt)$/.test(f)).every(f=>!/(?:[CD]:[\\/]|file:\/\/|Enola-marketing|Qimedo-Shopify-Codex|sourceImage|assets\/evidence\/)/.test(fs.readFileSync(f,'utf8'))));
 check('only approved public images',publicFiles.filter(f=>/\.(png|jpg|jpeg)$/i.test(f)).every(f=>/^concept-0[123]\.png$/.test(path.basename(f))));
+const assets=JSON.parse(fs.readFileSync(path.join(root,'../PUBLIC_ASSETS.json'),'utf8'));
+check('portable public asset paths',assets.every(e=>!e.file.includes('\\')&&!e.file.startsWith('/')&&!e.file.split('/').includes('..')));
+check('public asset hashes match',assets.every(e=>fs.existsSync(path.join(root,e.file))&&crypto.createHash('sha256').update(fs.readFileSync(path.join(root,e.file))).digest('hex')===e.sha256));
 console.log(JSON.stringify({passed:checks.filter(c=>c.status==='PASS').length,total:checks.length,checks}));

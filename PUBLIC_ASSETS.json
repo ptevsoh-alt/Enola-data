@@ -10,22 +10,22 @@
     "sha256": "039bd67023c64825eaf5ae066aaf8fd716ca81c7ebd83fc2439652ac6c30521f"
   },
   {
-    "file": "assets\\concept-01.png",
+    "file": "assets/concept-01.png",
     "bytes": 1279261,
     "sha256": "40fd357498976f6a005e019c681df3a1e811645c25af9b62b0a1a33f717a8dd2"
   },
   {
-    "file": "assets\\concept-02.png",
+    "file": "assets/concept-02.png",
     "bytes": 1269475,
     "sha256": "8ee462403d6643cd90b13e1d7f505d7b79f12929fc182635e7a629fb939fa9b7"
   },
   {
-    "file": "assets\\concept-03.png",
+    "file": "assets/concept-03.png",
     "bytes": 1275214,
     "sha256": "bb04f0f70bdfd4e25e2a74dce689bcf928159bd64e205d37c2f14e9235d468c9"
   },
   {
-    "file": "assets\\favicon.svg",
+    "file": "assets/favicon.svg",
     "bytes": 199,
     "sha256": "fb2d4c1d4cb6fe65445725b2c888b4d6e3c41e574741166b2b9a711b13c7074a"
   },
