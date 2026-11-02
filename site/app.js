@@ -117,7 +117,7 @@ function visualStructure(c){
 }
 function caseStoryline(c){
  const n=P.caseNarratives?.[c.id];if(!n)return '';
- return `<section class="case-storyline" aria-label="项目工作路径"><div class="case-story-heading"><p class="eyebrow">PROJECT LOGIC</p><h2>${n.headline}</h2><p>${n.summary}</p></div><ol class="case-story-steps">${n.stages.map((s,i)=>`<li><span class="story-step-number">${String(i+1).padStart(2,'0')}</span><h3>${s.title}</h3><p>${s.detail}</p></li>`).join('')}</ol></section>`;
+ return `<section class="case-storyline" aria-label="项目工作路径"><div class="case-story-heading"><p class="eyebrow">项目路径</p><h2>${n.headline}</h2><p>${n.summary}</p></div><ol class="case-story-steps">${n.stages.map((s,i)=>`<li><span class="story-step-number">${String(i+1).padStart(2,'0')}</span><h3>${s.title}</h3><p>${s.detail}</p></li>`).join('')}</ol></section>`;
 }
 function caseEvidence(c){
  const n=P.caseNarratives?.[c.id];if(!n)return '';
@@ -127,7 +127,7 @@ function caseEvidence(c){
   const domain=items[0].domain;
   return `<section class="case-evidence-group"><div class="case-evidence-head"><div><h3>${g.title}</h3><p>${g.description}</p></div><a class="text-link" href="#/data/${domain}">查看该组指标 ↗</a></div><div class="result-grid">${items.map(metricCard).join('')}</div></section>`;
  }).join('');
- return `<div class="case-evidence"><div class="case-evidence-intro"><p class="eyebrow">RESULTS / EVIDENCE</p><h3>与项目对应的业务指标</h3></div>${blocks||`<div class="case-evidence-empty"><b>可展示的工作结果</b><p>${n.evidenceNote}</p></div>`}${blocks?`<p class="case-evidence-note">${n.evidenceNote}</p>`:''}</div>`;
+ return `<div class="case-evidence"><div class="case-evidence-intro"><p class="eyebrow">结果与指标</p><h3>与项目对应的业务指标</h3></div>${blocks||`<div class="case-evidence-empty"><b>可展示的工作结果</b><p>${n.evidenceNote}</p></div>`}${blocks?`<p class="case-evidence-note">${n.evidenceNote}</p>`:''}</div>`;
 }
 function casePage(c){
  currentCase=c;
@@ -138,7 +138,7 @@ function casePage(c){
  <section id="decision" class="chapter"><h2>关键判断与策略选择</h2><blockquote class="decision-quote">${c.decision}</blockquote></section>
  <section id="planning" class="chapter"><h2>目标拆解与资源协同</h2><div class="prose-grid"><div><h3>工作拆解与阶段安排</h3><p>${c.plan}</p></div><div><h3>资源配置与协作机制</h3><p>${c.resources}</p></div></div>${visualStructure(c)}</section>
  <section id="work" class="chapter"><div class="section-head"><h2>关键工作与管理交付</h2><button class="text-link" data-work="${c.work}">展开阅读 ↗</button></div><p>${c.execution}</p>${workHtml(c.work)}</section>
- <section id="results" class="chapter"><h2>阶段结果与业务复盘</h2><p>${c.result}</p>${caseEvidence(c)}<div class="note"><b>下一轮复盘重点</b><p>${c.review}</p></div>${c.metrics.length?`<a class="text-link" href="#/data/${metricBy(c.metrics[0]).domain}">查看本案例对应数据 ↗</a>`:''}</section>
+ <section id="results" class="chapter"><h2>阶段结果与业务复盘</h2><p>${c.result}</p>${caseEvidence(c)}${c.id==='seo'?donutChart('case'):''}<div class="note"><b>下一轮复盘重点</b><p>${c.review}</p></div>${c.metrics.length?`<a class="text-link" href="#/data/${metricBy(c.metrics[0]).domain}">查看本案例对应数据 ↗</a>`:''}</section>
  </article></div><div class="case-end"><a class="text-link" href="#/${c.kind==='main'?'cases':'special'}">← 返回${c.kind==='main'?'案例中心':'专题项目'}</a>${caseLink(P.cases[(P.cases.indexOf(c)+1)%P.cases.length].id,'下一个项目')}</div></div>`;
 }
 
