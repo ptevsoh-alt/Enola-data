@@ -41,7 +41,7 @@ check('Creator case and data page have dedicated visuals',app.includes('creatorW
 check('homepage editorial and management visuals present',app.includes('hero-focus-list')&&app.includes('management-strip')&&css.includes('.hero-signature')&&css.includes('.management-grid'));
 check('product architecture and Creator console visuals present',app.includes('productMessageArchitecture')&&app.includes('creatorOperationsVisual')&&css.includes('.product-role-grid')&&css.includes('.creator-console-steps'));
 check('social aggregate comparison remains non-trend',app.includes('socialComparisonChart')&&app.includes('互动 / 曝光的汇总比值')&&css.includes('.comparison-bars'));
-check('product portfolio uses nine source-aligned roles',app.includes('V1 类别')&&app.includes('60KPa + 2L + 180°贴地')&&app.includes('1200 RPM + 50 in + 8-in-1')&&app.includes('100W + 770 RPM + LED')&&app.includes('九类产品任务'));
+check('product portfolio uses nine anonymized source-aligned roles',app.includes('全屋吸尘设备')&&app.includes('户外电动清洁刷')&&app.includes('60KPa + 2L + 180°贴地')&&app.includes('1200 RPM + 50 in + 8-in-1')&&app.includes('100W + 770 RPM + LED')&&app.includes('九类产品任务')&&!/V1 类别|M1 类别|M2 类别|M3 类别|Q2 类别|Q3 类别|Q4 类别|7\.2V/.test(app.slice(app.indexOf('function productMessageArchitecture'),app.indexOf('function creatorOperationsVisual'))));
 check('social sources A and B remain visually separated',app.includes('来源 A · 2025 汇总')&&app.includes('来源 B · 后台截图')&&app.includes('fb-page-snapshot')&&css.includes('.fb-snapshot-grid'));
 check('Facebook Page screenshot cards preserve all five fields', ['fb-views','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows'].every(id=>app.includes("'"+id+"'")));
 
