@@ -1139,3 +1139,439 @@
     grid-template-columns: 1fr;
   }
 }
+
+/* Homepage growth story and integrated social-management case */
+.g-home-story {
+  margin: 38px 0 62px;
+  padding: 32px;
+  background: #f1f3ed;
+}
+.g-home-story .g-heading {
+  margin-bottom: 24px;
+}
+.g-home-story-intro {
+  display: grid;
+  grid-template-columns: minmax(230px, 0.82fr) minmax(0, 1.7fr);
+  gap: 14px;
+}
+.g-home-owner {
+  min-width: 0;
+  padding: 25px;
+  background: var(--ink);
+  color: var(--white);
+}
+.g-home-owner > span,
+.g-home-rhythm > div > span {
+  color: #b8cbb1;
+  font-size: 10px;
+  letter-spacing: 0.08em;
+}
+.g-home-owner h3 {
+  margin: 14px 0;
+  font-size: 26px;
+  line-height: 1.25;
+}
+.g-home-owner p {
+  margin: 0;
+  color: #d2ded4;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.g-home-owner-tags {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 20px;
+}
+.g-home-owner-tags i {
+  padding: 5px 8px;
+  border: 1px solid #718276;
+  color: #e1e9df;
+  font-size: 9px;
+  font-style: normal;
+}
+.g-home-signals {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 10px;
+  min-width: 0;
+}
+.g-home-signal {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 19px 16px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+.g-home-signal > span {
+  color: var(--accent);
+  font-size: 9px;
+  line-height: 1.5;
+}
+.g-home-signal > button {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 6px;
+  width: 100%;
+  padding: 16px 0 10px;
+  text-align: left;
+}
+.g-home-signal strong {
+  color: var(--accent);
+  font: clamp(27px, 2.8vw, 40px)/1.1 var(--serif);
+  overflow-wrap: anywhere;
+}
+.g-home-signal b {
+  font-size: 12px;
+  line-height: 1.45;
+}
+.g-home-signal > small {
+  margin-top: auto;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.55;
+}
+.g-home-stage-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 11px;
+  margin-top: 14px;
+}
+.g-home-stage {
+  min-width: 0;
+  padding: 20px 17px;
+  border-top: 2px solid var(--accent);
+  background: var(--white);
+}
+.g-home-stage > span {
+  color: var(--accent);
+  font-size: 9px;
+  line-height: 1.5;
+}
+.g-home-stage h3 {
+  margin: 13px 0 9px;
+  font-size: 17px;
+  line-height: 1.45;
+}
+.g-home-stage > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+.g-home-stage-proof {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  gap: 6px 9px;
+  margin-top: 13px;
+  padding: 10px;
+  background: #f2eee4;
+}
+.g-home-stage-proof > strong {
+  color: #927044;
+  font: 22px var(--serif);
+}
+.g-home-stage-proof > span {
+  flex: 1 1 100px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.4;
+}
+.g-home-stage-proof .g-evidence {
+  flex: 0 0 auto;
+  margin: 0;
+}
+.g-home-rhythm {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.8fr) minmax(0, 1.8fr);
+  gap: 18px;
+  margin-top: 14px;
+  padding: 22px;
+  background: #e2e8df;
+}
+.g-home-rhythm h3 {
+  margin: 9px 0;
+  font-size: 19px;
+  line-height: 1.45;
+}
+.g-home-rhythm > div > p {
+  margin: 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.6;
+}
+.g-home-rhythm-items {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 9px;
+}
+.g-home-rhythm-items article {
+  padding: 14px;
+  background: #ffffffb8;
+}
+.g-home-rhythm-items b {
+  font-size: 12px;
+}
+.g-home-rhythm-items p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.g-home-story-footnote {
+  margin: 14px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+.g-social-ownership {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 11px;
+  margin: 22px 0 28px;
+}
+.g-social-ownership article {
+  min-width: 0;
+  padding: 18px;
+  background: #e9eee7;
+  border: 1px solid var(--rule);
+}
+.g-social-ownership span,
+.g-social-flow-heading > span,
+.g-social-pillar-block > div:first-child > span {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: 0.06em;
+}
+.g-social-ownership b {
+  display: block;
+  margin-top: 10px;
+  font-size: 14px;
+  line-height: 1.45;
+}
+.g-social-ownership p {
+  margin: 7px 0 0;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.65;
+}
+.g-social-flow-heading {
+  margin: 0 0 14px;
+}
+.g-social-flow-heading h3 {
+  margin: 8px 0 0;
+  font-size: 21px;
+}
+.g-social-story .g-foundation {
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+}
+.g-social-story .g-foundation article {
+  min-width: 0;
+  padding: 18px;
+  border-top: 2px solid var(--accent);
+}
+.g-social-story .g-foundation h3 {
+  font-size: 16px;
+  line-height: 1.4;
+}
+.g-social-story .g-foundation p {
+  font-size: 11px;
+  line-height: 1.65;
+}
+.g-social-story .g-foundation article > small {
+  color: var(--muted);
+}
+.g-social-step-proof {
+  display: flex;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 6px;
+  margin-top: 10px;
+  padding: 8px;
+  background: #f2eee4;
+}
+.g-social-step-proof b {
+  color: #927044;
+  font: 20px var(--serif);
+}
+.g-social-step-proof small {
+  flex: 1 1 90px;
+  margin: 0;
+  color: var(--muted);
+  font-size: 9px;
+}
+.g-social-step-proof .g-evidence {
+  margin: 0;
+}
+.g-social-pillar-block {
+  display: grid;
+  grid-template-columns: minmax(190px, 0.65fr) minmax(0, 1.5fr);
+  gap: 16px;
+  align-items: center;
+  margin-top: 18px;
+  padding: 20px;
+  background: #f1f3ed;
+}
+.g-social-pillar-block h3 {
+  margin: 8px 0 0;
+  font-size: 18px;
+}
+.g-social-pillar-block .g-pillars {
+  margin-top: 0;
+}
+.g-social-community-summary {
+  padding: 26px;
+  background: #f1f3ed;
+  border: 1px solid var(--rule);
+}
+.g-social-community-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 10px;
+}
+.g-social-community-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  padding: 17px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+.g-social-community-card > span {
+  color: var(--accent);
+  font-size: 10px;
+  line-height: 1.5;
+}
+.g-social-community-card > strong {
+  margin: 12px 0 8px;
+  font: clamp(25px, 2.5vw, 34px)/1.1 var(--serif);
+  overflow-wrap: anywhere;
+}
+.g-social-community-card > strong small {
+  font: 10px var(--sans);
+  color: var(--muted);
+}
+.g-social-community-card > p {
+  flex: 1;
+  margin: 0 0 10px;
+  color: var(--muted);
+  font-size: 9px;
+  line-height: 1.55;
+}
+.g-social-community-card .g-evidence {
+  align-self: flex-start;
+  margin: 0;
+}
+.g-social-community-note {
+  margin: 15px 0 0;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+.g-social-community-actions {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: 16px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+}
+.g-social-community-actions span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.g-social-community-actions a {
+  color: var(--accent);
+  font-size: 11px;
+  font-weight: 600;
+  text-decoration: none;
+}
+.g-social-community-actions a:hover {
+  text-decoration: underline;
+}
+.g-social-loop {
+  padding: 26px;
+  background: #e2e8df;
+}
+.g-social-loop .g-path {
+  margin-top: 18px;
+}
+[data-social-legacy-grid-hidden="true"],
+[data-social-legacy-caption-hidden="true"] {
+  display: none !important;
+}
+@media (max-width: 1050px) {
+  .g-home-story-intro {
+    grid-template-columns: 1fr;
+  }
+  .g-home-stage-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .g-home-rhythm {
+    grid-template-columns: 1fr;
+  }
+  .g-social-ownership {
+    grid-template-columns: 1fr;
+  }
+  .g-social-story .g-foundation {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .g-social-community-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .g-home-story {
+    padding: 22px 16px;
+  }
+  .g-home-stage-grid,
+  .g-home-signals,
+  .g-home-rhythm-items,
+  .g-social-story .g-foundation,
+  .g-social-community-grid,
+  .g-social-pillar-block {
+    grid-template-columns: 1fr;
+  }
+  .g-home-owner {
+    padding: 22px;
+  }
+  .g-home-rhythm {
+    padding: 19px 15px;
+  }
+  .g-social-community-summary,
+  .g-social-loop {
+    padding: 22px 16px;
+  }
+  .g-social-community-actions {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .g-social-ownership article {
+    padding: 16px;
+  }
+}
+@media (max-width: 480px) {
+  .g-home-story {
+    margin: 28px 0 42px;
+  }
+  .g-home-signal {
+    padding: 16px;
+  }
+  .g-home-signal strong {
+    font-size: 34px;
+  }
+  .g-home-stage {
+    padding: 17px 15px;
+  }
+  .g-social-pillar-block {
+    padding: 17px;
+  }
+  .g-social-community-card > strong {
+    font-size: 30px;
+  }
+}
