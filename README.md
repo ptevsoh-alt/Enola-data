@@ -8,8 +8,8 @@
 
 - **首页：** 职业经历、代表性成果与重点项目
 - **案例：** 产品营销与 GTM、社媒增长、社群经营、品牌 IMC、营销项目管理
-- **专题：** 海外 B2B、SEO 内容、Amazon 经营、视频创意与 EDM 生命周期规划
-- **数据：** Meta / Facebook / Instagram、Facebook Group、GSC、B2B 与 Amazon 指标
+- **专题：** 海外 B2B、SEO 内容、Amazon 经营、视频创意、EDM 生命周期与 Creator 达人合作管理
+- **数据：** Meta / Facebook / Instagram、Facebook Group、Creator 达人合作、GSC、B2B 与 Amazon 指标
 - **能力与经历：** 工作职责、协作范围、项目交付及职业时间线
 
 ## 数据展示原则
