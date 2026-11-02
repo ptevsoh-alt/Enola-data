@@ -2,11 +2,14 @@ const fs=require('node:fs'),path=require('node:path'),vm=require('node:vm'),cryp
 const root=path.resolve(__dirname,'../site'),context={window:{}};
 vm.runInNewContext(fs.readFileSync(path.join(root,'data.js'),'utf8'),context);const p=context.window.PORTFOLIO;
 const checks=[];function check(name,ok){checks.push({name,status:ok?'PASS':'FAIL'});if(!ok)process.exitCode=1}
-check('10 unique cases',p.cases.length===10&&new Set(p.cases.map(c=>c.id)).size===10);
-check('six business domains',Object.keys(p.domains).length===6);
-check('38 unique metrics',p.metrics.length===38&&new Set(p.metrics.map(m=>m.id)).size===38);
+check('11 unique cases',p.cases.length===11&&new Set(p.cases.map(c=>c.id)).size===11);
+check('seven business domains',Object.keys(p.domains).length===7);
+check('42 unique metrics',p.metrics.length===42&&new Set(p.metrics.map(m=>m.id)).size===42);
 check('all metric-to-case links resolve',p.metrics.every(m=>p.cases.some(c=>c.id===m.caseId)));
 check('all case metric references resolve',p.cases.every(c=>c.metrics.every(id=>p.metrics.some(m=>m.id===id))));
+check('11 case storylines with four stages',p.caseNarratives&&p.cases.length===11&&p.cases.every(c=>p.caseNarratives[c.id]?.stages?.length===4));
+check('case evidence groups resolve and cover case metrics',p.cases.every(c=>{const ids=(p.caseNarratives?.[c.id]?.evidenceGroups||[]).flatMap(g=>g.metrics||[]);return ids.length===c.metrics.length&&new Set(ids).size===ids.length&&c.metrics.every(id=>ids.includes(id))&&ids.every(id=>p.metrics.some(m=>m.id===id));}));
+
 check('all capability links resolve',p.capabilities.every(c=>p.cases.some(x=>x.id===c[3])));
 check('all experience links resolve',p.experiences.every(c=>p.cases.some(x=>x.id===c.caseId)));
 const expectedExperience=[['2025.04—2026.09','碳宝贝科技有限公司','社媒负责人 / 社媒管理组长'],['2023.11—2025.03','瑞音博科技有限公司','海外渠道 / 市场推广'],['2022.07—2023.10','韵衫科技有限公司','亚马逊运营专员'],['2020.12—2022.06','传盛科技有限公司','资深亚马逊运营专员']];
@@ -26,7 +29,23 @@ check('Facebook Group metrics isolated',groupIds.every(id=>p.metrics.some(m=>m.i
 check('missing viewers value remains null',p.metrics.find(m=>m.id==='fb-viewers').value===null);
 check('screenshot comparison windows remain unverified',p.metrics.filter(m=>m.sourceType==='screenshot').every(m=>m.windowStart===null&&m.windowEnd===null&&m.comparisonWindow===null));
 check('no public screenshot references',p.metrics.every(m=>!('sourceImage' in m)));
+const creatorMetricIds=['creator-new','creator-videos','creator-active','creator-gmv-collabs'];
+check('Creator metrics resolve to Creator case',creatorMetricIds.every(id=>p.metrics.some(m=>m.id===id&&m.domain==='creator'&&m.caseId==='creator'&&m.sourceType==='screenshot')));
+check('Creator source snapshots remain separated',p.metrics.find(m=>m.id==='creator-new')?.window.includes('2026-10-25')&&creatorMetricIds.slice(1).every(id=>p.metrics.find(m=>m.id===id)?.window.includes('2026-04-01')));
+check('Creator financial limits are explicit',p.metrics.find(m=>m.id==='creator-gmv-collabs')?.limits.includes('不计算总 GMV')&&p.metrics.find(m=>m.id==='creator-gmv-collabs')?.limits.includes('佣金'));
 const app=fs.readFileSync(path.join(root,'app.js'),'utf8'),css=fs.readFileSync(path.join(root,'styles.css'),'utf8'),html=fs.readFileSync(path.join(root,'index.html'),'utf8');
+check('case narrative and data center are cross-linked',app.includes('domain-case-bridge')&&app.includes('case-evidence-group')&&app.includes('从数据回到业务动作'));
+check('case labels are reader-facing',app.includes('<b>负责工作</b>')&&app.includes('<b>项目范围</b>')&&!/(职责边界|证据边界|限制与待核内容)/.test(app));
+check('stage chart has visible responsive styling',css.includes('.line-chart svg')&&css.includes('.chart-line')&&css.includes('.chart-point'));
+check('Creator case and data page have dedicated visuals',app.includes('creatorWorkflow')&&app.includes('creatorOpsVisual')&&css.includes('.creator-flow')&&css.includes('.creator-source-grid'));
+check('homepage editorial and management visuals present',app.includes('hero-focus-list')&&app.includes('management-strip')&&css.includes('.hero-signature')&&css.includes('.management-grid'));
+check('product architecture and Creator console visuals present',app.includes('productMessageArchitecture')&&app.includes('creatorOperationsVisual')&&css.includes('.product-role-grid')&&css.includes('.creator-console-steps'));
+check('social aggregate comparison remains non-trend',app.includes('socialComparisonChart')&&app.includes('互动 / 曝光的汇总比值')&&css.includes('.comparison-bars'));
+check('product portfolio uses nine anonymized source-aligned roles',app.includes('全屋吸尘设备')&&app.includes('户外电动清洁刷')&&app.includes('60KPa + 2L + 180°贴地')&&app.includes('1200 RPM + 50 in + 8-in-1')&&app.includes('100W + 770 RPM + LED')&&app.includes('九类产品任务')&&!/V1 类别|M1 类别|M2 类别|M3 类别|Q2 类别|Q3 类别|Q4 类别|7\.2V/.test(app.slice(app.indexOf('function productMessageArchitecture'),app.indexOf('function creatorOperationsVisual'))));
+check('social sources A and B remain visually separated',app.includes('来源 A · 2025 汇总')&&app.includes('来源 B · 后台截图')&&app.includes('fb-page-snapshot')&&css.includes('.fb-snapshot-grid'));
+check('Creator workbench KPI values bind to source metrics',app.includes("metricBy(id)")&&app.includes("'creator-videos','creator-active','creator-gmv-collabs'")&&app.includes("metricBy('creator-new')"));
+check('Facebook Page screenshot cards preserve all five fields', ['fb-views','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows'].every(id=>app.includes("'"+id+"'")));
+
 check('range metrics are not styled as missing',app.includes('m.value===null&&!m.range'));
 check('no stale screenshot-display copy',!/(脱敏截图原貌|保留指标卡与原始截图)/.test(app));
 new vm.Script(app);check('app syntax',true);new vm.Script(fs.readFileSync(path.join(root,'data.js'),'utf8'));check('data syntax',true);
