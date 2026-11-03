@@ -12,13 +12,13 @@
 | **合计** | **143/143 PASS** | GitHub Actions `npm test` |
 
 本轮 GitHub Actions：
-- Commit：`9aca1310f0a40d79e23577789a6285aa4a814524`
-- Run：`41493772506`
+- Commit：`d2c2c394c3290bddfb618631f4601cf59f9f3ba9`
+- Run：`41562826046`
 - Validate：PASS
 - Deploy：SKIPPED（PR 事件未满足部署条件）
 
 新增回归覆盖：
-- 首页三个独立增长记录、四个经营阶段、账号规模待核标记，以及原有 Meta 阶段汇总保留。
+- 首页三个独立增长记录、四个经营阶段、账号规模待核标记、社媒案例入口与数据证据入口，以及原有 Meta 阶段汇总保留。
 - 社媒案例八步管理链路、本人职责与跨部门协作、季度 / 月度 / 周度内容管理。
 - Campaign 视觉墙与 Facebook Group 社群四项数据字段。
 - 社媒案例与 B2B 数据隔离，LinkedIn / B2B 粉丝规模不再混入社媒增长。
@@ -45,3 +45,11 @@
 ## 交付边界
 
 本轮继续在 PR #10 的增量分支上迭代，基于 PR #9 最新候选。没有修改 `main`、没有合并 PR、没有部署线上网站，也没有修改 Enola-marketing-skills。
+
+## 首页增长故事入口补充（2026-11-03）
+
+首页增长故事新增两个路径入口，并由 GitHub Actions 最新 head commit 验证：
+- `#/case/social`：社媒管理案例。
+- `#/data/social`：社媒数据与证据。
+
+本次新增断言合并在首页增长故事结构测试中；自动化总数保持 143 项。最新验证 Run `41562826046`：Validate PASS；Deploy SKIPPED。
