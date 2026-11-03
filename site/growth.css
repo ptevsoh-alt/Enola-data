@@ -1772,3 +1772,123 @@
     gap: 14px;
   }
 }
+
+/* Source-backed social insight visuals: original chart screenshots, not reconstructed series. */
+.g-source-evidence {
+  margin-top: 26px;
+  padding: 26px;
+  background: #f7f6f0;
+  border: 1px solid var(--rule);
+}
+.g-source-evidence .g-heading {
+  margin-bottom: 20px;
+}
+.g-source-evidence-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 16px;
+}
+.g-source-evidence-card {
+  display: flex;
+  flex-direction: column;
+  min-width: 0;
+  margin: 0;
+  padding: 18px;
+  background: var(--white);
+  border: 1px solid var(--rule);
+}
+.g-source-evidence-heading {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  margin-bottom: 13px;
+}
+.g-source-evidence-heading span {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: .1em;
+  font-weight: 700;
+}
+.g-source-evidence-heading b {
+  color: var(--ink);
+  font-size: 15px;
+}
+.g-source-evidence-card > a {
+  display: block;
+  overflow: hidden;
+  border: 1px solid var(--rule);
+  background: #f2f4f5;
+}
+.g-source-evidence-card img {
+  display: block;
+  width: 100%;
+  height: auto;
+  max-height: 440px;
+  object-fit: contain;
+  transition: transform .25s ease;
+}
+.g-source-evidence-card > a:hover img {
+  transform: scale(1.015);
+}
+.g-source-evidence-card figcaption {
+  margin-top: 13px;
+  color: var(--ink);
+  font-size: 12px;
+  line-height: 1.7;
+}
+.g-source-evidence-card > small {
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.6;
+}
+.g-source-window {
+  display: flex;
+  flex-direction: column;
+  gap: 4px;
+  margin-top: 10px;
+  padding: 11px 13px;
+  background: #edf1eb;
+}
+.g-source-window span {
+  color: var(--muted);
+  font-size: 10px;
+}
+.g-source-window strong {
+  color: var(--accent);
+  font: 19px var(--serif);
+}
+.g-source-evidence-note {
+  margin: 16px 0 0;
+  padding-top: 13px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.7;
+}
+@media (max-width: 720px) {
+  .g-source-evidence {
+    padding: 22px 16px;
+  }
+  .g-source-evidence-grid {
+    grid-template-columns: 1fr;
+    gap: 13px;
+  }
+  .g-source-evidence-card {
+    padding: 14px;
+  }
+  .g-source-evidence-card img {
+    max-height: 390px;
+  }
+  .g-source-window strong {
+    font-size: 17px;
+  }
+}
+@media (max-width: 380px) {
+  .g-source-evidence-heading b {
+    font-size: 14px;
+  }
+  .g-source-evidence-card figcaption {
+    font-size: 11px;
+  }
+}
