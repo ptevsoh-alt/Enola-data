@@ -152,11 +152,26 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#evidence-dialog").open),
   );
   d.querySelector('[data-close="evidence-dialog"]').click();
-  check("no fabricated trend path or series", () => {
+  check("source screenshots are shown without fabricated daily series", () => {
     assert.equal(w.PORTFOLIO_GROWTH.series.length, 0);
     assert.ok(
-      d.querySelector(".g-trend-status").textContent.includes("不绘制趋势线"),
+      d.querySelector(".g-trend-status").textContent.includes("不反推日级数据"),
     );
+  });
+  check("Facebook source evidence contains two anonymized backend screenshots", () => {
+    const cards = d.querySelectorAll(".g-source-evidence-card");
+    assert.equal(cards.length, 2);
+    assert.equal(
+      d.querySelector('.g-source-evidence-card img[src="assets/evidence/facebook-page-insights.webp"]')?.getAttribute("alt")?.includes("Facebook 页面分析后台截图"),
+      true,
+    );
+    assert.equal(
+      d.querySelector('.g-source-evidence-card img[src="assets/evidence/facebook-group-insights.webp"]')?.getAttribute("alt")?.includes("Facebook Group Insights"),
+      true,
+    );
+    assert.ok(d.querySelector(".g-source-window").textContent.includes("2025.11.02"));
+    assert.ok(d.querySelector(".g-source-window").textContent.includes("2026.09.30"));
+    assert.ok(d.querySelector(".g-source-evidence-note").textContent.includes("不从像素反推时间序列"));
   });
   await route("/data/social");
   d.querySelector('[data-g-platform="Instagram"]').click();
