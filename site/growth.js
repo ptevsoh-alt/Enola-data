@@ -573,6 +573,7 @@
       <div class="g-social-community-actions">
         <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
         <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
+        <a href="#/data/social">查看后台趋势截图与数据证据 ↗</a>
       </div>
     </section>`;
   }
