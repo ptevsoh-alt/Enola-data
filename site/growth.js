@@ -430,6 +430,7 @@
         </figure>
       </div>
       <p class="g-source-evidence-note">数据口径：后台截图可证明平台界面显示的汇总值和趋势形态；不能替代 CSV / XLSX 原始导出。未从像素反推时间序列。需要进行日级、周级或活动前后趋势分析时，仍需同账号、同字段、同窗口的连续日期原值。</p>
+      <div class="g-source-evidence-actions"><a href="#/case/social">返回社媒管理案例 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
   }
   function trends() {
@@ -548,6 +549,7 @@
     ${editorial()}
     ${campaignWall()}
     ${communitySummary()}
+    ${socialDecisionBridge()}
     ${socialLoop()}`;
   }
   function communitySummary() {
@@ -575,6 +577,59 @@
         <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
         <a href="#/data/social">查看后台趋势截图与数据证据 ↗</a>
       </div>
+    </section>`;
+  }
+  function socialDecisionBridge() {
+    const field = (id) => {
+      const x = m(id);
+      const change = x.changeDisplay
+        ? `<small class="g-decision-change">${esc(x.changeDisplay)} · 比较周期未注明</small>`
+        : "";
+      return `<div class="g-decision-metric" data-growth-metric="${id}">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+        ${change}
+        ${evidence(id)}
+      </div>`;
+    };
+    return `<section class="g-module g-social-decision" id="social-data-decisions">
+      ${header(
+        "FROM SIGNAL TO DECISION / DATA-LED MANAGEMENT",
+        "让后台数据进入内容与社群管理决策。",
+        "将已记录的平台字段与日常管理动作对应。这里展示的是复盘方法，不是单项内容的因果归因；需要逐条内容或同窗口站点数据时，仍以原始导出为准。",
+      )}
+      <div class="g-decision-grid">
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>01 / CONTENT VISIBILITY</span><h3>内容触达</h3></div>
+          <div class="g-decision-metrics">${field("fb-views")}</div>
+          <p class="g-decision-question">观察问题：页面浏览量反映浏览规模，不等同于曝光、覆盖人数或独立访客。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>按平台、内容支柱与形式拆分内容明细，复核主题供给和发布节奏。当前没有逐条内容导出，不据此判断哪条内容贡献最高。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>02 / CONTENT INTERACTION</span><h3>用户互动</h3></div>
+          <div class="g-decision-metrics">${field("fb-content-interactions")}</div>
+          <p class="g-decision-question">观察问题：互动次数是平台汇总字段；后台变化值未注明比较周期，不解释为同比或环比。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>结合评论、社群提问和内容主题复核用户反馈，再调整教程、FAQ 与互动话题。当前没有互动动作拆分，不推断点赞、评论或分享的贡献比例。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>站点导流</h3></div>
+          <div class="g-decision-metrics">${field("fb-link-clicks")}${field("fb-visits")}</div>
+          <p class="g-decision-question">观察问题：链接点击与页面访问是两个不同字段，不能相加，也不能直接视为站点会话。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>检查 CTA、目标链接与落地页信息一致性；若要判断站内后续行为，需核对同一窗口的 UTM、GA4 会话与关键事件。点击不等于订单或收入。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>04 / COMMUNITY PARTICIPATION</span><h3>社群查看与参与</h3></div>
+          <div class="g-decision-metrics">${field("group-viewers")}${field("group-posters")}${field("group-members")}</div>
+          <p class="g-decision-question">观察问题：查看人数、发帖和评论人数、成员数分别代表不同维度；成员数是日期未注明的快照。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>通过教程、投票、清洁挑战、UGC 与问题答疑设置参与入口；把高频问题回流 FAQ 和内容计划。不以这三项数据计算活跃率或成员转化率。</p></div>
+        </article>
+      </div>
+      <div class="g-decision-review">
+        <span>MANAGEMENT REVIEW LOOP</span>
+        <div><b>拆分字段</b><i>→</i><b>核对窗口与定义</b><i>→</i><b>识别可行动问题</b><i>→</i><b>调整内容与社群计划</b></div>
+      </div>
+      <p class="g-decision-note">证据边界：当前后台截图支持平台字段汇总与原生曲线展示；没有同账号、同口径的逐日导出，不能重建日级趋势，也不能把平台表现归因到某一条内容或单场活动。</p>
+      <div class="g-decision-links"><a href="#/data/social">查看平台数据与后台截图 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
   }
   function socialLoop() {
@@ -607,7 +662,34 @@
         ["治理与授权", "审核事实；二次使用单独确认许可"],
         ["反馈闭环", "高频问题 → 产品确认 → FAQ 与选题"],
       ],
-    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${participation()}</section>`;
+    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${participation()}${communitySourceEvidence()}</section>`;
+  }
+  function communitySourceEvidence() {
+    const viewers = m("group-viewers");
+    const posters = m("group-posters");
+    const members = m("group-members");
+    return `<section class="g-module g-community-proof" aria-label="Facebook Group 后台数据证据">
+      ${header(
+        "SOURCE EVIDENCE / FACEBOOK GROUP INSIGHTS",
+        "社群表现：用后台记录验证参与与查看。",
+        "以下为用户提供的 Facebook Group Insights 匿名化截图。保留平台原字段，不将不同维度合并为活跃率。",
+      )}
+      <div class="g-community-proof-layout">
+        <a class="g-community-proof-image" href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开 Facebook Group Insights 后台截图">
+          <img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台趋势截图，显示 146 人发帖和评论、34,387 人查看两组原生趋势图" width="420" height="359" loading="lazy" decoding="async">
+        </a>
+        <div class="g-community-proof-details">
+          <div class="g-community-proof-metrics">
+            <article data-growth-metric="group-viewers"><span>${esc(viewers.label)}</span><strong>${esc(viewers.display)}</strong><small>${esc(viewers.unit)}</small>${evidence("group-viewers")}</article>
+            <article data-growth-metric="group-posters"><span>${esc(posters.label)}</span><strong>${esc(posters.display)}</strong><small>${esc(posters.unit)}</small>${evidence("group-posters")}</article>
+            <article data-growth-metric="group-members"><span>${esc(members.label)}</span><strong>${esc(members.display)}</strong><small>${esc(members.unit)}</small>${evidence("group-members")}</article>
+          </div>
+          <div class="g-community-proof-window"><span>后台所选统计范围</span><b>2025.11.02 — 2026.09.30</b></div>
+          <p>146 人发帖和评论、34,387 人查看来自截图所选范围；4,009 名成员为页面快照，采集日期未注明。字段定义及去重逻辑未完全核实，不计算活跃率。</p>
+          <a class="g-community-proof-link" href="#/data/social">查看完整社媒数据与来源说明 ↗</a>
+        </div>
+      </div>
+    </section>`;
   }
   function visual(c) {
     if (c.art === "03")
