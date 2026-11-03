@@ -138,6 +138,7 @@ const fs = require("fs"),
     );
     assert.ok(d.querySelector(".g-social-community-note").textContent.includes("不合并为增长率或活跃率"));
     assert.ok(d.querySelector('.g-social-community-actions a[href="#/case/community"]'));
+    assert.ok(d.querySelector('.g-social-community-actions a[href="#/data/social"]'));
   });
   check("B2B Facebook follower scale is not mixed into the social case", () => {
     assert.equal(d.querySelectorAll('[data-growth-metric="fb-follower-scale"]').length, 0);
