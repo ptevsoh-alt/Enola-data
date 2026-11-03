@@ -600,19 +600,19 @@
       )}
       <div class="g-decision-grid">
         <article class="g-decision-card">
-          <div class="g-decision-card-head"><span>01 / CONTENT VISIBILITY</span><h3>内容触达</h3></div>
+          <div class="g-decision-card-head"><span>01 / PAGE VIEWS</span><h3>页面浏览量</h3></div>
           <div class="g-decision-metrics">${field("fb-views")}</div>
           <p class="g-decision-question">观察问题：页面浏览量反映浏览规模，不等同于曝光、覆盖人数或独立访客。</p>
           <div class="g-decision-action"><b>管理复盘动作</b><p>按平台、内容支柱与形式拆分内容明细，复核主题供给和发布节奏。当前没有逐条内容导出，不据此判断哪条内容贡献最高。</p></div>
         </article>
         <article class="g-decision-card">
-          <div class="g-decision-card-head"><span>02 / CONTENT INTERACTION</span><h3>用户互动</h3></div>
+          <div class="g-decision-card-head"><span>02 / CONTENT INTERACTIONS</span><h3>内容互动</h3></div>
           <div class="g-decision-metrics">${field("fb-content-interactions")}</div>
           <p class="g-decision-question">观察问题：互动次数是平台汇总字段；后台变化值未注明比较周期，不解释为同比或环比。</p>
           <div class="g-decision-action"><b>管理复盘动作</b><p>结合评论、社群提问和内容主题复核用户反馈，再调整教程、FAQ 与互动话题。当前没有互动动作拆分，不推断点赞、评论或分享的贡献比例。</p></div>
         </article>
         <article class="g-decision-card">
-          <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>站点导流</h3></div>
+          <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>链接与页面访问</h3></div>
           <div class="g-decision-metrics">${field("fb-link-clicks")}${field("fb-visits")}</div>
           <p class="g-decision-question">观察问题：链接点击与页面访问是两个不同字段，不能相加，也不能直接视为站点会话。</p>
           <div class="g-decision-action"><b>管理复盘动作</b><p>检查 CTA、目标链接与落地页信息一致性；若要判断站内后续行为，需核对同一窗口的 UTM、GA4 会话与关键事件。点击不等于订单或收入。</p></div>
