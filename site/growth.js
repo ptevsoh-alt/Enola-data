@@ -390,18 +390,60 @@
   function anchors() {
     return `<div class="g-evidence-anchors"><div><p class="eyebrow">TIME ANCHORS / 活动与数据</p><h3>知道发生了什么，也说明尚缺什么。</h3></div><article><span>已知年份 / 2025</span><b>Meta 阶段汇总</b><p>曝光与互动有历史汇总，缺少逐期原值。</p>${evidence("impressions")}</article><article><span>活动节点 / 日期待补</span><b>Instagram 活动期互动变化</b><p>原记录 +1,870.9%；具体活动、比较基期与日期未注明。不绑定到任一概念活动。</p>${evidence("ig-event-engagement-change")}</article><article><span>社群窗口 / 2025/11/02–2026/09/30</span><b>查看与参与分别记录</b><p>平台截图所选分析范围，不是活动举办日期。无活动级归因。</p>${evidence("group-posters")}</article></div>`;
   }
+  function sourceEvidence() {
+    return `<section class="g-module g-source-evidence" aria-label="平台后台趋势截图证据">
+      ${header(
+        "SOURCE MATERIAL / BACKEND INSIGHTS",
+        "后台趋势截图：保留原始走势，也保留数据边界。",
+        "以下为用户补充的 Facebook 后台截图裁切匿名化版本。截图中的曲线作为原始平台视觉证据展示；没有导出的逐日原值，不从像素反推时间序列。",
+      )}
+      <div class="g-source-evidence-grid">
+        <figure class="g-source-evidence-card">
+          <div class="g-source-evidence-heading">
+            <span>01 / FACEBOOK PAGE INSIGHTS</span>
+            <b>Facebook 页面分析</b>
+          </div>
+          <a href="assets/evidence/facebook-page-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook 页面分析后台截图">
+            <img src="assets/evidence/facebook-page-insights.webp" alt="Facebook 页面分析后台截图，展示浏览量、内容互动、链接点击、访问和关注的原生趋势曲线；浏览人数显示为未提供" width="420" height="391" loading="lazy" decoding="async">
+          </a>
+          <figcaption>
+            页面浏览量 138.2 万次；内容互动 5.3 万次；链接点击 7,364 次；页面访问 5.4 万次；关注次数 1 万次。后台显示的变化百分比保留在各自指标卡中，比较周期未注明。
+          </figcaption>
+          <small>公开图像已裁去无关界面区域；截图未显示完整日期范围。浏览人数显示“--”，不以 0 代替。</small>
+        </figure>
+        <figure class="g-source-evidence-card">
+          <div class="g-source-evidence-heading">
+            <span>02 / FACEBOOK GROUP INSIGHTS</span>
+            <b>Facebook Group 社群分析</b>
+          </div>
+          <a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook Group 后台截图">
+            <img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台趋势截图，显示发帖和评论人数及查看人数两组曲线" width="420" height="359" loading="lazy" decoding="async">
+          </a>
+          <div class="g-source-window">
+            <span>后台所选统计范围</span>
+            <strong>2025.11.02 — 2026.09.30</strong>
+          </div>
+          <figcaption>
+            平台显示 146 人发帖和评论、34,387 人查看；页面另显示 4,009 名成员，但该成员快照日期未注明。三项指标分别保留，不计算活跃率或成员转化率。
+          </figcaption>
+          <small>公开图像已裁去群组名称与左侧管理导航；曲线为后台原图，不是逐日数据导出。</small>
+        </figure>
+      </div>
+      <p class="g-source-evidence-note">数据口径：后台截图可证明平台界面显示的汇总值和趋势形态；不能替代 CSV / XLSX 原始导出。需要进行日级、周级或活动前后趋势分析时，仍需同账号、同字段、同窗口的连续日期原值。</p>
+    </section>`;
+  }
   function trends() {
     return `<section class="g-trend-status" aria-label="趋势数据状态">
       <div>
         <p class="eyebrow">TREND READINESS</p>
-        <h3>趋势图暂不绘制</h3>
-        <p>目前缺少同一账号、同一指标、同一统计周期的连续日期数据。先保留已有阶段变化；补齐日期和原值后，再制作时间趋势对比。</p>
+        <h3>保留后台原图，不反推日级数据</h3>
+        <p>两组截图能够展示后台曲线形态，但没有可导出的连续日期原值，无法核验每个日期的具体数值。作品集保留原始曲线截图，不从像素反算日级数据，也不将不同统计窗口拼接。</p>
       </div>
       <div class="g-readiness">
-        <span><b>01</b>连续日期与原值</span>
-        <span><b>02</b>同一账号与字段</span>
-        <span><b>03</b>一致统计窗口</span>
-        <strong>连续数据待补 · 不绘制趋势线</strong>
+        <span><b>01</b>后台趋势截图 · 已补充</span>
+        <span><b>02</b>逐日原始数值 · 尚未提供</span>
+        <span><b>03</b>账号与统计窗口 · 分开保留</span>
+        <strong>原始曲线可见 · 日级数据待补</strong>
       </div>
     </section>`;
   }
@@ -460,6 +502,7 @@
       )}
       ${historicalGrowth()}
       ${facebookSnapshot()}
+      ${sourceEvidence()}
       ${trends()}
       ${anchors()}
     </section>`;
