@@ -1,0 +1,610 @@
+
+> enola-visual-portfolio@1.0.0 test
+> node scripts/validate-site.cjs && node scripts/test-interactions.cjs && node scripts/test-growth.cjs
+
+{
+  "checks": [
+    {
+      "name": "11 unique cases and 38 retained public metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "metric provenance, definitions, windows and limitations",
+      "status": "PASS"
+    },
+    {
+      "name": "no creator operating records in any public payload",
+      "status": "PASS"
+    },
+    {
+      "name": "missing values and unverified comparison windows preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "all content links resolve",
+      "status": "PASS"
+    },
+    {
+      "name": "scripts parse",
+      "status": "PASS"
+    },
+    {
+      "name": "public assets exhaustive, portable and hash verified",
+      "status": "PASS"
+    },
+    {
+      "name": "no raw evidence, private paths, remote scripts or submission code",
+      "status": "PASS"
+    }
+  ],
+  "passed": 8,
+  "total": 8
+}
+{
+  "passed": 70,
+  "total": 70,
+  "checks": [
+    {
+      "name": "homepage is a visual case index",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: gtm",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: social",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: community",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: brand",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: operations",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: seo",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: amazon",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: creative",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: crm",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: creator",
+      "status": "PASS"
+    },
+    {
+      "name": "full case index",
+      "status": "PASS"
+    },
+    {
+      "name": "business filter",
+      "status": "PASS"
+    },
+    {
+      "name": "empty state",
+      "status": "PASS"
+    },
+    {
+      "name": "reset restores all cases",
+      "status": "PASS"
+    },
+    {
+      "name": "search matches professional terms",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain social",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain community",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain search",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain commerce",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence impressions",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence engagements",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence visits",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence follows",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-views",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-viewers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-content-interactions",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-link-clicks",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-visits",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-follows",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence er",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence engagement-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-reach",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-size",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-month",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-members",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-posters",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-viewers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence organic-share",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence gsc",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-reach",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-sales",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-sales",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-cvr",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence retention",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence product-sales-stage",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-link-click-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence ig-event-engagement-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence ig-follower-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-email-open",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-lead-conversion",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence linkedin-follower-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-follower-scale",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-profit-margin",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-offsite-followers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-complaint-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-review-change",
+      "status": "PASS"
+    },
+    {
+      "name": "concept image preview",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile menu toggles",
+      "status": "PASS"
+    },
+    {
+      "name": "support page experience",
+      "status": "PASS"
+    },
+    {
+      "name": "support page capabilities",
+      "status": "PASS"
+    },
+    {
+      "name": "support page contact",
+      "status": "PASS"
+    },
+    {
+      "name": "support page about",
+      "status": "PASS"
+    },
+    {
+      "name": "skip link preserves route and focuses main",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown route recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "no runtime exceptions",
+      "status": "PASS"
+    }
+  ]
+}
+{
+  "passed": 69,
+  "total": 69,
+  "checks": [
+    {
+      "name": "approved data and stylesheet unchanged",
+      "status": "PASS"
+    },
+    {
+      "name": "all approved app copy and markup retained with only integration and modal cleanup insertions",
+      "status": "PASS"
+    },
+    {
+      "name": "index copy retained with stylesheet and script additions only",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: home",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: cases",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/gtm",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/social",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/community",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/brand",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/operations",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/seo",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/amazon",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/creative",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/crm",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: case/creator",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/social",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/community",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/search",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/commerce",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: data/lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: experience",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: capabilities",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: about",
+      "status": "PASS"
+    },
+    {
+      "name": "original visible copy preserved: contact",
+      "status": "PASS"
+    },
+    {
+      "name": "homepage presents three independent growth records and a four-stage operating story",
+      "status": "PASS"
+    },
+    {
+      "name": "eight social management stages form one end-to-end journey",
+      "status": "PASS"
+    },
+    {
+      "name": "social management case shows ownership and collaboration",
+      "status": "PASS"
+    },
+    {
+      "name": "social metrics are connected to management decisions without causal claims",
+      "status": "PASS"
+    },
+    {
+      "name": "editorial and campaign planning are connected to the social case",
+      "status": "PASS"
+    },
+    {
+      "name": "Facebook Group operation is integrated with four distinct source fields",
+      "status": "PASS"
+    },
+    {
+      "name": "B2B Facebook follower scale is not mixed into the social case",
+      "status": "PASS"
+    },
+    {
+      "name": "integrated community metric opens the evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "source screenshots are shown without fabricated daily series",
+      "status": "PASS"
+    },
+    {
+      "name": "Facebook source evidence contains two anonymized backend screenshots",
+      "status": "PASS"
+    },
+    {
+      "name": "Instagram filter preserves metric identities",
+      "status": "PASS"
+    },
+    {
+      "name": "new KPI invokes existing evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "route closes evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "B2B Facebook follower scale stays on the B2B data page",
+      "status": "PASS"
+    },
+    {
+      "name": "same case chapter route closes image modal",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 0",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 1",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 2",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 3",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 4",
+      "status": "PASS"
+    },
+    {
+      "name": "community topic selection 5",
+      "status": "PASS"
+    },
+    {
+      "name": "community feedback and onboarding present",
+      "status": "PASS"
+    },
+    {
+      "name": "new evidence modules use readable typography",
+      "status": "PASS"
+    },
+    {
+      "name": "community case presents its own source-backed Facebook Group evidence",
+      "status": "PASS"
+    },
+    {
+      "name": "Facebook page snapshot uses five independent metric cards",
+      "status": "PASS"
+    },
+    {
+      "name": "Facebook backend change values stay attached to their own fields",
+      "status": "PASS"
+    },
+    {
+      "name": "social historical growth is grouped by social channel without B2B metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "unverified monthly group growth remains visibly pending",
+      "status": "PASS"
+    },
+    {
+      "name": "snapshot metric still opens the existing evidence drawer",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 0",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 0",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 1",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 1",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign fields 2",
+      "status": "PASS"
+    },
+    {
+      "name": "campaign visual preview 2",
+      "status": "PASS"
+    },
+    {
+      "name": "route closes added campaign modal",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate accepts complete dated data contract",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects missing scope",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects unverified source",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects one aggregate",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects duplicate date",
+      "status": "PASS"
+    },
+    {
+      "name": "trend gate rejects non-numeric",
+      "status": "PASS"
+    },
+    {
+      "name": "no runtime exceptions",
+      "status": "PASS"
+    }
+  ]
+}

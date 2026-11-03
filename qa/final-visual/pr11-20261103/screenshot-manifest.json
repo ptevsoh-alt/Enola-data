@@ -1,0 +1,378 @@
+{
+  "task": "PORTFOLIO-PR11-FINAL-VISUAL-QA-20261103",
+  "baseline": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+  "renderCommit": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+  "screenshots": [
+    {
+      "file": "before/360-community.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8181/#/case/community",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "Group proof",
+      "status": "PASS",
+      "issue": "MIME issue checked separately",
+      "timeUTC": "2026-11-03T07:09:46.533Z",
+      "timeAsiaShanghai": "2026-11-03 15:09:46",
+      "sha256": "a0bf791319565115ff10909ae046015d69ea305082343a2a3c76b070f4301fcf",
+      "bytes": 82641
+    },
+    {
+      "file": "before/1440-decision.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "url": "http://127.0.0.1:8181/#/case/social",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "four decision signals",
+      "status": "FAIL",
+      "timeUTC": "2026-11-03T07:09:56.873Z",
+      "timeAsiaShanghai": "2026-11-03 15:09:56",
+      "sha256": "e9c6d76e5e3d73f5bab6ee3ede10737f555b971a97c03c444d659e54be64381c",
+      "bytes": 166576
+    },
+    {
+      "file": "before/360-decision.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8181/#/case/social",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "decision metrics",
+      "status": "FAIL",
+      "issue": "P2 long units wrap beside values",
+      "timeUTC": "2026-11-03T07:10:23.102Z",
+      "timeAsiaShanghai": "2026-11-03 15:10:23",
+      "sha256": "c2a32332c87f3b7a6968f3067083befebfb639be899e8582ecde73b9b2fb8f1c",
+      "bytes": 57137
+    },
+    {
+      "file": "desktop-1440.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:41.247Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:41",
+      "sha256": "c9d77d21adc9ae3b210a39bdffd3eda393547646195058433cda17bd5493b263",
+      "bytes": 587645
+    },
+    {
+      "file": "after/1440-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:42.798Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:42",
+      "sha256": "04d0bedfe4a62110330394134229c9b83ebf3b57c60698cfcc1f7d657dda8304",
+      "bytes": 155732
+    },
+    {
+      "file": "after/1440-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:45.837Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:45",
+      "sha256": "b28ebb3b8d1128eae3e174f675a82bd1503d6b4f6703d3727c80b0fa508ec3ae",
+      "bytes": 183821
+    },
+    {
+      "file": "after/1440-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:50.289Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:50",
+      "sha256": "a9d4419240b9c45e0a54334b4fa443056843e5772a496f7bc3b34dfc800247ea",
+      "bytes": 332911
+    },
+    {
+      "file": "mobile-390.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:57.195Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:57",
+      "sha256": "2a71e1f692f88b775c16c473131479bd83db4d0739007f74789d1abb6c7a7de9",
+      "bytes": 170908
+    },
+    {
+      "file": "after/390-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:03.462Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:03",
+      "sha256": "da5ca817337f738b059769c5012ac4e5c817f0cd5cb0f3ce76a8e7a71cfc140d",
+      "bytes": 68123
+    },
+    {
+      "file": "after/390-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:10.042Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:10",
+      "sha256": "cbc0afa983ab340fa62f60e73481c9aab8a099aa111468dca678cda129e967f3",
+      "bytes": 87319
+    },
+    {
+      "file": "after/390-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:11.792Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:11",
+      "sha256": "bc6214dde938125d22c311c57d5b931fbf4347a794e0bfe545c34852c495abc7",
+      "bytes": 133288
+    },
+    {
+      "file": "mobile-375.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:14.281Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:14",
+      "sha256": "73c04f31971c3435e4f699a6b8945bf139433e4f1d24b8ee6f0b7672d3c95abc",
+      "bytes": 161720
+    },
+    {
+      "file": "after/375-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:15.397Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:15",
+      "sha256": "0515e05bbe965db0037e8383286757bda7b81c7709e74ddf7627c6ce36c12309",
+      "bytes": 67322
+    },
+    {
+      "file": "after/375-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:16.902Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:16",
+      "sha256": "c4015e03049a1702e2718c78127c8767b15dbbd83329265f0c87a89a8ea88c7c",
+      "bytes": 85632
+    },
+    {
+      "file": "after/375-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:18.479Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:18",
+      "sha256": "b4b048b21e381aac0afa1f882b8dc96bc86c7575ebe885ce1b17e51beb91bc09",
+      "bytes": 122434
+    },
+    {
+      "file": "mobile-360.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:21.567Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:21",
+      "sha256": "69411a383f1d80146f95ca8b9f38bbfd7fe902d419ab36e585d51b411c5848e1",
+      "bytes": 157689
+    },
+    {
+      "file": "after/360-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:22.907Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:22",
+      "sha256": "c54591d059c10435e76f6d4c54a99de3e542cfe1003512edc1e34a439e6bb064",
+      "bytes": 66690
+    },
+    {
+      "file": "after/360-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:23.970Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:23",
+      "sha256": "a0bf791319565115ff10909ae046015d69ea305082343a2a3c76b070f4301fcf",
+      "bytes": 82641
+    },
+    {
+      "file": "after/360-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:24.675Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:24",
+      "sha256": "0a84316b23e519368a2ffe9dccdc18e0a045d90c28ddb52d5758fd34c1ec199a",
+      "bytes": 119813
+    },
+    {
+      "file": "after/360-decision-detail.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "P2 unit fix comparison",
+      "status": "PASS",
+      "timeUTC": "2026-11-03T07:14:35.741Z",
+      "timeAsiaShanghai": "2026-11-03 15:14:35",
+      "sha256": "2f096e112a4599308b6bebfd52d82fd082153dccea597402d607eacbd380dde7",
+      "bytes": 53232
+    },
+    {
+      "file": "interaction-evidence/360-group-drawer.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "native click group-viewers drawer",
+      "status": "PASS",
+      "timeUTC": "2026-11-03T07:15:30.153Z",
+      "timeAsiaShanghai": "2026-11-03 15:15:30",
+      "sha256": "cd0f5edab14890c9050bfb60a5419f6df078a269e35893c856dc0c11f7b2b4ab",
+      "bytes": 42879
+    },
+    {
+      "file": "interaction-evidence/group-original-open.png",
+      "viewport": [
+        1440,
+        675
+      ],
+      "url": "http://127.0.0.1:8182/assets/evidence/facebook-group-insights.webp",
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "native click opens Group image document, image/webp 420x359",
+      "status": "PASS",
+      "timeUTC": "2026-11-03T07:18:50.469Z",
+      "timeAsiaShanghai": "2026-11-03 15:18:50",
+      "sha256": "b82b95a9d0ff4cf886ba1cd6893187f6b08c1d23221a6253b4b296070d3105e5",
+      "bytes": 240209
+    }
+  ],
+  "siteFiles": {
+    "site/data.js": "914712836d7de1df69460d6359c9951bbbef2b0cd2a690989a2280684fec8bf0",
+    "site/app.js": "f11d31fcb1078c9c4c0b279060dfd2cbb15c684a8d1b019404079a731001ecc0",
+    "site/growth.js": "9d5e29e489ab56d9b3b68a472c23b51ef921de53bda33ede445e6b0cad9554cf",
+    "site/growth.css": "2d749647a557d4f936ca00c0bbf861f92546fbb5d49ab8a829952b36d356ee31",
+    "preview.cjs": "dcdcf996c302177ba3b30e7c15c2dfa4728be40e3fa215958cabb9fd3ee734ab"
+  }
+}

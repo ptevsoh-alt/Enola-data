@@ -72,7 +72,7 @@ check("all content links resolve", () => {
   p.capabilities.forEach((c) => assert.ok(p.cases.some((x) => x.id === c[3])));
 });
 check("scripts parse", () => {
-  for (const file of ["data.js", "app.js"])
+  for (const file of ["data.js", "app.js", "growth.js"])
     new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
 });
 const files = [];
@@ -106,13 +106,21 @@ check(
       .forEach((f) => {
         const s = fs.readFileSync(f, "utf8");
         assert.ok(
-          !/(?:[CD]:[\\/]|sourceImage|assets\/evidence|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon)/.test(
+          !/(?:[CD]:[\\/]|sourceImage|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon)/.test(
             s,
           ),
           f,
         );
       });
-    assert.ok(!fs.existsSync(path.join(site, "assets/evidence")));
+    const evidenceDir = path.join(site, "assets/evidence");
+    assert.deepEqual(
+      fs.readdirSync(evidenceDir).sort(),
+      ["facebook-group-insights.webp", "facebook-page-insights.webp"],
+    );
+    for (const name of fs.readdirSync(evidenceDir)) {
+      const stat = fs.statSync(path.join(evidenceDir, name));
+      assert.ok(stat.size > 0 && stat.size < 10000, name);
+    }
   },
 );
 console.log(

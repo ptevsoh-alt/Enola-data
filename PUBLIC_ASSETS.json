@@ -25,6 +25,16 @@
     "sha256": "bb04f0f70bdfd4e25e2a74dce689bcf928159bd64e205d37c2f14e9235d468c9"
   },
   {
+    "file": "assets/evidence/facebook-group-insights.webp",
+    "bytes": 4146,
+    "sha256": "47c9b805c8c0238c11b8edb6fafd77435e9d03113c226df771c57445d2cebe01"
+  },
+  {
+    "file": "assets/evidence/facebook-page-insights.webp",
+    "bytes": 6948,
+    "sha256": "1a95ebb05e8be629ccbcee53b6d0ee1b09f94f9549a6a64dc61b6e0180214954"
+  },
+  {
     "file": "assets/favicon.svg",
     "bytes": 199,
     "sha256": "fb2d4c1d4cb6fe65445725b2c888b4d6e3c41e574741166b2b9a711b13c7074a"
@@ -36,13 +46,13 @@
   },
   {
     "file": "growth.css",
-    "bytes": 33374,
-    "sha256": "f2add54da74728c2c0a128a7ad58aa4e8d39f1c7257e7b4308ed364966aa5b4d"
+    "bytes": 42775,
+    "sha256": "2d749647a557d4f936ca00c0bbf861f92546fbb5d49ab8a829952b36d356ee31"
   },
   {
     "file": "growth.js",
-    "bytes": 38759,
-    "sha256": "adfdfceb0029f346cc675f0fa2f80f26bb1c8ba07f178ed222fe54a697e922e7"
+    "bytes": 49215,
+    "sha256": "9d5e29e489ab56d9b3b68a472c23b51ef921de53bda33ede445e6b0cad9554cf"
   },
   {
     "file": "index.html",
