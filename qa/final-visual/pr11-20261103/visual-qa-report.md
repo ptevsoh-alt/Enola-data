@@ -57,3 +57,7 @@
 - 交互：PASS，50 项分档检查及原生点击／Escape 通过。
 - PR：OPEN；Merge：NOT MERGED；Deploy：NOT DEPLOYED。
 - 未修改 main、PR #9、生产配置或 Enola-marketing-skills；未清理或覆盖用户原有本地文件。等待人工最终确认。
+
+## 远程 CI 核验补记
+
+代码与完整截图归档提交 c483ff05ec4deeddb012b46191245935d2468ad6 已推送至目标分支。GitHub Actions Run 41595830328：Validate SUCCESS（147/147），Deploy SKIPPED。该结果覆盖 f020aa8 的最终渲染代码及 c483ff0 的全部证据文件；后续仅追加此 CI 说明，无网站代码变更。最新 PR head 的复核状态同时列在最终交付答复及 PR 描述。
