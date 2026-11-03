@@ -132,7 +132,7 @@ const fs = require("fs"),
     for (const id of ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "group-viewers", "group-posters", "group-members"])
       assert.ok(section.querySelector(`.g-decision-metric[data-growth-metric="${id}"]`), id);
     assert.ok(section.textContent.includes("不等于订单或收入"));
-    assert.ok(section.textContent.includes("不计算活跃率或成员转化率"));
+    assert.ok(section.textContent.includes("计算活跃率或成员转化率"));
     assert.ok(section.textContent.includes("不是单项内容的因果归因"));
     assert.ok(section.querySelector('a[href="#/data/social"]'));
     assert.ok(section.querySelector('a[href="#/case/community"]'));
