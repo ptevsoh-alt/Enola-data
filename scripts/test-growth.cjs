@@ -125,6 +125,18 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".g-social-ownership>article").length, 3);
     assert.ok(d.querySelector(".g-social-ownership").textContent.includes("产品、设计、视频、电商"));
   });
+  check("social metrics are connected to management decisions without causal claims", () => {
+    const section = d.querySelector("#social-data-decisions");
+    assert.ok(section);
+    assert.equal(section.querySelectorAll(".g-decision-card").length, 4);
+    for (const id of ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "group-viewers", "group-posters", "group-members"])
+      assert.ok(section.querySelector(`.g-decision-metric[data-growth-metric="${id}"]`), id);
+    assert.ok(section.textContent.includes("不等于订单或收入"));
+    assert.ok(section.textContent.includes("不计算活跃率或成员转化率"));
+    assert.ok(section.textContent.includes("不是单项内容的因果归因"));
+    assert.ok(section.querySelector('a[href="#/data/social"]'));
+    assert.ok(section.querySelector('a[href="#/case/community"]'));
+  });
   check("editorial and campaign planning are connected to the social case", () => {
     assert.ok(d.querySelector(".g-editorial"));
     assert.ok(d.querySelector(".g-campaign-wall"));
@@ -173,6 +185,8 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-source-window").textContent.includes("2025.11.02"));
     assert.ok(d.querySelector(".g-source-window").textContent.includes("2026.09.30"));
     assert.ok(d.querySelector(".g-source-evidence-note").textContent.includes("未从像素反推时间序列"));
+    assert.ok(d.querySelector('.g-source-evidence-actions a[href="#/case/social"]'));
+    assert.ok(d.querySelector('.g-source-evidence-actions a[href="#/case/community"]'));
   });
   await route("/data/social");
   d.querySelector('[data-g-platform="Instagram"]').click();
@@ -227,6 +241,19 @@ const fs = require("fs"),
       d.querySelectorAll(".g-community-onboarding>article").length,
       2,
     );
+  });
+  check("community case presents its own source-backed Facebook Group evidence", () => {
+    const proof = d.querySelector(".g-community-proof");
+    assert.ok(proof);
+    assert.equal(proof.querySelector(".g-community-proof-image img")?.getAttribute("src"), "assets/evidence/facebook-group-insights.webp");
+    assert.deepEqual(
+      [...proof.querySelectorAll(".g-community-proof-metrics article")].map(x => x.dataset.growthMetric),
+      ["group-viewers", "group-posters", "group-members"],
+    );
+    assert.ok(proof.textContent.includes("2025.11.02"));
+    assert.ok(proof.textContent.includes("2026.09.30"));
+    assert.ok(proof.textContent.includes("不计算活跃率"));
+    assert.ok(proof.querySelector('a[href="#/data/social"]'));
   });
   await route("/case/social");
   check("Facebook page snapshot uses five independent metric cards", () => {
