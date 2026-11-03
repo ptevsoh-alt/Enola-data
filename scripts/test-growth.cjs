@@ -108,6 +108,9 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("0 → 8K+"));
     assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("字段与日期待核"));
     assert.ok(d.querySelector(".g-home-story-footnote").textContent.includes("不是同一时间序列"));
+    assert.equal(d.querySelectorAll(".g-home-story-actions a").length, 2);
+    assert.equal(d.querySelector('.g-home-story-actions a[href="#/case/social"]')?.textContent.trim(), "查看社媒管理案例 ↗");
+    assert.equal(d.querySelector('.g-home-story-actions a[href="#/data/social"]')?.textContent.trim(), "查看社媒数据与证据 ↗");
     assert.ok(d.querySelector(".results-band").textContent.includes("96.5万"));
     assert.ok(d.querySelector(".results-band").textContent.includes("3.7万"));
   });
