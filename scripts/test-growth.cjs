@@ -172,7 +172,7 @@ const fs = require("fs"),
     );
     assert.ok(d.querySelector(".g-source-window").textContent.includes("2025.11.02"));
     assert.ok(d.querySelector(".g-source-window").textContent.includes("2026.09.30"));
-    assert.ok(d.querySelector(".g-source-evidence-note").textContent.includes("不从像素反推时间序列"));
+    assert.ok(d.querySelector(".g-source-evidence-note").textContent.includes("未从像素反推时间序列"));
   });
   await route("/data/social");
   d.querySelector('[data-g-platform="Instagram"]').click();
