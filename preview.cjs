@@ -31,4 +31,4 @@ http
       res.end(b);
     });
   })
-  .listen(8174, "127.0.0.1");
+  .listen(Number(process.env.PORT) || 8174, "127.0.0.1");

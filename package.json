@@ -3,7 +3,7 @@
   "version": "1.0.0",
   "description": "个人作品集，展示海外社媒策略与团队管理、产品营销与上市传播、品牌整合传播、海外 B2B 客户开发及 Amazon 店铺经营经历。",
   "scripts": {
-    "test": "node scripts/validate-site.cjs && node scripts/test-interactions.cjs",
+    "test": "node scripts/validate-site.cjs && node scripts/test-interactions.cjs && node scripts/test-growth.cjs",
     "preview": "node preview.cjs"
   },
   "keywords": [],

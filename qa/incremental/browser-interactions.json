@@ -1,0 +1,94 @@
+{
+  "checks": [
+    {
+      "name": "topic 0",
+      "pass": true
+    },
+    {
+      "name": "topic 1",
+      "pass": true
+    },
+    {
+      "name": "topic 2",
+      "pass": true
+    },
+    {
+      "name": "topic 3",
+      "pass": true
+    },
+    {
+      "name": "topic 4",
+      "pass": true
+    },
+    {
+      "name": "topic 5",
+      "pass": true
+    },
+    {
+      "name": "campaign 0",
+      "pass": true
+    },
+    {
+      "name": "focus 0",
+      "pass": true
+    },
+    {
+      "name": "campaign 1",
+      "pass": true
+    },
+    {
+      "name": "focus 1",
+      "pass": true
+    },
+    {
+      "name": "campaign 2",
+      "pass": true
+    },
+    {
+      "name": "focus 2",
+      "pass": true
+    },
+    {
+      "name": "route closes preview",
+      "pass": true
+    },
+    {
+      "name": "platform Meta",
+      "pass": true
+    },
+    {
+      "name": "platform Facebook",
+      "pass": true
+    },
+    {
+      "name": "platform Instagram",
+      "pass": true
+    },
+    {
+      "name": "platform Group",
+      "pass": true
+    },
+    {
+      "name": "new metric uses evidence drawer",
+      "pass": true
+    },
+    {
+      "name": "browser back closes drawer",
+      "pass": true
+    },
+    {
+      "name": "forward restores data page",
+      "pass": true
+    },
+    {
+      "name": "chapter route closes lightbox",
+      "pass": true
+    }
+  ],
+  "passed": 21,
+  "total": 21,
+  "viewport": [
+    360,
+    844
+  ]
+}

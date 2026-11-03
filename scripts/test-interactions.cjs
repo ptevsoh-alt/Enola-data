@@ -30,6 +30,7 @@ const fs = require("fs"),
   };
   w.addEventListener("error", (e) => errors.push(e.message));
   w.eval(fs.readFileSync(path.join(site, "data.js"), "utf8"));
+  w.eval(fs.readFileSync(path.join(site, "growth.js"), "utf8"));
   w.eval(fs.readFileSync(path.join(site, "app.js"), "utf8"));
   const check = (n, fn) => {
       fn();

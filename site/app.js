@@ -189,6 +189,7 @@
       )}</div><p>品牌、企业与客户身份匿名化。创作者合作仅展示策略、筛选、合作流程、内容治理与授权机制。概念图片均标注性质。</p></div>`;
   }
   function route() {
+    document.querySelectorAll("dialog[open]").forEach(d => d.close());
     const [rawPage, id, chapter] = location.hash
       .replace(/^#\/?/, "")
       .split("/");
@@ -214,6 +215,7 @@
                 ? simple(page)
                 : '<div class="wrap page"><h1>未找到页面</h1><a href="#/cases">返回案例</a></div>';
     if (["cases", "special"].includes(page)) updateList();
+    window.enhancePortfolio?.(main, {page, id});
     document
       .querySelectorAll("#navigation a")
       .forEach((a) =>

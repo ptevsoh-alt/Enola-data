@@ -1,0 +1,170 @@
+{
+  "viewport": [
+    360,
+    844
+  ],
+  "rows": [
+    {
+      "route": "home",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "cases",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "case/gtm",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/social",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/community",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/brand",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/operations",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/b2b",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/seo",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/amazon",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/creative",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/crm",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "case/creator",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 7
+    },
+    {
+      "route": "data/social",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "data/community",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "data/search",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "data/b2b",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "data/commerce",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "data/lifecycle",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "experience",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "capabilities",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "about",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    },
+    {
+      "route": "contact",
+      "width": 360,
+      "scrollWidth": 360,
+      "overflow": [],
+      "chapters": 0
+    }
+  ],
+  "errors": []
+}
