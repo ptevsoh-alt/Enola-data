@@ -132,6 +132,11 @@ const fs = require("fs"),
     for (const id of ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "group-viewers", "group-posters", "group-members"])
       assert.ok(section.querySelector(`.g-decision-metric[data-growth-metric="${id}"]`), id);
     assert.ok(section.textContent.includes("不等于订单或收入"));
+    assert.equal(section.querySelectorAll(".g-decision-card")[0].querySelector("h3").textContent, "页面浏览量");
+    assert.equal(section.querySelectorAll(".g-decision-card")[1].querySelector("h3").textContent, "内容互动");
+    assert.equal(section.querySelectorAll(".g-decision-card")[2].querySelector("h3").textContent, "链接与页面访问");
+    assert.ok(!section.textContent.includes("内容触达"));
+    assert.ok(!section.textContent.includes("站点导流"));
     assert.ok(section.textContent.includes("计算活跃率或成员转化率"));
     assert.ok(section.textContent.includes("不是单项内容的因果归因"));
     assert.ok(section.querySelector('a[href="#/data/social"]'));
@@ -241,6 +246,13 @@ const fs = require("fs"),
       d.querySelectorAll(".g-community-onboarding>article").length,
       2,
     );
+  });
+  check("new evidence modules use readable typography", () => {
+    const css = read("site/growth.css");
+    assert.ok(css.includes(".g-decision-question { font-size: 13px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-decision-action p { font-size: 13px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-decision-note { font-size: 12px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-community-proof-details > p { font-size: 12px; line-height: 1.8; }"));
   });
   check("community case presents its own source-backed Facebook Group evidence", () => {
     const proof = d.querySelector(".g-community-proof");
