@@ -1220,7 +1220,7 @@
 }
 .g-home-signal strong {
   color: var(--accent);
-  font: clamp(27px, 2.8vw, 40px)/1.1 var(--serif);
+  font: clamp(27px, 2.8vw, 40px) / 1.1 var(--serif);
   overflow-wrap: anywhere;
 }
 .g-home-signal b {
@@ -1471,7 +1471,7 @@
 }
 .g-social-community-card > strong {
   margin: 12px 0 8px;
-  font: clamp(25px, 2.5vw, 34px)/1.1 var(--serif);
+  font: clamp(25px, 2.5vw, 34px) / 1.1 var(--serif);
   overflow-wrap: anywhere;
 }
 .g-social-community-card > strong small {
@@ -1597,5 +1597,178 @@
   }
   .g-social-community-card > strong {
     font-size: 30px;
+  }
+}
+/* Final visual pass: readable evidence, natural card proportions, unchanged copy. */
+.g-home-story-intro,
+.g-home-signals,
+.g-home-stage-grid,
+.g-history-groups {
+  align-items: start;
+}
+.g-home-signal > small {
+  margin-top: 14px;
+  font-size: 12px;
+  line-height: 1.65;
+}
+.g-home-signal > span,
+.g-home-stage > span,
+.g-social-ownership span,
+.g-social-flow-heading > span,
+.g-social-pillar-block > div:first-child > span {
+  font-size: 11px;
+  line-height: 1.65;
+}
+.g-home-stage > p,
+.g-home-rhythm > div > p,
+.g-home-rhythm-items p,
+.g-social-ownership p,
+.g-social-story .g-foundation p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.g-home-stage-proof > span,
+.g-social-step-proof small,
+.g-social-community-card > p,
+.g-home-story-footnote,
+.g-social-community-note {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.g-home-rhythm > div > span {
+  color: var(--accent);
+}
+.g-home-rhythm-items article {
+  padding: 18px;
+}
+.g-social-story .g-foundation {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  align-items: start;
+  gap: 18px;
+}
+.g-social-story .g-foundation article {
+  padding: 24px;
+}
+.g-social-story .g-foundation h3 {
+  font-size: 20px;
+  line-height: 1.5;
+}
+.g-social-story .g-foundation article > span,
+.g-social-story .g-foundation article > small {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.g-history-meta,
+.g-history-meta small,
+.g-history-group-heading p,
+.g-history-card > p,
+.g-history-footnote,
+.g-snapshot-footnote {
+  font-size: 12px;
+  line-height: 1.7;
+}
+.g-history-card > small {
+  display: block;
+  overflow: visible;
+  -webkit-line-clamp: unset;
+  font-size: 12px;
+  line-height: 1.7;
+}
+.g-history-main {
+  flex-wrap: wrap;
+  gap: 10px 14px;
+  min-height: 48px;
+  padding: 12px 0;
+}
+.g-history-main span {
+  font-size: 14px;
+  flex: 1 1 130px;
+  line-height: 1.6;
+}
+.g-history-main strong {
+  font-size: 28px;
+  line-height: 1.2;
+}
+.g-history-cards {
+  gap: 20px;
+}
+.g-snapshot-card-top span,
+.g-snapshot-change > span,
+.g-snapshot-change > small,
+.g-snapshot-card > button {
+  font-size: 12px;
+  line-height: 1.65;
+}
+.g-snapshot-card > button {
+  min-height: 44px;
+}
+@media (max-width: 720px) {
+  .g-home-story {
+    padding: 24px 18px;
+  }
+  .g-home-story .g-heading h2,
+  .g-social-story > .g-heading h2 {
+    font-size: 26px;
+    line-height: 1.5;
+    letter-spacing: -0.025em;
+  }
+  .g-home-owner p,
+  .g-heading > p,
+  .g-home-stage > p,
+  .g-social-ownership p,
+  .g-social-story .g-foundation p {
+    font-size: 14px;
+    line-height: 1.85;
+  }
+  .g-home-owner-tags i {
+    font-size: 11px;
+  }
+  .g-home-stage-grid {
+    gap: 18px;
+  }
+  .g-home-stage h3 {
+    font-size: 19px;
+    line-height: 1.55;
+  }
+  .g-home-signal b {
+    font-size: 14px;
+    line-height: 1.6;
+  }
+  .g-home-signal > button {
+    padding-top: 12px;
+  }
+  .g-home-rhythm-items article {
+    padding: 18px;
+  }
+  .g-home-rhythm-items p {
+    font-size: 13px;
+  }
+  .g-social-story .g-foundation {
+    grid-template-columns: 1fr;
+    gap: 18px;
+  }
+  .g-social-story .g-foundation article {
+    padding: 22px;
+  }
+  .g-history-group,
+  .g-history-growth {
+    padding: 20px 16px;
+  }
+  .g-history-main {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 8px;
+  }
+  .g-history-main span {
+    flex: 0 1 auto;
+  }
+  .g-history-main strong {
+    font-size: 34px;
+  }
+  .g-history-meta {
+    flex-wrap: wrap;
+  }
+  .g-social-ownership {
+    gap: 14px;
   }
 }
