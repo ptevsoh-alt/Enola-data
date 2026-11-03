@@ -107,6 +107,10 @@
           <article><b>周度 / 交付复盘</b><p>脚本、视觉、视频、事实、权限、链接与发布状态。</p></article>
         </div>
       </div>
+      <div class="g-home-story-actions">
+        <a href="#/case/social">查看社媒管理案例 ↗</a>
+        <a href="#/data/social">查看社媒数据与证据 ↗</a>
+      </div>
       <p class="g-home-story-footnote">
         上方三项变化记录来自不同平台与统计阶段：Meta 互动比较阶段、Instagram 独立活动阶段、Facebook Group 独立新增阶段。它们不是同一时间序列，不作横向排名或活动归因；0→8K+ 的账号字段仍待核。
       </p>
