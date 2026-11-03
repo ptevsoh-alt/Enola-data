@@ -2180,3 +2180,25 @@
     font-size: 16px;
   }
 }
+
+
+/* Visual QA refinement: keep new evidence modules consistent with the readable type scale. */
+.g-decision-card-head > span { font-size: 11px; }
+.g-decision-metric > span { font-size: 12px; }
+.g-decision-metric > strong small { font-size: 11px; }
+.g-decision-change { font-size: 11px; }
+.g-decision-question { font-size: 13px; line-height: 1.8; }
+.g-decision-action b { font-size: 11px; }
+.g-decision-action p { font-size: 13px; line-height: 1.8; }
+.g-decision-review > span { font-size: 11px; }
+.g-decision-review b { font-size: 12px; }
+.g-decision-note { font-size: 12px; line-height: 1.8; }
+.g-decision-links a,
+.g-source-evidence-actions a,
+.g-community-proof-link { font-size: 12px; }
+.g-decision-metric .g-evidence,
+.g-community-proof-metrics .g-evidence { font-size: 12px; }
+.g-community-proof-metrics article > span { font-size: 12px; }
+.g-community-proof-metrics article > small { font-size: 11px; }
+.g-community-proof-window span { font-size: 11px; }
+.g-community-proof-details > p { font-size: 12px; line-height: 1.8; }
