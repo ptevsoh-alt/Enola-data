@@ -1806,7 +1806,7 @@
 .g-source-evidence-heading span {
   color: var(--accent);
   font-size: 9px;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
   font-weight: 700;
 }
 .g-source-evidence-heading b {
@@ -1825,7 +1825,7 @@
   height: auto;
   max-height: 440px;
   object-fit: contain;
-  transition: transform .25s ease;
+  transition: transform 0.25s ease;
 }
 .g-source-evidence-card > a:hover img {
   transform: scale(1.015);
@@ -1893,7 +1893,6 @@
   }
 }
 
-
 /* Evidence-to-decision layer: connect platform signals with management choices. */
 .g-social-decision {
   margin-top: 30px;
@@ -1921,7 +1920,7 @@
   color: var(--accent);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: .09em;
+  letter-spacing: 0.09em;
 }
 .g-decision-card-head h3 {
   margin: 7px 0 14px;
@@ -1979,7 +1978,7 @@
 .g-decision-action b {
   color: var(--accent);
   font-size: 10px;
-  letter-spacing: .04em;
+  letter-spacing: 0.04em;
 }
 .g-decision-action p {
   margin: 6px 0 0;
@@ -1996,7 +1995,7 @@
   color: var(--accent);
   font-size: 9px;
   font-weight: 700;
-  letter-spacing: .1em;
+  letter-spacing: 0.1em;
 }
 .g-decision-review > div {
   display: flex;
@@ -2048,7 +2047,7 @@
 .g-decision-links a:hover,
 .g-source-evidence-actions a:hover,
 .g-community-proof-link:hover {
-  filter: brightness(.94);
+  filter: brightness(0.94);
 }
 .g-community-proof {
   margin-top: 26px;
@@ -2061,7 +2060,7 @@
 }
 .g-community-proof-layout {
   display: grid;
-  grid-template-columns: minmax(0, 1.25fr) minmax(260px, .9fr);
+  grid-template-columns: minmax(0, 1.25fr) minmax(260px, 0.9fr);
   gap: 18px;
   align-items: start;
 }
@@ -2181,24 +2180,70 @@
   }
 }
 
-
 /* Visual QA refinement: keep new evidence modules consistent with the readable type scale. */
-.g-decision-card-head > span { font-size: 11px; }
-.g-decision-metric > span { font-size: 12px; }
-.g-decision-metric > strong small { font-size: 11px; }
-.g-decision-change { font-size: 11px; }
-.g-decision-question { font-size: 13px; line-height: 1.8; }
-.g-decision-action b { font-size: 11px; }
-.g-decision-action p { font-size: 13px; line-height: 1.8; }
-.g-decision-review > span { font-size: 11px; }
-.g-decision-review b { font-size: 12px; }
-.g-decision-note { font-size: 12px; line-height: 1.8; }
+.g-decision-card-head > span {
+  font-size: 11px;
+}
+.g-decision-metric > span {
+  font-size: 12px;
+}
+.g-decision-metric > strong small {
+  font-size: 11px;
+}
+.g-decision-change {
+  font-size: 11px;
+}
+.g-decision-question {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.g-decision-action b {
+  font-size: 11px;
+}
+.g-decision-action p {
+  font-size: 13px;
+  line-height: 1.8;
+}
+.g-decision-review > span {
+  font-size: 11px;
+}
+.g-decision-review b {
+  font-size: 12px;
+}
+.g-decision-note {
+  font-size: 12px;
+  line-height: 1.8;
+}
 .g-decision-links a,
 .g-source-evidence-actions a,
-.g-community-proof-link { font-size: 12px; }
+.g-community-proof-link {
+  font-size: 12px;
+}
 .g-decision-metric .g-evidence,
-.g-community-proof-metrics .g-evidence { font-size: 12px; }
-.g-community-proof-metrics article > span { font-size: 12px; }
-.g-community-proof-metrics article > small { font-size: 11px; }
-.g-community-proof-window span { font-size: 11px; }
-.g-community-proof-details > p { font-size: 12px; line-height: 1.8; }
+.g-community-proof-metrics .g-evidence {
+  font-size: 12px;
+}
+.g-community-proof-metrics article > span {
+  font-size: 12px;
+}
+.g-community-proof-metrics article > small {
+  font-size: 11px;
+}
+.g-community-proof-window span {
+  font-size: 11px;
+}
+.g-community-proof-details > p {
+  font-size: 12px;
+  line-height: 1.8;
+}
+/* PR11 visual QA: keep long platform units separate from metric values. */
+.g-social-decision .g-decision-metric > strong small {
+  display: block;
+  margin-top: 6px;
+  line-height: 1.6;
+}
+@media (max-width: 720px) {
+  .g-social-decision .g-decision-metrics {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
