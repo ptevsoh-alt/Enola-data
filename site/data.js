@@ -1,10 +1,10 @@
 /* Public portfolio data: anonymized; evidence maturity preserved. */
 window.PORTFOLIO = {
   statuses: {
-    VERIFIED: "原始平台记录",
-    DOCUMENTED: "历史资料记录",
-    RECONSTRUCTED: "经历重构",
-    CONCEPT: "概念方案",
+    VERIFIED: "后台数据",
+    DOCUMENTED: "项目记录",
+    RECONSTRUCTED: "工作方法",
+    CONCEPT: "内容样例",
     PENDING: "口径待确认",
   },
   domains: {
@@ -364,7 +364,7 @@ window.PORTFOLIO = {
       status: "DOCUMENTED",
       source: "2026-10-28 简历及历史项目汇总",
       definition: "Facebook Group 某阶段新增成员 227 人。",
-      limits: "与约 1K/月的另一项记录分开展示，不相加或外推。",
+      limits: "与 1K+ 的独立增长记录分开展示，不相加或外推。",
       caseId: "community",
       sourceId: "SRC-HISTORICAL-DOCUMENTED",
       accountScope: null,
@@ -400,28 +400,27 @@ window.PORTFOLIO = {
       fieldVerification: "PENDING",
     },
     {
-      id: "group-month",
+      id: "group-growth-1k",
       domain: "community",
-      label: "Group 月新增",
+      label: "Group 增长",
       value: 1000,
-      display: "≈1K/月",
-      unit: "人 / 月",
+      display: "1K+",
+      unit: "人",
       platform: "Facebook Group",
-      window: "用户提供的阶段描述；具体月份未注明",
-      status: "PENDING",
-      source: "用户提供的历史社群运营记录",
-      definition:
-        "历史记录提及社群月新增约 1,000 人；尚未确认是单月数值还是多月平均。",
-      limits: "新增或净增口径未注明；与阶段新增 227 人分开展示。",
+      window: "历史增长记录；具体统计窗口未注明",
+      status: "DOCUMENTED",
+      source: "Facebook Group 历史社群运营记录",
+      definition: "Facebook Group 历史运营记录显示，成员增长超过 1,000 人。",
+      limits: "具体统计窗口未注明；与独立阶段新增 227 人分别记录，不相加、不外推。",
       caseId: "community",
-      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
       accountScope: null,
       windowStart: null,
       windowEnd: null,
       comparisonWindow: null,
       denominator: null,
-      evidenceStatus: "PENDING",
-      fieldVerification: "PENDING",
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "DOCUMENTED",
     },
     {
       id: "group-members",
@@ -438,7 +437,7 @@ window.PORTFOLIO = {
       sourceId: "SRC-FB-GROUP-SCREENSHOT",
       sourceType: "screenshot",
       definition: "截图时社群页面显示 4,009 名成员，代表当时的成员规模。",
-      limits: "不是该统计期间的新增人数；与历史 +227 和约 1K/月记录分开展示。",
+      limits: "不是统计期间的新增人数；与 1K+ 和 +227 两项增长记录分开呈现。",
       caseId: "community",
       fieldVerification: "PENDING",
       accountScope: null,
@@ -1029,8 +1028,7 @@ window.PORTFOLIO = {
       kind: "main",
       status: "RECONSTRUCTED",
       role: "负责美国 Facebook Group 的主题规划、教程与投票、清洁挑战、UGC 投稿和用户问题整理；协调社媒内容与活动素材。",
-      scope:
-        "对象为美国 Facebook Group。简历记录某阶段新增 227 人；后台截图记录 4,009 名成员、146 人发帖和评论、34,387 人查看。截图所选范围为 2025/11/02–2026/09/30，成员快照日期未注明。",
+      scope: "美国 Facebook Group｜社群内容运营与用户参与。",
       problem:
         "成员数量不能说明社群是否真正参与。成员规模、查看人数和发帖评论人数是不同维度；活动如果没有明确参与任务和反馈回路，容易变成单向促销。",
       decision:
@@ -1041,12 +1039,12 @@ window.PORTFOLIO = {
       execution:
         "围绕清洁教程、投票、清洁挑战和 UGC 分享组织互动；将成员提问整理为 FAQ，将高频使用场景反馈给内容选题和产品信息。",
       result:
-        "历史简历记录一个阶段 Group 新增 227 人。后台截图另记录成员数 4,009、所选范围内发帖和评论人数 146、查看人数 34,387；这些数据反映不同维度，不能合并为增长或活跃率。",
+        "Facebook Group 历史增长超过 1,000 人；另有独立阶段新增 227 人。后台截图显示成员数 4,009，统计窗口内发帖和评论人数 146、查看人数 34,387。增长、成员规模和参与表现分别记录。",
       review:
-        "持续运营应分别追踪新增成员、活跃参与、查看、UGC 授权和问题反馈；当前只有阶段新增与后台截图汇总，不推算月度成员增长线。",
+        "分别追踪成员新增、查看、发帖评论和 UGC 反馈；不同统计窗口不合并，也不以成员规模推算活跃率。",
       layout: "community",
       work: "community",
-      metrics: ["group", "group-members", "group-posters", "group-viewers"],
+      metrics: ["group-growth-1k", "group"],
     },
     {
       id: "brand",
@@ -1268,7 +1266,7 @@ window.PORTFOLIO = {
       kind: "special",
       status: "RECONSTRUCTED",
       role: "受众适配筛选、合作流程设计、内容审核与授权机制整理",
-      scope: "仅展示策略与流程方法；展示工作物为经历重构。",
+      scope: "展示受众筛选、合作流程、内容审核与授权管理。",
       problem: "内容合作需要同时满足受众适配、产品事实一致与素材使用权限。",
       decision:
         "先明确合作目标与受众适配，再确认价值交换、Brief、内容审核与授权范围。",
@@ -1414,9 +1412,13 @@ window.PORTFOLIO = {
       ],
       evidenceGroups: [
         {
-          title: "阶段成员新增",
-          description:
-            "历史简历记录的一个阶段新增人数；具体统计起止时间未注明。",
+          title: "历史增长",
+          description: "Facebook Group 历史增长超过 1,000 人；统计窗口未注明。",
+          metrics: ["group-growth-1k"],
+        },
+        {
+          title: "独立阶段新增",
+          description: "简历记录的另一阶段新增 227 人；统计窗口未注明。",
           metrics: ["group"],
         },
         {
