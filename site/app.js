@@ -77,44 +77,44 @@
   }
   const featured = {
     gtm: {
-      label: "产品营销 / GTM",
-      title: "五款清洁电器的上市传播",
-      role: "负责社媒传播策略与内容团队交付，参与用户研究、差异化定位、卖点分层和上市传播。",
-      decision: "选餐区黏污和浴室边角作为主推场景。双盘拖把拍站姿推进和转向，长柄刷拍调杆、调角和刷头贴合。",
-      output: "五款产品、四条产品线的场景分工与卖点演示，配套 KV、社媒选题和创作者 Brief。",
-      artifact: "查看产品组合与演示规范",
+      label: "新品上市 IMC / GTM",
+      title: "五款产品、四条产品线的上市传播",
+      role: "参与用户研究、产品差异化定位、卖点分层与上市传播；负责社媒传播策略和内容团队交付。",
+      decision: "以餐区硬地黏污和浴室边角作为主推任务，分别用双盘拖把与长柄电动刷建立清晰的产品证明。",
+      output: "产品组合、卖点层级、上市工作包、KV、演示脚本与 Creator Brief。",
+      artifact: "查看产品组合与上市传播",
       chapter: "strategy",
       image: "mop-kv-detail",
       alt: "黄色双盘拖把的产品主视觉局部",
     },
-    social: {
-      label: "海外社媒 / 品牌增长",
-      title: "从零搭建海外社媒内容体系",
-      role: "担任社媒负责人、管理组长，负责 Facebook、Instagram 和美国 Facebook Group 的内容规划与团队交付。",
-      decision: "Facebook 负责品牌信息和活动导流，Instagram 主做演示短片，Group 通过教程、挑战和答疑回收用户问题。",
-      output: "建立季度主题与月度日历。2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
-      artifact: "查看内容体系与活动日历",
-      chapter: "execution",
-    },
     brand: {
-      label: "品牌策略 / 整合营销",
-      title: "清洁电器品牌定位与整合传播",
-      role: "参与品牌故事、视觉资产和产品卖点表达，协同社媒、创作者、PR 与展会的传播素材交付。",
-      decision: "让广告主视觉交代清洁姿势，社媒与创作者拍同机位演示，PR 用家庭场景解释产品分工。",
-      output: "匿名品牌屋、联合抽奖海报与北美家庭清洁 PR 选题。",
+      label: "品牌策略 / IMC 整合传播",
+      title: "从品牌定位到跨渠道传播",
+      role: "参与品牌故事、视觉资产与产品卖点表达，协同 Social、PR、Creator 和展会触点的内容交付。",
+      decision: "先统一品牌主张与产品事实，再按渠道分配场景演示、媒体信息和用户沟通任务。",
+      output: "匿名品牌屋、传播支柱、渠道分工、联合活动视觉与北美家庭清洁 PR 发布记录。",
       artifact: "查看品牌屋与渠道分工",
       chapter: "strategy",
       image: "pr-home-scene",
-      alt: "家庭餐区清洁主题的传播配图",
+      alt: "家庭清洁主题的传播配图",
     },
     operations: {
-      label: "团队管理 / 项目交付",
-      title: "社媒团队排期与创意审核",
-      role: "安排社媒小组任务与创意评审，协调产品、设计、视频、电商及外部合作方。",
-      decision: "月度日历写清负责人和素材依赖。制作前核对产品事实与素材权限，发布前复核脚本、画面与链接。",
-      output: "把季度主题拆成月度排期、项目 Brief、脚本与视觉审核，以及周度跟进和月度复盘。",
+      label: "项目管理 / 跨部门交付",
+      title: "把营销计划拆成可验收的交付",
+      role: "负责社媒小组任务安排、季度与月度排期、创意评审及脚本 / 视觉审核，协调产品、设计、视频、电商和外部合作方。",
+      decision: "先确认产品事实、素材依赖与审核责任，再推进设计制作、渠道适配和发布验收。",
+      output: "季度主题、月度内容日历、项目 Brief、任务分工、审核节点与周 / 月复盘。",
       artifact: "查看分工、审核与复盘",
       chapter: "management",
+    },
+    social: {
+      label: "海外社媒 / 品牌增长",
+      title: "从账号经营到内容与社群增长",
+      role: "担任社媒负责人、管理组长，负责 Facebook、Instagram 和美国 Facebook Group 的内容规划与团队交付。",
+      decision: "按平台职责分配品牌信息、产品演示、活动沟通和用户反馈任务。",
+      output: "季度主题与月度内容日历；2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
+      artifact: "查看内容体系与经营数据",
+      chapter: "execution",
     },
   };
 
@@ -131,15 +131,15 @@
   function home() {
     return `<div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 / HUANG WENLIN</p><h1 id="home-title">海外品牌营销<br><em>与产品上市策略</em></h1>
-        <p class="hero-intro">GTM · 产品营销 · 整合营销 · 品牌增长</p>
-        <p class="hero-summary">负责海外社媒策略和内容团队交付，参与清洁电器的用户研究、卖点定位与上市传播。季度定传播主题，月度排内容，周度审核脚本和视觉。</p>
+        <div><p class="eyebrow">黄文琳 / HUANG WENLIN</p><h1 id="home-title">海外新品上市 IMC<br><em>与品牌整合传播</em></h1>
+        <p class="hero-intro">IMC · Product Marketing · GTM · Brand Growth</p>
+        <p class="hero-summary">围绕北美消费市场的用户场景与产品定位，参与新品上市 IMC 和跨渠道传播；负责海外社媒内容团队交付，组织季度主题、月度排期与创意审核，协同产品、设计、视频、PR、Creator 与电商团队推进传播物料落地。</p>
         <div class="actions"><a class="btn" href="#/cases">浏览案例 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表案例入口"><h2>代表案例</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><span>${item.label}</span><strong>${item.title}</strong></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总</p><a href="#/data/social">查看社媒数据 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
       <section class="section featured-section" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 11 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
-      <section class="contact-band"><div><h2>工作经历与联系</h2><p>海外品牌营销、产品上市与社媒团队管理。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
+      <section class="contact-band"><div><h2>工作经历与联系</h2><p>新品上市 IMC、品牌整合传播、跨部门项目管理与海外社媒增长。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
 
