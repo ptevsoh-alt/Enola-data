@@ -28,6 +28,7 @@ const fs = require("fs"),
     assert.equal(
       sha(
         read("site/index.html")
+          .replace(/\?v=[a-f0-9]+(?=")/g, "")
           .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
           .replace('    <script src="growth.js" defer></script>\n', "")
           .replace('    <script src="projects.js" defer></script>\n', ""),
