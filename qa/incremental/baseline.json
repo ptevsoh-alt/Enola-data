@@ -1,0 +1,9 @@
+{
+  "commit": "8d434e44f0b2b3ff424bf9c0a523b647bfce288c",
+  "files": {
+    "site/data.js": "914712836d7de1df69460d6359c9951bbbef2b0cd2a690989a2280684fec8bf0",
+    "site/styles.css": "36b9dfc4f4fc21dcada41b811957975171afa8e8349f324b0f0d9dd24127456f",
+    "site/app.js": "4ebb9e21302f328b3abe955d679dc82b6637a19b9a40938e9fdd706aca62a36b",
+    "site/index.html": "83355009017fbb7072affe252686a25341fde1c0e481c9ab09c46cdd045ea6da"
+  }
+}

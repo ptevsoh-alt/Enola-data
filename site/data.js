@@ -1,485 +1,1823 @@
-/* Content and metrics are deliberately separate from their visual presentation. */
+/* Public portfolio data: anonymized; evidence maturity preserved. */
 window.PORTFOLIO = {
- statuses:{VERIFIED:'原始平台记录',DOCUMENTED:'历史资料记录',RECONSTRUCTED:'经历重构',CONCEPT:'概念方案',PENDING:'口径待确认'},
- domains:{social:'社媒传播',community:'社群与用户参与',search:'搜索增长',b2b:'B2B 市场',commerce:'电商经营',lifecycle:'用户关系',creator:'达人合作运营'},
- metrics:[
-  {id:'impressions',domain:'social',label:'曝光',value:965000,display:'96.5万',unit:'次',platform:'Meta',window:'2025 年阶段汇总（简历记录）',status:'DOCUMENTED',source:'2026-10-28 简历及历史项目汇总',definition:'Meta 统计的内容展示次数，表示内容被展示的规模，不代表去重触达人数。',limits:'账户范围与平台字段未完整保留；不将曝光解释为品牌提及或品牌声量。',caseId:'social'},
-  {id:'engagements',domain:'social',label:'互动',value:37000,display:'3.7万',unit:'次',platform:'Meta',window:'2025 年阶段汇总（简历记录）',status:'DOCUMENTED',source:'2026-10-28 简历及历史项目汇总',definition:'Meta 统计的内容互动次数；具体包含哪些互动动作，以当期平台报表字段为准。',limits:'互动次数不等于互动人数、询盘或成交；与 Facebook 页面截图数据分开展示。',caseId:'social'},
-  {id:'visits',domain:'social',label:'访问',value:31000,display:'31K',unit:'次',platform:'Meta（字段待确认）',window:'2025 年阶段汇总（简历记录）',status:'PENDING',source:'历史项目阶段数据汇总',definition:'历史汇总中的访问次数；目前无法确认对应主页访问、网站访问或其他平台字段。',limits:'不换算为网站会话或独立访客。',caseId:'social'},
-  {id:'follows',domain:'social',label:'关注',value:5795,display:'5,795',unit:'待核',platform:'Meta（字段待确认）',window:'2025 年阶段汇总（简历记录）',status:'PENDING',source:'历史项目阶段数据汇总',definition:'历史汇总中的关注数；目前无法确认是新增关注、净增关注还是账号存量。',limits:'不与 Facebook 账号规模 8K+ 或其他平台关注数据合并。',caseId:'social'},
-  {id:'fb-views',domain:'social',label:'Facebook 页面浏览量',value:1382000,display:'138.2万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',definition:'后台显示的“浏览量”汇总值，沿用平台原字段；不等同于曝光、覆盖人数或独立访客。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-viewers',domain:'social',label:'Facebook 浏览人数',value:null,display:'--',unit:'未提供',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'PENDING',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）；截图数值显示“--”。',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',definition:'后台“浏览人数”字段在截图中显示为“--”，没有可展示的有效数值。',limits:'当前截图没有提供该项数值，因此不以 0 代替。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-content-interactions',domain:'social',label:'Facebook 内容互动次数',value:53000,display:'5.3万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1,358.3%',changeNote:'截图显示 +1,358.3%；未标注比较周期，不解释为同比或环比。',definition:'Facebook 页面分析后台显示的“内容互动次数”汇总值，沿用平台原字段，表示互动次数，不代表互动人数。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与 Meta 2025 年阶段互动数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-link-clicks',domain:'social',label:'Facebook 链接点击量',value:7364,display:'7,364',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1.7万%',changeNote:'截图显示 +1.7 万%；未标注比较周期，不解释为同比或环比。',definition:'后台显示的链接点击次数。截图另显示 3 月 6 日单日点击 30 次，该单日记录不代表全期趋势。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-visits',domain:'social',label:'Facebook 页面访问量',value:54000,display:'5.4万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 1,517.8%',changeNote:'截图显示 +1,517.8%；未标注比较周期，不解释为同比或环比。',definition:'后台显示的“访问量”汇总值，沿用平台原字段。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'fb-follows',domain:'social',label:'Facebook 关注次数',value:10000,display:'1万',unit:'次',platform:'Facebook 页面分析',window:'截图未显示完整日期范围。',status:'DOCUMENTED',source:'Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）',sourceId:'SRC-FB-PAGE-SCREENSHOT',sourceType:'screenshot',changeDisplay:'↑ 2,129.2%',changeNote:'截图显示 +2,129.2%；未标注比较周期，不解释为同比或环比。',definition:'后台显示的“关注次数”累计值，保留平台原字段。',limits:'截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。',caseId:'social',fieldVerification:'PENDING'},
-  {id:'er',domain:'social',label:'互动 / 曝光（暂算）',value:37000/965000,display:'≈3.8%',unit:'比值',platform:'Meta（口径待核）',window:'2025 年阶段汇总（本人提供窗口）',status:'PENDING',source:'按历史汇总中的互动 3.7 万 ÷ 曝光 96.5 万计算',definition:'以 3.7 万次互动除以 96.5 万次曝光，得到约 3.8%。',limits:'只有账号范围和统计窗口一致时，该比值才可作为正式互动率；当前仅作估算。',caseId:'social'},
-  {id:'engagement-change',domain:'social',label:'互动变化',value:122.5,display:'+122.5%',unit:'%',platform:'Meta',window:'独立比较阶段；具体起止未注明',status:'DOCUMENTED',source:'历史项目阶段数据汇总',definition:'历史资料记录的 Meta 互动变化约 +122.5%。',limits:'比较期和两期原值未注明；不解释为月增长率，也不与 2025 年汇总总量绘制同一趋势。',caseId:'social'},
-  {id:'fb-reach',domain:'social',label:'Facebook 覆盖变化',value:300,display:'300%+',unit:'%',platform:'Facebook',window:'独立阶段；具体起止未注明',status:'DOCUMENTED',source:'2026-10-28 简历及历史项目汇总',definition:'Facebook 覆盖人数的阶段变化，指内容触达的用户规模，不是曝光或关注增长。',limits:'历史记录为 300%+；具体起止和两期人数未注明。',caseId:'social'},
-  {id:'group',domain:'community',label:'Group 阶段新增',value:227,display:'+227',unit:'人',platform:'Facebook Group',window:'独立阶段；具体起止未注明',status:'DOCUMENTED',source:'2026-10-28 简历及历史项目汇总',definition:'Facebook Group 某阶段新增成员 227 人。',limits:'与约 1K/月的另一项记录分开展示，不相加或外推。',caseId:'community'},
-  {id:'fb-size',domain:'social',label:'Facebook 账号规模',value:8000,display:'0→8K+',unit:'账号指标待核',platform:'Facebook Page（字段待确认）',window:'起止日期未注明',status:'PENDING',source:'历史项目阶段记录',definition:'Facebook 账号规模由 0 建设至 8K+；具体对应粉丝、关注者或其他账号字段尚未确认。',limits:'不计算增长率，也不与 5,795 关注或截图中的 1 万关注次数合并。',caseId:'social'},
-  {id:'group-month',domain:'community',label:'Group 月新增',value:1000,display:'≈1K/月',unit:'人 / 月',platform:'Facebook Group',window:'用户提供的阶段描述；具体月份未注明',status:'PENDING',source:'用户提供的历史社群运营记录',definition:'历史记录提及社群月新增约 1,000 人；尚未确认是单月数值还是多月平均。',limits:'新增或净增口径未注明；与阶段新增 227 人分开展示。',caseId:'community'},
-  {id:'group-members',domain:'community',label:'Facebook Group 成员数',value:4009,display:'4,009',unit:'名成员',platform:'Facebook Group Insights',window:'成员数为页面快照，采集日期未注明；分析范围为 2025/11/02–2026/09/30。',status:'DOCUMENTED',source:'Facebook Group Insights 后台截图记录（社群名称已匿名化）',sourceId:'SRC-FB-GROUP-SCREENSHOT',sourceType:'screenshot',definition:'截图时社群页面显示 4,009 名成员，代表当时的成员规模。',limits:'不是该统计期间的新增人数；与历史 +227 和约 1K/月记录分开展示。',caseId:'community',fieldVerification:'PENDING'},
-  {id:'group-posters',domain:'community',label:'发帖和评论人数',value:146,display:'146',unit:'平台显示人数',platform:'Facebook Group Insights',window:'2025/11/02–2026/09/30（截图所选范围）',status:'DOCUMENTED',source:'Facebook Group Insights 后台截图记录（社群名称已匿名化）',sourceId:'SRC-FB-GROUP-SCREENSHOT',sourceType:'screenshot',definition:'平台原字段为“146 人发帖和评论”，按截图保留原名称。',limits:'不改写为发帖次数或活跃率；人数去重规则以平台定义为准。',caseId:'community',fieldVerification:'PENDING'},
-  {id:'group-viewers',domain:'community',label:'社群查看人数',value:34387,display:'34,387',unit:'平台显示人数',platform:'Facebook Group Insights',window:'2025/11/02–2026/09/30（截图所选范围）',status:'DOCUMENTED',source:'Facebook Group Insights 后台截图记录（社群名称已匿名化）',sourceId:'SRC-FB-GROUP-SCREENSHOT',sourceType:'screenshot',definition:'平台原字段为“34,387 人查看”，按截图保留原名称。',limits:'不改写为内容曝光或独立访客，也不与 Facebook 页面浏览量相加。',caseId:'community',fieldVerification:'PENDING'},
-  {id:'organic-share',domain:'search',label:'自然搜索收入份额',value:82.46,display:'82.46%',unit:'%',platform:'站点渠道报告，字段待核',window:'历史阶段；具体月份未注明',status:'DOCUMENTED',source:'历史站点渠道数据汇总',definition:'自然搜索渠道收入占报告总收入的 82.46%，反映渠道收入结构。',limits:'统计窗口、归因模型和收入定义未注明；其他渠道 17.54% 仅为 100% 减去 82.46% 的算术补数。',caseId:'seo'},
-  {id:'gsc',domain:'search',label:'搜索点击环比',value:20,display:'≈+20%',unit:'%',platform:'Google Search Console',window:'两期月份未注明',status:'DOCUMENTED',source:'历史 Google Search Console 阶段数据汇总',definition:'历史资料记录 Google Search Console 搜索点击环比约 +20%。',limits:'两期点击原值和月份未提供，不绘制折线或反推点击量。',caseId:'seo'},
-  {id:'b2b-reach',domain:'b2b',label:'月均触达潜客',value:100,display:'100+',unit:'潜客 / 月',platform:'B2B 客户拓展记录',window:'2023.11–2025.03 任期内；月度样本月份未注明',status:'DOCUMENTED',source:'2026-10-28 简历及历史 B2B 业务汇总',definition:'海外 B2B 每月触达潜在客户 100+，不等同于有效询盘。',limits:'没有逐月记录和去重口径；不与线索转化率拼接为完整漏斗。',caseId:'b2b'},
-  {id:'b2b-sales',domain:'b2b',label:'月度成交额',value:300000,display:'≈30万',unit:'元 / 月',platform:'B2B 业务记录',window:'任期内月度记录；代表月份未注明',status:'DOCUMENTED',source:'2026-10-28 简历及历史 B2B 业务汇总',definition:'海外 B2B 月度成交额约人民币 30 万元。',limits:'成交按签单、回款还是确认收入统计尚未注明；不据此推算全年金额。',caseId:'b2b'},
-  {id:'amazon-sales',domain:'commerce',label:'阶段销售额变化',value:10,display:'≈+10%',unit:'%',platform:'Amazon',window:'2022.07–2023.10 任期内阶段；具体比较期未注明',status:'DOCUMENTED',source:'2026-10-28 简历及 Amazon 经营汇总',definition:'Amazon 阶段销售额变化约 +10%。',limits:'缺少两期销售原值和比较窗口；不推断为 CPC 广告的单独贡献。',caseId:'amazon'},
-  {id:'amazon-cvr',domain:'commerce',label:'阶段转化率变化',value:5,display:'≈+5%',unit:'相对百分比 / 百分点待核',platform:'Amazon',window:'2022.07–2023.10 任期内阶段；具体比较期未注明',status:'DOCUMENTED',source:'2026-10-28 简历及 Amazon 经营汇总',definition:'Amazon 阶段转化率变化约 +5%。',limits:'未注明是相对变化还是百分点，不反推转化率原值。',caseId:'amazon'},
-  {id:'retention',domain:'lifecycle',label:'复购 / 留存结果',value:null,display:'待补充',unit:'未提供',platform:'CRM / EDM',window:'暂无邮件发送与复购统计周期',status:'PENDING',source:'EDM / CRM 生命周期规划工作物',definition:'该项用于说明 Welcome、弃购、购后教育和召回等生命周期规划；没有实际复购数值。',limits:'不代表自动化流程已启用、邮件已发送或会员收入已经产生。',caseId:'crm'},
-  {id:'product-sales-stage',domain:'commerce',label:'产品上市阶段销量变化',value:3,display:'≈+3%',unit:'%',platform:'相关品牌及产品内容上线期间',window:'相关内容上线期间；具体起止未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 2 页“新品定位、卖点可视化与上市策划”',definition:'简历记录相关产品内容上线期间，产品销量出现约 +3% 的阶段变化。',limits:'产品范围、对照期和归因方式未注明；不解释为整体品牌销量增长或单一素材贡献。',caseId:'gtm'},
-  {id:'fb-link-click-change',domain:'social',label:'Facebook 链接点击变化',value:200,display:'近+200%',unit:'%（约值）',platform:'Facebook',window:'历史阶段；具体起止未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 2 页“海外社媒矩阵与社群增长机制”',definition:'简历记录 Facebook 链接点击增长近 +200%。',limits:'比较窗口和账号范围未注明；与截图中的 7,364 次点击分开展示。',caseId:'social'},
-  {id:'ig-event-engagement-change',domain:'social',label:'Instagram 活动期互动变化',value:1870.9,display:'+1,870.9%',unit:'%（平台变化口径）',platform:'Instagram',window:'独立活动阶段；具体日期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1–2 页 Instagram 活动表现记录',definition:'简历记录 Instagram 活动期互动增长 +1,870.9%。',limits:'活动日期和比较基期未注明；不与 Meta 年度互动合并。',caseId:'social'},
-  {id:'ig-follower-change',domain:'social',label:'Instagram 关注变化',value:880,display:'约+880%',unit:'%（约值）',platform:'Instagram',window:'历史阶段；具体起止未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 2 页“海外社媒矩阵与社群增长机制”',definition:'简历记录 Instagram 关注增长约 +880%。',limits:'关注字段和比较基期未注明；不与 Facebook 关注次数或粉丝规模合并。',caseId:'social'},
-  {id:'b2b-email-open',domain:'b2b',label:'邮件打开率',value:null,range:[10,15],display:'10%–15%',unit:'邮件打开率（%）',platform:'Email / EDM',window:'2023.11–2025.03 任期内；具体发送批次未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“海外客户拓展策略”',definition:'海外客户拓展邮件打开率为 10%–15%。',limits:'发送批次、样本量和平台计算口径未注明；不据此推算线索或成交。',caseId:'b2b'},
-  {id:'b2b-lead-conversion',domain:'b2b',label:'线索转化率',value:3,display:'约3%',unit:'%（约值）',platform:'B2B 客户拓展',window:'任期内阶段；具体月份未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1–2 页“海外客户拓展策略 / B2B 获客”',definition:'海外 B2B 线索转化约 3%。',limits:'线索定义、转化阶段和分母未注明；不与月均触达 100+ 直接组成漏斗。',caseId:'b2b'},
-  {id:'linkedin-follower-change',domain:'b2b',label:'LinkedIn 月粉丝增长',value:35,display:'约+35%/月',unit:'% / 月（约值）',platform:'LinkedIn',window:'任期内月度阶段；具体月份未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“展会与市场营销”',definition:'LinkedIn 粉丝月增长约 +35%。',limits:'具体月份、基期和粉丝字段未注明；不外推为全任期累计增长。',caseId:'b2b'},
-  {id:'fb-follower-scale',domain:'b2b',label:'Facebook 粉丝规模变化',value:1900,comparisonValues:{start:'400+',end:'1,900+'},display:'400+ → 1,900+',unit:'粉丝规模（起止值）',platform:'Facebook',window:'2023.11–2025.03 任期内阶段；起止日期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“展会与市场营销”',definition:'Facebook 粉丝规模由 400+ 增至 1,900+。',limits:'账号范围和采样日期未注明；不计算净增量或增长率。',caseId:'b2b'},
-  {id:'amazon-profit-margin',domain:'commerce',label:'项目利润率',value:30,display:'约30%',unit:'%',platform:'Amazon 店铺经营',window:'2022.07–2023.10 任期内阶段；核算周期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“增长成果与用户运营”',definition:'Amazon 项目利润率约 30%。',limits:'毛利或净利定义及成本范围未注明；不与 ROAS 或销售额增长混同。',caseId:'amazon'},
-  {id:'amazon-offsite-followers',domain:'commerce',label:'站外新增粉丝',value:800,display:'800+',unit:'累计新增粉丝',platform:'站外社媒 / KOL',window:'2022.07–2023.10 任期内阶段；具体活动周期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“增长成果与用户运营”',definition:'站外社媒与 KOL / 服务商合作累计新增粉丝 800+。',limits:'平台构成和去重方式未注明；不归因于单一合作渠道。',caseId:'amazon'},
-  {id:'amazon-complaint-change',domain:'commerce',label:'投诉率变化',value:-5,display:'约-5%',unit:'变化（相对比例 / 百分点待核）',platform:'Amazon',window:'2022.07–2023.10 任期内阶段；比较期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“增长成果与用户运营”',definition:'Amazon 投诉率阶段下降约 5%。',limits:'投诉率分母及相对变化 / 百分点口径未注明；不反推投诉数量。',caseId:'amazon'},
-  {id:'amazon-review-change',domain:'commerce',label:'好评率变化',value:5,display:'约+5%',unit:'变化（相对比例 / 百分点待核）',platform:'Amazon',window:'2022.07–2023.10 任期内阶段；比较期未注明',status:'DOCUMENTED',source:'2026-10-28 简历第 1 页“增长成果与用户运营”',definition:'Amazon 好评率阶段提升约 5%。',limits:'评价样本和相对变化 / 百分点口径未注明；不推算评论数量。',caseId:'amazon'},
-  {id:'creator-new',domain:'creator',label:'新增达人',value:500,display:'500',unit:'位（后台显示）',platform:'达人工作台',window:'2026-10-25 页面截图；筛选窗口与累计规则未显示',status:'DOCUMENTED',source:'达人工作台截图（页面日期：2026-10-25 · 北京时间）',sourceId:'SRC-CREATOR-DESK-20261025',sourceType:'screenshot',definition:'工作台显示的“新增达人”数量，按页面原字段保留。',limits:'截图未展示筛选条件、累计规则和去重口径；不等同于有效候选、已建联或已合作达人数量。与红人运营工作台的 226 位窗口内活跃达人分开展示。',caseId:'creator',fieldVerification:'PENDING',windowStart:null,windowEnd:null,comparisonWindow:null},
-  {id:'creator-videos',domain:'creator',label:'内容库视频记录',value:200,display:'200',unit:'条视频记录',platform:'红人运营工作台 / 内容库',window:'统计窗口自 2026-04-01 起；数据截至 2026-10-28 09:20；2026-10-30 只读导入',status:'DOCUMENTED',source:'红人运营工作台内容库截图（飞书表只读导入）',sourceId:'SRC-CREATOR-CONTENT-20261030',sourceType:'screenshot',definition:'内容库顶部显示 200 / 200 条记录，按视频条目数展示。',limits:'不代表 200 条均已发布、已授权或产生 GMV；播放、点赞、评论、收藏和转发卡片数值在截图中不可辨识。',caseId:'creator',fieldVerification:'PENDING',windowStart:null,windowEnd:null,comparisonWindow:null},
-  {id:'creator-active',domain:'creator',label:'窗口内活跃达人',value:226,display:'226',unit:'位达人',platform:'红人运营工作台',window:'统计窗口自 2026-04-01 起；数据截至 2026-10-28 09:20；2026-10-30 只读导入',status:'DOCUMENTED',source:'红人运营工作台内容库截图（飞书表只读导入）',sourceId:'SRC-CREATOR-CONTENT-20261030',sourceType:'screenshot',definition:'顶部摘要显示窗口内活跃达人 226 位。',limits:'活跃定义与去重规则未在截图中完整展示；不与达人工作台的 500 新增达人直接计算转化率。',caseId:'creator',fieldVerification:'PENDING',windowStart:null,windowEnd:null,comparisonWindow:null},
-  {id:'creator-gmv-collabs',domain:'creator',label:'有 GMV 的合作记录',value:107,display:'107',unit:'条合作记录',platform:'红人运营工作台 / 归因表',window:'统计窗口自 2026-04-01 起；数据截至 2026-10-28 09:20；2026-10-30 只读导入',status:'DOCUMENTED',source:'红人运营工作台内容库截图顶部数据摘要',sourceId:'SRC-CREATOR-CONTENT-20261030',sourceType:'screenshot',definition:'顶部摘要显示 107 条有 GMV 的合作记录，按合作记录数量展示。',limits:'GMV 金额在截图中不可辨识；表格未见佣金字段，不计算总 GMV、平均 GMV、佣金、ROI 或结算收益。',caseId:'creator',fieldVerification:'PENDING',windowStart:null,windowEnd:null,comparisonWindow:null},
- ],
- cases:[
- {id:'gtm',no:'01',title:'四条核心产品线产品营销与上市',subtitle:'产品营销 / 新品上市',category:'新品上市与产品营销',kind:'main',status:'RECONSTRUCTED',image:1,role:'负责品牌社媒传播策略与内容团队交付；参与 4 条核心产品线的用户研究、差异化定位、卖点分层及上市传播协同。',scope:'覆盖北美清洁家居消费品 4 条核心产品线。本人承担市场与用户信息整理、产品价值表达、传播规划和跨部门交付；产品研发、定价及整体经营决策不写作个人独立负责。',problem:'产品信息往往以参数和功能组织，但消费者的判断来自具体任务：是否适合自己的家庭场景、是否容易操作、能否解决清洁问题，以及产品主张是否可信。如果这些问题没有被统一回答，社媒、商品页、Creator 和 PR 就容易各说各话。',decision:'先从 Review / VOC、竞品功能与价格、站内搜索和社群高频问题识别用户任务与购买异议，再按 FABA 建立“特征—优势—用户利益—使用场景”的信息层级，并用 FABE / RTB 为关键主张匹配证明。产品事实由产品端确认，营销负责把已确认的信息转成消费者能理解、能验证、能复用的表达。',plan:'按“研究与定位—卖点与证据—预热—上市—持续推广”拆分工作包。每阶段明确目标人群、核心信息、渠道角色、素材清单、CTA、负责人、审核节点与复盘指标，避免先做素材、后补产品逻辑。',resources:'协同产品 / 研发确认参数与适用边界，联动设计、视频、电商、PR、Creator / KOL 及外部服务商。产品事实、创意表达、页面承接和发布排期分别明确输入与审核责任，减少反复改稿和跨渠道口径冲突。',execution:'将研究发现沉淀为目标人群与场景清单、购买顾虑、核心卖点、FAQ、演示动作和 Creator Brief；再把同一套产品信息适配为社媒选题、KV、产品演示视频、活动页与商品页内容。重点审核产品结构、参数、操作条件、画面表达和用户利益是否一致。',result:'简历记录参与 4 条核心产品线的产品营销与上市传播；相关品牌及产品内容上线期间，产品销量录得约 +3% 的阶段表现。该数据按简历原口径呈现，不据此推断单一素材贡献或整体品牌销量增长。',review:'若补齐产品线范围、上线日期、对照期、销量原值及同期活动信息，可进一步拆解上市前后表现。现阶段保留简历原始口径，不计算增量销量或营销 ROI。',layout:'launch',work:'launch',metrics:['product-sales-stage']},
- {id:'social',no:'02',title:'海外社媒矩阵搭建与增长运营',subtitle:'社媒策略 / 内容团队管理',category:'海外社媒增长',kind:'main',status:'DOCUMENTED',image:2,role:'担任社媒负责人 / 管理组长，负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略和团队交付；制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本 / 视觉审核和周 / 月复盘。',scope:'任期 2025.04–2026.09；主要平台为 Facebook、Instagram、Facebook Group，站点承接为 Shopify。本人负责社媒内容与小组管理；未提供团队人数和预算权限，不作推定。',problem:'多个平台承担不同任务：Facebook 负责品牌信息和链接导流，Instagram 承接产品视觉演示与活动内容，Group 用于用户交流。若只按发帖数量排期，内容容易重复，用户问题也难回流到产品信息和下一轮选题。',decision:'按平台角色建立产品演示、清洁场景、教程与 FAQ、互动活动、UGC 等内容支柱；季度主题确定重点，月度日历安排平台内容，周度审核制作质量。',plan:'每季度确定主推产品、用户问题与内容目标；月度按平台安排选题、内容形式、负责人、素材需求、CTA、站点承接和发布时间；每周跟进脚本、设计、视频、产品事实与发布状态。',resources:'协调社媒小组、产品、设计、视频、电商和 Creator / KOL；每条内容明确产品信息提供人、制作人、审核人和发布人，UGC 另行确认授权。',execution:'推动 Facebook / Instagram 内容体系从 0 到 1；围绕产品演示、家庭清洁场景、教程、FAQ、互动挑战和 Creator 内容组织素材；将评论与社群高频问题整理为选题和 FAQ，并根据链接点击与站点承接调整 CTA。',result:'2025 年 Meta 汇总曝光 96.5 万、互动 3.7 万；另有 Facebook 页面分析截图记录浏览量 138.2 万、内容互动次数 5.3 万、链接点击 7,364、访问量 5.4 万、关注次数 1 万。两组统计周期与账号范围未对齐，分别展示；简历另记录 Facebook 覆盖增长 300%+、链接点击近 +200%，Instagram 活动期互动 +1,870.9%、关注约 +880%。',review:'复盘按平台分开看：曝光 / 浏览用于观察内容展示规模，互动用于观察内容参与，链接点击用于观察导流动作；Group 的成员规模、查看人数和发帖评论人数分开解读。没有连续日期数据时，不用阶段汇总推算月度趋势。',layout:'social',work:'calendar',metrics:['impressions','engagements','engagement-change','fb-reach','fb-link-click-change','ig-event-engagement-change','ig-follower-change','fb-views','fb-content-interactions','fb-link-clicks','fb-visits','fb-follows']},
- {id:'community',no:'03',title:'美国 Facebook Group 社群经营',subtitle:'社群运营 / 用户参与',category:'海外社媒增长',kind:'main',status:'RECONSTRUCTED',role:'负责美国 Facebook Group 的主题规划、教程与投票、清洁挑战、UGC 投稿和用户问题整理；协调社媒内容与活动素材。',scope:'对象为美国 Facebook Group。简历记录某阶段新增 227 人；后台截图记录 4,009 名成员、146 人发帖和评论、34,387 人查看。截图所选范围为 2025/11/02–2026/09/30，成员快照日期未注明。',problem:'成员数量不能说明社群是否真正参与。成员规模、查看人数和发帖评论人数是不同维度；活动如果没有明确参与任务和反馈回路，容易变成单向促销。',decision:'以教程、投票、清洁挑战和 UGC 投稿建立参与入口；将高频问题回流到社媒选题和 FAQ；投稿参与与品牌商业使用授权分开处理。',plan:'活动前明确主题、参与规则、投稿格式、审核条件和激励；活动期间维护讨论和答疑；活动后整理用户问题、可用 UGC 和下一轮内容建议。',resources:'协同社媒、设计和产品信息负责人；用户照片、视频和评价在二次使用前确认授权平台、范围、期限与署名。',execution:'围绕清洁教程、投票、清洁挑战和 UGC 分享组织互动；将成员提问整理为 FAQ，将高频使用场景反馈给内容选题和产品信息。',result:'历史简历记录一个阶段 Group 新增 227 人。后台截图另记录成员数 4,009、所选范围内发帖和评论人数 146、查看人数 34,387；这些数据反映不同维度，不能合并为增长或活跃率。',review:'持续运营应分别追踪新增成员、活跃参与、查看、UGC 授权和问题反馈；当前只有阶段新增与后台截图汇总，不推算月度成员增长线。',layout:'community',work:'community',metrics:['group','group-members','group-posters','group-viewers']},
- {id:'brand',no:'04',title:'品牌资产建设与跨渠道整合传播',subtitle:'品牌策略 / IMC',category:'品牌战略与 IMC',kind:'main',status:'RECONSTRUCTED',role:'参与品牌故事、VI / Logo / IP、品牌画册、宣传片和产品卖点可视化；协同 PR、Creator、展会及自有渠道的传播素材交付。',scope:'基于北美消费品牌传播经历整理。本人参与品牌内容与传播素材协同；Brand House、Message House、触点矩阵和 PR 工作清单为匿名重构工作物，不代表独立拥有全部品牌预算或媒体采购决策。',problem:'品牌故事、产品卖点和渠道素材由不同团队制作时，容易出现主张不一致、证明不足和素材重复制作；PR 与 Creator 也需要可引用的产品事实和明确的使用范围。',decision:'先统一品牌核心价值、用户利益、产品事实和可信证明，再按 Social、PR / Creator、官网、商品页和展会物料分配内容任务；不同渠道可以采用不同表达，但不能改变同一项产品事实。',plan:'整理品牌主张、核心信息、产品证明、视觉规范和素材版本；为 Social、PR、Creator、官网与线下触点分别制定内容 Brief、交付节点和审核要求。',resources:'协同产品、设计、视频、电商、PR / Creator 与外部合作方；产品端确认参数和功能，创意端制作画面与故事，营销侧审核受众适配、信息层级、授权和跨渠道一致性。',execution:'参与品牌故事、VI、Logo / IP、品牌画册、宣传片及产品演示内容建设；整理卖点、FAQ、媒体资料和 Creator Brief，审核脚本、视觉动线、产品事实与素材使用范围，支持社媒、PR、展会及独立站内容。',result:'可确认的交付包括品牌内容资产、产品传播素材、Creator Brief 和跨渠道协同。当前没有可核验的媒体刊发数、Earned Reach 或 Share of Voice，因此不把社媒曝光写成 PR 成果。',review:'品牌传播应分别追踪品牌词搜索、媒体提及、Creator 发布、站内访问和有效点击；缺少媒体与搜索记录时，只展示已完成的内容资产和协作范围。',layout:'brand',work:'message',metrics:[]},
- {id:'operations',no:'05',title:'社媒团队管理与营销项目交付',subtitle:'团队管理 / 项目治理',category:'整合营销项目管理',kind:'main',status:'RECONSTRUCTED',role:'负责社媒小组任务安排、季度与月度内容排期、创意评审、脚本 / 视觉审核和周 / 月复盘；协调产品、设计、视频、电商、PR / Creator 及外部供应商。',scope:'管理范围集中于社媒小组的任务组织、内容质量和跨部门项目交付。未提供团队人数、直接汇报人数和预算审批权限，不作推定。',problem:'一个 Campaign 同时依赖产品信息、脚本、设计、视频、商品页、Creator 素材和发布时间。若没有明确输入、责任人和验收条件，问题往往在制作后段才暴露，导致版本返工、发布延期或产品信息不一致。',decision:'把项目管理拆成目标、工作包、Owner、依赖、审核和发布 Gate；先确认产品事实、素材权限与页面承接，再进入设计和制作。每个交付物都有负责人、审核人和可检查的完成标准。',plan:'季度确定主题与优先级；月度安排内容和资源；项目 Brief 写明受众、主张、渠道、素材、CTA 和交付日期；周度跟进脚本、设计、视频与产品审核；月度复盘内容表现和协作问题。',resources:'协调社媒小组、产品 / 研发、设计、视频、电商、PR / Creator 和供应商；分别明确产品信息提供、创意制作、事实审核、渠道发布与结果回收的责任。',execution:'通过内容日历、项目 Brief、任务分工、交付排期、脚本评审、视觉审核、产品事实核对和版本记录推进项目；遇到参数变化、素材授权或排期冲突时，先定位受影响资产，再修订并回验。',result:'简历明确记录小组任务分配、创意评审、脚本与视觉审核、外部合作沟通及周 / 月运营复盘。本案例呈现实际管理职责与交付机制，不虚构团队规模、预算、节省工时或效率提升比例。',review:'项目复盘按准时交付、审核问题、素材版本、发布表现和跨部门依赖分类；把重复出现的问题回写到 Brief 模板、审核清单和下一轮排期。',layout:'operations',work:'handoff',metrics:[]},
- {id:'b2b',no:'06',title:'海外 B2B 客户开发与展会营销',subtitle:'B2B 获客 / 商务协同',category:'B2B 海外市场',kind:'special',status:'DOCUMENTED',role:'负责海外客户研究与分层触达、展会营销物料协同、询盘跟进及商务交付协调。',scope:'任期 2023.11–2025.03；渠道包括 Google、LinkedIn、Facebook、Instagram 和 EDM。工作覆盖客户触达、展会沟通、询盘、报价、合同与交付协同。',problem:'海外 B2B 客户开发需要从名单筛选推进到需求确认、询盘、报价和履约；只统计触达数量，无法判断客户是否匹配，也容易遗漏下一步跟进。',decision:'按客户类型、采购需求和产品适配度筛选名单；使用 CRM / ERP 记录来源、沟通内容、采购意向、询盘阶段和下一步动作；将客户异议回传至产品介绍和销售资料。',plan:'展前准备目标客户名单、KV、画册和样品；展中记录客户需求与采购时间；展后按意向推进需求确认、报价、合同、交期和回款。线上通过搜索、LinkedIn、社媒与 EDM 分层触达。',resources:'协同销售、产品 / 研发、交付及售前售后角色；客户来源、采购意向和跟进状态记录在 CRM / ERP，避免把普通触达直接视为有效商机。',execution:'通过 Google 搜索、LinkedIn、Facebook、Instagram 和 EDM 研究客户并分层触达；参与海外展会预热、现场沟通与会后跟进，整理采购异议和产品需求，更新产品介绍与销售资料，并推进询盘、报价、合同、交期和回款协调。',result:'简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%、线索转化约 3%、月度成交额约 30 万元；LinkedIn 月粉丝增长约 35%，Facebook 粉丝规模由 400+ 增至 1,900+。',review:'触达量、邮件打开率、线索转化和成交额分别反映触达、沟通、机会推进和交易结果。由于分母与统计月份未完整提供，不将其拼成可计算漏斗，也不据月度成交额推算全年收入。',layout:'b2b',work:'account',metrics:['b2b-reach','b2b-email-open','b2b-lead-conversion','b2b-sales','linkedin-follower-change','fb-follower-scale']},
- {id:'seo',no:'07',title:'SEO 内容策略与独立站搜索承接',subtitle:'SEO / 内容增长',category:'SEO / 商业增长',kind:'special',status:'RECONSTRUCTED',role:'围绕 Shopify 独立站规划 SEO 主题、Pillar Blog、FAQ 与 EDM 选题，协同商品页信息和站点承接。',scope:'简历记录自然搜索收入份额 82.46%、GSC 点击环比约 +20%。另有 10 篇 Hub-and-Spoke 文章目录方案；文章规划不等于全部发布或收录。',problem:'社媒内容可以带来短期触达，但用户仍会通过搜索解决清洁场景、产品选型和使用问题。Blog、FAQ 与商品页若各自选题，容易重复回答同一问题，也难以把搜索需求导向产品信息。',decision:'以搜索意图和购买疑虑组织主题集群：Pillar Blog 建立主题入口，细分文章回答具体问题，FAQ 处理高频顾虑，商品页承接选型和购买信息；社媒反馈用于补充新选题。',plan:'先建立关键词主题与用户问题映射，再安排 Pillar、细分文章、FAQ、商品页和 EDM 的角色；为每篇内容标注目标查询、页面任务、内部链接方向和 CTA。',resources:'协同 SEO / 内容、电商、产品和数据角色；产品适用范围由产品信息确认，内容负责回答问题，商品页承担选型与购买信息，GA4 / GSC / UTM 用于观察站点表现。',execution:'规划 10 篇 Hub-and-Spoke 内容目录，围绕节日清洁、厨房深度清洁、地毯与地面护理、浴室清洁、冬季烧烤和节后整理等主题组织 Pillar / Spoke；同步设计 FAQ、商品页和 EDM 的承接关系。该目录属于内容规划，不表述为 10 篇文章均已发布。',result:'历史阶段记录自然搜索收入份额 82.46%，GSC 点击环比约 +20%。收入份额与点击变化是两种不同指标；现有资料没有逐月点击序列，也不能证明某篇规划文章带来直接增量。',review:'内容效果应按查询词、落地页、点击、收录和站点转化分别复盘；补齐具体月份和页面数据后，再判断主题集群与商业结果之间的关系。',layout:'seo',work:'seo',metrics:['organic-share','gsc']},
- {id:'amazon',no:'08',title:'Amazon 店铺 0–1 与经营优化',subtitle:'电商经营 / PPC',category:'SEO / 商业增长',kind:'special',status:'DOCUMENTED',role:'负责 3C / 家居品类 Amazon 店铺从 0 到 1 的商品页、CPC 广告、促销、库存及用户反馈运营。',scope:'任期 2022.07–2023.10；涉及 Listing、A+、Store、Posts、关键词投放、促销、库存和买家沟通。',problem:'新店铺需要同时建立商品信息、搜索流量、广告结构、促销和库存管理；只增加广告投入，无法解决页面说服力、产品信息或履约问题。',decision:'先用竞品和关键词研究确定 Listing 信息结构，再通过 CPC 获取搜索流量；结合 CTR、CVR、ACOS、销售、退款和用户反馈判断问题来自曝光、点击、页面转化还是成本。',plan:'按竞品与关键词研究、Listing / A+ / Store 建设、CPC 投放、促销与库存协同、买家反馈处理和阶段复盘推进；每个阶段分别检查流量、点击、转化、销售与利润。',resources:'协同设计、投放、商品与供应链角色；同步商品信息、广告结构、促销安排、库存节奏、账户健康和售后处理。站外社媒与 KOL / 服务商合作单独记录来源和新增粉丝。',execution:'从 0 到 1 搭建 Listing、A+、Store 与 Posts；基于搜索词和竞品结构调整 CPC，配合促销、库存与售后管理；根据 CTR、CVR、ACOS、销售反馈优化关键词和商品信息，并跟进站外合作。',result:'简历记录阶段销售额约 +10%、转化率变化约 +5%、项目利润率约 30%；站外社媒与 KOL / 服务商合作新增粉丝 800+，投诉率降低约 5%、好评率提升约 5%。',review:'销售额、转化率、利润率、投诉率和好评率分别按各自口径展示。CVR 约 +5% 未注明是相对变化还是百分点；利润率的毛利 / 净利定义未注明，不反推 ROI。',layout:'commerce',work:'commerce',metrics:['amazon-sales','amazon-cvr','amazon-profit-margin','amazon-offsite-followers','amazon-complaint-change','amazon-review-change']},
- {id:'creative',no:'09',title:'创意策略与视频内容质量管理',subtitle:'Creative / Video',category:'Creative / TVC',kind:'special',status:'CONCEPT',image:3,role:'参与品牌宣传片、产品视频和演示内容的创意策划与脚本 / 视觉审核；本专题以概念工作物展示创意管理方法。',scope:'真实经历支持品牌视频与产品演示内容协同；当前分镜和概念视觉属于能力展示样张，不是历史已投放成品。',problem:'创意内容既要吸引注意，也要让用户理解产品价值。若只有情绪或视觉冲击，没有清晰的使用场景、产品证明和下一步，素材很难服务于品牌教育或购买决策。',decision:'先明确受众、传播阶段和内容任务，再决定采用情绪叙事、功能演示、UGC 还是产品对比；每个镜头都要承担信息、情绪或证明任务，不能为了画面变化牺牲产品事实和操作连续性。',plan:'按“传播目标—核心 Hook—故事 / 演示逻辑—脚本与分镜—关键帧—版本适配—发布前审核”组织创意。为每个镜头明确人物、场景、动作、产品状态、字幕、旁白和 CTA。',resources:'协调产品、文案、设计、视频及外部制作方；产品端确认功能与操作条件，创意侧负责叙事和画面，营销侧审核受众适配、卖点准确性、品牌一致性和渠道版本。',execution:'结合品牌宣传片和产品演示经历，展示如何把卖点转为开场 Hook、场景冲突、产品行动、结果证明和 CTA；通过脚本评审、分镜检查、字幕校对及横竖屏适配控制内容质量。',result:'本页交付创意 Brief、分镜结构和内容验收方法，属于概念 / 重构工作物。没有可核验的历史播放量、完播率、点击或销售结果，不作为已投放案例。',review:'创意效果需结合素材版本、投放受众、平台、预算、播放窗口和转化目标评估。当前重点展示创意判断与审核能力，不以概念分镜推导历史广告效果。',layout:'creative',work:'storyboard',metrics:[]},
- {id:'crm',no:'10',title:'EDM 与用户生命周期规划',subtitle:'CRM / Lifecycle',category:'CRM / Lifecycle',kind:'special',status:'CONCEPT',role:'具备 EDM 选题与站点内容协同经历；本专题展示用户旅程、触发规则、频控和会员机制的规划能力。',scope:'简历支持 SEO、Pillar Blog、FAQ 与 EDM 选题协同；自动化 Flow、会员系统启用、发送结果和复购收入没有可核实证据，按概念方案呈现。',problem:'不同用户处于不同决策阶段，统一发送同一促销信息容易造成打扰、重复触达和优惠冲突。生命周期运营需要先厘清用户状态、同意记录、触发条件、发送责任与排除规则。',decision:'先建立单一的用户状态与发送责任，再设计 Welcome、Browse / Cart、Post-Purchase、Winback 等触发路径；Consent、频控、排除条件和优惠规则必须先于自动化上线确认。',plan:'按“用户状态识别—触发条件—受众与排除—内容波次—站内承接—发送 QA—结果复盘”规划；积分、VIP 和 Referral 规则分别定义获取、使用、到期、奖励与反作弊条件。',resources:'需要 Shopify 订单与客户数据、邮件平台、同意记录、产品信息、客服和运营负责人共同确认；没有核验系统权限、DNS、发送域名和 Flow 状态前，不声称已上线。',execution:'以用户旅程图、邮件主题与内容框架、触发条件、频控和会员规则展示规划方法；把社媒、Blog、FAQ 与商品页信息纳入内容一致性检查，避免邮件承诺与站点政策不一致。',result:'当前可展示生命周期旅程、邮件波次与会员机制的规划工作物；实际自动化发送、名单增长、复购率、留存率及会员收入暂无可核结果。',review:'正式上线前需完成发送域名与 DNS、Consent、名单治理、优惠冲突、频控、排除逻辑和测试发送验收。方案完成不等于系统启用，更不等于产生收入。',layout:'crm',work:'crm',metrics:['retention']},
- {id:'creator',no:'11',title:'达人合作管理与内容资产运营',subtitle:'Creator / KOL Operations',category:'Creator / KOL',kind:'special',status:'RECONSTRUCTED',role:'围绕达人资源、合作进度、内容登记、授权状态及订单 / GMV 字段组织运营管理；本案例展示后台字段与数据结构，不将系统截图等同于完整合作结果。',scope:'达人工作台为 2026-10-25 截图；红人运营工作台统计窗口自 2026-04-01 起、数据截至 2026-10-28 09:20，并于 2026-10-30 从飞书表只读导入。两个系统与时间点分别展示。',problem:'达人运营链路分散在资源名单、建联记录、寄样、内容发布、授权和订单归因中。若缺少清晰字段，资源规模、合作进度与商业结果容易混在一起，无法判断内容是否可商用或是否产生可归因订单。',decision:'将达人资源、合作阶段、内容资产、授权、专属码、订单和 GMV 分层管理；只有在达人、合作、内容与订单记录可以核验关联时，才连接分析，不把不同系统的汇总数拼成转化漏斗。',plan:'按资源入库、候选筛选、邀约、回复、合作确认、寄样、内容发布、授权、专属码、订单归因和复投拆分操作节点；每个节点明确字段、负责人、时间、状态与下一步动作。',resources:'达人工作台记录新增、建联、回复、合作确认、已发布、待付款等状态；红人运营工作台内容库记录标题、平台、发布日期、专属码、授权状态、订单与 GMV 字段。截图显示 Instagram、TikTok、YouTube、Reddit 等平台选项。',execution:'围绕达人资源库、备选达人库、合作红人库、合作管理、寄样跟踪、内容库、归因表、复投池和达人分层等模块组织管理。内容记录按平台、发布日期、专属码、授权状态、订单和 GMV 管理；授权状态区分已授权、无授权和未备注。',result:'后台截图可确认：达人工作台显示新增达人 500；红人运营工作台显示 200 条内容库视频记录、226 位窗口内活跃达人、107 条有 GMV 的合作记录。不同系统和字段分别呈现，不拼接为资源到成交漏斗。',review:'建议通过统一达人 ID、合作 ID、内容 ID、授权记录和订单 ID 核验内容到订单的关联。当前截图中播放、点赞、评论、收藏、转发数值不可辨识；GMV 金额与佣金字段不可用，不计算总 GMV、佣金、ROI 或结算收益。',layout:'creator',work:'creator',metrics:['creator-new','creator-videos','creator-active','creator-gmv-collabs']}
- ],
- caseNarratives:{
-  "gtm": {
-    "headline": "从用户购买顾虑出发，建立产品卖点与上市内容的统一表达。",
-    "summary": "将用户研究、产品定位、可信证明、渠道内容和上市协同连成一条工作链，让参数、用户利益与传播表达保持一致。",
-    "stages": [
-      {
-        "title": "识别购买任务",
-        "detail": "整理 Review / VOC、竞品功能与价格、站内搜索及社群问题，归纳目标人群、使用场景和购买顾虑。"
-      },
-      {
-        "title": "组织卖点与证明",
-        "detail": "按 FABA 建立特征、优势、用户利益与场景层级；用 FABE / RTB 匹配证明，并由产品端核验参数和适用边界。"
-      },
-      {
-        "title": "推进上市交付",
-        "detail": "围绕预热、上市、持续推广拆解 KV、演示视频、FAQ、商品页和 Creator Brief，明确输入、审核与发布节点。"
-      },
-      {
-        "title": "检视阶段表现",
-        "detail": "参与 4 条核心产品线上市传播；简历记录相关内容上线期间销量约 +3%，但未提供对照期与归因数据。"
-      }
-    ],
-    "evidenceGroups": [
-      {
-        "title": "产品上市阶段表现",
-        "description": "简历记录相关产品内容上线期间销量约 +3%。该数据作为阶段结果呈现，不推断单一素材或单一渠道贡献。",
-        "metrics": [
-          "product-sales-stage"
-        ]
-      }
-    ],
-    "evidenceNote": "约 +3% 是简历记录的产品上线阶段销量变化；产品范围、对照期和归因方式未注明，不反推增量销量或营销 ROI。"
+  statuses: {
+    VERIFIED: "原始平台记录",
+    DOCUMENTED: "历史资料记录",
+    RECONSTRUCTED: "经历重构",
+    CONCEPT: "概念方案",
+    PENDING: "口径待确认",
   },
-  "social": {
-    "headline": "把 Facebook、Instagram 与社群放进同一套内容经营机制，而不是重复发帖。",
-    "summary": "按平台角色配置内容任务，以季度主题、月度日历、周度审核和月度复盘管理内容交付，并将评论与社群问题回流到选题和 FAQ。",
-    "stages": [
-      {
-        "title": "明确平台任务",
-        "detail": "Facebook 承担品牌信息与链接导流；Instagram 承接产品视觉演示和活动内容；Facebook Group 用于用户交流与问题收集。"
-      },
-      {
-        "title": "建立内容支柱",
-        "detail": "围绕产品演示、家庭清洁场景、教程与 FAQ、互动活动和 UGC 组织内容，避免不同平台简单复制同一条素材。"
-      },
-      {
-        "title": "组织团队交付",
-        "detail": "季度确定传播主题，月度拆解内容日历；安排选题与任务分工，审核脚本、视觉和产品事实，并协调产品、设计、视频、电商及 Creator。"
-      },
-      {
-        "title": "回看传播结果",
-        "detail": "分别观察展示、互动、访问、链接点击和关注变化；将平台反馈用于调整 CTA、FAQ 与下一轮选题，不把不同统计周期合并。"
-      }
-    ],
-    "evidenceGroups": [
-      {
-        "title": "Meta 2025 年阶段汇总",
-        "description": "反映该阶段的内容展示与互动规模；与 Facebook Page 后台截图数据分开展示。",
-        "metrics": [
-          "impressions",
-          "engagements"
-        ]
-      },
-      {
-        "title": "Facebook Page Insights 后台截图",
-        "description": "平台截图记录的浏览、内容互动、链接点击、访问和关注次数；账号名称未显示，完整统计周期未显示。",
-        "metrics": [
-          "fb-views",
-          "fb-content-interactions",
-          "fb-link-clicks",
-          "fb-visits",
-          "fb-follows"
-        ]
-      },
-      {
-        "title": "其他平台与历史阶段变化",
-        "description": "简历及历史项目记录的 Facebook 覆盖、链接点击和 Instagram 活动表现；比较窗口与账号范围未完整保留。",
-        "metrics": [
-          "engagement-change",
-          "fb-reach",
-          "fb-link-click-change",
-          "ig-event-engagement-change",
-          "ig-follower-change"
-        ]
-      }
-    ],
-    "evidenceNote": "三组数据的统计周期、账号范围和平台字段不一致。可分别观察展示规模、互动、访问、点击和关注变化，但不能合并成统一的 Meta 总量，也不能据此证明某一内容支柱带来的增量。"
+  domains: {
+    social: "社媒传播",
+    community: "社群与用户参与",
+    search: "搜索增长",
+    b2b: "B2B 市场",
+    commerce: "电商经营",
+    lifecycle: "用户关系",
   },
-  "community": {
-    "headline": "把社群从成员规模管理，推进到参与、反馈与内容共创。",
-    "summary": "以教程、投票、清洁挑战和 UGC 投稿建立参与入口，再把高频问题整理为 FAQ 与下一轮内容选题；成员规模、查看人数和发帖评论人数分别观察。",
-    "stages": [
-      {
-        "title": "设计参与入口",
-        "detail": "围绕真实清洁问题组织教程、投票、清洁挑战和 UGC 投稿，让成员知道可以分享什么、如何参与。"
+  metrics: [
+    {
+      id: "impressions",
+      domain: "social",
+      label: "曝光",
+      value: 965000,
+      display: "96.5万",
+      unit: "次",
+      platform: "Meta",
+      window: "2025 年阶段汇总（简历记录）",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史项目汇总",
+      definition:
+        "Meta 统计的内容展示次数，表示内容被展示的规模，不代表去重触达人数。",
+      limits:
+        "账户范围与平台字段未完整保留；不将曝光解释为品牌提及或品牌声量。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "engagements",
+      domain: "social",
+      label: "互动",
+      value: 37000,
+      display: "3.7万",
+      unit: "次",
+      platform: "Meta",
+      window: "2025 年阶段汇总（简历记录）",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史项目汇总",
+      definition:
+        "Meta 统计的内容互动次数；具体包含哪些互动动作，以当期平台报表字段为准。",
+      limits:
+        "互动次数不等于互动人数、询盘或成交；与 Facebook 页面截图数据分开展示。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "visits",
+      domain: "social",
+      label: "访问",
+      value: 31000,
+      display: "31K",
+      unit: "次",
+      platform: "Meta（字段待确认）",
+      window: "2025 年阶段汇总（简历记录）",
+      status: "PENDING",
+      source: "历史项目阶段数据汇总",
+      definition:
+        "历史汇总中的访问次数；目前无法确认对应主页访问、网站访问或其他平台字段。",
+      limits: "不换算为网站会话或独立访客。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "follows",
+      domain: "social",
+      label: "关注",
+      value: 5795,
+      display: "5,795",
+      unit: "待核",
+      platform: "Meta（字段待确认）",
+      window: "2025 年阶段汇总（简历记录）",
+      status: "PENDING",
+      source: "历史项目阶段数据汇总",
+      definition:
+        "历史汇总中的关注数；目前无法确认是新增关注、净增关注还是账号存量。",
+      limits: "不与 Facebook 账号规模 8K+ 或其他平台关注数据合并。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "fb-views",
+      domain: "social",
+      label: "Facebook 页面浏览量",
+      value: 1382000,
+      display: "138.2万",
+      unit: "次",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "DOCUMENTED",
+      source: "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      definition:
+        "后台显示的“浏览量”汇总值，沿用平台原字段；不等同于曝光、覆盖人数或独立访客。",
+      limits:
+        "截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "fb-viewers",
+      domain: "social",
+      label: "Facebook 浏览人数",
+      value: null,
+      display: "--",
+      unit: "未提供",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "PENDING",
+      source:
+        "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）；截图数值显示“--”。",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      definition:
+        "后台“浏览人数”字段在截图中显示为“--”，没有可展示的有效数值。",
+      limits: "当前截图没有提供该项数值，因此不以 0 代替。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+    },
+    {
+      id: "fb-content-interactions",
+      domain: "social",
+      label: "Facebook 内容互动次数",
+      value: 53000,
+      display: "5.3万",
+      unit: "次",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "DOCUMENTED",
+      source: "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      changeDisplay: "↑ 1,358.3%",
+      changeNote: "截图显示 +1,358.3%；未标注比较周期，不解释为同比或环比。",
+      definition:
+        "Facebook 页面分析后台显示的“内容互动次数”汇总值，沿用平台原字段，表示互动次数，不代表互动人数。",
+      limits:
+        "截图未显示完整比较周期，因此不计算同比或环比；与 Meta 2025 年阶段互动数据分开展示。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "fb-link-clicks",
+      domain: "social",
+      label: "Facebook 链接点击量",
+      value: 7364,
+      display: "7,364",
+      unit: "次",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "DOCUMENTED",
+      source: "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      changeDisplay: "↑ 1.7万%",
+      changeNote: "截图显示 +1.7 万%；未标注比较周期，不解释为同比或环比。",
+      definition:
+        "后台显示的链接点击次数。截图另显示 3 月 6 日单日点击 30 次，该单日记录不代表全期趋势。",
+      limits:
+        "截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "fb-visits",
+      domain: "social",
+      label: "Facebook 页面访问量",
+      value: 54000,
+      display: "5.4万",
+      unit: "次",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "DOCUMENTED",
+      source: "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      changeDisplay: "↑ 1,517.8%",
+      changeNote: "截图显示 +1,517.8%；未标注比较周期，不解释为同比或环比。",
+      definition: "后台显示的“访问量”汇总值，沿用平台原字段。",
+      limits:
+        "截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "fb-follows",
+      domain: "social",
+      label: "Facebook 关注次数",
+      value: 10000,
+      display: "1万",
+      unit: "次",
+      platform: "Facebook 页面分析",
+      window: "截图未显示完整日期范围。",
+      status: "DOCUMENTED",
+      source: "Facebook 页面分析后台截图记录（账号名称未显示，原图不公开）",
+      sourceId: "SRC-FB-PAGE-SCREENSHOT",
+      sourceType: "screenshot",
+      changeDisplay: "↑ 2,129.2%",
+      changeNote: "截图显示 +2,129.2%；未标注比较周期，不解释为同比或环比。",
+      definition: "后台显示的“关注次数”累计值，保留平台原字段。",
+      limits:
+        "截图未显示完整比较周期，因此不计算同比或环比；与其他统计周期的 Meta 数据分开展示。",
+      caseId: "social",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "er",
+      domain: "social",
+      label: "互动 / 曝光（暂算）",
+      value: 0.0383419689119171,
+      display: "≈3.8%",
+      unit: "比值",
+      platform: "Meta（口径待核）",
+      window: "2025 年阶段汇总（本人提供窗口）",
+      status: "PENDING",
+      source: "按历史汇总中的互动 3.7 万 ÷ 曝光 96.5 万计算",
+      definition: "以 3.7 万次互动除以 96.5 万次曝光，得到约 3.8%。",
+      limits:
+        "只有账号范围和统计窗口一致时，该比值才可作为正式互动率；当前仅作估算。",
+      caseId: "social",
+      sourceId: "DERIVED-ER",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: {
+        metricId: "impressions",
+        value: 965000,
+        matchedScopeVerified: false,
       },
-      {
-        "title": "管理活动过程",
-        "detail": "明确活动主题、参与规则、投稿格式和审核条件；维护讨论与答疑，核对产品信息和展示结果。"
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "engagement-change",
+      domain: "social",
+      label: "互动变化",
+      value: 122.5,
+      display: "+122.5%",
+      unit: "%",
+      platform: "Meta",
+      window: "独立比较阶段；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "历史项目阶段数据汇总",
+      definition: "历史资料记录的 Meta 互动变化约 +122.5%。",
+      limits:
+        "比较期和两期原值未注明；不解释为月增长率，也不与 2025 年汇总总量绘制同一趋势。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "fb-reach",
+      domain: "social",
+      label: "Facebook 覆盖变化",
+      value: 300,
+      display: "300%+",
+      unit: "%",
+      platform: "Facebook",
+      window: "独立阶段；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史项目汇总",
+      definition:
+        "Facebook 覆盖人数的阶段变化，指内容触达的用户规模，不是曝光或关注增长。",
+      limits: "历史记录为 300%+；具体起止和两期人数未注明。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "group",
+      domain: "community",
+      label: "Group 阶段新增",
+      value: 227,
+      display: "+227",
+      unit: "人",
+      platform: "Facebook Group",
+      window: "独立阶段；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史项目汇总",
+      definition: "Facebook Group 某阶段新增成员 227 人。",
+      limits: "与约 1K/月的另一项记录分开展示，不相加或外推。",
+      caseId: "community",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "fb-size",
+      domain: "social",
+      label: "Facebook 账号规模",
+      value: 8000,
+      display: "0→8K+",
+      unit: "账号指标待核",
+      platform: "Facebook Page（字段待确认）",
+      window: "起止日期未注明",
+      status: "PENDING",
+      source: "历史项目阶段记录",
+      definition:
+        "Facebook 账号规模由 0 建设至 8K+；具体对应粉丝、关注者或其他账号字段尚未确认。",
+      limits: "不计算增长率，也不与 5,795 关注或截图中的 1 万关注次数合并。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "group-month",
+      domain: "community",
+      label: "Group 月新增",
+      value: 1000,
+      display: "≈1K/月",
+      unit: "人 / 月",
+      platform: "Facebook Group",
+      window: "用户提供的阶段描述；具体月份未注明",
+      status: "PENDING",
+      source: "用户提供的历史社群运营记录",
+      definition:
+        "历史记录提及社群月新增约 1,000 人；尚未确认是单月数值还是多月平均。",
+      limits: "新增或净增口径未注明；与阶段新增 227 人分开展示。",
+      caseId: "community",
+      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "group-members",
+      domain: "community",
+      label: "Facebook Group 成员数",
+      value: 4009,
+      display: "4,009",
+      unit: "名成员",
+      platform: "Facebook Group Insights",
+      window:
+        "成员数为页面快照，采集日期未注明；分析范围为 2025/11/02–2026/09/30。",
+      status: "DOCUMENTED",
+      source: "Facebook Group Insights 后台截图记录（社群名称已匿名化）",
+      sourceId: "SRC-FB-GROUP-SCREENSHOT",
+      sourceType: "screenshot",
+      definition: "截图时社群页面显示 4,009 名成员，代表当时的成员规模。",
+      limits: "不是该统计期间的新增人数；与历史 +227 和约 1K/月记录分开展示。",
+      caseId: "community",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "group-posters",
+      domain: "community",
+      label: "发帖和评论人数",
+      value: 146,
+      display: "146",
+      unit: "平台显示人数",
+      platform: "Facebook Group Insights",
+      window: "2025/11/02–2026/09/30（截图所选范围）",
+      status: "DOCUMENTED",
+      source: "Facebook Group Insights 后台截图记录（社群名称已匿名化）",
+      sourceId: "SRC-FB-GROUP-SCREENSHOT",
+      sourceType: "screenshot",
+      definition: "平台原字段为“146 人发帖和评论”，按截图保留原名称。",
+      limits: "不改写为发帖次数或活跃率；人数去重规则以平台定义为准。",
+      caseId: "community",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "group-viewers",
+      domain: "community",
+      label: "社群查看人数",
+      value: 34387,
+      display: "34,387",
+      unit: "平台显示人数",
+      platform: "Facebook Group Insights",
+      window: "2025/11/02–2026/09/30（截图所选范围）",
+      status: "DOCUMENTED",
+      source: "Facebook Group Insights 后台截图记录（社群名称已匿名化）",
+      sourceId: "SRC-FB-GROUP-SCREENSHOT",
+      sourceType: "screenshot",
+      definition: "平台原字段为“34,387 人查看”，按截图保留原名称。",
+      limits: "不改写为内容曝光或独立访客，也不与 Facebook 页面浏览量相加。",
+      caseId: "community",
+      fieldVerification: "PENDING",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+    },
+    {
+      id: "organic-share",
+      domain: "search",
+      label: "自然搜索收入份额",
+      value: 82.46,
+      display: "82.46%",
+      unit: "%",
+      platform: "站点渠道报告，字段待核",
+      window: "历史阶段；具体月份未注明",
+      status: "DOCUMENTED",
+      source: "历史站点渠道数据汇总",
+      definition: "自然搜索渠道收入占报告总收入的 82.46%，反映渠道收入结构。",
+      limits:
+        "统计窗口、归因模型和收入定义未注明；其他渠道 17.54% 仅为 100% 减去 82.46% 的算术补数。",
+      caseId: "seo",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: {
+        label: "报告总收入",
+        value: null,
       },
-      {
-        "title": "治理内容授权",
-        "detail": "将活动参与与品牌商业使用授权分开处理；确认使用平台、期限、范围、署名和撤回方式后再使用投稿。"
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "gsc",
+      domain: "search",
+      label: "搜索点击环比",
+      value: 20,
+      display: "≈+20%",
+      unit: "%",
+      platform: "Google Search Console",
+      window: "两期月份未注明",
+      status: "DOCUMENTED",
+      source: "历史 Google Search Console 阶段数据汇总",
+      definition: "历史资料记录 Google Search Console 搜索点击环比约 +20%。",
+      limits: "两期点击原值和月份未提供，不绘制折线或反推点击量。",
+      caseId: "seo",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "b2b-reach",
+      domain: "b2b",
+      label: "月均触达潜客",
+      value: 100,
+      display: "100+",
+      unit: "潜客 / 月",
+      platform: "B2B 客户拓展记录",
+      window: "2023.11–2025.03 任期内；月度样本月份未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史 B2B 业务汇总",
+      definition: "海外 B2B 每月触达潜在客户 100+，不等同于有效询盘。",
+      limits: "没有逐月记录和去重口径；不与线索转化率拼接为完整漏斗。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "b2b-sales",
+      domain: "b2b",
+      label: "月度成交额",
+      value: 300000,
+      display: "≈30万",
+      unit: "元 / 月",
+      platform: "B2B 业务记录",
+      window: "任期内月度记录；代表月份未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及历史 B2B 业务汇总",
+      definition: "海外 B2B 月度成交额约人民币 30 万元。",
+      limits: "成交按签单、回款还是确认收入统计尚未注明；不据此推算全年金额。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-sales",
+      domain: "commerce",
+      label: "阶段销售额变化",
+      value: 10,
+      display: "≈+10%",
+      unit: "%",
+      platform: "Amazon",
+      window: "2022.07–2023.10 任期内阶段；具体比较期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及 Amazon 经营汇总",
+      definition: "Amazon 阶段销售额变化约 +10%。",
+      limits: "缺少两期销售原值和比较窗口；不推断为 CPC 广告的单独贡献。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-cvr",
+      domain: "commerce",
+      label: "阶段转化率变化",
+      value: 5,
+      display: "≈+5%",
+      unit: "相对百分比 / 百分点待核",
+      platform: "Amazon",
+      window: "2022.07–2023.10 任期内阶段；具体比较期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历及 Amazon 经营汇总",
+      definition: "Amazon 阶段转化率变化约 +5%。",
+      limits: "未注明是相对变化还是百分点，不反推转化率原值。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "retention",
+      domain: "lifecycle",
+      label: "复购 / 留存结果",
+      value: null,
+      display: "待补充",
+      unit: "未提供",
+      platform: "CRM / EDM",
+      window: "暂无邮件发送与复购统计周期",
+      status: "PENDING",
+      source: "EDM / CRM 生命周期规划工作物",
+      definition:
+        "该项用于说明 Welcome、弃购、购后教育和召回等生命周期规划；没有实际复购数值。",
+      limits: "不代表自动化流程已启用、邮件已发送或会员收入已经产生。",
+      caseId: "crm",
+      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "PENDING",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "product-sales-stage",
+      domain: "commerce",
+      label: "产品上市阶段销量变化",
+      value: 3,
+      display: "≈+3%",
+      unit: "%",
+      platform: "相关品牌及产品内容上线期间",
+      window: "相关内容上线期间；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 2 页“新品定位、卖点可视化与上市策划”",
+      definition:
+        "简历记录相关产品内容上线期间，产品销量出现约 +3% 的阶段变化。",
+      limits:
+        "产品范围、对照期和归因方式未注明；不解释为整体品牌销量增长或单一素材贡献。",
+      caseId: "gtm",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "fb-link-click-change",
+      domain: "social",
+      label: "Facebook 链接点击变化",
+      value: 200,
+      display: "近+200%",
+      unit: "%（约值）",
+      platform: "Facebook",
+      window: "历史阶段；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 2 页“海外社媒矩阵与社群增长机制”",
+      definition: "简历记录 Facebook 链接点击增长近 +200%。",
+      limits: "比较窗口和账号范围未注明；与截图中的 7,364 次点击分开展示。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "ig-event-engagement-change",
+      domain: "social",
+      label: "Instagram 活动期互动变化",
+      value: 1870.9,
+      display: "+1,870.9%",
+      unit: "%（平台变化口径）",
+      platform: "Instagram",
+      window: "独立活动阶段；具体日期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1–2 页 Instagram 活动表现记录",
+      definition: "简历记录 Instagram 活动期互动增长 +1,870.9%。",
+      limits: "活动日期和比较基期未注明；不与 Meta 年度互动合并。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "ig-follower-change",
+      domain: "social",
+      label: "Instagram 关注变化",
+      value: 880,
+      display: "约+880%",
+      unit: "%（约值）",
+      platform: "Instagram",
+      window: "历史阶段；具体起止未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 2 页“海外社媒矩阵与社群增长机制”",
+      definition: "简历记录 Instagram 关注增长约 +880%。",
+      limits:
+        "关注字段和比较基期未注明；不与 Facebook 关注次数或粉丝规模合并。",
+      caseId: "social",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "b2b-email-open",
+      domain: "b2b",
+      label: "邮件打开率",
+      value: null,
+      range: [10, 15],
+      display: "10%–15%",
+      unit: "邮件打开率（%）",
+      platform: "Email / EDM",
+      window: "2023.11–2025.03 任期内；具体发送批次未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“海外客户拓展策略”",
+      definition: "海外客户拓展邮件打开率为 10%–15%。",
+      limits: "发送批次、样本量和平台计算口径未注明；不据此推算线索或成交。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "b2b-lead-conversion",
+      domain: "b2b",
+      label: "线索转化率",
+      value: 3,
+      display: "约3%",
+      unit: "%（约值）",
+      platform: "B2B 客户拓展",
+      window: "任期内阶段；具体月份未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1–2 页“海外客户拓展策略 / B2B 获客”",
+      definition: "海外 B2B 线索转化约 3%。",
+      limits:
+        "线索定义、转化阶段和分母未注明；不与月均触达 100+ 直接组成漏斗。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "linkedin-follower-change",
+      domain: "b2b",
+      label: "LinkedIn 月粉丝增长",
+      value: 35,
+      display: "约+35%/月",
+      unit: "% / 月（约值）",
+      platform: "LinkedIn",
+      window: "任期内月度阶段；具体月份未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“展会与市场营销”",
+      definition: "LinkedIn 粉丝月增长约 +35%。",
+      limits: "具体月份、基期和粉丝字段未注明；不外推为全任期累计增长。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "fb-follower-scale",
+      domain: "b2b",
+      label: "Facebook 粉丝规模变化",
+      value: 1900,
+      comparisonValues: {
+        start: "400+",
+        end: "1,900+",
       },
-      {
-        "title": "回流用户反馈",
-        "detail": "把高频问题沉淀为 FAQ 和内容选题，将使用场景与产品疑问反馈给相关团队。"
-      }
-    ],
-    "evidenceGroups": [
-      {
-        "title": "阶段成员新增",
-        "description": "历史简历记录的一个阶段新增人数；具体统计起止时间未注明。",
-        "metrics": [
-          "group"
-        ]
-      },
-      {
-        "title": "成员规模快照",
-        "description": "后台截图时显示的社群成员总数，不代表截图所选期间的新增人数。",
-        "metrics": [
-          "group-members"
-        ]
-      },
-      {
-        "title": "所选期间的参与与查看",
-        "description": "后台原字段分别记录发帖和评论人数、查看人数；两者不是发帖次数，也不直接构成活跃率。",
-        "metrics": [
-          "group-posters",
-          "group-viewers"
-        ]
-      }
-    ],
-    "evidenceNote": "+227 是独立阶段新增记录；4,009 是成员规模快照；146 与 34,387 是 2025/11/02–2026/09/30 所选范围内的不同平台字段。它们反映不同维度，不能相加或换算为社群活跃率。"
+      display: "400+ → 1,900+",
+      unit: "粉丝规模（起止值）",
+      platform: "Facebook",
+      window: "2023.11–2025.03 任期内阶段；起止日期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“展会与市场营销”",
+      definition: "Facebook 粉丝规模由 400+ 增至 1,900+。",
+      limits: "账号范围和采样日期未注明；不计算净增量或增长率。",
+      caseId: "b2b",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-profit-margin",
+      domain: "commerce",
+      label: "项目利润率",
+      value: 30,
+      display: "约30%",
+      unit: "%",
+      platform: "Amazon 店铺经营",
+      window: "2022.07–2023.10 任期内阶段；核算周期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“增长成果与用户运营”",
+      definition: "Amazon 项目利润率约 30%。",
+      limits: "毛利或净利定义及成本范围未注明；不与 ROAS 或销售额增长混同。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-offsite-followers",
+      domain: "commerce",
+      label: "站外新增粉丝",
+      value: 800,
+      display: "800+",
+      unit: "累计新增粉丝",
+      platform: "站外社媒 / KOL",
+      window: "2022.07–2023.10 任期内阶段；具体活动周期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“增长成果与用户运营”",
+      definition: "站外社媒与 KOL / 服务商合作累计新增粉丝 800+。",
+      limits: "平台构成和去重方式未注明；不归因于单一合作渠道。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-complaint-change",
+      domain: "commerce",
+      label: "投诉率变化",
+      value: -5,
+      display: "约-5%",
+      unit: "变化（相对比例 / 百分点待核）",
+      platform: "Amazon",
+      window: "2022.07–2023.10 任期内阶段；比较期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“增长成果与用户运营”",
+      definition: "Amazon 投诉率阶段下降约 5%。",
+      limits: "投诉率分母及相对变化 / 百分点口径未注明；不反推投诉数量。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+    {
+      id: "amazon-review-change",
+      domain: "commerce",
+      label: "好评率变化",
+      value: 5,
+      display: "约+5%",
+      unit: "变化（相对比例 / 百分点待核）",
+      platform: "Amazon",
+      window: "2022.07–2023.10 任期内阶段；比较期未注明",
+      status: "DOCUMENTED",
+      source: "2026-10-28 简历第 1 页“增长成果与用户运营”",
+      definition: "Amazon 好评率阶段提升约 5%。",
+      limits: "评价样本和相对变化 / 百分点口径未注明；不推算评论数量。",
+      caseId: "amazon",
+      sourceId: "SRC-HISTORICAL-DOCUMENTED",
+      accountScope: null,
+      windowStart: null,
+      windowEnd: null,
+      comparisonWindow: null,
+      denominator: null,
+      evidenceStatus: "DOCUMENTED",
+      fieldVerification: "PENDING",
+    },
+  ],
+  cases: [
+    {
+      id: "gtm",
+      no: "01",
+      title: "四条核心产品线产品营销与上市",
+      subtitle: "产品营销 / 新品上市",
+      category: "新品上市与产品营销",
+      kind: "main",
+      status: "RECONSTRUCTED",
+      image: 1,
+      role: "负责品牌社媒传播策略与内容团队交付；参与 4 条核心产品线的用户研究、差异化定位、卖点分层及上市传播协同。",
+      scope:
+        "覆盖北美清洁家居消费品 4 条核心产品线。本人承担市场与用户信息整理、产品价值表达、传播规划和跨部门交付；产品研发、定价及整体经营决策不写作个人独立负责。",
+      problem:
+        "产品信息往往以参数和功能组织，但消费者的判断来自具体任务：是否适合自己的家庭场景、是否容易操作、能否解决清洁问题，以及产品主张是否可信。如果这些问题没有被统一回答，社媒、商品页、Creator 和 PR 就容易各说各话。",
+      decision:
+        "先从 Review / VOC、竞品功能与价格、站内搜索和社群高频问题识别用户任务与购买异议，再按 FABA 建立“特征—优势—用户利益—使用场景”的信息层级，并用 FABE / RTB 为关键主张匹配证明。产品事实由产品端确认，营销负责把已确认的信息转成消费者能理解、能验证、能复用的表达。",
+      plan: "按“研究与定位—卖点与证据—预热—上市—持续推广”拆分工作包。每阶段明确目标人群、核心信息、渠道角色、素材清单、CTA、负责人、审核节点与复盘指标，避免先做素材、后补产品逻辑。",
+      resources:
+        "协同产品 / 研发确认参数与适用边界，联动设计、视频、电商、PR、Creator / KOL 及外部服务商。产品事实、创意表达、页面承接和发布排期分别明确输入与审核责任，减少反复改稿和跨渠道口径冲突。",
+      execution:
+        "将研究发现沉淀为目标人群与场景清单、购买顾虑、核心卖点、FAQ、演示动作和 Creator Brief；再把同一套产品信息适配为社媒选题、KV、产品演示视频、活动页与商品页内容。重点审核产品结构、参数、操作条件、画面表达和用户利益是否一致。",
+      result:
+        "简历记录参与 4 条核心产品线的产品营销与上市传播；相关品牌及产品内容上线期间，产品销量录得约 +3% 的阶段表现。该数据按简历原口径呈现，不据此推断单一素材贡献或整体品牌销量增长。",
+      review:
+        "若补齐产品线范围、上线日期、对照期、销量原值及同期活动信息，可进一步拆解上市前后表现。现阶段保留简历原始口径，不计算增量销量或营销 ROI。",
+      layout: "launch",
+      work: "launch",
+      metrics: ["product-sales-stage"],
+    },
+    {
+      id: "social",
+      no: "02",
+      title: "海外社媒矩阵搭建与增长运营",
+      subtitle: "社媒策略 / 内容团队管理",
+      category: "海外社媒增长",
+      kind: "main",
+      status: "DOCUMENTED",
+      image: 2,
+      role: "担任社媒负责人 / 管理组长，负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略和团队交付；制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本 / 视觉审核和周 / 月复盘。",
+      scope:
+        "任期 2025.04–2026.09；主要平台为 Facebook、Instagram、Facebook Group，站点承接为 Shopify。本人负责社媒内容与小组管理；未提供团队人数和预算权限，不作推定。",
+      problem:
+        "多个平台承担不同任务：Facebook 负责品牌信息和链接导流，Instagram 承接产品视觉演示与活动内容，Group 用于用户交流。若只按发帖数量排期，内容容易重复，用户问题也难回流到产品信息和下一轮选题。",
+      decision:
+        "按平台角色建立产品演示、清洁场景、教程与 FAQ、互动活动、UGC 等内容支柱；季度主题确定重点，月度日历安排平台内容，周度审核制作质量。",
+      plan: "每季度确定主推产品、用户问题与内容目标；月度按平台安排选题、内容形式、负责人、素材需求、CTA、站点承接和发布时间；每周跟进脚本、设计、视频、产品事实与发布状态。",
+      resources:
+        "协调社媒小组、产品、设计、视频、电商和 Creator / KOL；每条内容明确产品信息提供人、制作人、审核人和发布人，UGC 另行确认授权。",
+      execution:
+        "推动 Facebook / Instagram 内容体系从 0 到 1；围绕产品演示、家庭清洁场景、教程、FAQ、互动挑战和 Creator 内容组织素材；将评论与社群高频问题整理为选题和 FAQ，并根据链接点击与站点承接调整 CTA。",
+      result:
+        "2025 年 Meta 汇总曝光 96.5 万、互动 3.7 万；另有 Facebook 页面分析截图记录浏览量 138.2 万、内容互动次数 5.3 万、链接点击 7,364、访问量 5.4 万、关注次数 1 万。两组统计周期与账号范围未对齐，分别展示；简历另记录 Facebook 覆盖增长 300%+、链接点击近 +200%，Instagram 活动期互动 +1,870.9%、关注约 +880%。",
+      review:
+        "复盘按平台分开看：曝光 / 浏览用于观察内容展示规模，互动用于观察内容参与，链接点击用于观察导流动作；Group 的成员规模、查看人数和发帖评论人数分开解读。没有连续日期数据时，不用阶段汇总推算月度趋势。",
+      layout: "social",
+      work: "calendar",
+      metrics: [
+        "impressions",
+        "engagements",
+        "engagement-change",
+        "fb-reach",
+        "fb-link-click-change",
+        "ig-event-engagement-change",
+        "ig-follower-change",
+        "fb-views",
+        "fb-content-interactions",
+        "fb-link-clicks",
+        "fb-visits",
+        "fb-follows",
+      ],
+    },
+    {
+      id: "community",
+      no: "03",
+      title: "美国 Facebook Group 社群经营",
+      subtitle: "社群运营 / 用户参与",
+      category: "海外社媒增长",
+      kind: "main",
+      status: "RECONSTRUCTED",
+      role: "负责美国 Facebook Group 的主题规划、教程与投票、清洁挑战、UGC 投稿和用户问题整理；协调社媒内容与活动素材。",
+      scope:
+        "对象为美国 Facebook Group。简历记录某阶段新增 227 人；后台截图记录 4,009 名成员、146 人发帖和评论、34,387 人查看。截图所选范围为 2025/11/02–2026/09/30，成员快照日期未注明。",
+      problem:
+        "成员数量不能说明社群是否真正参与。成员规模、查看人数和发帖评论人数是不同维度；活动如果没有明确参与任务和反馈回路，容易变成单向促销。",
+      decision:
+        "以教程、投票、清洁挑战和 UGC 投稿建立参与入口；将高频问题回流到社媒选题和 FAQ；投稿参与与品牌商业使用授权分开处理。",
+      plan: "活动前明确主题、参与规则、投稿格式、审核条件和激励；活动期间维护讨论和答疑；活动后整理用户问题、可用 UGC 和下一轮内容建议。",
+      resources:
+        "协同社媒、设计和产品信息负责人；用户照片、视频和评价在二次使用前确认授权平台、范围、期限与署名。",
+      execution:
+        "围绕清洁教程、投票、清洁挑战和 UGC 分享组织互动；将成员提问整理为 FAQ，将高频使用场景反馈给内容选题和产品信息。",
+      result:
+        "历史简历记录一个阶段 Group 新增 227 人。后台截图另记录成员数 4,009、所选范围内发帖和评论人数 146、查看人数 34,387；这些数据反映不同维度，不能合并为增长或活跃率。",
+      review:
+        "持续运营应分别追踪新增成员、活跃参与、查看、UGC 授权和问题反馈；当前只有阶段新增与后台截图汇总，不推算月度成员增长线。",
+      layout: "community",
+      work: "community",
+      metrics: ["group", "group-members", "group-posters", "group-viewers"],
+    },
+    {
+      id: "brand",
+      no: "04",
+      title: "品牌资产建设与跨渠道整合传播",
+      subtitle: "品牌策略 / IMC",
+      category: "品牌战略与 IMC",
+      kind: "main",
+      status: "RECONSTRUCTED",
+      role: "参与品牌故事、VI / Logo / IP、品牌画册、宣传片和产品卖点可视化；协同 PR、Creator、展会及自有渠道的传播素材交付。",
+      scope:
+        "基于北美消费品牌传播经历整理。本人参与品牌内容与传播素材协同；Brand House、Message House、触点矩阵和 PR 工作清单为匿名重构工作物，不代表独立拥有全部品牌预算或媒体采购决策。",
+      problem:
+        "品牌故事、产品卖点和渠道素材由不同团队制作时，容易出现主张不一致、证明不足和素材重复制作；PR 与 Creator 也需要可引用的产品事实和明确的使用范围。",
+      decision:
+        "先统一品牌核心价值、用户利益、产品事实和可信证明，再按 Social、PR / Creator、官网、商品页和展会物料分配内容任务；不同渠道可以采用不同表达，但不能改变同一项产品事实。",
+      plan: "整理品牌主张、核心信息、产品证明、视觉规范和素材版本；为 Social、PR、Creator、官网与线下触点分别制定内容 Brief、交付节点和审核要求。",
+      resources:
+        "协同产品、设计、视频、电商、PR / Creator 与外部合作方；产品端确认参数和功能，创意端制作画面与故事，营销侧审核受众适配、信息层级、授权和跨渠道一致性。",
+      execution:
+        "参与品牌故事、VI、Logo / IP、品牌画册、宣传片及产品演示内容建设；整理卖点、FAQ、媒体资料和 Creator Brief，审核脚本、视觉动线、产品事实与素材使用范围，支持社媒、PR、展会及独立站内容。",
+      result:
+        "可确认的交付包括品牌内容资产、产品传播素材、Creator Brief 和跨渠道协同。当前没有可核验的媒体刊发数、Earned Reach 或 Share of Voice，因此不把社媒曝光写成 PR 成果。",
+      review:
+        "品牌传播应分别追踪品牌词搜索、媒体提及、Creator 发布、站内访问和有效点击；缺少媒体与搜索记录时，只展示已完成的内容资产和协作范围。",
+      layout: "brand",
+      work: "message",
+      metrics: [],
+    },
+    {
+      id: "operations",
+      no: "05",
+      title: "社媒团队管理与营销项目交付",
+      subtitle: "团队管理 / 项目治理",
+      category: "整合营销项目管理",
+      kind: "main",
+      status: "RECONSTRUCTED",
+      role: "负责社媒小组任务安排、季度与月度内容排期、创意评审、脚本 / 视觉审核和周 / 月复盘；协调产品、设计、视频、电商、PR / Creator 及外部供应商。",
+      scope:
+        "管理范围集中于社媒小组的任务组织、内容质量和跨部门项目交付。未提供团队人数、直接汇报人数和预算审批权限，不作推定。",
+      problem:
+        "一个 Campaign 同时依赖产品信息、脚本、设计、视频、商品页、Creator 素材和发布时间。若没有明确输入、责任人和验收条件，问题往往在制作后段才暴露，导致版本返工、发布延期或产品信息不一致。",
+      decision:
+        "把项目管理拆成目标、工作包、Owner、依赖、审核和发布 Gate；先确认产品事实、素材权限与页面承接，再进入设计和制作。每个交付物都有负责人、审核人和可检查的完成标准。",
+      plan: "季度确定主题与优先级；月度安排内容和资源；项目 Brief 写明受众、主张、渠道、素材、CTA 和交付日期；周度跟进脚本、设计、视频与产品审核；月度复盘内容表现和协作问题。",
+      resources:
+        "协调社媒小组、产品 / 研发、设计、视频、电商、PR / Creator 和供应商；分别明确产品信息提供、创意制作、事实审核、渠道发布与结果回收的责任。",
+      execution:
+        "通过内容日历、项目 Brief、任务分工、交付排期、脚本评审、视觉审核、产品事实核对和版本记录推进项目；遇到参数变化、素材授权或排期冲突时，先定位受影响资产，再修订并回验。",
+      result:
+        "简历明确记录小组任务分配、创意评审、脚本与视觉审核、外部合作沟通及周 / 月运营复盘。本案例呈现实际管理职责与交付机制，不虚构团队规模、预算、节省工时或效率提升比例。",
+      review:
+        "项目复盘按准时交付、审核问题、素材版本、发布表现和跨部门依赖分类；把重复出现的问题回写到 Brief 模板、审核清单和下一轮排期。",
+      layout: "operations",
+      work: "handoff",
+      metrics: [],
+    },
+    {
+      id: "b2b",
+      no: "06",
+      title: "海外 B2B 客户开发与展会营销",
+      subtitle: "B2B 获客 / 商务协同",
+      category: "B2B 海外市场",
+      kind: "special",
+      status: "DOCUMENTED",
+      role: "负责海外客户研究与分层触达、展会营销物料协同、询盘跟进及商务交付协调。",
+      scope:
+        "任期 2023.11–2025.03；渠道包括 Google、LinkedIn、Facebook、Instagram 和 EDM。工作覆盖客户触达、展会沟通、询盘、报价、合同与交付协同。",
+      problem:
+        "海外 B2B 客户开发需要从名单筛选推进到需求确认、询盘、报价和履约；只统计触达数量，无法判断客户是否匹配，也容易遗漏下一步跟进。",
+      decision:
+        "按客户类型、采购需求和产品适配度筛选名单；使用 CRM / ERP 记录来源、沟通内容、采购意向、询盘阶段和下一步动作；将客户异议回传至产品介绍和销售资料。",
+      plan: "展前准备目标客户名单、KV、画册和样品；展中记录客户需求与采购时间；展后按意向推进需求确认、报价、合同、交期和回款。线上通过搜索、LinkedIn、社媒与 EDM 分层触达。",
+      resources:
+        "协同销售、产品 / 研发、交付及售前售后角色；客户来源、采购意向和跟进状态记录在 CRM / ERP，避免把普通触达直接视为有效商机。",
+      execution:
+        "通过 Google 搜索、LinkedIn、Facebook、Instagram 和 EDM 研究客户并分层触达；参与海外展会预热、现场沟通与会后跟进，整理采购异议和产品需求，更新产品介绍与销售资料，并推进询盘、报价、合同、交期和回款协调。",
+      result:
+        "简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%、线索转化约 3%、月度成交额约 30 万元；LinkedIn 月粉丝增长约 35%，Facebook 粉丝规模由 400+ 增至 1,900+。",
+      review:
+        "触达量、邮件打开率、线索转化和成交额分别反映触达、沟通、机会推进和交易结果。由于分母与统计月份未完整提供，不将其拼成可计算漏斗，也不据月度成交额推算全年收入。",
+      layout: "b2b",
+      work: "account",
+      metrics: [
+        "b2b-reach",
+        "b2b-email-open",
+        "b2b-lead-conversion",
+        "b2b-sales",
+        "linkedin-follower-change",
+        "fb-follower-scale",
+      ],
+    },
+    {
+      id: "seo",
+      no: "07",
+      title: "SEO 内容策略与独立站搜索承接",
+      subtitle: "SEO / 内容增长",
+      category: "SEO / 商业增长",
+      kind: "special",
+      status: "RECONSTRUCTED",
+      role: "围绕 Shopify 独立站规划 SEO 主题、Pillar Blog、FAQ 与 EDM 选题，协同商品页信息和站点承接。",
+      scope:
+        "简历记录自然搜索收入份额 82.46%、GSC 点击环比约 +20%。另有 10 篇 Hub-and-Spoke 文章目录方案；文章规划不等于全部发布或收录。",
+      problem:
+        "社媒内容可以带来短期触达，但用户仍会通过搜索解决清洁场景、产品选型和使用问题。Blog、FAQ 与商品页若各自选题，容易重复回答同一问题，也难以把搜索需求导向产品信息。",
+      decision:
+        "以搜索意图和购买疑虑组织主题集群：Pillar Blog 建立主题入口，细分文章回答具体问题，FAQ 处理高频顾虑，商品页承接选型和购买信息；社媒反馈用于补充新选题。",
+      plan: "先建立关键词主题与用户问题映射，再安排 Pillar、细分文章、FAQ、商品页和 EDM 的角色；为每篇内容标注目标查询、页面任务、内部链接方向和 CTA。",
+      resources:
+        "协同 SEO / 内容、电商、产品和数据角色；产品适用范围由产品信息确认，内容负责回答问题，商品页承担选型与购买信息，GA4 / GSC / UTM 用于观察站点表现。",
+      execution:
+        "规划 10 篇 Hub-and-Spoke 内容目录，围绕节日清洁、厨房深度清洁、地毯与地面护理、浴室清洁、冬季烧烤和节后整理等主题组织 Pillar / Spoke；同步设计 FAQ、商品页和 EDM 的承接关系。该目录属于内容规划，不表述为 10 篇文章均已发布。",
+      result:
+        "历史阶段记录自然搜索收入份额 82.46%，GSC 点击环比约 +20%。收入份额与点击变化是两种不同指标；现有资料没有逐月点击序列，也不能证明某篇规划文章带来直接增量。",
+      review:
+        "内容效果应按查询词、落地页、点击、收录和站点转化分别复盘；补齐具体月份和页面数据后，再判断主题集群与商业结果之间的关系。",
+      layout: "seo",
+      work: "seo",
+      metrics: ["organic-share", "gsc"],
+    },
+    {
+      id: "amazon",
+      no: "08",
+      title: "Amazon 店铺 0–1 与经营优化",
+      subtitle: "电商经营 / PPC",
+      category: "SEO / 商业增长",
+      kind: "special",
+      status: "DOCUMENTED",
+      role: "负责 3C / 家居品类 Amazon 店铺从 0 到 1 的商品页、CPC 广告、促销、库存及用户反馈运营。",
+      scope:
+        "任期 2022.07–2023.10；涉及 Listing、A+、Store、Posts、关键词投放、促销、库存和买家沟通。",
+      problem:
+        "新店铺需要同时建立商品信息、搜索流量、广告结构、促销和库存管理；只增加广告投入，无法解决页面说服力、产品信息或履约问题。",
+      decision:
+        "先用竞品和关键词研究确定 Listing 信息结构，再通过 CPC 获取搜索流量；结合 CTR、CVR、ACOS、销售、退款和用户反馈判断问题来自曝光、点击、页面转化还是成本。",
+      plan: "按竞品与关键词研究、Listing / A+ / Store 建设、CPC 投放、促销与库存协同、买家反馈处理和阶段复盘推进；每个阶段分别检查流量、点击、转化、销售与利润。",
+      resources:
+        "协同设计、投放、商品与供应链角色；同步商品信息、广告结构、促销安排、库存节奏、账户健康和售后处理。站外社媒与 KOL / 服务商合作单独记录来源和新增粉丝。",
+      execution:
+        "从 0 到 1 搭建 Listing、A+、Store 与 Posts；基于搜索词和竞品结构调整 CPC，配合促销、库存与售后管理；根据 CTR、CVR、ACOS、销售反馈优化关键词和商品信息，并跟进站外合作。",
+      result:
+        "简历记录阶段销售额约 +10%、转化率变化约 +5%、项目利润率约 30%；站外社媒与 KOL / 服务商合作新增粉丝 800+，投诉率降低约 5%、好评率提升约 5%。",
+      review:
+        "销售额、转化率、利润率、投诉率和好评率分别按各自口径展示。CVR 约 +5% 未注明是相对变化还是百分点；利润率的毛利 / 净利定义未注明，不反推 ROI。",
+      layout: "commerce",
+      work: "commerce",
+      metrics: [
+        "amazon-sales",
+        "amazon-cvr",
+        "amazon-profit-margin",
+        "amazon-offsite-followers",
+        "amazon-complaint-change",
+        "amazon-review-change",
+      ],
+    },
+    {
+      id: "creative",
+      no: "09",
+      title: "创意策略与视频内容质量管理",
+      subtitle: "Creative / Video",
+      category: "Creative / TVC",
+      kind: "special",
+      status: "CONCEPT",
+      image: 3,
+      role: "参与品牌宣传片、产品视频和演示内容的创意策划与脚本 / 视觉审核；本专题以概念工作物展示创意管理方法。",
+      scope:
+        "真实经历支持品牌视频与产品演示内容协同；当前分镜和概念视觉属于能力展示样张，不是历史已投放成品。",
+      problem:
+        "创意内容既要吸引注意，也要让用户理解产品价值。若只有情绪或视觉冲击，没有清晰的使用场景、产品证明和下一步，素材很难服务于品牌教育或购买决策。",
+      decision:
+        "先明确受众、传播阶段和内容任务，再决定采用情绪叙事、功能演示、UGC 还是产品对比；每个镜头都要承担信息、情绪或证明任务，不能为了画面变化牺牲产品事实和操作连续性。",
+      plan: "按“传播目标—核心 Hook—故事 / 演示逻辑—脚本与分镜—关键帧—版本适配—发布前审核”组织创意。为每个镜头明确人物、场景、动作、产品状态、字幕、旁白和 CTA。",
+      resources:
+        "协调产品、文案、设计、视频及外部制作方；产品端确认功能与操作条件，创意侧负责叙事和画面，营销侧审核受众适配、卖点准确性、品牌一致性和渠道版本。",
+      execution:
+        "结合品牌宣传片和产品演示经历，展示如何把卖点转为开场 Hook、场景冲突、产品行动、结果证明和 CTA；通过脚本评审、分镜检查、字幕校对及横竖屏适配控制内容质量。",
+      result:
+        "本页交付创意 Brief、分镜结构和内容验收方法，属于概念 / 重构工作物。没有可核验的历史播放量、完播率、点击或销售结果，不作为已投放案例。",
+      review:
+        "创意效果需结合素材版本、投放受众、平台、预算、播放窗口和转化目标评估。当前重点展示创意判断与审核能力，不以概念分镜推导历史广告效果。",
+      layout: "creative",
+      work: "storyboard",
+      metrics: [],
+    },
+    {
+      id: "crm",
+      no: "10",
+      title: "EDM 与用户生命周期规划",
+      subtitle: "CRM / Lifecycle",
+      category: "CRM / Lifecycle",
+      kind: "special",
+      status: "CONCEPT",
+      role: "具备 EDM 选题与站点内容协同经历；本专题展示用户旅程、触发规则、频控和会员机制的规划能力。",
+      scope:
+        "简历支持 SEO、Pillar Blog、FAQ 与 EDM 选题协同；自动化 Flow、会员系统启用、发送结果和复购收入没有可核实证据，按概念方案呈现。",
+      problem:
+        "不同用户处于不同决策阶段，统一发送同一促销信息容易造成打扰、重复触达和优惠冲突。生命周期运营需要先厘清用户状态、同意记录、触发条件、发送责任与排除规则。",
+      decision:
+        "先建立单一的用户状态与发送责任，再设计 Welcome、Browse / Cart、Post-Purchase、Winback 等触发路径；Consent、频控、排除条件和优惠规则必须先于自动化上线确认。",
+      plan: "按“用户状态识别—触发条件—受众与排除—内容波次—站内承接—发送 QA—结果复盘”规划；积分、VIP 和 Referral 规则分别定义获取、使用、到期、奖励与反作弊条件。",
+      resources:
+        "需要 Shopify 订单与客户数据、邮件平台、同意记录、产品信息、客服和运营负责人共同确认；没有核验系统权限、DNS、发送域名和 Flow 状态前，不声称已上线。",
+      execution:
+        "以用户旅程图、邮件主题与内容框架、触发条件、频控和会员规则展示规划方法；把社媒、Blog、FAQ 与商品页信息纳入内容一致性检查，避免邮件承诺与站点政策不一致。",
+      result:
+        "当前可展示生命周期旅程、邮件波次与会员机制的规划工作物；实际自动化发送、名单增长、复购率、留存率及会员收入暂无可核结果。",
+      review:
+        "正式上线前需完成发送域名与 DNS、Consent、名单治理、优惠冲突、频控、排除逻辑和测试发送验收。方案完成不等于系统启用，更不等于产生收入。",
+      layout: "crm",
+      work: "crm",
+      metrics: ["retention"],
+    },
+    {
+      id: "creator",
+      no: "11",
+      title: "创作者合作策略与内容治理",
+      subtitle: "Creator Strategy & Rights",
+      category: "Creator / KOL",
+      kind: "special",
+      status: "RECONSTRUCTED",
+      role: "受众适配筛选、合作流程设计、内容审核与授权机制整理",
+      scope: "仅展示策略与流程方法；展示工作物为经历重构。",
+      problem: "内容合作需要同时满足受众适配、产品事实一致与素材使用权限。",
+      decision:
+        "先明确合作目标与受众适配，再确认价值交换、Brief、内容审核与授权范围。",
+      plan: "目标 → 受众与内容适配 → 合作 Brief → 内容审核 → 授权检查 → 素材归档。",
+      resources:
+        "协同产品、内容、设计、视频及合作方，逐项确认事实与素材使用条件。",
+      execution:
+        "按市场、品类、受众与内容质量筛选；合作前确认交付形式、披露要求与审核节点。授权需记录平台、地域、期限、用途、改编与撤回条件。",
+      result:
+        "展示筛选框架、合作流程与授权检查表；未提供可公开核验的项目效果。",
+      review:
+        "寄样不代表承诺正面评价；内容发布不代表获得商业使用权；媒体提及不代表品牌背书。",
+      layout: "creator",
+      work: "creator",
+      metrics: [],
+    },
+  ],
+  caseNarratives: {
+    gtm: {
+      headline: "从用户购买顾虑出发，建立产品卖点与上市内容的统一表达。",
+      summary:
+        "将用户研究、产品定位、可信证明、渠道内容和上市协同连成一条工作链，让参数、用户利益与传播表达保持一致。",
+      stages: [
+        {
+          title: "识别购买任务",
+          detail:
+            "整理 Review / VOC、竞品功能与价格、站内搜索及社群问题，归纳目标人群、使用场景和购买顾虑。",
+        },
+        {
+          title: "组织卖点与证明",
+          detail:
+            "按 FABA 建立特征、优势、用户利益与场景层级；用 FABE / RTB 匹配证明，并由产品端核验参数和适用边界。",
+        },
+        {
+          title: "推进上市交付",
+          detail:
+            "围绕预热、上市、持续推广拆解 KV、演示视频、FAQ、商品页和 Creator Brief，明确输入、审核与发布节点。",
+        },
+        {
+          title: "检视阶段表现",
+          detail:
+            "参与 4 条核心产品线上市传播；简历记录相关内容上线期间销量约 +3%，但未提供对照期与归因数据。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "产品上市阶段表现",
+          description:
+            "简历记录相关产品内容上线期间销量约 +3%。该数据作为阶段结果呈现，不推断单一素材或单一渠道贡献。",
+          metrics: ["product-sales-stage"],
+        },
+      ],
+      evidenceNote:
+        "约 +3% 是简历记录的产品上线阶段销量变化；产品范围、对照期和归因方式未注明，不反推增量销量或营销 ROI。",
+    },
+    social: {
+      headline:
+        "把 Facebook、Instagram 与社群放进同一套内容经营机制，而不是重复发帖。",
+      summary:
+        "按平台角色配置内容任务，以季度主题、月度日历、周度审核和月度复盘管理内容交付，并将评论与社群问题回流到选题和 FAQ。",
+      stages: [
+        {
+          title: "明确平台任务",
+          detail:
+            "Facebook 承担品牌信息与链接导流；Instagram 承接产品视觉演示和活动内容；Facebook Group 用于用户交流与问题收集。",
+        },
+        {
+          title: "建立内容支柱",
+          detail:
+            "围绕产品演示、家庭清洁场景、教程与 FAQ、互动活动和 UGC 组织内容，避免不同平台简单复制同一条素材。",
+        },
+        {
+          title: "组织团队交付",
+          detail:
+            "季度确定传播主题，月度拆解内容日历；安排选题与任务分工，审核脚本、视觉和产品事实，并协调产品、设计、视频、电商及 Creator。",
+        },
+        {
+          title: "回看传播结果",
+          detail:
+            "分别观察展示、互动、访问、链接点击和关注变化；将平台反馈用于调整 CTA、FAQ 与下一轮选题，不把不同统计周期合并。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "Meta 2025 年阶段汇总",
+          description:
+            "反映该阶段的内容展示与互动规模；与 Facebook Page 后台截图数据分开展示。",
+          metrics: ["impressions", "engagements"],
+        },
+        {
+          title: "Facebook Page Insights 后台截图",
+          description:
+            "平台截图记录的浏览、内容互动、链接点击、访问和关注次数；账号名称未显示，完整统计周期未显示。",
+          metrics: [
+            "fb-views",
+            "fb-content-interactions",
+            "fb-link-clicks",
+            "fb-visits",
+            "fb-follows",
+          ],
+        },
+        {
+          title: "其他平台与历史阶段变化",
+          description:
+            "简历及历史项目记录的 Facebook 覆盖、链接点击和 Instagram 活动表现；比较窗口与账号范围未完整保留。",
+          metrics: [
+            "engagement-change",
+            "fb-reach",
+            "fb-link-click-change",
+            "ig-event-engagement-change",
+            "ig-follower-change",
+          ],
+        },
+      ],
+      evidenceNote:
+        "三组数据的统计周期、账号范围和平台字段不一致。可分别观察展示规模、互动、访问、点击和关注变化，但不能合并成统一的 Meta 总量，也不能据此证明某一内容支柱带来的增量。",
+    },
+    community: {
+      headline: "把社群从成员规模管理，推进到参与、反馈与内容共创。",
+      summary:
+        "以教程、投票、清洁挑战和 UGC 投稿建立参与入口，再把高频问题整理为 FAQ 与下一轮内容选题；成员规模、查看人数和发帖评论人数分别观察。",
+      stages: [
+        {
+          title: "设计参与入口",
+          detail:
+            "围绕真实清洁问题组织教程、投票、清洁挑战和 UGC 投稿，让成员知道可以分享什么、如何参与。",
+        },
+        {
+          title: "管理活动过程",
+          detail:
+            "明确活动主题、参与规则、投稿格式和审核条件；维护讨论与答疑，核对产品信息和展示结果。",
+        },
+        {
+          title: "治理内容授权",
+          detail:
+            "将活动参与与品牌商业使用授权分开处理；确认使用平台、期限、范围、署名和撤回方式后再使用投稿。",
+        },
+        {
+          title: "回流用户反馈",
+          detail:
+            "把高频问题沉淀为 FAQ 和内容选题，将使用场景与产品疑问反馈给相关团队。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "阶段成员新增",
+          description:
+            "历史简历记录的一个阶段新增人数；具体统计起止时间未注明。",
+          metrics: ["group"],
+        },
+        {
+          title: "成员规模快照",
+          description:
+            "后台截图时显示的社群成员总数，不代表截图所选期间的新增人数。",
+          metrics: ["group-members"],
+        },
+        {
+          title: "所选期间的参与与查看",
+          description:
+            "后台原字段分别记录发帖和评论人数、查看人数；两者不是发帖次数，也不直接构成活跃率。",
+          metrics: ["group-posters", "group-viewers"],
+        },
+      ],
+      evidenceNote:
+        "+227 是独立阶段新增记录；4,009 是成员规模快照；146 与 34,387 是 2025/11/02–2026/09/30 所选范围内的不同平台字段。它们反映不同维度，不能相加或换算为社群活跃率。",
+    },
+    brand: {
+      headline: "先统一品牌主张与产品事实，再让不同渠道各自完成传播任务。",
+      summary:
+        "以品牌价值、用户利益、产品证明和视觉规范建立共同信息基础，再将 Social、PR、Creator、官网与展会触点分工。",
+      stages: [
+        {
+          title: "梳理品牌信息",
+          detail:
+            "明确品牌故事、核心价值、目标受众、产品利益和可引用的可信证明。",
+        },
+        {
+          title: "建立传播结构",
+          detail:
+            "整理 Brand House、Message House、产品卖点、FAQ 与视觉规范，确保不同团队使用同一套事实。",
+        },
+        {
+          title: "分配渠道任务",
+          detail:
+            "Social 负责持续沟通，PR 负责媒体信息，Creator 展示场景体验，官网与商品页承接产品问题和选型。",
+        },
+        {
+          title: "管理资产交付",
+          detail:
+            "参与品牌故事、VI / Logo / IP、品牌画册、宣传片、产品演示、媒体资料和 Creator Brief 的内容协同与审核。",
+        },
+      ],
+      evidenceGroups: [],
+      evidenceNote:
+        "可展示的交付包括品牌内容资产、产品传播素材、FAQ、媒体资料、Creator Brief 和跨渠道协同。当前没有可核验的媒体刊发数、Earned Reach 或 Share of Voice，因此不把社媒曝光写成 PR 成果。",
+    },
+    operations: {
+      headline: "把跨部门营销任务拆成有负责人、有输入、有验收的交付流程。",
+      summary:
+        "围绕目标、工作包、Owner、依赖、审核与发布 Gate 组织项目，提前核对产品事实、素材权限和页面承接，减少制作后段才暴露的问题。",
+      stages: [
+        {
+          title: "季度确定优先级",
+          detail:
+            "根据业务重点确定传播主题、主推产品和用户教育任务，明确阶段目标与资源优先级。",
+        },
+        {
+          title: "月度拆分工作包",
+          detail:
+            "将主题拆成内容日历、项目 Brief、素材需求、负责人、审核人、交付日期和渠道 CTA。",
+        },
+        {
+          title: "周度跟进质量",
+          detail:
+            "跟进脚本、设计、视频与产品审核；检查参数、事实主张、字幕、版权、链接、追踪和素材版本。",
+        },
+        {
+          title: "复盘并更新机制",
+          detail:
+            "按交付节点、审核问题、版本变更、发布表现和跨部门依赖复盘，把重复问题回写 Brief 模板与审核清单。",
+        },
+      ],
+      evidenceGroups: [],
+      evidenceNote:
+        "可确认的管理职责包括小组任务分配、创意评审、脚本与视觉审核、外部合作沟通及周 / 月复盘。团队人数、预算审批权限、准时交付率和效率提升数据未提供，因此案例聚焦真实管理动作与交付机制。",
+    },
+    b2b: {
+      headline: "从客户筛选到商务跟进，分层管理海外 B2B 获客过程。",
+      summary:
+        "结合客户类型、采购需求和产品适配度开展分层触达，使用 CRM / ERP 记录来源、意向、询盘阶段和下一步动作，并协同展会、报价与交付。",
+      stages: [
+        {
+          title: "研究与筛选客户",
+          detail:
+            "根据客户类型、采购场景、产品匹配度和需求信号筛选目标对象，区分普通触达与有效商机。",
+        },
+        {
+          title: "分层触达与沟通",
+          detail:
+            "组合 Google、LinkedIn、Facebook、Instagram 和 EDM 进行客户触达，记录来源、回复、采购意向和下一步动作。",
+        },
+        {
+          title: "推进询盘与履约",
+          detail:
+            "参与展会预热、现场沟通和会后跟进，协同需求确认、报价、合同、交期、回款及售前售后问题。",
+        },
+        {
+          title: "按阶段复盘业务",
+          detail:
+            "分别观察潜客触达、邮件打开、线索转化、成交额和渠道受众增长，不把不同样本拼成未经验证的销售漏斗。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "客户触达与邮件沟通",
+          description:
+            "简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%；没有匹配的发送批次与客户去重口径。",
+          metrics: ["b2b-reach", "b2b-email-open"],
+        },
+        {
+          title: "线索与交易结果",
+          description:
+            "简历阶段记录线索转化约 3%、月度成交额约 30 万元；转化分母与成交核算口径未完整保留。",
+          metrics: ["b2b-lead-conversion", "b2b-sales"],
+        },
+        {
+          title: "渠道受众增长",
+          description:
+            "LinkedIn 月粉丝增长约 35%；Facebook 粉丝规模记录为 400+ 至 1,900+，不计算未提供日期的增长率。",
+          metrics: ["linkedin-follower-change", "fb-follower-scale"],
+        },
+      ],
+      evidenceNote:
+        "触达、邮件打开、线索转化和成交额来自任期阶段记录，但没有匹配的发送批次、线索分母和月份。可分别说明客户开发链路的关键结果，不将这些值拼接为同一批客户的完整漏斗。",
+    },
+    seo: {
+      headline: "围绕搜索意图组织内容集群，让 Blog、FAQ 与商品页各自承担任务。",
+      summary:
+        "从关键词主题、用户疑问和购买顾虑出发，规划 Pillar Blog、细分文章、FAQ、商品页与 EDM 的内容关系，并明确页面承接。",
+      stages: [
+        {
+          title: "识别搜索需求",
+          detail:
+            "结合关键词主题、搜索意图、社媒评论和购买问题，确定用户在了解、比较和选型阶段的内容需求。",
+        },
+        {
+          title: "规划主题集群",
+          detail:
+            "以 Pillar Blog 组织核心主题，细分文章回答具体问题，FAQ 处理高频疑虑，避免内容重复。",
+        },
+        {
+          title: "连接站点触点",
+          detail:
+            "为内容标注目标查询、页面任务、内部链接和 CTA，并与 Shopify 商品页、FAQ 和 EDM 选题协同。",
+        },
+        {
+          title: "分开衡量结果",
+          detail:
+            "自然搜索收入份额与 GSC 点击变化分别观察；内容目录规划不等于文章全部发布或已经带来收入。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "自然搜索收入结构",
+          description:
+            "历史站点渠道报告记录自然搜索收入份额 82.46%；统计窗口、归因模型和收入定义未完整保留。",
+          metrics: ["organic-share"],
+        },
+        {
+          title: "Google 搜索点击变化",
+          description:
+            "历史 GSC 汇总记录点击环比约 +20%；两期月份和点击原值未提供，不绘制月度趋势。",
+          metrics: ["gsc"],
+        },
+      ],
+      evidenceNote:
+        "82.46% 反映自然搜索渠道收入结构；约 +20% 反映 GSC 点击变化。统计月份和原始值未提供，不能将两项合并成搜索增长曲线，也不能证明尚未确认发布的内容规划直接带来该结果。",
+    },
+    amazon: {
+      headline: "把商品页、广告、库存和用户反馈放进同一套店铺经营复盘。",
+      summary:
+        "从 Listing 信息架构和搜索词研究切入，结合 CPC、促销、库存、售后和用户评价，分别判断流量、转化与经营质量。",
+      stages: [
+        {
+          title: "搭建商品信息",
+          detail:
+            "研究竞品和搜索词，规划 Listing、A+、Store 与 Posts 的卖点顺序、场景表达和信任要素。",
+        },
+        {
+          title: "管理搜索投放",
+          detail:
+            "建立 CPC 关键词结构，结合曝光、CTR、CPC、CVR、ACOS 和销售反馈识别流量或页面问题。",
+        },
+        {
+          title: "协同经营动作",
+          detail:
+            "同步促销、库存、买家沟通、售后和账户健康，避免只增加广告投入而忽略履约与利润。",
+        },
+        {
+          title: "复盘经营质量",
+          detail:
+            "分别观察销售额、转化率、利润率、投诉率、好评率和站外新增粉丝，按各自定义解释结果。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "销售与转化表现",
+          description:
+            "简历阶段记录销售额约 +10%、转化率变化约 +5%、项目利润率约 30%；CVR 变化和利润率核算口径未完整注明。",
+          metrics: ["amazon-sales", "amazon-cvr", "amazon-profit-margin"],
+        },
+        {
+          title: "用户反馈表现",
+          description:
+            "简历记录投诉率下降约 5%、好评率提升约 5%；变化是相对比例还是百分点未注明。",
+          metrics: ["amazon-complaint-change", "amazon-review-change"],
+        },
+        {
+          title: "站外受众积累",
+          description:
+            "站外社媒与 KOL / 服务商合作累计新增粉丝 800+；平台构成和去重方式未注明。",
+          metrics: ["amazon-offsite-followers"],
+        },
+      ],
+      evidenceNote:
+        "销售额、转化率、利润率、投诉率、好评率和站外粉丝是不同经营维度。CVR 与投诉 / 好评变化未明确百分点或相对比例，利润率成本范围未注明；不据此反推广告 ROI 或单一渠道贡献。",
+    },
+    creative: {
+      headline: "先确定传播任务，再决定 Hook、故事结构与产品证明方式。",
+      summary:
+        "将创意判断拆成受众、传播阶段、核心主张、镜头任务、产品事实和渠道版本，确保画面吸引力与信息准确性同时成立。",
+      stages: [
+        {
+          title: "明确传播任务",
+          detail:
+            "确认受众、传播阶段、用户问题、核心主张、证明方式和 CTA，再选择情绪叙事、功能演示、UGC 或对比形式。",
+        },
+        {
+          title: "组织脚本与镜头",
+          detail:
+            "为每个镜头明确人物、场景、动作、产品状态、信息任务和情绪作用，串联 Hook、过程、证明与收束。",
+        },
+        {
+          title: "控制产品事实",
+          detail:
+            "核对产品结构、操作条件、功能表现、字幕和旁白；镜头变化不能改变产品事实或制造不真实的使用结果。",
+        },
+        {
+          title: "完成版本验收",
+          detail:
+            "针对横竖屏检查构图、字幕安全区、标题、声音、CTA 和落地页；概念分镜与历史投放成品分开呈现。",
+        },
+      ],
+      evidenceGroups: [],
+      evidenceNote:
+        "本专题展示创意 Brief、脚本、分镜、关键帧和视频验收方法；分镜与概念视觉属于能力展示样张，不是历史已投放成品。没有可核验的播放量、完播率、点击或销售结果。",
+    },
+    crm: {
+      headline: "先治理用户状态、发送责任与 Consent，再规划生命周期触达。",
+      summary:
+        "围绕订阅、浏览、加购、购后、会员和召回状态规划触发路径，并把频控、排除条件、优惠规则与发送 Owner 放在上线前检查。",
+      stages: [
+        {
+          title: "识别用户状态",
+          detail:
+            "区分订阅、浏览、加购、购买后、会员和召回状态，明确每个状态可使用的数据与同意条件。",
+        },
+        {
+          title: "规划触发路径",
+          detail:
+            "围绕 Welcome、Browse / Cart、Post-Purchase 和 Winback 设计触发条件、邮件波次与站内承接。",
+        },
+        {
+          title: "建立发送治理",
+          detail:
+            "明确发送 Owner、受众排除、频控、Consent、优惠冲突和退订规则；先治理重复发送，再开放自动化。",
+        },
+        {
+          title: "验收上线与结果",
+          detail:
+            "核验发送域名、DNS、平台权限、名单治理和测试发送；将方案、系统启用、实际发送与复购结果分开记录。",
+        },
+      ],
+      evidenceGroups: [
+        {
+          title: "生命周期运营结果",
+          description:
+            "当前没有实际邮件发送、复购或留存统计；该项仅作为待衡量指标，不代表 Flow 已启用。",
+          metrics: ["retention"],
+        },
+      ],
+      evidenceNote:
+        "目前可以展示用户旅程、邮件波次、触发条件、Consent、频控和会员规则规划；实际自动化发送、名单增长、复购、留存及会员收入暂无可核结果。",
+    },
+    creator: {
+      headline: "让合作从适配判断走向可使用的内容资产",
+      summary:
+        "先明确合作目标与受众适配，再确认价值交换、Brief、内容审核与授权范围。",
+      stages: [
+        {
+          title: "目标",
+          body: "明确受众与内容任务",
+        },
+        {
+          title: "筛选",
+          body: "核对受众与表达适配",
+        },
+        {
+          title: "合作",
+          body: "确认 Brief 与审核节点",
+        },
+        {
+          title: "授权",
+          body: "核验使用范围与期限",
+        },
+      ],
+      evidenceGroups: [],
+    },
   },
-  "brand": {
-    "headline": "先统一品牌主张与产品事实，再让不同渠道各自完成传播任务。",
-    "summary": "以品牌价值、用户利益、产品证明和视觉规范建立共同信息基础，再将 Social、PR、Creator、官网与展会触点分工。",
-    "stages": [
-      {
-        "title": "梳理品牌信息",
-        "detail": "明确品牌故事、核心价值、目标受众、产品利益和可引用的可信证明。"
-      },
-      {
-        "title": "建立传播结构",
-        "detail": "整理 Brand House、Message House、产品卖点、FAQ 与视觉规范，确保不同团队使用同一套事实。"
-      },
-      {
-        "title": "分配渠道任务",
-        "detail": "Social 负责持续沟通，PR 负责媒体信息，Creator 展示场景体验，官网与商品页承接产品问题和选型。"
-      },
-      {
-        "title": "管理资产交付",
-        "detail": "参与品牌故事、VI / Logo / IP、品牌画册、宣传片、产品演示、媒体资料和 Creator Brief 的内容协同与审核。"
-      }
+  capabilities: [
+    [
+      "品牌策略",
+      "Brand Strategy",
+      "从业务目标、目标市场和用户认知出发，明确品牌定位、价值主张、传播主线与可信证明；将品牌故事、视觉资产和产品信息转化为 Social、PR、商品页与活动可复用的统一表达。",
+      "brand",
     ],
-    "evidenceGroups": [],
-    "evidenceNote": "可展示的交付包括品牌内容资产、产品传播素材、FAQ、媒体资料、Creator Brief 和跨渠道协同。当前没有可核验的媒体刊发数、Earned Reach 或 Share of Voice，因此不把社媒曝光写成 PR 成果。"
-  },
-  "operations": {
-    "headline": "把跨部门营销任务拆成有负责人、有输入、有验收的交付流程。",
-    "summary": "围绕目标、工作包、Owner、依赖、审核与发布 Gate 组织项目，提前核对产品事实、素材权限和页面承接，减少制作后段才暴露的问题。",
-    "stages": [
-      {
-        "title": "季度确定优先级",
-        "detail": "根据业务重点确定传播主题、主推产品和用户教育任务，明确阶段目标与资源优先级。"
-      },
-      {
-        "title": "月度拆分工作包",
-        "detail": "将主题拆成内容日历、项目 Brief、素材需求、负责人、审核人、交付日期和渠道 CTA。"
-      },
-      {
-        "title": "周度跟进质量",
-        "detail": "跟进脚本、设计、视频与产品审核；检查参数、事实主张、字幕、版权、链接、追踪和素材版本。"
-      },
-      {
-        "title": "复盘并更新机制",
-        "detail": "按交付节点、审核问题、版本变更、发布表现和跨部门依赖复盘，把重复问题回写 Brief 模板与审核清单。"
-      }
+    [
+      "市场与用户研究",
+      "Market & Consumer Insight",
+      "综合 Review / VOC、竞品功能与价格、搜索意图、社群问题及客户反馈，识别用户任务、购买障碍和高关注场景；把研究结论转成受众优先级、信息层级、内容选题和销售沟通材料。",
+      "gtm",
     ],
-    "evidenceGroups": [],
-    "evidenceNote": "可确认的管理职责包括小组任务分配、创意评审、脚本与视觉审核、外部合作沟通及周 / 月复盘。团队人数、预算审批权限、准时交付率和效率提升数据未提供，因此案例聚焦真实管理动作与交付机制。"
-  },
-  "b2b": {
-    "headline": "从客户筛选到商务跟进，分层管理海外 B2B 获客过程。",
-    "summary": "结合客户类型、采购需求和产品适配度开展分层触达，使用 CRM / ERP 记录来源、意向、询盘阶段和下一步动作，并协同展会、报价与交付。",
-    "stages": [
-      {
-        "title": "研究与筛选客户",
-        "detail": "根据客户类型、采购场景、产品匹配度和需求信号筛选目标对象，区分普通触达与有效商机。"
-      },
-      {
-        "title": "分层触达与沟通",
-        "detail": "组合 Google、LinkedIn、Facebook、Instagram 和 EDM 进行客户触达，记录来源、回复、采购意向和下一步动作。"
-      },
-      {
-        "title": "推进询盘与履约",
-        "detail": "参与展会预热、现场沟通和会后跟进，协同需求确认、报价、合同、交期、回款及售前售后问题。"
-      },
-      {
-        "title": "按阶段复盘业务",
-        "detail": "分别观察潜客触达、邮件打开、线索转化、成交额和渠道受众增长，不把不同样本拼成未经验证的销售漏斗。"
-      }
+    [
+      "产品营销",
+      "Product Marketing",
+      "核验产品事实与差异化，运用 FABA 拆解特征、优势、用户利益和使用场景，并以 FABE / RTB 明确证明方式；形成 KSP、FAQ、演示要点和 Creator Brief，保证跨触点表达一致。",
+      "gtm",
     ],
-    "evidenceGroups": [
-      {
-        "title": "客户触达与邮件沟通",
-        "description": "简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%；没有匹配的发送批次与客户去重口径。",
-        "metrics": [
-          "b2b-reach",
-          "b2b-email-open"
-        ]
-      },
-      {
-        "title": "线索与交易结果",
-        "description": "简历阶段记录线索转化约 3%、月度成交额约 30 万元；转化分母与成交核算口径未完整保留。",
-        "metrics": [
-          "b2b-lead-conversion",
-          "b2b-sales"
-        ]
-      },
-      {
-        "title": "渠道受众增长",
-        "description": "LinkedIn 月粉丝增长约 35%；Facebook 粉丝规模记录为 400+ 至 1,900+，不计算未提供日期的增长率。",
-        "metrics": [
-          "linkedin-follower-change",
-          "fb-follower-scale"
-        ]
-      }
+    [
+      "新品上市",
+      "GTM",
+      "围绕预热、上市和持续推广拆解目标人群、核心信息、渠道任务、素材需求、责任人和交付节点；协同产品、设计、视频、电商及外部伙伴推进 Launch Brief、上市物料与发布检查。",
+      "gtm",
     ],
-    "evidenceNote": "触达、邮件打开、线索转化和成交额来自任期阶段记录，但没有匹配的发送批次、线索分母和月份。可分别说明客户开发链路的关键结果，不将这些值拼接为同一批客户的完整漏斗。"
-  },
-  "seo": {
-    "headline": "围绕搜索意图组织内容集群，让 Blog、FAQ 与商品页各自承担任务。",
-    "summary": "从关键词主题、用户疑问和购买顾虑出发，规划 Pillar Blog、细分文章、FAQ、商品页与 EDM 的内容关系，并明确页面承接。",
-    "stages": [
-      {
-        "title": "识别搜索需求",
-        "detail": "结合关键词主题、搜索意图、社媒评论和购买问题，确定用户在了解、比较和选型阶段的内容需求。"
-      },
-      {
-        "title": "规划主题集群",
-        "detail": "以 Pillar Blog 组织核心主题，细分文章回答具体问题，FAQ 处理高频疑虑，避免内容重复。"
-      },
-      {
-        "title": "连接站点触点",
-        "detail": "为内容标注目标查询、页面任务、内部链接和 CTA，并与 Shopify 商品页、FAQ 和 EDM 选题协同。"
-      },
-      {
-        "title": "分开衡量结果",
-        "detail": "自然搜索收入份额与 GSC 点击变化分别观察；内容目录规划不等于文章全部发布或已经带来收入。"
-      }
+    [
+      "整合营销",
+      "IMC",
+      "围绕同一 Campaign 主题配置 Social、Creator / PR、EDM、SEO / Pillar Blog、FAQ 和 Shopify 页面等渠道角色，明确内容节奏、CTA 与站内承接，并分别复盘渠道表现。",
+      "brand",
     ],
-    "evidenceGroups": [
-      {
-        "title": "自然搜索收入结构",
-        "description": "历史站点渠道报告记录自然搜索收入份额 82.46%；统计窗口、归因模型和收入定义未完整保留。",
-        "metrics": [
-          "organic-share"
-        ]
-      },
-      {
-        "title": "Google 搜索点击变化",
-        "description": "历史 GSC 汇总记录点击环比约 +20%；两期月份和点击原值未提供，不绘制月度趋势。",
-        "metrics": [
-          "gsc"
-        ]
-      }
+    [
+      "公关与创作者",
+      "PR / Creator",
+      "围绕合作目标、受众适配、事实包、内容审核与授权条件组织 PR / Creator 协作。",
+      "creator",
     ],
-    "evidenceNote": "82.46% 反映自然搜索渠道收入结构；约 +20% 反映 GSC 点击变化。统计月份和原始值未提供，不能将两项合并成搜索增长曲线，也不能证明尚未确认发布的内容规划直接带来该结果。"
-  },
-  "amazon": {
-    "headline": "把商品页、广告、库存和用户反馈放进同一套店铺经营复盘。",
-    "summary": "从 Listing 信息架构和搜索词研究切入，结合 CPC、促销、库存、售后和用户评价，分别判断流量、转化与经营质量。",
-    "stages": [
-      {
-        "title": "搭建商品信息",
-        "detail": "研究竞品和搜索词，规划 Listing、A+、Store 与 Posts 的卖点顺序、场景表达和信任要素。"
-      },
-      {
-        "title": "管理搜索投放",
-        "detail": "建立 CPC 关键词结构，结合曝光、CTR、CPC、CVR、ACOS 和销售反馈识别流量或页面问题。"
-      },
-      {
-        "title": "协同经营动作",
-        "detail": "同步促销、库存、买家沟通、售后和账户健康，避免只增加广告投入而忽略履约与利润。"
-      },
-      {
-        "title": "复盘经营质量",
-        "detail": "分别观察销售额、转化率、利润率、投诉率、好评率和站外新增粉丝，按各自定义解释结果。"
-      }
+    [
+      "社媒与社群经营",
+      "Social / Community",
+      "建立平台内容支柱、季度传播主题、月度日历和发布审核机制；策划教程、投票、挑战与 UGC 活动，将评论、社群讨论和用户问题回流至选题、FAQ 与产品沟通。",
+      "social",
     ],
-    "evidenceGroups": [
-      {
-        "title": "销售与转化表现",
-        "description": "简历阶段记录销售额约 +10%、转化率变化约 +5%、项目利润率约 30%；CVR 变化和利润率核算口径未完整注明。",
-        "metrics": [
-          "amazon-sales",
-          "amazon-cvr",
-          "amazon-profit-margin"
-        ]
-      },
-      {
-        "title": "用户反馈表现",
-        "description": "简历记录投诉率下降约 5%、好评率提升约 5%；变化是相对比例还是百分点未注明。",
-        "metrics": [
-          "amazon-complaint-change",
-          "amazon-review-change"
-        ]
-      },
-      {
-        "title": "站外受众积累",
-        "description": "站外社媒与 KOL / 服务商合作累计新增粉丝 800+；平台构成和去重方式未注明。",
-        "metrics": [
-          "amazon-offsite-followers"
-        ]
-      }
+    [
+      "团队管理与项目治理",
+      "Team & Project Management",
+      "围绕业务优先级安排小组任务，明确 Brief、责任分工、交付排期、审核标准和素材版本；组织创意评审、脚本 / 视觉审核、供应商协同及周 / 月复盘，处理延期与质量风险。",
+      "operations",
     ],
-    "evidenceNote": "销售额、转化率、利润率、投诉率、好评率和站外粉丝是不同经营维度。CVR 与投诉 / 好评变化未明确百分点或相对比例，利润率成本范围未注明；不据此反推广告 ROI 或单一渠道贡献。"
-  },
-  "creative": {
-    "headline": "先确定传播任务，再决定 Hook、故事结构与产品证明方式。",
-    "summary": "将创意判断拆成受众、传播阶段、核心主张、镜头任务、产品事实和渠道版本，确保画面吸引力与信息准确性同时成立。",
-    "stages": [
-      {
-        "title": "明确传播任务",
-        "detail": "确认受众、传播阶段、用户问题、核心主张、证明方式和 CTA，再选择情绪叙事、功能演示、UGC 或对比形式。"
-      },
-      {
-        "title": "组织脚本与镜头",
-        "detail": "为每个镜头明确人物、场景、动作、产品状态、信息任务和情绪作用，串联 Hook、过程、证明与收束。"
-      },
-      {
-        "title": "控制产品事实",
-        "detail": "核对产品结构、操作条件、功能表现、字幕和旁白；镜头变化不能改变产品事实或制造不真实的使用结果。"
-      },
-      {
-        "title": "完成版本验收",
-        "detail": "针对横竖屏检查构图、字幕安全区、标题、声音、CTA 和落地页；概念分镜与历史投放成品分开呈现。"
-      }
+    [
+      "增长分析与衡量",
+      "Growth Measurement",
+      "区分曝光、覆盖、互动、点击、访问、搜索点击和收入结构，结合 Meta、GA4、GSC 与 UTM 观察渠道和站点承接；先核对统计窗口、账号范围、分母与归因，再提出优化动作。",
+      "seo",
     ],
-    "evidenceGroups": [],
-    "evidenceNote": "本专题展示创意 Brief、脚本、分镜、关键帧和视频验收方法；分镜与概念视觉属于能力展示样张，不是历史已投放成品。没有可核验的播放量、完播率、点击或销售结果。"
-  },
-  "crm": {
-    "headline": "先治理用户状态、发送责任与 Consent，再规划生命周期触达。",
-    "summary": "围绕订阅、浏览、加购、购后、会员和召回状态规划触发路径，并把频控、排除条件、优惠规则与发送 Owner 放在上线前检查。",
-    "stages": [
-      {
-        "title": "识别用户状态",
-        "detail": "区分订阅、浏览、加购、购买后、会员和召回状态，明确每个状态可使用的数据与同意条件。"
-      },
-      {
-        "title": "规划触发路径",
-        "detail": "围绕 Welcome、Browse / Cart、Post-Purchase 和 Winback 设计触发条件、邮件波次与站内承接。"
-      },
-      {
-        "title": "建立发送治理",
-        "detail": "明确发送 Owner、受众排除、频控、Consent、优惠冲突和退订规则；先治理重复发送，再开放自动化。"
-      },
-      {
-        "title": "验收上线与结果",
-        "detail": "核验发送域名、DNS、平台权限、名单治理和测试发送；将方案、系统启用、实际发送与复购结果分开记录。"
-      }
+    [
+      "商业运营与渠道协同",
+      "Commercial Operations",
+      "具备 Amazon Listing、A+、Store、CPC、CTR、CVR、ACOS、促销与库存协同经验；同时覆盖 B2B 客户研究、CRM / ERP 跟进、展会、询盘、报价、合同和交付协调。",
+      "b2b",
     ],
-    "evidenceGroups": [
-      {
-        "title": "生命周期运营结果",
-        "description": "当前没有实际邮件发送、复购或留存统计；该项仅作为待衡量指标，不代表 Flow 已启用。",
-        "metrics": [
-          "retention"
-        ]
-      }
-    ],
-    "evidenceNote": "目前可以展示用户旅程、邮件波次、触发条件、Consent、频控和会员规则规划；实际自动化发送、名单增长、复购、留存及会员收入暂无可核结果。"
-  },
-  "creator": {
-    "headline": "把达人资源、合作状态、内容资产与商业归因放进同一套管理视图。",
-    "summary": "分别管理资源池、合作进度、内容库、授权状态和订单 / GMV 字段；先核对记录关联，再判断合作质量与复投机会。",
-    "stages": [
-      {"title":"建立资源与候选池","detail":"按平台、地区、品类、受众匹配和内容形式整理达人资源；区分新增记录、备选对象与已进入合作流程的达人。"},
-      {"title":"跟进合作进度","detail":"记录邀约、回复、合作确认、寄样、发布排期和待处理事项；不同状态分别管理，不把资源数量当作合作数量。"},
-      {"title":"沉淀内容与授权","detail":"内容库登记标题、平台、发布日期、专属码和内容链接；将已授权、无授权、未备注分开，避免把发布记录等同于可商用素材。"},
-      {"title":"核对商业归因","detail":"内容库摘要显示 200 条视频、226 位窗口内活跃达人和 107 条有 GMV 的合作；这些是不同字段，不构成同一转化漏斗。"}
-    ],
-    "evidenceGroups": [
-      {"title":"达人工作台快照 · 2026-10-25","description":"独立工作台显示新增达人 500；筛选条件、累计规则和去重口径未完整展示。","metrics":["creator-new"]},
-      {"title":"红人运营工作台 · 2026-04-01 起的统计窗口","description":"数据截至 2026-10-28 09:20，2026-10-30 从飞书表只读导入；分别显示内容库记录、窗口内活跃达人和有 GMV 的合作记录。","metrics":["creator-videos","creator-active","creator-gmv-collabs"]}
-    ],
-    "evidenceNote": "500 来自 2026-10-25 的达人工作台；200、226 和 107 来自另一套红人运营工作台。不同系统、字段与窗口分开展示，不拼成漏斗。截图中的播放、点赞、评论、收藏、转发数值无法辨识；表内没有佣金字段，因此不计算总 GMV、佣金、ROI 或结算收益。"
-  }
-},
- capabilities:[
- ['品牌策略','Brand Strategy','从业务目标、目标市场和用户认知出发，明确品牌定位、价值主张、传播主线与可信证明；将品牌故事、视觉资产和产品信息转化为 Social、PR、商品页与活动可复用的统一表达。','brand'],
- ['市场与用户研究','Market & Consumer Insight','综合 Review / VOC、竞品功能与价格、搜索意图、社群问题及客户反馈，识别用户任务、购买障碍和高关注场景；把研究结论转成受众优先级、信息层级、内容选题和销售沟通材料。','gtm'],
- ['产品营销','Product Marketing','核验产品事实与差异化，运用 FABA 拆解特征、优势、用户利益和使用场景，并以 FABE / RTB 明确证明方式；形成 KSP、FAQ、演示要点和 Creator Brief，保证跨触点表达一致。','gtm'],
- ['新品上市','GTM','围绕预热、上市和持续推广拆解目标人群、核心信息、渠道任务、素材需求、责任人和交付节点；协同产品、设计、视频、电商及外部伙伴推进 Launch Brief、上市物料与发布检查。','gtm'],
- ['整合营销','IMC','围绕同一 Campaign 主题配置 Social、Creator / PR、EDM、SEO / Pillar Blog、FAQ 和 Shopify 页面等渠道角色，明确内容节奏、CTA 与站内承接，并分别复盘渠道表现。','brand'],
- ['公关与创作者','PR / Creator','根据受众匹配度与内容形式筛选 Creator / KOL，跟进邀约、合作确认、寄样、Brief、脚本审核、内容发布、授权、专属码与效果复盘；参与媒体资料和跨渠道素材协同。','creator'],
- ['社媒与社群经营','Social / Community','建立平台内容支柱、季度传播主题、月度日历和发布审核机制；策划教程、投票、挑战与 UGC 活动，将评论、社群讨论和用户问题回流至选题、FAQ 与产品沟通。','social'],
- ['团队管理与项目治理','Team & Project Management','围绕业务优先级安排小组任务，明确 Brief、责任分工、交付排期、审核标准和素材版本；组织创意评审、脚本 / 视觉审核、供应商协同及周 / 月复盘，处理延期与质量风险。','operations'],
- ['增长分析与衡量','Growth Measurement','区分曝光、覆盖、互动、点击、访问、搜索点击和收入结构，结合 Meta、GA4、GSC 与 UTM 观察渠道和站点承接；先核对统计窗口、账号范围、分母与归因，再提出优化动作。','seo'],
- ['商业运营与渠道协同','Commercial Operations','具备 Amazon Listing、A+、Store、CPC、CTR、CVR、ACOS、促销与库存协同经验；同时覆盖 B2B 客户研究、CRM / ERP 跟进、展会、询盘、报价、合同和交付协调。','b2b']
- ],
- experiences:[
- {date:'2025.04—2026.09',title:'碳宝贝科技有限公司',role:'社媒负责人 / 社媒管理组长',body:'负责北美清洁家居消费品的品牌社媒策略与内容团队交付，围绕新品节奏、季节需求和用户教育制定季度传播主题及月度 Campaign / Content Calendar，明确主推产品、核心信息、渠道任务、素材需求与复盘指标。通过 Review / VOC、竞品功能与价格、站内搜索及社群反馈识别用户任务、购买顾虑和内容机会；参与 4 条核心产品线的产品信息核验、差异化定位、FABA 卖点分层与 FABE / RTB 证据校验，推进预热、上市和持续推广。负责小组任务分配、创意评审、脚本 / 视觉审核、周 / 月复盘及外部合作沟通，协调产品、设计、视频、电商、PR / Creator 和供应商完成 KV、演示视频、活动页、品牌画册及宣传片等内容交付；同时跟进达人资源筛选、合作状态、内容入库、授权状态与专属码 / 订单 / GMV 字段归档。联动 SEO、Pillar Blog、FAQ、EDM 与 Shopify 页面，结合 Meta、GSC、GA4 和 UTM 复盘传播及站点承接；简历阶段数据包括 Meta 曝光 96.5 万、互动 3.7 万、Facebook 覆盖增长 300%+、自然搜索收入占比 82.46%、GSC 点击环比约 +20%。',caseId:'gtm'},
- {date:'2023.11—2025.03',title:'瑞音博科技有限公司',role:'海外渠道 / 市场推广',body:'面向海外 B2B 市场开展客户研究、渠道触达与商务协同。结合客户类型、采购需求和产品适配度，通过 Google、LinkedIn、Facebook、Instagram 及 EDM 分层触达；使用 CRM / ERP 记录客户来源、采购意向、询盘阶段和下一步动作。参与海外展会预热与现场营销，协调 KV、画册、样品及展后跟进，并根据客户异议、竞品变化和一线反馈优化产品介绍与销售资料；推进询盘、报价、合同、交期、回款及售前售后协作。简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%、线索转化约 3%、月度成交额约 30 万元；LinkedIn 月粉丝增长约 35%，Facebook 粉丝规模由 400+ 增至 1,900+。',caseId:'b2b'},
- {date:'2022.07—2023.10',title:'韵衫科技有限公司',role:'亚马逊运营专员',body:'从 0 到 1 负责 3C / 家居品类 Amazon 店铺日常经营，覆盖 Listing、A+、Store、Posts、促销活动与库存节奏；依据竞品和搜索词研究规划 CPC 投放，结合流量、CTR、CVR、ACOS 及销售反馈调整关键词、商品信息与广告结构。同步处理买家沟通、售后与账户健康，联动站外社媒及 KOL / 服务商合作拓展站外流量。简历记录阶段销售额约 +10%、转化率约 +5%、项目利润率约 30%；站外合作新增粉丝 800+、投诉率降低约 5%、好评率提升约 5%。',caseId:'amazon'},
- {date:'2020.12—2022.06',title:'传盛科技有限公司',role:'资深亚马逊运营专员',body:'负责北美市场 Amazon 商品页与广告运营，围绕市场、竞品和搜索词优化 Listing 卖点结构与 CPC 广告；根据 CTR、CVR、ACOS 和广告反馈调整关键词与投放策略。管理买家沟通、售后处理和账户健康，核查商标、图片、专利及商品内容合规风险，维护在售链接稳定运营。',caseId:'amazon'}
- ]
-
+  ],
+  experiences: [
+    {
+      date: "2025.04—2026.09",
+      title: "北美消费品企业 A",
+      role: "社媒负责人 / 社媒管理组长",
+      body: "负责北美清洁家居消费品的品牌社媒策略与内容团队交付，围绕新品节奏、季节需求和用户教育制定季度传播主题及月度 Campaign / Content Calendar，明确主推产品、核心信息、渠道任务、素材需求与复盘指标。通过 Review / VOC、竞品功能与价格、站内搜索及社群反馈识别用户任务、购买顾虑和内容机会；参与 4 条核心产品线的产品信息核验、差异化定位、FABA 卖点分层与 FABE / RTB 证据校验，推进预热、上市和持续推广。负责小组任务分配、创意评审、脚本 / 视觉审核、周 / 月复盘及外部合作沟通，协调产品、设计、视频、电商、PR / Creator 和供应商完成 KV、演示视频、活动页、品牌画册及宣传片等内容交付；同时跟进创作者筛选、合作流程、内容审核与授权管理。联动 SEO、Pillar Blog、FAQ、EDM 与 Shopify 页面，结合 Meta、GSC、GA4 和 UTM 复盘传播及站点承接；简历阶段数据包括 Meta 曝光 96.5 万、互动 3.7 万、Facebook 覆盖增长 300%+、自然搜索收入占比 82.46%、GSC 点击环比约 +20%。",
+      caseId: "gtm",
+    },
+    {
+      date: "2023.11—2025.03",
+      title: "海外 B2B 企业 B",
+      role: "海外渠道 / 市场推广",
+      body: "面向海外 B2B 市场开展客户研究、渠道触达与商务协同。结合客户类型、采购需求和产品适配度，通过 Google、LinkedIn、Facebook、Instagram 及 EDM 分层触达；使用 CRM / ERP 记录客户来源、采购意向、询盘阶段和下一步动作。参与海外展会预热与现场营销，协调 KV、画册、样品及展后跟进，并根据客户异议、竞品变化和一线反馈优化产品介绍与销售资料；推进询盘、报价、合同、交期、回款及售前售后协作。简历阶段记录月均触达潜客 100+、邮件打开率 10%–15%、线索转化约 3%、月度成交额约 30 万元；LinkedIn 月粉丝增长约 35%，Facebook 粉丝规模由 400+ 增至 1,900+。",
+      caseId: "b2b",
+    },
+    {
+      date: "2022.07—2023.10",
+      title: "跨境电商企业 C",
+      role: "亚马逊运营专员",
+      body: "从 0 到 1 负责 3C / 家居品类 Amazon 店铺日常经营，覆盖 Listing、A+、Store、Posts、促销活动与库存节奏；依据竞品和搜索词研究规划 CPC 投放，结合流量、CTR、CVR、ACOS 及销售反馈调整关键词、商品信息与广告结构。同步处理买家沟通、售后与账户健康，联动站外社媒及 KOL / 服务商合作拓展站外流量。简历记录阶段销售额约 +10%、转化率约 +5%、项目利润率约 30%；站外合作新增粉丝 800+、投诉率降低约 5%、好评率提升约 5%。",
+      caseId: "amazon",
+    },
+    {
+      date: "2020.12—2022.06",
+      title: "跨境电商企业 D",
+      role: "资深亚马逊运营专员",
+      body: "负责北美市场 Amazon 商品页与广告运营，围绕市场、竞品和搜索词优化 Listing 卖点结构与 CPC 广告；根据 CTR、CVR、ACOS 和广告反馈调整关键词与投放策略。管理买家沟通、售后处理和账户健康，核查商标、图片、专利及商品内容合规风险，维护在售链接稳定运营。",
+      caseId: "amazon",
+    },
+  ],
 };
-// Machine-readable provenance supplements the human-readable windows above.
-// Unconfirmed fields stay null; no month or comparison baseline is inferred.
-window.PORTFOLIO.metrics.forEach(metric => Object.assign(metric, {
- sourceId: metric.sourceId || (metric.status === 'DOCUMENTED' ? 'SRC-HISTORICAL-DOCUMENTED' : metric.id === 'er' ? 'DERIVED-ER' : 'SRC-HISTORICAL-USER-SUPPLIED'),
- accountScope: metric.accountScope ?? null,
- windowStart: metric.windowStart ?? null,
- windowEnd: metric.windowEnd ?? null,
- comparisonWindow: metric.comparisonWindow ?? null,
- denominator: metric.denominator ?? (metric.id === 'er' ? {metricId:'impressions',value:965000,matchedScopeVerified:false} : metric.id === 'organic-share' ? {label:'报告总收入',value:null} : null),
- evidenceStatus: metric.status,
- fieldVerification: metric.fieldVerification || 'PENDING'
-}));

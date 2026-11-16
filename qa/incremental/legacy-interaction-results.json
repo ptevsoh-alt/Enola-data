@@ -1,0 +1,286 @@
+{
+  "passed": 70,
+  "total": 70,
+  "checks": [
+    {
+      "name": "homepage is a visual case index",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: gtm",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: social",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: community",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: brand",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: operations",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: seo",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: amazon",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: creative",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: crm",
+      "status": "PASS"
+    },
+    {
+      "name": "seven chapters and valid assets: creator",
+      "status": "PASS"
+    },
+    {
+      "name": "full case index",
+      "status": "PASS"
+    },
+    {
+      "name": "business filter",
+      "status": "PASS"
+    },
+    {
+      "name": "empty state",
+      "status": "PASS"
+    },
+    {
+      "name": "reset restores all cases",
+      "status": "PASS"
+    },
+    {
+      "name": "search matches professional terms",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain social",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain community",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain search",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain b2b",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain commerce",
+      "status": "PASS"
+    },
+    {
+      "name": "data domain lifecycle",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence impressions",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence engagements",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence visits",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence follows",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-views",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-viewers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-content-interactions",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-link-clicks",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-visits",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-follows",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence er",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence engagement-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-reach",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-size",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-month",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-members",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-posters",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence group-viewers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence organic-share",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence gsc",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-reach",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-sales",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-sales",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-cvr",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence retention",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence product-sales-stage",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-link-click-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence ig-event-engagement-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence ig-follower-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-email-open",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence b2b-lead-conversion",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence linkedin-follower-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence fb-follower-scale",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-profit-margin",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-offsite-followers",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-complaint-change",
+      "status": "PASS"
+    },
+    {
+      "name": "metric evidence amazon-review-change",
+      "status": "PASS"
+    },
+    {
+      "name": "concept image preview",
+      "status": "PASS"
+    },
+    {
+      "name": "mobile menu toggles",
+      "status": "PASS"
+    },
+    {
+      "name": "support page experience",
+      "status": "PASS"
+    },
+    {
+      "name": "support page capabilities",
+      "status": "PASS"
+    },
+    {
+      "name": "support page contact",
+      "status": "PASS"
+    },
+    {
+      "name": "support page about",
+      "status": "PASS"
+    },
+    {
+      "name": "skip link preserves route and focuses main",
+      "status": "PASS"
+    },
+    {
+      "name": "unknown route recovery",
+      "status": "PASS"
+    },
+    {
+      "name": "no runtime exceptions",
+      "status": "PASS"
+    }
+  ]
+}

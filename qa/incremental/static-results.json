@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "11 unique cases and 38 retained public metrics",
+      "status": "PASS"
+    },
+    {
+      "name": "metric provenance, definitions, windows and limitations",
+      "status": "PASS"
+    },
+    {
+      "name": "no creator operating records in any public payload",
+      "status": "PASS"
+    },
+    {
+      "name": "missing values and unverified comparison windows preserved",
+      "status": "PASS"
+    },
+    {
+      "name": "all content links resolve",
+      "status": "PASS"
+    },
+    {
+      "name": "scripts parse",
+      "status": "PASS"
+    },
+    {
+      "name": "public assets exhaustive, portable and hash verified",
+      "status": "PASS"
+    },
+    {
+      "name": "no raw evidence, private paths, remote scripts or submission code",
+      "status": "PASS"
+    }
+  ],
+  "passed": 8,
+  "total": 8
+}

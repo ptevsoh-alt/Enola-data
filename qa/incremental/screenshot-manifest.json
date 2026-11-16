@@ -1,0 +1,47 @@
+[
+  {
+    "file": "screenshots/desktop-campaign-wall.png",
+    "bytes": 330994,
+    "sha256": "33808446149ceb77ccbeadf2c0531b392a8ff359c0c4898a5e8ac353ffd7517e"
+  },
+  {
+    "file": "screenshots/desktop-data-chart.png",
+    "bytes": 117774,
+    "sha256": "78d4dd367279d50f49abbae6302d8d953b673a612c28564465067a68159f499f"
+  },
+  {
+    "file": "screenshots/desktop-growth.png",
+    "bytes": 153580,
+    "sha256": "278c45b38015c7dada0debaf9ad58735f4f7ad0989cfca9a463328809e9571df"
+  },
+  {
+    "file": "screenshots/desktop-home.png",
+    "bytes": 595296,
+    "sha256": "c769eeee2442bf62861bdb7f515a6890179dfc1f9b04c288f51a0f2cf3df3457"
+  },
+  {
+    "file": "screenshots/desktop-social-management.png",
+    "bytes": 149553,
+    "sha256": "9f49f0df71ddf4a548add5e9c4f3ab9d21231545f5c7f8c06a3fbb433c515c87"
+  },
+  {
+    "file": "screenshots/mobile-360-campaign.png",
+    "bytes": 96269,
+    "sha256": "89fe44dea9839ed81c7b629385cc0288fe47a678134623aaaa1c67b89b7bada1"
+  },
+  {
+    "file": "screenshots/mobile-375-growth.png",
+    "bytes": 68908,
+    "sha256": "424791f16eb0f136f3e144249b562c96a04f3c8b312c1a03473c96c499d44c25"
+  },
+  {
+    "file": "screenshots/mobile-390-asset-preview.png",
+    "bytes": 61311,
+    "sha256": "9486f4f5da7944f07c8f368bc37831ea1bf3b2c31fd64d77a1962d1291b0c731"
+  },
+  {
+    "file": "screenshots/mobile-390-community.png",
+    "bytes": 56308,
+    "sha256": "d38c32142628c911df84a27b9d966c19f76e2a4069efb617614378ea2679a419"
+  }
+]

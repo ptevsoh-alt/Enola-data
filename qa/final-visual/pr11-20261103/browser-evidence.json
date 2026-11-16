@@ -1,0 +1,927 @@
+{
+  "screenshots": [
+    {
+      "file": "before/360-community.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8181/#/case/community",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "Group proof",
+      "status": "PASS",
+      "issue": "MIME issue checked separately",
+      "timeUTC": "2026-11-03T07:09:46.533Z",
+      "timeAsiaShanghai": "2026-11-03 15:09:46"
+    },
+    {
+      "file": "before/1440-decision.png",
+      "viewport": [
+        1440,
+        900
+      ],
+      "url": "http://127.0.0.1:8181/#/case/social",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "four decision signals",
+      "status": "FAIL",
+      "timeUTC": "2026-11-03T07:09:56.873Z",
+      "timeAsiaShanghai": "2026-11-03 15:09:56"
+    },
+    {
+      "file": "before/360-decision.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8181/#/case/social",
+      "gitSHA": "a6af44cfebfdf0c2099b481277593ff854d3b9d8",
+      "module": "decision metrics",
+      "status": "FAIL",
+      "issue": "P2 long units wrap beside values",
+      "timeUTC": "2026-11-03T07:10:23.102Z",
+      "timeAsiaShanghai": "2026-11-03 15:10:23"
+    },
+    {
+      "file": "desktop-1440.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:41.247Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:41"
+    },
+    {
+      "file": "after/1440-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:42.798Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:42"
+    },
+    {
+      "file": "after/1440-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:45.837Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:45"
+    },
+    {
+      "file": "after/1440-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        1440,
+        900
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:50.289Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:50"
+    },
+    {
+      "file": "mobile-390.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:11:57.195Z",
+      "timeAsiaShanghai": "2026-11-03 15:11:57"
+    },
+    {
+      "file": "after/390-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:03.462Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:03"
+    },
+    {
+      "file": "after/390-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:10.042Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:10"
+    },
+    {
+      "file": "after/390-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        390,
+        844
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:11.792Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:11"
+    },
+    {
+      "file": "mobile-375.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:14.281Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:14"
+    },
+    {
+      "file": "after/375-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:15.397Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:15"
+    },
+    {
+      "file": "after/375-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:16.902Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:16"
+    },
+    {
+      "file": "after/375-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        375,
+        812
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:18.479Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:18"
+    },
+    {
+      "file": "mobile-360.png",
+      "url": "http://127.0.0.1:8182/#/home",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "home",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:21.567Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:21"
+    },
+    {
+      "file": "after/360-decision.png",
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "decision",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:22.907Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:22"
+    },
+    {
+      "file": "after/360-group.png",
+      "url": "http://127.0.0.1:8182/#/case/community",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "group",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:23.970Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:23"
+    },
+    {
+      "file": "after/360-data.png",
+      "url": "http://127.0.0.1:8182/#/data/social",
+      "viewport": [
+        360,
+        800
+      ],
+      "overflow": false,
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "data",
+      "status": "PASS",
+      "issue": "P2 units fixed; no overflow",
+      "timeUTC": "2026-11-03T07:12:24.675Z",
+      "timeAsiaShanghai": "2026-11-03 15:12:24"
+    },
+    {
+      "file": "after/360-decision-detail.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "P2 unit fix comparison",
+      "status": "PASS",
+      "timeUTC": "2026-11-03T07:14:35.741Z",
+      "timeAsiaShanghai": "2026-11-03 15:14:35"
+    },
+    {
+      "file": "interaction-evidence/360-group-drawer.png",
+      "viewport": [
+        360,
+        800
+      ],
+      "url": "http://127.0.0.1:8182/#/case/social",
+      "gitSHA": "f020aa8e4b9a6f1d5b32cb8f81e53ba63cda4562",
+      "module": "native click group-viewers drawer",
+      "status": "PASS",
+      "timeUTC": "2026-11-03T07:15:30.153Z",
+      "timeAsiaShanghai": "2026-11-03 15:15:30"
+    }
+  ],
+  "audits": [
+    {
+      "viewport": [
+        1440,
+        900
+      ],
+      "pages": [
+        {
+          "url": "http://127.0.0.1:8182/#/home",
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/social",
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/community",
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/data/social",
+          "viewport": [
+            1440,
+            900
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "drawer fb-views",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-content-interactions",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-link-clicks",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-visits",
+          "pass": true
+        },
+        {
+          "name": "drawer group-viewers",
+          "pass": true
+        },
+        {
+          "name": "drawer group-posters",
+          "pass": true
+        },
+        {
+          "name": "drawer group-members",
+          "pass": true
+        },
+        {
+          "name": "social to community",
+          "pass": true
+        },
+        {
+          "name": "community to data",
+          "pass": true
+        },
+        {
+          "name": "data to social",
+          "pass": true
+        },
+        {
+          "name": "chapter anchor",
+          "pass": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        390,
+        844
+      ],
+      "pages": [
+        {
+          "url": "http://127.0.0.1:8182/#/home",
+          "viewport": [
+            390,
+            844
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/social",
+          "viewport": [
+            390,
+            844
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/community",
+          "viewport": [
+            390,
+            844
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/data/social",
+          "viewport": [
+            390,
+            844
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "mobile menu",
+          "pass": true
+        },
+        {
+          "name": "menu case navigation",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-views",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-content-interactions",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-link-clicks",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-visits",
+          "pass": true
+        },
+        {
+          "name": "drawer group-viewers",
+          "pass": true
+        },
+        {
+          "name": "drawer group-posters",
+          "pass": true
+        },
+        {
+          "name": "drawer group-members",
+          "pass": true
+        },
+        {
+          "name": "social to community",
+          "pass": true
+        },
+        {
+          "name": "community to data",
+          "pass": true
+        },
+        {
+          "name": "data to social",
+          "pass": true
+        },
+        {
+          "name": "chapter anchor",
+          "pass": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        375,
+        812
+      ],
+      "pages": [
+        {
+          "url": "http://127.0.0.1:8182/#/home",
+          "viewport": [
+            375,
+            812
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/social",
+          "viewport": [
+            375,
+            812
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/community",
+          "viewport": [
+            375,
+            812
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/data/social",
+          "viewport": [
+            375,
+            812
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "mobile menu",
+          "pass": true
+        },
+        {
+          "name": "menu case navigation",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-views",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-content-interactions",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-link-clicks",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-visits",
+          "pass": true
+        },
+        {
+          "name": "drawer group-viewers",
+          "pass": true
+        },
+        {
+          "name": "drawer group-posters",
+          "pass": true
+        },
+        {
+          "name": "drawer group-members",
+          "pass": true
+        },
+        {
+          "name": "social to community",
+          "pass": true
+        },
+        {
+          "name": "community to data",
+          "pass": true
+        },
+        {
+          "name": "data to social",
+          "pass": true
+        },
+        {
+          "name": "chapter anchor",
+          "pass": true
+        }
+      ],
+      "errors": []
+    },
+    {
+      "viewport": [
+        360,
+        800
+      ],
+      "pages": [
+        {
+          "url": "http://127.0.0.1:8182/#/home",
+          "viewport": [
+            360,
+            800
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/social",
+          "viewport": [
+            360,
+            800
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/case/community",
+          "viewport": [
+            360,
+            800
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        },
+        {
+          "url": "http://127.0.0.1:8182/#/data/social",
+          "viewport": [
+            360,
+            800
+          ],
+          "overflow": false,
+          "overflowElements": [],
+          "images": [
+            {
+              "src": "assets/evidence/facebook-page-insights.webp",
+              "natural": [
+                420,
+                391
+              ],
+              "loaded": true,
+              "fit": "contain"
+            },
+            {
+              "src": "assets/evidence/facebook-group-insights.webp",
+              "natural": [
+                420,
+                359
+              ],
+              "loaded": true,
+              "fit": "contain"
+            }
+          ],
+          "footer": true
+        }
+      ],
+      "checks": [
+        {
+          "name": "mobile menu",
+          "pass": true
+        },
+        {
+          "name": "menu case navigation",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-views",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-content-interactions",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-link-clicks",
+          "pass": true
+        },
+        {
+          "name": "drawer fb-visits",
+          "pass": true
+        },
+        {
+          "name": "drawer group-viewers",
+          "pass": true
+        },
+        {
+          "name": "drawer group-posters",
+          "pass": true
+        },
+        {
+          "name": "drawer group-members",
+          "pass": true
+        },
+        {
+          "name": "social to community",
+          "pass": true
+        },
+        {
+          "name": "community to data",
+          "pass": true
+        },
+        {
+          "name": "data to social",
+          "pass": true
+        },
+        {
+          "name": "chapter anchor",
+          "pass": true
+        }
+      ],
+      "errors": []
+    }
+  ],
+  "console": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":true,\"hasTouch\":true,\"isLandscape\":false,\"width\":360,\"height\":800}\nEmulating prefers-reduced-motion: reduce\n## Console messages\nShowing 1-1 of 1 (Page 1 of 1).\nmsgid=24 [error] Uncaught (in promise) (0 args)",
+  "network": "Emulating viewport: {\"deviceScaleFactor\":1,\"isMobile\":true,\"hasTouch\":true,\"isLandscape\":false,\"width\":360,\"height\":800}\nEmulating prefers-reduced-motion: reduce\n## Network requests\nShowing 1-72 of 72 (Page 1 of 1).\nreqid=195 GET http://127.0.0.1:8182/#/data/social [200]\nreqid=196 GET http://127.0.0.1:8182/styles.css [200]\nreqid=197 GET http://127.0.0.1:8182/growth.css [200]\nreqid=198 GET http://127.0.0.1:8182/data.js [200]\nreqid=199 GET http://127.0.0.1:8182/growth.js [200]\nreqid=200 GET http://127.0.0.1:8182/app.js [200]\nreqid=201 GET chrome-extension://hoklmmgfnpapgjgcpechhaamimifchmp/frame_ant/frame_ant.js [200]\nreqid=202 GET chrome-extension://ofaokhiedipichpaobibbnahnkdoiiah/src/frames_handler.js [200]\nreqid=203 GET http://127.0.0.1:8182/assets/evidence/facebook-page-insights.webp [200]\nreqid=204 GET http://127.0.0.1:8182/assets/evidence/facebook-group-insights.webp [200]\nreqid=205 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=206 GET chrome-extension://dcembjiicioienepbaldihjhmkedagee/sniffer.8634f119.js [200]\nreqid=207 GET chrome-extension://86c2a3fe-1734-4e99-9755-64b68b1d9c00/content-runtime.js [0]\nreqid=208 GET chrome-extension://modkelfkcfjpgbfmnbnllalkiogfofhb/content-runtime.js [200]\nreqid=209 GET http://127.0.0.1:8182/assets/favicon.svg [200]\nreqid=210 GET chrome-extension://modkelfkcfjpgbfmnbnllalkiogfofhb/content-runtime/rolldown-runtime-CbXtAM7H.js [200]\nreqid=211 GET http://127.0.0.1:8182/assets/concept-01.png [200]\nreqid=212 GET http://127.0.0.1:8182/assets/favicon.svg [200]\nreqid=213 GET chrome-extension://modkelfkcfjpgbfmnbnllalkiogfofhb/assets/read-frog-Bn4EKKnQ.png [200]\nreqid=214 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=215 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=216 GET http://127.0.0.1:8182/assets/concept-02.png [200]\nreqid=217 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=218 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=219 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=220 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=221 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=222 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=223 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=224 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=225 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=226 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=227 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=228 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=229 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=230 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=231 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=232 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=233 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=234 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=235 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=236 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=237 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=238 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=239 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=240 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=241 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=242 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=243 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=244 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=245 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=246 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=247 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=248 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=249 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=250 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=251 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=252 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=253 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=254 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=255 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=256 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=257 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=258 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=259 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=260 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=261 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=262 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=263 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=264 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [200]\nreqid=265 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [pending]\nreqid=266 POST https://sentry.midway.run/api/701/envelope/?sentry_version=7&sentry_key=73dddcd1b0cad22657a2d2bbee66c3f5&sentry_client=sentry.javascript.browser%2F9.46.0 [pending]"
+}
