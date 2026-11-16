@@ -239,26 +239,25 @@
       insight: "以生活场景组织信息，需要同时保留产品条件与适用限制。",
       idea: "从节日后的真实清洁任务切入，展示解决路径。",
       mechanism: "场景开场 → 任务演示 → 可信说明 → 下一步入口。",
-      mix: "概念主视觉、短视频分镜、FAQ 与站内承接页面。",
+      mix: "节庆海报确定主张，短视频展示产品操作，社群话题邀请读者补充家庭经验。",
       participation: "可设置问题征集与经验分享；是否执行及具体规则待确认。",
       measurement: "方案未提供执行记录；没有可核验的播放、参与或转化结果。",
       note: "复用已标注的概念视觉；不是历史已发布活动或执行成果。",
     },
     {
       id: "collab",
-      name: "品牌联合传播 / 交付框架",
-      kind: "CONCEPT",
-      label: "合作方法示意",
+      name: "家居品牌联合抽奖",
+      kind: "DOCUMENTED",
+      label: "联合活动海报",
       art: "collab",
-      objective: "在共同受众与真实价值交换基础上设计协同传播。",
-      insight: "合作双方需要先确认受众匹配、产品事实、资产权限与退出条件。",
-      idea: "共同用户任务，一致的事实，不同渠道表达。",
-      mechanism: "适配判断 → 双方 Brief → 权责与授权 → 联合审核 → 发布与复盘。",
-      mix: "品牌主视觉、事实包、双方渠道版本和承接入口；发布许可待确认。",
-      participation: "参与资格与用户内容许可需单独设计，不承诺未确认的权益。",
-      measurement:
-        "暂无可核验的品牌合作方、联名发布或商业贡献，展示范围仅为方法。",
-      note: "并非已完成品牌合作案例；不填造合作品牌、预算、刊发或销售成果。",
+      objective: "用同一张海报介绍家居种植与清洁电器的联合抽奖。",
+      insight: "家庭种植和清洁共用一个家居场景，奖品可以在同一画面里被理解。",
+      idea: "The Pristine Living Space Giveaway",
+      mechanism: "海报把家庭种植设备与电动清洁刷并排展示，并标出 4 月 18 日至 28 日的活动窗口。",
+      mix: "海报以奖品为主视觉，活动名称和日期形成两层信息。",
+      participation: "活动规则、中奖及奖品交付记录待补。",
+      measurement: "海报可核对活动主题、物料与画面所示日期。发布记录和参与数据待补。",
+      note: "日期来自海报，年份未注明。",
     },
   ];
   function pathSteps(items) {
@@ -293,7 +292,7 @@
       ${header(
         "FACEBOOK PAGE / 后台截图记录",
         "Facebook 页面关键数据",
-        "浏览量、互动次数、链接点击、页面访问和关注次数分别呈现。每项数据保留自己的变化记录，不把不同指标放在同一尺度上比较。",
+        "五项汇总数据及平台显示的变化值。点选任一指标查看定义、统计窗口与来源。",
       )}
       <div class="g-snapshot-grid">${ids
         .map((id) => {
@@ -322,10 +321,29 @@
           </article>`;
         })
         .join("")}</div>
-      <p class="g-snapshot-footnote">
-        这些数字来自 Facebook 页面分析后台截图（原图不公开）。截图未显示完整统计日期和比较周期；百分比沿用后台原始变化值，不标注同比或环比，也不反推前期绝对数。页面浏览量没有可核验的对照值。
-      </p>
+      <details class="g-chart-disclosure" open>
+        <summary>对比后台显示的变化百分比</summary>
+        ${comparisonBars(ids.filter((id) => m(id).changeDisplay), changePercent, (x) => x.changeDisplay, { label: "平台显示变化百分比", unit: "%", max: 20000, shorten: (x) => x.label.replace("Facebook ", "") })}
+        <p class="g-chart-note">来源为 Facebook 页面分析。统计窗口、比较窗口和基期数值未注明。页面浏览量缺少可核验的变化值。</p>
+      </details>
     </section>`;
+  }
+  function changePercent(x) {
+    const [, amount, tenThousand] = x.changeDisplay.match(/([\d,.]+)(万?)%/);
+    return Number(amount.replaceAll(",", "")) * (tenThousand ? 10000 : 1);
+  }
+  function comparisonBars(ids, value, display, { label, unit, max, shorten = (x) => x.label }) {
+    const tick = new Intl.NumberFormat("zh-CN");
+    return `<div class="g-compare-chart" role="group" aria-label="${esc(label)}">
+      <div class="g-compare-axis" aria-hidden="true"><span>0</span><span>${tick.format(max / 2)}${unit}</span><span>${tick.format(max)}${unit}</span></div>
+      ${ids.map((id) => {
+        const x = m(id);
+        return `<button class="g-compare-row" type="button" data-evidence="${id}" aria-label="${esc(shorten(x))}，${esc(display(x))}，查看指标口径">
+          <span>${esc(shorten(x))}</span><strong>${esc(display(x))}</strong>
+          <span class="g-compare-track" aria-hidden="true"><span style="--g-measure:${100 * value(x) / max}%"></span></span>
+        </button>`;
+      }).join("")}
+    </div>`;
   }
   function historyCard(id) {
     const x = m(id);
@@ -390,20 +408,45 @@
   function anchors() {
     return `<div class="g-evidence-anchors"><div><p class="eyebrow">TIME ANCHORS / 活动与数据</p><h3>知道发生了什么，也说明尚缺什么。</h3></div><article><span>已知年份 / 2025</span><b>Meta 阶段汇总</b><p>曝光与互动有历史汇总，缺少逐期原值。</p>${evidence("impressions")}</article><article><span>活动节点 / 日期待补</span><b>Instagram 活动期互动变化</b><p>原记录 +1,870.9%；具体活动、比较基期与日期未注明。不绑定到任一概念活动。</p>${evidence("ig-event-engagement-change")}</article><article><span>社群窗口 / 2025/11/02–2026/09/30</span><b>查看与参与分别记录</b><p>平台截图所选分析范围，不是活动举办日期。无活动级归因。</p>${evidence("group-posters")}</article></div>`;
   }
-  function trends() {
-    return `<section class="g-trend-status" aria-label="趋势数据状态">
-      <div>
-        <p class="eyebrow">TREND READINESS</p>
-        <h3>趋势图暂不绘制</h3>
-        <p>目前缺少同一账号、同一指标、同一统计周期的连续日期数据。先保留已有阶段变化；补齐日期和原值后，再制作时间趋势对比。</p>
+  function sourceEvidence() {
+    return `<section class="g-module g-source-evidence" aria-label="平台后台趋势截图证据">
+      ${header(
+        "SOURCE MATERIAL / BACKEND INSIGHTS",
+        "数据来源",
+        "展开查看匿名化平台截图及对应指标。",
+      )}
+      <div class="g-source-evidence-grid">
+        <details class="g-source-evidence-card">
+          <summary>Facebook 页面分析</summary>
+          <a href="assets/evidence/facebook-page-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook 页面分析后台截图">
+            <img src="assets/evidence/facebook-page-insights.webp" alt="Facebook 页面分析后台截图，展示浏览量、内容互动、链接点击、访问和关注的原生趋势曲线；浏览人数显示为未提供" width="420" height="391" loading="lazy" decoding="async">
+          </a>
+          <p>
+            页面浏览量 138.2 万次；内容互动 5.3 万次；链接点击 7,364 次；页面访问 5.4 万次；关注次数 1 万次。后台显示的变化百分比保留在各自指标卡中，比较周期未注明。
+          </p>
+          <small>公开图像已裁去无关界面区域；截图未显示完整日期范围。浏览人数显示“--”，不以 0 代替。</small>
+        </details>
+        <details class="g-source-evidence-card">
+          <summary>Facebook Group 社群分析</summary>
+          <a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook Group 后台截图">
+            <img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台趋势截图，显示发帖和评论人数及查看人数两组曲线" width="420" height="359" loading="lazy" decoding="async">
+          </a>
+          <div class="g-source-window">
+            <span>后台所选统计范围</span>
+            <strong>2025.11.02 — 2026.09.30</strong>
+          </div>
+          <p>
+            平台显示 146 人发帖和评论、34,387 人查看；页面另显示 4,009 名成员，但该成员快照日期未注明。三项指标分别保留，不计算活跃率或成员转化率。
+          </p>
+          <small>公开图像已裁去群组名称与左侧管理导航；曲线为后台原图，不是逐日数据导出。</small>
+        </details>
       </div>
-      <div class="g-readiness">
-        <span><b>01</b>连续日期与原值</span>
-        <span><b>02</b>同一账号与字段</span>
-        <span><b>03</b>一致统计窗口</span>
-        <strong>连续数据待补 · 不绘制趋势线</strong>
-      </div>
+      <p class="g-source-evidence-note">日级或周级趋势需要同一账号、同一字段的连续日期导出。</p>
+      <div class="g-source-evidence-actions"><a href="#/case/social">返回社媒管理案例 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
+  }
+  function trends() {
+    return `<p class="g-chart-note">Facebook Page 和 Group 的现有数据为阶段汇总。日级或周级趋势需使用连续日期导出。</p>`;
   }
   const platformGroups = {
     Meta: ["impressions", "engagements", "er"],
@@ -458,10 +501,11 @@
         "社媒增长：历史变化与页面表现",
         "按平台、账号和统计阶段阅读已有记录；不同指标不放在同一尺度上比较，也不把阶段汇总推算成月度趋势。",
       )}
-      ${historicalGrowth()}
       ${facebookSnapshot()}
+      ${historicalGrowth()}
       ${trends()}
       ${anchors()}
+      ${sourceEvidence()}
     </section>`;
   }
   function editorial() {
@@ -505,6 +549,7 @@
     ${editorial()}
     ${campaignWall()}
     ${communitySummary()}
+    ${socialDecisionBridge()}
     ${socialLoop()}`;
   }
   function communitySummary() {
@@ -530,7 +575,61 @@
       <div class="g-social-community-actions">
         <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
         <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
+        <a href="#/data/social">查看后台趋势截图与数据证据 ↗</a>
       </div>
+    </section>`;
+  }
+  function socialDecisionBridge() {
+    const field = (id) => {
+      const x = m(id);
+      const change = x.changeDisplay
+        ? `<small class="g-decision-change">${esc(x.changeDisplay)} · 比较周期未注明</small>`
+        : "";
+      return `<div class="g-decision-metric" data-growth-metric="${id}">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+        ${change}
+        ${evidence(id)}
+      </div>`;
+    };
+    return `<section class="g-module g-social-decision" id="social-data-decisions">
+      ${header(
+        "FROM SIGNAL TO DECISION / DATA-LED MANAGEMENT",
+        "让后台数据进入内容与社群管理决策。",
+        "将已记录的平台字段与日常管理动作对应。这里展示的是复盘方法，不是单项内容的因果归因；需要逐条内容或同窗口站点数据时，仍以原始导出为准。",
+      )}
+      <div class="g-decision-grid">
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>01 / PAGE VIEWS</span><h3>页面浏览量</h3></div>
+          <div class="g-decision-metrics">${field("fb-views")}</div>
+          <p class="g-decision-question">观察问题：页面浏览量反映浏览规模，不等同于曝光、覆盖人数或独立访客。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>按平台、内容支柱与形式拆分内容明细，复核主题供给和发布节奏。当前没有逐条内容导出，不据此判断哪条内容贡献最高。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>02 / CONTENT INTERACTIONS</span><h3>内容互动</h3></div>
+          <div class="g-decision-metrics">${field("fb-content-interactions")}</div>
+          <p class="g-decision-question">观察问题：互动次数是平台汇总字段；后台变化值未注明比较周期，不解释为同比或环比。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>结合评论、社群提问和内容主题复核用户反馈，再调整教程、FAQ 与互动话题。当前没有互动动作拆分，不推断点赞、评论或分享的贡献比例。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>链接与页面访问</h3></div>
+          <div class="g-decision-metrics">${field("fb-link-clicks")}${field("fb-visits")}</div>
+          <p class="g-decision-question">观察问题：链接点击与页面访问是两个不同字段，不能相加，也不能直接视为站点会话。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>检查 CTA、目标链接与落地页信息一致性；若要判断站内后续行为，需核对同一窗口的 UTM、GA4 会话与关键事件。点击不等于订单或收入。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>04 / COMMUNITY PARTICIPATION</span><h3>社群查看与参与</h3></div>
+          <div class="g-decision-metrics">${field("group-viewers")}${field("group-posters")}${field("group-members")}</div>
+          <p class="g-decision-question">观察问题：查看人数、发帖和评论人数、成员数分别代表不同维度；成员数是日期未注明的快照。</p>
+          <div class="g-decision-action"><b>管理复盘动作</b><p>通过教程、投票、清洁挑战、UGC 与问题答疑设置参与入口；把高频问题回流 FAQ 和内容计划。不以这三项数据计算活跃率或成员转化率。</p></div>
+        </article>
+      </div>
+      <div class="g-decision-review">
+        <span>MANAGEMENT REVIEW LOOP</span>
+        <div><b>拆分字段</b><i>→</i><b>核对窗口与定义</b><i>→</i><b>识别可行动问题</b><i>→</i><b>调整内容与社群计划</b></div>
+      </div>
+      <p class="g-decision-note">证据边界：当前后台截图支持平台字段汇总与原生曲线展示；没有同账号、同口径的逐日导出，不能重建日级趋势，也不能把平台表现归因到某一条内容或单场活动。</p>
+      <div class="g-decision-links"><a href="#/data/social">查看平台数据与后台截图 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
   }
   function socialLoop() {
@@ -563,12 +662,28 @@
         ["治理与授权", "审核事实；二次使用单独确认许可"],
         ["反馈闭环", "高频问题 → 产品确认 → FAQ 与选题"],
       ],
-    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${participation()}</section>`;
+    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${participation()}${communitySourceEvidence()}</section>`;
+  }
+  function communitySourceEvidence() {
+    const members = m("group-members");
+    return `<section class="g-module g-community-proof" aria-label="Facebook Group 后台数据证据">
+      ${header(
+        "FACEBOOK GROUP INSIGHTS",
+        "社群查看与参与",
+        "2025.11.02 — 2026.09.30 · Facebook Group 自带分析",
+      )}
+      ${comparisonBars(["group-viewers", "group-posters"], (x) => x.value, (x) => `${x.display} 人`, { label: "同一窗口内的平台统计人数", unit: " 人", max: 40000 })}
+      <p class="g-chart-note">按平台原字段读取两项人数；去重规则与两组人群的重合情况未注明。</p>
+      <button class="g-compare-snapshot" type="button" data-evidence="group-members"><strong>${esc(members.display)} 名成员</strong><span>成员快照 · 日期未注明 ↗</span></button>
+      <div class="g-source-evidence-actions"><a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer">打开匿名化后台截图 ↗</a><a href="#/data/social">查看完整社媒数据 ↗</a></div>
+    </section>`;
   }
   function visual(c) {
     if (c.art === "03")
       return `<img src="assets/concept-03.png" alt="节日内容概念视觉，非历史已执行活动" width="1000" height="1200" loading="lazy">`;
-    return `<div class="g-campaign-art art-${c.art}" aria-hidden="true"><small>${c.art === "challenge" ? "COMMUNITY / PARTICIPATION" : "BRAND / SHARED VALUE"}</small><strong>${c.art === "challenge" ? "一个场景。<br>一种经验。<br>一起讨论。" : "共同任务。<br>一致事实。<br>协同表达。"}</strong><div>${c.art === "challenge" ? "<span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span>" : "<span>适配</span><i>×</i><span>权限</span><i>×</i><span>交付</span>"}</div></div>`;
+    if (c.art === "collab")
+      return `<img src="assets/projects/joint-giveaway.webp" alt="匿名化联合抽奖海报，展示种植设备和电动清洁刷" loading="lazy" decoding="async">`;
+    return `<div class="g-campaign-art art-challenge" aria-hidden="true"><small>COMMUNITY / PARTICIPATION</small><strong>一个小区域，<br>一次清洁分享。</strong><div><span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span></div></div>`;
   }
   function campaignPanel(index = 0) {
     const c = campaigns[index],
@@ -591,7 +706,7 @@
     )}<p class="g-campaign-note">${c.note} Instagram 活动期互动变化的具体活动日期和基期未注明，不绑定到这里的任一方案。</p></div>`;
   }
   function campaignWall() {
-    return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("ONLINE CAMPAIGNS", "日常内容之外，独立组织一场活动。", "清洁挑战为机制重构；节日与品牌联合传播为概念。没有活动原始素材时使用标注清楚的视觉样张。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
+    return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("CAMPAIGNS", "活动项目", "清洁挑战、节庆内容与家居品牌联合抽奖。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
   }
   function trendSeries(series) {
     if (
@@ -662,12 +777,13 @@
       } else if (domain === "community")
         main
           .querySelector(".page")
-          ?.insertAdjacentHTML("beforeend", participation() + association());
+          ?.insertAdjacentHTML("beforeend", communitySourceEvidence() + association());
       else if (domain === "b2b")
         main
           .querySelector(".page")
           ?.insertAdjacentHTML("beforeend", b2bStage());
     }
+    window.enhancePortfolioProjects?.(main, { page, id });
     decorateCovers(main);
   };
   function decorateCovers(main) {

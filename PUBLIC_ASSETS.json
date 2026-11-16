@@ -25,9 +25,64 @@
     "sha256": "bb04f0f70bdfd4e25e2a74dce689bcf928159bd64e205d37c2f14e9235d468c9"
   },
   {
+    "file": "assets/evidence/facebook-group-insights.webp",
+    "bytes": 4146,
+    "sha256": "47c9b805c8c0238c11b8edb6fafd77435e9d03113c226df771c57445d2cebe01"
+  },
+  {
+    "file": "assets/evidence/facebook-page-insights.webp",
+    "bytes": 6948,
+    "sha256": "1a95ebb05e8be629ccbcee53b6d0ee1b09f94f9549a6a64dc61b6e0180214954"
+  },
+  {
     "file": "assets/favicon.svg",
     "bytes": 199,
     "sha256": "fb2d4c1d4cb6fe65445725b2c888b4d6e3c41e574741166b2b9a711b13c7074a"
+  },
+  {
+    "file": "assets/projects/brand-house.webp",
+    "bytes": 192368,
+    "sha256": "52c922be7bd7b7b36048b27f210ad98499d23f01f04661e34e2e1142db3e8e5d"
+  },
+  {
+    "file": "assets/projects/expo-display.webp",
+    "bytes": 26354,
+    "sha256": "11e1b1f5aa396ea7d581df9dccc1e8c7a13a9c568981e4a85d2f7d46aaba6df4"
+  },
+  {
+    "file": "assets/projects/holiday-scene-1.webp",
+    "bytes": 39324,
+    "sha256": "bac2b4c47a534e1bcaacadc3c1ba8b0d674aeddf4fa2ec4d8439f1250c7e0644"
+  },
+  {
+    "file": "assets/projects/holiday-scene-2.webp",
+    "bytes": 15814,
+    "sha256": "fbbd31028a6bfff3bf23f4a4467fd5b8fe32427ec344efa9b8c0f38c51cbc6cf"
+  },
+  {
+    "file": "assets/projects/joint-giveaway.webp",
+    "bytes": 76780,
+    "sha256": "f856ab71f0b69c182975afad02a012a9453c3054a951abd5b0d7024df0884c33"
+  },
+  {
+    "file": "assets/projects/mop-kv-detail.webp",
+    "bytes": 34630,
+    "sha256": "51a5a0c39e01251830544b6c808ce0a326ba490623a6812730398146e29c7bd3"
+  },
+  {
+    "file": "assets/projects/pr-home-scene.webp",
+    "bytes": 35048,
+    "sha256": "d2c329d4a88e1613c6c076070a7a5f4ec142c899e0e1afeb43e130d1a08a56a3"
+  },
+  {
+    "file": "assets/projects/stairs-video-frame.webp",
+    "bytes": 29814,
+    "sha256": "25821294a70aa63dcb0503e0a52f1a277fc15c7bc7d8587c979bf5698227d2d3"
+  },
+  {
+    "file": "assets/projects/vacuum-video-frame.webp",
+    "bytes": 21192,
+    "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
     "file": "data.js",
@@ -36,18 +91,23 @@
   },
   {
     "file": "growth.css",
-    "bytes": 33374,
-    "sha256": "f2add54da74728c2c0a128a7ad58aa4e8d39f1c7257e7b4308ed364966aa5b4d"
+    "bytes": 42953,
+    "sha256": "af23695d50d1e582c42a3fb3ec2181832eec9a9c328ee9cde1812b97f75265be"
   },
   {
     "file": "growth.js",
-    "bytes": 38759,
-    "sha256": "adfdfceb0029f346cc675f0fa2f80f26bb1c8ba07f178ed222fe54a697e922e7"
+    "bytes": 47698,
+    "sha256": "0e1f85a4bb875c47de8f2ccd42fe52487d365efb302f8a1b472771c7015fe3a5"
   },
   {
     "file": "index.html",
-    "bytes": 3485,
-    "sha256": "46a1a0c7ffcab946b05f520ff1cb37224ab1c081185a18db1c7f8d01ecc59097"
+    "bytes": 3531,
+    "sha256": "a81d8f417dea965e0050fb8eb936d8ba91603c45fba45f9fd91eb33e4385b2cc"
+  },
+  {
+    "file": "projects.js",
+    "bytes": 18424,
+    "sha256": "74fe86af971bb5ec4cc5b1e29edb4b7d2418de7f00ec1aad7097d8ff025c5f02"
   },
   {
     "file": "robots.txt",

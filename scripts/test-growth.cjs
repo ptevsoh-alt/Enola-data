@@ -33,7 +33,8 @@ const fs = require("fs"),
       sha(
         read("site/index.html")
           .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
-          .replace('    <script src="growth.js" defer></script>\n', ""),
+          .replace('    <script src="growth.js" defer></script>\n', "")
+          .replace('    <script src="projects.js" defer></script>\n', ""),
       ),
       baseline.files["site/index.html"],
     ),
@@ -61,7 +62,10 @@ const fs = require("fs"),
     };
     w.addEventListener("error", (e) => errors.push(e.message));
     w.eval(read("site/data.js"));
-    if (enhanced) w.eval(read("site/growth.js"));
+    if (enhanced) {
+      w.eval(read("site/growth.js"));
+      w.eval(read("site/projects.js"));
+    }
     w.eval(app);
     return { dom, w, d: w.document, errors };
   }
@@ -125,6 +129,23 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".g-social-ownership>article").length, 3);
     assert.ok(d.querySelector(".g-social-ownership").textContent.includes("产品、设计、视频、电商"));
   });
+  check("social metrics are connected to management decisions without causal claims", () => {
+    const section = d.querySelector("#social-data-decisions");
+    assert.ok(section);
+    assert.equal(section.querySelectorAll(".g-decision-card").length, 4);
+    for (const id of ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "group-viewers", "group-posters", "group-members"])
+      assert.ok(section.querySelector(`.g-decision-metric[data-growth-metric="${id}"]`), id);
+    assert.ok(section.textContent.includes("不等于订单或收入"));
+    assert.equal(section.querySelectorAll(".g-decision-card")[0].querySelector("h3").textContent, "页面浏览量");
+    assert.equal(section.querySelectorAll(".g-decision-card")[1].querySelector("h3").textContent, "内容互动");
+    assert.equal(section.querySelectorAll(".g-decision-card")[2].querySelector("h3").textContent, "链接与页面访问");
+    assert.ok(!section.textContent.includes("内容触达"));
+    assert.ok(!section.textContent.includes("站点导流"));
+    assert.ok(section.textContent.includes("计算活跃率或成员转化率"));
+    assert.ok(section.textContent.includes("不是单项内容的因果归因"));
+    assert.ok(section.querySelector('a[href="#/data/social"]'));
+    assert.ok(section.querySelector('a[href="#/case/community"]'));
+  });
   check("editorial and campaign planning are connected to the social case", () => {
     assert.ok(d.querySelector(".g-editorial"));
     assert.ok(d.querySelector(".g-campaign-wall"));
@@ -138,6 +159,7 @@ const fs = require("fs"),
     );
     assert.ok(d.querySelector(".g-social-community-note").textContent.includes("不合并为增长率或活跃率"));
     assert.ok(d.querySelector('.g-social-community-actions a[href="#/case/community"]'));
+    assert.ok(d.querySelector('.g-social-community-actions a[href="#/data/social"]'));
   });
   check("B2B Facebook follower scale is not mixed into the social case", () => {
     assert.equal(d.querySelectorAll('[data-growth-metric="fb-follower-scale"]').length, 0);
@@ -152,11 +174,28 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#evidence-dialog").open),
   );
   d.querySelector('[data-close="evidence-dialog"]').click();
-  check("no fabricated trend path or series", () => {
+  check("aggregate data never supplies a fabricated daily series", () => {
     assert.equal(w.PORTFOLIO_GROWTH.series.length, 0);
     assert.ok(
-      d.querySelector(".g-trend-status").textContent.includes("不绘制趋势线"),
+      d.querySelector(".g-growth").textContent.includes("连续日期导出"),
     );
+  });
+  check("Facebook source evidence contains two anonymized backend screenshots", () => {
+    const cards = d.querySelectorAll(".g-source-evidence-card");
+    assert.equal(cards.length, 2);
+    assert.equal(
+      d.querySelector('.g-source-evidence-card img[src="assets/evidence/facebook-page-insights.webp"]')?.getAttribute("alt")?.includes("Facebook 页面分析后台截图"),
+      true,
+    );
+    assert.equal(
+      d.querySelector('.g-source-evidence-card img[src="assets/evidence/facebook-group-insights.webp"]')?.getAttribute("alt")?.includes("Facebook Group Insights"),
+      true,
+    );
+    assert.ok(d.querySelector(".g-source-window").textContent.includes("2025.11.02"));
+    assert.ok(d.querySelector(".g-source-window").textContent.includes("2026.09.30"));
+    assert.ok([...cards].every((card) => card.tagName === "DETAILS" && !card.open));
+    assert.ok(d.querySelector('.g-source-evidence-actions a[href="#/case/social"]'));
+    assert.ok(d.querySelector('.g-source-evidence-actions a[href="#/case/community"]'));
   });
   await route("/data/social");
   d.querySelector('[data-g-platform="Instagram"]').click();
@@ -212,6 +251,26 @@ const fs = require("fs"),
       2,
     );
   });
+  check("new evidence modules use readable typography", () => {
+    const css = read("site/growth.css");
+    assert.ok(css.includes(".g-decision-question { font-size: 13px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-decision-action p { font-size: 13px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-decision-note { font-size: 12px; line-height: 1.8; }"));
+    assert.ok(css.includes(".g-chart-note { margin: .75rem 0;"));
+  });
+  check("community case presents its own source-backed Facebook Group evidence", () => {
+    const proof = d.querySelector(".g-community-proof");
+    assert.ok(proof);
+    assert.ok(proof.querySelector('a[href="assets/evidence/facebook-group-insights.webp"]'));
+    assert.deepEqual(
+      [...proof.querySelectorAll(".g-compare-row")].map(x => x.dataset.evidence),
+      ["group-viewers", "group-posters"],
+    );
+    assert.ok(proof.textContent.includes("2025.11.02"));
+    assert.ok(proof.textContent.includes("2026.09.30"));
+    assert.equal(proof.querySelector(".g-compare-snapshot").dataset.evidence, "group-members");
+    assert.ok(proof.querySelector('a[href="#/data/social"]'));
+  });
   await route("/case/social");
   check("Facebook page snapshot uses five independent metric cards", () => {
     assert.equal(d.querySelectorAll(".g-snapshot-card").length, 5);
@@ -235,10 +294,18 @@ const fs = require("fs"),
       const card = d.querySelector(`.g-snapshot-card[data-growth-metric="${id}"]`);
       assert.ok(card.textContent.includes(value), id);
       assert.ok(card.textContent.includes("比较周期未注明"), id);
+      assert.equal(d.querySelector(`.g-compare-row[data-evidence="${id}"] strong`).textContent, value);
     }
     assert.ok(
       d.querySelector('.g-snapshot-card[data-growth-metric="fb-views"]').textContent.includes("未提供"),
     );
+    assert.equal(d.querySelector('.g-compare-row[data-evidence="fb-views"]'), null);
+    assert.equal(d.querySelector('.g-compare-row[data-evidence="fb-link-clicks"] .g-compare-track span').style.getPropertyValue('--g-measure'), '85%');
+  });
+  check("Father's Day calendar renders thirty selectable bilingual entries", () => {
+    const days = [...d.querySelectorAll("#fathers-day-calendar [data-calendar-day]")];
+    assert.deepEqual(days.map((day) => Number(day.dataset.calendarDay)), Array.from({ length: 30 }, (_, index) => index + 1));
+    assert.ok(days.every((day) => day.querySelector('[lang="en"]') && day.querySelector('summary b')));
   });
   check("social historical growth is grouped by social channel without B2B metrics", () => {
     assert.equal(d.querySelectorAll(".g-history-card").length, 7);
