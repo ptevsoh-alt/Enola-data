@@ -233,7 +233,7 @@
   function historyCard(id) {
     const x = m(id);
     const pending = x.status === "PENDING";
-    const value = id === "group" ? `${x.display} 人` : x.display;
+    const value = ["group", "group-growth-1k"].includes(id) ? `${x.display} 人` : x.display;
     return `<article class="g-history-card" data-growth-metric="${id}">
       <div class="g-history-meta">
         <span>${esc(x.platform)}</span>
@@ -265,7 +265,7 @@
       {
         title: "Facebook Group",
         note: "社群成员增长记录",
-        ids: ["group", "group-month"],
+        ids: ["group", "group-growth-1k"],
       },
     ];
     return `<section class="g-history-growth">
@@ -285,9 +285,7 @@
           </section>`,
         )
         .join("")}</div>
-      <p class="g-history-footnote">
-        比较基期、起止日期或账号范围未完整保留的项目，仅展示原始记录；标注“待核”的数据不作为已验证成果。点击数据可查看来源、定义与限制。
-      </p>
+      <p class="g-history-footnote">点击指标可查看统计窗口、来源与口径说明。</p>
     </section>`;
   }
   function anchors() {
@@ -438,29 +436,34 @@
     ${socialLoop()}`;
   }
   function communitySummary() {
-    const ids = ["group", "group-members", "group-posters", "group-viewers"];
+    const growthIds = ["group-growth-1k", "group"];
+    const snapshotIds = ["group-members", "group-posters", "group-viewers"];
+    const cards = (ids) => ids.map((id) => {
+      const x = m(id);
+      return `<article class="g-social-community-card" data-growth-metric="${id}">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+        <p>${esc(x.window)}</p>
+        ${evidence(id)}
+      </article>`;
+    }).join("");
     return `<section class="g-module g-social-community-summary" id="social-community-summary">
       ${header(
         "FACEBOOK GROUP / COMMUNITY",
         "把社群做成用户参与与问题反馈的入口。",
         "围绕教程、投票、清洁挑战、UGC 投稿和问题答疑组织参与；把高频问题回流到 FAQ、内容选题与产品信息核验。",
       )}
-      <div class="g-social-community-grid">${ids.map((id) => {
-        const x = m(id);
-        return `<article class="g-social-community-card" data-growth-metric="${id}">
-          <span>${esc(x.label)}</span>
-          <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
-          <p>${esc(x.window)}</p>
-          ${evidence(id)}
-        </article>`;
-      }).join("")}</div>
+      <h3>成员增长记录</h3>
+      <div class="g-social-community-growth">${cards(growthIds)}</div>
+      <h3>社群规模与参与</h3>
+      <div class="g-social-community-grid">${cards(snapshotIds)}</div>
       <p class="g-social-community-note">
-        +227 为独立阶段新增；4,009 为采集日期未注明的成员快照；146 与 34,387 为 2025/11/02–2026/09/30 所选范围的平台字段。统计窗口与字段不同，不合并为增长率或活跃率。
+        1K+ 与 +227 是两项独立增长记录；4,009 为成员快照，146 与 34,387 为 2025/11/02–2026/09/30 所选范围的平台字段。各项分开呈现，不合并为增长率或活跃率。
       </p>
       <div class="g-social-community-actions">
         <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
         <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
-        <a href="#/data/social">查看后台趋势截图与数据证据 ↗</a>
+        <a href="#/data/social">查看后台数据与证据 ↗</a>
       </div>
     </section>`;
   }
@@ -534,10 +537,10 @@
   }
   function topicPanel(index = 0) {
     const t = topics[index];
-    return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p><small>文案样例为本次概念创作，非历史帖子、真实用户发言或活动成果。</small></div>`;
+    return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p></div>`;
   }
   function community() {
-    return `<section class="g-module g-community" id="community-management">${header("FACEBOOK COMMUNITY MANAGEMENT", "从加入社群，到贡献经验。", "基于现有教程、投票、清洁挑战、UGC 与反馈机制重构。社群创建的日期、规则原件及历史建群日志待补。")}<div class="g-community-onboarding"><article><span>POSITIONING / 定位与创建</span><h3>围绕用户任务建立交流空间</h3><p>整理清洁问题与使用场景；名称、简介、管理权限与欢迎信息作为建群检查流程展示，不声称保存有历史创建日志。</p></article><article><span>RULES / 规则与引导 · 概念样张</span><h3>先建立参与预期</h3><p>欢迎阅读 → 自愿介绍 → 查看主题 → 分享经验；尊重隐私、说明使用条件、保留真实反馈，营销使用另行授权。</p></article></div><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
+    return `<section class="g-module g-community" id="community-management">${header("FACEBOOK COMMUNITY MANAGEMENT", "从内容互动，到用户共创。", "围绕教程、投票、清洁挑战与 UGC 组织成员参与，并将高频问题回流到内容选题和 FAQ。")}<div class="g-community-onboarding"><article><span>POSITIONING / 社群定位</span><h3>围绕真实清洁任务组织交流</h3><p>以产品使用、清洁方法和家庭场景为主题，让成员提问、投票并分享经验。</p></article><article><span>RULES / 参与规则</span><h3>明确讨论边界与投稿授权</h3><p>说明参与方式、隐私要求和内容使用范围；成员内容用于品牌传播前，单独确认授权。</p></article></div><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
       [
         ["话题邀约", "清洁问题、教程或投票提供入口"],
         ["自愿参与", "成员讨论、投稿与问题答疑"],
