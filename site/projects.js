@@ -83,9 +83,9 @@
   }
 
   function pr() {
-    return section("北美家庭清洁 PR 选题", "发布页记录 · King Newswire · 2026.05.15", `
+    return section("北美家庭清洁 PR 选题", "发布页 · King Newswire · 2026.05.15", `
       <div class="g-project-feature g-project-wide-image"><figure>${image("pr-home-scene", "北美家庭客厅和厨房的清洁场景配图")}<figcaption>新闻稿配图局部</figcaption></figure>
-      <div><h3>用家庭场景说明产品分工</h3><p>从宠物毛发、地面污渍、浴室边角和烤炉清洁切入，将产品阵容放到北美家庭能辨认的任务里。</p><p class="g-chart-note">日期与署名取自发布页截图。稿件分工、转载与媒体成效待补。</p></div></div>`, "pr-project");
+      <div><h3>用家庭场景说明产品分工</h3><p>从宠物毛发、地面污渍、浴室边角和烤炉清洁切入，将产品阵容放到北美家庭能辨认的任务里。</p><p class="g-chart-note">发布页可核对日期；不将转载量或媒体效果计入成果。</p></div></div>`, "pr-project");
   }
 
   function creative() {
@@ -105,12 +105,12 @@
         <div class="g-project-list">
         <article><h3>产品系统展示墙</h3><p>以系统连接图将光伏、逆变器、电池和负载放在同一面墙上，实物展台让采购方核对产品类型、规格与应用场景。</p></article>
         <article><h3>采购需求和跟进</h3><p>围绕使用场景、需求规格、采购时间与交付要求记录询盘。现场沟通后进入需求确认、报价和交期核对。</p></article>
-        <p class="g-chart-note">展会名称、日期与本人负责物料待补。</p></div>
+        <p class="g-chart-note">案例聚焦系统展示墙与采购需求沟通。</p></div>
       </div>`, "expo-project");
   }
 
   function creator() {
-    return section("创作者合作工作台", "流程样例 · 从 Brief 到内容审核与授权。", `
+    return section("创作者合作工作台", "合作管理 · 从 Brief 到内容审核与授权。", `
       <div class="g-project-list g-project-calendar-plan"><article><h3>合作 Brief</h3><p>将合作目标、受众、产品事实、演示任务和交付形式放进同一张工作单，便于创作者与审核人核对需求。</p></article>
       <article><h3>内容审核与素材复用</h3><p>交付后记录内容版本、修改意见、授权平台和期限。素材复用前核对许可范围与到期时间。</p></article></div>`, "creator-project");
   }
