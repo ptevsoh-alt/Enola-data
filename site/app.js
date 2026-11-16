@@ -62,11 +62,87 @@
   function metricCard(m) {
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(m.window)}</small><span class="metric-source">${P.statuses[m.status]} · 定义与来源 ↗</span></button>`;
   }
+  const featured = {
+    gtm: {
+      label: "产品营销 / GTM",
+      title: "五款清洁电器的上市传播",
+      role: "负责社媒传播策略与内容团队交付，参与用户研究、差异化定位、卖点分层和上市传播。",
+      decision: "选餐区黏污和浴室边角作为主推场景。双盘拖把拍站姿推进和转向，长柄刷拍调杆、调角和刷头贴合。",
+      output: "五款产品、四条产品线的场景分工与卖点演示，配套 KV、社媒选题和创作者 Brief。",
+      artifact: "查看产品组合与演示规范",
+      chapter: "strategy",
+      image: "mop-kv-detail",
+      alt: "黄色双盘拖把的产品主视觉局部",
+    },
+    social: {
+      label: "海外社媒 / 品牌增长",
+      title: "从零搭建海外社媒内容体系",
+      role: "担任社媒负责人、管理组长，负责 Facebook、Instagram 和美国 Facebook Group 的内容规划与团队交付。",
+      decision: "Facebook 负责品牌信息和活动导流，Instagram 主做演示短片，Group 通过教程、挑战和答疑回收用户问题。",
+      output: "建立季度主题与月度日历。2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
+      artifact: "查看内容体系与活动日历",
+      chapter: "execution",
+    },
+    brand: {
+      label: "品牌策略 / 整合营销",
+      title: "清洁电器品牌定位与整合传播",
+      role: "参与品牌故事、视觉资产和产品卖点表达，协同社媒、创作者、PR 与展会的传播素材交付。",
+      decision: "让广告主视觉交代清洁姿势，社媒与创作者拍同机位演示，PR 用家庭场景解释产品分工。",
+      output: "匿名品牌屋、联合抽奖海报与北美家庭清洁 PR 选题。",
+      artifact: "查看品牌屋与渠道分工",
+      chapter: "strategy",
+      image: "pr-home-scene",
+      alt: "家庭餐区清洁主题的传播配图",
+    },
+    operations: {
+      label: "团队管理 / 项目交付",
+      title: "社媒团队排期与创意审核",
+      role: "安排社媒小组任务与创意评审，协调产品、设计、视频、电商及外部合作方。",
+      decision: "月度日历写清负责人和素材依赖。制作前核对产品事实与素材权限，发布前复核脚本、画面与链接。",
+      output: "把季度主题拆成月度排期、项目 Brief、脚本与视觉审核，以及周度跟进和月度复盘。",
+      artifact: "查看分工、审核与复盘",
+      chapter: "management",
+    },
+  };
+
+  function featuredCard(id, item) {
+    const image = item.image ? `<img src="assets/projects/${item.image}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
+    const signals = id === "social" ? `<div class="featured-metric-pair" aria-label="2025 年 Meta 阶段汇总"><span><b>${metric("impressions").display}</b> 曝光</span><span><b>${metric("engagements").display}</b> 互动</span></div>` : "";
+    const delivery = id === "operations" ? '<ol class="featured-rhythm"><li>季度主题</li><li>月度排期</li><li>周度审核</li></ol>' : "";
+    return `<article class="case-card featured-project${image ? " featured-project-photo" : ""}">
+      ${image}<div><p class="featured-label">${item.label}</p><h3>${link(id, item.title)}</h3>
+      ${signals}${delivery}<p>${item.decision}</p><a class="featured-detail" href="#/case/${id}/${item.chapter}">${item.artifact} <span aria-hidden="true">↗</span></a></div>
+    </article>`;
+  }
+
   function home() {
-    return `<div class="wrap"><section class="portfolio-hero"><div><p class="eyebrow">HUANG WENLIN / SELECTED WORK</p><h1>洞察市场。<br>建立品牌。<br><em>推动交付。</em></h1><p class="hero-intro">黄文琳｜品牌战略 · 产品营销 · GTM · 整合传播</p><p class="muted">近 6 年海外市场与跨境业务经验。连接用户洞察、产品价值、创意表达与跨部门协作。</p><div class="actions"><a class="btn" href="#/cases">探索案例 ↗</a><a href="#/experience">工作经历</a></div></div><a class="hero-feature" href="#/case/gtm" aria-label="查看产品营销与上市案例">${cover(by("gtm"), true)}<span class="feature-caption">FEATURED / 四条核心产品线的上市传播协同 ↗</span></a></section><div class="discipline-strip"><span>品牌战略</span><span>PMM & GTM</span><span>IMC & PR</span><span>团队管理</span><span>跨部门交付</span></div><section class="section"><div class="section-head"><div><p class="eyebrow">01 / SELECTED CASES</p><h2>策略有结构，交付有过程。</h2></div><a href="#/cases">全部案例 ↗</a></div><div class="visual-grid">${["gtm", "brand", "social", "operations", "creator", "b2b"].map((id) => card(by(id))).join("")}</div></section><section class="results-band"><div><p class="eyebrow">02 / MEASUREMENT</p><h2>让结果与证据同行。</h2><p>以下为同一历史汇总记录；平台账户范围与原始字段待核。不同来源与统计窗口分别展示。</p><a href="#/data">查看全部指标与说明 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section><section class="section"><div class="section-head"><div><p class="eyebrow">03 / HOW I WORK</p><h2>从方向到协作，再到交付。</h2></div>${link("operations", "管理工作方式")}</div>${flow(by("operations"))}<p class="caption">经历重构 · 流程用于解释管理方法，不代表历史审批记录。</p></section><section class="contact-band"><div><p class="eyebrow">BRAND × PRODUCT × PEOPLE</p><h2>把复杂的市场问题，<br>变成清晰的团队行动。</h2></div><a class="btn" href="#/contact">了解工作范围 ↗</a></section></div>`;
+    return `<div class="wrap">
+      <section class="portfolio-hero application-hero" aria-labelledby="home-title">
+        <div><p class="eyebrow">黄文琳 / HUANG WENLIN</p><h1 id="home-title">海外品牌营销<br><em>与产品上市策略</em></h1>
+        <p class="hero-intro">GTM · 产品营销 · 整合营销 · 品牌增长</p>
+        <p class="hero-summary">负责海外社媒策略和内容团队交付，参与清洁电器的用户研究、卖点定位与上市传播。季度定传播主题，月度排内容，周度审核脚本和视觉。</p>
+        <div class="actions"><a class="btn" href="#/cases">浏览案例 ↗</a><a href="#/experience">工作经历</a></div></div>
+        <nav class="featured-nav" aria-label="代表案例入口"><h2>代表案例</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><span>${item.label}</span><strong>${item.title}</strong></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
+      </section>
+      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总</p><a href="#/data/social">查看社媒数据 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
+      <section class="section featured-section" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 11 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
+      <section class="contact-band"><div><h2>工作经历与联系</h2><p>海外品牌营销、产品上市与社媒团队管理。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
+    </div>`;
+  }
+
+  function caseOverview(c) {
+    const item = featured[c.id];
+    if (!item) return "";
+    return `<section class="g-case-overview" aria-label="项目速览">
+      <div><h2>我的职责</h2><p>${item.role}</p></div>
+      <div><h2>关键决定</h2><p>${item.decision}</p></div>
+      <div><h2>产出与结果</h2><p>${item.output}</p></div>
+      <a href="#/case/${c.id}/${item.chapter}">${item.artifact} <span aria-hidden="true">↗</span></a>
+      ${c.id === "social" ? '<a href="#/data/social">查看数据与口径 ↗</a>' : ""}
+    </section>`;
   }
   function listPage() {
-    return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>从商业问题，<br>到可交付的解决路径。</h1><p class="lede">品牌、产品、传播与团队交付。每个案例分别说明工作背景、判断、本人贡献与证据状态。</p><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
+    return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>项目案例</h1><p class="lede">品牌、产品、传播与团队交付。按项目查看我的职责、关键决定、交付物与项目结果。</p><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
   }
   const groups = {
     策略与上市: ["gtm", "brand"],
@@ -147,7 +223,7 @@
       ["evidence", "Evidence", "证据与来源"],
     ];
     const metrics = c.metrics.map(metric);
-    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(c.title)}</h1><p class="lede">${esc(c.role)}</p>${badge(c.status)}</div><p class="case-scope">${esc(c.scope)}</p></div>${cover(c, true)}<nav class="case-tabs" aria-label="案例章节">${sections.map((s) => `<a href="#/case/${c.id}/${s[0]}">${s[1]}</a>`).join("")}</nav><section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p><p class="caption">项目范围：${esc(c.scope)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p><p class="caption">判断依据为已有经历与项目资料整理。具体研究样本、访谈与历史审批材料未公开；不推定为已验证的普遍用户结论。</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}<p class="caption">经历重构 · 策略图为本次整理的解释性工作物。</p></div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>WORK PACKAGE / 0${i + 1}</span><h3>${n}</h3><p>${["目标 · 输入 · 确认状态", "选择依据 · 输出要求", "负责人 · 版本 · 审核节点", "完成标准 · 复盘问题"][i]}</p></article>`).join("")}</div>`}<p class="caption">${P.statuses[c.status]} · 以上样张用于说明工作方法，不作为历史原始交付证据。</p>${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">放大概念视觉 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Management Contribution</div><div><h2>管理贡献与协作</h2>${management(c)}<p class="caption">本人参与范围按原资料保留；项目方法示意不代表独立拥有全部业务决策权。</p></div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>结果与限制</h2><p>${esc(c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? comparison() : c.id === "seo" ? shareChart() : ""}<p class="note">${esc(c.review)}</p></div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / Evidence</div><div><h2>证据与来源</h2><p>案例类型：${P.statuses[c.status]}。工作物、职责记录与指标证据分别判断。原始后台截图与内部材料不公开。</p>${metrics.length ? metrics.map((m) => `<details><summary>${esc(m.label)} · ${P.statuses[m.status]}</summary><p>定义：${esc(m.definition)}</p><p>来源：${esc(m.source)}</p><p>统计窗口：${esc(m.window)}</p><p>限制：${esc(m.limits)}</p></details>`).join("") : '<p class="note">本案例展示方法与流程；暂无可公开核验的项目效果，不填造结果。</p>'}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
+    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1>${featured[c.id] ? "" : `<p class="lede">${esc(c.role)}</p>${badge(c.status)}`}</div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.scope)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p><p class="caption">项目范围：${esc(c.scope)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p><p class="caption">判断依据为已有经历与项目资料整理。具体研究样本、访谈与历史审批材料未公开；不推定为已验证的普遍用户结论。</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}<p class="caption">经历重构 · 策略图为本次整理的解释性工作物。</p></div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>WORK PACKAGE / 0${i + 1}</span><h3>${n}</h3><p>${["目标 · 输入 · 确认状态", "选择依据 · 输出要求", "负责人 · 版本 · 审核节点", "完成标准 · 复盘问题"][i]}</p></article>`).join("")}</div>`}<p class="caption">${P.statuses[c.status]} · 以上样张用于说明工作方法，不作为历史原始交付证据。</p>${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">放大概念视觉 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Management Contribution</div><div><h2>管理贡献与协作</h2>${management(c)}<p class="caption">本人参与范围按原资料保留；项目方法示意不代表独立拥有全部业务决策权。</p></div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>结果与限制</h2><p>${esc(c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? comparison() : c.id === "seo" ? shareChart() : ""}<p class="note">${esc(c.review)}</p></div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / Evidence</div><div><h2>证据与来源</h2><p>案例类型：${P.statuses[c.status]}。工作物、职责记录与指标证据分别判断。原始后台截图与内部材料不公开。</p>${metrics.length ? metrics.map((m) => `<details><summary>${esc(m.label)} · ${P.statuses[m.status]}</summary><p>定义：${esc(m.definition)}</p><p>来源：${esc(m.source)}</p><p>统计窗口：${esc(m.window)}</p><p>限制：${esc(m.limits)}</p></details>`).join("") : '<p class="note">本案例展示方法与流程；暂无可公开核验的项目效果，不填造结果。</p>'}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
   }
   function comparison() {
     return `<figure class="chart-sheet"><h3>Meta 历史汇总 / 独立口径</h3><div class="bar-row"><span>曝光</span><i style="--bar:100%"></i><b>965K</b></div><div class="bar-row"><span>互动</span><i style="--bar:3.8342%"></i><b>37K</b></div><figcaption>${esc(metric("impressions").window)}。37K ÷ 965K ≈ 3.8% 为暂算比值，字段与账户范围待核，不作为已验证 ER 或销售转化率。</figcaption><button class="text-link" data-evidence="er">查看计算与限制 ↗</button></figure>`;
@@ -172,11 +248,11 @@
   }
   function simple(page) {
     if (page === "experience")
-      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>品牌与增长，<br>连接于真实业务。</h1><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)} · 匿名化</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${link(e.caseId, "关联案例")}</div></article>`).join("")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)} · 匿名化</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${link(e.caseId, "关联案例")}</div></article>`).join("")}</div></div>`;
     if (page === "capabilities")
-      return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>以策略组织行动。</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>营销能力</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
     if (page === "contact")
-      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>品牌、产品与团队，<br>需要同一个方向。</h1><p class="lede">工作方向：品牌战略、产品上市传播、社媒团队管理与跨部门营销交付。</p><p>联系信息暂未公开，可通过现有简历渠道联系。</p><div class="section">${link("operations", "了解管理与交付方式")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">工作方向：品牌战略、产品上市传播、社媒团队管理与跨部门营销交付。</p><p>请使用随投递简历提供的联系方式。</p><div class="section">${link("operations", "了解管理与交付方式")}</div></div>`;
     return `<div class="wrap page"><p class="eyebrow">ABOUT THE EVIDENCE</p><h1>事实与展示，<br>各有清晰的依据。</h1><div class="rights-grid">${Object.entries(
       P.statuses,
     )
@@ -228,7 +304,7 @@
     $(".menu-button").setAttribute("aria-expanded", "false");
     document.title =
       page === "case" && by(id)
-        ? `${by(id).title}｜黄文琳作品集`
+        ? `${featured[id]?.title || by(id).title}｜黄文琳作品集`
         : "黄文琳｜品牌战略 · 产品营销 · 整合传播";
     window.scrollTo(0, 0);
     if (route.started) main.focus({ preventScroll: true });

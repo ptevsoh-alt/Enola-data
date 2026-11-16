@@ -115,6 +115,17 @@
       <article><h3>内容审核与素材复用</h3><p>交付后记录内容版本、修改意见、授权平台和期限。素材复用前核对许可范围与到期时间。</p></article></div>`, "creator-project");
   }
 
+  function operations() {
+    return section("一次活动如何排期和验收", "社媒小组的项目分工与审核清单", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>选题与排期</h3><p>我从季度主推主题选定产品和场景，给 Facebook、Instagram 和 Group 分配内容任务，并确认每条内容的负责人和交付时间。</p></article>
+        <article><h3>产品与素材确认</h3><p>产品同事核对功能、参数和适用条件。社媒小组确认拍摄清单、素材权限和链接后，将 Brief 交给设计和视频同事。</p></article>
+        <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
+        <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
+      </div>
+      <a class="featured-detail" href="#/case/social/execution">查看父亲节日历样例 ↗</a>`, "team-delivery");
+  }
+
   const extras = {
     brand: { strategy: brand, execution: pr },
     gtm: { strategy: gtm },
@@ -122,6 +133,7 @@
     creative: { execution: creative },
     b2b: { execution: expo },
     creator: { execution: creator },
+    operations: { management: operations },
   };
   window.enhancePortfolioProjects = (main, { page, id }) => {
     if (page !== "case" || !Object.hasOwn(extras, id)) return;
@@ -131,7 +143,9 @@
       if (chapter === "strategy") {
         for (const legacy of content.querySelectorAll(".brand-house, .channel-grid")) legacy.hidden = true;
       }
-      content.querySelector("h2 + p")?.insertAdjacentHTML("afterend", render());
+      const introduction = content.querySelector("h2 + p");
+      if (introduction) introduction.insertAdjacentHTML("afterend", render());
+      else content.querySelector("h2")?.insertAdjacentHTML("afterend", render());
     }
   };
 })();
