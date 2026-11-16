@@ -1176,9 +1176,15 @@
   background: #f1f3ed;
   border: 1px solid var(--rule);
 }
+.g-social-community-growth {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 10px;
+  margin-bottom: 14px;
+}
 .g-social-community-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
+  grid-template-columns: repeat(3, minmax(0, 1fr));
   gap: 10px;
 }
 .g-social-community-card {
@@ -1265,10 +1271,14 @@
   .g-social-community-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
+  .g-social-community-growth {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
 }
 @media (max-width: 720px) {
 
   .g-social-story .g-foundation,
+  .g-social-community-growth,
   .g-social-community-grid,
   .g-social-pillar-block {
     grid-template-columns: 1fr;
