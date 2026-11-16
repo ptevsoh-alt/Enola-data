@@ -90,7 +90,7 @@ const fs = require("fs"),
     check("original data copy preserved: " + r, () => {
       const clone = d.querySelector("main").cloneNode(true);
       clone.querySelectorAll("[class]").forEach((e) => {
-        if ([...e.classList].some((name) => name.startsWith("g-"))) e.remove();
+        if (!e.closest(".g-meta-summary") && [...e.classList].some((name) => name.startsWith("g-"))) e.remove();
       });
       assert.equal(clone.textContent.replace(/\s+/g, ""), old.d.querySelector("main").textContent.replace(/\s+/g, ""));
     });
@@ -256,19 +256,27 @@ const fs = require("fs"),
     assert.ok(css.includes(".g-decision-note { font-size: 12px; line-height: 1.8; }"));
     assert.ok(css.includes(".g-chart-note { margin: .75rem 0;"));
   });
-  check("community case presents its own source-backed Facebook Group evidence", () => {
-    const proof = d.querySelector(".g-community-proof");
-    assert.ok(proof);
-    assert.ok(proof.querySelector('a[href="assets/evidence/facebook-group-insights.webp"]'));
-    assert.deepEqual(
-      [...proof.querySelectorAll(".g-compare-row")].map(x => x.dataset.evidence),
-      ["group-viewers", "group-posters"],
-    );
-    assert.ok(proof.textContent.includes("2025.11.02"));
-    assert.ok(proof.textContent.includes("2026.09.30"));
-    assert.equal(proof.querySelector(".g-compare-snapshot").dataset.evidence, "group-members");
-    assert.ok(proof.querySelector('a[href="#/data/social"]'));
-  });
+  for (const path of ["/case/community", "/data/community"]) {
+    await route(path);
+    check("community metrics have independent cards and evidence: " + path, () => {
+      const proof = d.querySelector(".g-community-proof");
+      const cards = [...proof.querySelectorAll(".g-community-metric")];
+      assert.deepEqual(cards.map((card) => card.dataset.evidence), ["group-viewers", "group-posters", "group-members"]);
+      assert.deepEqual(cards.map((card) => card.querySelector("strong").textContent.trim()), ["34,387 人", "146 人", "4,009 名"]);
+      assert.ok(cards[0].textContent.includes("2025/11/02–2026/09/30"));
+      assert.ok(cards[1].textContent.includes("2025/11/02–2026/09/30"));
+      assert.ok(cards[2].textContent.includes("采集日期未注明"));
+      assert.equal(proof.querySelector(".g-compare-chart, [role='progressbar']"), null);
+      assert.ok(proof.querySelector('a[href="assets/evidence/facebook-group-insights.webp"]'));
+      for (const card of cards) {
+        card.focus();
+        card.click();
+        assert.ok(d.querySelector("#evidence-dialog").open);
+        d.querySelector('[data-close="evidence-dialog"]').click();
+        assert.equal(d.activeElement, card);
+      }
+    });
+  }
   await route("/case/social");
   check("Facebook page snapshot uses five independent metric cards", () => {
     assert.equal(d.querySelectorAll(".g-snapshot-card").length, 5);
@@ -292,13 +300,15 @@ const fs = require("fs"),
       const card = d.querySelector(`.g-snapshot-card[data-growth-metric="${id}"]`);
       assert.ok(card.textContent.includes(value), id);
       assert.ok(card.textContent.includes("比较周期未注明"), id);
-      assert.equal(d.querySelector(`.g-compare-row[data-evidence="${id}"] strong`).textContent, value);
+      assert.ok(card.querySelector(".g-snapshot-change").textContent.includes(value));
     }
     assert.ok(
       d.querySelector('.g-snapshot-card[data-growth-metric="fb-views"]').textContent.includes("未提供"),
     );
-    assert.equal(d.querySelector('.g-compare-row[data-evidence="fb-views"]'), null);
-    assert.equal(d.querySelector('.g-compare-row[data-evidence="fb-link-clicks"] .g-compare-track span').style.getPropertyValue('--g-measure'), '85%');
+    assert.equal(d.querySelector(".g-compare-chart, .bar-row, [role='progressbar']"), null);
+    const summary = d.querySelector(".g-meta-summary");
+    assert.deepEqual([...summary.querySelectorAll(".metric")].map((card) => card.dataset.evidence), ["impressions", "engagements"]);
+    assert.ok(summary.querySelector('[data-evidence="er"]'));
   });
   check("Father's Day calendar renders thirty selectable bilingual entries", () => {
     const days = [...d.querySelectorAll("#fathers-day-calendar [data-calendar-day]")];

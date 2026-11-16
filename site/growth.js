@@ -227,29 +227,8 @@
           </article>`;
         })
         .join("")}</div>
-      <details class="g-chart-disclosure" open>
-        <summary>对比后台显示的变化百分比</summary>
-        ${comparisonBars(ids.filter((id) => m(id).changeDisplay), changePercent, (x) => x.changeDisplay, { label: "平台显示变化百分比", unit: "%", max: 20000, shorten: (x) => x.label.replace("Facebook ", "") })}
-        <p class="g-chart-note">来源为 Facebook 页面分析。统计窗口、比较窗口和基期数值未注明。页面浏览量缺少可核验的变化值。</p>
-      </details>
+      <p class="g-chart-note">来源为 Facebook 页面分析。统计窗口、比较窗口和基期数值未注明。</p>
     </section>`;
-  }
-  function changePercent(x) {
-    const [, amount, tenThousand] = x.changeDisplay.match(/([\d,.]+)(万?)%/);
-    return Number(amount.replaceAll(",", "")) * (tenThousand ? 10000 : 1);
-  }
-  function comparisonBars(ids, value, display, { label, unit, max, shorten = (x) => x.label }) {
-    const tick = new Intl.NumberFormat("zh-CN");
-    return `<div class="g-compare-chart" role="group" aria-label="${esc(label)}">
-      <div class="g-compare-axis" aria-hidden="true"><span>0</span><span>${tick.format(max / 2)}${unit}</span><span>${tick.format(max)}${unit}</span></div>
-      ${ids.map((id) => {
-        const x = m(id);
-        return `<button class="g-compare-row" type="button" data-evidence="${id}" aria-label="${esc(shorten(x))}，${esc(display(x))}，查看指标口径">
-          <span>${esc(shorten(x))}</span><strong>${esc(display(x))}</strong>
-          <span class="g-compare-track" aria-hidden="true"><span style="--g-measure:${100 * value(x) / max}%"></span></span>
-        </button>`;
-      }).join("")}
-    </div>`;
   }
   function historyCard(id) {
     const x = m(id);
@@ -557,9 +536,6 @@
     const t = topics[index];
     return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p><small>文案样例为本次概念创作，非历史帖子、真实用户发言或活动成果。</small></div>`;
   }
-  function participation() {
-    return `<div class="g-participation"><div><p class="eyebrow">COMMUNITY INSIGHTS / 独立字段</p><h3>看到、参与、加入，分别衡量。</h3><p>查看人数不是曝光；发帖评论人数不是帖子数；成员快照不是窗口新增。不计算活跃率。</p></div><div class="g-community-counts">${["group-members", "group-posters", "group-viewers"].map(metric).join("")}</div><p class="caption">146 与 34,387 为 2025/11/02–2026/09/30 所选范围的原平台字段；4,009 为日期未注明的成员快照。</p></div>`;
-  }
   function community() {
     return `<section class="g-module g-community" id="community-management">${header("FACEBOOK COMMUNITY MANAGEMENT", "从加入社群，到贡献经验。", "基于现有教程、投票、清洁挑战、UGC 与反馈机制重构。社群创建的日期、规则原件及历史建群日志待补。")}<div class="g-community-onboarding"><article><span>POSITIONING / 定位与创建</span><h3>围绕用户任务建立交流空间</h3><p>整理清洁问题与使用场景；名称、简介、管理权限与欢迎信息作为建群检查流程展示，不声称保存有历史创建日志。</p></article><article><span>RULES / 规则与引导 · 概念样张</span><h3>先建立参与预期</h3><p>欢迎阅读 → 自愿介绍 → 查看主题 → 分享经验；尊重隐私、说明使用条件、保留真实反馈，营销使用另行授权。</p></article></div><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
       [
@@ -568,19 +544,27 @@
         ["治理与授权", "审核事实；二次使用单独确认许可"],
         ["反馈闭环", "高频问题 → 产品确认 → FAQ 与选题"],
       ],
-    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${participation()}${communitySourceEvidence()}</section>`;
+    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${communitySourceEvidence()}</section>`;
   }
   function communitySourceEvidence() {
-    const members = m("group-members");
+    const cards = [
+      ["group-viewers", "社群查看人数", "人", m("group-viewers").window],
+      ["group-posters", "发帖和评论人数", "人", m("group-posters").window],
+      ["group-members", "社群成员数", "名", "成员快照 · 采集日期未注明"],
+    ];
     return `<section class="g-module g-community-proof" aria-label="Facebook Group 后台数据证据">
       ${header(
         "FACEBOOK GROUP INSIGHTS",
         "社群查看与参与",
-        "2025.11.02 — 2026.09.30 · Facebook Group 自带分析",
+        "Facebook Group · 平台分析",
       )}
-      ${comparisonBars(["group-viewers", "group-posters"], (x) => x.value, (x) => `${x.display} 人`, { label: "同一窗口内的平台统计人数", unit: " 人", max: 40000 })}
-      <p class="g-chart-note">按平台原字段读取两项人数；去重规则与两组人群的重合情况未注明。</p>
-      <button class="g-compare-snapshot" type="button" data-evidence="group-members"><strong>${esc(members.display)} 名成员</strong><span>成员快照 · 日期未注明 ↗</span></button>
+      <div class="g-community-counts">${cards.map(([id, label, unit, window]) => `
+        <button class="g-community-metric" type="button" data-evidence="${id}">
+          <span>${label}</span><strong>${esc(m(id).display)} <small>${unit}</small></strong>
+          <span class="g-community-metric-window">${esc(window)}</span>
+          <span class="g-community-metric-link">查看指标口径 <span aria-hidden="true">↗</span></span>
+        </button>`).join("")}</div>
+      <p class="g-chart-note">平台分别统计查看和发帖评论人数，两组人群的重合情况未注明。</p>
       <div class="g-source-evidence-actions"><a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer">打开匿名化后台截图 ↗</a><a href="#/data/social">查看完整社媒数据 ↗</a></div>
     </section>`;
   }

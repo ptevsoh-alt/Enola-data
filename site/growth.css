@@ -362,29 +362,38 @@
   font-style: normal;
   color: var(--accent);
 }
-.g-participation {
-  padding: 30px;
-  background: #e6e9de;
-  margin-top: 30px;
-  min-width: 0;
-}
-.g-participation > div > p:not(.eyebrow) {
-  font-size: 12px;
-  color: var(--muted);
-}
-.g-community-counts {
+.g-community-counts,
+.g-meta-metrics {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
-  gap: 14px;
-  margin-top: 24px;
+  gap: 12px;
 }
-.g-community-counts .g-kpi {
-  padding: 18px;
+.g-community-metric {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: .5rem;
+  min-width: 0;
+  padding: clamp(.9rem, 2vw, 1.35rem);
+  color: var(--ink);
+  text-align: left;
   background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: .45rem;
+  cursor: pointer;
 }
-.g-community-counts .g-kpi strong {
-  font-size: 40px;
+.g-community-metric:hover,
+.g-community-metric:focus-visible { border-color: var(--accent); }
+.g-community-metric strong {
+  font: 700 clamp(1.95rem, 4.4vw, 3.45rem) / 1.15 var(--serif);
+  font-variant-numeric: tabular-nums;
+  overflow-wrap: anywhere;
 }
+.g-community-metric strong small { font: 600 .85rem var(--sans); color: var(--muted); }
+.g-community-metric-window { color: var(--muted); font-size: .81rem; }
+.g-community-metric-link { margin-top: auto; color: var(--accent); font-size: .82rem; font-weight: 650; }
+.g-meta-summary { margin-top: 1.4rem; padding: 1rem; background: var(--white); border: 1px solid var(--rule); }
+.g-meta-metrics { grid-template-columns: repeat(2, minmax(0, 1fr)); margin-top: .65rem; }
 .g-campaign-cards {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -774,9 +783,6 @@
   .g-kpi-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
-  .g-community-counts {
-    grid-template-columns: repeat(2, minmax(0, 1fr));
-  }
   .g-platform-grid {
     grid-template-columns: repeat(2, minmax(0, 1fr));
   }
@@ -894,28 +900,7 @@
     padding: 20px 14px;
     justify-content: start;
   }
-  .g-participation {
-    padding: 22px 16px;
-  }
-  .g-community-counts {
-    grid-template-columns: 1fr;
-    gap: 10px;
-  }
-  .g-community-counts .g-kpi {
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    gap: 3px 12px;
-  }
-  .g-community-counts .g-kpi > button:not(.g-evidence) {
-    grid-column: 2;
-    grid-row: 1/3;
-    text-align: right;
-    min-height: 50px;
-  }
-  .g-community-counts .g-window,
-  .g-community-counts .g-evidence {
-    grid-column: 1/3;
-  }
+  .g-community-counts { grid-template-columns: minmax(0, 1fr); }
   .g-campaign-cards {
     grid-template-columns: 1fr;
     gap: 12px;
@@ -1756,64 +1741,7 @@
 .g-source-evidence-grid { align-items: start; }
 .g-source-evidence-card > p { font-size: .875rem; }
 .g-source-evidence-card > small { display: block; }
-.g-compare-chart {
-  display: grid;
-  gap: .5rem;
-  border-block: 1px solid var(--rule);
-  padding: .75rem 0;
-  min-width: 0;
-}
-.g-compare-axis {
-  display: flex;
-  justify-content: space-between;
-  padding-inline: .75rem;
-  font-size: .75rem;
-  font-variant-numeric: tabular-nums;
-}
-.g-compare-row {
-  display: grid;
-  grid-template-columns: minmax(0, 1fr) auto;
-  align-items: baseline;
-  gap: .25rem .75rem;
-  width: 100%;
-  padding: .65rem .75rem;
-  border: 1px solid transparent;
-  border-radius: .35rem;
-  background: transparent;
-  text-align: start;
-  cursor: pointer;
-}
-.g-compare-row:hover,
-.g-compare-row:focus-visible { border-color: var(--rule); background: #eeeee7; }
-.g-compare-row strong { font-variant-numeric: tabular-nums; }
-.g-compare-track {
-  display: block;
-  grid-column: 1 / -1;
-  height: .55rem;
-  border-radius: 1rem;
-  background: #e6e9e1;
-}
-.g-compare-track > span {
-  display: block;
-  width: var(--g-measure);
-  height: 100%;
-  border-radius: inherit;
-  background: #2d665a;
-}
 .g-chart-note { margin: .75rem 0; color: var(--muted, #5d625a); font-size: .875rem; }
-.g-compare-snapshot {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: baseline;
-  gap: .35rem .85rem;
-  margin-top: .6rem;
-  padding: .75rem;
-  border: 1px solid var(--rule);
-  background: transparent;
-  cursor: pointer;
-  text-align: start;
-}
-.g-compare-snapshot span { font-size: .875rem; }
 .g-project h2 { margin: 0; font-size: clamp(1.45rem, 2.9vw, 2.25rem); }
 .g-project > header > p { margin: .4rem 0 1rem; color: var(--muted, #5d625a); }
 .g-project-feature,
