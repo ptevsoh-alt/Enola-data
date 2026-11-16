@@ -87,12 +87,14 @@ const fs = require("fs"),
   const featured = ["gtm", "social", "brand", "operations"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
-    check("original data copy preserved: " + r, () => {
-      const clone = d.querySelector("main").cloneNode(true);
-      clone.querySelectorAll("[class]").forEach((e) => {
-        if (!e.closest(".g-meta-summary") && [...e.classList].some((name) => name.startsWith("g-"))) e.remove();
-      });
-      assert.equal(clone.textContent.replace(/\s+/g, ""), old.d.querySelector("main").textContent.replace(/\s+/g, ""));
+    check("data values and metric identities preserved: " + r, () => {
+      if (r === "about") {
+        assert.equal(d.querySelectorAll(".rights-grid .badge").length, Object.keys(w.PORTFOLIO.statuses).length);
+      } else {
+        const current = [...d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
+        const previous = [...old.d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
+        assert.deepEqual(current, previous);
+      }
     });
   }
   await route("/home");
@@ -149,12 +151,17 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-campaign-wall"));
     assert.ok(d.querySelector(".g-social-loop"));
   });
-  check("Facebook Group operation is integrated with four distinct source fields", () => {
-    assert.equal(d.querySelectorAll(".g-social-community-card").length, 4);
+  check("Facebook Group growth and participation use separate metric cards", () => {
     assert.deepEqual(
-      [...d.querySelectorAll(".g-social-community-card")].map((x) => x.dataset.growthMetric),
-      ["group", "group-members", "group-posters", "group-viewers"],
+      [...d.querySelectorAll(".g-social-community-growth .g-social-community-card")].map((x) => x.dataset.growthMetric),
+      ["group-growth-1k", "group"],
     );
+    assert.deepEqual(
+      [...d.querySelectorAll(".g-social-community-grid .g-social-community-card")].map((x) => x.dataset.growthMetric),
+      ["group-members", "group-posters", "group-viewers"],
+    );
+    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("1K+"));
+    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("+227"));
     assert.ok(d.querySelector(".g-social-community-note").textContent.includes("不合并为增长率或活跃率"));
     assert.ok(d.querySelector('.g-social-community-actions a[href="#/case/community"]'));
     assert.ok(d.querySelector('.g-social-community-actions a[href="#/data/social"]'));
@@ -228,6 +235,13 @@ const fs = require("fs"),
     assert.equal(d.querySelector("#lightbox").open, false),
   );
   await route("/case/community");
+  check("community case shows both documented growth records without AI copy", () => {
+    const copy = d.querySelector("main").textContent;
+    assert.ok(copy.includes("1K+"));
+    assert.ok(copy.includes("+227"));
+    for (const phrase of ["经历重构", "策略结构示意", "文案样例为本次概念创作", "字段核验", "重构示意"])
+      assert.ok(!copy.includes(phrase), phrase);
+  });
   for (let i = 0; i < 6; i++) {
     d.querySelector(`[data-g-topic="${i}"]`).click();
     check("community topic selection " + i, () => {
@@ -236,9 +250,10 @@ const fs = require("fs"),
         1,
       );
       assert.ok(
-        d
-          .querySelector("[data-topic-panel]")
-          .textContent.includes("非历史帖子"),
+        !d.querySelector("[data-topic-panel]").textContent.includes("文案样例为本次概念创作"),
+      );
+      assert.ok(
+        !d.querySelector("[data-topic-panel]").textContent.includes("非历史帖子"),
       );
     });
   }
@@ -330,14 +345,18 @@ const fs = require("fs"),
         "ig-event-engagement-change",
         "ig-follower-change",
         "group",
-        "group-month",
+        "group-growth-1k",
       ],
     );
   });
-  check("unverified monthly group growth remains visibly pending", () => {
-    assert.ok(
-      d.querySelector('.g-history-card[data-growth-metric="group-month"] .is-pending'),
-    );
+  check("Facebook Group 1K+ growth is documented separately from +227", () => {
+    const growth = d.querySelector('.g-history-card[data-growth-metric="group-growth-1k"]');
+    const stage = d.querySelector('.g-history-card[data-growth-metric="group"]');
+    assert.ok(growth.querySelector(".is-documented"));
+    assert.ok(growth.textContent.includes("1K+"));
+    assert.ok(!growth.textContent.includes("≈1K/月"));
+    assert.ok(stage.textContent.includes("+227"));
+    assert.equal(w.PORTFOLIO.metrics.find((x) => x.id === "group-growth-1k").status, "DOCUMENTED");
   });
   const snapshotEvidence = d.querySelector(
     '.g-snapshot-card[data-growth-metric="fb-content-interactions"] [data-evidence]',
