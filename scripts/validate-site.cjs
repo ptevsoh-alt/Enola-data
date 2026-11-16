@@ -72,7 +72,7 @@ check("all content links resolve", () => {
   p.capabilities.forEach((c) => assert.ok(p.cases.some((x) => x.id === c[3])));
 });
 check("scripts parse", () => {
-  for (const file of ["data.js", "app.js", "growth.js"])
+  for (const file of ["data.js", "app.js", "growth.js", "projects.js"])
     new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
 });
 const files = [];
