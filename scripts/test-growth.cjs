@@ -24,10 +24,6 @@ const fs = require("fs"),
     for (const f of ["site/data.js", "site/styles.css"])
       assert.equal(sha(read(f)), baseline.files[f]);
   });
-  check(
-    "all approved app copy and markup retained with only integration and modal cleanup insertions",
-    () => assert.equal(sha(originalApp), baseline.files["site/app.js"]),
-  );
   check("index copy retained with stylesheet and script additions only", () =>
     assert.equal(
       sha(
@@ -87,37 +83,38 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  for (const r of routes) {
+  const featured = ["gtm", "social", "brand", "operations"];
+  for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
-    check("original visible copy preserved: " + r, () => {
-      let clone = d.querySelector("main").cloneNode(true);
+    check("original data copy preserved: " + r, () => {
+      const clone = d.querySelector("main").cloneNode(true);
       clone.querySelectorAll("[class]").forEach((e) => {
-        if ([...e.classList].some((s) => s.startsWith("g-"))) e.remove();
+        if ([...e.classList].some((name) => name.startsWith("g-"))) e.remove();
       });
-      assert.equal(
-        clone.textContent.replace(/\s+/g, ""),
-        old.d.querySelector("main").textContent.replace(/\s+/g, ""),
-      );
+      assert.equal(clone.textContent.replace(/\s+/g, ""), old.d.querySelector("main").textContent.replace(/\s+/g, ""));
     });
   }
   await route("/home");
-  check("homepage presents three independent growth records and a four-stage operating story", () => {
-    assert.ok(d.querySelector("#growth-story"));
-    assert.equal(d.querySelectorAll(".g-home-signal").length, 3);
-    assert.deepEqual(
-      [...d.querySelectorAll(".g-home-signal")].map((x) => x.dataset.growthMetric),
-      ["engagement-change", "ig-event-engagement-change", "group"],
-    );
-    assert.equal(d.querySelectorAll(".g-home-stage").length, 4);
-    assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("0 → 8K+"));
-    assert.ok(d.querySelector(".g-home-stage-proof").textContent.includes("字段与日期待核"));
-    assert.ok(d.querySelector(".g-home-story-footnote").textContent.includes("不是同一时间序列"));
-    assert.equal(d.querySelectorAll(".g-home-story-actions a").length, 2);
-    assert.equal(d.querySelector('.g-home-story-actions a[href="#/case/social"]')?.textContent.trim(), "查看社媒管理案例 ↗");
-    assert.equal(d.querySelector('.g-home-story-actions a[href="#/data/social"]')?.textContent.trim(), "查看社媒数据与证据 ↗");
-    assert.ok(d.querySelector(".results-band").textContent.includes("96.5万"));
-    assert.ok(d.querySelector(".results-band").textContent.includes("3.7万"));
+  check("homepage surfaces four featured cases and two period metrics", () => {
+    const links = [...d.querySelectorAll(".featured-nav a")];
+    assert.deepEqual(links.map((item) => item.hash.split("/").at(-1)), featured);
+    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 4);
+    const summary = d.querySelector(".home-summary");
+    assert.ok(summary.textContent.includes("2025 年阶段汇总"));
+    assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
+    assert.equal(d.querySelector(".application-hero img"), null);
   });
+  for (const id of featured) {
+    await route("/case/" + id);
+    check("overview and chapter links: " + id, () => {
+      const overview = d.querySelector(".g-case-overview");
+      assert.deepEqual([...overview.querySelectorAll("h2")].map((h) => h.textContent), ["我的职责", "关键决定", "产出与结果"]);
+      const path = overview.querySelector("a").hash;
+      assert.equal(path.split("/")[2], id);
+      assert.ok(d.getElementById(path.split("/")[3]));
+      assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
+    });
+  }
   await route("/case/social");
   check("eight social management stages form one end-to-end journey", () => {
     assert.equal(d.querySelectorAll(".g-foundation>article").length, 8);

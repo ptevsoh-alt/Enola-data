@@ -41,7 +41,7 @@ const fs = require("fs"),
       await new Promise((r) => setTimeout(r, 5));
     };
   check("homepage is a visual case index", () =>
-    assert.equal(d.querySelectorAll(".case-card").length, 6),
+    assert.equal(d.querySelectorAll(".case-card").length, 4),
   );
   for (const c of w.PORTFOLIO.cases) {
     await route("/case/" + c.id);

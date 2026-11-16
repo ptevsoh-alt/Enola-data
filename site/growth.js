@@ -22,100 +22,6 @@
   };
   const header = (en, title, desc) =>
     `<div class="g-heading"><div><p class="eyebrow">${en}</p><h2>${title}</h2></div><p>${desc}</p></div>`;
-  function homeSignal(id, note) {
-    const x = m(id);
-    return `<article class="g-home-signal" data-growth-metric="${id}">
-      <span>${esc(x.platform)} · ${note}</span>
-      <button type="button" data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，查看数据口径">
-        <strong>${esc(x.display)}</strong>
-        <b>${esc(x.label)}</b>
-      </button>
-      <small>${esc(x.window)}</small>
-    </article>`;
-  }
-  function homeGrowthStory() {
-    const signals = [
-      ["engagement-change", "独立比较阶段"],
-      ["ig-event-engagement-change", "独立活动阶段"],
-      ["group", "独立社群阶段"],
-    ];
-    const stages = [
-      {
-        no: "01",
-        label: "FOUNDATION / 账号起盘",
-        title: "先明确平台任务，再搭建账号矩阵。",
-        copy: "负责 Facebook、Instagram 品牌账号与美国 Facebook Group。Facebook 承接品牌信息和链接导流；Instagram 组织产品演示与活动内容；Group 承接交流和问题反馈。",
-        proof: true,
-      },
-      {
-        no: "02",
-        label: "CONTENT SYSTEM / 内容体系",
-        title: "用内容支柱和排期，稳定团队供给。",
-        copy: "围绕产品演示、家庭清洁场景、教程与 FAQ、互动挑战、UGC 建立选题体系；季度定主题，月度排内容日历，周度审核脚本、视觉、产品事实与发布状态。",
-      },
-      {
-        no: "03",
-        label: "CAMPAIGN / 活动传播",
-        title: "把主题内容拆成可协同的活动工作包。",
-        copy: "围绕目标、用户洞察、Big Idea、参与机制、平台组合、素材、发布节奏与复盘指标组织活动；概念方案与历史活动数据分开展示，不做未经证实的活动归因。",
-      },
-      {
-        no: "04",
-        label: "COMMUNITY / 社群经营",
-        title: "让用户参与和问题反馈回到内容计划。",
-        copy: "通过教程、投票、清洁挑战、UGC 投稿和问题答疑建立参与入口；将高频问题整理为 FAQ 和下一轮选题，形成内容、社群与产品信息之间的反馈回路。",
-      },
-    ];
-    return `<section class="g-module g-home-story" id="growth-story">
-      ${header(
-        "SOCIAL GROWTH / MANAGEMENT STORY",
-        "从账号起盘，到内容与社群增长。",
-        "2025.04–2026.09 担任社媒负责人 / 管理组长，负责 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容策略和团队交付。",
-      )}
-      <div class="g-home-story-intro">
-        <div class="g-home-owner">
-          <span>ROLE / 管理职责</span>
-          <h3>社媒负责人<br>管理组长</h3>
-          <p>把平台分工、内容规划、跨团队制作、活动组织与数据复盘连接起来；协作社媒小组、产品、设计、视频、电商及 Creator / KOL。</p>
-          <div class="g-home-owner-tags"><i>Facebook</i><i>Instagram</i><i>Facebook Group</i><i>Shopify 承接</i></div>
-        </div>
-        <div class="g-home-signals">
-          ${signals.map(([id, note]) => homeSignal(id, note)).join("")}
-        </div>
-      </div>
-      <div class="g-home-stage-grid">
-        ${stages.map((s) => `<article class="g-home-stage">
-          <span>${s.no} / ${s.label}</span>
-          <h3>${s.title}</h3>
-          <p>${s.copy}</p>
-          ${s.proof ? `<div class="g-home-stage-proof">
-            <strong>0 → 8K+</strong>
-            <span>账号规模阶段记录 · 字段与日期待核</span>
-            ${evidence("fb-size")}
-          </div>` : ""}
-        </article>`).join("")}
-      </div>
-      <div class="g-home-rhythm">
-        <div>
-          <span>MANAGEMENT RHYTHM / 管理节奏</span>
-          <h3>季度定方向，月度排内容，周度管交付。</h3>
-          <p>把策略转成明确的任务、负责人、素材依赖和审核节点。</p>
-        </div>
-        <div class="g-home-rhythm-items">
-          <article><b>季度 / 主题规划</b><p>产品重点、用户问题、内容目标与资源优先级。</p></article>
-          <article><b>月度 / 内容日历</b><p>平台、选题、形式、负责人、素材、CTA 与承接页面。</p></article>
-          <article><b>周度 / 交付复盘</b><p>脚本、视觉、视频、事实、权限、链接与发布状态。</p></article>
-        </div>
-      </div>
-      <div class="g-home-story-actions">
-        <a href="#/case/social">查看社媒管理案例 ↗</a>
-        <a href="#/data/social">查看社媒数据与证据 ↗</a>
-      </div>
-      <p class="g-home-story-footnote">
-        上方三项变化记录来自不同平台与统计阶段：Meta 互动比较阶段、Instagram 独立活动阶段、Facebook Group 独立新增阶段。它们不是同一时间序列，不作横向排名或活动归因；0→8K+ 的账号字段仍待核。
-      </p>
-    </section>`;
-  }
   const socialSteps = [
     [
       "Social Media Foundation",
@@ -737,14 +643,6 @@
   // No time series is supplied by the current evidence set. Do not synthesize it.
   window.PORTFOLIO_GROWTH = { validateSeries: trendSeries, series: [] };
   window.enhancePortfolio = function (main, { page, id }) {
-    if (page === "home") {
-      main
-        .querySelector(".discipline-strip")
-        ?.insertAdjacentHTML("afterend", homeGrowthStory());
-      main
-        .querySelector(".contact-band")
-        ?.insertAdjacentHTML("beforebegin", campaignWall());
-    }
     if (page === "case" && id === "social") {
       const execution = main.querySelector("#execution>div:last-child");
       const legacyGrid = execution?.querySelector(".deliverable-grid");
