@@ -25,7 +25,7 @@
   const link = (id, label = "查看案例") =>
     `<a class="text-link" href="#/case/${id}">${label} <span aria-hidden="true">↗</span></a>`;
   const names = {
-    gtm: ["GTM 目标与产品真值", "Campaign Strategy & Big Idea", "Creative Theme & Content Matrix", "IMC 协同与发布 Gate"],
+    gtm: ["Launch Charter & Business Gate", "Campaign Strategy & Creative Platform", "RACI / Resource / Stage-Gate", "Measurement & Lifecycle Handoff"],
     brand: ["受众需求", "品牌承诺", "可信证明", "渠道表达"],
     social: ["季度主题", "内容支柱", "平台分工", "复盘决策"],
     operations: ["确认输入", "拆解依赖", "审核验收", "异常闭环"],
@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["从业务目标、受众场景与产品真值建立Launch Charter，区分GTM商业准备和Campaign传播责任。", "构建Campaign Strategy、Message House、Big Idea与Creative Territories，让创意从用户张力和产品证明中推导。", "将8类内容支柱转为Campaign Content Matrix，再拆成23个社媒发布/运营槽位。", "组织15条IMC渠道协同链路，明确Owner、素材依赖、发布Gate、Measurement与Lifecycle交接。"],
+    gtm: ["锁定市场、SKU、上市窗口、一个主业务目标、商业准备条件与关键决策Owner；区分已验证事实和待验证假设。", "从受众张力与产品真值推导Campaign Strategy、Message House、Big Idea、Creative Territories与8类内容支柱。", "组织跨部门RACI、阶段里程碑、素材依赖、预算资源、发布Gate与风险升级；每项交付物指定唯一A。", "建立Primary Result、Leading Signals与Guardrails；明确数据成熟度、优化动作、Campaign Closeout和Lifecycle Handoff."],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -78,10 +78,10 @@
   const featured = {
     gtm: {
       label: "GTM / IMC 新品上市管理",
-      title: "从上市目标到整合传播与Campaign交付",
+      title: "从Launch Charter到Campaign治理与整合传播",
       role: "负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同。",
-      decision: "区分GTM商业上市准备与Campaign整合传播责任，再把用户张力、产品真值和品牌主张转化为Big Idea、创意方向、内容矩阵、渠道角色与发布Gate。",
-      output: "Campaign Strategy、Creative Theme、8类内容支柱、23个社媒槽位、15条IMC协同链路、跨部门Gate与视觉资产归档。",
+      decision: "先拆解GTM商业准备与Campaign传播责任，再以产品真值、用户张力和品牌主张构建Big Idea；通过RACI、阶段Gate、资源依赖和Measurement组织跨部门交付。",
+      output: "Launch Charter、Campaign Strategy、Creative Theme、8类内容支柱、23个社媒槽位、15条IMC协同链路、GTM管理驾驶舱、KPI/风险/资源与资产QA。",
       artifact: "查看GTM / IMC管理框架与Campaign工作物",
       chapter: "strategy",
       image: "mop-kv-detail",
