@@ -98,3 +98,6 @@
 PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，而 qa/incremental/baseline.json 仍保留旧的规范化首页哈希，导致 index copy retained 检查失败。本次将该测试基准同步到已审核的首页元信息版本；样式、原始数据、案例数量与指标数据保护规则保持不变。缓存版本更新后，PUBLIC_ASSETS.json 对修改的公开文件重新计算字节数和 SHA-256。
 
 本轮只更新 PR #15 工作分支，不写 main、不合并、不部署。
+
+
+另修正一项原有回归测试顺序：PR #15 首页代表案例已按招聘阅读顺序调整为 GTM → Brand / IMC → 项目管理 → Social，但 test-growth.cjs 仍断言旧顺序 GTM → Social → Brand → 项目管理。本次将测试预期同步到已批准的页面顺序，不改变页面内容或案例排序。
