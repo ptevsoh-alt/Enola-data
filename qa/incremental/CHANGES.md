@@ -79,3 +79,22 @@
 ## 最终视觉精修（2026-11-03）
 
 只在现有 PR #10 功能分支追加必要样式：自然卡片高度、桌面两列管理链路、更清晰的 12–14px 正文／证据说明、取消限制说明三行截断、移动端指标上下布局、主题色标签对比度。原业务文案和指标不变，PUBLIC_ASSETS.json 同步更新。详细问题、修复和 24 张当前代码实拍截图位于 qa/final-visual；本轮完整测试 143/143 PASS。
+
+
+## 新品上市 Campaign 策略与 IMC 工作物（2026-11-18）
+
+在现有 GTM 代表案例的 Strategy 章节内深化，不新增重复案例，不改写既有 11 案例结构。
+
+- 新增 2026 年 5 月匿名化 Campaign 规划重建：Objective、受众假设、Core Tension、Theme / Big Idea、Creative Territories。
+- 将内容策略展开为 7 个 Content Pillars：场景问题、机制证明、功能教育、情绪品牌、FAQ、Creator / UGC、转化承接。
+- 将上市节奏展示为 6 个阶段：场景预热、产品教育、倒计时、T0 发布、首销窗口、持续教育与复盘。
+- 增加 IMC 角色矩阵：Owned Social、Short Video、YouTube、Community、Creator / PR、Paid、CRM、Commerce / Operations、Measurement。
+- 展示跨部门职责、交付依赖和发布 Gate；明确个人职责集中于社媒策略与内容团队交付、参与产品定位和上市传播协同，不扩写为产品研发、定价、整体预算或供应链决策。
+- 对应工作簿包含 23 个社媒内容 / 运营槽位、15 条 IMC 协同链路；视觉资产 Tracker 有 25 项记录。以上均为规划与管理工作物数量，不是已发布内容数量。
+- 项目计划窗口为 2026 年 5 月；页面明确标注为规划版本重建，不代表已发布、已投放、已成交或已实现 ROI。简历记录的约 +3% 阶段销量表现与该计划分开呈现，不做因果归因。
+- 没有新增趋势图或 Campaign 成绩数字；无连续日期数据时不绘制表现折线。
+
+### QA 基准修正
+PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，而 qa/incremental/baseline.json 仍保留旧的规范化首页哈希，导致 index copy retained 检查失败。本次将该测试基准同步到已审核的首页元信息版本；样式、原始数据、案例数量与指标数据保护规则保持不变。缓存版本更新后，PUBLIC_ASSETS.json 对修改的公开文件重新计算字节数和 SHA-256。
+
+本轮只更新 PR #15 工作分支，不写 main、不合并、不部署。
