@@ -129,3 +129,20 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 
 
 最新分支复核：已移除公开前端中的外部Drive URL，文件链接仅保留在受控的Google Docs / Sheets工作文档；重新触发PR验证以确认当前HEAD而非旧merge ref的结果。
+
+
+## GTM / IMC 管理型作品集深化与 M3 R3 KV 版式修订（2026-11-19）
+
+- 新增GTM Launch Charter、商业准备Gate、RACI决策权、跨部门五条工作流、阶段Gate、资源容量管理、Measurement决策闭环和Lifecycle Handoff。
+- 强化M07 GTM / Launch Owner与M08 Campaign Owner的职责边界；每项交付物指定唯一A，专业Owner分别签核产品事实、价格/Offer、供应履约、渠道执行与测量口径。
+- 作品集明确管理交付物：Launch Charter、RACI、阶段里程碑、Gate/Risk、预算/资源、Content Matrix、Content Calendar、IMC Channel Matrix、Asset Register、KPI Dictionary和Closeout。
+- 新增IF/THEN管理逻辑：产品Claim/Proof缺失→HOLD_CLAIM；Offer/库存/履约未通过→PREPARE_ONLY；权利/许可不完整→HOLD_PUBLISH/HOLD_SEND；数据未成熟→INSUFFICIENT_EVIDENCE；Guardrail破线→REDUCE/STOP/ROLLBACK。
+- M3 KV R3以官方黄色M3整机正视图为产品源图，采用源图保真合成方式修正布局：4:5完整显示双盘底座且CTA不遮挡；9:16放大主体并保留整机。R3文件已上传指定Google Drive目录，状态为PENDING_BRAND_PRODUCT_QA，不标记为Approved。
+- R2 KV保留为历史版本；Contact Sheet v2继续作为R2审阅索引，不代表R3最终导出。
+- 2026年5月仍为规划重建；不新增已发布、已投放、成交或ROI结果。简历已有约+3%阶段销量记录不归因于本Campaign。
+- 公开站点不嵌入外部Drive URL；实际文件链接留在受控的Google Docs / Sheets中。
+
+### 更新与QA
+- 更新 site/projects.js / site/app.js / site/index.html，并刷新 PUBLIC_ASSETS.json 的字节数与 SHA-256。
+- 缓存版本更新至 20261119c；保持 data.js、styles.css、原始数据和案例数量不变。
+- 仅更新 PR #15 工作分支；不写 main、不合并、不部署。
