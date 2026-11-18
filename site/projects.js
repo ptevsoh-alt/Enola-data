@@ -82,7 +82,10 @@
     return section("五款产品，四条产品线", "从产品组合到上市传播：先明确主推任务，再把产品事实拆成渠道可执行的内容。", `
       <div class="g-project-feature g-project-product"><div class="g-project-list">${productLines.map(([line, product, task, demo]) => `
         <article><small>${line}</small><h3>${product}</h3><p>${task}。${demo}</p></article>`).join("")}</div>
-        <figure>${image("mop-kv-detail", "黄色双盘拖把与其双盘底座的主视觉局部")}<figcaption>双盘拖把主视觉局部 · 新品传播视觉方向</figcaption></figure>
+        <figure>${image("m3-yellow-main", "双盘拖把黄色款整机外观，展示双圆拖布头、黄色机身与手柄结构")}<figcaption><b>双盘拖把 · 整机外观</b><span>采用黄色款真实产品原图，保留整机比例、双盘底座与手柄结构</span></figcaption></figure>
+      </div>
+      <div class="g-product-gallery" aria-label="双盘拖把产品外观细节">
+        <figure>${image("m3-yellow-battery", "双盘拖把黄色款主机背部与外置电池安装位置")}<figcaption><b>Battery Detail / 电池安装</b><span>使用原始产品图展示电池安装位置，不以示意图替代真实结构</span></figcaption></figure>
       </div>
       <div class="g-project-list">
         <article><small>LAUNCH PRIORITY / 主推组合</small><h3>双盘拖把 × 长柄电动刷</h3><p>先以餐区硬地黏污和浴室边角建立清晰的传播入口；手持刷、无线吸尘器和烤炉刷分别承担水槽窄边、宠物毛发与干屑、烧烤后炉篦清洁等专项任务。</p></article>

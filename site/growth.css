@@ -1758,6 +1758,13 @@
 .g-project-media,
 .g-project-calendar-plan { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; align-items: start; }
 .g-project-product { grid-template-columns: minmax(0, 1.6fr) minmax(0, 1fr); }
+
+.g-project-product figure img { background: #fff; object-fit: contain; }
+.g-product-gallery { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 1.25rem; align-items: start; margin: 1rem 0 1.4rem; }
+.g-product-gallery img { display: block; width: 100%; aspect-ratio: 4 / 3; object-fit: contain; background: #fff; border-radius: .35rem; }
+.g-product-gallery figcaption { padding: .45rem 0; font-size: .875rem; }
+.g-product-gallery figcaption b, .g-product-gallery figcaption span { display: block; }
+
 .g-project img { display: block; width: 100%; height: auto; border-radius: .35rem; }
 .g-project figure { margin: 0; }
 .g-project figure figcaption { padding: .45rem 0; font-size: .875rem; }
@@ -1780,7 +1787,8 @@
 @media (max-width: 680px) {
   .g-project-feature,
   .g-project-calendar-plan,
-  .g-calendar-days { grid-template-columns: minmax(0, 1fr); }
+  .g-calendar-days,
+  .g-product-gallery { grid-template-columns: minmax(0, 1fr); }
   .g-project-product figure { max-width: 20rem; }
   .g-project-vertical { display: block; }
 }

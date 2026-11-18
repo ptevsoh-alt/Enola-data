@@ -65,6 +65,16 @@
     "sha256": "f856ab71f0b69c182975afad02a012a9453c3054a951abd5b0d7024df0884c33"
   },
   {
+    "file": "assets/projects/m3-yellow-battery.webp",
+    "bytes": 10288,
+    "sha256": "9365f10b0231c76ee54ad15b01218a49f6deaff152edd2bed3b552d3384f91db"
+  },
+  {
+    "file": "assets/projects/m3-yellow-main.webp",
+    "bytes": 4580,
+    "sha256": "a855593ce0400aab524086e4e2812f635b4c3f0ca276fab45297b4d7b0728a5e"
+  },
+  {
     "file": "assets/projects/mop-kv-detail.webp",
     "bytes": 34630,
     "sha256": "51a5a0c39e01251830544b6c808ce0a326ba490623a6812730398146e29c7bd3"
@@ -91,8 +101,8 @@
   },
   {
     "file": "growth.css",
-    "bytes": 41765,
-    "sha256": "a9a27a0c118fa091c7c82b93defe59b1d7968de81dfcc2667d3ac6e1ff5c6cfb"
+    "bytes": 42307,
+    "sha256": "004444bb7281860eefe36722db22cd7d2739140acc0054855ec167870de1fba1"
   },
   {
     "file": "growth.js",
@@ -102,12 +112,12 @@
   {
     "file": "index.html",
     "bytes": 3495,
-    "sha256": "2edf9a993f75346fba5abb372479f1612df8454cbf8d890f5edc05efe02be425"
+    "sha256": "a3c5a714c8320fed5c6aee1a072bf8a89c52bd83f06d72acde2b06a4381d6743"
   },
   {
     "file": "projects.js",
-    "bytes": 40108,
-    "sha256": "629a70ced9fffa3807897f6c9c27d980d673c7edaefcc776ac1551964f6ab545"
+    "bytes": 40588,
+    "sha256": "4ba7e891936f8647514e59842b67384a94c3ae9eed227fdb155cdd3160d614df"
   },
   {
     "file": "robots.txt",
