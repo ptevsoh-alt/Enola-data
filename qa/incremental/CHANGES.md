@@ -101,3 +101,22 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 
 
 另修正一项原有回归测试顺序：PR #15 首页代表案例已按招聘阅读顺序调整为 GTM → Brand / IMC → 项目管理 → Social，但 test-growth.cjs 仍断言旧顺序 GTM → Social → Brand → 项目管理。本次将测试预期同步到已批准的页面顺序，不改变页面内容或案例排序。
+
+
+## IMC / GTM 管理岗与 Campaign 框架深化（2026-11-19）
+
+- 在现有 GTM 代表案例中明确区分 M07 GTM / Launch Owner 与 M08 Campaign Owner：前者负责产品上市与商业承接准备，后者负责Campaign策略、Big Idea、渠道组合、内容激活、分发与复盘。
+- 新增 Campaign Strategy & Planning Framework：Business Context、Audience / Insight、Objective、Positioning / Message、Creative Platform、IMC Architecture、Content Matrix、Activation / Operations、Measurement / Learning。
+- 新增 Campaign Creative Theme Development：从用户场景/张力、产品真值、品牌承诺和目标行为推导Big Idea，再展开Creative Territories、Narrative、KV与渠道适配。
+- 明确 M3 Big Idea 为 MAKE ROOM FOR WHAT MATTERS.；保留 After-Dinner Reset、See the Motion、Make Room for What Matters、One Home, Different Cleaning Jobs 四个创意方向及各自证明边界。
+- 新增8类 Campaign Content Matrix：场景问题、情绪与品牌、产品机制证明、功能与操作教育、FAQ与异议、Creator / UGC、转化承接、品牌组合教育。矩阵与逐日内容日历分开呈现。
+- 作品集页面新增GTM / IMC管理视角、策略框架、创意主题构建、8类内容矩阵和视觉资产链接。
+- 视觉资产链接指向指定Google Drive目录中的R2 Draft / Review副本；不把静态草稿、Layout Prototype或R3 QA Reject标记为Approved。
+- 个人职责仍按真实边界表述：负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同，不扩写为产品研发、定价、整体预算审批或供应链决策。
+- 不新增业务成绩或ROI；2026年5月仍标记为规划重建，约+3%阶段销量记录不归因于本Campaign。
+
+### 资产与QA
+- 更新 app.js / projects.js / index.html 的 PUBLIC_ASSETS.json 字节数与 SHA-256。
+- 静态缓存版本从 20261119a 更新至 20261119b；规范化 index baseline 不变。
+- 现有 data.js、styles.css、案例数量和历史指标保持不变。
+- 本轮仍仅更新 PR #15 工作分支，不写 main、不合并、不部署。
