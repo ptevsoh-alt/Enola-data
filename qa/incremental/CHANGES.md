@@ -126,3 +126,6 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 
 
 页面资产展示治理补充：由于公开站点验证规则禁止在前端源码中写入外部URL，本轮仅在作品集页面展示KV资产名称、QA状态和归档说明；可访问的Google Drive文件链接保留在指定Campaign策略文档与工作簿中，避免把外部文件URL直接写入公开前端源码。
+
+
+最新分支复核：已移除公开前端中的外部Drive URL，文件链接仅保留在受控的Google Docs / Sheets工作文档；重新触发PR验证以确认当前HEAD而非旧merge ref的结果。
