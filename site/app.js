@@ -25,7 +25,7 @@
   const link = (id, label = "查看案例") =>
     `<a class="text-link" href="#/case/${id}">${label} <span aria-hidden="true">↗</span></a>`;
   const names = {
-    gtm: ["产品事实与场景", "Campaign 主张", "内容矩阵与排期", "IMC 协同与 Gate"],
+    gtm: ["GTM 目标与产品真值", "Campaign Strategy & Big Idea", "Creative Theme & Content Matrix", "IMC 协同与发布 Gate"],
     brand: ["受众需求", "品牌承诺", "可信证明", "渠道表达"],
     social: ["季度主题", "内容支柱", "平台分工", "复盘决策"],
     operations: ["确认输入", "拆解依赖", "审核验收", "异常闭环"],
@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["整理 Review、VOC、竞品和购买顾虑，确认 SKU、Claim 与证明边界。", "建立 Campaign Theme、Big Idea、创意方向与核心信息层级。", "将内容支柱转成 23 个社媒排期槽位，明确平台、形式、CTA、Owner 与素材依赖。", "建立 15 条 IMC 协同链路，配置阶段节点、发布 Gate、测量与生命周期交接。"],
+    gtm: ["从业务目标、受众场景与产品真值建立Launch Charter，区分GTM商业准备和Campaign传播责任。", "构建Campaign Strategy、Message House、Big Idea与Creative Territories，让创意从用户张力和产品证明中推导。", "将8类内容支柱转为Campaign Content Matrix，再拆成23个社媒发布/运营槽位。", "组织15条IMC渠道协同链路，明确Owner、素材依赖、发布Gate、Measurement与Lifecycle交接。"],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -77,12 +77,12 @@
   }
   const featured = {
     gtm: {
-      label: "新品上市 IMC / GTM",
-      title: "五款产品、四条产品线的上市传播",
-      role: "参与用户研究、产品差异化定位、卖点分层与上市传播；负责社媒传播策略和内容团队交付。",
-      decision: "以餐区硬地清洁和浴室边角任务建立产品入口，再把 Campaign 主张、内容支柱、平台角色、日期、Owner 与发布 Gate 落到同一排期体系。",
-      output: "产品组合与 Message House、Campaign 策略、23 个社媒排期槽位、15 条 IMC 协同链路及视觉资产追踪。",
-      artifact: "查看 Campaign 策略与 IMC 工作物",
+      label: "GTM / IMC 新品上市管理",
+      title: "从上市目标到整合传播与Campaign交付",
+      role: "负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同。",
+      decision: "区分GTM商业上市准备与Campaign整合传播责任，再把用户张力、产品真值和品牌主张转化为Big Idea、创意方向、内容矩阵、渠道角色与发布Gate。",
+      output: "Campaign Strategy、Creative Theme、8类内容支柱、23个社媒槽位、15条IMC协同链路、跨部门Gate与视觉资产归档。",
+      artifact: "查看GTM / IMC管理框架与Campaign工作物",
       chapter: "strategy",
       image: "mop-kv-detail",
       alt: "黄色双盘拖把的产品主视觉局部",
