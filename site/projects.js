@@ -101,6 +101,53 @@
         <article><small>TEST PLAN 02</small><h3>产品演示</h3><p>同一时长与行动提示，比较握持、接触点特写和单用中景；观察收藏及与具体用法相关的评论。</p></article>
         <article><small>TEST PLAN 03</small><h3>广告主张</h3><p>在相同受众与投放条件下，比较站姿刷洗主张和单一功能主张；检查用户能否准确理解适用场景与操作要点。</p></article>
       </div>
+
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>CAMPAIGN DEEP DIVE / 2026.05</small><h3>一份可拆解、可协同的新品上市规划</h3><p>本模块复原 2026 年 5 月双头电动拖把上市传播计划，展示 Campaign Strategy、社媒内容矩阵与 IMC 排期如何连接。它是规划工作物，不是已发布活动记录。</p></article>
+        <article><small>PRIMARY OBJECTIVE</small><h3>让目标用户理解产品，并在商业条件具备时完成购买</h3><p>购买行为是主目标；触达、观看、互动和点击用于诊断传播环节。价格、Offer、库存、支付和履约未通过审核前，CTA 降级为 Learn More / Watch Demo。</p></article>
+        <article><small>PRIMARY AUDIENCE / HYPOTHESIS</small><h3>美国厨房与餐区硬地日常清洁人群</h3><p>以经常处理餐后地面清洁任务的家庭用户作为优先受众假设；需求强度和购买阻碍仍需由 Review、VOC、搜索与客服反馈验证，不将其写成已完成调研结论。</p></article>
+        <article><small>CORE TENSION</small><h3>晚餐结束了，地面清洁任务还没有结束</h3><p>从具体生活任务切入，以真实产品操作建立理解，再回到家庭生活时刻。情绪价值不替代功能证明，也不量化承诺节省时间。</p></article>
+      </div>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>CAMPAIGN THEME / BIG IDEA</small><h3>MAKE ROOM FOR WHAT MATTERS.</h3><p>把清洁放回生活场景：先呈现餐后地面任务，再展示产品如何参与其中，最后回到用户真正想留住的生活时刻。</p></article>
+        <article><small>CREATIVE TERRITORY 01</small><h3>The After-Dinner Reset</h3><p>场景问题 → 产品进入 → 连续操作 → 同条件结果。镜头聚焦餐区硬地，不夸大污渍，也不把单次演示泛化成所有地面或污渍的保证。</p></article>
+        <article><small>CREATIVE TERRITORY 02</small><h3>See the Motion</h3><p>解释双头结构、真实运行与地面接触。运动必须来自真实产品视频；静态图、生成画面或产品渲染不能充当运行证明。</p></article>
+        <article><small>CREATIVE TERRITORY 03</small><h3>Make Room for What Matters</h3><p>用家庭相处与日常时刻承接情绪价值；人物素材需授权，不固定家务性别角色，不使用未经证实的用户评价。</p></article>
+      </div>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>CONTENT PILLAR 01 / SCENARIO</small><h3>场景问题</h3><p>餐后地面、厨房日常清洁；Feed、Story、场景短片负责建立相关性。CTA：Comment / Watch Demo。</p></article>
+        <article><small>CONTENT PILLAR 02 / MECHANISM</small><h3>产品机制证明</h3><p>真实双头运行、接地和操作路径；短视频负责解释“如何工作”。缺少实拍时不发布运动证明。</p></article>
+        <article><small>CONTENT PILLAR 03 / EDUCATION</small><h3>功能与操作教育</h3><p>结构、手柄、控制区和已核验功能；轮播、短片与说明型内容降低理解成本。未签核参数不上图。</p></article>
+        <article><small>CONTENT PILLAR 04 / BRAND</small><h3>情绪与品牌</h3><p>Mother's Day 与家庭生活内容建立情绪关联；不以节日故事替代产品证明，也不暗示量化省时。</p></article>
+        <article><small>CONTENT PILLAR 05 / FAQ</small><h3>异议与常见问题</h3><p>收集真实评论和社群疑问，再由产品负责人核验答案；未知问题标记待回复，不凭空补充使用边界。</p></article>
+        <article><small>CONTENT PILLAR 06 / CREATOR</small><h3>Creator 与 UGC</h3><p>以真实家庭演示补充体验；披露、肖像、素材版权和 Paid Usage Rights 分开确认，投稿不自动等于商用授权。</p></article>
+        <article><small>CONTENT PILLAR 07 / CONVERSION</small><h3>转化承接</h3><p>获批的商品信息、广告变体与许可邮件承接购买；Offer、库存、支付和履约未通过 Gate 时不使用 Shop Now。</p></article>
+      </div>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>PHASE 01 / MAY 01–10</small><h3>场景预热与共鸣</h3><p>餐后场景、家庭情绪内容与社群问题收集；先让用户识别任务，再引入产品。</p></article>
+        <article><small>PHASE 02 / MAY 11–18</small><h3>产品机制与功能教育</h3><p>双头运行、产品结构、控制区与 FAQ；内容依赖真实操作素材和产品事实签核。</p></article>
+        <article><small>PHASE 03 / MAY 19–21</small><h3>上市倒计时</h3><p>3-Day Countdown、产品身份与已批准信息；不制造虚假稀缺或提前展示未批 Offer。</p></article>
+        <article><small>PHASE 04 / MAY 22</small><h3>T0 · Launch Day</h3><p>Hero Film、Launch KV、产品演示和跨平台分发；购买 CTA 仅在交易承接链路通过后开启。</p></article>
+        <article><small>PHASE 05 / MAY 23–25</small><h3>首销窗口与渠道放大</h3><p>Paid、Creator、Email 和社群问答按预算、授权、库存、客服与测量 Gate 条件性启动。</p></article>
+        <article><small>PHASE 06 / MAY 26–31</small><h3>持续教育与阶段复盘</h3><p>FAQ 更新、真实反馈、素材与权利归档、订单对账和生命周期交接；没有成熟数据不发布成绩回顾。</p></article>
+      </div>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>IMC / OWNED SOCIAL</small><h3>Facebook 与 Instagram</h3><p>承担场景认知、轮播教育、KV、短视频和活动分发；同一主张按平台形式重构，不机械重复发帖。</p></article>
+        <article><small>IMC / SHORT VIDEO</small><h3>TikTok、Reels 与 Shorts</h3><p>负责 Hook、真实动作与机制解释；一个视频只讲一个主要信息点，按平台原生指标复盘。</p></article>
+        <article><small>IMC / LONG-FORM</small><h3>YouTube</h3><p>承载 Hero Film 与完整演示，建立更完整的品牌叙事和产品理解；Storyboard 不等于最终成片。</p></article>
+        <article><small>IMC / COMMUNITY</small><h3>Facebook Group</h3><p>收集用户问题、组织讨论与 FAQ；投票和单条评论不直接视为代表性市场研究。</p></article>
+        <article><small>IMC / EARNED</small><h3>Creator 与 PR</h3><p>Creator 提供真实第三方演示；PR 先判断新闻价值，再使用已核验事实、引用与媒体素材。</p></article>
+        <article><small>IMC / PAID</small><h3>付费媒体</h3><p>先验证创意与目的地，再依据成熟数据执行 STOP / FIX / OBSERVE / SCALE；预算与 Offer 未批准不投放。</p></article>
+        <article><small>IMC / CRM</small><h3>Email 与生命周期</h3><p>按许可、用户状态和抑制规则分群；购买者、未购买高意向与既有客户分开管理。</p></article>
+        <article><small>IMC / COMMERCE & DATA</small><h3>交易承接与测量</h3><p>产品页、价格、库存、支付、配送、客服与 UTM / Event / 订单对账共同构成上市 Gate；平台归因不等于增量。</p></article>
+      </div>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>MY CONTRIBUTION</small><h3>社媒策略与内容团队交付</h3><p>负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同。未将产品研发、定价、整体预算审批或供应链决策写作个人独立职责。</p></article>
+        <article><small>PROJECT CONTROL</small><h3>把策略拆成可交付单元</h3><p>形成 23 个社媒内容 / 运营槽位、15 条 IMC 渠道与协同链路、25 项视觉资产追踪记录。每项明确日期、平台、内容任务、CTA、Owner、素材依赖与发布 Gate。</p></article>
+        <article><small>CROSS-FUNCTIONAL DELIVERY</small><h3>产品、营销与供应链三线协同</h3><p>产品 / 研发确认 SKU、功能和证明；营销组织 Campaign、内容、视觉、视频、Paid、PR / Creator 与 CRM；供应链 / 客服确认库存、配送、退换和假期值守。</p></article>
+        <article><small>RELEASE GATES</small><h3>条件未满足，先暂停对应动作</h3><p>产品 Claim 未签核 → 暂停参数传播；真实演示缺失 → 不发布运动证明；Offer / 库存 / 履约未确认 → 不开放购买 CTA；Creator 权利未齐 → 不发布或复用；测量口径未就绪 → 不宣称 ROI。</p></article>
+      </div>
+      <p class="g-chart-note">证据边界：这是 2026 年 5 月计划版本的匿名化规划重建，不代表已发布、已投放、已成交或已实现 ROI。现有视觉资产 Tracker 中仍有设计待完成、占位和真实演示素材依赖；本规划不将其写成最终成品。简历记录的约 +3% 阶段销量表现与本计划分开呈现，不归因于本 Campaign。</p>
       <p class="g-chart-note">上述测试项来自品牌屋中的传播测试计划，当前材料没有 A/B 测试执行记录或测试结果，不作为已验证的投放结论。</p>`, "product-portfolio");
   }
 
