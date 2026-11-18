@@ -25,7 +25,7 @@
   const link = (id, label = "查看案例") =>
     `<a class="text-link" href="#/case/${id}">${label} <span aria-hidden="true">↗</span></a>`;
   const names = {
-    gtm: ["产品事实", "用户任务", "价值主张", "上市交付"],
+    gtm: ["产品事实与场景", "Campaign 主张", "内容矩阵与排期", "IMC 协同与 Gate"],
     brand: ["受众需求", "品牌承诺", "可信证明", "渠道表达"],
     social: ["季度主题", "内容支柱", "平台分工", "复盘决策"],
     operations: ["确认输入", "拆解依赖", "审核验收", "异常闭环"],
@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["整理 Review、VOC、竞品和购买顾虑。", "按 FABA / FABE 拆解产品特征、用户利益与证明。", "制定 KV、演示镜头、FAQ 和 Creator Brief。", "按上市阶段安排渠道内容与审核节点。"],
+    gtm: ["整理 Review、VOC、竞品和购买顾虑，确认 SKU、Claim 与证明边界。", "建立 Campaign Theme、Big Idea、创意方向与核心信息层级。", "将内容支柱转成 23 个社媒排期槽位，明确平台、形式、CTA、Owner 与素材依赖。", "建立 15 条 IMC 协同链路，配置阶段节点、发布 Gate、测量与生命周期交接。"],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -80,9 +80,9 @@
       label: "新品上市 IMC / GTM",
       title: "五款产品、四条产品线的上市传播",
       role: "参与用户研究、产品差异化定位、卖点分层与上市传播；负责社媒传播策略和内容团队交付。",
-      decision: "以餐区硬地黏污和浴室边角作为主推任务，分别用双盘拖把与长柄电动刷建立清晰的产品证明。",
-      output: "产品组合、卖点层级、上市工作包、KV、演示脚本与 Creator Brief。",
-      artifact: "查看产品组合与上市传播",
+      decision: "以餐区硬地清洁和浴室边角任务建立产品入口，再把 Campaign 主张、内容支柱、平台角色、日期、Owner 与发布 Gate 落到同一排期体系。",
+      output: "产品组合与 Message House、Campaign 策略、23 个社媒排期槽位、15 条 IMC 协同链路及视觉资产追踪。",
+      artifact: "查看 Campaign 策略与 IMC 工作物",
       chapter: "strategy",
       image: "mop-kv-detail",
       alt: "黄色双盘拖把的产品主视觉局部",
