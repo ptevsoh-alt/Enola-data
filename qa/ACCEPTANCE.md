@@ -45,3 +45,22 @@
 仍存在的业务限制：原始后台报表、部分窗口与账户范围待核；PR／品牌／治理案例主要为经历重构，CRM 与创意概念不代表已执行。联系方式未提供，页面没有虚构联系方式。
 
 Console 补充：现有 Chrome 环境仍记录一条空信息 `Uncaught (in promise)`，消息无定位信息。站点自身路由巡检监听为空；未宣称浏览器 Console 完全无错误。站点资源请求为 200；扩展请求单独看待。
+
+
+## 2026-11-19 Enola Campaign / Community Event capability integration
+
+### Portfolio additions
+- M3 GTM case separates the single primary business result (net fulfilled orders / net contribution) from marketing and behavior objectives; product understanding, effective views, visits and engagement remain diagnostic / intermediate signals.
+- Five M3 Creative Territories are mapped to one primary mechanism each: pain-point emergence, mechanism reveal, relationship value transfer, micro-detail proof and user-experience proof. The mapping is a strategy reconstruction, not evidence that every territory was published or tested.
+- Facebook Group case adds Program Owner routing, minimum event contract, participation and UGC-rights handling, metric separation and post-event handoff.
+- No event-level results, budget, team size, ROI or causal attribution were invented.
+
+### Automated verification
+- Candidate HEAD: `27aa396e6ce6595ec9af17d55106ffa6bf8c3be2`.
+- GitHub Actions Run #139: Validate SUCCESS; `npm test` = 139/139: site structure / privacy / asset checks 8/8, DOM / interaction checks 70/70, growth / case behavior checks 61/61.
+- `PUBLIC_ASSETS.json` byte sizes and SHA-256 values were refreshed for `growth.js`, `projects.js` and `index.html`; manifest validation passed.
+- PR preview artifact uploaded: [Run #139 preview](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44492606746/artifacts/14513117393).
+- Deploy: SKIPPED. `main` remains unchanged; PR #15 remains Draft / Open; no merge or production deployment was performed.
+
+### Visual acceptance boundary
+The current candidate has passed automated structure, interaction, privacy and asset checks. This run did not perform new real-browser screenshot inspection at desktop / mobile viewports. Earlier screenshots are not reused as evidence for these new modules; rendered visual QA remains pending.
