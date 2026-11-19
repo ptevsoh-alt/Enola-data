@@ -116,6 +116,8 @@
         <article><small>CREATIVE TERRITORY 01</small><h3>The After-Dinner Reset</h3><p>场景问题 → 产品进入 → 连续操作 → 同条件结果。镜头聚焦餐区硬地，不夸大污渍，也不把单次演示泛化成所有地面或污渍的保证。</p></article>
         <article><small>CREATIVE TERRITORY 02</small><h3>See the Motion</h3><p>解释双头结构、真实运行与地面接触。运动必须来自真实产品视频；静态图、生成画面或产品渲染不能充当运行证明。</p></article>
         <article><small>CREATIVE TERRITORY 03</small><h3>Make Room for What Matters</h3><p>用家庭相处与日常时刻承接情绪价值；人物素材需授权，不固定家务性别角色，不使用未经证实的用户评价。</p></article>
+        <article><small>CREATIVE TERRITORY 04</small><h3>A Closer Look at M3</h3><p>通过整机、双头底座、手柄控制区与电池安装细节降低理解成本；每项说明必须对应官方产品源图、说明书或产品负责人确认，不凭静态图片推断按钮功能和性能。</p></article>
+        <article><small>CREATIVE TERRITORY 05</small><h3>Real Home, Real Reset</h3><p>通过创作者真实持有、操作与表达补充第三方体验；合作披露、肖像、素材版权、剪辑权、使用期限和 Paid Usage Rights 分别确认，不预写正面评价。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
         <article><small>CONTENT PILLAR 01 / SCENARIO</small><h3>场景问题</h3><p>餐后地面、厨房日常清洁；Feed、Story、场景短片负责建立相关性。CTA：Comment / Watch Demo。</p></article>
@@ -127,12 +129,14 @@
         <article><small>CONTENT PILLAR 07 / CONVERSION</small><h3>转化承接</h3><p>获批的商品信息、广告变体与许可邮件承接购买；Offer、库存、支付和履约未通过 Gate 时不使用 Shop Now。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
-        <article><small>PHASE 01 / MAY 01–10</small><h3>场景预热与共鸣</h3><p>餐后场景、家庭情绪内容与社群问题收集；先让用户识别任务，再引入产品。</p></article>
-        <article><small>PHASE 02 / MAY 11–18</small><h3>产品机制与功能教育</h3><p>双头运行、产品结构、控制区与 FAQ；内容依赖真实操作素材和产品事实签核。</p></article>
-        <article><small>PHASE 03 / MAY 19–21</small><h3>上市倒计时</h3><p>3-Day Countdown、产品身份与已批准信息；不制造虚假稀缺或提前展示未批 Offer。</p></article>
-        <article><small>PHASE 04 / MAY 22</small><h3>T0 · Launch Day</h3><p>Hero Film、Launch KV、产品演示和跨平台分发；购买 CTA 仅在交易承接链路通过后开启。</p></article>
-        <article><small>PHASE 05 / MAY 23–25</small><h3>首销窗口与渠道放大</h3><p>Paid、Creator、Email 和社群问答按预算、授权、库存、客服与测量 Gate 条件性启动。</p></article>
-        <article><small>PHASE 06 / MAY 26–31</small><h3>持续教育与阶段复盘</h3><p>FAQ 更新、真实反馈、素材与权利归档、订单对账和生命周期交接；没有成熟数据不发布成绩回顾。</p></article>
+        <article><small>T-24 / APR 28 · LAUNCH CHARTER</small><h3>立项与目标确认</h3><p>Owner：GTM / Launch 负责人、Campaign / IMC 负责人。交付：Launch Charter、目标卡、SKU与市场范围、资源边界、关键依赖及风险清单。Gate：产品身份唯一、主业务目标明确、每项未知信息都有责任人与截止时间。</p></article>
+        <article><small>T-12 / MAY 01–10 · STRATEGY & READINESS</small><h3>产品事实、定位与传播策略锁定</h3><p>Owner：产品 / 研发、Product Marketing、Campaign / IMC。交付：Product Fact Pack、Positioning / KSP、Message House、Big Idea、Creative Territories、渠道角色与资源需求。Gate：产品Claim可追溯；用户洞察假设与已验证事实分开标记。</p></article>
+        <article><small>T-5 / MAY 15–17 · LAUNCH PREFLIGHT</small><h3>内容、视觉与渠道预检</h3><p>Owner：Campaign / IMC；协同内容 / 社媒、视觉、视频、Paid、PR / Creator、CRM与数据。交付：Campaign Brief、内容矩阵、资产版本清单、发布排期、权利记录、UTM / Event与邮件检查。Gate：每项资产明确Owner、Proof、CTA、依赖与使用权限。</p></article>
+        <article><small>T-3 / MAY 19–21 · PRODUCT & SUPPLY GATE</small><h3>量产、库存与履约放行</h3><p>Owner：产品 / 研发、供应链与客服。交付：SKU / 配件核对、QC放行、可售库存、配送与退换安排、客服FAQ及最终素材实物核对。Gate：质量、库存、履约和客服能够承接传播承诺；未通过则暂停受影响的购买动作。</p></article>
+        <article><small>T0 / MAY 22 · DIGITAL LAUNCH</small><h3>数字发布与产品演示</h3><p>Owner：Campaign / IMC；执行：内容 / 社媒、视觉与视频。交付：Launch KV、Hero Film、产品演示、FAQ与跨平台适配。Gate：产品Claim、素材、Logo、权利和平台安全区通过审核；购买CTA与实际开放状态一致。</p></article>
+        <article><small>T+1 / MAY 23–25 · FIRST-SALE WINDOW</small><h3>首销窗口与渠道协同</h3><p>Owner：GTM / Launch、Paid Media与商业 / 供应链。交付：获批的Paid变体、Creator发布、许可Email、社群问答与订单监控。Gate：价格、Offer、库存、支付、配送、客服、合作披露和测量均通过后，才开放购买型传播。</p></article>
+        <article><small>T+4 / MAY 26 · EARLY REVIEW</small><h3>阶段复盘与优化决策</h3><p>Owner：Campaign / IMC、Measurement / Data及渠道负责人。交付：按平台、素材、受众、有效观看、访问与订单质量拆解的Early Review。决策：STOP / CONTINUE / FIX / OBSERVE；数据未成熟时不宣布Winner或ROI。</p></article>
+        <article><small>EOL / MAY 31 · CLOSEOUT & LIFECYCLE HANDOFF</small><h3>项目收尾与生命周期交接</h3><p>Owner：GTM / Launch、Campaign / IMC、CRM / Lifecycle与Measurement / Data。交付：素材与权利归档、订单/退款/库存复核、临时Offer与标签关闭、用户状态及后续责任交接。未成熟数据保留后续复核窗口。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
         <article><small>IMC / OWNED SOCIAL</small><h3>Facebook 与 Instagram</h3><p>承担场景认知、轮播教育、KV、短视频和活动分发；同一主张按平台形式重构，不机械重复发帖。</p></article>
@@ -146,7 +150,7 @@
       </div>
       <div class="g-project-list g-project-calendar-plan">
         <article><small>MY CONTRIBUTION</small><h3>社媒策略与内容团队交付</h3><p>负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同。未将产品研发、定价、整体预算审批或供应链决策写作个人独立职责。</p></article>
-        <article><small>PROJECT CONTROL</small><h3>把策略拆成可交付单元</h3><p>形成 23 个社媒内容 / 运营槽位、15 条 IMC 渠道与协同链路、25 项视觉资产追踪记录。每项明确日期、平台、内容任务、CTA、Owner、素材依赖与发布 Gate。</p></article>
+        <article><small>PROJECT CONTROL</small><h3>把策略拆成可交付单元</h3><p>形成 23 个社媒内容 / 运营槽位、15 条 IMC 渠道与协同链路，并建立 Campaign 资产清单、版本追踪与发布 Gate。每项明确日期、平台、内容任务、CTA、Owner、素材依赖与验收条件。</p></article>
         <article><small>CROSS-FUNCTIONAL DELIVERY</small><h3>产品、营销与供应链三线协同</h3><p>产品 / 研发确认 SKU、功能和证明；营销组织 Campaign、内容、视觉、视频、Paid、PR / Creator 与 CRM；供应链 / 客服确认库存、配送、退换和假期值守。</p></article>
         <article><small>RELEASE GATES</small><h3>条件未满足，先暂停对应动作</h3><p>产品 Claim 未签核 → 暂停参数传播；真实演示缺失 → 不发布运动证明；Offer / 库存 / 履约未确认 → 不开放购买 CTA；Creator 权利未齐 → 不发布或复用；测量口径未就绪 → 不宣称 ROI。</p></article>
       </div>
@@ -154,16 +158,16 @@
       <p class="g-chart-note">上述测试项来自品牌屋中的传播测试计划，当前材料没有 A/B 测试执行记录或测试结果，不作为已验证的投放结论。</p>
 
       <div class="g-project-list g-project-calendar-plan">
-        <article><small>GTM MANAGEMENT / M07</small><h3>管理产品进入市场的完整路径</h3><p>从市场机会、目标用户、产品定位与卖点，延伸到价格/Offer、库存、交易承接、履约、客服和生命周期交接。GTM 管理的不是一张传播日历，而是产品是否具备上市和商业承接条件。</p></article>
-        <article><small>IMC / CAMPAIGN MANAGEMENT / M08</small><h3>管理整合传播系统</h3><p>将一个业务目标转化为统一传播命题，再按用户决策阶段分配 Owned、Paid、Earned、Shared、Creator、PR、CRM 与 Measurement 的角色，让不同触点承担不同任务。</p></article>
-        <article><small>OWNER BOUNDARY</small><h3>区分 GTM Owner 与 Campaign Owner</h3><p>M07 负责 Launch 目标、商业准备、跨部门决策与生命周期交接；M08 负责 Campaign 目标、Big Idea、渠道组合、Activation、Distribution 和复盘。产品事实、专业渠道执行、供应链与客服仍由对应 Owner 签核。</p></article>
+        <article><small>GTM / LAUNCH MANAGEMENT</small><h3>管理产品进入市场的完整路径</h3><p>从市场机会、目标用户、产品定位与卖点，延伸到价格/Offer、库存、交易承接、履约、客服和生命周期交接。GTM 管理的不是一张传播日历，而是产品是否具备上市和商业承接条件。</p></article>
+        <article><small>IMC / CAMPAIGN MANAGEMENT</small><h3>管理整合传播系统</h3><p>将一个业务目标转化为统一传播命题，再按用户决策阶段分配 Owned、Paid、Earned、Shared、Creator、PR、CRM 与 Measurement 的角色，让不同触点承担不同任务。</p></article>
+        <article><small>OWNER BOUNDARY</small><h3>区分 GTM Owner 与 Campaign Owner</h3><p>GTM / Launch 负责人负责上市目标、商业准备、跨部门决策与生命周期交接；Campaign / IMC 负责人负责 Campaign 目标、Big Idea、渠道组合、Activation、Distribution 和复盘。产品事实、专业渠道执行、供应链与客服仍由对应职能负责人签核。</p></article>
         <article><small>MANAGEMENT OUTPUT</small><h3>用可验收的工作物组织团队</h3><p>Launch Charter、RACI、阶段里程碑、Content Matrix、Asset Register、预算与资源、发布 Gate、KPI Dictionary、风险升级和 Closeout。突出目标拆解、资源组织、进度控制、质量管理与结果复盘。</p></article>
       </div>
 
       <div class="g-project-list g-project-calendar-plan">
         <article><small>GTM LAUNCH CHARTER / BUSINESS DECISION</small><h3>先判断产品是否具备进入市场的条件</h3><p>Launch Charter锁定目标市场、唯一SKU/版本、上市窗口、Primary Business Objective、受众假设、商业约束、资源边界、关键依赖与决策Owner。目标值、预算、Offer和库存未审批时保留TBD，不把假设写成事实。</p></article>
         <article><small>GTM READINESS / FIVE GATES</small><h3>把商业准备拆成可验收条件</h3><p>Product Truth & Proof：型号、规格、测试和公开权限；Commercial：价格、Offer与贡献；Supply：量产、QC、库存和履约；Channel：账户、素材、权利与CTA；Measurement：UTM/Event、订单对账和指标口径。任何Gate未通过，只暂停受影响的发布或购买动作。</p></article>
-        <article><small>DECISION RIGHTS / RACI</small><h3>每项交付物有唯一最终负责者</h3><p>M07负责GTM上市目标、商业准备和生命周期交接；M08负责Campaign策略、Big Idea、渠道与复盘。M04/研发签核产品事实，Finance/Commercial签核价格与Offer，Supply Chain签核库存履约，M16签核测量口径；各渠道与资产由对应Owner执行。</p></article>
+        <article><small>DECISION RIGHTS / RACI</small><h3>每项交付物有唯一最终负责者</h3><p>GTM / Launch 负责人负责上市目标、商业准备和生命周期交接；Campaign / IMC 负责人负责 Campaign 策略、Big Idea、渠道与复盘。产品 / 研发签核产品事实，Finance / Commercial 签核价格与 Offer，Supply Chain 签核库存履约，Measurement / Data 负责测量口径；各渠道与资产由对应职能负责人执行。</p></article>
         <article><small>STAGE-GATE CONTROL</small><h3>用阶段节点管理进度与风险</h3><p>T-24立项 → T-12产品/商业/资源锁定 → T-5内容与渠道预检 → T-3质量/库存/履约放行 → T0发布Gate → T+1首销监控 → T+4早期复盘 → EOL关闭与交接。上述节点属于2026年5月规划，不代表历史执行。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
@@ -181,23 +185,23 @@
       <div class="g-project-list g-project-calendar-plan">
         <article><small>CREATIVE THEME CONSTRUCTION</small><h3>用户张力 × 产品真值 × 品牌承诺</h3><p>Occasion / User Tension + Product Truth + Brand Promise + Desired Action → Big Idea → Creative Territories → Narrative → KV / Visual System → Channel Adaptations。创意主题必须同时具备用户相关性、产品可信度、品牌一致性、记忆点和延展性。</p></article>
         <article><small>BIG IDEA / M3</small><h3>MAKE ROOM FOR WHAT MATTERS.</h3><p>餐后清洁任务仍然存在，是用户张力；双头电动拖把的真实结构与操作，是产品角色；POWER EVERY MOVE 是品牌主张。情绪回报是清洁任务完成后回到生活时刻，不构成量化省时承诺。</p></article>
-        <article><small>CREATIVE TERRITORIES</small><h3>从一个主题发展成不同创意机制</h3><p>The After-Dinner Reset：问题显化；See the Motion：机制揭示与真实动作证明；Make Room for What Matters：生活价值转译；One Home, Different Cleaning Jobs：品牌组合辅助认知。每个方向都要写清受众、命题、产品角色、证据和边界。</p></article>
+        <article><small>CREATIVE TERRITORIES</small><h3>从一个主题发展成不同创意机制</h3><p>The After-Dinner Reset：问题显化；See the Motion：机制揭示与真实动作证明；Make Room for What Matters：生活价值转译；A Closer Look at M3：产品细节解释；Real Home, Real Reset：真实体验证明。One Home, Different Cleaning Jobs 作为 Sustaining 阶段的品牌组合辅助层，不与五条创意领地混为一谈。每个方向都要写清受众、命题、产品角色、证据和边界。</p></article>
         <article><small>KV / VISUAL SYSTEM</small><h3>一套主视觉，多种渠道表达</h3><p>Master KV 负责建立主题、产品焦点、视觉层级和品牌识别；Feed、Story、Short Video、YouTube、PR和Email按画幅、安全区和传播任务独立适配。产品外观使用官方源图，文字与Logo后期排版；静态图不充当运动证明。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
         <article><small>CONTENT MATRIX / 01</small><h3>场景问题</h3><p>Awareness；餐后餐区地面与厨房日常清洁。用Feed、Story、问题讨论和场景短片建立相关性；CTA：Comment / Follow / Watch Demo。</p></article>
         <article><small>CONTENT MATRIX / 02</small><h3>情绪与品牌</h3><p>Awareness → Consideration；家庭共同分担与生活时刻。用节日KV、情绪短片和Hero Film建立品牌记忆；人物与音乐需授权。</p></article>
         <article><small>CONTENT MATRIX / 03</small><h3>产品机制证明</h3><p>Consideration；双头结构、真实运行和地面接触。用真实6–10秒演示和结构轮播解释产品如何工作；没有实拍不发布运动证明。</p></article>
-        <article><small>CONTENT MATRIX / 04</small><h3>功能与操作教育</h3><p>Consideration；产品结构、控制区、电池安装、水箱与显示细节。用Feature Carousel、短片和信息图降低理解成本；参数需M04签核。</p></article>
+        <article><small>CONTENT MATRIX / 04</small><h3>功能与操作教育</h3><p>Consideration；产品结构、控制区、电池安装、水箱与显示细节。用Feature Carousel、短片和信息图降低理解成本；参数需产品 / 研发负责人签核。</p></article>
         <article><small>CONTENT MATRIX / 05</small><h3>FAQ 与异议</h3><p>Consideration → Conversion；产品身份、操作方式和已确认边界。用FAQ轮播、社群问答与短答解决真实疑问；未知答案不推测。</p></article>
         <article><small>CONTENT MATRIX / 06</small><h3>Creator / UGC</h3><p>Consideration → Conversion；真实家庭演示和创作者体验。Brief、合同、披露、肖像权、内容版权与Paid Usage Rights分开确认；投稿不等于商用授权。</p></article>
         <article><small>CONTENT MATRIX / 07</small><h3>转化承接</h3><p>Conversion；产品信息、获批Offer、Paid变体、许可Email和现有商品承接页。价格、库存、支付、配送、客服与测量未通过时不开放购买CTA。</p></article>
         <article><small>CONTENT MATRIX / 08</small><h3>品牌组合教育</h3><p>Sustaining；五款产品、四条产品线的任务差异。M3保持主角，其他型号只使用各自官方图片和事实；源图或事实缺失时暂停。</p></article>
       </div>
       <div class="g-project-list g-project-calendar-plan">
-        <article><small>CONTENT MATRIX ≠ CONTENT CALENDAR</small><h3>先定义内容策略，再分配发布日期</h3><p>Content Matrix 回答对谁、在哪个决策阶段、用什么内容完成什么传播任务；Content Calendar 再安排日期、平台、Owner、资产、CTA与发布状态。当前工作簿已建立8类内容支柱、23个社媒发布/运营槽位和15条IMC协同链路。</p></article>
+        <article><small>CONTENT MATRIX ≠ CONTENT CALENDAR</small><h3>先定义内容策略，再分配发布日期</h3><p>Content Matrix 回答对谁、在哪个决策阶段、用什么内容完成什么传播任务；Content Calendar 再安排日期、平台、Owner、资产、CTA与发布状态。当前工作簿已建立7个核心内容支柱及1个品牌组合辅助层、23个社媒发布/运营槽位和15条IMC协同链路。</p></article>
         <article><small>MEASUREMENT & DECISION</small><h3>一个主结果，三层指标</h3><p>Primary Result：净履约订单 / 净贡献；Leading Signals：平台原生Reach、有效观看、保存、分享、有效访问和邮件点击；Guardrails：CAC、贡献毛利、退款/取消、库存、履约、客服和合规。平台归因不等于增量。</p></article>
-        <article><small>VISUAL ASSET LIBRARY / R3 REVIEW</small><h3>KV 版式修订与产品源图保真</h3><p>R3 Layout Fix Review已上传4:5与9:16两版。4:5完整显示双盘底座与拖布垫，CTA不再遮挡产品；9:16放大产品主体并保持整机完整。两版均以黄色M3官方正视图为源图，未重绘产品结构；当前仍待品牌、产品负责人和平台安全区验收，不是最终Approved。</p><p>R2原稿保留为版本历史；其他资产包括Contact Sheet v2、Dual-Head Detail、Handle Control Detail、Battery Detail与Campaign Visual Asset Pack v2。</p><p>准确文件链接保留在配套Campaign策略文档与工作簿，公开站点不写入外部Drive URL。</p></article>
+        <article><small>VISUAL ASSET LIBRARY / R3 REVIEW</small><h3>KV 版式修订与产品源图保真</h3><p>R3 Layout Fix Review已上传4:5与9:16两版。4:5完整显示双盘底座与拖布垫，CTA不再遮挡产品；9:16放大产品主体并保持整机完整。两版均以黄色M3官方右视图为源图，未重绘产品结构；当前仍待品牌、产品负责人和平台安全区验收，不是最终Approved。</p><p>R2原稿保留为版本历史；其他资产包括Contact Sheet v2、Dual-Head Detail、Handle Control Detail、Battery Detail与Campaign Visual Asset Pack v2。</p><p>准确文件链接保留在配套Campaign策略文档与工作簿，公开站点不写入外部Drive URL。</p></article>
         <article><small>WORKING DOCUMENTS</small><h3>策略、矩阵与排期持续维护</h3><p>配套工作文档包含GTM / IMC管理模型、Campaign Strategy、Creative Theme Development、Campaign Content Matrix、社媒逐日排期和IMC渠道协同矩阵。页面展示方法与工作物关系；云端文件链接保留在文档与工作簿中。</p><p><a href="#/case/gtm/strategy">查看本案例策略章节 ↗</a></p><p>计划状态与素材状态分别展示；未通过产品事实、权利、交易、履约或测量Gate的内容保持HOLD / PREPARE_ONLY。</p></article>
       </div>
 `, "product-portfolio");
