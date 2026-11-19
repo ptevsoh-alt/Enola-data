@@ -56,10 +56,10 @@ Console 补充：现有 Chrome 环境仍记录一条空信息 `Uncaught (in prom
 - No event-level results, budget, team size, ROI or causal attribution were invented.
 
 ### Automated verification
-- Candidate HEAD: `27aa396e6ce6595ec9af17d55106ffa6bf8c3be2`.
-- GitHub Actions Run #139: Validate SUCCESS; `npm test` = 139/139: site structure / privacy / asset checks 8/8, DOM / interaction checks 70/70, growth / case behavior checks 61/61.
+- Site code candidate HEAD: `27aa396e6ce6595ec9af17d55106ffa6bf8c3be2`; current PR HEAD: `4951517f73237f2d1e519e59674491c24ca312ff` (QA documentation updates only).
+- GitHub Actions Run #140: Validate SUCCESS; `npm test` = 139/139: site structure / privacy / asset checks 8/8, DOM / interaction checks 70/70, growth / case behavior checks 61/61.
 - `PUBLIC_ASSETS.json` byte sizes and SHA-256 values were refreshed for `growth.js`, `projects.js` and `index.html`; manifest validation passed.
-- PR preview artifact uploaded: [Run #139 preview](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44492606746/artifacts/14513117393).
+- Latest PR preview artifact uploaded: [Run #140 preview](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493011702/artifacts/14513452874).
 - Deploy: SKIPPED. `main` remains unchanged; PR #15 remains Draft / Open; no merge or production deployment was performed.
 
 ### Visual acceptance boundary
