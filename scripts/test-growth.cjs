@@ -229,6 +229,12 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-b2b-stage").textContent.includes("1,900+"));
   });
   await route("/case/gtm");
+  check("GTM creative territories map to one primary mechanism and proof boundary", () => {
+    const section = d.querySelector("#campaign-mechanism-mapping");
+    assert.ok(section);
+    for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明", "视觉隐喻不能替代产品性能证据"])
+      assert.ok(section.textContent.includes(term), term);
+  });
   d.querySelector("[data-image]").click();
   await route("/case/gtm/strategy");
   check("same case chapter route closes image modal", () =>
@@ -263,6 +269,12 @@ const fs = require("fs"),
       d.querySelectorAll(".g-community-onboarding>article").length,
       2,
     );
+  });
+  check("community activation has a single-owner event contract and consent boundaries", () => {
+    const section = d.querySelector("#community-event-governance");
+    assert.ok(section);
+    for (const term of ["唯一负责人", "活动发生在 Group 内，不自动改变最终 Owner", "参与资格", "奖励与履约", "单独确认使用授权", "出席不等于营销同意", "RSVP 不等于购买意向", "抽奖参与不等于高价值客户"])
+      assert.ok(section.textContent.includes(term), term);
   });
   check("new evidence modules use readable typography", () => {
     const css = read("site/growth.css");
