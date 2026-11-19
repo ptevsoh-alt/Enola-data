@@ -126,17 +126,17 @@
   },
   {
     "file": "assets/projects/exhibition-booth-overview-redacted.jpg",
-    "bytes": 190210,
-    "sha256": "0e00579aabe168ee6df6269a59ab704b4e835ba7bbd0534e754a5b450ea869c6"
+    "bytes": 206328,
+    "sha256": "48d9fd0bfce38309c2c0940bb82ed39a2f1e1b716eb7797e55f72e28f1736300"
   },
   {
     "file": "assets/projects/exhibition-booth-angle-redacted.jpg",
-    "bytes": 346306,
-    "sha256": "0d165523d94ed82bf699dd04e18a9cd1a13ec4efbeb89e4799df97e199ce79fc"
+    "bytes": 381210,
+    "sha256": "fe0056a400570f654919689ff35781b246c0900663b0734c30746d3e4bcca97d"
   },
   {
     "file": "assets/projects/exhibition-product-display-redacted.jpg",
-    "bytes": 246626,
-    "sha256": "5397e9165f8d624af3a3ab8c6f97d466f03b36961b4bed26acd134c1b47e3297"
+    "bytes": 276538,
+    "sha256": "ec74c399237c3d552208b707a1aef8a2bd19bc60fbb9d324ce8b3c9e798f0e9c"
   }
 ]
