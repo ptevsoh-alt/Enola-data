@@ -9,7 +9,7 @@
 
 GitHub Actions 的 PR 验证流程只生成独立静态预览 ZIP，不部署 GitHub Pages。
 
-- 最新预览包：[Run #141 / Artifact 14514140909](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493192937/artifacts/14514140909)
+- 最新预览包：[Run #142 / Artifact 14515467619](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44497461049/artifacts/14515467619)
 - PR：[ptevsoh-alt/Enola-data#15](https://github.com/ptevsoh-alt/Enola-data/pull/15)
 
 下载 ZIP 并解压后，使用 Node.js 22+ 在仓库目录执行：
