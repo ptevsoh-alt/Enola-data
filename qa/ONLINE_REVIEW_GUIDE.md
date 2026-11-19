@@ -9,8 +9,9 @@
 
 GitHub Actions 的 PR 验证流程只生成独立静态预览 ZIP，不部署 GitHub Pages。
 
-- 最新预览包：[Run #142 / Artifact 14515467619](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44497461049/artifacts/14515467619)
+- 最新预览包：[Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411)
 - PR：[ptevsoh-alt/Enola-data#15](https://github.com/ptevsoh-alt/Enola-data/pull/15)
+- 解压后，独立审阅入口位于 `site/review/index.html`；使用下方本地预览命令后访问 `http://127.0.0.1:8174/review/`。
 
 下载 ZIP 并解压后，使用 Node.js 22+ 在仓库目录执行：
 
@@ -19,7 +20,7 @@ npm ci
 npm run preview
 ```
 
-打开 `http://127.0.0.1:8174/`。也可以使用任意静态 HTTP Server 将解压后的 `site/` 目录作为根目录运行。不要只打开 ZIP，也不要只单独复制 `index.html`；CSS、JS 与 assets 必须保留相对目录结构。
+打开 `http://127.0.0.1:8174/review/` 即可直接检查独立审阅页；主作品集首页仍为 `http://127.0.0.1:8174/`。也可以使用任意静态 HTTP Server 将解压后的 `site/` 目录作为根目录运行。不要只打开 ZIP，也不要只单独复制 `index.html`；CSS、JS 与 assets 必须保留相对目录结构。
 
 ## 页面导航地图
 
@@ -85,3 +86,16 @@ npm run preview
 - `main` 未修改；Deploy job 按 PR 规则跳过。
 - 本轮未对新增模块执行新的真实浏览器截图验收；自动化测试通过不代表视觉验收通过。
 - 本站展示的概念方案、策略重构和历史数据保持各自证据状态，不得将规划写成历史发布、投放、成交或 ROI。
+
+
+## 2026-11-19 Independent /review/ entry validation
+
+- Independent entry: `site/review/index.html`; route: `/review/`; standalone styles and rendering script are under `site/review/`.
+- The main portfolio footer links to the review entry. The review page provides review path, searchable 11-case index, 15-asset visual gallery, 38 metric evidence-status summary, and six data-domain links.
+- Case and data links return to the main portfolio Hash Router; local asset paths remain relative and portable for GitHub Pages project paths.
+- The route is marked `noindex, nofollow`; no remote scripts, external asset dependencies, form submission or data transmission are added.
+- Public asset manifest now includes all three review files and has matching byte / SHA-256 metadata. Homepage manifest metadata was also reconciled.
+- GitHub Actions Run #152: Validate SUCCESS; 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus review-route rendering, search, relative-link, noindex and local HTTP preview checks all passed.
+- Isolated PR preview ZIP: [Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR #15 remains Draft / Open; `main` is unchanged; Deploy is skipped. This artifact is a review build, not a production URL or live deployment.
+- New real-browser screenshot acceptance for the review page remains pending; the local HTTP route and automated content/asset checks passed.
