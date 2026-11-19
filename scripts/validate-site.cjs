@@ -74,7 +74,7 @@ check("all content links resolve", () => {
 check("independent review entry and relative navigation", () => {
   const review = fs.readFileSync(path.join(site, "review/index.html"), "utf8");
   assert.ok(/href="review\.css(?:\?[^"]*)?"/.test(review));
-  assert.ok(review.includes('src="review.js"'));
+  assert.ok(/src="review\.js(?:\?[^"]*)?"/.test(review));
   assert.ok(review.includes('src="../data.js"'));
   assert.ok(review.includes('name="robots" content="noindex, nofollow"'));
   assert.ok(fs.existsSync(path.join(site, "review/review.css")));
