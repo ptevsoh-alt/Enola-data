@@ -13,14 +13,15 @@ GitHub Actions 的 PR 验证流程只生成独立静态预览 ZIP，不部署 Gi
 - PR：[ptevsoh-alt/Enola-data#15](https://github.com/ptevsoh-alt/Enola-data/pull/15)
 - 解压后，独立审阅入口位于 `site/review/index.html`；使用下方本地预览命令后访问 `http://127.0.0.1:8174/review/`。
 
-下载 ZIP 并解压后，使用 Node.js 22+ 在仓库目录执行：
+下载 Run Artifact ZIP 并解压。预览包根目录应同时包含 `preview.cjs` 和 `site/` 目录。使用 Node.js 22+，在解压后的目录执行：
 
 ```bash
-npm ci
-npm run preview
+node preview.cjs
 ```
 
-打开 `http://127.0.0.1:8174/review/` 即可直接检查独立审阅页；主作品集首页仍为 `http://127.0.0.1:8174/`。也可以使用任意静态 HTTP Server 将解压后的 `site/` 目录作为根目录运行。不要只打开 ZIP，也不要只单独复制 `index.html`；CSS、JS 与 assets 必须保留相对目录结构。
+然后打开 `http://127.0.0.1:8174/review/` 检查独立审阅页；主作品集首页为 `http://127.0.0.1:8174/`。该预览包仅依赖 Node.js 内置模块，不需要执行 `npm ci`。如果使用完整 Git 仓库 checkout，则仍可执行 `npm ci` 和 `npm run preview`。
+
+不要只打开 ZIP，也不要只单独复制 `index.html`；`site/` 内的 CSS、JS 与 assets 必须保留原有相对目录结构。
 
 ## 页面导航地图
 
@@ -132,3 +133,9 @@ npm run preview
 - 预览包：[Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412)。
 - PR #15 保持 Draft / Open；`main` 未修改；Deploy 跳过；未合并、未部署。
 - 本轮未完成真实浏览器多视口截图验收；需在本地预览环境继续检查视觉细节。
+
+
+## 预览包结构修正
+
+- PR Artifact 现在同时包含 `preview.cjs` 与 `site/`，解压后在根目录运行 `node preview.cjs` 即可启动独立本地预览；不需要 `npm ci`。
+- `npm ci` + `npm run preview` 仅用于完整仓库 checkout，不用于只包含网站文件的 Artifact ZIP。
