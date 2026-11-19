@@ -29,6 +29,7 @@ const fs = require("fs"),
       sha(
         read("site/index.html")
           .replace(/\?v=[a-f0-9]+(?=")/g, "")
+          .replace('        <span aria-hidden="true"> · </span><a href="review/">独立审阅入口 ↗</a>\n', "")
           .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
           .replace('    <script src="growth.js" defer></script>\n', "")
           .replace('    <script src="projects.js" defer></script>\n', ""),
