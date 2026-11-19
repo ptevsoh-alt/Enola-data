@@ -590,3 +590,229 @@
     transition: none;
   }
 }
+
+
+/* Strategy maps and visual review controls. */
+.review-system-grid {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
+}
+.review-system-card {
+  min-width: 0;
+  padding: clamp(20px, 2.5vw, 30px);
+  border: 1px solid var(--rule);
+  background: var(--white);
+}
+.review-system-card-wide {
+  grid-column: 1 / -1;
+}
+.review-system-kicker {
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: .1em;
+}
+.review-system-card h3 {
+  margin-top: 12px;
+  font-size: clamp(19px, 2vw, 25px);
+}
+.review-system-intro {
+  max-width: 850px;
+  margin-top: 9px;
+  color: var(--muted);
+  font-size: 11px;
+  line-height: 1.85;
+}
+.review-flow {
+  display: grid;
+  gap: 8px;
+  padding: 0;
+  margin: 22px 0 0;
+  list-style: none;
+}
+.review-flow-nine {
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+}
+.review-flow-four {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+.review-flow li {
+  min-width: 0;
+  min-height: 112px;
+  padding: 14px;
+  border-top: 2px solid var(--accent);
+  background: #eef0e8;
+}
+.review-flow li > span {
+  display: block;
+  color: var(--accent);
+  font: 21px/1 var(--serif);
+}
+.review-flow li b {
+  display: block;
+  margin-top: 10px;
+  font-size: 12px;
+  overflow-wrap: anywhere;
+}
+.review-flow li small {
+  display: block;
+  margin-top: 6px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.65;
+}
+.review-system-footer {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  flex-wrap: wrap;
+  gap: 10px 20px;
+  margin-top: 18px;
+  padding-top: 14px;
+  border-top: 1px solid var(--rule);
+  color: var(--muted);
+  font-size: 10px;
+}
+.review-system-footer a {
+  color: var(--accent);
+  font-weight: 600;
+}
+.review-territory-grid {
+  display: grid;
+  grid-template-columns: repeat(5, minmax(0, 1fr));
+  gap: 8px;
+  margin-top: 20px;
+}
+.review-territory-card {
+  min-width: 0;
+  padding: 14px;
+  border: 1px solid var(--rule);
+  background: #f7f6f1;
+}
+.review-territory-card > span {
+  color: var(--accent);
+  font-size: 9px;
+  line-height: 1.5;
+}
+.review-territory-card h4 {
+  margin-top: 9px;
+  font-size: 12px;
+  line-height: 1.45;
+}
+.review-territory-card p {
+  margin-top: 7px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+.review-gallery-filters {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  margin: -6px 0 20px;
+}
+.review-filter {
+  display: inline-flex;
+  align-items: center;
+  gap: 9px;
+  min-height: 38px;
+  padding: 8px 13px;
+  border: 1px solid var(--rule);
+  background: var(--white);
+  color: var(--ink);
+  font-size: 10px;
+  cursor: pointer;
+}
+.review-filter span {
+  color: var(--muted);
+  font-size: 9px;
+}
+.review-filter[aria-pressed="true"] {
+  border-color: var(--ink);
+  background: var(--ink);
+  color: #fff;
+}
+.review-filter[aria-pressed="true"] span {
+  color: #d7e0d8;
+}
+.review-visual-card[hidden] {
+  display: none;
+}
+.review-visual-category {
+  display: inline-block;
+  color: var(--accent);
+  font-size: 9px;
+  letter-spacing: .04em;
+}
+.review-evidence-track,
+.review-domain-track {
+  height: 5px;
+  margin-top: 12px;
+  overflow: hidden;
+  background: #e4e6df;
+}
+.review-evidence-track span,
+.review-domain-track span {
+  display: block;
+  width: var(--review-share, 0%);
+  height: 100%;
+  background: var(--accent);
+}
+.review-domain-meta {
+  display: flex;
+  align-items: baseline;
+  justify-content: space-between;
+  gap: 10px;
+  margin-top: 9px;
+  font-size: 10px;
+}
+.review-domain-meta strong {
+  font-weight: 600;
+}
+.review-domain-meta span {
+  color: var(--muted);
+}
+.review-data-note {
+  max-width: 900px;
+  margin: -10px 0 18px;
+  color: var(--muted);
+  font-size: 10px;
+  line-height: 1.7;
+}
+@media (max-width: 1050px) {
+  .review-territory-grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}
+@media (max-width: 720px) {
+  .review-system-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-system-card-wide {
+    grid-column: auto;
+  }
+  .review-flow-nine,
+  .review-flow-four {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+  .review-territory-grid {
+    grid-template-columns: 1fr;
+  }
+  .review-system-footer {
+    align-items: flex-start;
+    flex-direction: column;
+  }
+  .review-gallery-filters {
+    gap: 6px;
+  }
+  .review-filter {
+    min-height: 36px;
+    padding: 7px 10px;
+  }
+}
+@media (max-width: 370px) {
+  .review-flow-nine,
+  .review-flow-four {
+    grid-template-columns: 1fr;
+  }
+}
