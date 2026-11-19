@@ -64,3 +64,16 @@ Console 补充：现有 Chrome 环境仍记录一条空信息 `Uncaught (in prom
 
 ### Visual acceptance boundary
 The current candidate has passed automated structure, interaction, privacy and asset checks. This run did not perform new real-browser screenshot inspection at desktop / mobile viewports. Earlier screenshots are not reused as evidence for these new modules; rendered visual QA remains pending.
+
+
+## 2026-11-19 Independent /review/ entry validation
+
+- Independent entry: `site/review/index.html`; route: `/review/`; standalone styles and rendering script are under `site/review/`.
+- The main portfolio footer links to the review entry. The review page provides review path, searchable 11-case index, 15-asset visual gallery, 38 metric evidence-status summary, and six data-domain links.
+- Case and data links return to the main portfolio Hash Router; local asset paths remain relative and portable for GitHub Pages project paths.
+- The route is marked `noindex, nofollow`; no remote scripts, external asset dependencies, form submission or data transmission are added.
+- Public asset manifest now includes all three review files and has matching byte / SHA-256 metadata. Homepage manifest metadata was also reconciled.
+- GitHub Actions Run #152: Validate SUCCESS; 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus review-route rendering, search, relative-link, noindex and local HTTP preview checks all passed.
+- Isolated PR preview ZIP: [Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR #15 remains Draft / Open; `main` is unchanged; Deploy is skipped. This artifact is a review build, not a production URL or live deployment.
+- New real-browser screenshot acceptance for the review page remains pending; the local HTTP route and automated content/asset checks passed.
