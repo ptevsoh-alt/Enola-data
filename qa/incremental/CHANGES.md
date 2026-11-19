@@ -179,3 +179,14 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 - GitHub Actions Run #152 passed: 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus independent review page / route / search / local preview checks.
 - Preview artifact: [Run #152](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
 - PR remains Draft / Open; main unchanged; Deploy skipped. New browser screenshot review remains pending.
+
+
+## 2026-11-19 Review entry visual organization
+
+- Added visualized M3 Campaign architecture, five creative-mechanism cards, community event governance and team delivery flows to `/review/`.
+- Organized 16 visual assets into four interactive categories; included all three redacted exhibition images.
+- Added proportional evidence-status and metric-domain bars with explicit non-performance interpretation notes.
+- Added direct review navigation in the main site header and retained footer link; review-only CSS and JS remain isolated from main portfolio rendering.
+- Cache-busted review assets and refreshed `PUBLIC_ASSETS.json` byte / SHA-256 entries.
+- Updated validation to accept versioned review asset URLs and adjusted homepage baseline normalization for the approved navigation link.
+- Run #164 passed: 9 structure/privacy/asset + 70 interaction + 61 growth/case checks; review-specific checks also passed. Deploy skipped.
