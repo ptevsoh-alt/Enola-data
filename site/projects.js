@@ -107,7 +107,8 @@
 
       <div class="g-project-list g-project-calendar-plan">
         <article><small>CAMPAIGN DEEP DIVE / 2026.05</small><h3>一份可拆解、可协同的新品上市规划</h3><p>本模块复原 2026 年 5 月双头电动拖把上市传播计划，展示 Campaign Strategy、社媒内容矩阵与 IMC 排期如何连接。它是规划工作物，不是已发布活动记录。</p></article>
-        <article><small>PRIMARY OBJECTIVE</small><h3>让目标用户理解产品，并在商业条件具备时完成购买</h3><p>购买行为是主目标；触达、观看、互动和点击用于诊断传播环节。价格、Offer、库存、支付和履约未通过审核前，CTA 降级为 Learn More / Watch Demo。</p></article>
+        <article><small>PRIMARY BUSINESS OBJECTIVE</small><h3>在商业链路放行后获取净履约订单，并守住净贡献</h3><p>这是唯一主结果；产品理解、有效观看、商品页访问和互动是前置行为与诊断信号，不与订单混为同一目标。价格、Offer、库存、支付和履约未通过 Gate 前，CTA 降级为 Learn More / Watch Demo。</p></article>
+        <article><small>MARKETING / BEHAVIOR OBJECTIVE</small><h3>让目标用户理解 M3 对应的餐后硬地清洁任务</h3><p>先说明适用场景、双头结构和真实操作，再引导查看已核验的商品信息；购买行为只在交易链路具备时启用，不把“理解”写成销售结果。</p></article>
         <article><small>PRIMARY AUDIENCE / HYPOTHESIS</small><h3>美国厨房与餐区硬地日常清洁人群</h3><p>以经常处理餐后地面清洁任务的家庭用户作为优先受众假设；需求强度和购买阻碍仍需由 Review、VOC、搜索与客服反馈验证，不将其写成已完成调研结论。</p></article>
         <article><small>CORE TENSION</small><h3>晚餐结束了，地面清洁任务还没有结束</h3><p>从具体生活任务切入，以真实产品操作建立理解，再回到家庭生活时刻。情绪价值不替代功能证明，也不量化承诺节省时间。</p></article>
       </div>
@@ -188,6 +189,14 @@
         <article><small>CREATIVE TERRITORIES</small><h3>从一个主题发展成不同创意机制</h3><p>The After-Dinner Reset：问题显化；See the Motion：机制揭示与真实动作证明；Make Room for What Matters：生活价值转译；A Closer Look at M3：产品细节解释；Real Home, Real Reset：真实体验证明。One Home, Different Cleaning Jobs 作为 Sustaining 阶段的品牌组合辅助层，不与五条创意领地混为一谈。每个方向都要写清受众、命题、产品角色、证据和边界。</p></article>
         <article><small>KV / VISUAL SYSTEM</small><h3>一套主视觉，多种渠道表达</h3><p>Master KV 负责建立主题、产品焦点、视觉层级和品牌识别；Feed、Story、Short Video、YouTube、PR和Email按画幅、安全区和传播任务独立适配。产品外观使用官方源图，文字与Logo后期排版；静态图不充当运动证明。</p></article>
       </div>
+      <div class="g-project-list g-project-calendar-plan" id="campaign-mechanism-mapping">
+        <article><small>MECHANISM 01 / PAIN-POINT EMERGENCE</small><h3>The After-Dinner Reset</h3><p>主机制：问题显化。用餐后地面黏污作为具体任务入口；辅助机制：连续过程证明。后续必须展示真实产品操作和相同条件的清洁过程，不能用夸张污渍或单次画面推导普遍性能。</p></article>
+        <article><small>MECHANISM 02 / MECHANISM REVEAL</small><h3>See the Motion</h3><p>主机制：机制揭示。通过真实双头运行、接地和移动路径解释产品如何工作；辅助机制：微距细节证明。静态 KV、生成画面或渲染不能代替真实运行视频。</p></article>
+        <article><small>MECHANISM 03 / ROLE-VALUE TRANSFER</small><h3>Make Room for What Matters</h3><p>主机制：关系价值转移。把产品动作放进家庭共同生活的情境；辅助机制：人物动作叙事。情绪收束不等于量化省时承诺，人物、音乐和场景素材仍需授权。</p></article>
+        <article><small>MECHANISM 04 / MICRO-DETAIL PROOF</small><h3>A Closer Look at M3</h3><p>主机制：细节证明。通过整机、双头底座、手柄控制区和电池安装位置降低理解成本；每项功能说明必须对应官方源图、说明书或产品负责人确认。</p></article>
+        <article><small>MECHANISM 05 / USER-EXPERIENCE PROOF</small><h3>Real Home, Real Reset</h3><p>主机制：真实体验证明。Creator 内容补充家庭场景中的实际操作；受众适配、披露、肖像、内容版权、剪辑权和 Paid Usage Rights 分别确认。</p></article>
+      </div>
+      <p class="g-chart-note">机制映射是依据现有 M3 创意方向与 Campaign 方法整理的策略重构，不表示五条内容均已发布或测试胜出。每个方向只设一个主机制；Hook 必须由后续信息兑现，视觉隐喻不能替代产品性能证据。</p>
       <div class="g-project-list g-project-calendar-plan">
         <article><small>CONTENT MATRIX / 01</small><h3>场景问题</h3><p>Awareness；餐后餐区地面与厨房日常清洁。用Feed、Story、问题讨论和场景短片建立相关性；CTA：Comment / Follow / Watch Demo。</p></article>
         <article><small>CONTENT MATRIX / 02</small><h3>情绪与品牌</h3><p>Awareness → Consideration；家庭共同分担与生活时刻。用节日KV、情绪短片和Hero Film建立品牌记忆；人物与音乐需授权。</p></article>
