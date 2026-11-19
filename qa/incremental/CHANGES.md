@@ -162,3 +162,10 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 - First run #138 exposed a test-scope assertion: the creative-mechanism note sits adjacent to the mechanism card container. The test was corrected to inspect the containing project section; no production code or content was weakened.
 - Run #139 then passed: Validate SUCCESS, 139/139 checks (8 + 70 + 61); Deploy SKIPPED.
 - Candidate remains PR #15 Draft / Open. Automated validation does not replace new rendered browser visual QA.
+
+
+## 2026-11-19 latest PR-head confirmation
+
+- Current PR #15 HEAD: `4951517f73237f2d1e519e59674491c24ca312ff` (the changes after the site-code validation commit are QA-documentation updates only).
+- GitHub Actions Run #140 on the current PR HEAD: Validate SUCCESS; 139/139 checks; isolated preview uploaded; Deploy SKIPPED.
+- Latest preview artifact: [Run #140](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493011702/artifacts/14513452874).
