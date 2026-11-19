@@ -155,3 +155,10 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 - Facebook Group case adds Program Owner routing, event contract, participation / UGC permission, metric separation and post-event handoff.
 - No new historical event results, activity-level attribution, budget, team size, ROI or causal claims were added.
 - Enola source repo remains read-only; the mapping is based on `CAP-CAMP-001`, `CAP-SOC-001 / ATOM-SOC-006`, `CAP-EARNED-001`, M16 and M18 boundaries.
+
+
+## 2026-11-19 CI verification after capability integration
+
+- First run #138 exposed a test-scope assertion: the creative-mechanism note sits adjacent to the mechanism card container. The test was corrected to inspect the containing project section; no production code or content was weakened.
+- Run #139 then passed: Validate SUCCESS, 139/139 checks (8 + 70 + 61); Deploy SKIPPED.
+- Candidate remains PR #15 Draft / Open. Automated validation does not replace new rendered browser visual QA.
