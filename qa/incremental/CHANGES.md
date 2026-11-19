@@ -146,3 +146,12 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 - 更新 site/projects.js / site/app.js / site/index.html，并刷新 PUBLIC_ASSETS.json 的字节数与 SHA-256。
 - 缓存版本更新至 20261119c；保持 data.js、styles.css、原始数据和案例数量不变。
 - 仅更新 PR #15 工作分支；不写 main、不合并、不部署。
+
+
+## 2026-11-19 — Enola Campaign & Community Event capability mapping
+
+- M3 GTM case now separates the single primary business result from marketing / behavior objectives.
+- Five existing M3 Creative Territories are mapped to a primary creative mechanism and the required proof boundary; all are labelled as strategy reconstruction, not published or tested winners.
+- Facebook Group case adds Program Owner routing, event contract, participation / UGC permission, metric separation and post-event handoff.
+- No new historical event results, activity-level attribution, budget, team size, ROI or causal claims were added.
+- Enola source repo remains read-only; the mapping is based on `CAP-CAMP-001`, `CAP-SOC-001 / ATOM-SOC-006`, `CAP-EARNED-001`, M16 and M18 boundaries.
