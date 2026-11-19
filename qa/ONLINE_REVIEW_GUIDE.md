@@ -1,7 +1,7 @@
 # 线上作品集预览检查指南
 
 版本：PR #15 候选版本  
-当前站点代码基线：`0335037557ee0f8b135a5fe478713bb32fcbd939`  
+当前站点代码基线：`c9555ff7cc22e7410b75487848ae0347286b51a6`  
 当前分支：`content/drive-source-fill-20261116`  
 生产发布：未执行；`main` 未修改。
 
@@ -9,7 +9,7 @@
 
 GitHub Actions 的 PR 验证流程只生成独立静态预览 ZIP，不部署 GitHub Pages。
 
-- 最新预览包：[Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411)
+- 最新预览包：[Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412)n #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411)
 - PR：[ptevsoh-alt/Enola-data#15](https://github.com/ptevsoh-alt/Enola-data/pull/15)
 - 解压后，独立审阅入口位于 `site/review/index.html`；使用下方本地预览命令后访问 `http://127.0.0.1:8174/review/`。
 
@@ -109,3 +109,26 @@ npm run preview
 - 数据证据状态与六个数据领域增加比例条；图示只表示指标记录数量 / 证据状态占比，不代表项目完成率或业务表现。
 - 入口保留 `noindex, nofollow`；这是搜索引擎收录提示，不是访问权限控制。页面不引入外部脚本、追踪或表单数据传输。
 - 该版本仍通过 PR artifact 预览；PR 不部署 GitHub Pages，生产 URL 需在后续获批合并并部署后才会出现。
+
+
+## 2026-11-19 审阅页可视化整理（Run #164）
+
+### 页面结构
+- 独立入口：`site/review/index.html`，路由 `/review/`；主站顶部导航与页脚均可进入。
+- M3 GTM / Campaign：9 步架构图，覆盖 Business Context、Audience / Insight、Objective、Positioning / Message、Big Idea、IMC Architecture、Content Matrix、Activation / Operations、Measurement / Learning。
+- Creative Territories：5 个创意方向，各自展示主机制与证明边界。
+- Community Event Governance：4 步活动治理路径；Team Delivery：4 步跨部门交付路径。
+- 视觉素材：16 项，按产品上市、品牌 / Campaign、B2B / 展会、创意 / 视频筛选；展会三张脱敏图完整纳入。
+- 数据展示：38 项指标的证据状态比例条、6 个数据领域的指标数量比例条；比例仅表示记录数量，不表示项目完成率或业务表现。
+
+### 入口与隐私
+- 首页顶部导航和页脚均提供 `审阅入口`；审阅页保留 `noindex, nofollow`。
+- `noindex` 不是访问控制；该页为公开静态页面，不设登录或密码保护。仅放置已匿名化、可公开的素材与内容。
+- PR 验证仅生成静态预览 ZIP，不部署 GitHub Pages。生产 `/review/` 路径需在获批合并并部署后生效。
+
+### 自动化验证
+- GitHub Actions Run #164：Validate SUCCESS。
+- `npm test`：结构 / 隐私 / 资源 9/9；DOM / 交互 70/70；Growth / 案例行为 61/61；独立审阅入口另通过策略结构、视觉筛选、比例条、首页入口、相对路径与本地 HTTP 服务检查。
+- 预览包：[Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412)。
+- PR #15 保持 Draft / Open；`main` 未修改；Deploy 跳过；未合并、未部署。
+- 本轮未完成真实浏览器多视口截图验收；需在本地预览环境继续检查视觉细节。
