@@ -4,7 +4,7 @@
   const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   })[char]);
-  const image = (file, alt) => `<img src="assets/projects/${file}.webp" alt="${alt}" loading="lazy" decoding="async">`;
+  const image = (file, alt, ext = "webp") => `<img src="assets/projects/${file}.${ext}" alt="${alt}" loading="lazy" decoding="async">`;
   const productLines = [
     ["地面清洁", "双盘拖把", "餐区硬地黏污", "中景拍站姿推进与转向，低机位拍双盘接地。"],
     ["电动清洁刷", "长柄电动刷", "浴缸内沿和墙砖接缝", "同一机位看清站位、杆长、刷头角度与接触点。"],
@@ -255,14 +255,20 @@
   }
 
   function expo() {
-    return section("海外展会现场与客户开发", "现场物料把产品关系讲清，方便采购方带着具体问题进入下一轮沟通。", `
+    return section("海外展会现场与客户开发", "以展位空间、产品系统展示与现场沟通支持 B2B 采购理解。", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${image("expo-display", "展会展示墙，连接光伏、逆变器、储能电池与用电负载")}<figcaption>产品系统展示墙 · 现场照片局部</figcaption></figure>
+        <figure>${image("exhibition-booth-overview-redacted", "海外展会展位全景，合作品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 合作品牌标识已脱敏</figcaption></figure>
         <div class="g-project-list">
-        <article><h3>产品系统展示墙</h3><p>以系统连接图将光伏、逆变器、电池和负载放在同一面墙上，实物展台让采购方核对产品类型、规格与应用场景。</p></article>
-        <article><h3>采购需求和跟进</h3><p>围绕使用场景、需求规格、采购时间与交付要求记录询盘。现场沟通后进入需求确认、报价和交期核对。</p></article>
-        <p class="g-chart-note">案例聚焦系统展示墙与采购需求沟通。</p></div>
-      </div>`, "expo-project");
+          <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>通过展台结构、主视觉、产品陈列与现场动线建立第一层接触点；保留真实展会环境，展示海外展会现场的空间组织与展示方式。</p></article>
+          <article><small>PRODUCT SYSTEM</small><h3>从单品展示到系统关系</h3><p>系统展示墙将光伏、逆变器、储能电池与用电负载放在同一套关系中，帮助采购方从产品类型、系统连接和应用场景理解方案。</p></article>
+          <article><small>B2B CONVERSATION</small><h3>从现场问题进入后续跟进</h3><p>围绕应用场景、需求规格、采购周期与交付要求推进需求确认，并衔接报价、交期核对和后续跟进。未提供可核验的客户线索与成交数据，因此不展示量化业务结果。</p></article>
+        </div>
+      </div>
+      <div class="g-product-gallery" aria-label="海外展会现场与产品展示照片">
+        <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，合作品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，合作品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与产品陈列 · 品牌标识已脱敏</span></figcaption></figure>
+      </div>
+      <p class="g-chart-note">公开展示版本已对展位主标识、产品标识、品牌文字及网址进行脱敏；原始照片独立保留。案例聚焦展位呈现、产品系统展示与 B2B 沟通场景，不推定未提供的展会名称、个人职责细节、客户线索量或成交结果。</p>`, "expo-project");
   }
 
   function creator() {
