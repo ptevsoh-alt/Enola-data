@@ -36,14 +36,38 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".review-domain-card").length, 6);
     assert.equal(d.querySelectorAll(".review-evidence-status").length, 5);
   });
+
+  check("review page renders Campaign, creative, community and delivery visual maps", () => {
+    assert.equal(d.querySelectorAll("#review-campaign-flow li").length, 9);
+    assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
+    assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
+    assert.equal(d.querySelectorAll("#review-delivery-flow li").length, 4);
+  });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
-    assert.equal(images.length, 15);
+    assert.equal(images.length, 16);
     images.forEach((img) => {
       const url = new URL(img.getAttribute("src"), w.location.href);
       const relative = path.relative("/Enola-data", url.pathname).replace(/^\//, "");
       assert.ok(fs.existsSync(path.join(site, relative)), img.getAttribute("src"));
     });
+  });
+
+  check("visual category filters show only matching assets and restore all", () => {
+    const b2b = d.querySelector('[data-review-visual-filter="b2b"]');
+    b2b.dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 3);
+    assert.equal(b2b.getAttribute("aria-pressed"), "true");
+    d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 16);
+  });
+  check("evidence and domain cards expose proportional visual bars", () => {
+    assert.equal(d.querySelectorAll(".review-evidence-track").length, 5);
+    assert.equal(d.querySelectorAll(".review-domain-track").length, 6);
+  });
+  check("homepage exposes a direct independent review entry", () => {
+    const homepage = fs.readFileSync(path.join(site, "index.html"), "utf8");
+    assert.match(homepage, /href="review\/">审阅入口/);
   });
   check("case and data navigation returns to the main portfolio routes", () => {
     assert.equal(d.querySelectorAll('.review-case-card a[href^="../#/case/"]').length, 11);
@@ -103,6 +127,7 @@ const fs = require("fs"),
       assert.equal(page.status, 200);
       assert.match(page.type, /text\/html/);
       assert.ok(page.body.toString("utf8").includes("INDEPENDENT REVIEW"));
+      assert.ok(page.body.toString("utf8").includes("review-systems"));
     });
     const css = await get("/review/review.css");
     check("local preview serves nested review styles", () => {
