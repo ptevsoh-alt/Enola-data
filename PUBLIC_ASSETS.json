@@ -101,18 +101,18 @@
   },
   {
     "file": "growth.js",
-    "bytes": 40662,
-    "sha256": "ff809f92252b63e2a11a86ba4299d7fb47ca5cff0b28dd6ea7388c37837a4805"
+    "bytes": 42618,
+    "sha256": "44ee40f7bdc0b92ba12c97cca3cb3dbc9537321fb72ca53868f9b30082e10d35"
   },
   {
     "file": "index.html",
     "bytes": 3495,
-    "sha256": "bea153ea77ebbf07f03287668e4fc52fd86ec9126da808fa9a2bfa021c14c4c7"
+    "sha256": "3bdc3002bd5c10b7cd56bfcc12f644719eed31fccc690c76c401b7b9e7d1883a"
   },
   {
     "file": "projects.js",
-    "bytes": 57825,
-    "sha256": "56448d9a2eb484cbf654a6f3d7e7324e7d247c8d2ea232448f101bf53c422571"
+    "bytes": 60199,
+    "sha256": "ab6f644c7a1b66fa1904f9f0be6480babfc3eb492d2a2a1bc0d9b49a1175e22a"
   },
   {
     "file": "robots.txt",
