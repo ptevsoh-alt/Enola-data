@@ -1,7 +1,7 @@
 # 线上作品集预览检查指南
 
 版本：PR #15 候选版本  
-当前站点代码基线：`27aa396e6ce6595ec9af17d55106ffa6bf8c3be2`  
+当前站点代码基线：`0335037557ee0f8b135a5fe478713bb32fcbd939`  
 当前分支：`content/drive-source-fill-20261116`  
 生产发布：未执行；`main` 未修改。
 
@@ -99,3 +99,13 @@ npm run preview
 - Isolated PR preview ZIP: [Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
 - PR #15 remains Draft / Open; `main` is unchanged; Deploy is skipped. This artifact is a review build, not a production URL or live deployment.
 - New real-browser screenshot acceptance for the review page remains pending; the local HTTP route and automated content/asset checks passed.
+
+
+## 2026-11-19 审阅页可视化整理
+
+- `/review/` 保持独立入口；主站顶部导航与页脚均可进入。
+- 新增 M3 GTM / Campaign 9 步结构图、5 个 Creative Territories 机制卡、Community Event Governance 4 步流程及 Team Delivery 4 步流程。
+- 视觉工作物增加分类筛选：产品上市、品牌 / Campaign、B2B / 展会、创意 / 视频；展会三张脱敏图完整纳入。
+- 数据证据状态与六个数据领域增加比例条；图示只表示指标记录数量 / 证据状态占比，不代表项目完成率或业务表现。
+- 入口保留 `noindex, nofollow`；这是搜索引擎收录提示，不是访问权限控制。页面不引入外部脚本、追踪或表单数据传输。
+- 该版本仍通过 PR artifact 预览；PR 不部署 GitHub Pages，生产 URL 需在后续获批合并并部署后才会出现。
