@@ -112,12 +112,12 @@
   {
     "file": "index.html",
     "bytes": 3495,
-    "sha256": "c7a61338da51baa1effbbb0375fb8bf80cee48e12a49c7eae510fbbbc8e80624"
+    "sha256": "c711769821b71bc708c4126d79c979cb529c6cee46e0a7a38a79e3a0731bf94b"
   },
   {
     "file": "projects.js",
-    "bytes": 55403,
-    "sha256": "c4457cec0b0c3faac5c0267d8c1207b5c41b3f9a5b3e03587b57bc9d9bcfd90c"
+    "bytes": 56739,
+    "sha256": "2c362448172aa1082fa16f02780c2b1a6830ecf4ef1db1c8ef6ccab42c37e9e8"
   },
   {
     "file": "robots.txt",
@@ -128,5 +128,20 @@
     "file": "styles.css",
     "bytes": 22273,
     "sha256": "36b9dfc4f4fc21dcada41b811957975171afa8e8349f324b0f0d9dd24127456f"
+  },
+  {
+    "file": "assets/projects/exhibition-booth-overview-redacted.jpg",
+    "bytes": 190210,
+    "sha256": "0e00579aabe168ee6df6269a59ab704b4e835ba7bbd0534e754a5b450ea869c6"
+  },
+  {
+    "file": "assets/projects/exhibition-booth-angle-redacted.jpg",
+    "bytes": 346306,
+    "sha256": "0d165523d94ed82bf699dd04e18a9cd1a13ec4efbeb89e4799df97e199ce79fc"
+  },
+  {
+    "file": "assets/projects/exhibition-product-display-redacted.jpg",
+    "bytes": 246626,
+    "sha256": "5397e9165f8d624af3a3ab8c6f97d466f03b36961b4bed26acd134c1b47e3297"
   }
 ]
