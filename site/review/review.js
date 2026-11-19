@@ -260,19 +260,12 @@
     .join("");
   $("#review-evidence-summary").innerHTML = statusRows;
 
-  const maxDomainCount = Math.max(
-    1,
-    ...Object.keys(P.domains).map(
-      (id) => P.metrics.filter((item) => item.domain === id).length,
-    ),
-  );
   $("#review-domain-grid").innerHTML = Object.entries(P.domains)
     .map(([id, label]) => {
       const rows = P.metrics.filter((item) => item.domain === id);
       const share = P.metrics.length
         ? Math.round((rows.length / P.metrics.length) * 100)
         : 0;
-      const relative = Math.round((rows.length / maxDomainCount) * 100);
       return (
         '<article class="review-domain-card"><h3>' +
         esc(label) +
@@ -283,7 +276,7 @@
         '%</span></div><div class="review-domain-track" role="img" aria-label="' +
         esc(label + "占全部指标 " + share + "%") +
         '" style="--review-share:' +
-        relative +
+        share +
         '%"><span></span></div><a href="' +
         dataHref(id) +
         '">查看该领域数据与口径 ↗</a></article>'
