@@ -169,3 +169,13 @@ PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，
 - Current PR #15 HEAD: `4951517f73237f2d1e519e59674491c24ca312ff` (the changes after the site-code validation commit are QA-documentation updates only).
 - GitHub Actions Run #140 on the current PR HEAD: Validate SUCCESS; 139/139 checks; isolated preview uploaded; Deploy SKIPPED.
 - Latest preview artifact: [Run #140](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493011702/artifacts/14513452874).
+
+
+## 2026-11-19 /review/ route and manifest repair
+
+- Confirmed the independent review page already existed in the candidate branch; retained and validated it rather than duplicating the route.
+- Added missing `review/index.html`, `review/review.css`, `review/review.js` entries to `PUBLIC_ASSETS.json` and corrected the homepage entry byte / SHA-256 metadata.
+- Updated the regression test to explicitly permit the homepage footer link to `review/` while preserving the original index-copy baseline assertion.
+- GitHub Actions Run #152 passed: 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus independent review page / route / search / local preview checks.
+- Preview artifact: [Run #152](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR remains Draft / Open; main unchanged; Deploy skipped. New browser screenshot review remains pending.
