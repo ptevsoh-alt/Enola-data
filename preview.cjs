@@ -8,7 +8,9 @@ http
       root,
       "." + decodeURIComponent(new URL(req.url, "http://localhost").pathname),
     );
-    if (p === root) p = path.join(root, "index.html");
+    if (p === root || (fs.existsSync(p) && fs.statSync(p).isDirectory())) {
+      p = path.join(p, "index.html");
+    }
     if (!p.startsWith(root + path.sep)) {
       res.writeHead(403).end();
       return;
@@ -26,6 +28,8 @@ http
           ".css": "text/css; charset=utf-8",
           ".png": "image/png",
           ".webp": "image/webp",
+          ".jpg": "image/jpeg",
+          ".jpeg": "image/jpeg",
           ".svg": "image/svg+xml",
         }[path.extname(p)] || "text/plain",
       );
