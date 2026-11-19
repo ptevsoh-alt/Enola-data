@@ -255,20 +255,21 @@
   }
 
   function expo() {
-    return section("海外展会现场与客户开发", "以展位空间、产品系统展示与现场沟通支持 B2B 采购理解。", `
+    const expoPhoto = (file, alt, masks = []) => `<span style="position:relative;display:block;width:100%;overflow:hidden;border-radius:.35rem;line-height:0;">${image(file, alt, "jpg")}${masks.map(([left, top, width, height]) => `<span aria-hidden="true" style="position:absolute;z-index:2;left:${left}%;top:${top}%;width:${width}%;height:${height}%;display:block;border-radius:.12rem;background:rgba(166,174,170,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);pointer-events:none;"></span>`).join("")}</span>`;
+    return section("瑞音博｜海外 B2B 展会项目参与", "任职期间参与的海外展会项目 · 展位视觉、产品系统陈列与现场展示", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${image("exhibition-booth-overview-redacted", "海外展会展位全景，合作品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 合作品牌标识已脱敏</figcaption></figure>
+        <figure>${expoPhoto("exhibition-booth-overview-redacted", "瑞音博任职期间参与的海外展会展位全景，第三方品牌标识已脱敏", [[2.5, 23.5, 10, 9], [96, 29, 4, 8]])}<figcaption>展位全景 · 第三方品牌标识已脱敏</figcaption></figure>
         <div class="g-project-list">
-          <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>通过展台结构、主视觉、产品陈列与现场动线建立第一层接触点；保留真实展会环境，展示海外展会现场的空间组织与展示方式。</p></article>
-          <article><small>PRODUCT SYSTEM</small><h3>从单品展示到系统关系</h3><p>系统展示墙将光伏、逆变器、储能电池与用电负载放在同一套关系中，帮助采购方从产品类型、系统连接和应用场景理解方案。</p></article>
-          <article><small>B2B CONVERSATION</small><h3>从现场问题进入后续跟进</h3><p>围绕应用场景、需求规格、采购周期与交付要求推进需求确认，并衔接报价、交期核对和后续跟进。未提供可核验的客户线索与成交数据，因此不展示量化业务结果。</p></article>
+          <article><small>PROJECT PARTICIPATION</small><h3>海外展会项目参与</h3><p>该组照片来自本人确认参与的瑞音博任职期间海外展会项目。页面以现场照片呈现展位空间、展示结构与产品陈列，不将项目参与扩大表述为独立主导整场展会。</p></article>
+          <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>从展台结构、主视觉、空间层次和展示动线观察现场呈现方式，保留真实展会环境，展示海外 B2B 展会的品牌接触场景。</p></article>
+          <article><small>PRODUCT SYSTEM</small><h3>产品系统陈列</h3><p>展示墙将光伏、逆变器、储能电池、柴油发电机与家庭用电负载放在同一系统关系中，便于参观者从组件和应用场景理解产品组合。此处仅描述照片中可见的展示内容，不延伸为产品技术方案设计责任。</p></article>
         </div>
       </div>
-      <div class="g-product-gallery" aria-label="海外展会现场与产品展示照片">
-        <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，合作品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
-        <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，合作品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与产品陈列 · 品牌标识已脱敏</span></figcaption></figure>
+      <div class="g-product-gallery" aria-label="瑞音博任职期间参与的海外展会现场与产品展示照片">
+        <figure>${expoPhoto("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", [[69, 43, 20, 8], [46, 76, 12, 8], [2, 82, 22, 7], [87, 51, 10, 12]])}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
+        <figure>${expoPhoto("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", [[83.5, 27, 5.5, 4], [95, 27, 4.5, 4], [83.5, 39, 5.5, 4], [95, 39, 4.5, 4], [83.5, 51, 5.5, 4], [95, 51, 4.5, 4], [83.5, 63, 5.5, 4], [95, 63, 4.5, 4], [83.5, 75, 5.5, 4], [95, 75, 4.5, 4], [83.5, 87, 5.5, 4], [95, 87, 4.5, 4], [1, 78, 5, 8]])}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
       </div>
-      <p class="g-chart-note">公开展示版本已对展位主标识、产品标识、品牌文字及网址进行脱敏；原始照片独立保留。案例聚焦展位呈现、产品系统展示与 B2B 沟通场景，不推定未提供的展会名称、个人职责细节、客户线索量或成交结果。</p>`, "expo-project");
+      <p class="g-chart-note">公开展示版本对展位标识、设备品牌字样、可识别型号及编号进行脱敏；原始照片保持不变。当前证据支持项目参与及现场展示，不包含可核验的个人具体职责、展会名称与日期、客户线索量或成交结果，因此不展示未经证实的管理范围和量化业绩。</p>`, "expo-project");
   }
 
   function creator() {
