@@ -516,6 +516,11 @@
         <span>MANAGEMENT REVIEW LOOP</span>
         <div><b>拆分字段</b><i>→</i><b>核对窗口与定义</b><i>→</i><b>识别可行动问题</b><i>→</i><b>调整内容与社群计划</b></div>
       </div>
+      <div class="g-story-note">
+        <h3>一次阶段复盘怎样分派下一步</h3>
+        <p>复盘工作样例。社媒组把同一阶段的内容按场景、形式和链接动作拆开，确认该继续验证哪类开场。反馈集中在操作问题时，产品与客服先核对用法，内容组再补 FAQ 或短演示。若链接点击出现变化，由电商和数据同事核对对应窗口、落地页访问与关键事件，再决定改 CTA 还是改页面承接。</p>
+        <p class="g-chart-note">现有 Meta 阶段汇总支持规模判断。继续、修正或暂缓的决策需要对应内容和承接数据。</p>
+      </div>
       <p class="g-decision-note">证据边界：当前后台截图支持平台字段汇总与原生曲线展示；没有同账号、同口径的逐日导出，不能重建日级趋势，也不能把平台表现归因到某一条内容或单场活动。</p>
       <div class="g-decision-links"><a href="#/data/social">查看平台数据与后台截图 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
