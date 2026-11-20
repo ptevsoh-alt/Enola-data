@@ -119,7 +119,7 @@ const fs = require("fs"),
     assert.equal(scrolledSection, "selected-work");
   });
   w.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
-  for (const id of featured) {
+  for (const { id } of w.PORTFOLIO.cases) {
     await route("/case/" + id);
     check("overview and chapter links: " + id, () => {
       const overview = d.querySelector(".g-case-overview");
@@ -128,6 +128,9 @@ const fs = require("fs"),
       assert.equal(path.split("/")[2], id);
       assert.ok(d.getElementById(path.split("/")[3]));
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
+      const evidencePath = d.querySelector("#evidence a").hash;
+      assert.ok(d.getElementById(evidencePath.split("/")[3]));
+      assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["怎么分工交接", "结果怎么复核"]);
     });
   }
   await route("/case/gtm/launch-delivery");
@@ -142,9 +145,9 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
-  check("the creative case contains both portable MP4 excerpts and their strategy", () => {
+  check("the creative case contains three portable MP4 excerpts and their strategy", () => {
     const clips = [...d.querySelectorAll("#video-projects video")];
-    assert.equal(clips.length, 2);
+    assert.equal(clips.length, 3);
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
@@ -153,6 +156,7 @@ const fs = require("fs"),
       assert.ok(d.getElementById(clip.getAttribute("aria-describedby")));
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
+    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
   });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
