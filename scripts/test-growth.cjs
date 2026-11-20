@@ -141,6 +141,19 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
+  await route("/case/creative/video-projects");
+  check("the creative case contains both portable MP4 excerpts and their strategy", () => {
+    const clips = [...d.querySelectorAll("#video-projects video")];
+    assert.equal(clips.length, 2);
+    clips.forEach((clip) => {
+      assert.ok(clip.hasAttribute("controls"));
+      assert.ok(clip.hasAttribute("playsinline"));
+      const source = clip.querySelector('source[type="video/mp4"]');
+      assert.ok(fs.statSync(path.join(root, "site", source.getAttribute("src"))).size > 0);
+      assert.ok(d.getElementById(clip.getAttribute("aria-describedby")));
+    });
+    assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
+  });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
     assert.ok(d.querySelector('#partner-handoff a[href="#/case/gtm/english-brief"]'));
