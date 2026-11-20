@@ -130,6 +130,21 @@ const fs = require("fs"),
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
     });
   }
+  await route("/case/gtm/launch-delivery");
+  check("the launch work sample connects milestones, an English brief and the asset review", () => {
+    assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
+    assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
+    assert.ok(d.querySelector('#english-brief a[href="#/case/operations/asset-review"]'));
+  });
+  await route("/case/operations/asset-review");
+  check("the asset review links back to the relevant brief", () => {
+    assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
+    assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
+  });
+  await route("/case/creator/partner-handoff");
+  check("the partner handoff is available as a case chapter", () => {
+    assert.ok(d.querySelector('#partner-handoff a[href="#/case/gtm/english-brief"]'));
+  });
   await route("/case/social");
   check("eight social management stages form one end-to-end journey", () => {
     assert.equal(d.querySelectorAll(".g-foundation>article").length, 8);
