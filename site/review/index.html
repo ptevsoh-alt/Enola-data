@@ -12,9 +12,10 @@
     <title>作品集审阅入口｜黄文琳</title>
     <link rel="icon" href="../assets/favicon.svg" type="image/svg+xml" />
     <link rel="stylesheet" href="../styles.css" />
-    <link rel="stylesheet" href="review.css?v=20261120c" />
+    <link rel="stylesheet" href="review.css?v=20261120d" />
     <script src="../data.js" defer></script>
-    <script src="review.js?v=20261119b" defer></script>
+    <script src="../selected-work.js?v=20261120d" defer></script>
+    <script src="review.js?v=20261120d" defer></script>
   </head>
   <body class="review-page">
     <a class="review-skip" href="#review-main">跳到审阅内容</a>
@@ -37,7 +38,7 @@
       <section class="review-hero" aria-labelledby="review-title">
         <div class="review-hero-copy">
           <h1 id="review-title">黄文琳的<br /><em>个人作品集</em></h1>
-          <p class="review-hero-intro">我在北美消费品项目中做过的上市传播、品牌定位、社媒运营和团队交付。每个案例都可以展开看我的职责、项目取舍和交付物。</p>
+          <p class="review-hero-intro">我负责海外社媒策略与内容团队交付，参与北美消费品的定位、新品上市和整合传播。</p>
           <div class="review-hero-actions">
             <a class="review-button" href="#review-path">看代表项目 <span aria-hidden="true">↘</span></a>
             <a class="review-text-link" href="#review-cases">浏览全部案例 ↗</a>
@@ -45,11 +46,12 @@
         </div>
         <div class="review-hero-panel">
           <div class="review-panel-top">
-            <span>作品集一览</span>
+            <span>2025 年 Meta 阶段汇总 · 历史项目记录</span>
           </div>
           <div id="review-kpis" class="review-kpis" aria-live="polite">
-            <p>正在读取作品集索引…</p>
+            <p>正在读取社媒数据…</p>
           </div>
+          <a class="review-panel-link" href="../#/case/social/results">查看经营结果与数据口径 ↗</a>
         </div>
       </section>
 
@@ -59,34 +61,12 @@
             <h2>代表项目</h2>
           </div>
         </div>
-        <div class="review-path-grid">
-          <a class="review-path-card" href="../#/case/gtm/launch-decisions">
-            <h3>M3 双盘拖把美国上市传播</h3>
-            <p>为什么选择餐后硬地，从卖点证明到渠道排期和美英本地化。</p>
-            <b>查看上市规划 ↗</b>
-          </a>
-          <a class="review-path-card" href="../#/case/brand/brand-positioning">
-            <h3>家用清洁品牌定位与整合传播</h3>
-            <p>四条产品线如何围绕清洁任务组织，品牌屋如何延伸到联合抽奖和北美新闻稿。</p>
-            <b>查看品牌案例 ↗</b>
-          </a>
-          <a class="review-path-card" href="../#/case/operations/team-delivery">
-            <h3>社媒内容团队的交付机制</h3>
-            <p>从季度主题到月度排期，把文案、设计、视频和产品审核编进同一交付流程。</p>
-            <b>查看团队交付 ↗</b>
-          </a>
-          <a class="review-path-card" href="../#/case/social/social-foundation">
-            <h3>Facebook、Instagram 与社群增长</h3>
-            <p>按平台设计内容和反馈机制。2025 年 Meta 阶段汇总为 96.5 万次曝光、3.7 万次互动。</p>
-            <b>查看社媒案例 ↗</b>
-          </a>
-        </div>
+        <div id="review-selected-work" class="review-path-grid"></div>
       </section>
 
       <section id="review-cases" class="review-section">
         <div class="review-section-head review-case-heading">
           <div>
-            <p class="eyebrow">SELECTED WORK / CASE INDEX</p>
             <h2>项目案例一览</h2>
           </div>
           <label class="review-search">
@@ -102,15 +82,14 @@
         <div class="review-section-head">
           <div>
             <p class="eyebrow">STRATEGY / OPERATING SYSTEMS</p>
-            <h2>策略、创意与管理如何连成一套系统</h2>
+            <h2>项目工作样例</h2>
           </div>
-          <p>把项目从目标判断、创意选择到团队协同和结果复盘放在同一条审阅路径中。</p>
         </div>
         <div class="review-system-grid">
           <article class="review-system-card review-system-card-wide">
             <div class="review-system-kicker">M3 / GTM & CAMPAIGN ARCHITECTURE</div>
-            <h3>从商业目标到传播学习</h3>
-            <p class="review-system-intro">以 M3 2026 年 5 月上市规划为案例，展示 GTM 商业准备与 Campaign 传播管理之间的连接。查看美国上市规划，以及后续美英本地化工作样例。素材和脚本属于交付记录，发布、投放与成交待核。</p>
+            <h3>M3 上市规划与渠道安排</h3>
+            <p class="review-system-intro">2026 年 5 月美国上市规划覆盖定位、素材、渠道和放行条件；美英本地化是后续工作样例。发布、投放与成交待核。</p>
             <ol id="review-campaign-flow" class="review-flow review-flow-nine"></ol>
             <div class="review-system-footer">
               <span>25 条本地化文案 / 市场 · 17 份静态文件 · 6 组视频与创作者脚本</span>
@@ -120,7 +99,7 @@
           <article class="review-system-card review-system-card-wide">
             <div class="review-system-kicker">CREATIVE PLATFORM / FIVE TERRITORIES</div>
             <h3>五个创意方向，各有一个主机制</h3>
-            <p class="review-system-intro">创意方向不只展示主题，还说明用户张力如何转化为产品表达，以及后续需要什么证据兑现。</p>
+            <p class="review-system-intro">从用餐后地面开场，到用连续镜头解释双盘运行，每个方向都对应要拍到的证据。</p>
             <div id="review-territories" class="review-territory-grid"></div>
             <div class="review-system-footer">
               <span>创意机制映射属于策略重构；不代表五条内容均已发布或测试胜出。</span>
@@ -139,7 +118,7 @@
           <article class="review-system-card">
             <div class="review-system-kicker">TEAM / CROSS-FUNCTIONAL DELIVERY</div>
             <h3>从职责拆解到交付闭环</h3>
-            <p class="review-system-intro">用责任、Gate、资源和复盘组织多团队交付，不把协同参与写成单人全权负责。</p>
+            <p class="review-system-intro">从内容日历分派任务，协调产品、设计和视频完成事实确认、素材制作与发布验收。</p>
             <ol id="review-delivery-flow" class="review-flow review-flow-four"></ol>
             <div class="review-system-footer">
               <a href="../#/case/operations/team-delivery">查看团队管理与交付 ↗</a>
