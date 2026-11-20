@@ -20,6 +20,7 @@ const fs = require("fs"),
   const w = dom.window,
     d = w.document;
   w.eval(fs.readFileSync(path.join(site, "data.js"), "utf8"));
+  w.eval(fs.readFileSync(path.join(site, "selected-work.js"), "utf8"));
   w.eval(fs.readFileSync(path.join(site, "review/review.js"), "utf8"));
 
   const check = (name, fn) => {
@@ -36,6 +37,13 @@ const fs = require("fs"),
     assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "operations", "social"]);
     assert.equal(d.querySelector("#review-path h2").textContent, "代表项目");
     assert.ok(d.querySelector('#review-path ~ #review-cases'));
+    links.forEach((link) => {
+      const [, , id, chapter] = link.hash.split("/");
+      assert.equal(chapter, w.PORTFOLIO_SELECTED_WORK[id].chapter);
+      assert.equal(link.querySelector("h3").textContent, w.PORTFOLIO_SELECTED_WORK[id].title);
+    });
+    assert.deepEqual([...d.querySelectorAll("#review-kpis strong")].map((node) => node.textContent), ["96.5万", "3.7万"]);
+
   });
   check("review index renders all 38 metrics and six data domains", () => {
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.metrics, 38);
