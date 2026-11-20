@@ -31,6 +31,12 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("[data-review-case-card]").length, 11);
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.cases, 11);
   });
+  check("selected work links to projects in the same personal portfolio", () => {
+    const links = [...d.querySelectorAll("#review-path .review-path-card")];
+    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "operations", "social"]);
+    assert.equal(d.querySelector("#review-path h2").textContent, "代表项目");
+    assert.ok(d.querySelector('#review-path ~ #review-cases'));
+  });
   check("review index renders all 38 metrics and six data domains", () => {
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.metrics, 38);
     assert.equal(d.querySelectorAll(".review-domain-card").length, 6);
@@ -126,7 +132,7 @@ const fs = require("fs"),
     check("local preview serves /review/ as an index document", () => {
       assert.equal(page.status, 200);
       assert.match(page.type, /text\/html/);
-      assert.ok(page.body.toString("utf8").includes("INDEPENDENT REVIEW"));
+      assert.match(page.body.toString("utf8"), /id="review-title">黄文琳的/);
       assert.ok(page.body.toString("utf8").includes("review-systems"));
     });
     const css = await get("/review/review.css");

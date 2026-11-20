@@ -1793,6 +1793,11 @@
   .g-project-vertical { display: block; }
 }
 
+.home-intro-band {
+  padding-bottom: clamp(1.5rem, 3vw, 2.75rem);
+  background: radial-gradient(ellipse at 12% 0%, #dfe9dd 0%, transparent 58%),
+    radial-gradient(ellipse at 92% 6%, #f4e6d6 0%, transparent 49%);
+}
 .application-hero {
   grid-template-columns: minmax(0, 1.24fr) minmax(300px, .76fr);
   padding: clamp(2rem, 5.5vw, 4.8rem) 0 2.2rem;
@@ -1801,8 +1806,7 @@
 }
 .application-hero h1 { font-size: clamp(2.55rem, 5vw, 4.65rem); line-height: 1.14; }
 .application-hero .eyebrow { margin-bottom: .85rem; }
-.application-hero .hero-intro { margin: 1rem 0 .45rem; font-weight: 700; }
-.hero-summary { max-width: 32rem; margin: .4rem 0 0; color: var(--muted); }
+.hero-summary { max-width: 34rem; margin: 1.15rem 0 0; color: var(--muted); }
 .application-hero .actions { margin: 1.2rem 0 0; }
 .featured-nav {
   display: block;
@@ -1833,7 +1837,7 @@
 .home-summary .metric { min-width: 0; padding: .75rem 1rem; }
 .home-summary .metric strong { font-size: clamp(1.6rem, 3vw, 2.6rem); }
 .home-summary .metric-source { display: none; }
-.featured-section { padding-block: 2.8rem; }
+.featured-section { padding-block: 2.8rem; scroll-margin-top: 1rem; }
 .featured-section h2 { font-size: clamp(1.65rem, 3.5vw, 2.5rem); }
 .featured-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .95rem; }
 .featured-project {
@@ -1873,7 +1877,6 @@
 .case-page .case-section { scroll-margin-top: 84px; }
 @media (max-width: 790px) {
   .application-hero { grid-template-columns: minmax(0, 1fr); }
-  .application-hero .hero-intro { font-size: .9rem; }
   .featured-project-photo { grid-template-columns: minmax(0, 1fr); }
   .featured-project img { aspect-ratio: 16 / 10; }
 }

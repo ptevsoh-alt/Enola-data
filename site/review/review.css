@@ -111,6 +111,7 @@
   background: var(--ink);
   color: #fff;
   min-width: 0;
+  border-radius: .65rem;
 }
 .review-panel-top {
   display: flex;
@@ -142,13 +143,6 @@
   color: #d5ded7;
   font-size: 11px;
 }
-.review-panel-note {
-  padding-top: 16px;
-  border-top: 1px solid #718278;
-  color: #c5d2c7;
-  font-size: 11px;
-  line-height: 1.8;
-}
 .review-section {
   padding: 64px 0 70px;
   border-top: 1px solid var(--rule);
@@ -172,15 +166,16 @@
 }
 .review-path-grid {
   display: grid;
-  grid-template-columns: repeat(4, minmax(0, 1fr));
-  gap: 12px;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: 14px;
 }
 .review-path-card {
   display: flex;
   flex-direction: column;
-  min-height: 220px;
-  padding: 22px;
+  min-height: 160px;
+  padding: clamp(18px, 3vw, 28px);
   border: 1px solid var(--rule);
+  border-radius: .5rem;
   background: var(--white);
   transition: transform .2s ease, border-color .2s ease;
 }
@@ -188,28 +183,27 @@
   transform: translateY(-3px);
   border-color: var(--accent);
 }
-.review-path-card > span,
 .review-case-top > span:first-child,
-.review-visual-copy > span,
-.review-checklist article > span {
+.review-visual-copy > span {
   color: var(--accent);
   font-size: 9px;
   letter-spacing: .09em;
 }
 .review-path-card h3 {
-  margin-top: 17px;
-  font-size: 17px;
+  margin: 0;
+  font-size: clamp(17px, 2vw, 22px);
 }
 .review-path-card p {
-  margin: 10px 0 20px;
+  margin: 10px 0 16px;
   color: var(--muted);
-  font-size: 11px;
+  font-size: 13px;
   line-height: 1.8;
 }
 .review-path-card b {
+  color: var(--accent);
   margin-top: auto;
-  font-size: 11px;
-  font-weight: 500;
+  font-size: 12px;
+  font-weight: 650;
 }
 .review-case-heading {
   align-items: end;
@@ -413,30 +407,6 @@
   font-size: 10px;
   color: var(--accent);
 }
-.review-checklist {
-  display: grid;
-  grid-template-columns: repeat(5, minmax(0, 1fr));
-  gap: 10px;
-}
-.review-checklist article {
-  min-width: 0;
-  padding: 18px;
-  border-top: 2px solid var(--accent);
-  background: #e7ece2;
-}
-.review-checklist article > span {
-  font: 24px var(--serif);
-}
-.review-checklist h3 {
-  margin-top: 13px;
-  font-size: 14px;
-}
-.review-checklist p {
-  margin-top: 8px;
-  color: var(--muted);
-  font-size: 10px;
-  line-height: 1.8;
-}
 .review-note {
   margin: 10px 0 72px;
   padding: 22px 25px;
@@ -490,11 +460,7 @@
   color: var(--muted);
 }
 @media (max-width: 1050px) {
-  .review-path-grid,
   .review-gallery {
-    grid-template-columns: repeat(3, minmax(0, 1fr));
-  }
-  .review-checklist {
     grid-template-columns: repeat(3, minmax(0, 1fr));
   }
   .review-evidence-summary {
@@ -548,12 +514,8 @@
   .review-path-grid,
   .review-case-grid,
   .review-gallery,
-  .review-domain-grid,
-  .review-checklist {
+  .review-domain-grid {
     grid-template-columns: 1fr;
-  }
-  .review-path-card {
-    min-height: 170px;
   }
   .review-case-card {
     min-height: 210px;

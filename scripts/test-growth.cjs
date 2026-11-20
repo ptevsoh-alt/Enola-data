@@ -109,6 +109,14 @@ const fs = require("fs"),
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
     assert.equal(d.querySelector(".application-hero img"), null);
   });
+  const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
+  let scrolledSection;
+  w.HTMLElement.prototype.scrollIntoView = function () { scrolledSection = this.id; };
+  await route(d.querySelector('.application-hero .btn').hash);
+  check("homepage selected work link scrolls to the project list", () => {
+    assert.equal(scrolledSection, "selected-work");
+  });
+  w.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
   for (const id of featured) {
     await route("/case/" + id);
     check("overview and chapter links: " + id, () => {

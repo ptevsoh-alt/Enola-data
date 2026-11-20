@@ -77,42 +77,42 @@
   }
   const featured = {
     gtm: {
-      label: "GTM / IMC 新品上市管理",
-      title: "从Launch Charter到Campaign治理与整合传播",
-      role: "负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同。",
-      decision: "先拆解GTM商业准备与Campaign传播责任，再以产品真值、用户张力和品牌主张构建Big Idea；通过RACI、阶段Gate、资源依赖和Measurement组织跨部门交付。",
-      output: "Launch Charter、Campaign Strategy、Creative Theme、7个核心内容支柱 + 1个品牌组合辅助层、23个社媒槽位、15条IMC协同链路、GTM管理驾驶舱、KPI/风险/资源与资产QA。",
-      artifact: "查看GTM / IMC管理框架与Campaign工作物",
-      chapter: "strategy",
+      label: "美国市场 · 上市规划",
+      title: "M3 双盘拖把美国上市传播",
+      role: "我负责社媒策略和内容团队交付，参与用户研究、差异化定位、卖点梳理及上市传播协调。",
+      decision: "我把主推场景收敛到餐后硬地清洁，用双盘与 D 形握把说明产品特点，并为演示与购买设置不同的上线条件。",
+      output: "上市规划包含 23 个社媒内容与运营槽位、15 条渠道协同链路，以及美英本地化工作样例。实际发布与销售结果待核。",
+      artifact: "查看上市决策与执行排期",
+      chapter: "launch-decisions",
       image: "mop-kv-detail",
       alt: "黄色双盘拖把的产品主视觉局部",
     },
     brand: {
-      label: "品牌策略 / IMC 整合传播",
-      title: "从品牌定位到跨渠道传播",
-      role: "参与品牌故事、视觉资产与产品卖点表达，协同 Social、PR、Creator 和展会触点的内容交付。",
-      decision: "先统一品牌主张与产品事实，再按渠道分配场景演示、媒体信息和用户沟通任务。",
-      output: "匿名品牌屋、传播支柱、渠道分工、联合活动视觉与北美家庭清洁 PR 发布记录。",
-      artifact: "查看品牌屋与渠道分工",
-      chapter: "strategy",
+      label: "四条产品线 · 品牌屋与 PR",
+      title: "家用清洁品牌定位与整合传播",
+      role: "我参与品牌故事、视觉资产和产品卖点表达，协调社媒、PR、创作者与展会内容交付。",
+      decision: "我按清洁任务组织产品组合，优先用餐区黏污和浴室边角解释不同工具的用途，再把同一套信息用于社媒、联合活动和媒体资料。",
+      output: "品牌屋、联合抽奖海报，以及北美家庭清洁主题的新闻稿分发记录。",
+      artifact: "查看品牌屋、联合活动与新闻稿",
+      chapter: "brand-positioning",
       image: "pr-home-scene",
       alt: "家庭清洁主题的传播配图",
     },
     operations: {
-      label: "项目管理 / 跨部门交付",
-      title: "把营销计划拆成可验收的交付",
-      role: "负责社媒小组任务安排、季度与月度排期、创意评审及脚本 / 视觉审核，协调产品、设计、视频、电商和外部合作方。",
-      decision: "先确认产品事实、素材依赖与审核责任，再推进设计制作、渠道适配和发布验收。",
-      output: "季度主题、月度内容日历、项目 Brief、任务分工、审核节点与周 / 月复盘。",
+      label: "季度主题 · 排期与审核",
+      title: "社媒内容团队的交付机制",
+      role: "我负责季度与月度排期、社媒小组任务安排和创意审核，协调产品、设计、视频、电商和外部合作方。",
+      decision: "我把产品事实、素材依赖与审核责任写进 Brief，设计和视频按同一要求制作，发布前按渠道逐项验收。",
+      output: "季度主题、月度内容日历、任务分工、审核节点与周 / 月复盘。",
       artifact: "查看分工、审核与复盘",
       chapter: "management",
     },
     social: {
-      label: "海外社媒 / 品牌增长",
-      title: "从账号经营到内容与社群增长",
-      role: "担任社媒负责人、管理组长，负责 Facebook、Instagram 和美国 Facebook Group 的内容规划与团队交付。",
-      decision: "按平台职责分配品牌信息、产品演示、活动沟通和用户反馈任务。",
-      output: "季度主题与月度内容日历；2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
+      label: "Meta · 内容与社群运营",
+      title: "Facebook、Instagram 与社群增长",
+      role: "我负责 Facebook、Instagram 和美国 Facebook Group 的内容规划、团队交付与复盘。",
+      decision: "我让 Facebook 承担品牌信息和链接分发，Instagram 侧重产品演示与活动内容，Group 收集使用问题并反馈给下一轮选题。",
+      output: "季度主题与月度内容日历。2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
       artifact: "查看内容体系与经营数据",
       chapter: "execution",
     },
@@ -129,16 +129,16 @@
   }
 
   function home() {
-    return `<div class="wrap">
+    return `<div class="home-intro-band"><div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 / HUANG WENLIN</p><h1 id="home-title">海外新品上市 IMC<br><em>与品牌整合传播</em></h1>
-        <p class="hero-intro">IMC · Product Marketing · GTM · Brand Growth</p>
-        <p class="hero-summary">围绕北美消费市场的用户场景与产品定位，参与新品上市 IMC 和跨渠道传播；负责海外社媒内容团队交付，组织季度主题、月度排期与创意审核，协同产品、设计、视频、PR、Creator 与电商团队推进传播物料落地。</p>
-        <div class="actions"><a class="btn" href="#/cases">浏览案例 ↗</a><a href="#/experience">工作经历</a></div></div>
-        <nav class="featured-nav" aria-label="代表案例入口"><h2>代表案例</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><span>${item.label}</span><strong>${item.title}</strong></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
+        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外产品营销<br><em>与品牌增长</em></h1>
+        <p class="hero-summary">我负责海外社媒策略和内容团队交付，也参与北美消费品的定位、上市与整合传播。这些项目记录了我如何选定主推场景、推进跨团队交付，并用数据复盘内容表现。</p>
+        <div class="actions"><a class="btn" href="#/home/selected-work">看代表项目 ↘</a><a href="#/experience">工作经历</a></div></div>
+        <nav class="featured-nav" aria-label="代表项目"><h2>代表项目</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总</p><a href="#/data/social">查看社媒数据 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
-      <section class="section featured-section" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 11 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
+    </div></div><div class="wrap">
+      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>新品上市 IMC、品牌整合传播、跨部门项目管理与海外社媒增长。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
@@ -288,11 +288,12 @@
   }
   function route() {
     document.querySelectorAll("dialog[open]").forEach(d => d.close());
-    const [rawPage, id, chapter] = location.hash
+    const [rawPage, id, caseChapter] = location.hash
       .replace(/^#\/?/, "")
       .split("/");
     const page = rawPage || "home";
-    const key = page + "/" + (id || "");
+    const chapter = page === "home" ? id : caseChapter;
+    const key = page === "home" ? "home/" : page + "/" + (id || "");
     if (route.key === key && chapter) {
       document.getElementById(chapter)?.scrollIntoView();
       return;
