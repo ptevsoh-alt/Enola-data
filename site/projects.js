@@ -84,7 +84,47 @@
           <li><a href="#/case/creative/video-projects">演示视频拆解</a>把卖点落到接触位置、持握姿势和连续动作。</li>
         </ul>
       </div>
+      <div class="g-story-note">
+        <h3>把用户反馈变成下一个故事</h3>
+        <p>品牌故事从餐后硬地和浴室边角两个使用任务展开。下一轮选题时，从社群与客服的问题中找真实做法，核对在什么表面、用什么配件、哪一步卡住。共性问题优先补进 FAQ；有完整使用过程并取得授权的故事，进入创作者拍摄 Brief。</p>
+        <p><a href="#/case/community">查看社群如何收集问题 ↗</a> · <a href="#/case/creative/video-projects">查看家庭场景如何转成镜头 ↗</a></p>
+      </div>
       <p class="g-chart-note">品牌屋中的竞品参照属于功能与任务层面的定性比较；现有材料没有市场规模、竞品份额或价格调查数据。</p>`, "brand-positioning");
+  }
+
+  function launchDelivery() {
+    const milestones = [
+      ["4/28 · 立项", "GTM／IMC", "立项说明、市场与型号、主目标、待确认事项", "确认谁对整体上市决策负责。"],
+      ["5/1–10 · 定位与 Brief", "产品／产品营销、IMC", "产品事实、主推场景、卖点与拍摄 Brief", "产品签核可公开的事实，社媒组据此拆解内容。"],
+      ["5/15–21 · 物料与商业预检", "IMC 协调；设计、视频、供应链及电商分工", "KV、轮播、真实演示、FAQ、素材权限与链接", "逐项检查素材；库存、配送、支付与客服就绪后才开放购买。"],
+      ["5/22–25 · 计划发布与首销", "IMC／渠道；商业团队核可售条件", "计划发布 KV、演示及 FAQ；跟进创作者、PR 或许可邮件的放行", "按素材与渠道准备情况放行。缺演示则引导了解产品。"],
+      ["5/26–31 · 复盘与交接", "IMC／渠道、数据及客服", "观看、商品页访问、净履约订单；常见问题与素材权利归档", "用同一窗口检查表现，分派需要修正的物料和承接问题。"],
+    ];
+    return `
+      <div class="g-story-note g-launch-delivery" id="launch-delivery">
+        <h3>上市交付表</h3>
+        <p>2026 年 5 月工作样例。我的职责是社媒策略与内容团队交付；商业放行和产品事实分别由相应职能确认。</p>
+        <ol class="g-milestone-list">
+          ${milestones.map(([date, owner, input, approval]) => `
+            <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
+        </ol>
+        <p><a href="#/case/gtm/english-brief">查看交给创意与制作团队的英文 Brief ↗</a></p>
+      </div>`;
+  }
+
+  function englishBrief() {
+    return `
+      <div class="g-story-note g-english-brief" id="english-brief">
+        <h3>英文制作 Brief</h3>
+        <p>根据美英本地化与产品演示方案改写的公开工作样例。</p>
+        <dl lang="en-US">
+          <div><dt>Audience &amp; task</dt><dd>Show U.S. households how the M3 handles an after-dinner cleanup on a suitable hard floor. Help viewers understand how to hold, steer and use the mop.</dd></div>
+          <div><dt>Creative direction</dt><dd>“Dinner’s done. Floor’s next.” Open on the floor after dinner. Follow one pass from hand position to dual-pad contact. The team can choose the household setting and opening frame.</dd></div>
+          <div><dt>Deliverables</dt><dd>Provide a 4:5 Feed key visual, a 9:16 Story version and an eight-second demo cut. Include English captions, the opening frame and a link to the approved destination for each placement.</dd></div>
+          <div><dt>Approval &amp; fallback</dt><dd>Keep the grip and both pads in frame. Use real footage for motion and approved wording for floor suitability. If motion footage is pending, submit a product-detail visual with “Explore M3.”</dd></div>
+        </dl>
+        <p><a href="#/case/operations/asset-review">查看主视觉为什么退回修改 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
+      </div>`;
   }
 
   function gtm() {
@@ -97,6 +137,7 @@
         <article><small>内容与渠道</small><h3>从餐后话题到发布承接</h3><p>预热用 Feed 和 Story 询问用户先清洁哪一处；考虑阶段用轮播展示双圆盘和握把，并将地面适用性等问题交给产品、客服核验。美国执行表以 5 月 22 日为计划发布节点，PR 用可公开的产品资料，CRM 按许可触达，Paid 在发布后验证开场。</p></article>
         <article><small>上线与复盘</small><h3>按证据和商业就绪度切换 CTA</h3><p>商品资料可用时引导了解产品，目的页有连续实拍时才引导观看演示；当地价格、库存、支付与履约确认后开放购买。财务对账后的净履约订单是主结果，净贡献决定是否扩大投入；有效观看、商品页访问用来定位问题。</p></article>
       </div>
+      ${launchDelivery()}
       <div class="g-story-note">
         <h3>购买前的三个问题，怎样让内容回答</h3>
         <p>这是上市规划中的验证问题。社群与客服后续可用真实反馈校正优先级。</p>
@@ -112,6 +153,7 @@
         </div>
         <p><a href="#/case/gtm/market-adaptation">看同一卖点如何改写成美国与英国的 Story 文案 ↗</a></p>
       </div>
+      ${englishBrief()}
       <p class="g-chart-note">23 个社媒内容与运营槽位、15 条 IMC 协同链路是总体规划交付。5 月 22 日为计划节点；本案例没有可核验的 M3 发布、投放、订单或 ROI 记录。</p>
       <section class="g-module g-project" id="market-adaptation" aria-labelledby="market-adaptation-heading">
         <header><h2 id="market-adaptation-heading">M3 美英本地化工作样例</h2><p>沿用美国上市规划的产品与传播主线，另做两地可用的文案和素材适配。以下样例来自 R12 创意指南和双市场文案表。</p></header>
@@ -130,17 +172,7 @@
         <p class="g-chart-note">R12 本地化工作包含每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本。以上为交付物数量。英国样例的上线与测试状态未核实。</p>
       </section>
 
-      <details class="g-chart-disclosure"><summary>查看上市里程碑与创意验证细节</summary>
-      <div class="g-project-list g-project-calendar-plan">
-        <article><small>T-24 / APR 28 · LAUNCH CHARTER</small><h3>立项与目标确认</h3><p>Owner：GTM / Launch 负责人、Campaign / IMC 负责人。交付：Launch Charter、目标卡、SKU与市场范围、资源边界、关键依赖及风险清单。Gate：产品身份唯一、主业务目标明确、每项未知信息都有责任人与截止时间。</p></article>
-        <article><small>T-12 / MAY 01–10 · STRATEGY & READINESS</small><h3>产品事实、定位与传播策略锁定</h3><p>Owner：产品 / 研发、Product Marketing、Campaign / IMC。交付：Product Fact Pack、Positioning / KSP、Message House、Big Idea、Creative Territories、渠道角色与资源需求。Gate：产品Claim可追溯；用户洞察假设与已验证事实分开标记。</p></article>
-        <article><small>T-5 / MAY 15–17 · LAUNCH PREFLIGHT</small><h3>内容、视觉与渠道预检</h3><p>Owner：Campaign / IMC；协同内容 / 社媒、视觉、视频、Paid、PR / Creator、CRM与数据。交付：Campaign Brief、内容矩阵、资产版本清单、发布排期、权利记录、UTM / Event与邮件检查。Gate：每项资产明确Owner、Proof、CTA、依赖与使用权限。</p></article>
-        <article><small>T-3 / MAY 19–21 · PRODUCT & SUPPLY GATE</small><h3>量产、库存与履约放行</h3><p>Owner：产品 / 研发、供应链与客服。交付：SKU / 配件核对、QC放行、可售库存、配送与退换安排、客服FAQ及最终素材实物核对。Gate：质量、库存、履约和客服能够承接传播承诺；未通过则暂停受影响的购买动作。</p></article>
-        <article><small>T0 / MAY 22 · DIGITAL LAUNCH</small><h3>数字发布与产品演示</h3><p>Owner：Campaign / IMC；执行：内容 / 社媒、视觉与视频。交付：Launch KV、Hero Film、产品演示、FAQ与跨平台适配。Gate：产品Claim、素材、Logo、权利和平台安全区通过审核；购买CTA与实际开放状态一致。</p></article>
-        <article><small>T+1 / MAY 23–25 · FIRST-SALE WINDOW</small><h3>首销窗口与渠道协同</h3><p>Owner：GTM / Launch、Paid Media与商业 / 供应链。交付：获批的Paid变体、Creator发布、许可Email、社群问答与订单监控。Gate：价格、Offer、库存、支付、配送、客服、合作披露和测量均通过后，才开放购买型传播。</p></article>
-        <article><small>T+4 / MAY 26 · EARLY REVIEW</small><h3>阶段复盘与优化决策</h3><p>Owner：Campaign / IMC、Measurement / Data及渠道负责人。交付：按平台、素材、受众、有效观看、访问与订单质量拆解的Early Review。决策：STOP / CONTINUE / FIX / OBSERVE；数据未成熟时不宣布Winner或ROI。</p></article>
-        <article><small>EOL / MAY 31 · CLOSEOUT & LIFECYCLE HANDOFF</small><h3>项目收尾与生命周期交接</h3><p>Owner：GTM / Launch、Campaign / IMC、CRM / Lifecycle与Measurement / Data。交付：素材与权利归档、订单/退款/库存复核、临时Offer与标签关闭、用户状态及后续责任交接。未成熟数据保留后续复核窗口。</p></article>
-      </div>
+      <details class="g-chart-disclosure"><summary>展开五种创意方向与所需证据</summary>
       <div class="g-project-list g-project-calendar-plan" id="campaign-mechanism-mapping">
         <article><small>MECHANISM 01 / PAIN-POINT EMERGENCE</small><h3>The After-Dinner Reset</h3><p>主机制：问题显化。用餐后地面黏污作为具体任务入口；辅助机制：连续过程证明。后续必须展示真实产品操作和相同条件的清洁过程，不能用夸张污渍或单次画面推导普遍性能。</p></article>
         <article><small>MECHANISM 02 / MECHANISM REVEAL</small><h3>See the Motion</h3><p>主机制：机制揭示。通过真实双头运行、接地和移动路径解释产品如何工作；辅助机制：微距细节证明。静态 KV、生成画面或渲染不能代替真实运行视频。</p></article>
@@ -236,6 +268,13 @@
         <figure>${expoPhoto("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", [[69, 43, 20, 8], [46, 76, 12, 8], [2, 82, 22, 7], [87, 51, 10, 12]])}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
         <figure>${expoPhoto("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", [[83.5, 27, 5.5, 4], [95, 27, 4.5, 4], [83.5, 39, 5.5, 4], [95, 39, 4.5, 4], [83.5, 51, 5.5, 4], [95, 51, 4.5, 4], [83.5, 63, 5.5, 4], [95, 63, 4.5, 4], [83.5, 75, 5.5, 4], [95, 75, 4.5, 4], [83.5, 87, 5.5, 4], [95, 87, 4.5, 4], [1, 78, 5, 8]])}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
       </div>
+      <details class="g-chart-disclosure" id="expo-handoff">
+        <summary>查看从展位物料到客户问题的交接样例</summary>
+        <div class="g-story-note">
+          <p>按照片可见的产品系统陈列设计。展前由产品和商务核对系统示意与产品说明；现场按客户应用场景记录配置、交付或售后问题；展后由商务确认跟进人，把重复问题交回产品和市场用于更新 FAQ。会前物料、现场记录和会后跟进各有负责人。</p>
+          <p class="g-chart-note">这是基于现场展示整理的工作样例。照片支持展会参与和现场陈列。</p>
+        </div>
+      </details>
       <p class="g-chart-note">公开展示版本对展位标识、设备品牌字样、可识别型号及编号进行脱敏；原始照片保持不变。当前证据支持项目参与及现场展示，不包含可核验的个人具体职责、展会名称与日期、客户线索量或成交结果，因此不展示未经证实的管理范围和量化业绩。</p>`, "expo-project");
   }
 
@@ -246,6 +285,11 @@
         <article><h3>报价、交付和付款逐项核对</h3><p>演示邮件将报价、交付、付款放入待确认清单。负责人查原邮件，确认条款后再审核对应回复草稿。</p></article>
         <article><h3>来信提及授权，进入待核验</h3><p>若对方提出授权，先核对是否已有书面许可，再登记允许的平台、地域、期限及用途。品牌转发、剪辑和付费使用分别核对。</p></article>
         <article><h3>交付审核对应具体版本</h3><p>逐条核对产品事实、合作披露和修订意见。通过审核的内容版本与对应授权一起留档，方便后续查找和复用。</p></article>
+      </div>
+      <div class="g-story-note" id="partner-handoff">
+        <h3>外部创作者从 Brief 到交付</h3>
+        <p>工作样例。交接时先确认首稿与最终交付节点，首稿核对开场、产品证据和披露，修订意见标注版本和时间点。最终验收同时记录成片、允许渠道、地域、期限，以及可否剪辑或付费使用。条款和素材审核分别由对应负责人确认。</p>
+        <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a></p>
       </div>
       <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");
   }
@@ -282,6 +326,16 @@
         <article><h3>产品与素材确认</h3><p>产品同事核对功能、参数和适用条件。社媒小组确认拍摄清单、素材权限和链接后，将 Brief 交给设计和视频同事。</p></article>
         <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
+      </div>
+      <div class="g-story-note" id="asset-review">
+        <h3>一次真实的物料返工：首图看不到双盘</h3>
+        <ul>
+          <li><strong>发现</strong> 4:5 版主视觉底部 CTA 框遮挡并裁切了双盘。静态首图的任务是让人看懂产品结构，这一版需要返工。</li>
+          <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
+          <li><strong>写回交付清单</strong> Feed 和 Story 分别查裁切、安全区和关键结构。涉及运行的表达回到连续实拍，由产品团队核对对应说明。</li>
+        </ul>
+        <p class="g-chart-note">依据 M3 视觉样稿的审核和修订记录。该记录对应物料工作样例。</p>
+        <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
       </div>
       <div class="g-story-note">
         <h3>用父亲节日历演示一次项目交接</h3>
