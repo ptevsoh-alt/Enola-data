@@ -2012,3 +2012,45 @@
     gap: .3rem;
   }
 }
+
+.g-video-gallery {
+  display: grid;
+  grid-template-columns: minmax(0, 1.75fr) minmax(0, 1fr);
+  align-items: start;
+  gap: 1.2rem;
+  margin: 1rem 0 1.55rem;
+}
+
+.g-video-gallery figure {
+  margin: 0;
+  min-width: 0;
+}
+
+.g-video-gallery video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 16 / 9;
+  background: #18231d;
+  border-radius: .35rem;
+  object-fit: contain;
+}
+
+.g-video-demo video {
+  aspect-ratio: 4 / 5;
+  max-width: 14rem;
+}
+
+.g-video-gallery figcaption {
+  padding: .65rem 0 0;
+}
+
+.g-video-gallery figcaption h3,
+.g-video-gallery figcaption p {
+  margin: 0 0 .45rem;
+}
+
+@media (max-width: 700px) {
+  .g-video-gallery {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
