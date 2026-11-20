@@ -58,6 +58,7 @@
           <p>面向美国市场的家用电动清洁工具，优先解决餐区硬地黏污，以及浴缸内沿、墙砖接缝和边角的刷洗问题。产品由电机带动清洁头，用户控制握持位置、角度和移动路径。</p>
           <h3>按三类购买任务组织沟通</h3>
           <p>餐区清洁者关注扫过后仍然粘脚的脚印和溅渍；浴室清洁者关注刷头够不到的内沿与接缝；替家人购买的人，需要先确认握持、转向、换刷头和适用表面。</p>
+          <p><a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
         </div>
       </div>
       <div class="g-project-list">
@@ -168,6 +169,18 @@
       </div></div>`, "pr-project");
   }
 
+  function brandCampaign() {
+    return section("家居品牌联合抽奖", "将家庭种植与日常清洁放进同一个家居场景。", `
+      <div class="g-project-feature g-project-wide-image">
+        <figure>${image("joint-giveaway", "脱敏的联合抽奖海报，展示家庭种植设备、电动清洁刷和海报日期")}<figcaption>联合活动主视觉 · 海报标示 4 月 18–28 日，年份待核</figcaption></figure>
+        <div class="g-project-list">
+          <article><h3>用共同场景连接两类产品</h3><p>家庭种植设备和电动清洁刷同框。画面先让用户看懂两类奖品及其使用场景，再用活动名称和日期交代参与窗口。</p></article>
+          <article><h3>合作执行需要双方确认的事项</h3><p>在活动管理方案中，由牵头方统一资格、活动时区与规则。合作双方分别确认发布窗口、素材使用和奖品履约。复盘按各渠道发布记录、有效参与、奖品发放分开核对。</p></article>
+          <article><h3>现有交付证据</h3><p>海报可核对联合主题、奖品组合及画面标示时间。双方实际分工、发布链接、有效参与和发奖记录待补。</p></article>
+        </div>
+      </div>`, "brand-collaboration");
+  }
+
   function creative() {
     return section("节庆叙事与产品演示", "先用家庭场景建立情绪，再用连续动作解释产品如何完成清洁任务。", `
       <div class="g-project-media">
@@ -204,15 +217,14 @@
   }
 
   function creator() {
-    return section("创作者合作流程设计", "从达人筛选、合作 Brief 到内容审核与授权，建立可追踪的合作工作流。", `
+    return section("Creator Desk 创作者合作审核", "工作台原型 · 从来信提取候选事项，由负责人确认合作承诺及素材权利。", `
       <div class="g-project-list g-project-calendar-plan">
-        <article><h3>达人库与受众适配</h3><p>按市场、品类、受众和内容风格筛选合作对象，记录匹配理由与内容方向。</p></article>
-        <article><h3>项目管理与合作 Brief</h3><p>把合作目标、受众、产品事实、演示任务、交付形式、节点和审核责任放进同一份工作单。</p></article>
-        <article><h3>内容库与质量审核</h3><p>记录内容版本、修改意见、产品事实、平台披露和最终交付状态；不以发布数量替代内容质量判断。</p></article>
-        <article><h3>授权与素材复用</h3><p>素材复用前核对平台、地域、期限、用途、改编范围和撤回条件；发布授权与商业使用授权分开确认。</p></article>
-        <article><h3>合作跟进与邮件协同</h3><p>将触达、回复、合作状态、待办和交付节点连接起来，减少邮件沟通与项目状态之间的信息断层。</p></article>
+        <article><h3>选题和交付先写进 Brief</h3><p>按目标市场、受众和内容风格筛选创作者。Brief 写清产品事实、演示任务、交付形式和审核责任，供内容审核时逐项核对。</p></article>
+        <article><h3>报价、交付和付款逐项核对</h3><p>演示邮件将报价、交付、付款放入待确认清单。负责人查原邮件，确认条款后再审核对应回复草稿。</p></article>
+        <article><h3>来信提及授权，进入待核验</h3><p>若对方提出授权，先核对是否已有书面许可，再登记允许的平台、地域、期限及用途。品牌转发、剪辑和付费使用分别核对。</p></article>
+        <article><h3>交付审核对应具体版本</h3><p>逐条核对产品事实、合作披露和修订意见。通过审核的内容版本与对应授权一起留档，方便后续查找和复用。</p></article>
       </div>
-      <p class="g-chart-note">现有 Creator Desk 截图标注 Demo Data / No Connectors，因此本案例只展示流程设计与工作台原型，不展示界面中的演示数字为真实达人、合作或订单成果。</p>`, "creator-project");
+      <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");
   }
 
   function seo() {
@@ -229,14 +241,15 @@
       ["ART-10", "Post-Party Kitchen Degreasing: Air Fryers, Stovetops, and Caramel Splatters", "Cluster", "How-To / Deep Cleaning"],
     ];
     return section("Halloween SEO 主题集群规划", "No Scares, Just Spotless · 美国 / 北美市场 · 英文优先", `
-      <div class="g-project-list">
-        <article><small>CONTENT HUB</small><h3>1 篇 Pillar + 9 篇 Cluster</h3><p>以节后清洁为中心主题，围绕地面黏污、化妆品残留、门廊、浴室、宠物毛发和厨房油污扩展细分问题。</p></article>
-        <article><small>SEARCH INTENT</small><h3>从问题解决到商业调查</h3><p>内容类型覆盖 Informational Guide、Problem-solving、How-To、Checklist、Seasonal Maintenance 与 Commercial Investigation。</p></article>
-        <article><small>BRAND CONNECTION</small><h3>动力替代重复动作</h3><p>将品牌核心表达与任务化产品设计相连，让文章先解决具体清洁问题，再说明适用工具与使用条件。</p></article>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>先用主指南承接节后清洁</h3><p>1 篇主指南负责把万圣节后的清洁任务讲清楚，9 篇专题再按地面、浴室、门廊、宠物毛发和厨房等具体问题展开。</p></article>
+        <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
       </div>
-      <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
-        <article><small>${esc(id)} · ${esc(type)}</small><h3>${esc(title)}</h3><p>Search intent：${esc(intent)}</p></article>`).join("")}</div>
-      <p class="g-chart-note">原始截图记录为待用户确认的策略与内容生产包，且明确限制不得编造搜索量或节日折扣代码。当前只展示主题架构，不代表 10 篇文章已经发布；尚无文章 URL、收录状态或 GSC 表现可供展示。</p>`, "seo-cluster");
+      <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
+        <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
+          <article><small>${esc(id)} · ${esc(type)}</small><h3 lang="en">${esc(title)}</h3><p lang="en">${esc(intent)}</p></article>`).join("")}</div>
+      </details>
+      <p class="g-chart-note">以上为选题与内容规划。实际发布、索引状态和 GSC 表现待核。</p>`, "seo-cluster");
   }
 
   function operations() {
@@ -251,7 +264,7 @@
   }
 
   const extras = {
-    brand: { strategy: brand, execution: pr },
+    brand: { strategy: brand, execution: () => pr() + brandCampaign() },
     gtm: { strategy: gtm },
     social: { execution: social },
     creative: { execution: creative },
