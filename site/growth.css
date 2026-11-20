@@ -1956,3 +1956,59 @@
 .g-proof-table tbody th {
   font-weight: 650;
 }
+
+.g-milestone-list {
+  list-style: none;
+  padding: 0;
+  margin: .9rem 0;
+}
+
+.g-milestone-list li {
+  display: grid;
+  grid-template-columns: minmax(0, .75fr) minmax(0, 1.35fr) minmax(0, 1fr);
+  gap: .65rem 1rem;
+  padding: .75rem 0;
+  border-top: 1px solid var(--rule);
+}
+
+.g-milestone-list h4,
+.g-milestone-list p,
+.g-english-brief dd {
+  margin: 0;
+}
+
+.g-milestone-list h4 {
+  color: var(--accent);
+  font-size: .9rem;
+}
+
+.g-english-brief dl {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  gap: .8rem;
+  margin: 1rem 0;
+}
+
+.g-english-brief dl div {
+  padding: .8rem;
+  background: var(--white);
+  border: 1px solid var(--rule);
+  border-radius: .35rem;
+}
+
+.g-english-brief dt {
+  margin: 0 0 .3rem;
+  color: var(--accent);
+  font-weight: 700;
+}
+
+@media (max-width: 650px) {
+  .g-milestone-list li,
+  .g-english-brief dl {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .g-milestone-list li {
+    gap: .3rem;
+  }
+}
