@@ -251,12 +251,12 @@
           <li><strong>反馈与复盘</strong> 先按版本、渠道与同一观察窗口看有效观看和演示段留存。评论在问怎么用时，补操作镜头或 FAQ；需要评估访问与成交时，再核对链接、站点事件和订单。</li>
         </ul>
         <p>以上为内容分工与复盘方案。节庆片段、吸尘素材和五月上市脚本各有对应的工作样例。</p>
-        <p><a href="#/case/creative/video-projects">播放两段视频 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
+        <p><a href="#/case/creative/video-projects">播放三个视频样例 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
       </div>`, "video-strategy");
   }
 
   function creative() {
-    return section("节庆叙事与产品演示", "观看两段静音样例。先看家庭场景如何引出清洁任务，再看操作镜头怎样交代产品接触面。", `
+    return section("节庆叙事与产品演示", "三段静音视频分别展示家庭叙事、连续操作，以及两种开场如何承担不同传播任务。", `
       <div class="g-video-gallery">
         <figure>
           <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
@@ -273,6 +273,23 @@
           <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>约 4 秒静音裁切。保留吸头、踏面和移动路径，便于观察构图和操作表达。该片使用无线吸尘器，横版节庆样片中的产品为双盘拖把。</p></figcaption>
         </figure>
       </div>
+      <div class="g-opening-comparison" id="video-opening-comparison">
+        <figure>
+          <video controls playsinline preload="metadata" aria-label="播放客厅产品亮相和楼梯动作开场对照" aria-describedby="opening-video-note">
+            <source src="assets/video/product-opening.mp4" type="video/mp4">
+            <a href="assets/video/product-opening.mp4">打开开场对照 MP4</a>
+          </video>
+          <figcaption id="opening-video-note">约 6 秒静音素材对照，约 3 秒切换场景。</figcaption>
+        </figure>
+        <div>
+          <h3>无线吸尘器的两种开场</h3>
+          <dl>
+            <div><dt>0–3 秒 · 客厅亮相</dt><dd>先看到产品、握持和家居环境，适合主打认识产品的内容。</dd></div>
+            <div><dt>约 3–6 秒 · 楼梯上手</dt><dd>吸头立刻接触踏面，优先回答怎么用。做产品教育时，从这个动作开始。</dd></div>
+          </dl>
+          <p>这是两个源镜头的剪辑对照。若要判断哪种开场更有效，发布测试时保持受众、正文、时长与下一步一致，再看开场留存和演示段观看。</p>
+        </div>
+      </div>
       <div class="g-story-note" id="video-management">
         <h3>从创意方向到可验收的交付</h3>
         <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
@@ -282,10 +299,9 @@
   }
 
   function expo() {
-    const expoPhoto = (file, alt, masks = []) => `<span style="position:relative;display:block;width:100%;overflow:hidden;border-radius:.35rem;line-height:0;">${image(file, alt, "jpg")}${masks.map(([left, top, width, height]) => `<span aria-hidden="true" style="position:absolute;z-index:2;left:${left}%;top:${top}%;width:${width}%;height:${height}%;display:block;border-radius:.12rem;background:rgba(166,174,170,.96);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);pointer-events:none;"></span>`).join("")}</span>`;
     return section("瑞音博｜海外 B2B 展会项目参与", "任职期间参与的海外展会项目 · 展位视觉、产品系统陈列与现场展示", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${expoPhoto("exhibition-booth-overview-redacted", "瑞音博任职期间参与的海外展会展位全景，第三方品牌标识已脱敏", [[2.5, 23.5, 10, 9], [96, 29, 4, 8]])}<figcaption>展位全景 · 第三方品牌标识已脱敏</figcaption></figure>
+        <figure>${image("exhibition-booth-overview-redacted", "瑞音博任职期间参与的海外展会展位全景，第三方品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 第三方品牌标识已脱敏</figcaption></figure>
         <div class="g-project-list">
           <article><small>PROJECT PARTICIPATION</small><h3>海外展会项目参与</h3><p>该组照片来自本人确认参与的瑞音博任职期间海外展会项目。页面以现场照片呈现展位空间、展示结构与产品陈列，不将项目参与扩大表述为独立主导整场展会。</p></article>
           <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>从展台结构、主视觉、空间层次和展示动线观察现场呈现方式，保留真实展会环境，展示海外 B2B 展会的品牌接触场景。</p></article>
@@ -293,8 +309,8 @@
         </div>
       </div>
       <div class="g-product-gallery" aria-label="瑞音博任职期间参与的海外展会现场与产品展示照片">
-        <figure>${expoPhoto("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", [[69, 43, 20, 8], [46, 76, 12, 8], [2, 82, 22, 7], [87, 51, 10, 12]])}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
-        <figure>${expoPhoto("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", [[83.5, 27, 5.5, 4], [95, 27, 4.5, 4], [83.5, 39, 5.5, 4], [95, 39, 4.5, 4], [83.5, 51, 5.5, 4], [95, 51, 4.5, 4], [83.5, 63, 5.5, 4], [95, 63, 4.5, 4], [83.5, 75, 5.5, 4], [95, 75, 4.5, 4], [83.5, 87, 5.5, 4], [95, 87, 4.5, 4], [1, 78, 5, 8]])}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
+        <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
       </div>
       <details class="g-chart-disclosure" id="expo-handoff">
         <summary>查看从展位物料到客户问题的交接样例</summary>
@@ -378,6 +394,25 @@
       </div>`, "team-delivery");
   }
 
+  function amazonPriority() {
+    return section("店铺先解决哪一段问题", "经营判断样例 · 用商品、流量和履约信息决定行动。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>有浏览，详情页解释不清</h3><p>先检查点击进入的人在看什么词，以及主图、A+ 和商品页有没有回答用途、规格和适用条件。把买家重复提问交给商品与设计改信息。</p></article>
+        <article><h3>有转化，供货和售后出现压力</h3><p>广告和促销节奏要与库存、配送和退换预期一起核。补齐承接后，再评估是否增加流量投入。</p></article>
+      </div>
+      <p>任职期销售、转化和利润指标见经营数据。若要验证具体改动的贡献，需要同商品、同窗口的广告、售价、库存和订单记录。</p>
+      <p><a href="#/data/commerce">查看店铺经营记录 ↗</a></p>`, "amazon-priority");
+  }
+
+  function crmHandoff() {
+    return section("谁可以收到邮件，谁要先排除", "旅程规划样例 · 从事件、许可和售后状态判断。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>浏览或加购后，先检查状态</h3><p>有有效许可、符合等待窗口且尚未购买，才进入对应提醒。已经下单时，退出催购，进入购后信息流程。</p></article>
+        <article><h3>退款或服务问题，先交客服</h3><p>出现退款、退订或待解决的服务问题时，暂停相应营销触发。运营与电商对齐状态来源，测试频控、退出和重复进入。</p></article>
+      </div>
+      <p>工作物包括用户旅程、规则与频控规划。实际发送、留存和复购需系统记录。</p>`, "crm-handoff");
+  }
+
   const extras = {
     brand: { strategy: brand, execution: () => pr() + brandCampaign() },
     gtm: { strategy: gtm },
@@ -387,6 +422,8 @@
     creator: { execution: creator },
     seo: { execution: seo },
     operations: { management: operations },
+    amazon: { strategy: amazonPriority },
+    crm: { strategy: crmHandoff },
   };
   window.enhancePortfolioProjects = (main, { page, id }) => {
     if (page !== "case" || !Object.hasOwn(extras, id)) return;
