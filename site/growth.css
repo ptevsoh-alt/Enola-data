@@ -2054,3 +2054,64 @@
     grid-template-columns: minmax(0, 1fr);
   }
 }
+
+.g-opening-comparison {
+  display: grid;
+  grid-template-columns: minmax(8rem, 13rem) minmax(0, 1fr);
+  align-items: start;
+  gap: 1rem 1.4rem;
+  margin: 1.3rem 0;
+  padding: clamp(.8rem, 2vw, 1.3rem);
+  background: #f2f5ef;
+  border: 1px solid var(--rule);
+  border-radius: .45rem;
+}
+
+.g-opening-comparison figure {
+  margin: 0;
+}
+
+.g-opening-comparison video {
+  display: block;
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  background: #18231d;
+  border-radius: .35rem;
+}
+
+.g-opening-comparison figcaption {
+  padding-top: .4rem;
+  font-size: .8rem;
+}
+
+.g-opening-comparison h3 {
+  margin: 0 0 .5rem;
+}
+
+.g-opening-comparison dt {
+  font-weight: 700;
+}
+
+.g-opening-comparison dd {
+  margin: .2rem 0 .7rem;
+}
+
+@media (max-width: 700px) {
+  .g-opening-comparison {
+    grid-template-columns: minmax(0, 1fr);
+  }
+
+  .g-opening-comparison video {
+    max-width: 14rem;
+  }
+}
+
+.case-handoff-board {
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+}
+
+@media (max-width: 650px) {
+  .case-handoff-board {
+    grid-template-columns: minmax(0, 1fr);
+  }
+}
