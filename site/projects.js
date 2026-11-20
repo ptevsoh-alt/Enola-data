@@ -108,7 +108,7 @@
           ${milestones.map(([date, owner, input, approval]) => `
             <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
         </ol>
-        <p><a href="#/case/gtm/english-brief">查看交给创意与制作团队的英文 Brief ↗</a></p>
+        <p><a href="#/case/gtm/english-brief">查看交给创意与制作团队的英文 Brief ↗</a> · <a href="#/case/creative/video-strategy">查看品牌片与演示片的渠道分工 ↗</a></p>
       </div>`;
   }
 
@@ -207,6 +207,7 @@
         <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
         <article><h3>内容与交付节奏</h3><p>日历按相对顺序编排内容。28 个节点面向用户发布，最后 2 个节点用于内部素材验收与活动复盘；不是实际发布日期或发布记录。</p></article>
       </div>
+      <p><a href="#/case/creative/video-strategy">查看节庆故事、产品教育与社群反馈各承担什么 ↗</a></p>
       <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28 为对外内容概念；Day 29–30 为内部验收与复盘节点。全部为相对内容顺序，不代表真实发布日历或已执行 Campaign。</p>${calendarDays()}</details>`, "fathers-day-calendar");
   }
 
@@ -236,21 +237,48 @@
       </div>`, "brand-collaboration");
   }
 
+  function creativeStrategy() {
+    return section("为什么节庆故事与功能演示要分开做", "家庭片让观众识别品牌和场景，产品短片回答一个具体使用问题。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>把餐后清洁放进家庭故事</h3><p>我参与的创意策划从节庆聚餐出发。食物滴落让清洁任务自然出现，握持和推进说明工具如何进入场景，结尾回到家庭氛围。这条片的优先任务是品牌记忆，产品出现要服务故事的转折。</p></article>
+        <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
+      </div>
+      <div class="g-story-note" id="video-channel-plan">
+        <h3>同一产品故事，渠道各做一件事</h3>
+        <ul>
+          <li><strong>品牌叙事</strong> 规划用 YouTube 横版讲完整起承转合，Facebook 和 Instagram 用餐后问题开场的短版建立场景识别。</li>
+          <li><strong>产品教育</strong> 规划给 Reels、TikTok 和 Shorts 单切接触、推进或转向画面；产品细节和适用条件交给轮播与 FAQ。</li>
+          <li><strong>反馈与复盘</strong> 先按版本、渠道与同一观察窗口看有效观看和演示段留存。评论在问怎么用时，补操作镜头或 FAQ；需要评估访问与成交时，再核对链接、站点事件和订单。</li>
+        </ul>
+        <p>以上为内容分工与复盘方案。节庆片段、吸尘素材和五月上市脚本各有对应的工作样例。</p>
+        <p><a href="#/case/creative/video-projects">播放两段视频 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
+      </div>`, "video-strategy");
+  }
+
   function creative() {
-    return section("节庆叙事与产品演示", "先用家庭场景建立情绪，再用连续动作解释产品如何完成清洁任务。", `
-      <div class="g-project-media">
-        <figure>${image("holiday-scene-1", "家宴后地板上溅落的酱汁")}<figcaption><b>M3 节庆短片 · 场景开场</b><span>家庭聚餐后的酱汁滴落，把故事转入餐后清洁。</span></figcaption></figure>
-        <figure>${image("holiday-scene-2", "人物手握双盘拖把的 D 形手柄")}<figcaption><b>M3 节庆短片 · 家人接手</b><span>通过握持与人物协作，把产品动作放进家庭故事。</span></figcaption></figure>
-        <figure class="g-project-vertical">${image("stairs-video-frame", "低机位吸尘器演示，吸头与楼梯踏面接触")}<figcaption><b>竖版吸尘演示 · 楼梯</b><span>约 7 秒竖版素材，低机位展示吸头在踏面上的移动与接触。</span></figcaption></figure>
-        <figure class="g-project-vertical">${image("vacuum-video-frame", "室内手持吸尘器产品演示")}<figcaption><b>竖版吸尘演示 · 室内</b><span>用中景交代机器姿态和手部操作，补充产品使用场景。</span></figcaption></figure>
+    return section("节庆叙事与产品演示", "观看两段静音样例。先看家庭场景如何引出清洁任务，再看操作镜头怎样交代产品接触面。", `
+      <div class="g-video-gallery">
+        <figure>
+          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
+            <source src="assets/video/holiday-story.mp4" type="video/mp4">
+            <a href="assets/video/holiday-story.mp4">打开节庆短片 MP4</a>
+          </video>
+          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>15 秒静音剪辑节选。聚餐和滴落的酱汁引出清洁，手柄与双盘镜头交代工具，结尾回到节庆家庭场景。</p><p class="g-chart-note">创意样片，展示叙事与镜头设计。</p></figcaption>
+        </figure>
+        <figure class="g-video-demo">
+          <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放楼梯吸尘演示节选" aria-describedby="stairs-video-note">
+            <source src="assets/video/stair-demo.mp4" type="video/mp4">
+            <a href="assets/video/stair-demo.mp4">打开楼梯演示 MP4</a>
+          </video>
+          <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>约 4 秒静音裁切。保留吸头、踏面和移动路径，便于观察构图和操作表达。该片使用无线吸尘器，横版节庆样片中的产品为双盘拖把。</p></figcaption>
+        </figure>
       </div>
-      <div class="g-project-list">
-        <article><small>STORY 01 / OPENING</small><h3>家庭聚餐</h3><p>以节日餐桌和家人团聚建立生活情境，不先用参数打断故事。</p></article>
-        <article><small>STORY 02 / PROBLEM</small><h3>清洁问题出现</h3><p>酱汁滴落和餐后地面污渍形成具体任务，让观众理解为什么需要清洁工具。</p></article>
-        <article><small>STORY 03 / PRODUCT PROOF</small><h3>家人接手与连续演示</h3><p>从握持、站姿推进到双盘接地，再通过双盘旋转特写与 D 型手柄画面解释产品动作。</p></article>
-        <article><small>STORY 04 / RESOLUTION</small><h3>回到家庭氛围</h3><p>产品不脱离生活情节，结尾回到温暖的节庆家庭空间，完成情绪收束。</p></article>
-      </div>
-      <p class="g-chart-note">当前页面展示视频关键帧与叙事拆解；完整 1114.mp4 和三条竖版 MP4 尚未嵌入公开网站，需确认外部访问权限及素材公开授权后再加入播放器。</p>`, "video-projects");
+      <div class="g-story-note" id="video-management">
+        <h3>从创意方向到可验收的交付</h3>
+        <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
+        <p>画面可以说明握持、行进方向和接触位置。清洁效果和性能主张需要真实产品素材、同条件前后对照及产品签核。当前可展示结果为视频节选与相应的策略和审核样例，发布与投放数据待核。</p>
+        <p><a href="#/case/creative/video-strategy">查看创意选择与渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看一次物料如何返工 ↗</a></p>
+      </div>`, "video-projects");
   }
 
   function expo() {
@@ -289,7 +317,7 @@
       <div class="g-story-note" id="partner-handoff">
         <h3>外部创作者从 Brief 到交付</h3>
         <p>工作样例。交接时先确认首稿与最终交付节点，首稿核对开场、产品证据和披露，修订意见标注版本和时间点。最终验收同时记录成片、允许渠道、地域、期限，以及可否剪辑或付费使用。条款和素材审核分别由对应负责人确认。</p>
-        <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a></p>
+        <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
       </div>
       <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");
   }
@@ -311,6 +339,11 @@
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>先用主指南承接节后清洁</h3><p>1 篇主指南负责把万圣节后的清洁任务讲清楚，9 篇专题再按地面、浴室、门廊、宠物毛发和厨房等具体问题展开。</p></article>
         <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
+      </div>
+      <div class="g-story-note">
+        <h3>选题决定入口，内容决定下一步</h3>
+        <p>节庆社媒先让读者识别「派对结束后的黏脚印」。搜索端用总指南承接这个问题，再按地面、浴室与厨房分流。已经在比较工具的读者可从专题进入选型或 FAQ。规划复盘时，先看每个入口的搜索点击，再看访问后是否继续阅读相关内容。</p>
+        <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
       </div>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
@@ -349,7 +382,7 @@
     brand: { strategy: brand, execution: () => pr() + brandCampaign() },
     gtm: { strategy: gtm },
     social: { execution: social },
-    creative: { execution: creative },
+    creative: { strategy: creativeStrategy, execution: creative },
     b2b: { execution: expo },
     creator: { execution: creator },
     seo: { execution: seo },

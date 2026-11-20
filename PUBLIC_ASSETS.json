@@ -105,14 +105,24 @@
     "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
+    "file": "assets/video/holiday-story.mp4",
+    "bytes": 899919,
+    "sha256": "0dea98b46be3d4f0ea6d53c9a9bea573aa5278d4ad6c310daed494a9ce10467f"
+  },
+  {
+    "file": "assets/video/stair-demo.mp4",
+    "bytes": 250816,
+    "sha256": "783bb6cc016574f5df11d6f07a8b92be7bbe86cb0ac573054af874c6028d2d64"
+  },
+  {
     "file": "data.js",
     "bytes": 87354,
     "sha256": "30f83f16f38a0ef3563ffd5b9cb2827038bdba7b126998137c471a9cfa200f3e"
   },
   {
     "file": "growth.css",
-    "bytes": 44322,
-    "sha256": "3380876ae8ee18458a8bd5a05c00395c7995965260ef5c3474f32078882021b5"
+    "bytes": 45009,
+    "sha256": "b390d548eef28eb312e64ebd7154f180bc7b35655d016e64c148928e98935173"
   },
   {
     "file": "growth.js",
@@ -122,17 +132,17 @@
   {
     "file": "index.html",
     "bytes": 3681,
-    "sha256": "aa0f88722eed652ac5bc0ec3d5beedcb9ed2d149cde7225aad87540384e0999a"
+    "sha256": "8b98bbf3d08739816383a118a25a035c550bddec6e5f402751e7c12b164256e1"
   },
   {
     "file": "projects.js",
-    "bytes": 47014,
-    "sha256": "abd92bd9b3d4f33d0fdc2f3ede24f4b40ee00a53f9f6dee01041805094c46f68"
+    "bytes": 50178,
+    "sha256": "4a56fdd3ee5996e1da141778f72b571d998f063a676137246f05916b2b31477f"
   },
   {
     "file": "review/index.html",
-    "bytes": 9159,
-    "sha256": "f485f030de12adf6be5c403ed58267a268c8089dc3b10f0fdc68f01e1b8fb494"
+    "bytes": 9186,
+    "sha256": "15f7c68112d89bf11fff4f46f34e326ed6995055d7d29ed88f097e50d07550c6"
   },
   {
     "file": "review/review.css",
