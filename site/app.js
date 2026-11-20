@@ -91,7 +91,7 @@
     return `<div class="home-intro-band"><div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
         <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外产品营销<br><em>与品牌增长</em></h1>
-        <p class="hero-summary">我负责海外社媒策略与内容团队交付，参与北美消费品的定位、新品上市和整合传播。这里收录了我参与的上市规划、品牌传播、社媒增长与团队项目。</p>
+        <p class="hero-summary">我负责海外社媒策略与内容团队交付，参与北美消费品定位、新品上市和整合传播。我的工作包括定传播场景、拆排期、协调产品和创意团队验收，以及用社媒数据复盘。</p>
         <div class="actions"><a class="btn" href="#/home/selected-work">看代表项目 ↘</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>代表项目</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
