@@ -25,7 +25,7 @@
   const link = (id, label = "查看案例") =>
     `<a class="text-link" href="#/case/${id}">${label} <span aria-hidden="true">↗</span></a>`;
   const names = {
-    gtm: ["Launch Charter & Business Gate", "Campaign Strategy & Creative Platform", "RACI / Resource / Stage-Gate", "Measurement & Lifecycle Handoff"],
+    gtm: ["上市目标与商业准备", "传播主张与创意方向", "排期、分工与放行", "效果复盘与交接"],
     brand: ["受众需求", "品牌承诺", "可信证明", "渠道表达"],
     social: ["季度主题", "内容支柱", "平台分工", "复盘决策"],
     operations: ["确认输入", "拆解依赖", "审核验收", "异常闭环"],
@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["锁定市场、SKU、上市窗口、一个主业务目标、商业准备条件与关键决策Owner；区分已验证事实和待验证假设。", "从受众张力与产品真值推导Campaign Strategy、Message House、Big Idea、Creative Territories与7个核心内容支柱 + 1个品牌组合辅助层。", "组织跨部门RACI、阶段里程碑、素材依赖、预算资源、发布Gate与风险升级；每项交付物指定唯一A。", "建立Primary Result、Leading Signals与Guardrails；明确数据成熟度、优化动作、Campaign Closeout和Lifecycle Handoff."],
+    gtm: ["上市规划先明确美国市场、五月窗口和可售条件。价格、库存、支付和履约由商业及供应链确认。", "围绕餐后硬地设置传播主张，确定主视觉、连续演示和 FAQ 分别回答的问题，并把要求写入 Brief。", "按预热、计划发布和持续推广安排内容排期。产品核事实，制作方按镜头与设计要求交付，渠道审核素材和链接。", "计划用观看和商品页访问诊断传播，成交按净履约订单对账。将常见问题和可复用素材交给内容、客服与电商。"],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -176,15 +176,16 @@
   function home() {
     return `<div class="home-intro-band"><div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外产品营销<br><em>与品牌增长</em></h1>
-        <p class="hero-summary">我负责海外社媒策略与内容团队交付，参与北美消费品定位、新品上市和整合传播。我的工作包括定传播场景、拆排期、协调产品和创意团队验收，以及用社媒数据复盘。</p>
+        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>与整合营销</em></h1>
+        <p class="profile-direction">求职方向为${esc(P.profile.direction)}</p>
+        <p class="hero-summary">${esc(P.profile.summary)}</p>
         <div class="actions"><a class="btn" href="#/home/selected-work">看代表项目 ↘</a><a href="#/case/creative/video-projects">看视频案例 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>代表项目</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总 · 历史项目记录</p><a href="#/case/social/results">查看经营结果与数据口径 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
-      <section class="contact-band"><div><h2>工作经历与联系</h2><p>新品上市 IMC、品牌整合传播、跨部门项目管理与海外社媒增长。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
+      <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
 
@@ -321,11 +322,11 @@
   }
   function simple(page) {
     if (page === "experience")
-      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)} · 匿名化</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${link(e.caseId, "关联案例")}</div></article>`).join("")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><p class="lede">由 Amazon 店铺经营、海外 B2B 获客，走向北美消费品牌传播与社媒团队管理。</p><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)}</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${e.context ? `<p>${esc(e.context)}</p>` : ""}${e.work.length ? `<div class="actions">${e.work.map(([id, label]) => link(id, esc(label))).join("")}</div>` : ""}</div></article>`).join("")}</div></div>`;
     if (page === "capabilities")
       return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>营销能力</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
     if (page === "contact")
-      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">工作方向：品牌战略、产品上市传播、社媒团队管理与跨部门营销交付。</p><p>请使用随投递简历提供的联系方式。</p><div class="section">${link("operations", "了解管理与交付方式")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">求职方向为${esc(P.profile.direction)}。</p><p>${esc(P.profile.focus)}。请使用随投递简历提供的联系方式。</p><div class="section">${link("operations", "了解团队管理与项目交付")}</div></div>`;
     return `<div class="wrap page"><p class="eyebrow">ABOUT THE EVIDENCE</p><h1>事实与展示，<br>各有清晰的依据。</h1><div class="rights-grid">${Object.entries(
       P.statuses,
     )
@@ -387,7 +388,7 @@
     document.title =
       page === "case" && by(id)
         ? `${featured[id]?.title || by(id).title}｜黄文琳作品集`
-        : "黄文琳｜个人营销作品集";
+        : "黄文琳｜海外品牌营销与整合营销作品集";
     window.scrollTo(0, 0);
     if (route.started) main.focus({ preventScroll: true });
     route.started = true;

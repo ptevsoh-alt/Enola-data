@@ -16,6 +16,9 @@
   const caseHref = (id) => "../#/case/" + encodeURIComponent(id);
   const dataHref = (id) => "../#/data/" + encodeURIComponent(id);
 
+  $("#review-direction").textContent = `求职方向为${P.profile.direction}`;
+  $("#review-intro").textContent = P.profile.summary;
+
   const stats = ["impressions", "engagements"].map((id) =>
     P.metrics.find((item) => item.id === id),
   );
@@ -91,10 +94,10 @@
   $("#review-community-flow").innerHTML = renderFlow(communityFlow);
 
   const deliveryFlow = [
-    ["RACI / Single A", "每项交付物只有一个最终负责角色"],
-    ["Stage-Gate", "输入、审核、签核与放行条件"],
-    ["Resource / Risk", "人力、素材、依赖、容量与异常升级"],
-    ["Closeout / Handoff", "结果复盘、资料交接与下一轮改进"],
+    ["排优先级", "从季度主题定月度重点，再分文案、设计和视频任务"],
+    ["定验收项", "在 Brief 写清产品事实、渠道版本、交付日期与审核人"],
+    ["审物料", "主视觉如挡住产品结构，记录位置和修改要求后退回"],
+    ["复盘交接", "将常见返工原因写回审核清单，再调整下一轮排期"],
   ];
   $("#review-delivery-flow").innerHTML = renderFlow(deliveryFlow);
 

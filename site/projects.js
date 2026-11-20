@@ -103,7 +103,7 @@
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
         <h3>上市交付表</h3>
-        <p>2026 年 5 月工作样例。我的职责是社媒策略与内容团队交付；商业放行和产品事实分别由相应职能确认。</p>
+        <p>这是 2026 年 5 月的上市规划工作样例。我负责社媒排期、内容任务和创意评审。产品团队确认可公开主张，商业团队确认可售条件。</p>
         <ol class="g-milestone-list">
           ${milestones.map(([date, owner, input, approval]) => `
             <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
@@ -339,7 +339,8 @@
       </div>
       <div class="g-story-note" id="partner-handoff">
         <h3>外部创作者从 Brief 到交付</h3>
-        <p>工作样例。交接时先确认首稿与最终交付节点，首稿核对开场、产品证据和披露，修订意见标注版本和时间点。最终验收同时记录成片、允许渠道、地域、期限，以及可否剪辑或付费使用。条款和素材审核分别由对应负责人确认。</p>
+        <p>工作样例。邀约时确认寄样、脚本初稿和成片日期。首稿审核看开场能否交代使用场景、动作能否支持主张，以及合作披露是否清楚。把返修意见标到对应版本和时间点。</p>
+        <p>验收时将成片与书面使用许可一起归档，注明渠道、地域、期限、剪辑与付费使用范围，供后续复用时核查。</p>
         <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
       </div>
       <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");

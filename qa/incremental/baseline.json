@@ -1,5 +1,6 @@
 {
   "commit": "8d434e44f0b2b3ff424bf9c0a523b647bfce288c",
+  "publicMetricsSha256": "f74d32307d932e03d9a4bc8eaeb52959b3a6982c3b9ed104824c216c03c6c036",
   "files": {
     "site/data.js": "30f83f16f38a0ef3563ffd5b9cb2827038bdba7b126998137c471a9cfa200f3e",
     "site/styles.css": "36b9dfc4f4fc21dcada41b811957975171afa8e8349f324b0f0d9dd24127456f",

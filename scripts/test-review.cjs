@@ -31,6 +31,8 @@ const fs = require("fs"),
   check("review index renders all 11 cases", () => {
     assert.equal(d.querySelectorAll("[data-review-case-card]").length, 11);
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.cases, 11);
+    assert.equal(d.querySelector("#review-direction").textContent, `求职方向为${w.PORTFOLIO.profile.direction}`);
+    assert.equal(d.querySelector("#review-intro").textContent, w.PORTFOLIO.profile.summary);
   });
   check("selected work links to projects in the same personal portfolio", () => {
     const links = [...d.querySelectorAll("#review-path .review-path-card")];
@@ -56,7 +58,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#review-systems a[href="../#/case/gtm/campaign-mechanism-mapping"]'));
     assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
-    assert.equal(d.querySelectorAll("#review-delivery-flow li").length, 4);
+    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];

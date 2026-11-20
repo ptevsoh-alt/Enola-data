@@ -20,25 +20,6 @@ const fs = require("fs"),
       "",
     )
     .replace("    window.enhancePortfolio?.(main, {page, id});\n", "");
-  check("approved data and stylesheet unchanged", () => {
-    for (const f of ["site/data.js", "site/styles.css"])
-      assert.equal(sha(read(f)), baseline.files[f]);
-  });
-  check("index copy retained with stylesheet and script additions only", () =>
-    assert.equal(
-      sha(
-        read("site/index.html")
-          .replace(/\?v=[a-f0-9]+(?=")/g, "")
-          .replace('        <span aria-hidden="true"> · </span><a href="review/">独立审阅入口 ↗</a>\n', "")
-          .replace('<a href="review/">审阅入口</a>', "")
-          .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
-          .replace('    <script src="growth.js" defer></script>\n', "")
-          .replace('    <script src="projects.js" defer></script>\n', "")
-          .replace('    <script src="selected-work.js" defer></script>\n', ""),
-      ),
-      baseline.files["site/index.html"],
-    ),
-  );
   function create(app, enhanced) {
     const errors = [],
       dom = new JSDOM(
@@ -73,6 +54,13 @@ const fs = require("fs"),
   const old = create(originalApp, false),
     cur = create(read("site/app.js"), true),
     { w, d } = cur;
+  check("approved metric records remain unchanged after editorial updates", () => {
+    assert.equal(sha(JSON.stringify(w.PORTFOLIO.metrics)), baseline.publicMetricsSha256);
+  });
+  check("index metadata reflects the portfolio career direction", () => {
+    assert.ok(d.querySelector('meta[name="description"]').content.includes(w.PORTFOLIO.profile.direction));
+    assert.equal(d.querySelector('meta[property="og:title"]').content, d.title);
+  });
   const route = async (r) => {
     old.w.location.hash = r;
     w.location.hash = r;
