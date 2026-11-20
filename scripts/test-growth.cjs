@@ -33,7 +33,8 @@ const fs = require("fs"),
           .replace('<a href="review/">审阅入口</a>', "")
           .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
           .replace('    <script src="growth.js" defer></script>\n', "")
-          .replace('    <script src="projects.js" defer></script>\n', ""),
+          .replace('    <script src="projects.js" defer></script>\n', "")
+          .replace('    <script src="selected-work.js" defer></script>\n', ""),
       ),
       baseline.files["site/index.html"],
     ),
@@ -61,6 +62,7 @@ const fs = require("fs"),
     };
     w.addEventListener("error", (e) => errors.push(e.message));
     w.eval(read("site/data.js"));
+    w.eval(read("site/selected-work.js"));
     if (enhanced) {
       w.eval(read("site/growth.js"));
       w.eval(read("site/projects.js"));

@@ -50,7 +50,7 @@
   }
 
   function brand() {
-    return section("餐区黏污、浴室边角，站着刷", "美国市场 · 家用清洁电器品牌屋 / 定位与传播架构", `
+    return section("用两种清洁任务讲清品牌定位", "美国市场 · 品牌屋与整合传播", `
       <div class="g-project-feature">
         <a href="assets/projects/brand-house.webp" target="_blank" rel="noopener noreferrer" aria-label="放大匿名品牌屋">${image("brand-house", "品牌屋总览，包含定位、四条产品线、目标人群和传播支柱")}</a>
         <div>
@@ -76,6 +76,14 @@
         <article><small>CHANNEL / SOCIAL & CREATOR</small><h3>短视频与创作者</h3><p>从真实污渍或用户提问开场，拍清工具接触、运转和同机位前后变化，再邀请观众分享家中难刷的位置。</p></article>
         <article><small>CHANNEL / SEASONAL & PR</small><h3>节庆与媒体传播</h3><p>节庆内容把清洁放进家庭故事；PR 用餐区黏污与浴室边角解释产品分工，并为每个场景匹配动作图和简明说明。</p></article>
       </div>
+      <div class="g-story-note">
+        <h3>同一个品牌主张，三种具体交付</h3>
+        <ul>
+          <li><a href="#/case/brand/brand-collaboration">联合抽奖海报</a>将家庭种植和清洁工具放进同一生活场景，交代奖品与参与时间。</li>
+          <li><a href="#/case/brand/pr-project">北美新闻稿</a>按全屋清洁任务安排四条产品线，可核对 2026 年 5 月新闻稿栏目分发。</li>
+          <li><a href="#/case/creative/video-projects">演示视频拆解</a>把卖点落到接触位置、持握姿势和连续动作。</li>
+        </ul>
+      </div>
       <p class="g-chart-note">品牌屋中的竞品参照属于功能与任务层面的定性比较；现有材料没有市场规模、竞品份额或价格调查数据。</p>`, "brand-positioning");
   }
 
@@ -88,6 +96,21 @@
       <div class="g-project-list g-project-calendar-plan">
         <article><small>内容与渠道</small><h3>从餐后话题到发布承接</h3><p>预热用 Feed 和 Story 询问用户先清洁哪一处；考虑阶段用轮播展示双圆盘和握把，并将地面适用性等问题交给产品、客服核验。美国执行表以 5 月 22 日为计划发布节点，PR 用可公开的产品资料，CRM 按许可触达，Paid 在发布后验证开场。</p></article>
         <article><small>上线与复盘</small><h3>按证据和商业就绪度切换 CTA</h3><p>商品资料可用时引导了解产品，目的页有连续实拍时才引导观看演示；当地价格、库存、支付与履约确认后开放购买。财务对账后的净履约订单是主结果，净贡献决定是否扩大投入；有效观看、商品页访问用来定位问题。</p></article>
+      </div>
+      <div class="g-story-note">
+        <h3>购买前的三个问题，怎样让内容回答</h3>
+        <p>这是上市规划中的验证问题。社群与客服后续可用真实反馈校正优先级。</p>
+        <div class="g-proof-table">
+          <table>
+            <thead><tr><th scope="col">用户会问</th><th scope="col">用什么回答</th><th scope="col">交付到哪里</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">双盘怎样接触地面？</th><td>连续实拍展示双盘运行、接地与推进路径。</td><td>演示短片、创作者拍摄 Brief</td></tr>
+              <tr><th scope="row">要怎么握持和转向？</th><td>产品原图说明握把结构，操作镜头展示握持与转向。</td><td>结构轮播、操作演示</td></tr>
+              <tr><th scope="row">我的地面适用吗？</th><td>产品与客服按当地型号核对说明书和适用条件。</td><td>FAQ、客服答复</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><a href="#/case/gtm/market-adaptation">看同一卖点如何改写成美国与英国的 Story 文案 ↗</a></p>
       </div>
       <p class="g-chart-note">23 个社媒内容与运营槽位、15 条 IMC 协同链路是总体规划交付。5 月 22 日为计划节点；本案例没有可核验的 M3 发布、投放、订单或 ROI 记录。</p>
       <section class="g-module g-project" id="market-adaptation" aria-labelledby="market-adaptation-heading">
@@ -260,7 +283,12 @@
         <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
-      <a class="featured-detail" href="#/case/social/execution">查看父亲节日历样例 ↗</a>`, "team-delivery");
+      <div class="g-story-note">
+        <h3>用父亲节日历演示一次项目交接</h3>
+        <p>这份规划把长柄刷交给浴室边角演示，把双盘拖把交给餐后硬地内容。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
+        <p class="g-chart-note">30 个相对排期节点含 28 个对外内容概念和 2 个内部节点。该日历是交付工作样例。</p>
+        <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
+      </div>`, "team-delivery");
   }
 
   const extras = {

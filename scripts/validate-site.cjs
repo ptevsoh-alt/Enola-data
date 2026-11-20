@@ -82,7 +82,7 @@ check("independent review entry and relative navigation", () => {
   assert.ok(fs.readFileSync(path.join(site, "index.html"), "utf8").includes('href="review/"'));
 });
 check("scripts parse", () => {
-  for (const file of ["data.js", "app.js", "growth.js", "projects.js", "review/review.js"])
+  for (const file of ["data.js", "selected-work.js", "app.js", "growth.js", "projects.js", "review/review.js"])
     new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
 });
 const files = [];

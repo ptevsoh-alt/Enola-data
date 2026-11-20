@@ -6,8 +6,8 @@
   },
   {
     "file": "app.js",
-    "bytes": 29220,
-    "sha256": "9798178575c4b9763a5567f8b57a08fcf71e9e48c14a6ddd47c34e43fc7ed0d1"
+    "bytes": 26583,
+    "sha256": "70aa4d4ec9dc94f570831a72394107a2bda0a3a8a88d8280fcf0f4c1c49c8da9"
   },
   {
     "file": "assets/concept-01.png",
@@ -111,8 +111,8 @@
   },
   {
     "file": "growth.css",
-    "bytes": 42421,
-    "sha256": "068fef03ef30a6995e2d17f842f8c6abe0e3b7bf983fcbf6a954696ea6db43be"
+    "bytes": 43377,
+    "sha256": "7cd102bd400db0c8b6c069887a677d91500bc7c64c0a1b666a3c8b515b2aa969"
   },
   {
     "file": "growth.js",
@@ -121,33 +121,38 @@
   },
   {
     "file": "index.html",
-    "bytes": 3618,
-    "sha256": "d73c275ebe648de0eb2edb73a0fe0b854366d1ba15a0caaefcee8e9e6daa0980"
+    "bytes": 3681,
+    "sha256": "5b0b9d0001cd217ecb7131782daa7d97cd47995eeda0154a46e3ed62338034fe"
   },
   {
     "file": "projects.js",
-    "bytes": 41834,
-    "sha256": "cd5008146bb1a7283b793d5ac5a1c999cca2c1934244123946f3cad3b9b0259c"
+    "bytes": 44239,
+    "sha256": "bbd576e9a495b26a66ddf687b9c9f47a2253649db3e5c60024a3f4d8a3961905"
   },
   {
     "file": "review/index.html",
-    "bytes": 10323,
-    "sha256": "c96c55305afde9bbd2e4b6baef6bccc7cec7a6612853848458e3ab3e98285d1e"
+    "bytes": 8924,
+    "sha256": "57bb01319f5735b206136131d1270824765a0e07635e74fa3bc6d70aa643b5a1"
   },
   {
     "file": "review/review.css",
-    "bytes": 14970,
-    "sha256": "99f789e928252a3d1f1fd7daa23bc49dde9d3a33b92d0f32db7ab6a9b6a92bbd"
+    "bytes": 15894,
+    "sha256": "b08beaba8d16dcdde6100509c5deeb80825b4fac29efb6b32a0ccfb7d959d064"
   },
   {
     "file": "review/review.js",
-    "bytes": 12228,
-    "sha256": "8808055447512fb02d6c25449cea2da90837071c689a516d161c984b1c40430b"
+    "bytes": 12673,
+    "sha256": "623963ca5392fa738c70c595fac2fdea0acff6ef82d2857f68c3405468486b1f"
   },
   {
     "file": "robots.txt",
     "bytes": 23,
     "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
+  },
+  {
+    "file": "selected-work.js",
+    "bytes": 2903,
+    "sha256": "b4f9d8749fe15b4c885554bfe74b621661f8c524c577ee59157c75f58cb816a7"
   },
   {
     "file": "styles.css",

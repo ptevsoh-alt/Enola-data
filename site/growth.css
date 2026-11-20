@@ -1894,3 +1894,65 @@
   .g-case-overview > a { min-height: 44px; }
   .case-page .case-tabs { padding-block: .55rem; gap: .1rem .85rem; }
 }
+
+.featured-project .featured-highlight {
+  color: var(--ink);
+  font-size: .78rem;
+  font-weight: 700;
+}
+
+.g-story-note {
+  margin: 1.3rem 0;
+  padding: clamp(1rem, 3vw, 1.65rem);
+  background: #f2f5ef;
+  border: 1px solid var(--rule);
+  border-radius: .45rem;
+}
+
+.g-story-note h3 {
+  margin: 0 0 .55rem;
+}
+
+.g-story-note ul {
+  padding-inline-start: 1.25rem;
+}
+
+.g-story-note li + li {
+  margin-top: .45rem;
+}
+
+.g-story-note a {
+  color: var(--accent);
+  text-decoration: underline;
+  text-underline-offset: .18em;
+}
+
+.g-proof-table {
+  margin: .8rem 0;
+  overflow-wrap: anywhere;
+}
+
+.g-proof-table table {
+  border-collapse: collapse;
+  width: 100%;
+  table-layout: fixed;
+}
+
+.g-proof-table th,
+.g-proof-table td {
+  padding: .55rem clamp(.28rem, 1.4vw, .9rem);
+  vertical-align: top;
+  font-size: .83rem;
+}
+
+.g-proof-table th:first-child {
+  width: 22%;
+}
+
+.g-proof-table th:last-child {
+  width: 25%;
+}
+
+.g-proof-table tbody th {
+  font-weight: 650;
+}

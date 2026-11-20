@@ -16,23 +16,26 @@
   const caseHref = (id) => "../#/case/" + encodeURIComponent(id);
   const dataHref = (id) => "../#/data/" + encodeURIComponent(id);
 
-  const stats = [
-    ["项目案例", P.cases.length, "完整案例入口"],
-    ["指标记录", P.metrics.length, "逐项保留定义与限制"],
-    ["数据领域", Object.keys(P.domains).length, "按业务域分开展示"],
-    ["证据状态", Object.keys(P.statuses).length, "区分事实与重构"],
-  ];
+  const stats = ["impressions", "engagements"].map((id) =>
+    P.metrics.find((item) => item.id === id),
+  );
   $("#review-kpis").innerHTML = stats
     .map(
-      ([label, value, note]) =>
-        '<div class="review-kpi"><strong>' +
-        esc(value) +
-        '</strong><span>' +
-        esc(label) +
-        " · " +
-        esc(note) +
-        "</span></div>",
+      ({ display, label }) => `<div class="review-kpi"><strong>${esc(display)}</strong><span>${esc(label)}次数</span></div>`,
     )
+    .join("");
+
+  $("#review-selected-work").innerHTML = Object.entries(window.PORTFOLIO_SELECTED_WORK)
+    .map(([id, item]) => {
+      const image = item.image
+        ? `<img src="../assets/projects/${esc(item.image)}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">`
+        : "";
+      return `<a class="review-path-card${image ? " review-path-photo" : ""}" href="${caseHref(id)}/${esc(item.chapter)}">
+        ${image}<div><span class="review-path-label">${esc(item.label)}</span>
+        <h3>${esc(item.title)}</h3><p>${esc(item.decision)}</p>
+        <span class="review-path-highlight">${esc(item.highlight)}</span>
+        <b>${esc(item.artifact)} <span aria-hidden="true">↗</span></b></div></a>`;
+    })
     .join("");
 
   const renderFlow = (items) =>
