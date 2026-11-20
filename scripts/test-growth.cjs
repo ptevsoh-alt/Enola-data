@@ -131,6 +131,9 @@ const fs = require("fs"),
       const evidencePath = d.querySelector("#evidence a").hash;
       assert.ok(d.getElementById(evidencePath.split("/")[3]));
       assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["怎么分工交接", "结果怎么复核"]);
+      const insight = d.querySelector("#insight");
+      assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
+      assert.equal(insight.querySelectorAll("p").length, 2);
     });
   }
   await route("/case/gtm/launch-delivery");
@@ -138,6 +141,12 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
     assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
     assert.ok(d.querySelector('#english-brief a[href="#/case/operations/asset-review"]'));
+    assert.equal(d.querySelectorAll("#launch-decisions tbody tr").length, 3);
+    assert.equal(d.querySelectorAll("#launch-channel-plan tbody tr").length, 4);
+  });
+  await route("/case/gtm/campaign-mechanism-mapping");
+  check("a direct link from review opens the M3 creative directions", () => {
+    assert.equal(d.querySelector("#campaign-mechanism-mapping").open, true);
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {

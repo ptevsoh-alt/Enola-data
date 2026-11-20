@@ -128,33 +128,40 @@
   }
 
   function gtm() {
-    return section("M3 上市策略与执行取舍", "从主推场景、团队交付到美国上市节奏与美英本地化。", `
-      <div class="g-project-list g-project-calendar-plan" id="launch-decisions">
-        <article><small>市场与产品</small><h3>把主推场景收敛到餐后硬地</h3><p>2026 年 5 月，美国市场上市规划。以餐区和厨房的日常清洁为入口，用 M3 的双圆盘与 D 形握把解释产品；浴室边角交给长柄电动刷。餐后场景为优先验证的受众假设。</p><p><a href="#/case/brand/brand-positioning">查看品牌定位依据 ↗</a></p></article>
-        <article><small>我的职责</small><h3>负责社媒策略与内容团队交付</h3><p>参与用户研究、差异化定位和卖点分层，负责把传播策略拆成社媒排期、素材要求和验收项。产品 / 研发核验卖点，商业与供应链确认可售条件，客服接收常见问题。</p><p><a href="#/case/gtm/management">查看协作与验收 ↗</a></p></article>
-      </div>
-      <div class="g-project-list g-project-calendar-plan">
-        <article><small>内容与渠道</small><h3>从餐后话题到发布承接</h3><p>预热用 Feed 和 Story 询问用户先清洁哪一处；考虑阶段用轮播展示双圆盘和握把，并将地面适用性等问题交给产品、客服核验。美国执行表以 5 月 22 日为计划发布节点，PR 用可公开的产品资料，CRM 按许可触达，Paid 在发布后验证开场。</p></article>
-        <article><small>上线与复盘</small><h3>按证据和商业就绪度切换 CTA</h3><p>商品资料可用时引导了解产品，目的页有连续实拍时才引导观看演示；当地价格、库存、支付与履约确认后开放购买。财务对账后的净履约订单是主结果，净贡献决定是否扩大投入；有效观看、商品页访问用来定位问题。</p></article>
-      </div>
-      ${launchDelivery()}
-      <div class="g-story-note">
-        <h3>购买前的三个问题，怎样让内容回答</h3>
-        <p>这是上市规划中的验证问题。社群与客服后续可用真实反馈校正优先级。</p>
+    return section("M3 上市策略", "2026 年 5 月美国上市规划重构。餐后硬地是优先验证的场景，发布与销售结果待核。", `
+      <div class="g-story-note" id="launch-decisions">
+        <h3>产品主张｜站着推进，清理餐后硬地</h3>
+        <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
         <div class="g-proof-table">
           <table>
-            <thead><tr><th scope="col">用户会问</th><th scope="col">用什么回答</th><th scope="col">交付到哪里</th></tr></thead>
+            <thead><tr><th scope="col">用户会问</th><th scope="col">主张需要的证据</th><th scope="col">对应物料</th></tr></thead>
             <tbody>
-              <tr><th scope="row">双盘怎样接触地面？</th><td>连续实拍展示双盘运行、接地与推进路径。</td><td>演示短片、创作者拍摄 Brief</td></tr>
-              <tr><th scope="row">要怎么握持和转向？</th><td>产品原图说明握把结构，操作镜头展示握持与转向。</td><td>结构轮播、操作演示</td></tr>
-              <tr><th scope="row">我的地面适用吗？</th><td>产品与客服按当地型号核对说明书和适用条件。</td><td>FAQ、客服答复</td></tr>
+              <tr><th scope="row">双盘怎样工作？</th><td>原图交代双盘结构。连续实拍展示运转、接地与推进。</td><td>主视觉、演示短片</td></tr>
+              <tr><th scope="row">怎样握持和转向？</th><td>原图标明握持位置。中景让站姿、手和工具的移动路径同时可见。</td><td>结构轮播、创作者 Brief</td></tr>
+              <tr><th scope="row">我的地面适用吗？</th><td>产品与客服按当地型号和说明书核对适用表面及使用限制。</td><td>商品页 FAQ、客服答复</td></tr>
             </tbody>
           </table>
         </div>
-        <p><a href="#/case/gtm/market-adaptation">看同一卖点如何改写成美国与英国的 Story 文案 ↗</a></p>
+        <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
+      <div class="g-story-note" id="launch-channel-plan">
+        <h3>渠道分工｜从识别场景到确认选购</h3>
+        <div class="g-proof-table">
+          <table>
+            <thead><tr><th scope="col">触点</th><th scope="col">用户在这里要解决什么</th><th scope="col">下一步</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">社媒</th><td>用餐后场景建立识别。Feed 介绍产品，Story 收集清洁问题。</td><td>了解产品</td></tr>
+              <tr><th scope="row">创作者 / Paid</th><td>让用户看清动作。创作者按 Brief 交实拍。Paid 计划在相同条件下比较场景开场与结构开场。</td><td>观看获准的演示</td></tr>
+              <tr><th scope="row">PR</th><td>用可公开的产品事实和家庭场景解释新品用途。</td><td>查阅产品资料</td></tr>
+              <tr><th scope="row">商品页 / CRM</th><td>核对当地型号、适用表面和供货。邮件按有效许可和用户状态触达。</td><td>确认可售后购买</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>素材审核通过后再承诺「看演示」。商业侧还需核可当地价格、库存、支付与履约，才开放购买。</p>
+      </div>
+      ${launchDelivery()}
       ${englishBrief()}
-      <p class="g-chart-note">23 个社媒内容与运营槽位、15 条 IMC 协同链路是总体规划交付。5 月 22 日为计划节点；本案例没有可核验的 M3 发布、投放、订单或 ROI 记录。</p>
+      <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
       <section class="g-module g-project" id="market-adaptation" aria-labelledby="market-adaptation-heading">
         <header><h2 id="market-adaptation-heading">M3 美英本地化工作样例</h2><p>沿用美国上市规划的产品与传播主线，另做两地可用的文案和素材适配。以下样例来自 R12 创意指南和双市场文案表。</p></header>
         <div class="g-project-list">
@@ -172,8 +179,8 @@
         <p class="g-chart-note">R12 本地化工作包含每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本。以上为交付物数量。英国样例的上线与测试状态未核实。</p>
       </section>
 
-      <details class="g-chart-disclosure"><summary>展开五种创意方向与所需证据</summary>
-      <div class="g-project-list g-project-calendar-plan" id="campaign-mechanism-mapping">
+      <details class="g-chart-disclosure" id="campaign-mechanism-mapping"><summary>展开五种创意方向与所需证据</summary>
+      <div class="g-project-list g-project-calendar-plan">
         <article><small>MECHANISM 01 / PAIN-POINT EMERGENCE</small><h3>The After-Dinner Reset</h3><p>主机制：问题显化。用餐后地面黏污作为具体任务入口；辅助机制：连续过程证明。后续必须展示真实产品操作和相同条件的清洁过程，不能用夸张污渍或单次画面推导普遍性能。</p></article>
         <article><small>MECHANISM 02 / MECHANISM REVEAL</small><h3>See the Motion</h3><p>主机制：机制揭示。通过真实双头运行、接地和移动路径解释产品如何工作；辅助机制：微距细节证明。静态 KV、生成画面或渲染不能代替真实运行视频。</p></article>
         <article><small>MECHANISM 03 / ROLE-VALUE TRANSFER</small><h3>Make Room for What Matters</h3><p>主机制：关系价值转移。把产品动作放进家庭共同生活的情境；辅助机制：人物动作叙事。情绪收束不等于量化省时承诺，人物、音乐和场景素材仍需授权。</p></article>
@@ -244,13 +251,13 @@
         <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
       </div>
       <div class="g-story-note" id="video-channel-plan">
-        <h3>同一产品故事，渠道各做一件事</h3>
+        <h3>品牌故事和产品教育各看什么</h3>
         <ul>
-          <li><strong>品牌叙事</strong> 规划用 YouTube 横版讲完整起承转合，Facebook 和 Instagram 用餐后问题开场的短版建立场景识别。</li>
-          <li><strong>产品教育</strong> 规划给 Reels、TikTok 和 Shorts 单切接触、推进或转向画面；产品细节和适用条件交给轮播与 FAQ。</li>
-          <li><strong>反馈与复盘</strong> 先按版本、渠道与同一观察窗口看有效观看和演示段留存。评论在问怎么用时，补操作镜头或 FAQ；需要评估访问与成交时，再核对链接、站点事件和订单。</li>
+          <li><strong>品牌叙事</strong> 横版保留聚餐、工具介入和结尾。社媒短版从餐后问题切入，观察用户是否看到故事转折与品牌露出。</li>
+          <li><strong>产品教育</strong> 竖版保留接触、推进或转向；轮播与 FAQ 回答适用条件。优先观察动作段留存，以及评论里仍没有得到回答的操作问题。</li>
+          <li><strong>下一轮怎么改</strong> 用同版位、同窗口的数据定位流失。观众没看到动作时，先调整剪辑。观众看完仍追问用法时，补镜头或更新 FAQ。</li>
         </ul>
-        <p>以上为内容分工与复盘方案。节庆片段、吸尘素材和五月上市脚本各有对应的工作样例。</p>
+        <p>这套复盘口径用于规划。页面展示节庆片段、无线吸尘器素材和独立的 M3 上市脚本。</p>
         <p><a href="#/case/creative/video-projects">播放三个视频样例 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
       </div>`, "video-strategy");
   }
@@ -299,16 +306,16 @@
   }
 
   function expo() {
-    return section("瑞音博｜海外 B2B 展会项目参与", "任职期间参与的海外展会项目 · 展位视觉、产品系统陈列与现场展示", `
+    return section("海外 B2B 展会项目参与", "储能行业 · 展位视觉与产品系统陈列", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${image("exhibition-booth-overview-redacted", "瑞音博任职期间参与的海外展会展位全景，第三方品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 第三方品牌标识已脱敏</figcaption></figure>
+        <figure>${image("exhibition-booth-overview-redacted", "海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 品牌标识已脱敏</figcaption></figure>
         <div class="g-project-list">
-          <article><small>PROJECT PARTICIPATION</small><h3>海外展会项目参与</h3><p>该组照片来自本人确认参与的瑞音博任职期间海外展会项目。页面以现场照片呈现展位空间、展示结构与产品陈列，不将项目参与扩大表述为独立主导整场展会。</p></article>
+          <article><h3>现场记录</h3><p>这组照片来自我任职期间参与的海外储能展会，记录了展位空间、系统展示与产品陈列。</p></article>
           <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>从展台结构、主视觉、空间层次和展示动线观察现场呈现方式，保留真实展会环境，展示海外 B2B 展会的品牌接触场景。</p></article>
           <article><small>PRODUCT SYSTEM</small><h3>产品系统陈列</h3><p>展示墙将光伏、逆变器、储能电池、柴油发电机与家庭用电负载放在同一系统关系中，便于参观者从组件和应用场景理解产品组合。此处仅描述照片中可见的展示内容，不延伸为产品技术方案设计责任。</p></article>
         </div>
       </div>
-      <div class="g-product-gallery" aria-label="瑞音博任职期间参与的海外展会现场与产品展示照片">
+      <div class="g-product-gallery" aria-label="海外储能展会现场与产品展示照片">
         <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
         <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
       </div>
@@ -319,7 +326,7 @@
           <p class="g-chart-note">这是基于现场展示整理的工作样例。照片支持展会参与和现场陈列。</p>
         </div>
       </details>
-      <p class="g-chart-note">公开展示版本对展位标识、设备品牌字样、可识别型号及编号进行脱敏；原始照片保持不变。当前证据支持项目参与及现场展示，不包含可核验的个人具体职责、展会名称与日期、客户线索量或成交结果，因此不展示未经证实的管理范围和量化业绩。</p>`, "expo-project");
+      <p class="g-chart-note">照片中的展位标识、设备品牌、型号和编号已脱敏。具体展会分工和活动级业绩待核。</p>`, "expo-project");
   }
 
   function creator() {
@@ -414,82 +421,73 @@
   }
 
 
-  const strategicDecisions = {
+  const caseInsights = {
     gtm: [
-      "如何让新品上市不只变成一次发布：产品细节很多，但用户首先要看懂日常任务、实际操作及购买条件。",
-      "选定餐后硬地作为美国市场优先验证的切入场景，将双盘结构、握持动作与真实演示分别交给主视觉、短视频、FAQ；上市节奏关联产品事实、素材、商业就绪和渠道放行。",
-      "不同时主推四条产品线，不把未经核验的 RPM、续航或清洁效率当卖点，也不把已规划的 5 月排期写成实际首销。",
-      "目前有 Campaign 规划、英文 Brief、素材和审核记录；消费者需求强度及订单效果尚需研究、发布与对账数据。"
+      "为什么首发从餐后硬地讲起",
+      "同一品牌覆盖地面、浴室等多种清洁任务。美国上市规划把优先场景收敛到餐后硬地，因为餐区污渍、站姿推进和双盘接地可以在同一组镜头里讲清。长柄刷继续承接浴室边角的问题。",
+      "餐后需求的强度仍待用户研究验证。下一步可用社群与客服的问题记录核对场景频率和购买顾虑，再调整卖点顺序。",
     ],
     brand: [
-      "五款产品归为四条线后，品牌需要回答的是各自解决什么家庭清洁任务，而不是给每款单独堆功能。",
-      "用餐区黏污、浴室边角等任务建立信息层级，再分配给社媒演示、品牌屋、PR、联名活动与创作者；每个渠道只改变表达方式，不改变产品事实。",
-      "不以一次联合抽奖海报证明合作带来的市场增长，也不把新闻稿分发栏目等同媒体主动背书。",
-      "可展示品牌屋、脱敏联合海报及北美新闻稿分发；真实媒体传播效果与用户研究样本仍缺。"
+      "用户先选清洁任务，再认产品线",
+      "品牌屋把五款产品放回四条产品线。餐区黏污和浴室边角各有明确的接触表面、操作动作和对应工具，因此可作为品牌传播最先讲清的两个场景。",
+      "判断来自品牌屋及产品任务梳理。若要判断用户是否记住了这套区分，可核对搜索用词、咨询问题和受众反馈。",
     ],
     social: [
-      "当 Facebook、Instagram、Group 同时运营时，单纯提高发帖频次并不能判断内容是否解决了用户问题。",
-      "季度定主题、月度定内容与分工、周度审稿；Facebook 承接品牌与链接、Instagram 展示产品情境、Group 收集具体问题，复盘再调整内容支柱和 FAQ。",
-      "不把 Facebook 浏览量、Instagram 变化百分比和 Group 成员人数拼成同一增长曲线，更不将一次点击直接推断为购买。",
-      "2025 年汇总与后台截图能说明阶段规模；单条内容贡献及用户路径需要同窗口内容和站点数据。"
+      "内容复盘先看用户停在哪一步",
+      "同样是数据上涨，浏览、互动与点击回答的问题不同。复盘时先检查内容有没有吸引人停留，再看用户是在讨论场景、追问用法，还是进入下一步。",
+      "内容调整可以从评论开始。某个操作反复被问到，就补一支演示或一条 FAQ。历史汇总可说明规模，单条内容的贡献需要同窗口明细。",
     ],
     operations: [
-      "一次跨团队 Campaign 的关键风险，是设计出稿之后才发现结构、Claim、权限或承接页面有问题。",
-      "将季度优先级拆到素材需求、制作责任和审核节点；例如 M3 主视觉遮挡双盘时先退回版式，再按 Feed / Story 安全区复核，而不是因为已出图就发布。",
-      "不以按时交稿代替内容合格，不把产品、预算和供应链的最终决定写作社媒小组的权限。",
-      "能够证明项目分工、创意审核与具体返工；团队人数、节省工时或整体项目绩效未提供，不量化。"
+      "主视觉返工，优先保护用户需要看到的结构",
+      "M3 的 4:5 主视觉被 CTA 框遮住双盘。首图承担介绍产品结构的任务，因此审核时先要求双盘完整可见，再调整按钮位置和不同版位的裁切。",
+      "把同类问题写进下一轮 Brief，一开始就标明必须入镜的产品部位、渠道安全区，以及由谁核对事实、成品和发布条件。",
     ],
     community: [
-      "社群人数增长与真实参与是两回事：只办抽奖或追求入群数量，不能说明成员是否获得持续价值。",
-      "以清洁教程、投票、讨论和 UGC 增加可参与的任务；把真实使用问题交回产品与内容，二次传播前单独核验投稿授权。",
-      "不把参与者当潜在订单，不用 Group 成员快照作活跃率分母，也不把报名等同营销同意。",
-      "有成员、查看、发帖评论等平台字段；缺少单场活动的规则、贡献内容和活动级效果。"
+      "把成员的使用问题带回内容和产品",
+      "规划教程、投票和讨论时，优先选择成员能描述具体场景的问题，例如用在什么表面、哪一步卡住。运营汇总共性问题，产品确认用法，内容组更新 FAQ 或演示。",
+      "成员快照说明社群规模，查看和发帖评论说明各自窗口内的行为。评估单场活动还需要参与记录、反馈和素材授权。",
     ],
     b2b: [
-      "海外客户开发需要判断谁值得继续跟进，展会现场曝光本身不足以解释线索质量和成交。",
-      "按照客户类型、采购情境和产品适配度推进名单与询盘，线下展会以系统陈列引出真实应用问题，后续由商务确认报价与交付。",
-      "不将任期销售数据直接归为某次展会，也不因有展位照片就声称独立负责展会策划和全部线索。",
-      "已确认展会参与照片与任期阶段数据；个人展会分工、活动日期和会后跟进需另有记录。"
+      "先问客户怎么用，再决定跟进什么",
+      "客户开发按应用场景、产品匹配和采购条件判断优先级。展会现场的系统展示可以从具体用电场景开启对话，后续由商务核实报价、配置和交付。",
+      "照片支持展会参与和陈列。衡量展会贡献需要核对现场登记、会后跟进和机会来源。任职期经营数据按各自窗口查看。",
     ],
     seo: [
-      "内容不是先决定要写多少篇，而是确定消费者正在解决什么问题，以及搜索后需要进入哪一条产品路径。",
-      "以 Halloween 节后清洁作主指南，九个细分题分别回答黏污、地面、浴室、厨房和工具比较等不同意图；FAQ 解答疑问、商品页承担选型。",
-      "不把十篇选题规划称为十篇已发布文章，不把自然搜索收入份额直接解释为该内容集群的增长结果。",
-      "具备内容结构和历史 GSC / 收入字段，仍缺具体 URL、索引、查询与转化记录。"
+      "用搜索问题决定页面分工",
+      "节后清洁既有人想解决眼前的黏污，也有人在比较工具。主指南按清洁任务分流，专题解释表面与操作条件，FAQ 或商品页承接需要选型的人。",
+      "现有工作物是主题集群规划。发布后可按页面核对收录、查询与点击，再观察读者是否进入下一页。",
     ],
     amazon: [
-      "新店增长可能受搜索覆盖、Listing 说服力、广告成本、库存和售后共同限制，不能把所有问题交给加预算。",
-      "先确认搜索词与商品信息一致，再分析点击、CVR、ACOS、退款与库存；针对不同断点区分页面修改、投放调整和履约处理。",
-      "不在 CVR 定义缺失时认定为提升五个百分点，也不以利润率记录反算营销 ROI。",
-      "任期有阶段销售与经营指标，缺少同 SKU、同窗口的广告和商品报表，无法把各项改善归于单一动作。"
+      "先找出经营瓶颈，再决定投入",
+      "流量少时检查搜索词和点击。有浏览却少下单时，检查商品页是否讲清用途和规格。销量起来以后，再核对库存、退换和广告成本能否支撑继续投放。",
+      "任职期经营记录可用来说明阶段表现。判断某次改动的贡献，需要同商品、同窗口的流量、广告、库存与订单。",
     ],
     creative: [
-      "节庆短片与操作演示要解决不同的问题：前者建立家庭场景和记忆，后者让人看清工具怎样接触并完成动作。",
-      "节庆片用聚餐、污渍、工具介入和情绪收束组织叙事；楼梯吸尘片比较客厅亮相与直接上手，按认识产品或操作教育选择开场。",
-      "不以静态或生成画面证明产品运行，不把静音节选写成完整已投放广告，也不声称某种 Hook 已经胜出。",
-      "当前已提供三个本地视频节选及关键帧；完整发布版本、素材使用权和同条件传播数据仍需核实。"
+      "开场由观众要解决的问题决定",
+      "节庆短片用聚餐和污渍引出工具，在结尾回到人物。楼梯吸尘片面向操作疑问，开场就给吸头和踏面。两种开场各有需要拍到的动作。",
+      "现有节选可观察故事顺序、构图和接触位置。若要比较开场效果，可固定受众、版位、片长与后续镜头，再观察留存。",
     ],
     crm: [
-      "邮件触发如果忽视用户状态与授权，重复营销可能比缺少一次推送更影响体验。",
-      "先从同意、用户状态与排除规则设计 Welcome、浏览、加购、购后和召回路径，明确优惠冲突、发送频控和客服交接。",
-      "不在域名、名单权限和测试发送未通过时宣称自动化已启用，也不预估复购提升。",
-      "可展示生命周期与邮件协同方案；实际发送、复购和留存效果未取得。"
+      "发送之前先核对用户的真实状态",
+      "加购用户可能已经下单，也可能正在处理退款。旅程规划先核同意记录、订单与售后状态，再决定发提醒、转入购后信息或暂停营销。",
+      "上线前要实测触发、退出、频控和重复进入。现有案例展示旅程与规则规划，实际发送与复购需要系统数据。",
     ],
     creator: [
-      "创作者的粉丝量并不能替代与目标场景的匹配度，内容可以发布也不表示品牌获得商业复用权。",
-      "先看受众、内容表现和产品适用场景，再明确产品事实、镜头任务、首稿节点、披露与版本审核；素材授权按平台、地域、期限、用途拆开。",
-      "不将寄样、演示工作台记录或候选邀约写成合作成功，更不写作已产生可验证收入。",
-      "可以检查 Brief、审核和授权治理样例；真实合同、发布链接、价格条款及合作成果尚待补证。"
-    ]
+      "先看创作者能否拍清用户最关心的动作",
+      "为产品教育筛选创作者时，优先看目标受众、过往镜头和理解产品的能力。Brief 明确需要拍到的动作，验收时逐项对照片段、披露与可使用范围。",
+      "目前可展示工作台原型与交接样例。真实合作进度以合同、交付版本、发布链接和授权记录为准。",
+    ],
   };
-  function strategyDepth(id) {
-    const x = strategicDecisions[id];
-    if (!x) return "";
-    const fields = ["问题与判断", "选择的传播或运营路径", "明确放弃的做法", "现有证据与边界"];
-    return `<section class="g-story-note g-decision-context" id="case-strategy-${id}">
-      <h3>关键策略取舍</h3><div class="g-project-list g-project-calendar-plan">
-      ${x.map((value,i)=>`<article><small>${fields[i]}</small><p>${esc(value)}</p></article>`).join("")}
-      </div></section>`;
+
+  function renderInsight(main, id) {
+    const insight = main.querySelector("#insight > div:last-child");
+    const choice = caseInsights[id];
+    if (!insight || !choice) return;
+    const [title, decision, evidence] = choice;
+    const heading = insight.querySelector("h2");
+    heading.textContent = title;
+    insight.querySelector("h2 + p").textContent = decision;
+    insight.insertAdjacentHTML("beforeend", `<p class="note">${esc(evidence)}</p>`);
   }
 
   const extras = {
@@ -505,8 +503,9 @@
     crm: { strategy: crmHandoff },
   };
   window.enhancePortfolioProjects = (main, { page, id }) => {
-    if (page !== "case" || !Object.hasOwn(extras, id)) return;
-    for (const [chapter, render] of Object.entries(extras[id])) {
+    if (page !== "case" || !Object.hasOwn(caseInsights, id)) return;
+    renderInsight(main, id);
+    for (const [chapter, render] of Object.entries(extras[id] ?? {})) {
       const content = main.querySelector(`#${chapter}>div:last-child`);
       if (!content) continue;
       if (chapter === "strategy") {
@@ -516,7 +515,5 @@
       if (introduction) introduction.insertAdjacentHTML("afterend", render());
       else content.querySelector("h2")?.insertAdjacentHTML("afterend", render());
     }
-    const insight = main.querySelector("#insight > div:last-child");
-    if (insight) insight.insertAdjacentHTML("beforeend", strategyDepth(id));
   };
 })();

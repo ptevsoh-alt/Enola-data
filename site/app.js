@@ -337,6 +337,14 @@
         "",
       )}</div><p>品牌与企业身份已匿名化。创作者合作重点展示受众筛选、Brief、内容审核和授权管理；视觉样例用于呈现创意方向。</p></div>`;
   }
+  function scrollToChapter(chapter) {
+    const target = document.getElementById(chapter);
+    if (!target) return;
+    const disclosure = target.closest("details");
+    if (disclosure) disclosure.open = true;
+    target.scrollIntoView();
+  }
+
   function route() {
     document.querySelectorAll("dialog[open]").forEach(d => d.close());
     const [rawPage, id, caseChapter] = location.hash
@@ -346,7 +354,7 @@
     const chapter = page === "home" ? id : caseChapter;
     const key = page === "home" ? "home/" : page + "/" + (id || "");
     if (route.key === key && chapter) {
-      document.getElementById(chapter)?.scrollIntoView();
+      scrollToChapter(chapter);
       return;
     }
     route.key = key;
@@ -384,9 +392,7 @@
     if (route.started) main.focus({ preventScroll: true });
     route.started = true;
     if (chapter)
-      requestAnimationFrame(() =>
-        document.getElementById(chapter)?.scrollIntoView(),
-      );
+      requestAnimationFrame(() => scrollToChapter(chapter));
   }
   function open(id, trigger) {
     returnFocus = trigger;

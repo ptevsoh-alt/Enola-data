@@ -52,7 +52,8 @@ const fs = require("fs"),
   });
 
   check("review page renders Campaign, creative, community and delivery visual maps", () => {
-    assert.equal(d.querySelectorAll("#review-campaign-flow li").length, 9);
+    assert.deepEqual([...d.querySelectorAll("#review-campaign-flow li b")].map((node) => node.textContent), ["选场景", "定主张", "拆交付", "核上线"]);
+    assert.ok(d.querySelector('#review-systems a[href="../#/case/gtm/campaign-mechanism-mapping"]'));
     assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.equal(d.querySelectorAll("#review-delivery-flow li").length, 4);

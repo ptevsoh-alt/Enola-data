@@ -53,15 +53,10 @@
       .join("");
 
   const campaignFlow = [
-    ["Business Context", "商业背景、上市窗口与准备条件"],
-    ["Audience / Insight", "目标用户、任务场景与需求张力"],
-    ["Objective", "主业务目标与营销 / 行为目标分层"],
-    ["Positioning / Message", "定位、价值主张与 Message House"],
-    ["Big Idea", "创意平台、主题与核心叙事"],
-    ["IMC Architecture", "渠道角色、协同路径与传播节奏"],
-    ["Content Matrix", "7 个核心内容支柱 + 1 个品牌组合辅助层"],
-    ["Activation / Operations", "内容、资源、Owner、Gate 与风险"],
-    ["Measurement / Learning", "主结果、前置信号、Guardrails 与复盘"],
+    ["选场景", "用餐后硬地作为美国市场优先验证的任务"],
+    ["定主张", "用原图讲结构，用连续实拍讲握持与推进"],
+    ["拆交付", "社媒让人认出场景，商品页解释适用条件，产品团队审核事实"],
+    ["核上线", "确认素材、当地供货与履约，再开放对应入口"],
   ];
   $("#review-campaign-flow").innerHTML = renderFlow(campaignFlow);
 
