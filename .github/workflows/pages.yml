@@ -24,6 +24,15 @@ jobs:
         run: |
           npm ci
           npm test
+      - name: Upload isolated pull-request preview
+        if: github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-preview-${{ github.sha }}
+          path: |
+            site/
+            preview.cjs
+          retention-days: 3
   deploy:
     if: github.event_name != 'pull_request' && github.ref == 'refs/heads/main'
     needs: validate

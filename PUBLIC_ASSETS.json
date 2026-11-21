@@ -6,8 +6,8 @@
   },
   {
     "file": "app.js",
-    "bytes": 28448,
-    "sha256": "d14e5adb6662d82cf61961e8e2481999a6f39422acb81063549434ec4b2dd6e4"
+    "bytes": 33231,
+    "sha256": "5e9a923c2834049b2c4f721da42f7837940f3fe91aa699ad7db56a1cbe7d255c"
   },
   {
     "file": "assets/concept-01.png",
@@ -45,9 +45,19 @@
     "sha256": "52c922be7bd7b7b36048b27f210ad98499d23f01f04661e34e2e1142db3e8e5d"
   },
   {
-    "file": "assets/projects/expo-display.webp",
-    "bytes": 26354,
-    "sha256": "11e1b1f5aa396ea7d581df9dccc1e8c7a13a9c568981e4a85d2f7d46aaba6df4"
+    "file": "assets/projects/exhibition-booth-angle-redacted.jpg",
+    "bytes": 250059,
+    "sha256": "8b87fc83a69f0f65e1bc4b20fcd9ea32ee7827b0a4d2327722bf74bad27677c9"
+  },
+  {
+    "file": "assets/projects/exhibition-booth-overview-redacted.jpg",
+    "bytes": 159598,
+    "sha256": "0ab3abf73bf2a9efc75f5ba09ef82ee1142229a8247b0ef98295a2024ec955f2"
+  },
+  {
+    "file": "assets/projects/exhibition-product-display-redacted.jpg",
+    "bytes": 174642,
+    "sha256": "e65f4cf1a2b1c053763c778b17f1aead42aa7448bedfdbc6c9ffd94fed4936a9"
   },
   {
     "file": "assets/projects/holiday-scene-1.webp",
@@ -63,6 +73,16 @@
     "file": "assets/projects/joint-giveaway.webp",
     "bytes": 76780,
     "sha256": "f856ab71f0b69c182975afad02a012a9453c3054a951abd5b0d7024df0884c33"
+  },
+  {
+    "file": "assets/projects/m3-yellow-battery.webp",
+    "bytes": 10288,
+    "sha256": "9365f10b0231c76ee54ad15b01218a49f6deaff152edd2bed3b552d3384f91db"
+  },
+  {
+    "file": "assets/projects/m3-yellow-main.webp",
+    "bytes": 4580,
+    "sha256": "a855593ce0400aab524086e4e2812f635b4c3f0ca276fab45297b4d7b0728a5e"
   },
   {
     "file": "assets/projects/mop-kv-detail.webp",
@@ -85,29 +105,59 @@
     "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
+    "file": "assets/video/holiday-story.mp4",
+    "bytes": 899919,
+    "sha256": "0dea98b46be3d4f0ea6d53c9a9bea573aa5278d4ad6c310daed494a9ce10467f"
+  },
+  {
+    "file": "assets/video/product-opening.mp4",
+    "bytes": 199053,
+    "sha256": "3b9a811a05b17439b5ad717d77ca5b2aa2671f8e12bd80f59fc409fbbcc614d9"
+  },
+  {
+    "file": "assets/video/stair-demo.mp4",
+    "bytes": 250816,
+    "sha256": "783bb6cc016574f5df11d6f07a8b92be7bbe86cb0ac573054af874c6028d2d64"
+  },
+  {
     "file": "data.js",
-    "bytes": 87354,
-    "sha256": "30f83f16f38a0ef3563ffd5b9cb2827038bdba7b126998137c471a9cfa200f3e"
+    "bytes": 86994,
+    "sha256": "c30b52184101ab0fe1557ced75db543407ee649f469f6c3790b8e4dac43c7556"
   },
   {
     "file": "growth.css",
-    "bytes": 41765,
-    "sha256": "a9a27a0c118fa091c7c82b93defe59b1d7968de81dfcc2667d3ac6e1ff5c6cfb"
+    "bytes": 46057,
+    "sha256": "235095a2402a8911a885abef0ff40251a8c9f15083579f99a42856f12bf9e70e"
   },
   {
     "file": "growth.js",
-    "bytes": 40662,
-    "sha256": "ff809f92252b63e2a11a86ba4299d7fb47ca5cff0b28dd6ea7388c37837a4805"
+    "bytes": 43270,
+    "sha256": "f4c6c5d4ca3b696978941e89091be13a3b17502a598674a11ce45f6eae740193"
   },
   {
     "file": "index.html",
-    "bytes": 3571,
-    "sha256": "9541ccad0f01f0fb7256e081de6313f20f30c4febe828e1407ab36ec0de23aa4"
+    "bytes": 3623,
+    "sha256": "b62c5d8c851d5d4c32d4d9ee536f01f8e8559e6ac290ffddca40eb1746688ede"
   },
   {
     "file": "projects.js",
-    "bytes": 19739,
-    "sha256": "352b9106cb48f31e868094c7adb923898456057ca1585574914e5d8e2b2830a4"
+    "bytes": 57233,
+    "sha256": "a2b99b5e8ace60105934ce4a7c6eb963f6e12378209ab7e3307ab413dcc56008"
+  },
+  {
+    "file": "review/index.html",
+    "bytes": 9111,
+    "sha256": "c0db743b5049e7b6d0ca4db367cd1939bf3eec70a692448ad57da67cb0136d2d"
+  },
+  {
+    "file": "review/review.css",
+    "bytes": 15894,
+    "sha256": "b08beaba8d16dcdde6100509c5deeb80825b4fac29efb6b32a0ccfb7d959d064"
+  },
+  {
+    "file": "review/review.js",
+    "bytes": 12583,
+    "sha256": "a65c006579611ffa5c4716ab2212716194b9990c9d6eabb0488e616cb83793d3"
   },
   {
     "file": "robots.txt",
@@ -115,8 +165,13 @@
     "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
   },
   {
+    "file": "selected-work.js",
+    "bytes": 3123,
+    "sha256": "c1387b87e4e64934543ff64f7cab527fa224802c6cf1569e48ec7865d831ae94"
+  },
+  {
     "file": "styles.css",
-    "bytes": 22273,
-    "sha256": "36b9dfc4f4fc21dcada41b811957975171afa8e8349f324b0f0d9dd24127456f"
+    "bytes": 22554,
+    "sha256": "642080f539be0e7e11c1f2db29b848ca7f0e46d911a17e9e2cd4a9398e3aeedd"
   }
 ]

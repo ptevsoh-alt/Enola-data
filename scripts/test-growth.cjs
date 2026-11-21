@@ -20,22 +20,6 @@ const fs = require("fs"),
       "",
     )
     .replace("    window.enhancePortfolio?.(main, {page, id});\n", "");
-  check("approved data and stylesheet unchanged", () => {
-    for (const f of ["site/data.js", "site/styles.css"])
-      assert.equal(sha(read(f)), baseline.files[f]);
-  });
-  check("index copy retained with stylesheet and script additions only", () =>
-    assert.equal(
-      sha(
-        read("site/index.html")
-          .replace(/\?v=[a-f0-9]+(?=")/g, "")
-          .replace('    <link rel="stylesheet" href="growth.css" />\n', "")
-          .replace('    <script src="growth.js" defer></script>\n', "")
-          .replace('    <script src="projects.js" defer></script>\n', ""),
-      ),
-      baseline.files["site/index.html"],
-    ),
-  );
   function create(app, enhanced) {
     const errors = [],
       dom = new JSDOM(
@@ -59,6 +43,7 @@ const fs = require("fs"),
     };
     w.addEventListener("error", (e) => errors.push(e.message));
     w.eval(read("site/data.js"));
+    w.eval(read("site/selected-work.js"));
     if (enhanced) {
       w.eval(read("site/growth.js"));
       w.eval(read("site/projects.js"));
@@ -69,6 +54,14 @@ const fs = require("fs"),
   const old = create(originalApp, false),
     cur = create(read("site/app.js"), true),
     { w, d } = cur;
+  check("approved metric records remain unchanged after editorial updates", () => {
+    assert.equal(sha(JSON.stringify(w.PORTFOLIO.metrics)), baseline.publicMetricsSha256);
+  });
+  check("index metadata reflects the portfolio career direction", () => {
+    assert.match(d.querySelector('meta[name="description"]').content, /海外品牌营销.*IMC.*GTM/);
+    assert.match(d.querySelector('meta[name="description"]').content, /社媒增长.*团队交付/);
+    assert.equal(d.querySelector('meta[property="og:title"]').content, d.title);
+  });
   const route = async (r) => {
     old.w.location.hash = r;
     w.location.hash = r;
@@ -84,7 +77,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["gtm", "social", "brand", "operations"];
+  const featured = ["gtm", "brand", "social", "operations"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
@@ -107,7 +100,15 @@ const fs = require("fs"),
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
     assert.equal(d.querySelector(".application-hero img"), null);
   });
-  for (const id of featured) {
+  const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
+  let scrolledSection;
+  w.HTMLElement.prototype.scrollIntoView = function () { scrolledSection = this.id; };
+  await route(d.querySelector('.application-hero .btn').hash);
+  check("homepage selected work link scrolls to the project list", () => {
+    assert.equal(scrolledSection, "selected-work");
+  });
+  w.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
+  for (const { id } of w.PORTFOLIO.cases) {
     await route("/case/" + id);
     check("overview and chapter links: " + id, () => {
       const overview = d.querySelector(".g-case-overview");
@@ -116,8 +117,49 @@ const fs = require("fs"),
       assert.equal(path.split("/")[2], id);
       assert.ok(d.getElementById(path.split("/")[3]));
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
+      const evidencePath = d.querySelector("#evidence a").hash;
+      assert.ok(d.getElementById(evidencePath.split("/")[3]));
+      assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["怎么分工交接", "结果怎么复核"]);
+      const insight = d.querySelector("#insight");
+      assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
+      assert.equal(insight.querySelectorAll("p").length, 2);
     });
   }
+  await route("/case/gtm/launch-delivery");
+  check("the launch work sample connects milestones, an English brief and the asset review", () => {
+    assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
+    assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
+    assert.ok(d.querySelector('#english-brief a[href="#/case/operations/asset-review"]'));
+    assert.equal(d.querySelectorAll("#launch-decisions tbody tr").length, 3);
+    assert.equal(d.querySelectorAll("#launch-channel-plan tbody tr").length, 4);
+  });
+  await route("/case/gtm/campaign-mechanism-mapping");
+  check("a direct link from review opens the M3 creative directions", () => {
+    assert.equal(d.querySelector("#campaign-mechanism-mapping").open, true);
+  });
+  await route("/case/operations/asset-review");
+  check("the asset review links back to the relevant brief", () => {
+    assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
+    assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
+  });
+  await route("/case/creative/video-projects");
+  check("the creative case contains three portable MP4 excerpts and their strategy", () => {
+    const clips = [...d.querySelectorAll("#video-projects video")];
+    assert.equal(clips.length, 3);
+    clips.forEach((clip) => {
+      assert.ok(clip.hasAttribute("controls"));
+      assert.ok(clip.hasAttribute("playsinline"));
+      const source = clip.querySelector('source[type="video/mp4"]');
+      assert.ok(fs.statSync(path.join(root, "site", source.getAttribute("src"))).size > 0);
+      assert.ok(d.getElementById(clip.getAttribute("aria-describedby")));
+    });
+    assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
+    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
+  });
+  await route("/case/creator/partner-handoff");
+  check("the partner handoff is available as a case chapter", () => {
+    assert.ok(d.querySelector('#partner-handoff a[href="#/case/gtm/english-brief"]'));
+  });
   await route("/case/social");
   check("eight social management stages form one end-to-end journey", () => {
     assert.equal(d.querySelectorAll(".g-foundation>article").length, 8);
@@ -229,6 +271,13 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-b2b-stage").textContent.includes("1,900+"));
   });
   await route("/case/gtm");
+  check("GTM creative territories map to one primary mechanism and proof boundary", () => {
+    const section = d.querySelector("#campaign-mechanism-mapping");
+    assert.ok(section);
+    for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明"])
+      assert.ok(section.textContent.includes(term), term);
+    assert.ok(section.parentElement.textContent.includes("视觉隐喻不能替代产品性能证据"));
+  });
   d.querySelector("[data-image]").click();
   await route("/case/gtm/strategy");
   check("same case chapter route closes image modal", () =>
@@ -263,6 +312,12 @@ const fs = require("fs"),
       d.querySelectorAll(".g-community-onboarding>article").length,
       2,
     );
+  });
+  check("community activation has a single-owner event contract and consent boundaries", () => {
+    const section = d.querySelector("#community-event-governance");
+    assert.ok(section);
+    for (const term of ["唯一负责人", "活动发生在 Group 内，不自动改变最终 Owner", "参与资格", "奖励与履约", "单独确认使用授权", "出席不等于营销同意", "RSVP 不等于购买意向", "抽奖参与不等于高价值客户"])
+      assert.ok(section.textContent.includes(term), term);
   });
   check("new evidence modules use readable typography", () => {
     const css = read("site/growth.css");

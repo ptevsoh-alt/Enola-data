@@ -1,6 +1,6 @@
 # Current-Best application record
 
-Read-only source checkout: `ptevsoh-alt/enola-marketing-skills`, observed HEAD `f6d21b62ee91439e74e8ffdaf24153ee394a0310` (local checkout; not claimed to be latest remote). No source repository writes, fetches, installs or knowledge writeback were performed. Pre-existing untracked content was retained; tracked diff remained empty.
+Read-only source repository: `ptevsoh-alt/enola-marketing-skills`; remote `main` HEAD observed on 2026-11-19: `982f4e6c4b949b73c2f6c3beb26d6aa1d1e1b3cb`. The source repository was read only; no Enola source files, registries or capability routes were modified.
 
 The router and capability / atomic registry resolved the following canonical decision homes under `2026-07-22_市场-skill/`. Protected and history corpora were not used as runtime authority.
 
@@ -19,3 +19,17 @@ The router and capability / atomic registry resolved the following canonical dec
 No new financial result, team size, budget authority or causal contribution was added. Creator operating records were removed from the public payload rather than hidden by presentation logic. Other 38 metric objects were compared by full serialized equality against base `27239dc`.
 
 Reference: https://ericzzz-625.github.io/ was inspected via read-only HTTP. Adopted platform role → strategy → action → result organization, independent metric windows, case navigation and expandable evidence. Copy, brand, images and numerical claims were not imported. Existing local concept assets were reused and explicitly labelled; strategic diagrams are native HTML/CSS.
+
+
+## 2026-11-19 Campaign / Activation capability application
+
+| Portfolio decision | Current-Best source | Application |
+| --- | --- | --- |
+| Campaign objective and architecture | `CAP-CAMP-001 / ATOM-CAMP-001..002`, `campaign-strategy.md` | Separate one primary business objective from marketing / behavior objectives; map phase, content pillar, asset role, channel role, proof and measurement. A content calendar is not the Campaign strategy. |
+| Big Idea and creative mechanism | `CAP-CAMP-001 / ATOM-CAMP-003` plus on-demand `campaign-creative-mechanism-support.md` | Each Creative Territory receives one primary mechanism and only necessary supporting mechanisms; Hook, narrative, product role and proof must agree. Applied to the five M3 territories as a labelled strategy reconstruction, not a claim of published or winning creative. |
+| Activation and channel orchestration | `CAP-CAMP-001 / ATOM-CAMP-004..006` | Define channel roles and activation conditions while preserving each specialist's execution ownership. Distribution plans do not authorize publishing, spending or public commitments. |
+| Community event governance | `CAP-SOC-001 / ATOM-SOC-006`, `community-events.md` | Route public activation / launch / integrated Campaign / co-marketing to M07–M08 according to primary objective; route member lifecycle / support / education / relationship events to M15; content-only assets to M10. One event has one final Program Owner. |
+| Measurement and retrospective | `CAP-CAMP-001 / ATOM-CAMP-007..008` with M16 | Keep delivery, attention, traffic, conversion, qualified business outcome, economics and guardrails separate. Attribution is not incrementality; event attendance is not consent; participation is not purchase intent. |
+| Co-marketing and partner rights | `CAP-CAMP-001 / ATOM-CAMP-009` + `CAP-EARNED-001` + M01 | Separate Campaign orchestration, partner commercial truth, co-brand approval, disclosure and content usage rights. A giveaway poster does not prove participation or fulfilment. |
+
+Public-site additions in this revision: M3 creative territories now show their primary mechanism and proof boundary; the Facebook Group case now shows Program Owner routing, the minimum event contract, participation / rights handling, metric separation and post-event handoff. These are method applications and reconstructed management views; no new event result, budget, ROI, team size or causal claim was added.

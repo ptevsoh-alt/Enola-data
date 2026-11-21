@@ -70,9 +70,22 @@ check("all content links resolve", () => {
   );
   p.metrics.forEach((m) => assert.ok(p.cases.some((c) => c.id === m.caseId)));
   p.capabilities.forEach((c) => assert.ok(p.cases.some((x) => x.id === c[3])));
+  p.experiences.forEach((experience) =>
+    experience.work.forEach(([id]) => assert.ok(p.cases.some((c) => c.id === id))),
+  );
+});
+check("independent review entry and relative navigation", () => {
+  const review = fs.readFileSync(path.join(site, "review/index.html"), "utf8");
+  assert.ok(/href="review\.css(?:\?[^"]*)?"/.test(review));
+  assert.ok(/src="review\.js(?:\?[^"]*)?"/.test(review));
+  assert.match(review, /src="\.\.\/data\.js(?:\?[^"]*)?"/);
+  assert.ok(review.includes('name="robots" content="noindex, nofollow"'));
+  assert.ok(fs.existsSync(path.join(site, "review/review.css")));
+  assert.ok(fs.existsSync(path.join(site, "review/review.js")));
+  assert.ok(fs.readFileSync(path.join(site, "index.html"), "utf8").includes('href="review/"'));
 });
 check("scripts parse", () => {
-  for (const file of ["data.js", "app.js", "growth.js", "projects.js"])
+  for (const file of ["data.js", "selected-work.js", "app.js", "growth.js", "projects.js", "review/review.js"])
     new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
 });
 const files = [];

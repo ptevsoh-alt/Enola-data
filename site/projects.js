@@ -4,7 +4,7 @@
   const esc = (value) => String(value).replace(/[&<>"']/g, (char) => ({
     "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;", "'": "&#39;",
   })[char]);
-  const image = (file, alt) => `<img src="assets/projects/${file}.webp" alt="${alt}" loading="lazy" decoding="async">`;
+  const image = (file, alt, ext = "webp") => `<img src="assets/projects/${file}.${ext}" alt="${alt}" loading="lazy" decoding="async">`;
   const productLines = [
     ["地面清洁", "双盘拖把", "餐区硬地黏污", "中景拍站姿推进与转向，低机位拍双盘接地。"],
     ["电动清洁刷", "长柄电动刷", "浴缸内沿和墙砖接缝", "同一机位看清站位、杆长、刷头角度与接触点。"],
@@ -20,7 +20,7 @@
     [5,"长柄电动刷","Feed / Carousel · Facebook / Instagram","Before choosing a tool, take a closer look","选择工具前，先把结构看清楚","Before choosing a tool, take a closer look. See the long-handle scrubber details.","选择工具前，先把结构看清楚。查看 长柄电动刷 细节。"],
     [6,"黄色双盘拖把","Feed / Carousel · Facebook / Instagram","Meet the dual-head mop, from handle to dual-head base","从手柄到双盘底座，认识 双盘拖把","Meet the dual-head mop, from handle to dual-head base. See product details.","从手柄到双盘底座，认识 双盘拖把。查看产品详情。"],
     [7,"节庆主线","Reel · Facebook / Instagram","Care often looks like a very small moment","关心往往藏在很小的瞬间里","Care often looks like a very small moment. Share a moment you remember.","关心往往藏在很小的瞬间里。说说你记得的瞬间。"],
-    [8,"长柄电动刷","Reel · Facebook / Instagram","Watch one task, from start to finish","从开始到结束，看清一次操作","Watch one task, from start to finish. Watch the the long-handle scrubber demonstration.","从开始到结束，看清一次操作。观看 长柄电动刷 演示。"],
+    [8,"长柄电动刷","Reel · Facebook / Instagram","Watch one task, from start to finish","从开始到结束，看清一次操作","Watch one task, from start to finish. Watch the long-handle scrubber demonstration.","从开始到结束，看清一次操作。观看 长柄电动刷 演示。"],
     [9,"黄色双盘拖把","Reel · Facebook / Instagram","See the dual-head mop in a continuous floor-care sequence","用一个连续动作，了解 双盘拖把 地面清洁","See the dual-head mop in a continuous floor-care sequence. Watch the full demonstration.","用一个连续动作，了解 双盘拖把 地面清洁。观看完整演示。"],
     [10,"节庆主线","Feed / Carousel · Facebook / Instagram","A thoughtful gift starts with knowing the person","用心选礼物，从了解对方开始","A thoughtful gift starts with knowing the person. What would suit your dad?","用心选礼物，从了解对方开始。什么更适合你的爸爸？"],
     [11,"长柄电动刷","Feed / Carousel · Facebook / Instagram","The details deserve a closer look","值得仔细看看的产品细节","The details deserve a closer look. Explore the long-handle scrubber.","值得仔细看看的产品细节。了解 长柄电动刷。"],
@@ -41,8 +41,8 @@
     [26,"社群话题","Discussion · FB Group","A five-second moment, a story worth telling","五秒的小小瞬间，也值得被记住","A five-second moment, a story worth telling. Read the creator brief and rights options.","五秒的小小瞬间，也值得被记住。阅读创作说明与授权选项。"],
     [27,"节庆主线","Feed / Carousel · Facebook / Instagram","The best part may be the time you spend together","值得珍惜的，也许正是一起度过的时间","The best part may be the time you spend together. Tell us your favorite way to spend time together.","值得珍惜的，也许正是一起度过的时间。分享你们喜欢一起做的事。"],
     [28,"节庆主线","Feed / Carousel · Facebook / Instagram","Different tools, different everyday tasks","不同工具，对应不同日常任务","Different tools, different everyday tasks. Compare the long-handle scrubber and the dual-head mop use guidance.","不同工具，对应不同日常任务。对照两款产品使用说明。"],
-    [29,"节庆主线","Feed / Carousel · Facebook / Instagram","A look at the decisions behind this campaign concept","看看这个活动概念背后的创作选择","From product references and script checks to file QA: a look at this concept’s planned production process.","从产品原图、脚本验证到文件QA：展示本案例的制作流程设计。"],
-    [30,"节庆主线","Feed / Carousel · Facebook / Instagram","What did we learn, and what still needs evidence","我们学到了什么，还有哪些需要证据","Concept review: check asset dependencies, product facts and evidence gaps. No campaign performance results are available.","本案例复盘：核对素材依赖、产品事实与证据缺口；不报告尚不存在的营销效果。"],
+    [29,"内部验收","Internal · Project Review","Asset and message QA","素材与传播信息验收","Review the final assets, product facts, and channel adaptations before closing the campaign.","活动收尾前，检查最终素材、产品事实与渠道版本是否一致。"],
+    [30,"内部复盘","Internal · Project Review","Campaign review and next-cycle actions","活动复盘与下一轮行动","Summarize audience questions, content feedback, and open actions for the next campaign.","整理用户问题、内容反馈与待办事项，为下一轮活动确定改进方向。"],
   ];
 
   function section(title, intro, body, id = "") {
@@ -50,21 +50,155 @@
   }
 
   function brand() {
-    return section("餐区黏污、浴室边角，站着刷", "美国市场 · 家用清洁电器品牌定位", `
+    return section("用两种清洁任务讲清品牌定位", "美国市场 · 品牌屋与整合传播", `
       <div class="g-project-feature">
         <a href="assets/projects/brand-house.webp" target="_blank" rel="noopener noreferrer" aria-label="放大匿名品牌屋">${image("brand-house", "品牌屋总览，包含定位、四条产品线、目标人群和传播支柱")}</a>
-        <div><h3>先选清洁任务，再选主推产品</h3><p>餐桌下的黏脚印与浴缸内沿的边角需要不同动作。双盘拖把负责餐区硬地，展示站姿推进和转向。长柄电动刷负责浴室边角，展示调杆、调角和刷头贴合。</p>
-        <h3>把功能变成看得见的动作</h3><p>广告主视觉交代姿势和使用场景。社媒及创作者从真实污渍开场，用同机位展示清洁前后。节庆短片让家人主动接手清洁，PR 选题说明每件工具适用的家庭任务。</p>
-        <h3>创意评审与测试</h3><p>审核画面能否看清握持、接触点和工具运转。测试方案用同一个视频主体对比污渍特写和提问开场，观察 3 秒观看率与完播率。</p></div>
-      </div>`, "brand-positioning");
+        <div>
+          <h3>品牌定位：把产品放回具体清洁任务</h3>
+          <p>面向美国市场的家用电动清洁工具，优先解决餐区硬地黏污，以及浴缸内沿、墙砖接缝和边角的刷洗问题。产品由电机带动清洁头，用户控制握持位置、角度和移动路径。</p>
+          <h3>按三类购买任务组织沟通</h3>
+          <p>餐区清洁者关注扫过后仍然粘脚的脚印和溅渍；浴室清洁者关注刷头够不到的内沿与接缝；替家人购买的人，需要先确认握持、转向、换刷头和适用表面。</p>
+          <p><a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
+        </div>
+      </div>
+      <div class="g-project-list">
+        <article><small>3C / CUSTOMER</small><h3>从任务识别需求</h3><p>餐区硬地的黏污、浴室边角的触达，以及礼赠购买时对操作与配件的确认，是品牌沟通优先回答的问题。</p></article>
+        <article><small>3C / COMPETITOR</small><h3>按工具能力建立参照</h3><p>旋转拖把强调动力旋转；吸洗一体机强调碎屑与清洗的组合；长柄电动刷强调杆长与刷头角度。用结构、触达位置和动作比较各工具的任务适配度。</p></article>
+        <article><small>STP / POSITIONING</small><h3>主推双盘拖把与长柄刷</h3><p>双盘拖把负责餐区硬地，展示站姿推进和转向；长柄刷负责浴室边角，展示调杆、调角和刷头接触。品牌广告与社媒优先围绕这两类任务建立识别。</p><p><a href="#/case/gtm/launch-decisions">查看餐后硬地场景如何进入 M3 上市方案 ↗</a></p></article>
+      </div>
+      <div class="g-project-list">
+        <article><small>MESSAGE PILLAR 01</small><h3>站着推进</h3><p>双盘持续转动，主握把与辅助手柄帮助用户引导路线；画面从黏脚印切入，再展示站姿推进、转向和双盘接地。</p></article>
+        <article><small>MESSAGE PILLAR 02</small><h3>伸得到，贴得上</h3><p>通过杆长与刷头角度调节，让刷头接触浴缸边沿和墙砖接缝；同一机位交代站位、调节动作与接触点。</p></article>
+        <article><small>MESSAGE PILLAR 03</small><h3>按表面选刷头</h3><p>根据硬地、浴室边角和专项清洁任务选择拖布或刷头；演示需要说明适用表面和使用条件。</p></article>
+      </div>
+      <div class="g-project-list">
+        <article><small>CHANNEL / BRAND</small><h3>广告主视觉</h3><p>餐区用中景表现站姿推进，低机位展示双盘接地；浴室把人的站位和刷头触达放进同一组画面。</p></article>
+        <article><small>CHANNEL / SOCIAL & CREATOR</small><h3>短视频与创作者</h3><p>从真实污渍或用户提问开场，拍清工具接触、运转和同机位前后变化，再邀请观众分享家中难刷的位置。</p></article>
+        <article><small>CHANNEL / SEASONAL & PR</small><h3>节庆与媒体传播</h3><p>节庆内容把清洁放进家庭故事；PR 用餐区黏污与浴室边角解释产品分工，并为每个场景匹配动作图和简明说明。</p></article>
+      </div>
+      <div class="g-story-note">
+        <h3>同一个品牌主张，三种具体交付</h3>
+        <ul>
+          <li><a href="#/case/brand/brand-collaboration">联合抽奖海报</a>将家庭种植和清洁工具放进同一生活场景，交代奖品与参与时间。</li>
+          <li><a href="#/case/brand/pr-project">北美新闻稿</a>按全屋清洁任务安排四条产品线，可核对 2026 年 5 月新闻稿栏目分发。</li>
+          <li><a href="#/case/creative/video-projects">演示视频拆解</a>把卖点落到接触位置、持握姿势和连续动作。</li>
+        </ul>
+      </div>
+      <div class="g-story-note">
+        <h3>把用户反馈变成下一个故事</h3>
+        <p>品牌故事从餐后硬地和浴室边角两个使用任务展开。下一轮选题时，从社群与客服的问题中找真实做法，核对在什么表面、用什么配件、哪一步卡住。共性问题优先补进 FAQ；有完整使用过程并取得授权的故事，进入创作者拍摄 Brief。</p>
+        <p><a href="#/case/community">查看社群如何收集问题 ↗</a> · <a href="#/case/creative/video-projects">查看家庭场景如何转成镜头 ↗</a></p>
+      </div>
+      <p class="g-chart-note">品牌屋中的竞品参照属于功能与任务层面的定性比较；现有材料没有市场规模、竞品份额或价格调查数据。</p>`, "brand-positioning");
+  }
+
+  function launchDelivery() {
+    const milestones = [
+      ["4/28 · 立项", "GTM／IMC", "立项说明、市场与型号、主目标、待确认事项", "确认谁对整体上市决策负责。"],
+      ["5/1–10 · 定位与 Brief", "产品／产品营销、IMC", "产品事实、主推场景、卖点与拍摄 Brief", "产品签核可公开的事实，社媒组据此拆解内容。"],
+      ["5/15–21 · 物料与商业预检", "IMC 协调；设计、视频、供应链及电商分工", "KV、轮播、真实演示、FAQ、素材权限与链接", "逐项检查素材；库存、配送、支付与客服就绪后才开放购买。"],
+      ["5/22–25 · 计划发布与首销", "IMC／渠道；商业团队核可售条件", "计划发布 KV、演示及 FAQ；跟进创作者、PR 或许可邮件的放行", "按素材与渠道准备情况放行。缺演示则引导了解产品。"],
+      ["5/26–31 · 复盘与交接", "IMC／渠道、数据及客服", "观看、商品页访问、净履约订单；常见问题与素材权利归档", "用同一窗口检查表现，分派需要修正的物料和承接问题。"],
+    ];
+    return `
+      <div class="g-story-note g-launch-delivery" id="launch-delivery">
+        <h3>上市交付表</h3>
+        <p>这是 2026 年 5 月的上市规划工作样例。我负责社媒排期、内容任务和创意评审。产品团队确认可公开主张，商业团队确认可售条件。</p>
+        <ol class="g-milestone-list">
+          ${milestones.map(([date, owner, input, approval]) => `
+            <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
+        </ol>
+        <p><a href="#/case/gtm/english-brief">查看交给创意与制作团队的英文 Brief ↗</a> · <a href="#/case/creative/video-strategy">查看品牌片与演示片的渠道分工 ↗</a></p>
+      </div>`;
+  }
+
+  function englishBrief() {
+    return `
+      <div class="g-story-note g-english-brief" id="english-brief">
+        <h3>英文制作 Brief</h3>
+        <p>根据美英本地化与产品演示方案改写的公开工作样例。</p>
+        <dl lang="en-US">
+          <div><dt>Audience &amp; task</dt><dd>Show U.S. households how the M3 handles an after-dinner cleanup on a suitable hard floor. Help viewers understand how to hold, steer and use the mop.</dd></div>
+          <div><dt>Creative direction</dt><dd>“Dinner’s done. Floor’s next.” Open on the floor after dinner. Follow one pass from hand position to dual-pad contact. The team can choose the household setting and opening frame.</dd></div>
+          <div><dt>Deliverables</dt><dd>Provide a 4:5 Feed key visual, a 9:16 Story version and an eight-second demo cut. Include English captions, the opening frame and a link to the approved destination for each placement.</dd></div>
+          <div><dt>Approval &amp; fallback</dt><dd>Keep the grip and both pads in frame. Use real footage for motion and approved wording for floor suitability. If motion footage is pending, submit a product-detail visual with “Explore M3.”</dd></div>
+        </dl>
+        <p><a href="#/case/operations/asset-review">查看主视觉为什么退回修改 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
+      </div>`;
   }
 
   function gtm() {
-    return section("五款产品，四条产品线", "上市传播优先展示双盘拖把的站姿推进，以及长柄电动刷的触达和贴合。", `
+    return section("M3 上市策略", "2026 年 5 月美国上市规划重构。餐后硬地是优先验证的场景，发布与销售结果待核。", `
+      <div class="g-story-note" id="launch-decisions">
+        <h3>产品主张｜站着推进，清理餐后硬地</h3>
+        <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
+        <div class="g-proof-table">
+          <table>
+            <thead><tr><th scope="col">用户会问</th><th scope="col">主张需要的证据</th><th scope="col">对应物料</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">双盘怎样工作？</th><td>原图交代双盘结构。连续实拍展示运转、接地与推进。</td><td>主视觉、演示短片</td></tr>
+              <tr><th scope="row">怎样握持和转向？</th><td>原图标明握持位置。中景让站姿、手和工具的移动路径同时可见。</td><td>结构轮播、创作者 Brief</td></tr>
+              <tr><th scope="row">我的地面适用吗？</th><td>产品与客服按当地型号和说明书核对适用表面及使用限制。</td><td>商品页 FAQ、客服答复</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
+      </div>
+      <div class="g-story-note" id="launch-channel-plan">
+        <h3>渠道分工｜从识别场景到确认选购</h3>
+        <div class="g-proof-table">
+          <table>
+            <thead><tr><th scope="col">触点</th><th scope="col">用户在这里要解决什么</th><th scope="col">下一步</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">社媒</th><td>用餐后场景建立识别。Feed 介绍产品，Story 收集清洁问题。</td><td>了解产品</td></tr>
+              <tr><th scope="row">创作者 / Paid</th><td>让用户看清动作。创作者按 Brief 交实拍。Paid 计划在相同条件下比较场景开场与结构开场。</td><td>观看获准的演示</td></tr>
+              <tr><th scope="row">PR</th><td>用可公开的产品事实和家庭场景解释新品用途。</td><td>查阅产品资料</td></tr>
+              <tr><th scope="row">商品页 / CRM</th><td>核对当地型号、适用表面和供货。邮件按有效许可和用户状态触达。</td><td>确认可售后购买</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <p>素材审核通过后再承诺「看演示」。商业侧还需核可当地价格、库存、支付与履约，才开放购买。</p>
+      </div>
+      ${launchDelivery()}
+      ${englishBrief()}
+      <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
+      <section class="g-module g-project" id="market-adaptation" aria-labelledby="market-adaptation-heading">
+        <header><h2 id="market-adaptation-heading">M3 美英本地化工作样例</h2><p>沿用美国上市规划的产品与传播主线，另做两地可用的文案和素材适配。以下样例来自 R12 创意指南和双市场文案表。</p></header>
+        <div class="g-project-list">
+          <article><small>共享主视觉</small><h3 lang="en">From grip to floor.</h3><p>整机亮相用同一产品原图与版式。进入餐后场景时，两地沿用 <span lang="en">Dinner’s done. Floor’s next.</span>，把焦点放在日常清洁。</p></article>
+        </div>
+        <div class="g-project-list g-project-calendar-plan" aria-label="Story 投票美英对照">
+          <article><small>美国 · en-US</small><h3 lang="en-US">Kitchen or entryway?</h3><p lang="en-US">After-dinner cleanup · Mom’s favorite moments</p></article>
+          <article><small>英国 · en-GB</small><h3 lang="en-GB">Kitchen or hallway?</h3><p lang="en-GB">After-dinner clean-up · Mum’s favourite moments</p></article>
+        </div>
+        <p>两地分别核对节日档期、页面与供货。美国和英国各自比较「餐后场景」与「产品结构」开场；市场内固定正文、受众、版位和落地页，再比较当地数据。</p>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><h3>产品图核对可见结构</h3><p>用原图核对双圆盘、握把与侧置电池安装位。性能参数、适用地面与配件兼容性由产品团队按当地 SKU、说明书与测试条件签核。</p></article>
+          <article><h3>演示和创作者内容先确认素材</h3><p>8 秒脚本安排双盘近景接连续实拍。缺少运行素材时，用结构图配 <span lang="en">Explore M3</span>。<span lang="en">See M3 in action</span> 需链接到真实演示；创作者内容另行确认披露与商用权限。</p></article>
+        </div>
+        <p class="g-chart-note">R12 本地化工作包含每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本。以上为交付物数量。英国样例的上线与测试状态未核实。</p>
+      </section>
+
+      <details class="g-chart-disclosure" id="campaign-mechanism-mapping"><summary>展开五种创意方向与所需证据</summary>
+      <div class="g-project-list g-project-calendar-plan">
+        <article><small>MECHANISM 01 / PAIN-POINT EMERGENCE</small><h3>The After-Dinner Reset</h3><p>主机制：问题显化。用餐后地面黏污作为具体任务入口；辅助机制：连续过程证明。后续必须展示真实产品操作和相同条件的清洁过程，不能用夸张污渍或单次画面推导普遍性能。</p></article>
+        <article><small>MECHANISM 02 / MECHANISM REVEAL</small><h3>See the Motion</h3><p>主机制：机制揭示。通过真实双头运行、接地和移动路径解释产品如何工作；辅助机制：微距细节证明。静态 KV、生成画面或渲染不能代替真实运行视频。</p></article>
+        <article><small>MECHANISM 03 / ROLE-VALUE TRANSFER</small><h3>Make Room for What Matters</h3><p>主机制：关系价值转移。把产品动作放进家庭共同生活的情境；辅助机制：人物动作叙事。情绪收束不等于量化省时承诺，人物、音乐和场景素材仍需授权。</p></article>
+        <article><small>MECHANISM 04 / MICRO-DETAIL PROOF</small><h3>A Closer Look at M3</h3><p>主机制：细节证明。通过整机、双头底座、手柄控制区和电池安装位置降低理解成本；每项功能说明必须对应官方源图、说明书或产品负责人确认。</p></article>
+        <article><small>MECHANISM 05 / USER-EXPERIENCE PROOF</small><h3>Real Home, Real Reset</h3><p>主机制：真实体验证明。Creator 内容补充家庭场景中的实际操作；受众适配、披露、肖像、内容版权、剪辑权和 Paid Usage Rights 分别确认。</p></article>
+      </div>
+      <p class="g-chart-note">机制映射是依据现有 M3 创意方向与 Campaign 方法整理的策略重构，不表示五条内容均已发布或测试胜出。每个方向只设一个主机制；Hook 必须由后续信息兑现，视觉隐喻不能替代产品性能证据。</p>
+      </details>
+      <details class="g-chart-disclosure"><summary>查看四条产品线与官方产品图</summary>
       <div class="g-project-feature g-project-product"><div class="g-project-list">${productLines.map(([line, product, task, demo]) => `
         <article><small>${line}</small><h3>${product}</h3><p>${task}。${demo}</p></article>`).join("")}</div>
-        <figure>${image("mop-kv-detail", "黄色双盘拖把与其双盘底座的主视觉局部")}<figcaption>双盘拖把主视觉局部</figcaption></figure>
-      </div>`, "product-portfolio");
+        <figure>${image("m3-yellow-main", "双盘拖把黄色款整机外观，展示双圆拖布头、黄色机身与手柄结构")}<figcaption><b>双盘拖把 · 整机外观</b><span>采用黄色款真实产品原图，保留整机比例、双盘底座与手柄结构</span></figcaption></figure>
+      </div>
+      <div class="g-product-gallery" aria-label="双盘拖把产品外观细节">
+        <figure>${image("m3-yellow-battery", "双盘拖把黄色款主机背部与外置电池安装位置")}<figcaption><b>Battery Detail / 电池安装</b><span>使用原始产品图展示电池安装位置，不以示意图替代真实结构</span></figcaption></figure>
+      </div>
+      </details>
+`, "product-portfolio");
   }
 
   function calendarDays() {
@@ -74,45 +208,172 @@
   }
 
   function social() {
-    return section("父亲节 30 天内容日历", "For the Hands That Always Help · 节庆营销方案", `
+    return section("父亲节 30 天内容与项目日历", "For the Hands That Always Help · 节庆营销概念方案", `
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>主题与主推产品</h3><p>以父亲为家人做过的小事发起互动。长柄电动刷负责浴室边角演示，黄色双盘拖把负责餐后硬地清洁。</p></article>
-        <article><h3>发布编排</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作。Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
+        <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
+        <article><h3>内容与交付节奏</h3><p>日历按相对顺序编排内容。28 个节点面向用户发布，最后 2 个节点用于内部素材验收与活动复盘；不是实际发布日期或发布记录。</p></article>
       </div>
-      <details class="g-chart-disclosure"><summary>展开 30 天双语内容日历</summary><p class="g-chart-note">Day 01–30 为内容顺序。点选任一天查看平台、内容形式和双语文案。</p>${calendarDays()}</details>`, "fathers-day-calendar");
+      <p><a href="#/case/creative/video-strategy">查看节庆故事、产品教育与社群反馈各承担什么 ↗</a></p>
+      <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28 为对外内容概念；Day 29–30 为内部验收与复盘节点。全部为相对内容顺序，不代表真实发布日历或已执行 Campaign。</p>${calendarDays()}</details>`, "fathers-day-calendar");
   }
 
   function pr() {
-    return section("北美家庭清洁 PR 选题", "发布页 · King Newswire · 2026.05.15", `
-      <div class="g-project-feature g-project-wide-image"><figure>${image("pr-home-scene", "北美家庭客厅和厨房的清洁场景配图")}<figcaption>新闻稿配图局部</figcaption></figure>
-      <div><h3>用家庭场景说明产品分工</h3><p>从宠物毛发、地面污渍、浴室边角和烤炉清洁切入，将产品阵容放到北美家庭能辨认的任务里。</p><p class="g-chart-note">发布页可核对日期；不将转载量或媒体效果计入成果。</p></div></div>`, "pr-project");
+    return section("北美家庭清洁主题新闻稿发布", "King Newswire 分发 · USA Today Press Release 页面 · 2026 年 5 月", `
+      <div class="g-project-feature g-project-wide-image"><figure>${image("pr-home-scene", "北美家庭客厅和厨房的清洁场景配图")}<figcaption>新闻稿配图 · 家庭清洁场景</figcaption></figure>
+      <div>
+        <h3>传播主题：从单品功能转向全屋清洁任务</h3>
+        <p>稿件以北美家庭常见清洁场景组织产品信息，包括宠物毛发、地面污渍、浴室污垢、厨房油污和烧烤后残渣，让不同工具对应不同家庭任务。</p>
+        <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
+        <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
+        <h3>可核验的分发结果</h3>
+        <p>现有截图可核验 King Newswire 的新闻稿分发，刊载位置为 USA Today 的 Press Release 栏目。</p>
+        <p class="g-chart-note">页面标题日期为 May 15, 2026，侧栏日期为 May 14, 2026；公开展示只保留 2026 年 5 月，具体发布日期待核。当前没有可核验的转载量、阅读量、媒体触达或 Share of Voice 数据。</p>
+      </div></div>`, "pr-project");
+  }
+
+  function brandCampaign() {
+    return section("家居品牌联合抽奖", "将家庭种植与日常清洁放进同一个家居场景。", `
+      <div class="g-project-feature g-project-wide-image">
+        <figure>${image("joint-giveaway", "脱敏的联合抽奖海报，展示家庭种植设备、电动清洁刷和海报日期")}<figcaption>联合活动主视觉 · 海报标示 4 月 18–28 日，年份待核</figcaption></figure>
+        <div class="g-project-list">
+          <article><h3>用共同场景连接两类产品</h3><p>家庭种植设备和电动清洁刷同框。画面先让用户看懂两类奖品及其使用场景，再用活动名称和日期交代参与窗口。</p></article>
+          <article><h3>合作执行需要双方确认的事项</h3><p>在活动管理方案中，由牵头方统一资格、活动时区与规则。合作双方分别确认发布窗口、素材使用和奖品履约。复盘按各渠道发布记录、有效参与、奖品发放分开核对。</p></article>
+          <article><h3>现有交付证据</h3><p>海报可核对联合主题、奖品组合及画面标示时间。双方实际分工、发布链接、有效参与和发奖记录待补。</p></article>
+        </div>
+      </div>`, "brand-collaboration");
+  }
+
+  function creativeStrategy() {
+    return section("为什么节庆故事与功能演示要分开做", "家庭片让观众识别品牌和场景，产品短片回答一个具体使用问题。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>把餐后清洁放进家庭故事</h3><p>我参与的创意策划从节庆聚餐出发。食物滴落让清洁任务自然出现，握持和推进说明工具如何进入场景，结尾回到家庭氛围。这条片的优先任务是品牌记忆，产品出现要服务故事的转折。</p></article>
+        <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
+      </div>
+      <div class="g-story-note" id="video-channel-plan">
+        <h3>品牌故事和产品教育各看什么</h3>
+        <ul>
+          <li><strong>品牌叙事</strong> 横版保留聚餐、工具介入和结尾。社媒短版从餐后问题切入，观察用户是否看到故事转折与品牌露出。</li>
+          <li><strong>产品教育</strong> 竖版保留接触、推进或转向；轮播与 FAQ 回答适用条件。优先观察动作段留存，以及评论里仍没有得到回答的操作问题。</li>
+          <li><strong>下一轮怎么改</strong> 用同版位、同窗口的数据定位流失。观众没看到动作时，先调整剪辑。观众看完仍追问用法时，补镜头或更新 FAQ。</li>
+        </ul>
+        <p>这套复盘口径用于规划。页面展示节庆片段、无线吸尘器素材和独立的 M3 上市脚本。</p>
+        <p><a href="#/case/creative/video-projects">播放三个视频样例 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
+      </div>`, "video-strategy");
   }
 
   function creative() {
-    return section("节庆视频与产品演示", "家宴叙事让产品动作进入故事，吸尘演示用真实可辨认的清洁位置交代操作。", `
-      <div class="g-project-media">
-        <figure>${image("holiday-scene-1", "家宴后地板上溅落的酱汁")}<figcaption><b>家宴短片 · 场景开场</b><span>用溅落的酱汁把故事转入餐后清洁。</span></figcaption></figure>
-        <figure>${image("holiday-scene-2", "人物手握双盘拖把的 D 形手柄")}<figcaption><b>家宴短片 · 产品动作</b><span>用握持特写交代家人如何接手清洁。</span></figcaption></figure>
-        <figure class="g-project-vertical">${image("stairs-video-frame", "低机位吸尘器演示，吸头与楼梯踏面接触")}<figcaption><b>吸尘演示 · 楼梯</b><span>低机位展示吸头在窄踏面上的移动和接触。</span></figcaption></figure>
-        <figure class="g-project-vertical">${image("vacuum-video-frame", "室内手持吸尘器产品演示")}<figcaption><b>吸尘演示 · 室内</b><span>室内中景展示机器姿态和手部操作。</span></figcaption></figure>
+    return section("节庆叙事与产品演示", "三段静音视频分别展示家庭叙事、连续操作，以及两种开场如何承担不同传播任务。", `
+      <div class="g-video-gallery">
+        <figure>
+          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
+            <source src="assets/video/holiday-story.mp4" type="video/mp4">
+            <a href="assets/video/holiday-story.mp4">打开节庆短片 MP4</a>
+          </video>
+          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>15 秒静音剪辑节选。聚餐和滴落的酱汁引出清洁，手柄与双盘镜头交代工具，结尾回到节庆家庭场景。</p><p class="g-chart-note">创意样片，展示叙事与镜头设计。</p></figcaption>
+        </figure>
+        <figure class="g-video-demo">
+          <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放楼梯吸尘演示节选" aria-describedby="stairs-video-note">
+            <source src="assets/video/stair-demo.mp4" type="video/mp4">
+            <a href="assets/video/stair-demo.mp4">打开楼梯演示 MP4</a>
+          </video>
+          <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>约 4 秒静音裁切。保留吸头、踏面和移动路径，便于观察构图和操作表达。该片使用无线吸尘器，横版节庆样片中的产品为双盘拖把。</p></figcaption>
+        </figure>
+      </div>
+      <div class="g-opening-comparison" id="video-opening-comparison">
+        <figure>
+          <video controls playsinline preload="metadata" aria-label="播放客厅产品亮相和楼梯动作开场对照" aria-describedby="opening-video-note">
+            <source src="assets/video/product-opening.mp4" type="video/mp4">
+            <a href="assets/video/product-opening.mp4">打开开场对照 MP4</a>
+          </video>
+          <figcaption id="opening-video-note">约 6 秒静音素材对照，约 3 秒切换场景。</figcaption>
+        </figure>
+        <div>
+          <h3>无线吸尘器的两种开场</h3>
+          <dl>
+            <div><dt>0–3 秒 · 客厅亮相</dt><dd>先看到产品、握持和家居环境，适合主打认识产品的内容。</dd></div>
+            <div><dt>约 3–6 秒 · 楼梯上手</dt><dd>吸头立刻接触踏面，优先回答怎么用。做产品教育时，从这个动作开始。</dd></div>
+          </dl>
+          <p>这是两个源镜头的剪辑对照。若要判断哪种开场更有效，发布测试时保持受众、正文、时长与下一步一致，再看开场留存和演示段观看。</p>
+        </div>
+      </div>
+      <div class="g-story-note" id="video-management">
+        <h3>从创意方向到可验收的交付</h3>
+        <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
+        <p>画面可以说明握持、行进方向和接触位置。清洁效果和性能主张需要真实产品素材、同条件前后对照及产品签核。当前可展示结果为视频节选与相应的策略和审核样例，发布与投放数据待核。</p>
+        <p><a href="#/case/creative/video-strategy">查看创意选择与渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看一次物料如何返工 ↗</a></p>
       </div>`, "video-projects");
   }
 
   function expo() {
-    return section("海外展会现场与客户开发", "现场物料把产品关系讲清，方便采购方带着具体问题进入下一轮沟通。", `
+    return section("海外 B2B 展会项目参与", "储能行业 · 展位视觉与产品系统陈列", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${image("expo-display", "展会展示墙，连接光伏、逆变器、储能电池与用电负载")}<figcaption>产品系统展示墙 · 现场照片局部</figcaption></figure>
+        <figure>${image("exhibition-booth-overview-redacted", "海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 品牌标识已脱敏</figcaption></figure>
         <div class="g-project-list">
-        <article><h3>产品系统展示墙</h3><p>以系统连接图将光伏、逆变器、电池和负载放在同一面墙上，实物展台让采购方核对产品类型、规格与应用场景。</p></article>
-        <article><h3>采购需求和跟进</h3><p>围绕使用场景、需求规格、采购时间与交付要求记录询盘。现场沟通后进入需求确认、报价和交期核对。</p></article>
-        <p class="g-chart-note">案例聚焦系统展示墙与采购需求沟通。</p></div>
-      </div>`, "expo-project");
+          <article><h3>现场记录</h3><p>这组照片来自我任职期间参与的海外储能展会，记录了展位空间、系统展示与产品陈列。</p></article>
+          <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>从展台结构、主视觉、空间层次和展示动线观察现场呈现方式，保留真实展会环境，展示海外 B2B 展会的品牌接触场景。</p></article>
+          <article><small>PRODUCT SYSTEM</small><h3>产品系统陈列</h3><p>展示墙将光伏、逆变器、储能电池、柴油发电机与家庭用电负载放在同一系统关系中，便于参观者从组件和应用场景理解产品组合。此处仅描述照片中可见的展示内容，不延伸为产品技术方案设计责任。</p></article>
+        </div>
+      </div>
+      <div class="g-product-gallery" aria-label="海外储能展会现场与产品展示照片">
+        <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
+      </div>
+      <details class="g-chart-disclosure" id="expo-handoff">
+        <summary>查看从展位物料到客户问题的交接样例</summary>
+        <div class="g-story-note">
+          <p>按照片可见的产品系统陈列设计。展前由产品和商务核对系统示意与产品说明；现场按客户应用场景记录配置、交付或售后问题；展后由商务确认跟进人，把重复问题交回产品和市场用于更新 FAQ。会前物料、现场记录和会后跟进各有负责人。</p>
+          <p class="g-chart-note">这是基于现场展示整理的工作样例。照片支持展会参与和现场陈列。</p>
+        </div>
+      </details>
+      <p class="g-chart-note">照片中的展位标识、设备品牌、型号和编号已脱敏。具体展会分工和活动级业绩待核。</p>`, "expo-project");
   }
 
   function creator() {
-    return section("创作者合作工作台", "合作管理 · 从 Brief 到内容审核与授权。", `
-      <div class="g-project-list g-project-calendar-plan"><article><h3>合作 Brief</h3><p>将合作目标、受众、产品事实、演示任务和交付形式放进同一张工作单，便于创作者与审核人核对需求。</p></article>
-      <article><h3>内容审核与素材复用</h3><p>交付后记录内容版本、修改意见、授权平台和期限。素材复用前核对许可范围与到期时间。</p></article></div>`, "creator-project");
+    return section("Creator Desk 创作者合作审核", "工作台原型 · 从来信提取候选事项，由负责人确认合作承诺及素材权利。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>选题和交付先写进 Brief</h3><p>按目标市场、受众和内容风格筛选创作者。Brief 写清产品事实、演示任务、交付形式和审核责任，供内容审核时逐项核对。</p></article>
+        <article><h3>报价、交付和付款逐项核对</h3><p>演示邮件将报价、交付、付款放入待确认清单。负责人查原邮件，确认条款后再审核对应回复草稿。</p></article>
+        <article><h3>来信提及授权，进入待核验</h3><p>若对方提出授权，先核对是否已有书面许可，再登记允许的平台、地域、期限及用途。品牌转发、剪辑和付费使用分别核对。</p></article>
+        <article><h3>交付审核对应具体版本</h3><p>逐条核对产品事实、合作披露和修订意见。通过审核的内容版本与对应授权一起留档，方便后续查找和复用。</p></article>
+      </div>
+      <div class="g-story-note" id="partner-handoff">
+        <h3>外部创作者从 Brief 到交付</h3>
+        <p>工作样例。邀约时确认寄样、脚本初稿和成片日期。首稿审核看开场能否交代使用场景、动作能否支持主张，以及合作披露是否清楚。把返修意见标到对应版本和时间点。</p>
+        <p>验收时将成片与书面使用许可一起归档，注明渠道、地域、期限、剪辑与付费使用范围，供后续复用时核查。</p>
+        <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
+      </div>
+      <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");
+  }
+
+  function seo() {
+    const articles = [
+      ["ART-01", "The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor & Makeup Disasters", "Pillar", "Informational / Guide"],
+      ["ART-02", "How to Remove Fake Blood and Face Paint from Grout, Sinks, and Porcelain", "Cluster", "Problem-solving"],
+      ["ART-03", "Sticky Candy Meltdown: Safely Dissolving Sugar and Syrup from Hardwood Floors", "Cluster", "How-To / Educational"],
+      ["ART-04", "Pumpkin Guts, Candle Wax, and Porch Grime: Outdoor Entryway Restoration", "Cluster", "Seasonal Maintenance"],
+      ["ART-05", "Fall Costume Glitters and Faux Cobweb Cleanup: Vacuuming Without Bristle Tangles", "Cluster", "How-To / Product Selection"],
+      ["ART-06", "Hosting a Spooktacular Party? The 30-Minute Speed Cleaning Checklist", "Cluster", "Checklist / List"],
+      ["ART-07", "Bathroom Horror Stories: Eliminating Soap Scum, Hair Dye, and Tile Grime Fast", "Cluster", "Comparison / Problem-solving"],
+      ["ART-08", "Electric Spin Scrubber vs. Traditional Mop: Tackling High-Traffic Holiday Footprints", "Cluster", "Commercial Investigation"],
+      ["ART-09", "Pet Costumes, Shedding Season, and Autumn Flea Dirt: Whole-Home Hygiene Guide", "Cluster", "Hygiene / Lifestyle"],
+      ["ART-10", "Post-Party Kitchen Degreasing: Air Fryers, Stovetops, and Caramel Splatters", "Cluster", "How-To / Deep Cleaning"],
+    ];
+    return section("Halloween SEO 主题集群规划", "No Scares, Just Spotless · 美国 / 北美市场 · 英文优先", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>先用主指南承接节后清洁</h3><p>1 篇主指南负责把万圣节后的清洁任务讲清楚，9 篇专题再按地面、浴室、门廊、宠物毛发和厨房等具体问题展开。</p></article>
+        <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
+      </div>
+      <div class="g-story-note">
+        <h3>选题决定入口，内容决定下一步</h3>
+        <p>节庆社媒先让读者识别「派对结束后的黏脚印」。搜索端用总指南承接这个问题，再按地面、浴室与厨房分流。已经在比较工具的读者可从专题进入选型或 FAQ。规划复盘时，先看每个入口的搜索点击，再看访问后是否继续阅读相关内容。</p>
+        <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
+      </div>
+      <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
+        <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
+          <article><small>${esc(id)} · ${esc(type)}</small><h3 lang="en">${esc(title)}</h3><p lang="en">${esc(intent)}</p></article>`).join("")}</div>
+      </details>
+      <p class="g-chart-note">以上为选题与内容规划。实际发布、索引状态和 GSC 表现待核。</p>`, "seo-cluster");
   }
 
   function operations() {
@@ -123,21 +384,129 @@
         <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
-      <a class="featured-detail" href="#/case/social/execution">查看父亲节日历样例 ↗</a>`, "team-delivery");
+      <div class="g-story-note" id="asset-review">
+        <h3>一次真实的物料返工：首图看不到双盘</h3>
+        <ul>
+          <li><strong>发现</strong> 4:5 版主视觉底部 CTA 框遮挡并裁切了双盘。静态首图的任务是让人看懂产品结构，这一版需要返工。</li>
+          <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
+          <li><strong>写回交付清单</strong> Feed 和 Story 分别查裁切、安全区和关键结构。涉及运行的表达回到连续实拍，由产品团队核对对应说明。</li>
+        </ul>
+        <p class="g-chart-note">依据 M3 视觉样稿的审核和修订记录。该记录对应物料工作样例。</p>
+        <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
+      </div>
+      <div class="g-story-note">
+        <h3>用父亲节日历演示一次项目交接</h3>
+        <p>这份规划把长柄刷交给浴室边角演示，把双盘拖把交给餐后硬地内容。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
+        <p class="g-chart-note">30 个相对排期节点含 28 个对外内容概念和 2 个内部节点。该日历是交付工作样例。</p>
+        <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
+      </div>`, "team-delivery");
+  }
+
+  function amazonPriority() {
+    return section("店铺先解决哪一段问题", "经营判断样例 · 用商品、流量和履约信息决定行动。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>有浏览，详情页解释不清</h3><p>先检查点击进入的人在看什么词，以及主图、A+ 和商品页有没有回答用途、规格和适用条件。把买家重复提问交给商品与设计改信息。</p></article>
+        <article><h3>有转化，供货和售后出现压力</h3><p>广告和促销节奏要与库存、配送和退换预期一起核。补齐承接后，再评估是否增加流量投入。</p></article>
+      </div>
+      <p>任职期销售、转化和利润指标见经营数据。若要验证具体改动的贡献，需要同商品、同窗口的广告、售价、库存和订单记录。</p>
+      <p><a href="#/data/commerce">查看店铺经营记录 ↗</a></p>`, "amazon-priority");
+  }
+
+  function crmHandoff() {
+    return section("谁可以收到邮件，谁要先排除", "旅程规划样例 · 从事件、许可和售后状态判断。", `
+      <div class="g-project-list g-project-calendar-plan">
+        <article><h3>浏览或加购后，先检查状态</h3><p>有有效许可、符合等待窗口且尚未购买，才进入对应提醒。已经下单时，退出催购，进入购后信息流程。</p></article>
+        <article><h3>退款或服务问题，先交客服</h3><p>出现退款、退订或待解决的服务问题时，暂停相应营销触发。运营与电商对齐状态来源，测试频控、退出和重复进入。</p></article>
+      </div>
+      <p>工作物包括用户旅程、规则与频控规划。实际发送、留存和复购需系统记录。</p>`, "crm-handoff");
+  }
+
+
+  const caseInsights = {
+    gtm: [
+      "为什么首发从餐后硬地讲起",
+      "同一品牌覆盖地面、浴室等多种清洁任务。美国上市规划把优先场景收敛到餐后硬地，因为餐区污渍、站姿推进和双盘接地可以在同一组镜头里讲清。长柄刷继续承接浴室边角的问题。",
+      "这是 2026 年 5 月 Campaign 的后续规划重建，不等于该月已上市或有订单。餐后场景的优先级还需 Review/VOC、客服及搜索问题验证，产品事实、购买承接与发布条件由各职能签核。",
+    ],
+    brand: [
+      "用户先选清洁任务，再认产品线",
+      "品牌屋把五款产品放回四条产品线。餐区黏污和浴室边角各有明确的接触表面、操作动作和对应工具，因此可作为品牌传播最先讲清的两个场景。",
+      "品牌屋是任务和传播主张梳理，不代表完成量化品牌研究。新闻稿分发证明发稿动作，合作海报证明创意交付；消费者认知变化、独立媒体报道与合作成效分别待核。",
+    ],
+    social: [
+      "内容复盘先看用户停在哪一步",
+      "同样是数据上涨，浏览、互动与点击回答的问题不同。复盘时先检查内容有没有吸引人停留，再看用户是在讨论场景、追问用法，还是进入下一步。",
+      "我负责季度主题、月度日历与社媒小组审核。Meta 历史汇总能说明阶段规模，不合并 Facebook、Instagram 与 Group 的不同窗口数据；具体改动仍需同内容、同窗口记录验证。",
+    ],
+    operations: [
+      "主视觉返工，优先保护用户需要看到的结构",
+      "M3 的 4:5 主视觉被 CTA 框遮住双盘。首图承担介绍产品结构的任务，因此审核时先要求双盘完整可见，再调整按钮位置和不同版位的裁切。",
+      "我负责内容侧交付与审核；产品事实由产品/研发确认，最终公开权限由相应角色签核。把必须入镜的部件、安全区、素材版本和审核责任写回 Brief，现有记录不支持量化节省工时。",
+    ],
+    community: [
+      "把成员的使用问题带回内容和产品",
+      "规划教程、投票和讨论时，优先选择成员能描述具体场景的问题，例如用在什么表面、哪一步卡住。运营汇总共性问题，产品确认用法，内容组更新 FAQ 或演示。",
+      "成员快照说明社群规模，查看和发帖评论说明各自窗口内的行为。评估单场活动还需要参与记录、反馈和素材授权。",
+    ],
+    b2b: [
+      "先问客户怎么用，再决定跟进什么",
+      "客户开发按应用场景、产品匹配和采购条件判断优先级。展会现场的系统展示可以从具体用电场景开启对话，后续由商务核实报价、配置和交付。",
+      "照片支持展会参与和陈列。衡量展会贡献需要核对现场登记、会后跟进和机会来源。任职期经营数据按各自窗口查看。",
+    ],
+    seo: [
+      "用搜索问题决定页面分工",
+      "节后清洁既有人想解决眼前的黏污，也有人在比较工具。主指南按清洁任务分流，专题解释表面与操作条件，FAQ 或商品页承接需要选型的人。",
+      "现有工作物是主题集群规划。发布后可按页面核对收录、查询与点击，再观察读者是否进入下一页。",
+    ],
+    amazon: [
+      "先找出经营瓶颈，再决定投入",
+      "流量少时检查搜索词和点击。有浏览却少下单时，检查商品页是否讲清用途和规格。销量起来以后，再核对库存、退换和广告成本能否支撑继续投放。",
+      "任职期经营记录可用来说明阶段表现。判断某次改动的贡献，需要同商品、同窗口的流量、广告、库存与订单。",
+    ],
+    creative: [
+      "开场由观众要解决的问题决定",
+      "节庆短片用聚餐和污渍引出工具，在结尾回到人物。楼梯吸尘片面向操作疑问，开场就给吸头和踏面。两种开场各有需要拍到的动作。",
+      "现有节选可观察故事顺序、构图和接触位置。若要比较开场效果，可固定受众、版位、片长与后续镜头，再观察留存。",
+    ],
+    crm: [
+      "发送之前先核对用户的真实状态",
+      "加购用户可能已经下单，也可能正在处理退款。旅程规划先核同意记录、订单与售后状态，再决定发提醒、转入购后信息或暂停营销。",
+      "上线前要实测触发、退出、频控和重复进入。现有案例展示旅程与规则规划，实际发送与复购需要系统数据。",
+    ],
+    creator: [
+      "先看创作者能否拍清用户最关心的动作",
+      "为产品教育筛选创作者时，优先看目标受众、过往镜头和理解产品的能力。Brief 明确需要拍到的动作，验收时逐项对照片段、披露与可使用范围。",
+      "目前可展示工作台原型与交接样例。真实合作进度以合同、交付版本、发布链接和授权记录为准。",
+    ],
+  };
+
+  function renderInsight(main, id) {
+    const insight = main.querySelector("#insight > div:last-child");
+    const choice = caseInsights[id];
+    if (!insight || !choice) return;
+    const [title, decision, evidence] = choice;
+    const heading = insight.querySelector("h2");
+    heading.textContent = title;
+    insight.querySelector("h2 + p").textContent = decision;
+    insight.insertAdjacentHTML("beforeend", `<p class="note">${esc(evidence)}</p>`);
   }
 
   const extras = {
-    brand: { strategy: brand, execution: pr },
+    brand: { strategy: brand, execution: () => pr() + brandCampaign() },
     gtm: { strategy: gtm },
     social: { execution: social },
-    creative: { execution: creative },
+    creative: { strategy: creativeStrategy, execution: creative },
     b2b: { execution: expo },
     creator: { execution: creator },
+    seo: { execution: seo },
     operations: { management: operations },
+    amazon: { strategy: amazonPriority },
+    crm: { strategy: crmHandoff },
   };
   window.enhancePortfolioProjects = (main, { page, id }) => {
-    if (page !== "case" || !Object.hasOwn(extras, id)) return;
-    for (const [chapter, render] of Object.entries(extras[id])) {
+    if (page !== "case" || !Object.hasOwn(caseInsights, id)) return;
+    renderInsight(main, id);
+    for (const [chapter, render] of Object.entries(extras[id] ?? {})) {
       const content = main.querySelector(`#${chapter}>div:last-child`);
       if (!content) continue;
       if (chapter === "strategy") {

@@ -1,0 +1,141 @@
+# 线上作品集预览检查指南
+
+版本：PR #15 候选版本  
+当前站点代码基线：`c9555ff7cc22e7410b75487848ae0347286b51a6`  
+当前分支：`content/drive-source-fill-20261116`  
+生产发布：未执行；`main` 未修改。
+
+## 预览获取
+
+GitHub Actions 的 PR 验证流程只生成独立静态预览 ZIP，不部署 GitHub Pages。
+
+- 最新预览包：[Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412)n #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411)
+- PR：[ptevsoh-alt/Enola-data#15](https://github.com/ptevsoh-alt/Enola-data/pull/15)
+- 解压后，独立审阅入口位于 `site/review/index.html`；使用下方本地预览命令后访问 `http://127.0.0.1:8174/review/`。
+
+下载 Run Artifact ZIP 并解压。预览包根目录应同时包含 `preview.cjs` 和 `site/` 目录。使用 Node.js 22+，在解压后的目录执行：
+
+```bash
+node preview.cjs
+```
+
+然后打开 `http://127.0.0.1:8174/review/` 检查独立审阅页；主作品集首页为 `http://127.0.0.1:8174/`。该预览包仅依赖 Node.js 内置模块，不需要执行 `npm ci`。如果使用完整 Git 仓库 checkout，则仍可执行 `npm ci` 和 `npm run preview`。
+
+不要只打开 ZIP，也不要只单独复制 `index.html`；`site/` 内的 CSS、JS 与 assets 必须保留原有相对目录结构。
+
+## 页面导航地图
+
+网站为单页路由，以下路径均为站内 Hash Route：
+
+| 页面 | 路由 | 重点检查 |
+| --- | --- | --- |
+| 首页 | `#/home` | 定位、首屏信息层级、代表案例入口 |
+| 案例索引 | `#/cases` | 11 个案例卡片、分类、搜索与筛选 |
+| 01 产品营销与上市 | `#/case/gtm` | 四条产品线、FABA / FABE、GTM、M3 Campaign、创意机制 |
+| 02 海外社媒增长 | `#/case/social` | 季度主题、月度内容日历、团队交付、社媒数据 |
+| 03 Facebook Group | `#/case/community` | 成员增长、参与数据、活动 Owner、活动准入与 UGC 授权 |
+| 04 品牌与 IMC | `#/case/brand` | Brand House、Message House、跨渠道传播 |
+| 05 团队管理 | `#/case/operations` | RACI、项目流程、审核 Gate、资源协同 |
+| 06 B2B 与展会 | `#/case/b2b` | 展位照片脱敏、项目参与边界、客户开发与展会协同 |
+| 07 SEO 搜索增长 | `#/case/seo` | Pillar / Cluster、搜索承接与指标限制 |
+| 08 Amazon 经营 | `#/case/amazon` | 店铺经营、PPC、转化与经营指标边界 |
+| 09 创意与视频 | `#/case/creative` | 创意方向、脚本与视频质量管理 |
+| 10 EDM / Lifecycle | `#/case/crm` | 生命周期规划、邮件触点与交接 |
+| 11 Creator 合作 | `#/case/creator` | 筛选、Brief、审核、授权和 Paid Usage Rights |
+| 数据总览 | `#/data` | 数据域导航 |
+| 社媒数据 | `#/data/social` | Meta 汇总与 Facebook 页面数据分开展示 |
+| 社群数据 | `#/data/community` | 成员规模、查看、发帖评论分别呈现 |
+| 搜索数据 | `#/data/search` | 自然搜索收入份额与 GSC 点击变化 |
+| B2B 数据 | `#/data/b2b` | 触达、邮件、线索与成交口径 |
+| 电商数据 | `#/data/commerce` | Amazon 销售、转化及利润相关指标 |
+| 用户关系数据 | `#/data/lifecycle` | 生命周期和留存相关数据 |
+| 工作经历 | `#/experience` | 经历时间线、职责和成果 |
+| 能力 | `#/capabilities` | 品牌、PMM、GTM、IMC、PR 与管理能力 |
+| 资料说明 | `#/about` | 数据证据状态、来源、限制与匿名化说明 |
+| 联系 | `#/contact` | 对外联系信息呈现 |
+
+## 本轮重点新增 / 更新
+
+### M3 GTM / Campaign
+- 商业目标与营销 / 行为目标分层。
+- 五个 Creative Territories 各自映射一个主创意机制及证明边界。
+- 明确策略重构不等于五条创意已全部发布或测试胜出。
+
+### Facebook Group / 活动治理
+- Program Owner 按主要业务目标确定，单场活动只设一个最终 Owner。
+- Event Contract 补齐目标、参与资格、窗口、奖励履约、审核、权限、指标和回滚条件。
+- UGC 参与与品牌商业使用授权分开。
+- 报名、出席、查看、发帖评论、UGC、点击和购买分别记录。
+- 活动结束后明确内容、社群关系、Measurement 与 Campaign 复盘的交接。
+
+## 建议检查顺序
+
+1. 首页：是否能在 10 秒内理解目标岗位和核心价值。
+2. 案例索引：11 个案例是否层次清晰，是否更像案例而不是销售 PPT。
+3. GTM：策略、Big Idea、创意机制、内容矩阵、跨团队协作是否形成完整链路。
+4. 社媒与社群：团队管理、活动治理和数据展示是否能证明管理能力。
+5. B2B 展会：照片脱敏是否充分，个人贡献边界是否准确。
+6. 数据：图表是否忠于原始口径，是否清楚区分 DOCUMENTED / RECONSTRUCTED / PENDING。
+7. Creator / PR / CRM：是否展示策略、流程和治理，而非虚构执行结果。
+8. 移动端：菜单、卡片、图表、详情章节和弹窗是否易读、可操作。
+
+## 验收状态与边界
+
+- GitHub Actions Run #141：Validate SUCCESS。
+- `npm test`：139/139（结构 / 隐私 / 资源 8/8；DOM / 交互 70/70；Growth / 案例行为 61/61）。
+- PR #15 保持 Draft / Open。
+- `main` 未修改；Deploy job 按 PR 规则跳过。
+- 本轮未对新增模块执行新的真实浏览器截图验收；自动化测试通过不代表视觉验收通过。
+- 本站展示的概念方案、策略重构和历史数据保持各自证据状态，不得将规划写成历史发布、投放、成交或 ROI。
+
+
+## 2026-11-19 Independent /review/ entry validation
+
+- Independent entry: `site/review/index.html`; route: `/review/`; standalone styles and rendering script are under `site/review/`.
+- The main portfolio footer links to the review entry. The review page provides review path, searchable 11-case index, 15-asset visual gallery, 38 metric evidence-status summary, and six data-domain links.
+- Case and data links return to the main portfolio Hash Router; local asset paths remain relative and portable for GitHub Pages project paths.
+- The route is marked `noindex, nofollow`; no remote scripts, external asset dependencies, form submission or data transmission are added.
+- Public asset manifest now includes all three review files and has matching byte / SHA-256 metadata. Homepage manifest metadata was also reconciled.
+- GitHub Actions Run #152: Validate SUCCESS; 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus review-route rendering, search, relative-link, noindex and local HTTP preview checks all passed.
+- Isolated PR preview ZIP: [Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR #15 remains Draft / Open; `main` is unchanged; Deploy is skipped. This artifact is a review build, not a production URL or live deployment.
+- New real-browser screenshot acceptance for the review page remains pending; the local HTTP route and automated content/asset checks passed.
+
+
+## 2026-11-19 审阅页可视化整理
+
+- `/review/` 保持独立入口；主站顶部导航与页脚均可进入。
+- 新增 M3 GTM / Campaign 9 步结构图、5 个 Creative Territories 机制卡、Community Event Governance 4 步流程及 Team Delivery 4 步流程。
+- 视觉工作物增加分类筛选：产品上市、品牌 / Campaign、B2B / 展会、创意 / 视频；展会三张脱敏图完整纳入。
+- 数据证据状态与六个数据领域增加比例条；图示只表示指标记录数量 / 证据状态占比，不代表项目完成率或业务表现。
+- 入口保留 `noindex, nofollow`；这是搜索引擎收录提示，不是访问权限控制。页面不引入外部脚本、追踪或表单数据传输。
+- 该版本仍通过 PR artifact 预览；PR 不部署 GitHub Pages，生产 URL 需在后续获批合并并部署后才会出现。
+
+
+## 2026-11-19 审阅页可视化整理（Run #164）
+
+### 页面结构
+- 独立入口：`site/review/index.html`，路由 `/review/`；主站顶部导航与页脚均可进入。
+- M3 GTM / Campaign：9 步架构图，覆盖 Business Context、Audience / Insight、Objective、Positioning / Message、Big Idea、IMC Architecture、Content Matrix、Activation / Operations、Measurement / Learning。
+- Creative Territories：5 个创意方向，各自展示主机制与证明边界。
+- Community Event Governance：4 步活动治理路径；Team Delivery：4 步跨部门交付路径。
+- 视觉素材：16 项，按产品上市、品牌 / Campaign、B2B / 展会、创意 / 视频筛选；展会三张脱敏图完整纳入。
+- 数据展示：38 项指标的证据状态比例条、6 个数据领域的指标数量比例条；比例仅表示记录数量，不表示项目完成率或业务表现。
+
+### 入口与隐私
+- 首页顶部导航和页脚均提供 `审阅入口`；审阅页保留 `noindex, nofollow`。
+- `noindex` 不是访问控制；该页为公开静态页面，不设登录或密码保护。仅放置已匿名化、可公开的素材与内容。
+- PR 验证仅生成静态预览 ZIP，不部署 GitHub Pages。生产 `/review/` 路径需在获批合并并部署后生效。
+
+### 自动化验证
+- GitHub Actions Run #164：Validate SUCCESS。
+- `npm test`：结构 / 隐私 / 资源 9/9；DOM / 交互 70/70；Growth / 案例行为 61/61；独立审阅入口另通过策略结构、视觉筛选、比例条、首页入口、相对路径与本地 HTTP 服务检查。
+- 预览包：[Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412)。
+- PR #15 保持 Draft / Open；`main` 未修改；Deploy 跳过；未合并、未部署。
+- 本轮未完成真实浏览器多视口截图验收；需在本地预览环境继续检查视觉细节。
+
+
+## 预览包结构修正
+
+- PR Artifact 现在同时包含 `preview.cjs` 与 `site/`，解压后在根目录运行 `node preview.cjs` 即可启动独立本地预览；不需要 `npm ci`。
+- `npm ci` + `npm run preview` 仅用于完整仓库 checkout，不用于只包含网站文件的 Artifact ZIP。
