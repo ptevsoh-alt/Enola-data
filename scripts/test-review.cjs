@@ -31,12 +31,12 @@ const fs = require("fs"),
   check("review index renders all 11 cases", () => {
     assert.equal(d.querySelectorAll("[data-review-case-card]").length, 11);
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.cases, 11);
-    assert.equal(d.querySelector("#review-direction").textContent, `求职方向为${w.PORTFOLIO.profile.direction}`);
+    assert.equal(d.querySelector("#review-direction").textContent, `${w.PORTFOLIO.profile.direction} · ${w.PORTFOLIO.profile.focus}`);
     assert.equal(d.querySelector("#review-intro").textContent, w.PORTFOLIO.profile.summary);
   });
   check("selected work links to projects in the same personal portfolio", () => {
     const links = [...d.querySelectorAll("#review-path .review-path-card")];
-    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "operations", "social"]);
+    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "social", "operations"]);
     assert.equal(d.querySelector("#review-path h2").textContent, "代表项目");
     assert.ok(d.querySelector('#review-path ~ #review-cases'));
     links.forEach((link) => {
