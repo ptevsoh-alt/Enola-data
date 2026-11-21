@@ -77,7 +77,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["gtm", "brand", "operations", "social"];
+  const featured = ["gtm", "brand", "social", "operations"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
