@@ -43,8 +43,8 @@ const fs = require("fs"),
     };
   check("homepage shows the career direction alongside four projects", () => {
     assert.equal(d.querySelectorAll(".case-card").length, 4);
-    assert.equal(d.querySelector(".profile-direction").textContent, `求职方向为${w.PORTFOLIO.profile.direction}`);
-    assert.match(d.querySelector(".hero-summary").textContent, /曾任.*参与 4 条/);
+    assert.equal(d.querySelector(".profile-direction").textContent, w.PORTFOLIO.profile.direction);
+    assert.match(d.querySelector(".hero-summary").textContent, /2025\.04—2026\.09.*参与 4 条核心产品线/);
   });
   for (const c of w.PORTFOLIO.cases) {
     await route("/case/" + c.id);
@@ -135,7 +135,7 @@ const fs = require("fs"),
         assert.equal(jobs[0].querySelector("h2").textContent, "社媒负责人 / 管理组长");
         assert.deepEqual([...jobs[0].querySelectorAll("a")].map((a) => a.hash), ["#/case/gtm", "#/case/operations", "#/case/social"]);
       }
-      if (r === "contact") assert.match(d.querySelector(".lede").textContent, /管理岗/);
+      if (r === "contact") assert.equal(d.querySelector(".lede").textContent, w.PORTFOLIO.profile.direction);
     });
   }
   d.querySelector(".skip").click();
