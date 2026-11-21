@@ -176,8 +176,8 @@
   function home() {
     return `<div class="home-intro-band"><div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>与整合营销</em></h1>
-        <p class="profile-direction">求职方向为${esc(P.profile.direction)}</p>
+        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>整合传播与产品上市</em></h1>
+        <p class="profile-direction">${esc(P.profile.direction)}</p>
         <p class="hero-summary">${esc(P.profile.summary)}</p>
         <div class="actions"><a class="btn" href="#/home/selected-work">看代表项目 ↘</a><a href="#/case/creative/video-projects">看视频案例 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>代表项目</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
@@ -322,11 +322,11 @@
   }
   function simple(page) {
     if (page === "experience")
-      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><p class="lede">由 Amazon 店铺经营、海外 B2B 获客，走向北美消费品牌传播与社媒团队管理。</p><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)}</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${e.context ? `<p>${esc(e.context)}</p>` : ""}${e.work.length ? `<div class="actions">${e.work.map(([id, label]) => link(id, esc(label))).join("")}</div>` : ""}</div></article>`).join("")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><p class="lede">近 6 年海外市场与跨境业务经历，从 Amazon 店铺经营、海外 B2B 客户研究与展会营销，到北美消费品牌传播、社媒增长及内容团队管理。</p><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)}</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${e.context ? `<p>${esc(e.context)}</p>` : ""}${e.work.length ? `<div class="actions">${e.work.map(([id, label]) => link(id, esc(label))).join("")}</div>` : ""}</div></article>`).join("")}</div></div>`;
     if (page === "capabilities")
       return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>营销能力</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
     if (page === "contact")
-      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">求职方向为${esc(P.profile.direction)}。</p><p>${esc(P.profile.focus)}。请使用随投递简历提供的联系方式。</p><div class="section">${link("operations", "了解团队管理与项目交付")}</div></div>`;
+      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">${esc(P.profile.direction)}</p><p>工作重点：${esc(P.profile.focus)}。联系方式以随投递简历提供的信息为准。</p><div class="section">${link("operations", "了解团队管理与项目交付")}</div></div>`;
     return `<div class="wrap page"><p class="eyebrow">ABOUT THE EVIDENCE</p><h1>事实与展示，<br>各有清晰的依据。</h1><div class="rights-grid">${Object.entries(
       P.statuses,
     )
@@ -388,7 +388,7 @@
     document.title =
       page === "case" && by(id)
         ? `${featured[id]?.title || by(id).title}｜黄文琳作品集`
-        : "黄文琳｜海外品牌营销与整合营销作品集";
+        : "黄文琳｜品牌营销 · IMC · GTM 作品集";
     window.scrollTo(0, 0);
     if (route.started) main.focus({ preventScroll: true });
     route.started = true;
