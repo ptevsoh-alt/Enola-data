@@ -58,7 +58,8 @@ const fs = require("fs"),
     assert.equal(sha(JSON.stringify(w.PORTFOLIO.metrics)), baseline.publicMetricsSha256);
   });
   check("index metadata reflects the portfolio career direction", () => {
-    assert.ok(d.querySelector('meta[name="description"]').content.includes(w.PORTFOLIO.profile.direction));
+    assert.match(d.querySelector('meta[name="description"]').content, /海外品牌营销.*IMC.*GTM/);
+    assert.match(d.querySelector('meta[name="description"]').content, /社媒增长.*团队交付/);
     assert.equal(d.querySelector('meta[property="og:title"]').content, d.title);
   });
   const route = async (r) => {
