@@ -16,7 +16,7 @@
   const caseHref = (id) => "../#/case/" + encodeURIComponent(id);
   const dataHref = (id) => "../#/data/" + encodeURIComponent(id);
 
-  $("#review-direction").textContent = `求职方向为${P.profile.direction}`;
+  $("#review-direction").textContent = `${P.profile.direction} · ${P.profile.focus}`;
   $("#review-intro").textContent = P.profile.summary;
 
   const stats = ["impressions", "engagements"].map((id) =>
