@@ -6,7 +6,8 @@ const root = path.resolve(__dirname, "../site");
 const clips = [
   ["holiday-story-long.mp4", "节庆故事长版"],
   ["stair-demo.mp4", "楼梯演示"],
-  ["product-opening.mp4", "客厅产品介绍与楼梯开场来源"],
+  ["product-opening.mp4", "旧开场素材（不在页面展示）"],
+  ["creator-livingroom-intro.mp4", "独立客厅产品介绍"],
 ];
 
 function boxes(buffer) {
@@ -63,7 +64,7 @@ for (const [name, label] of clips) {
 const review = fs.readFileSync(path.join(root, "review/index.html"), "utf8");
 const projects = fs.readFileSync(path.join(root, "projects.js"), "utf8");
 for (const [name] of clips) {
-  if (name !== "holiday-story-long.mp4") {
+  if (!["holiday-story-long.mp4", "product-opening.mp4"].includes(name)) {
     assert.ok(review.includes("../assets/video/" + name), "review does not use " + name);
     assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
   }
@@ -74,8 +75,9 @@ for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE", "1xuDMGJbNw4RZt9nBuyLkjy7
 }
 assert.ok(projects.includes('id="thanksgiving-tvc"') && projects.includes('id="holiday-full-film"'), "two themed TVC projects not found");
 assert.ok(projects.includes('id="kol-shorts"'), "creator short-form video grouping missing");
-assert.ok(projects.includes('assets/video/product-opening.mp4#t=0,3'), "case must isolate a living-room-only Creator intro");
-assert.ok(review.includes('../assets/video/product-opening.mp4#t=0,3'), "review must isolate living-room Creator intro");
+assert.ok(projects.includes('assets/video/creator-livingroom-intro.mp4'), "case must use a standalone living-room Creator file");
+assert.ok(review.includes('../assets/video/creator-livingroom-intro.mp4'), "review must use a standalone living-room Creator file");
 assert.ok(!review.includes('../assets/video/holiday-story.mp4') && !projects.includes('assets/video/holiday-story.mp4'), "TVC short cutdown should not appear publicly");
-assert.notEqual(clips[1][0], clips[2][0], "Creator playback should use two different base videos");
-console.log("PASS Thanksgiving and Christmas full TVCs plus two different Creator presentation scenes; no TVC cutdowns.");
+assert.notEqual("stair-demo.mp4", "creator-livingroom-intro.mp4", "Creator playback should use two distinct files");
+assert.ok(!projects.includes("product-opening.mp4#t=") && !review.includes("product-opening.mp4#t="), "Do not rely on an unstable media-fragment end time");
+console.log("PASS Thanksgiving and Christmas full TVCs plus standalone living-room and stairs Creator scenes; no TVC cutdowns.");
