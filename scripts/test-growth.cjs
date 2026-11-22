@@ -99,7 +99,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".home-proof-bridge a strong").textContent, "4,009");
     const summary = d.querySelector(".home-summary");
-    assert.ok(summary.textContent.includes("2025 年阶段汇总"));
+    assert.ok(summary.textContent.includes("2025 年 · 品牌内容与社媒增长"));
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
     assert.equal(d.querySelector(".application-hero img"), null);
   });
