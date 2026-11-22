@@ -41,9 +41,9 @@ const fs = require("fs"),
       w.location.hash = s;
       await new Promise((r) => setTimeout(r, 5));
     };
-  check("homepage shows the career direction alongside five projects", () => {
-    assert.equal(d.querySelectorAll(".case-card").length, 5);
-    assert.equal(d.querySelectorAll(".home-route-card").length, 6);
+  check("homepage shows the career direction alongside six projects", () => {
+    assert.equal(d.querySelectorAll(".case-card").length, 6);
+    assert.equal(d.querySelectorAll(".home-route-card").length, 7);
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".profile-direction").textContent, w.PORTFOLIO.profile.direction);
     assert.match(d.querySelector(".hero-summary").textContent, /2025\.04—2026\.09.*参与 4 条核心产品线/);
