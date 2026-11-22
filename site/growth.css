@@ -2590,3 +2590,93 @@
 .expo-plan-caption{grid-column:1/-1;margin:.1rem 0 0;font-size:.72rem;color:#657563;line-height:1.6;}
 @media(max-width:900px){.expo-plan-board{grid-template-columns:minmax(0,1fr);}.expo-plan-intro{padding:.25rem;}.expo-plan-visual{min-height:18rem;}}
 @media(max-width:520px){.expo-plan-wall{flex-direction:column;justify-content:center;text-align:center;padding:.8rem .45rem;}.expo-plan-interior{grid-template-columns:1fr 1.25fr 1fr;gap:.25rem;}.expo-plan-display,.expo-plan-demo{padding:.65rem .15rem;}.expo-plan-display small,.expo-plan-demo small{font-size:.57rem;}.expo-plan-display span,.expo-plan-demo span{font-size:.58rem;}.expo-plan-visual{padding:.5rem;gap:.35rem;}.expo-plan-front{gap:.35rem;}}
+
+/* Portfolio editorial case system — image-led introductions and readable chapter rhythm. */
+.case-page { --case-tone:#466b57; --case-soft:#e9eee6; }
+.case-page-brand,.case-page-creative { --case-tone:#98623c; --case-soft:#f5ede0; }
+.case-page-b2b,.case-page-amazon { --case-tone:#42667a; --case-soft:#e7eff3; }
+.case-page-operations,.case-page-crm { --case-tone:#65734e; --case-soft:#ecf0e5; }
+.case-page .case-title { align-items:end; border-bottom:2px solid var(--case-tone);padding-bottom:clamp(1rem,2vw,1.6rem); }
+.case-page .case-title .eyebrow {color:var(--case-tone);letter-spacing:.12em;font-weight:750;}
+.case-page .case-story-primary {grid-template-columns:minmax(0,1fr) minmax(0,1fr);min-height:clamp(18rem,35vw,27rem);}
+.case-page .case-story-copy {position:relative;padding:clamp(1.4rem,3.6vw,3rem);gap:.35rem;}
+.case-page .case-story-copy h2 {font-size:clamp(1.5rem,3.2vw,2.75rem);line-height:1.26;letter-spacing:-.035em;max-width:23ch;}
+.case-page .case-story-copy p {font-size:clamp(.83rem,1.25vw,.95rem);line-height:1.95;}
+.case-page .case-story-category {border-color:#a3b9a9;}
+.case-page .case-story-judgement,.case-page .case-story-deliverables {background:var(--case-soft);border:0;border-left:4px solid var(--case-tone);padding:clamp(1.2rem,2.2vw,1.8rem);}
+.case-page .case-story-judgement h2,.case-page .case-story-deliverables h2 {font-size:clamp(1.15rem,1.8vw,1.6rem);margin:.4rem 0;}
+.case-page .case-story-judgement>span,.case-page .case-story-deliverables>span {color:var(--case-tone);}
+.case-page .case-story-judgement p,.case-page .case-story-deliverables p {line-height:1.85;font-size:.86rem;}
+.case-page .case-story-foot {grid-column:1/-1;background:#e5ebe4;padding:1rem clamp(1rem,2.4vw,1.5rem);border:0;border-radius:.4rem;gap:1rem;}
+.case-story-pair {display:grid;grid-template-columns:1fr 1fr;min-height:0;background:#161b17;gap:2px;}
+.case-story-pair a {display:block;position:relative;min-width:0;min-height:100%;overflow:hidden;}
+.case-story-pair img {width:100%;height:100%;aspect-ratio:auto;object-fit:cover;object-position:center;transition:transform .35s ease;}
+.case-story-pair a:hover img {transform:scale(1.035);}
+.case-story-pair span {position:absolute;bottom:0;left:0;right:0;padding:.75rem .55rem;background:linear-gradient(transparent,rgba(5,11,8,.85));font-size:.58rem;font-weight:750;letter-spacing:.055em;color:#fff;}
+.case-story-pair a:focus-visible{outline:3px solid #eab46e;outline-offset:-3px;}
+.case-page .case-section {grid-template-columns:minmax(7.2rem,.24fr) minmax(0,1fr);column-gap:clamp(1.1rem,3vw,3rem);padding:clamp(2.3rem,4.3vw,4rem) 0;align-items:start;}
+.case-page .case-section .chapter-label {font-size:.72rem;font-weight:750;letter-spacing:.1em;color:var(--case-tone);position:sticky;top:5rem;}
+.case-page .case-section >div:last-child>h2 {font-size:clamp(1.5rem,2.7vw,2.25rem);letter-spacing:-.045em;max-width:25ch;margin-bottom:.6rem;}
+.case-page .case-section>div:last-child>p {font-size:clamp(.87rem,1.3vw,.98rem);line-height:1.95;max-width:78ch;}
+.case-page #strategy,.case-page #management {padding-inline:clamp(.9rem,3vw,2.3rem);background:var(--case-soft);border-radius:.55rem;border-bottom:none;margin-block:.8rem;}
+.case-page .case-tabs {position:sticky;top:0;z-index:7;padding:.75rem 1rem;background:rgba(245,244,239,.97);border:1px solid var(--rule);border-radius:.25rem;box-shadow:0 5px 17px rgba(17,35,26,.05);backdrop-filter:blur(8px);}
+.case-page .case-tabs a {font-size:.74rem;display:inline-flex;min-height:2rem;align-items:center;}
+.case-page .case-section .deliverable-grid article {background:#fffefa;border-top:3px solid var(--case-tone);padding:1.2rem;}
+.case-page .case-section .strategy-flow li {background:#fffefa;border-top:2px solid var(--case-tone);}
+.case-page .case-section .result-grid .metric {background:#edf2eb;}
+@media(max-width:760px){
+ .case-page .case-story-primary{grid-template-columns:minmax(0,1fr);}
+ .case-page .case-story-primary .case-story-visual {min-height:14rem;max-height:21rem;}
+ .case-page .case-story-primary .case-story-identity {min-height:10rem;}
+ .case-page .case-section {grid-template-columns:minmax(0,1fr);gap:.7rem;}
+ .case-page .case-section .chapter-label {position:static;}
+ .case-page .case-tabs{top:0;gap:.1rem .75rem;}
+}
+@media(max-width:440px){.case-story-pair {grid-template-columns:minmax(0,1fr) minmax(0,1fr);} .case-story-pair span{font-size:.52rem;}}
+
+/* Exhibition art direction — one identity system from booth design through CRM. */
+.expo-brand-system {margin:clamp(1.8rem,4vw,3rem) 0;border:1px solid #c9d5c6;background:#f8f9f4;border-radius:.65rem;overflow:hidden;}
+.expo-system-header {padding:clamp(1.2rem,3vw,2.1rem);background:#e9eee4;}
+.expo-system-header small {color:#335a42;font-size:.72rem;font-weight:750;letter-spacing:.12em;}
+.expo-system-header h3 {font-size:clamp(1.45rem,2.7vw,2.25rem);line-height:1.28;letter-spacing:-.04em;margin:.5rem 0;}
+.expo-system-header p {font-size:.86rem;color:#4c6151;line-height:1.8;max-width:66ch;margin:.2rem 0 0;}
+.expo-brand-stage{display:grid;grid-template-columns:minmax(0,1.03fr) minmax(0,.97fr);background:#182e24;color:#f3f5ef;min-height:20rem;}
+.expo-brand-stage-copy{padding:clamp(1.4rem,3vw,2.5rem);display:flex;flex-direction:column;align-items:flex-start;justify-content:center;background:radial-gradient(circle at 100% 0,rgba(242,192,111,.2),transparent 45%),linear-gradient(135deg,#264b34,#14271e);}
+.expo-brand-stage-copy>span {font-size:.68rem;font-weight:750;letter-spacing:.1em;color:#b3d9b7;}
+.expo-brand-stage-copy>strong{font-family:Georgia,serif;font-size:clamp(2rem,4vw,3.35rem);letter-spacing:-.05em;line-height:1.07;margin:1.1rem 0;}
+.expo-brand-stage-copy>p {margin:0;color:#d0dfd4;font-size:.85rem;letter-spacing:.04em;}
+.expo-brand-stage-journey{padding:clamp(1.25rem,2.8vw,2.1rem);display:grid;align-content:center;}
+.expo-brand-stage-journey>div{border-bottom:1px solid #4c6a57;padding:.85rem 0;display:grid;grid-template-columns:1fr auto;gap:.3rem 1rem;}
+.expo-brand-stage-journey>div:last-child{border:0;}
+.expo-brand-stage-journey small {font-size:.67rem;font-weight:750;letter-spacing:.09em;color:#b7d6bf;grid-column:1/-1;}
+.expo-brand-stage-journey b {font-size:1.06rem;}
+.expo-brand-stage-journey span {font-size:.75rem;color:#d7e3d8;align-self:center;text-align:right;}
+.expo-workstream {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1px;background:#d4dfd2;}
+.expo-workstream article {display:grid;grid-template-columns:auto minmax(0,1fr);grid-template-rows:auto auto;align-content:center;gap:.25rem .8rem;background:#f8f9f4;padding:clamp(.9rem,2vw,1.45rem);min-width:0;}
+.expo-workstream article>span{grid-row:1/3;color:#7e9880;font-family:Georgia,serif;font-size:clamp(1.35rem,2.2vw,1.95rem);line-height:1;align-self:center;}
+.expo-workstream article>b{font-size:.91rem;}
+.expo-workstream article>small{font-size:.72rem;line-height:1.6;color:#5a685e;overflow-wrap:anywhere;}
+.expo-plan-dimensions {display:flex;justify-content:space-between;gap:.6rem;align-items:center;font-size:.69rem;color:#315641;font-weight:750;padding:.35rem .5rem;border-bottom:1px dashed #9fb6a5;}
+.expo-plan-dimensions b{font-size:.77rem;white-space:nowrap;}
+.expo-campaign-flight {margin:clamp(2rem,4vw,3rem) 0;}
+.expo-campaign-flight header{max-width:78ch;margin-bottom:1.5rem;}
+.expo-campaign-flight header small{font-size:.72rem;font-weight:750;letter-spacing:.11em;color:#436850;}
+.expo-campaign-flight header h3{font-size:clamp(1.35rem,2.8vw,2.2rem);line-height:1.3;margin:.5rem 0;}
+.expo-campaign-flight header p{font-size:.87rem;color:#536759;line-height:1.9;}
+.expo-flight-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:1rem;}
+.expo-flight-card{position:relative;overflow:hidden;min-width:0;border:1px solid #c9d8ca;border-top:5px solid #50725b;background:#fffefa;padding:clamp(1.1rem,2vw,1.65rem);display:flex;flex-direction:column;gap:.7rem;}
+.expo-flight-number{position:absolute;right:.6rem;top:-.8rem;opacity:.1;font:6rem Georgia,serif;color:#2b5037;pointer-events:none;}
+.expo-flight-card>small{font-size:.7rem;font-weight:750;letter-spacing:.09em;color:#43674b;position:relative;}
+.expo-flight-card h4{font-size:clamp(1.13rem,1.8vw,1.4rem);line-height:1.35;max-width:17ch;min-height:3.1rem;position:relative;}
+.expo-flight-channel{border-top:1px solid #d8e1d8;padding-top:.7rem;}
+.expo-flight-channel b{font-size:.79rem;color:#28553a;}
+.expo-flight-channel p{font-size:.77rem;line-height:1.78;margin:.3rem 0 0;color:#415747;}
+.expo-flight-channel.online{border-left:3px solid #e1b177;padding-left:.75rem;}
+.expo-flight-outcome{margin-top:auto;background:#ebf1e8;padding:.65rem .85rem;display:flex;flex-direction:column;gap:.22rem;}
+.expo-flight-outcome span{font-size:.67rem;color:#49674f;}
+.expo-flight-outcome strong{font-size:.8rem;line-height:1.5;color:#233c2b;}
+.expo-flight-note{display:flex;align-items:center;gap:1.2rem;background:#e1ebe1;margin-top:.75rem;padding:.8rem 1rem;font-size:.79rem;color:#354c3b;}
+.expo-flight-note b{flex-shrink:0;}
+@media(max-width:900px){.expo-workstream{grid-template-columns:repeat(2,minmax(0,1fr))}.expo-flight-grid{grid-template-columns:minmax(0,1fr)}.expo-flight-card h4{min-height:0;max-width:none}.expo-brand-stage{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey{grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.expo-brand-stage-journey>div{border-bottom:0;border-right:1px solid #4c6a57;padding-right:.6rem;grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey span{text-align:left;}}
+@media(max-width:570px){.expo-workstream{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey>div{border-right:0;border-bottom:1px solid #4c6a57;padding-bottom:.7rem}.expo-flight-note{display:block}.expo-flight-note span{display:block;margin-top:.3rem}.expo-plan-dimensions{flex-wrap:wrap}}
+@media(prefers-reduced-motion:reduce){.case-story-pair img{transition:none;}}
