@@ -18,7 +18,9 @@
     `<button class="g-evidence" data-evidence="${id}">查看数据详情 ↗</button>`;
   const metric = (id) => {
     const x = m(id);
-    return `<article class="g-kpi" data-growth-metric="${id}"><p>${esc(x.label)}</p><button data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，打开证据"><strong>${esc(x.display)}</strong></button><small>${esc(x.platform)} · ${P.statuses[x.status]}</small><p class="g-window">${esc(x.window)}</p>${evidence(id)}</article>`;
+    const period = /^20\d{2}/.test(String(x.window || "")) && !/未注明|待核|具体/.test(x.window) ? x.window : "";
+    const platform = String(x.platform || "").replace(/（字段待核）|（口径待核）/g, "");
+    return `<article class="g-kpi" data-growth-metric="${id}"><p>${esc(x.label)}</p><button data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，打开数据出处"><strong>${esc(x.display)}</strong></button><small>${esc(platform)}</small>${period ? `<p class="g-window">${esc(period)}</p>` : ""}${evidence(id)}</article>`;
   };
   const header = (en, title, desc) =>
     `<div class="g-heading"><div><p class="eyebrow">${en}</p><h2>${title}</h2></div><p>${desc}</p></div>`;
@@ -181,7 +183,7 @@
           <span><b>${esc(x.comparisonValues.end)}</b><small>任职后期记录</small></span>
         </div>
         <p>${esc(x.window)}</p>
-        <p>此项属于 B2B 任期账号，不与海外消费品牌社媒矩阵合并；账号范围和采样日期未注明，不反算净增量或增长率。</p>
+        <p>海外 B2B 岗位期间的 Facebook 账号规模记录。</p>
         ${evidence("fb-follower-scale")}
       </article>
     </section>`;
