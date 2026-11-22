@@ -520,7 +520,7 @@
 
   function expo() {
     return section("海外 B2B 展会与市场活动", "让产品系统陈列服务客户沟通，并把现场问题接入后续渠道营销与商务跟进。", `
-      <div class="expo-cover" id="expo-project">
+      <div class="expo-cover" id="expo-cover">
         <figure>${image("exhibition-booth-overview-redacted", "真实海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>海外储能展会 · 现场展位与产品展示</figcaption></figure>
         <div class="expo-cover-story">
           <small>OVERSEAS B2B / EXHIBITION</small>
