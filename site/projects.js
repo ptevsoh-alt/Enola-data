@@ -452,6 +452,15 @@
           <details class="reader-source-note"><summary>影片版本与交付说明</summary><p>网页播放的是 82 秒观看剪辑（H.264/AAC，640 × 360），保留故事声轨、去除原品牌片尾。Drive 中的 90 秒 US/UK REV08 FFmpeg 交付版通过技术解码、字幕与抽样连续性检查；其配音仍为指导版本，原 AI 动作尚未完成逐帧语义验收。REV09 是后续片尾预览，不作为最终配音成片。对外发布与素材复用以相关权利批准为准。</p></details>
         </figcaption>
       </figure>
+      <section class="video-storyline" id="video-storyline" aria-label="节庆故事的四段画面节奏">
+        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>长片先建立节日氛围，再让生活中的清洁任务自然出现，最后把焦点重新交给人物。</p></header>
+        <ol class="video-story-beats">
+          <li><span>01 / EMOTION</span><strong>家庭相聚</strong><p>人物与节庆氛围建立情绪起点</p></li>
+          <li><span>02 / TENSION</span><strong>生活中的小问题</strong><p>清洁需求推动故事发生转折</p></li>
+          <li><span>03 / PRODUCT</span><strong>产品进入情节</strong><p>通过握持、动作与接触让功能被看见</p></li>
+          <li><span>04 / BRAND</span><strong>回到家庭时刻</strong><p>以陪伴与日常生活收束品牌记忆</p></li>
+        </ol>
+      </section>
       <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
       <p class="g-video-gallery-lede">不同镜头对应不同用户问题：从产品亮相、实际操作到场景功能解释。</p>
       <div class="g-video-gallery">
@@ -484,16 +493,21 @@
             <div><dt>0–3 秒 · 客厅亮相</dt><dd>先看到产品、握持和家居环境，适合主打认识产品的内容。</dd></div>
             <div><dt>约 3–6 秒 · 楼梯上手</dt><dd>吸头立刻接触踏面，优先回答怎么用。做产品教育时，从这个动作开始。</dd></div>
           </dl>
-          <p>这是两个源镜头的剪辑对照。若要判断哪种开场更有效，发布测试时保持受众、正文、时长与下一步一致，再看开场留存和演示段观看。</p>
+          <p>这组剪辑展示开场创意如何影响信息进入的顺序：新品认知内容先亮相，使用教育内容优先交代动作。创意审核同步检查产品结构、连续性和平台安全区。</p>
         </div>
       </div>
 
+      <div class="video-format-roles" id="video-format-roles" aria-label="视频内容的渠道适配">
+        <div><small>LONG FORM / 完整故事</small><b>82 秒故事观看版</b><p>用于完整观看情绪建立、场景变化与产品价值如何进入叙事。</p></div>
+        <div><small>SHORT FORM / 社媒短版</small><b>15 秒节庆内容</b><p>保留最清晰的生活问题与产品介入，快速传达核心主题。</p></div>
+        <div><small>PRODUCT DEMO / 动作教育</small><b>楼梯吸尘片与开场对照</b><p>用短镜头解释吸头与接触面、行进路径；与 M3 双盘拖把的产品证明分开。</p></div>
+      </div>
       <div class="g-story-note" id="video-decision-strip">
         <h3>视频作品如何承担不同传播任务</h3>
         <div class="g-video-decision-grid">
           <article><small>品牌片 / 故事转折</small><h4>先让用户进入晚餐后的生活时刻</h4><p>节庆聚餐→地面问题→产品介入→回到家庭。画面验证叙事顺序，产品运行的真实性另按连续镜头检查。</p></article>
           <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
-          <article><small>开场测试 / 待验证</small><h4>亮相与直接上手，取决于观看任务</h4><p>两种镜头适合不同的信息阶段；若比较留存，需固定受众、版位、时长和后续镜头，当前没有可发布的胜负结论。</p></article>
+          <article><small>内容开场 / 创意判断</small><h4>认识产品，还是先解决一个问题</h4><p>客厅亮相优先建立产品识别；楼梯操作直接展示使用方法。围绕传播目标和观看任务选择开头，而不是让每条视频使用同一种节奏。</p></article>
         </div>
       </div>
       <div class="g-story-note" id="video-management">
