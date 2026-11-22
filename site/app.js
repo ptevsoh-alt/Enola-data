@@ -178,6 +178,19 @@
     crm: "搭建从用户状态识别到邮件内容、触发规则和发送排除条件的生命周期传播方案，与商品页、SEO 内容及社媒信息保持一致。",
     creator: "建立创作者筛选、合作 Brief、脚本审核与素材授权的工作流程，强调内容的受众匹配、演示质量和跨渠道复用价值。",
   };
+  const readerManagement = {
+    gtm: ["我负责社媒内容计划、创意 Brief 与物料审核，对接产品、设计、视频及各商业渠道所需的产品信息和素材。", "以首周内容与链接表现定位传播断点，再结合月度订单、售后和用户反馈决定下阶段内容重点。"],
+    social: ["我负责季度主题、月度社媒日历和小组交付，协调设计、视频与产品同事完成多平台内容。", "比较不同内容类型的曝光、互动与链接表现，把高频问题带回 FAQ、视频脚本和下月选题。"],
+    community: ["结合社群成员的使用问题设计教程、投票和 UGC 互动，与产品及内容团队整理后续回应。", "按成员规模、实际查看、讨论参与及内容投稿分别观察社群经营效果。"],
+    brand: ["围绕统一品牌主张，我参与品牌故事、视觉素材和产品传播内容审核，并协调社媒、PR、Creator 与合作活动素材。", "从品牌信息一致性、已发布传播内容和用户反馈三个角度整理下一轮品牌传播方向。"],
+    operations: ["按季度和月度主题安排内容任务，协调产品、设计、视频与电商接口；对创意、产品事实和平台规格逐项验收。", "通过返工记录和周月复盘，把常见问题转成明确的画面检查项、Brief 和下期排期。"],
+    b2b: ["根据客户类型和采购场景安排搜索、社媒与邮件触达，协同展会物料、询盘、报价和后续销售跟进。", "重点复盘有效客户回应、商机推进和成交质量，将采购疑问反馈到产品资料和下一轮市场沟通。"],
+    seo: ["围绕用户搜索问题规划主题指南、FAQ、商品页与邮件选题，同步产品、内容和站点信息。", "将 GSC 的查询与页面表现用于评估内容覆盖，并与自然搜索收入结构分开观察。"],
+    amazon: ["统筹 Listing、A+、PPC、促销与库存节奏，协调设计、广告、商品和售后环节。", "先判断问题来自搜索流量、页面说服力还是履约体验，再选择关键词、素材和广告优化。"],
+    creative: ["围绕受众、信息点与产品动作安排脚本、分镜和画面审核，协调产品事实、制作流程和平台交付。", "分别观察开场吸引力、动作表达和用户反馈，调整后续剪辑、字幕及画面顺序。"],
+    crm: ["连接用户状态、内容主题与邮件沟通路径，规划触达节奏、受众排除和不同阶段的信息。", "关注邮件点击、退订、顾客状态与后续访问，让生命周期信息与商品页、社媒内容持续对应。"],
+    creator: ["按市场和内容风格筛选创作者，明确 Brief、产品演示、初稿审核与素材版本交接。", "依据交付质量、受众匹配及素材使用许可，决定哪些内容适合后续品牌传播。"],
+  };
   function metricCard(m) {
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(readerWindow(m))}</small><span class="metric-source">查看数据详情 ↗</span></button>`;
   }
@@ -315,8 +328,8 @@
   function management(c) {
     const focus = caseDecisions[c.id];
     return `<div class="management-board case-handoff-board">
-      <article><h3>怎么分工交接</h3><p>${esc(focus.handoff)}</p></article>
-      <article><h3>结果怎么复核</h3><p>${esc(focus.review)}</p></article>
+      <article><h3>怎么分工交接</h3><p>${esc(readerManagement[c.id]?.[0] || focus.handoff)}</p></article>
+      <article><h3>结果怎么复核</h3><p>${esc(readerManagement[c.id]?.[1] || focus.review)}</p></article>
     </div>`;
   }
   function casePage(c) {
