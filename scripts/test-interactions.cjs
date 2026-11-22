@@ -107,7 +107,7 @@ const fs = require("fs"),
         d.querySelector("#evidence-content").textContent.includes(m.definition),
       );
       assert.ok(
-        d.querySelector("#evidence-content").textContent.includes(m.window),
+        d.querySelector("#evidence-content").textContent.includes(m.source),
       );
     });
     d.querySelector('[data-close="evidence-dialog"]').click();
