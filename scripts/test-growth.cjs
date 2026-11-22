@@ -77,7 +77,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["social", "gtm", "brand", "creative", "operations", "b2b"];
+  const featured = ["gtm", "brand", "social", "operations", "creative", "b2b"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
@@ -97,6 +97,9 @@ const fs = require("fs"),
     assert.deepEqual(links.map((item) => item.hash.split("/").at(-1)), featured);
     assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 6);
     assert.equal(d.querySelectorAll("#strategy-map .home-route-card").length, 7);
+    assert.equal(d.querySelectorAll("#jd-case-path .home-decision-grid a").length, 4);
+    assert.deepEqual([...d.querySelectorAll("#jd-case-path .home-decision-grid h3")].map((x) => x.textContent),
+      ["市场与用户判断", "GTM 与 Campaign 策划", "团队协作与项目推进", "传播结果与优化动作"]);
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".home-proof-bridge a strong").textContent, "4,009");
     const summary = d.querySelector(".home-summary");
