@@ -204,7 +204,7 @@
     ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
     ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
     ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
-    ["06","Creative / Video","用圣诞家庭故事传达品牌关系，用吸尘器镜头回答实际使用问题。","#/case/creative/video-projects","82 秒长片 · 产品演示视频"],
+    ["06","Creative / Video","用圣诞家庭故事传达品牌关系，用吸尘器镜头回答实际使用问题。","#/case/creative/video-projects","90 秒成片 · 产品演示视频"],
     ["07","Field / Exhibition","以真实储能展会为背景，呈现展位信息层级、产品讲解和 B2B 客户沟通。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
   ];
 
