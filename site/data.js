@@ -643,30 +643,6 @@ window.PORTFOLIO = {
       fieldVerification: "PENDING",
     },
     {
-      id: "retention",
-      domain: "lifecycle",
-      label: "复购 / 留存结果",
-      value: null,
-      display: "待补充",
-      unit: "未提供",
-      platform: "CRM / EDM",
-      window: "暂无邮件发送与复购统计周期",
-      status: "PENDING",
-      source: "EDM / CRM 生命周期规划工作物",
-      definition:
-        "该项用于说明 Welcome、弃购、购后教育和召回等生命周期规划；没有实际复购数值。",
-      limits: "不代表自动化流程已启用、邮件已发送或会员收入已经产生。",
-      caseId: "crm",
-      sourceId: "SRC-HISTORICAL-USER-SUPPLIED",
-      accountScope: null,
-      windowStart: null,
-      windowEnd: null,
-      comparisonWindow: null,
-      denominator: null,
-      evidenceStatus: "PENDING",
-      fieldVerification: "PENDING",
-    },
-    {
       id: "product-sales-stage",
       domain: "commerce",
       label: "产品上市阶段销量变化",
@@ -1260,7 +1236,7 @@ window.PORTFOLIO = {
         "正式上线前需完成发送域名与 DNS、Consent、名单治理、优惠冲突、频控、排除逻辑和测试发送验收。方案完成不等于系统启用，更不等于产生收入。",
       layout: "crm",
       work: "crm",
-      metrics: ["retention"],
+      metrics: [],
     },
     {
       id: "creator",
@@ -1699,16 +1675,8 @@ window.PORTFOLIO = {
             "核验发送域名、DNS、平台权限、名单治理和测试发送；将方案、系统启用、实际发送与复购结果分开记录。",
         },
       ],
-      evidenceGroups: [
-        {
-          title: "生命周期运营结果",
-          description:
-            "当前没有实际邮件发送、复购或留存统计；该项仅作为待衡量指标，不代表 Flow 已启用。",
-          metrics: ["retention"],
-        },
-      ],
-      evidenceNote:
-        "目前可以展示用户旅程、邮件波次、触发条件、Consent、频控和会员规则规划；实际自动化发送、名单增长、复购、留存及会员收入暂无可核结果。",
+      evidenceGroups: [],
+      evidenceNote: "展示订阅、购物车及购后的邮件内容、触发规则、名单排除与频控管理。",
     },
     creator: {
       headline: "让合作从适配判断走向可使用的内容资产",
