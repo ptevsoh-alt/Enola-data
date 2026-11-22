@@ -356,7 +356,7 @@ const fs = require("fs"),
   check("community activation has a single-owner event contract and consent boundaries", () => {
     const section = d.querySelector("#community-event-governance");
     assert.ok(section);
-    for (const term of ["唯一负责人", "活动发生在 Group 内，不自动改变最终 Owner", "参与资格", "奖励与履约", "单独确认使用授权", "出席不等于营销同意", "RSVP 不等于购买意向", "抽奖参与不等于高价值客户"])
+    for (const term of ["唯一负责人", "活动落在 Group 时", "参与资格", "奖励与履约", "单独确认使用授权", "出席不等于营销同意", "RSVP 不等于购买意向", "抽奖参与不等于高价值客户"])
       assert.ok(section.textContent.includes(term), term);
   });
   check("new evidence modules use readable typography", () => {
@@ -375,7 +375,7 @@ const fs = require("fs"),
       assert.deepEqual(cards.map((card) => card.querySelector("strong").textContent.trim()), ["34,387 人", "146 人", "4,009 名"]);
       assert.ok(cards[0].textContent.includes("2025/11/02–2026/09/30"));
       assert.ok(cards[1].textContent.includes("2025/11/02–2026/09/30"));
-      assert.ok(cards[2].textContent.includes("采集日期未注明"));
+      assert.ok(cards[2].textContent.includes("成员规模快照"));
       assert.equal(proof.querySelector(".g-compare-chart, [role='progressbar']"), null);
       assert.ok(proof.querySelector('a[href="assets/evidence/facebook-group-insights.webp"]'));
       for (const card of cards) {
