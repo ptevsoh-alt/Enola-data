@@ -51,7 +51,7 @@
           <p>面向美国市场的家用电动清洁工具，优先解决餐区硬地黏污，以及浴缸内沿、墙砖接缝和边角的刷洗问题。产品由电机带动清洁头，用户控制握持位置、角度和移动路径。</p>
           <h3>按三类购买任务组织沟通</h3>
           <p>餐区清洁者关注扫过后仍然粘脚的脚印和溅渍；浴室清洁者关注刷头够不到的内沿与接缝；替家人购买的人，需要先确认握持、转向、换刷头和适用表面。</p>
-          <p><a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
+          <p><a href="#/case/brand/seasonal-creative-gallery">查看父亲节与黑五视觉创意 ↗</a> · <a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
         </div>
       </div>
       <div class="g-project-list">
@@ -388,6 +388,30 @@
         <p>现有截图可核验 King Newswire 的新闻稿分发，刊载位置为 USA Today 的 Press Release 栏目。</p>
         
       </div></div>`, "pr-project");
+  }
+
+  function seasonalCreative() {
+    return section("节庆营销视觉｜从使用场景到活动主张", "父亲节礼赠与黑五产品组合：不同营销任务采用不同的视觉信息结构。", `
+      <div class="seasonal-art-grid" id="seasonal-art-gallery">
+        <figure class="seasonal-art-card">
+          <a href="assets/projects/fathers-day-bbq-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大父亲节烧烤清洁主题视觉创意">
+            ${image("fathers-day-bbq-concept", "父亲节主题概念海报：户外烧烤清洁场景、家庭陪伴、黄色清洁刷与英文标题", "jpg")}
+          </a>
+          <figcaption><small>FATHER'S DAY / GIFT GUIDE · 创意提案</small><h3>Give Dad the Power. He'll Bring the Flavor.</h3><p>用烧烤场景连接家庭情绪与电动清洁工具。父亲节礼赠的创意重点是人物、动作、产品用途与活动入口在同一个画面中被理解。</p></figcaption>
+        </figure>
+        <figure class="seasonal-art-card">
+          <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大黑五产品组合传播视觉创意">
+            ${image("black-friday-suite-concept", "黑五主题概念海报：黑金活动视觉、黄色清洁电器组合、Power Every Move 品牌主张", "jpg")}
+          </a>
+          <figcaption><small>BLACK FRIDAY / PRODUCT SUITE · 创意提案</small><h3>Power Every Move</h3><p>用统一背景、产品组合陈列和高对比标题强化大促识别。产品线共同传递全屋清洁的品牌主张，活动利益点与购买入口形成明确层级。</p></figcaption>
+        </figure>
+      </div>
+      <div class="seasonal-art-decision" aria-label="两种节庆内容的信息层次">
+        <div><span>父亲节 / Gift Moment</span><b>人物关系 → 使用场景 → 产品价值</b></div>
+        <div><span>黑五 / Shopping Moment</span><b>活动主题 → 产品组合 → 选购入口</b></div>
+      </div>
+      <p class="seasonal-art-caption">以上为视觉创意方案；海报中的促销文案是画面概念，不作为实际价格或已投放成果。</p>
+    `, "seasonal-creative-gallery");
   }
 
   function brandCampaign() {
@@ -745,7 +769,7 @@
   }
 
   const extras = {
-    brand: { strategy: brand, execution: () => pr() + brandCampaign() },
+    brand: { strategy: brand, execution: () => seasonalCreative() + pr() + brandCampaign() },
     gtm: { strategy: gtm },
     social: { execution: social },
     creative: { strategy: creativeStrategy, execution: creative },
