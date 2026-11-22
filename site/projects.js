@@ -307,8 +307,8 @@
           <div><span>03 · Conversion</span><strong>核对购买条件</strong><p>商品页 / CRM / Paid：价格、库存、支付和数据全通过后才开放购买型 CTA</p></div>
           <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
         </div>
-        <details class="g-chart-disclosure" id="campaign-content-matrix">
-          <summary>展开 Campaign 内容矩阵与渠道角色</summary>
+        <section class="v-content-map" id="campaign-content-matrix" aria-labelledby="v-content-heading">
+          <header><span class="v-section-kicker">CONTENT SYSTEM</span><h4 id="v-content-heading">八个内容支柱，在用户决策路径中各有位置</h4></header>
           <div class="v-content-matrix" aria-label="八个内容支柱与四个传播阶段对应关系">
             <div class="v-matrix-head"><b>内容支柱</b><span>认知</span><span>理解</span><span>行动</span><span>持续</span></div>
             <div class="v-matrix-row"><b>场景问题</b><i class="hit" aria-label="对应认知阶段">●</i><i>·</i><i>·</i><i>·</i></div>
@@ -321,6 +321,7 @@
             <div class="v-matrix-row is-secondary"><b>品牌组合（辅助）</b><i>·</i><i>·</i><i>·</i><i class="hit" aria-label="对应持续阶段">●</i></div>
           </div>
           <p class="v-matrix-help">实心圆表示该内容在传播路径中的主要任务。点击下方原有内容矩阵可查看渠道、素材和审核依赖。</p>
+          <details class="g-chart-disclosure"><summary>查看各内容支柱对应的渠道任务与素材要求</summary>
           <div class="g-proof-table"><table class="campaign-content-table">
             <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
             <tbody>
@@ -334,8 +335,9 @@
               <tr><th>组合教育（辅助）</th><td>四条产品线各解决什么清洁任务</td><td>持续期品牌轮播及教育内容</td><td>每款产品的官方图片和型号事实</td></tr>
             </tbody>
           </table></div>
-          <p class="g-chart-note">内容矩阵对应 M3 五月 Campaign 传播规划，包含七项核心内容与一项持续阶段的品牌组合教育。</p>
-        </details>
+          <p class="g-chart-note">七项核心内容 + 一项持续阶段的品牌组合教育。</p>
+          </details>
+        </section>
         <p class="campaign-lens-note"><a href="#/case/gtm/launch-four-stages">上市里程碑 ↗</a> · <a href="#/case/gtm/launch-cross-channel">跨渠道交付责任 ↗</a> · <a href="#/case/creative/video-projects">观看视频节选 ↗</a></p>
       </section>
       ${launchFourStage()}
