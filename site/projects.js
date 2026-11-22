@@ -564,6 +564,37 @@
             <div><small>03 / RELATIONSHIP</small><b>持续沟通</b><span>媒体资料 · 授权留资 · EDM</span></div>
           </div>
         </div>
+
+        <section class="expo-identity-editorial" id="expo-visual-language" aria-labelledby="expo-identity-title">
+          <header><small>VISUAL IDENTITY / EXPERIENCE SYSTEM</small><h4 id="expo-identity-title">让品牌在不同距离，都说同一句话</h4><p>把品牌识别、产品卖点和行动提示分别安排到背景墙、易拉宝、体验牌及后续传播画面。这是 M3 / Q3 展会概念的视觉语言提案，并非已批准的品牌 VI 手册。</p></header>
+          <div class="expo-identity-grid">
+            <article class="expo-identity-poster" aria-label="展会主视觉排版提案">
+              <small>MASTER VISUAL / 6–10M</small>
+              <span class="expo-identity-poster-brand">POWER EVERY MOVE</span>
+              <strong>SEE THE JOB.<br>SEE THE TOOL.</strong>
+              <p>M3 FOR FLOORS&nbsp; / &nbsp;Q3 FOR CORNERS</p>
+              <div class="expo-identity-poster-rule"><span>01 / LOOK</span><span>02 / TRY</span><span>03 / ASK</span></div>
+            </article>
+            <article class="expo-identity-hierarchy">
+              <small>MESSAGE HIERARCHY</small><h4>一张画面，三个阅读速度</h4>
+              <ol>
+                <li><b>3 秒｜品牌主张</b><span>远距只保留品牌识别与清洁品类，不塞入参数。</span></li>
+                <li><b>10 秒｜使用场景</b><span>中距区分 M3 地面和 Q3 浴室边角两类任务。</span></li>
+                <li><b>30 秒｜真实演示</b><span>近距提供动作说明、适用范围和技术问答。</span></li>
+              </ol>
+              <div class="expo-identity-swatches" aria-label="概念视觉色板"><span class="swatch-dark">深色背景</span><span class="swatch-yellow">产品黄色</span><span class="swatch-light">暖白信息区</span></div>
+            </article>
+            <article class="expo-identity-collateral">
+              <small>ONE STORY / MANY TOUCHPOINTS</small><h4>展前、展中与展后共用的视觉资产</h4>
+              <div class="expo-brand-touch">
+                <div><b>INVITE</b><span>社媒邀请与 EDM：说明为什么值得到场</span></div>
+                <div><b>EXPERIENCE</b><span>现场背景墙、产品卡与 Demo 指引</span></div>
+                <div><b>FOLLOW-UP</b><span>Brochure、Press Kit、FAQ 与会后沟通</span></div>
+              </div>
+              <p>图像提案优先采用产品源图；性能、尺寸和动作主张由产品负责人复核后再交付制作。</p>
+            </article>
+          </div>
+        </section>
         <div class="expo-workstream" aria-label="展会九类工作模块">
           <article><span>01</span><b>品牌策略</b><small>展会主题 / 信息层级</small></article>
           <article><span>02</span><b>空间设计</b><small>Booth Layout / 展位动线</small></article>
@@ -651,6 +682,25 @@
           <div><small>展中 / 接待运营</small><b>演示排队、日常维护、需求记录与交接</b></div>
           <div><small>展后 / 项目复盘</small><b>询盘跟进、内容复用、物料清点与项目总结</b></div>
         </div>
+      </section>
+
+      <section class="expo-experience-menu" id="expo-experience-menu" aria-labelledby="expo-experience-title">
+        <header><small>ON-SITE ACTIVATION × CONTENT DESIGN</small><h3 id="expo-experience-title">让一次体验，产生四种可延续的内容</h3><p>观众不只看产品：先观察真实动作，再提问、记录需求或自愿分享。每项活动都对应场景、现场物料、线上内容和后续负责人。</p></header>
+        <div class="expo-experience-grid">
+          <article class="expo-experience-card">
+            <div class="expo-experience-icon">01<span>DEMO</span></div><h4>90 秒场景演示</h4><p>M3 演示地面接触和连续推进；Q3 展示刷头角度与浴室边角。时长仅为活动脚本提案，不是产品清洁效率承诺。</p><dl><div><dt>现场</dt><dd>A3 操作牌＋主持人分步讲解</dd></div><div><dt>传播</dt><dd>Reels / Shorts 的动作特写</dd></div></dl>
+          </article>
+          <article class="expo-experience-card">
+            <div class="expo-experience-icon">02<span>ASK</span></div><h4>用户问题墙</h4><p>邀请访客选择清洁难题，现场记录产品适用条件与尚未解决的问题，交由产品和内容团队统一确认。</p><dl><div><dt>现场</dt><dd>问题卡、FAQ 台卡与讲解话术</dd></div><div><dt>传播</dt><dd>展后 FAQ 内容与社群问答</dd></div></dl>
+          </article>
+          <article class="expo-experience-card">
+            <div class="expo-experience-icon">03<span>SHARE</span></div><h4>体验视频拍摄位</h4><p>优先拍产品结构及操作动作；有人物出镜或用于商用传播时，须分别取得拍摄与复用许可。</p><dl><div><dt>现场</dt><dd>竖屏构图提示与拍摄同意说明</dd></div><div><dt>传播</dt><dd>现场短视频、Creator/PR 素材包</dd></div></dl>
+          </article>
+          <article class="expo-experience-card">
+            <div class="expo-experience-icon">04<span>CONNECT</span></div><h4>需求分流与会后跟进</h4><p>扫码选择经销合作、产品咨询或许可订阅。每类需求分别设置问题、资料与交接 Owner，不以扫码代替有效线索。</p><dl><div><dt>现场</dt><dd>接待 A5 台牌与分流问卷</dd></div><div><dt>传播</dt><dd>销售跟进、许可邮件与活动回顾</dd></div></dl>
+          </article>
+        </div>
+        <div class="expo-experience-close"><strong>从一次现场动作，延伸成一个传播周期</strong><span>邀请预热 → 产品体验 → 现场内容 → 用户问答 → 合规跟进</span></div>
       </section>
       <section class="expo-program expo-campaign-flight" id="expo-event-plan" aria-labelledby="expo-program-title">
         <header><small>CAMPAIGN × OFFLINE × CRM</small><h3 id="expo-program-title">一次展会，三段传播与转化任务</h3><p>不把“到场人数”当作营销终点。展前建立目标客户预期，现场形成真实体验，会后按客户需求推进后续沟通。</p></header>
