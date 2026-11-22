@@ -855,3 +855,7 @@
 .review-feature-film figcaption p{color:#e7eee3;font-size:.85rem;margin:0}
 .review-feature-film figcaption a{color:#f4dfb8;font-size:.8rem;text-decoration:underline}
 @media(max-width:800px){.review-video-grid .review-feature-film{grid-template-columns:minmax(0,1fr)}}
+
+.review-film-editions { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; align-items: center; margin: .8rem 0; padding: .8rem 0; border-top: 1px solid var(--rule); }
+.review-film-editions span { font-size: .8rem; font-weight: 700; }
+.review-film-editions a { font-size: .82rem; color: var(--accent); text-decoration: underline; text-underline-offset: .14em; }
