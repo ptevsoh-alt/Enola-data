@@ -2295,3 +2295,13 @@
 .evidence-method { margin: 1rem 0; padding: .65rem 1rem; background: #eff3eb; border: 1px solid var(--rule); }
 .evidence-method summary { cursor: pointer; font-weight: 650; }
 @media (max-width: 720px) { .campaign-assets-pair { grid-template-columns: minmax(0,1fr); }.campaign-flight-plan { margin-inline: -.5rem; } }
+
+/* Employer-facing KPI presentation: optional source images stay folded. */
+.g-source-evidence-collapsed { display: block; margin-top: 22px; padding: 0; background: transparent; border: 1px solid var(--rule); }
+.g-source-evidence-collapsed > summary { cursor: pointer; list-style-position: inside; padding: 14px 18px; color: var(--accent); font-size: .82rem; font-weight: 650; }
+.g-source-evidence-collapsed[open] > summary { border-bottom: 1px solid var(--rule); background: #eef2ea; }
+.g-source-evidence-collapsed .g-source-evidence-grid { margin: 16px; }
+.g-source-evidence-collapsed .g-source-evidence-actions { margin: 0 16px 16px; }
+.g-history-card .g-history-meta { margin-bottom: 7px; }
+.g-history-card .g-history-main { min-height: 4.6rem; }
+@media (max-width: 720px) { .g-source-evidence-collapsed .g-source-evidence-grid { grid-template-columns: 1fr; } }
