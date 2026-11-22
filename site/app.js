@@ -162,6 +162,14 @@
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(m.window)}</small><span class="metric-source">${P.statuses[m.status]} · 定义与来源 ↗</span></button>`;
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
+  const homeRoutes = [
+    ["01", "GTM / 产品营销", "让用户在餐后清洁任务中理解新品，再决定哪些信息能进入 KV、视频和商品页。", "#/case/gtm/launch-decisions", "M3 使用场景与产品证明"],
+    ["02", "IMC / Campaign", "由一个主目标到 Big Idea、内容矩阵、渠道职责与发布条件，而非多平台同步发帖。", "#/case/gtm/campaign-architecture", "Campaign Strategy / 内容矩阵"],
+    ["03", "Brand / PR", "品牌屋确定任务分工，新闻稿和联合营销承担不同的可信信息角色。", "#/case/brand/brand-positioning", "品牌屋与实际传播作品"],
+    ["04", "Creative / Video", "节庆故事建立情绪关联，操作镜头证明产品如何接触与移动。", "#/case/creative/video-projects", "播放三段 MP4 节选"],
+    ["05", "Social / Growth", "季度主题、月度日历与平台数据相互关联，复盘不混用不同窗口。", "#/case/social/social-data-decisions", "2025 Meta 阶段结果"],
+    ["06", "Team / Delivery", "社媒小组管理、产品事实核验、设计返工及渠道放行责任分开记录。", "#/case/operations/asset-review", "真实视觉返工与协同"],
+  ];
 
   function featuredCard(id, item) {
     const image = item.image ? `<img src="assets/projects/${item.image}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
@@ -179,12 +187,22 @@
         <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>整合传播与产品上市</em></h1>
         <p class="profile-direction">${esc(P.profile.direction)}</p>
         <p class="hero-summary">${esc(P.profile.summary)}</p>
-        <div class="actions"><a class="btn" href="#/home/selected-work">看代表项目 ↘</a><a href="#/case/creative/video-projects">看视频案例 ↗</a><a href="#/experience">工作经历</a></div></div>
-        <nav class="featured-nav" aria-label="代表项目"><h2>代表项目</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
+        <div class="actions"><a class="btn" href="#/home/strategy-map">按主题看作品 ↘</a><a href="#/case/creative/video-projects">播放视频 ↗</a><a href="#/experience">经历与职责</a></div></div>
+        <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总 · 历史项目记录</p><a href="#/case/social/results">查看经营结果与数据口径 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
-      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
+      <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
+        <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">从策略判断到作品与结果</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
+        <p class="home-route-intro">每张卡片都能打开对应的项目决策、实物或数据。规划案例与已经发生的结果分开展示。</p>
+        <div class="home-route-grid">${homeRoutes.map(([no, title, note, href, evidence]) => `<a class="home-route-card" href="${href}"><span class="home-route-index">${no} / ${title}</span><p>${note}</p><strong>${evidence} <span aria-hidden="true">↗</span></strong></a>`).join("")}</div>
+      </section>
+      <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
+        <a href="#/data/community"><small>美国 Facebook Group · 成员快照</small><strong>${esc(metric("group-members").display)}</strong><span>采集日期未注明；与 2025 Meta 汇总不合并 ↗</span></a>
+        <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>粉丝规模起止值，日期和账号范围待核 ↗</span></a>
+        <a href="#/case/creative/video-projects"><small>节庆与产品教育 · 本地播放器</small><strong>3 段视频</strong><span>节庆叙事、实际操作及开场对照 ↗</span></a>
+      </section>
+      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">重点案例与实际工作物</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
