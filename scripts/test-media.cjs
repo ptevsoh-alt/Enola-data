@@ -4,7 +4,8 @@ const assert = require("node:assert/strict");
 const { spawnSync } = require("node:child_process");
 const root = path.resolve(__dirname, "../site");
 const clips = [
-  ["holiday-story.mp4", "节庆故事"],
+  ["holiday-story.mp4", "节庆故事短版"],
+  ["holiday-story-long.mp4", "节庆故事长版"],
   ["stair-demo.mp4", "楼梯演示"],
   ["product-opening.mp4", "开场对照"],
 ];
@@ -62,4 +63,4 @@ for (const [name] of clips) {
   assert.ok(review.includes("../assets/video/" + name), "review does not use " + name);
   assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
 }
-console.log("PASS three excerpts are linked from both case study and review; actual browser playback and rights approval are separate.");
+console.log("PASS full holiday film and three shorter excerpts are linked from both case study and review; actual browser playback and rights approval are separate.");
