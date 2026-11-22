@@ -142,7 +142,10 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#campaign-architecture .campaign-lens-grid article").length, 4);
     assert.equal(d.querySelectorAll("#campaign-architecture .campaign-journey>div").length, 4);
     assert.equal(d.querySelectorAll("#campaign-content-matrix tbody tr").length, 8);
-    assert.match(d.getElementById("campaign-architecture").textContent, /规划.*不代表已经发布/);
+    assert.equal(d.querySelectorAll("#campaign-architecture .campaign-house-channels article").length, 8);
+    assert.equal(d.querySelectorAll("#campaign-architecture .campaign-workstreams article").length, 8);
+    assert.ok(d.getElementById("campaign-architecture").textContent.includes("EDM & CRM"));
+    assert.ok(d.getElementById("campaign-architecture").textContent.includes("PAID ADS"));
   });
   await route("/case/gtm/campaign-mechanism-mapping");
   check("a direct link from review opens the M3 creative directions", () => {
@@ -150,7 +153,7 @@ const fs = require("fs"),
   });
   await route("/case/social/fathers-day-channel-roles");
   check("Father's Day content plan distinguishes four channel responsibilities", () => {
-    assert.equal(d.querySelectorAll("#fathers-day-channel-roles article").length, 4);
+    assert.equal(d.querySelectorAll("#fathers-day-channel-roles article").length, 6);
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
