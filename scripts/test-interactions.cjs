@@ -88,31 +88,42 @@ const fs = require("fs"),
   check("search matches professional terms", () =>
     assert.equal(d.querySelectorAll(".case-card").length, 1),
   );
-  for (const domain of Object.keys(w.PORTFOLIO.domains)) {
+  const publicMetrics = w.PORTFOLIO.metrics.filter((m) =>
+    m.status !== "PENDING" && typeof m.value === "number" &&
+    Number.isFinite(m.value) && !!m.display && !/待补|待核|暂无|未提供/.test(m.display));
+  const visibleDomains = [...new Set(publicMetrics.map(m => m.domain))];
+  for (const domain of visibleDomains) {
     await route("/data/" + domain);
-    check("data domain " + domain, () =>
-      assert.equal(
-        d.querySelectorAll(".data-kpis .metric").length,
-        w.PORTFOLIO.metrics.filter((m) => m.domain === domain).length,
-      ),
-    );
+    check("published data domain " + domain, () =>
+      assert.equal(d.querySelectorAll(".data-kpis .metric").length,
+        publicMetrics.filter(m => m.domain === domain).length));
   }
-  for (const m of w.PORTFOLIO.metrics) {
+  await route("/data/lifecycle");
+  check("empty lifecycle outcome excluded from public data", () => {
+    assert.ok(!d.querySelector('[href="#/data/lifecycle"]'));
+    assert.ok(!d.querySelector(".data-kpis").textContent.includes("待补充"));
+  });
+  for (const m of publicMetrics) {
     await route("/data/" + m.domain);
     const b = d.querySelector(`[data-evidence="${m.id}"]`);
     b.focus();
     b.click();
     check("metric evidence " + m.id, () => {
       assert.ok(d.querySelector("#evidence-dialog").open);
-      assert.ok(
-        d.querySelector("#evidence-content").textContent.includes(m.definition),
-      );
-      assert.ok(
-        d.querySelector("#evidence-content").textContent.includes(m.source),
-      );
+      assert.ok(d.querySelector("#evidence-content").textContent.includes(m.definition));
+      assert.ok(d.querySelector("#evidence-content").textContent.includes(m.source));
     });
     d.querySelector('[data-close="evidence-dialog"]').click();
     assert.equal(d.activeElement, b);
+  }
+  for (const c of w.PORTFOLIO.cases) {
+    await route("/case/" + c.id);
+    check("no placeholder outcomes in " + c.id, () => {
+      const t = d.querySelector("#results").textContent;
+      assert.ok(!/待补充|待核|暂无可核|未提供可核/.test(t));
+      const heading = d.querySelector("#results h2").textContent;
+      assert.ok(["项目成果", "代表交付"].includes(heading));
+    });
   }
   await route("/case/gtm");
   d.querySelector("[data-image]").click();
