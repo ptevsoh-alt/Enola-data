@@ -63,14 +63,16 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
-  check("review gallery embeds two seasonal TVCs and three labeled supporting clips", () => {
+  check("review gallery embeds two full TVCs and two distinct Creator scenes", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
-    assert.equal(clips.length, 3);
+    assert.equal(clips.length, 2);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
     assert.equal(d.querySelectorAll('#review-videos iframe').length, 2);
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
     assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
+    assert.ok(d.querySelector('#review-videos source[src="../assets/video/product-opening.mp4#t=0,3"]'));
+    assert.ok(!d.querySelector('#review-videos source[src*="holiday-story.mp4"]'));
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
