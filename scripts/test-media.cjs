@@ -69,9 +69,10 @@ for (const [name] of clips) {
     assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
   }
 }
-for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]) {
+for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE", "1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y"]) {
   assert.ok(review.includes("drive.google.com/file/d/" + id + "/preview"), "review misses public full film");
   assert.ok(projects.includes("drive.google.com/file/d/" + id + "/preview"), "case misses public full film");
 }
-assert.ok(projects.includes("drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"), "alternate public film missing");
-console.log("PASS two permission-checked Drive long films selected plus three native short clips; browser access remains separately tested.");
+assert.ok(projects.includes('id="thanksgiving-tvc"') && projects.includes('id="holiday-full-film"'), "two themed TVC projects not found");
+assert.ok(projects.includes('id="kol-shorts"'), "creator short-form video grouping missing");
+console.log("PASS Thanksgiving TVC, Christmas TVC and Creator/KOL grouping with three local playable clips; rights and browser playback are separate.");
