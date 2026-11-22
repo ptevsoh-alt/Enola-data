@@ -435,87 +435,110 @@
       </div>`, "video-strategy");
   }
 
+
   function creative() {
-    return section("节庆叙事与产品演示", "以家庭节庆故事传递品牌温度，用产品使用场景解释实际价值，并展示不同镜头如何适配传播目标。", `
-      <figure class="g-featured-film" id="holiday-full-film">
-        <div class="g-featured-film-screen">
-          <iframe loading="lazy" title="播放圣诞成片 · 90 秒完整品牌故事" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+    return section("节庆 TVC 与 KOL 内容", "以感恩节、圣诞节两支主题广告建立品牌情绪，用 KOL / Creator 短视频回答真实的产品使用问题。", `
+      <section class="tvc-creative-intro" id="video-campaign-showcase">
+        <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
+        <h3>同一个清洁品牌，不同节日讲不同的家庭故事</h3>
+        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 都让产品进入人物情节，而不是将功能参数单独堆进故事。KOL / Creator 短视频则承担更直接的产品演示与使用教育。</p>
+      </section>
+      <div class="tvc-work-grid" aria-label="感恩节和圣诞节两支独立 Campaign TVC">
+        <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
+          <div class="tvc-work-heading"><small>01 / THANKSGIVING · SEASONAL TVC</small><h3 id="thanksgiving-heading">感恩节｜感谢藏在日常照料里</h3><p>节日餐桌、火鸡和家人之间的互动建立节庆氛围；地面清洁成为人物彼此照顾的动作，随后进入双盘清洁工具的使用与功能演示。</p></div>
+          <div class="tvc-work-player" id="video-drive-editions">
+            <iframe loading="lazy" title="播放感恩节主题 TVC · 1114 版本约101秒" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <div class="tvc-work-copy">
+            <dl>
+              <div><dt>主题切入</dt><dd>感恩节餐叙与家人之间的陪伴</dd></div>
+              <div><dt>创意机制</dt><dd>团聚场景 → 生活中的清洁任务 → 家人互助 → 产品使用特写</dd></div>
+              <div><dt>传播价值</dt><dd>用情感故事建立关注，以连续操作和功能画面补充产品理解</dd></div>
+            </dl>
+            <a href="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view" target="_blank" rel="noopener noreferrer">观看感恩节 TVC 完整视频 ↗</a>
+          </div>
+        </article>
+        <article class="tvc-work-card" id="holiday-full-film" aria-labelledby="christmas-heading">
+          <div class="tvc-work-heading"><small>02 / CHRISTMAS · SEASONAL TVC</small><h3 id="christmas-heading">圣诞节｜把关心放进每一个小动作</h3><p>圣诞树、礼物与夜晚的家庭空间建立情绪，年长者默默整理地面、使用黄色双盘拖把，最后让镜头回到一家人的相聚时刻。</p></div>
+          <div class="tvc-work-player">
+            <iframe loading="lazy" title="播放圣诞节主题 TVC · 90秒完整成片" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+          </div>
+          <div class="tvc-work-copy" id="long-film-note">
+            <dl>
+              <div><dt>主题切入</dt><dd>圣诞夜的家庭照料与陪伴</dd></div>
+              <div><dt>创意机制</dt><dd>节日空间 → 地面清洁 → 产品操作 → 家人团聚</dd></div>
+              <div><dt>传播价值</dt><dd>让功能表达融入人物关系，用完整叙事承载品牌情绪</dd></div>
+            </dl>
+            <a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view" target="_blank" rel="noopener noreferrer">观看圣诞节 TVC 完整成片 ↗</a>
+          </div>
+        </article>
+      </div>
+      <section class="tvc-campaign-bridge" id="video-campaign-strategy">
+        <header><small>CAMPAIGN → STORY → CHANNEL</small><h3>从节庆主题，到可用于渠道传播的创意内容</h3><p>两支品牌片的任务是情绪联结与产品价值沟通；短视频与商品内容进一步解释使用方式。Campaign 中的素材分工围绕同一产品信息展开。</p></header>
+        <div class="tvc-campaign-bridge-grid">
+          <article><span>BRAND / TVC</span><h4>情绪与记忆</h4><p>感恩节围绕感谢与相聚，圣诞节围绕日常关怀。让人物和产品动作在故事中发生联系。</p></article>
+          <article><span>SOCIAL / PAID CREATIVE</span><h4>节奏与创意适配</h4><p>从完整故事中选取场景、人物和产品镜头，分别适配 Feed、Reels、视频广告等渠道的信息顺序。</p></article>
+          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>围绕楼梯清洁等具体任务设计竖屏演示、产品亮相、接触面与动作镜头，独立承担可信使用说明。</p></article>
         </div>
-        <figcaption id="long-film-note">
-          <small>FEATURED FILM / 90S CHRISTMAS STORY</small><h3>圣诞夜，把照料放在日常小事里</h3>
-          <p>90 秒成片从圣诞家庭布置和木地板的日常打扫展开，年长者使用黄色电动拖把整理房间，随后故事转向家人与孩子相聚。产品不再是单独列出的功能点，而是家人相互照料的一个动作。</p>
-          <p>画面主线：节日空间 → 地面清洁 → 产品使用与局部特写 → 家庭相聚。</p>
-          <div class="film-edition-actions"><a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">观看 90 秒完整成片 ↗</a><a href="#/case/creative/video-strategy">查看创意选择 ↗</a></div>
-          
-        </figcaption>
-      </figure>
-      <details class="video-extended-version" id="video-drive-editions">
-        <summary>观看另一版节庆广告剪辑（约 101 秒）</summary>
-        <div class="video-extended-content"><div class="video-extended-player"><iframe loading="lazy" title="播放 1114 视频 · 节庆和产品演示剪辑" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div><h3>家庭餐叙与产品操作的剪辑组合</h3><p>这一版本从节日餐桌、地面清洁过渡到产品结构、双盘运转和功能信息展示。与上面的家庭照料主片相比，它更直接地承担产品介绍的任务。</p><p><a href="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">查看 101 秒视频 ↗</a></p></div></div>
-      </details>
-      <section class="video-storyline" id="video-storyline" aria-label="节庆故事的四段画面节奏">
-        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>90 秒主片以圣诞家庭空间开场，用清洁动作带出产品，在家人相聚中完成情绪收束。</p></header>
+        <p><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道协同 ↗</a> · <a href="#/case/operations/asset-review">查看创意与物料审核 ↗</a></p>
+      </section>
+      <section class="video-storyline" id="video-storyline" aria-label="圣诞 TVC 四段叙事结构">
+        <header><small>CHRISTMAS STORY / 画面叙事</small><h3>圣诞 TVC：四个镜头任务</h3><p>从家庭氛围出发，让清洁动作成为人物关系的一部分，最后以团聚收束。</p></header>
         <ol class="video-story-beats">
-          <li><span>01 / SETTING</span><strong>圣诞家庭场景</strong><p>装饰、礼物与木质地面建立生活环境</p></li>
-          <li><span>02 / ACTION</span><strong>整理地面</strong><p>人物与清洁工具同框，展示使用情境</p></li>
-          <li><span>03 / PRODUCT</span><strong>使用过程与细节</strong><p>双盘与地面的接触和推进动作交代产品用途</p></li>
-          <li><span>04 / RELATIONSHIP</span><strong>家人团聚</strong><p>人物互动和节日氛围完成故事收束</p></li>
+          <li><span>01 / SETTING</span><strong>圣诞家庭场景</strong><p>灯光、礼物与生活空间建立节日情绪</p></li>
+          <li><span>02 / ACTION</span><strong>默默整理地面</strong><p>年长者的动作让照料主题具体可见</p></li>
+          <li><span>03 / PRODUCT</span><strong>产品融入故事</strong><p>双盘与地面的接触、推进交代实际用途</p></li>
+          <li><span>04 / RELATIONSHIP</span><strong>回到家人团聚</strong><p>人物互动承接品牌情绪，完成故事收束</p></li>
         </ol>
       </section>
-      <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
-      <p class="g-video-gallery-lede">不同镜头对应不同用户问题：从产品亮相、实际操作到场景功能解释。</p>
-      <div class="g-video-gallery">
-        <figure>
-          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
-            <source src="assets/video/holiday-story.mp4" type="video/mp4">
-            <a href="assets/video/holiday-story.mp4">打开节庆短片 MP4</a>
-          </video>
-          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>从圣诞家庭关怀与日常清洁的动作切入，用产品使用画面承接人物情绪，再回到家庭与礼物。</p></figcaption>
-        </figure>
-        <figure class="g-video-demo">
-          <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放楼梯吸尘演示节选" aria-describedby="stairs-video-note">
-            <source src="assets/video/stair-demo.mp4" type="video/mp4">
-            <a href="assets/video/stair-demo.mp4">打开楼梯演示 MP4</a>
-          </video>
-          <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>通过楼梯场景展示无线吸尘器的吸头接触、移动路径与实际操作，让产品功能在使用情境中被理解。</p></figcaption>
-        </figure>
-      </div>
-      <div class="g-opening-comparison" id="video-opening-comparison">
-        <figure>
-          <video controls playsinline preload="metadata" aria-label="播放客厅产品亮相和楼梯动作开场对照" aria-describedby="opening-video-note">
-            <source src="assets/video/product-opening.mp4" type="video/mp4">
-            <a href="assets/video/product-opening.mp4">打开开场对照 MP4</a>
-          </video>
-          <figcaption id="opening-video-note">两种开场表达：产品亮相与直接进入使用场景。</figcaption>
-        </figure>
-        <div>
-          <h3>无线吸尘器的两种开场</h3>
-          <dl>
-            <div><dt>0–3 秒 · 客厅亮相</dt><dd>先看到产品、握持和家居环境，适合主打认识产品的内容。</dd></div>
-            <div><dt>约 3–6 秒 · 楼梯上手</dt><dd>吸头立刻接触踏面，优先回答怎么用。做产品教育时，从这个动作开始。</dd></div>
-          </dl>
-          <p>这组剪辑展示开场创意如何影响信息进入的顺序：新品认知内容先亮相，使用教育内容优先交代动作。创意审核同步检查产品结构、连续性和平台安全区。</p>
+      <section class="kol-story" id="kol-shorts">
+        <header><small>CREATOR / KOL-STYLE SHORT VIDEO</small><h3>KOL 内容｜用具体的使用情境回答产品问题</h3><p>竖屏楼梯吸尘素材以真实家庭环境、人物持机和吸头移动建立内容可信度。相比完整 TVC，短视频更强调一开始就出现清洁任务，并把产品动作留在镜头里。</p></header>
+        <div class="g-video-gallery">
+          <figure class="g-video-demo">
+            <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放 KOL 风格楼梯吸尘产品演示" aria-describedby="stairs-video-note">
+              <source src="assets/video/stair-demo.mp4" type="video/mp4">
+              <a href="assets/video/stair-demo.mp4">观看楼梯清洁短视频</a>
+            </video>
+            <figcaption id="stairs-video-note"><h3>楼梯场景｜操作演示</h3><p>人物、扶手、踏面和吸头保持在同一生活空间中，通过移动路径让使用方式更清楚。</p></figcaption>
+          </figure>
+          <figure id="video-opening-comparison">
+            <video controls playsinline preload="metadata" poster="assets/projects/vacuum-video-frame.webp" aria-label="播放 KOL 风格产品亮相与楼梯清洁开场对照" aria-describedby="opening-video-note">
+              <source src="assets/video/product-opening.mp4" type="video/mp4">
+              <a href="assets/video/product-opening.mp4">观看产品开场对照</a>
+            </video>
+            <figcaption id="opening-video-note"><h3>两种开场｜产品亮相与直接上手</h3><p>产品先出现，适合新品认知；先给出吸头接地的动作，更适合使用教育。</p></figcaption>
+          </figure>
         </div>
-      </div>
-
-      <div class="video-format-roles" id="video-format-roles" aria-label="视频内容的渠道适配">
-        <div><small>LONG FORM / 品牌故事</small><b>90 秒圣诞成片</b><p>完整呈现家庭照料、产品进入情节和情绪收束。</p></div>
-        <div><small>SHORT FORM / 社媒短版</small><b>15 秒节庆内容</b><p>保留最清晰的生活问题与产品介入，快速传达核心主题。</p></div>
-        <div><small>PRODUCT DEMO / 动作教育</small><b>楼梯吸尘片与开场对照</b><p>用短镜头解释吸头与接触面、行进路径；与 M3 双盘拖把的产品证明分开。</p></div>
+        <p class="kol-role-note">内容方向：KOL / Creator 产品体验与短视频素材。公开展示的是可播放的剪辑样例；合作方正式发布与内容商业复用，以实际授权和发布记录为准。</p>
+      </section>
+      <details class="video-cutdown" id="video-holiday-cutdown">
+        <summary>观看节庆 TVC 的短版剪辑</summary>
+        <figure>
+          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭故事短版" aria-describedby="holiday-video-note">
+            <source src="assets/video/holiday-story.mp4" type="video/mp4">
+            <a href="assets/video/holiday-story.mp4">观看节庆短版剪辑</a>
+          </video>
+          <figcaption id="holiday-video-note"><strong>品牌片短版</strong><p>从完整节庆故事提取人物、清洁动作与产品画面，用于理解长片如何转化成短视频信息结构。</p></figcaption>
+        </figure>
+      </details>
+      <div class="video-format-roles" id="video-format-roles" aria-label="节庆 TVC 与 KOL 内容的传播分工">
+        <div><small>THANKSGIVING TVC</small><b>节庆情境与感谢</b><p>用餐桌与家庭互助进入故事，让产品功能自然承接生活场景。</p></div>
+        <div><small>CHRISTMAS TVC</small><b>关怀与家庭陪伴</b><p>以默默照料建立品牌情绪，产品实际使用推动人物关系。</p></div>
+        <div><small>CREATOR / KOL</small><b>使用证明与动作教育</b><p>聚焦楼梯吸尘、持机方式和镜头开场，突出产品使用过程。</p></div>
       </div>
       <div class="g-story-note" id="video-decision-strip">
-        <h3>视频作品如何承担不同传播任务</h3>
+        <h3>三种视频内容，各自解决不同的传播任务</h3>
         <div class="g-video-decision-grid">
-          <article><small>品牌片 / 家庭关系</small><h4>用日常清洁讲家人之间的照料</h4><p>圣诞家庭布置、年长者的清洁动作与家人相聚构成故事，产品展示服务情绪发展。</p></article>
-          <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
-          <article><small>内容开场 / 创意判断</small><h4>认识产品，还是先解决一个问题</h4><p>客厅亮相优先建立产品识别；楼梯操作直接展示使用方法。围绕传播目标和观看任务选择开头，而不是让每条视频使用同一种节奏。</p></article>
+          <article><small>感恩节 / TVC</small><h4>从团聚进入产品价值</h4><p>火鸡餐桌、生活问题、家人照料与双盘清洁演示组合成情绪和功能都能被理解的品牌内容。</p></article>
+          <article><small>圣诞节 / TVC</small><h4>用清洁动作讲关怀</h4><p>圣诞家庭布置、年长者整理地面和家人团聚形成完整叙事，产品是人物关系中的行动。</p></article>
+          <article><small>KOL / Creator</small><h4>让用户看见具体怎么用</h4><p>竖屏楼梯短视频直达操作问题，素材重点是吸头接触、握持、移动路线和观看时长内的清晰表达。</p></article>
         </div>
       </div>
       <div class="g-story-note" id="video-management">
-        <h3>从创意方向到完整的视频表达</h3>
-        <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
-        <p>视频以生活情境建立注意，再使用人物动作、产品特写、字幕与节奏传递单一信息点。通过脚本、分镜与画面审核，让不同长度和版位的内容保持同一价值表达。</p><details class="reader-source-note"><summary>产品演示与效果证明说明</summary><p>操作画面主要呈现握持、移动方向和接触位置；清洁效果与性能主张需用可核验的同条件素材和产品事实确认。公开视频传播数据另按发布记录统计。</p></details>
-        <p><a href="#/case/creative/video-strategy">查看创意选择与渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看一次物料如何返工 ↗</a></p>
+        <h3>我的创意参与与项目交付</h3>
+        <p>参与节庆传播主题、创意脚本与画面审核，将品牌情绪、产品卖点和实际使用情境转化为可执行的镜头与传播物料。与产品、视觉、视频及社媒团队协作，分别检查故事连贯性、产品结构、动作真实性、字幕与渠道版本。</p>
+        <p>广告长片承担完整的故事表达；短视频围绕具体使用问题重新安排开场与镜头，而不是简单把 TVC 缩短。不同内容通过 Brief、审核和渠道版本管理保持品牌与产品信息一致。</p>
+        <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
 
