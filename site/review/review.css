@@ -833,3 +833,15 @@
     aspect-ratio: 16 / 10;
   }
 }
+
+/* Working-cut video gallery in the independent review entry. */
+.review-video-intro { color: var(--muted); max-width: 56rem; margin: .25rem 0 1.25rem; }
+.review-video-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: .9rem; }
+.review-video-grid figure { background: var(--white); margin: 0; border: 1px solid var(--rule); border-radius: .45rem; overflow: hidden; min-width: 0; }
+.review-video-grid video { width: 100%; aspect-ratio: 16 / 10; background: #18231d; object-fit: contain; display: block; }
+.review-video-grid figcaption { padding: .8rem; display: grid; gap: .35rem; }
+.review-video-grid figcaption strong { font-size: .91rem; }
+.review-video-grid figcaption small { color: var(--muted); font-size: .74rem; }
+.review-video-footnote { color: var(--muted); font-size: .8rem; }
+@media(max-width:880px){.review-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.review-video-grid{grid-template-columns:minmax(0,1fr)}}
