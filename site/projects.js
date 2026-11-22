@@ -439,26 +439,27 @@
     return section("节庆叙事与产品演示", "以家庭节庆故事传递品牌温度，用产品使用场景解释实际价值，并展示不同镜头如何适配传播目标。", `
       <figure class="g-featured-film" id="holiday-full-film">
         <div class="g-featured-film-screen">
-          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆品牌故事长版" aria-describedby="long-film-note">
-            <source src="assets/video/holiday-story-long.mp4" type="video/mp4">
-            <a href="assets/video/holiday-story-long.mp4">播放节庆品牌故事长版</a>
-          </video>
+          <iframe loading="lazy" title="播放圣诞成片 · 90 秒完整品牌故事" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
         </div>
         <figcaption id="long-film-note">
-          <small>FEATURED FILM / CHRISTMAS STORY</small><h3>让清洁成为故事的一部分</h3>
-          <p>影片从圣诞夜的家庭氛围展开：年长者照顾正在休息的家人，随后使用黄色电动拖把整理木地板。镜头在产品动作、节日礼物与家庭关系之间切换，把“日常照料”作为贯穿故事的情绪线索。</p>
-          <p>观看重点：圣诞氛围 → 默默照料与清洁 → 产品使用与礼物 → 家庭情感收束。</p>
-          <div class="film-edition-actions"><a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">播放 82 秒节庆故事长版 ↗</a><a href="#/case/creative/video-strategy">查看完整创意说明 ↗</a></div>
-          <details class="reader-source-note"><summary>影片版本与交付说明</summary><p>网页播放的是 82 秒观看剪辑（H.264/AAC，640 × 360），保留故事声轨、去除原品牌片尾。Drive 中的 90 秒 US/UK REV08 FFmpeg 交付版通过技术解码、字幕与抽样连续性检查；其配音仍为指导版本，原 AI 动作尚未完成逐帧语义验收。REV09 是后续片尾预览，不作为最终配音成片。对外发布与素材复用以相关权利批准为准。</p></details>
+          <small>FEATURED FILM / 90S CHRISTMAS STORY</small><h3>圣诞夜，把照料放在日常小事里</h3>
+          <p>90 秒成片从圣诞家庭布置和木地板的日常打扫展开，年长者使用黄色电动拖把整理房间，随后故事转向家人与孩子相聚。产品不再是单独列出的功能点，而是家人相互照料的一个动作。</p>
+          <p>画面主线：节日空间 → 地面清洁 → 产品使用与局部特写 → 家庭相聚。</p>
+          <div class="film-edition-actions"><a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">观看 90 秒完整成片 ↗</a><a href="#/case/creative/video-strategy">查看创意选择 ↗</a></div>
+          
         </figcaption>
       </figure>
+      <details class="video-extended-version" id="video-drive-editions">
+        <summary>观看另一版节庆广告剪辑（约 101 秒）</summary>
+        <div class="video-extended-content"><div class="video-extended-player"><iframe loading="lazy" title="播放 1114 视频 · 节庆和产品演示剪辑" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe></div><div><h3>家庭餐叙与产品操作的剪辑组合</h3><p>这一版本从节日餐桌、地面清洁过渡到产品结构、双盘运转和功能信息展示。与上面的家庭照料主片相比，它更直接地承担产品介绍的任务。</p><p><a href="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view?usp=drivesdk" target="_blank" rel="noopener noreferrer">查看 101 秒视频 ↗</a></p></div></div>
+      </details>
       <section class="video-storyline" id="video-storyline" aria-label="节庆故事的四段画面节奏">
-        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>先用人物与冬日室内氛围建立情绪，再让日常清洁成为爱的行动，最后以家庭礼物和人物反应收束。</p></header>
+        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>90 秒主片以圣诞家庭空间开场，用清洁动作带出产品，在家人相聚中完成情绪收束。</p></header>
         <ol class="video-story-beats">
-          <li><span>01 / EMOTION</span><strong>圣诞夜与关怀</strong><p>家庭空间、休息中的亲人与长者照料建立情绪起点</p></li>
-          <li><span>02 / ACTION</span><strong>默默整理家务</strong><p>人物拿起清洁工具，地面操作成为关爱的具体动作</p></li>
-          <li><span>03 / PRODUCT</span><strong>工具与使用特写</strong><p>握持、双盘接地、行进与节日礼物形成产品记忆</p></li>
-          <li><span>04 / BRAND</span><strong>礼物与家庭关系</strong><p>人物互动承接情绪，让产品回到陪伴与关怀的意义</p></li>
+          <li><span>01 / SETTING</span><strong>圣诞家庭场景</strong><p>装饰、礼物与木质地面建立生活环境</p></li>
+          <li><span>02 / ACTION</span><strong>整理地面</strong><p>人物与清洁工具同框，展示使用情境</p></li>
+          <li><span>03 / PRODUCT</span><strong>使用过程与细节</strong><p>双盘与地面的接触和推进动作交代产品用途</p></li>
+          <li><span>04 / RELATIONSHIP</span><strong>家人团聚</strong><p>人物互动和节日氛围完成故事收束</p></li>
         </ol>
       </section>
       <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
@@ -498,14 +499,14 @@
       </div>
 
       <div class="video-format-roles" id="video-format-roles" aria-label="视频内容的渠道适配">
-        <div><small>LONG FORM / 完整故事</small><b>82 秒故事观看版</b><p>用于完整观看情绪建立、场景变化与产品价值如何进入叙事。</p></div>
+        <div><small>LONG FORM / 品牌故事</small><b>90 秒圣诞成片</b><p>完整呈现家庭照料、产品进入情节和情绪收束。</p></div>
         <div><small>SHORT FORM / 社媒短版</small><b>15 秒节庆内容</b><p>保留最清晰的生活问题与产品介入，快速传达核心主题。</p></div>
         <div><small>PRODUCT DEMO / 动作教育</small><b>楼梯吸尘片与开场对照</b><p>用短镜头解释吸头与接触面、行进路径；与 M3 双盘拖把的产品证明分开。</p></div>
       </div>
       <div class="g-story-note" id="video-decision-strip">
         <h3>视频作品如何承担不同传播任务</h3>
         <div class="g-video-decision-grid">
-          <article><small>品牌片 / 故事转折</small><h4>用无声的照料建立情感</h4><p>圣诞氛围→关怀与家务→清洁工具使用→礼物与陪伴。镜头服务人物关系，产品成为故事中的实际行动。</p></article>
+          <article><small>品牌片 / 家庭关系</small><h4>用日常清洁讲家人之间的照料</h4><p>圣诞家庭布置、年长者的清洁动作与家人相聚构成故事，产品展示服务情绪发展。</p></article>
           <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
           <article><small>内容开场 / 创意判断</small><h4>认识产品，还是先解决一个问题</h4><p>客厅亮相优先建立产品识别；楼梯操作直接展示使用方法。围绕传播目标和观看任务选择开头，而不是让每条视频使用同一种节奏。</p></article>
         </div>
