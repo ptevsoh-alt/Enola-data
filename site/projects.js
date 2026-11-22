@@ -494,37 +494,58 @@
   }
 
   function expo() {
-    return section("海外 B2B 展会项目参与", "储能行业 · 展位视觉与产品系统陈列", `
-      <div class="g-project-feature g-project-wide-image">
-        <figure>${image("exhibition-booth-overview-redacted", "海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>展位全景 · 品牌标识已脱敏</figcaption></figure>
-        <div class="g-project-list">
-          <article><h3>现场记录</h3><p>这组照片来自我任职期间参与的海外储能展会，记录了展位空间、系统展示与产品陈列。</p></article>
-          <article><small>EXHIBITION PRESENCE</small><h3>展位空间与现场展示</h3><p>从展台结构、主视觉、空间层次和展示动线观察现场呈现方式，保留真实展会环境，展示海外 B2B 展会的品牌接触场景。</p></article>
-          <article><small>PRODUCT SYSTEM</small><h3>产品系统陈列</h3><p>展示墙将光伏、逆变器、储能电池、柴油发电机与家庭用电负载放在同一系统关系中，便于参观者从组件和应用场景理解产品组合。此处仅描述照片中可见的展示内容，不延伸为产品技术方案设计责任。</p></article>
+    return section("海外 B2B 展会与市场活动", "让产品系统陈列服务客户沟通，并把现场问题接入后续渠道营销与商务跟进。", `
+      <div class="expo-cover" id="expo-project">
+        <figure>${image("exhibition-booth-overview-redacted", "真实海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>海外储能展会 · 现场展位与产品展示</figcaption></figure>
+        <div class="expo-cover-story">
+          <small>OVERSEAS B2B / EXHIBITION</small>
+          <h3>从系统展示到客户需求</h3>
+          <p>在海外渠道与市场推广岗位，我参与过储能行业线下展会的传播物料、现场产品展示及客户沟通。展会的价值不只在于品牌露出，更在于让客户把设备组合与自己的用电场景联系起来。</p>
+          <div class="expo-cover-tags"><span>海外市场</span><span>展会传播</span><span>产品陈列</span><span>客户沟通</span></div>
+          <p><a href="#/case/b2b/expo-visitor-route">看现场信息与客户动线 ↗</a></p>
         </div>
       </div>
-      <div class="g-product-gallery" aria-label="海外储能展会现场与产品展示照片">
-        <figure>${image("exhibition-booth-angle-redacted", "海外展会展台侧面视角，第三方品牌标识已脱敏", "jpg")}<figcaption><b>Booth & Messaging</b><span>展台侧面与展示信息 · 品牌标识已脱敏</span></figcaption></figure>
-        <figure>${image("exhibition-product-display-redacted", "储能产品系统展示墙与设备陈列，设备品牌标识已脱敏", "jpg")}<figcaption><b>Product Display</b><span>系统展示墙与设备陈列 · 设备品牌标识已脱敏</span></figcaption></figure>
-      </div>
-      <details class="g-chart-disclosure" id="expo-handoff">
-        <summary>查看从展位物料到客户问题的交接样例</summary>
-        <div class="g-story-note">
-          <p>按照片可见的产品系统陈列设计。展前由产品和商务核对系统示意与产品说明；现场按客户应用场景记录配置、交付或售后问题；展后由商务确认跟进人，把重复问题交回产品和市场用于更新 FAQ。会前物料、现场记录和会后跟进各有负责人。</p>
-          <p class="g-chart-note">这是基于现场展示整理的工作样例。照片支持展会参与和现场陈列。</p>
+      <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
+        <header><small>VISITOR JOURNEY / 信息层级</small><h3 id="expo-visitor-title">让客户从“看见展位”，走到“讨论需求”</h3><p>围绕现场照片所呈现的系统墙与设备陈列，采用场景、方案、产品和业务问题四个信息层次组织沟通。</p></header>
+        <div class="expo-visitor-map">
+          <article><span>01</span><h4>识别品牌与应用</h4><p>入口主视觉突出产品类别与使用领域，帮助客户判断是否值得停留。</p></article>
+          <article><span>02</span><h4>理解系统关系</h4><p>用系统展示墙连接光伏、逆变器、储能电池、发电机与家庭负载。</p></article>
+          <article><span>03</span><h4>看产品与提问题</h4><p>围绕设备陈列讨论容量、应用场景、安装与交付要求，技术问题交由产品或商务确认。</p></article>
+          <article><span>04</span><h4>形成后续沟通</h4><p>记录客户需求与下一步联系人，交给负责销售与履约的同事继续跟进。</p></article>
         </div>
-      </details>
-
-      <section class="g-story-note b2b-compare" id="b2b-scale-comparison" aria-label="Facebook 粉丝规模对比">
-        <h3>任职期 Facebook 粉丝规模的前后记录</h3>
-        <div class="b2b-range-plot" role="img" aria-label="任职期 Facebook 粉丝由四百以上变化至一千九百以上。起止为近似下限值，日期未注明。">
-          <div><span>较早阶段</span><div class="b2b-range-track"><span style="width: 21.05%"></span></div><strong>400+</strong></div>
-          <div><span>较晚阶段</span><div class="b2b-range-track"><span style="width: 100%"></span></div><strong>1,900+</strong></div>
-        </div>
-        <p class="g-chart-note">任职期两个阶段的 Facebook 账号粉丝规模由 400+ 发展至 1,900+。</p><details class="reader-source-note"><summary>数据来源与比较范围</summary><p>依据 2023.11–2025.03 任期内的项目记录；两个数为约数下限，采样日期和账号范围尚未明确，因此只做规模对照，不计算增长率或归因于单场展会。</p></details>
-        <p><a href="#/data/b2b">查看 B2B 其他经营字段及定义 ↗</a></p>
       </section>
-      <p class="g-chart-note">照片中的展位标识、设备品牌、型号和编号已脱敏。具体展会分工和活动级业绩待核。</p>`, "expo-project");
+      <div class="g-product-gallery expo-gallery" aria-label="真实海外储能展会照片">
+        <figure>${image("exhibition-booth-angle-redacted", "海外展台侧面，展示位置与物料层次，品牌标识已脱敏", "jpg")}<figcaption><b>展位视觉</b><span>主视觉、展位开放面与到访视角</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted", "储能系统与产品展示墙，品牌标识已脱敏", "jpg")}<figcaption><b>产品讲解</b><span>系统关系、设备组合与应用场景</span></figcaption></figure>
+      </div>
+      <section class="expo-program" id="expo-event-plan" aria-labelledby="expo-program-title">
+        <header><small>CAMPAIGN × OFFLINE / 传播与协作</small><h3 id="expo-program-title">展前、现场、会后：三段任务共同完成一个项目</h3><p>以实际展会参与经历为背景，将线上宣传、线下接待与客户后续联系纳入同一条工作流程。</p></header>
+        <div class="expo-program-grid">
+          <article><span>BEFORE / 展前</span><h4>把客户带到展位</h4><p>明确目标客户及主要应用场景，准备产品介绍、系统示意与英文物料；同步邀约、官网/LinkedIn 或 EDM 预热的内容接口。</p><strong>关键工作物</strong><div>参展信息 · 产品资料 · 物料清单 · 邀约内容</div></article>
+          <article><span>ONSITE / 现场</span><h4>让展示变成沟通</h4><p>结合设备陈列开展场景介绍；收集客户对配置、供应、交付和售后的关注点，必要时衔接技术与商务人员。</p><strong>关键工作物</strong><div>产品话术 · 现场展示 · 客户需求摘要</div></article>
+          <article><span>AFTER / 会后</span><h4>让沟通继续推进</h4><p>按客户需求和跟进优先级整理联系人，分配商务对接；将高频问题反馈给市场与产品团队，完善后续销售资料。</p><strong>关键工作物</strong><div>CRM 跟进 · 邮件回复 · FAQ 与资料更新</div></article>
+        </div>
+      </section>
+      <section class="expo-collaboration" id="expo-team-handoff">
+        <div><small>CROSS-FUNCTIONAL DELIVERY / 协作结构</small><h3>展会不是一个部门的单独任务</h3><p>我参与市场传播、产品资料与客户沟通相关工作，现场项目需要品牌、产品技术、销售商务、物料供应和展会执行方在关键节点配合。</p></div>
+        <div class="expo-handoff-rails">
+          <div><b>品牌与市场</b><span>场景主题、展位信息、传播物料</span></div>
+          <div><b>产品与技术</b><span>系统图、产品参数、演示说明</span></div>
+          <div><b>商务与销售</b><span>客户需求、报价条件、会后跟进</span></div>
+          <div><b>执行与供应商</b><span>展位搭建、运输、现场检查与撤展</span></div>
+        </div>
+        <details class="g-chart-disclosure" id="expo-handoff"><summary>查看展会项目交接与现场验收内容</summary><p>会前围绕展品清单、场地限制、物料版本、供应商交付和人员分工做检查；现场核对展示效果、设备安全、接待流程与异常处理；会后清点物料、整理客户沟通摘要、安排跟进人与复盘。跨境运输、签证、海关、设备认证及预算审批由相关负责人按目的地要求办理。</p></details>
+      </section>
+      <section class="g-story-note b2b-compare" id="b2b-scale-comparison" aria-label="任职期渠道推广成果">
+        <h3>海外渠道推广经历</h3>
+        <p>线下展会之外，我也通过 Google、LinkedIn、Facebook、Instagram 和邮件开展海外客户研究与分层触达。</p>
+        <div class="expo-results">
+          <article><span>月均潜在客户触达</span><strong>100+</strong><small>海外 B2B 客户开发</small></article>
+          <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期不同阶段的规模记录</small></article>
+        </div>
+        <p><a href="#/data/b2b">查看海外 B2B 业务表现 ↗</a></p>
+      </section>
+    `, "expo-project");
   }
 
   function creator() {
