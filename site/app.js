@@ -205,10 +205,11 @@
     ["04", "Creative / Video", "节庆故事建立情绪关联，操作镜头证明产品如何接触与移动。", "#/case/creative/video-projects", "播放三段 MP4 节选"],
     ["05", "Social / Growth", "季度主题、月度日历与平台数据相互关联，复盘不混用不同窗口。", "#/case/social/social-data-decisions", "2025 Meta 阶段结果"],
     ["06", "Team / Delivery", "社媒小组管理、产品事实核验、设计返工及渠道放行责任分开记录。", "#/case/operations/asset-review", "真实视觉返工与协同"],
+    ["07", "Offline / Exhibition", "围绕展前传播、系统陈列、现场沟通与会后跟进，连接海外 B2B 客户需求。", "#/case/b2b/expo-project", "真实展会与客户项目"],
   ];
 
   function featuredCard(id, item) {
-    const image = item.image ? `<img src="assets/projects/${item.image}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
+    const image = item.image ? `<img src="assets/projects/${item.image}.${item.imageExt || "webp"}" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
     const signals = id === "social" ? `<div class="featured-metric-pair" aria-label="2025 年 Meta 阶段汇总"><span><b>${metric("impressions").display}</b> 曝光</span><span><b>${metric("engagements").display}</b> 互动</span></div>` : "";
     const delivery = id === "operations" ? '<ol class="featured-rhythm"><li>季度主题</li><li>月度排期</li><li>周度审核</li></ol>' : "";
     return `<article class="case-card featured-project${image ? " featured-project-photo" : ""}">
