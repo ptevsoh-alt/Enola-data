@@ -437,7 +437,7 @@
           <small>FEATURED FILM / CHRISTMAS STORY</small><h3>让清洁成为故事的一部分</h3>
           <p>节日将至，家人团聚。影片从生活中自然出现的清洁任务开始，通过人物、室内氛围与电动清洁工具的使用，把产品价值融入一段有关家庭陪伴的故事。</p>
           <p>观看重点：情绪建立 → 场景转折 → 产品进入 → 家庭关系收束。</p>
-          <div class="film-edition-actions"><a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">观看 82 秒网页剪辑 ↗</a><a href="https://drive.google.com/file/d/1SbnNlvRdpGARtbEzYIfmoIYm7Oy_pylR/view" target="_blank" rel="noopener noreferrer">查看 90 秒 US 完整交付版 ↗</a><a href="https://drive.google.com/file/d/1wm7IsA2bZEryC7iUvMJYn4v8h5hH-WM2/view" target="_blank" rel="noopener noreferrer">查看 90 秒 UK 版本 ↗</a></div>
+          <div class="film-edition-actions"><a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">播放 82 秒节庆故事长版 ↗</a><a href="#/case/creative/video-strategy">查看完整创意说明 ↗</a></div>
           <details class="reader-source-note"><summary>影片版本与交付说明</summary><p>网页播放的是 82 秒观看剪辑（H.264/AAC，640 × 360），保留故事声轨、去除原品牌片尾。Drive 中的 90 秒 US/UK REV08 FFmpeg 交付版通过技术解码、字幕与抽样连续性检查；其配音仍为指导版本，原 AI 动作尚未完成逐帧语义验收。REV09 是后续片尾预览，不作为最终配音成片。对外发布与素材复用以相关权利批准为准。</p></details>
         </figcaption>
       </figure>
