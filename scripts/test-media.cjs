@@ -2,82 +2,59 @@ const fs = require("node:fs");
 const path = require("node:path");
 const assert = require("node:assert/strict");
 const { spawnSync } = require("node:child_process");
-const root = path.resolve(__dirname, "../site");
+const site = path.resolve(__dirname, "../site");
 const clips = [
-  ["holiday-story-long.mp4", "节庆故事长版"],
-  ["stair-demo.mp4", "楼梯演示"],
-  ["product-opening.mp4", "旧开场素材（不在页面展示）"],
-  ["creator-livingroom-intro.mp4", "独立客厅产品介绍"],
+  ["creator-staircase-7s.mp4", "楼梯吸尘实操 · 7秒"],
+  ["creator-livingroom-7s.mp4", "客厅产品介绍 · 7秒"],
 ];
-
-function boxes(buffer) {
-  const seen = [];
-  for (let pos = 0; pos + 8 <= buffer.length;) {
-    let size = buffer.readUInt32BE(pos);
-    const type = buffer.subarray(pos + 4, pos + 8).toString("latin1");
-    let header = 8;
-    if (size === 1) {
-      assert.ok(pos + 16 <= buffer.length, "invalid large box header");
-      size = Number(buffer.readBigUInt64BE(pos + 8));
-      header = 16;
-    } else if (size === 0) {
-      size = buffer.length - pos;
-    }
-    assert.ok(Number.isSafeInteger(size) && size >= header && pos + size <= buffer.length, "invalid MP4 box: " + type);
-    seen.push(type);
-    pos += size;
+function mp4Duration(buffer) {
+  const at = buffer.indexOf(Buffer.from("mvhd"));
+  assert.ok(at >= 0, "MP4 missing movie header");
+  if (buffer[at + 4] === 0) {
+    const scale = buffer.readUInt32BE(at + 16), ticks = buffer.readUInt32BE(at + 20);
+    assert.ok(scale > 0);
+    return ticks / scale;
   }
-  return seen;
+  const scale = buffer.readUInt32BE(at + 24);
+  assert.ok(scale > 0);
+  const ticks = Number(buffer.readBigUInt64BE(at + 28));
+  return ticks / scale;
 }
-
-const hasFfprobe = spawnSync("ffprobe", ["-version"], { encoding: "utf8" }).status === 0;
-const hasFfmpeg = spawnSync("ffmpeg", ["-version"], { encoding: "utf8" }).status === 0;
-
+const hasProbe = spawnSync("ffprobe", ["-version"], { encoding:"utf8" }).status === 0;
+const hasFfmpeg = spawnSync("ffmpeg", ["-version"], { encoding:"utf8" }).status === 0;
 for (const [name, label] of clips) {
-  const pathname = path.join(root, "assets/video", name);
-  const file = fs.readFileSync(pathname);
-  assert.ok(file.length > 10000, "empty / truncated video: " + name);
-  // Preserve the older 82-second local edit as an archived resource; feature film uses Drive's 90-second release.
-  if (name === "holiday-story-long.mp4") {
-    assert.equal(file.length, 1744928, "legacy 82-second asset changed unexpectedly");
+  const pathname = path.join(site, "assets/video", name);
+  const bytes = fs.readFileSync(pathname);
+  assert.ok(bytes.length > 100000, "clip too small or missing: " + name);
+  const duration = mp4Duration(bytes);
+  assert.ok(duration >= 5 && duration <= 30, "Creator video must be 5 seconds or longer: " + name + " / " + duration);
+  for(const box of ["ftyp","moov","mdat"])assert.ok(bytes.includes(Buffer.from(box)), "missing MP4 atom: " + box);
+  if (hasProbe) {
+    const checked = spawnSync("ffprobe",["-v","error","-show_entries","format=duration:stream=codec_type,width,height","-of","json",pathname],{encoding:"utf8",timeout:20000});
+    assert.equal(checked.status,0,checked.stderr);
+    const info=JSON.parse(checked.stdout);
+    assert.ok(Number(info.format.duration) >= 5, "ffprobe found sub-5-second clip: " + name);
+    assert.ok(info.streams.some(x=>x.codec_type==="video"&&x.width>=480&&x.height>=720),"missing portrait video");
   }
-  const found = boxes(file);
-  assert.ok(found.includes("ftyp") && found.includes("moov") && found.includes("mdat"), "missing MP4 media atoms: " + name);
-  if (hasFfprobe) {
-    const result = spawnSync("ffprobe", [
-      "-v", "error", "-show_entries", "format=duration:stream=codec_type,width,height",
-      "-of", "json", pathname,
-    ], { encoding: "utf8", timeout: 20000 });
-    assert.equal(result.status, 0, result.stderr);
-    const info = JSON.parse(result.stdout);
-    assert.ok(Number(info.format.duration) > 1, "invalid video duration: " + name);
-    assert.ok(info.streams.some(x => x.codec_type === "video" && x.width >= 240 && x.height >= 240), "missing playable video stream: " + name);
+  if(hasFfmpeg){
+    const decode=spawnSync("ffmpeg",["-nostdin","-v","error","-xerror","-i",pathname,"-map","0:v:0","-f","null","-"],{encoding:"utf8",timeout:45000});
+    assert.equal(decode.status,0,decode.stderr);
   }
-  if (hasFfmpeg) {
-    const decoded = spawnSync("ffmpeg", ["-nostdin", "-v", "error", "-xerror", "-i", pathname, "-map", "0:v:0", "-f", "null", "-"], { encoding: "utf8", timeout: 45000 });
-    assert.equal(decoded.status, 0, "decode failure for " + name + ": " + decoded.stderr);
-  }
-  console.log("PASS " + label + " / " + name + " / " + file.length + " bytes" +
-    (hasFfprobe ? " / metadata PASS" : " / ffprobe unavailable") +
-    (hasFfmpeg ? " / video decode PASS" : " / ffmpeg unavailable"));
+  console.log("PASS "+label+" / "+duration.toFixed(3)+"s / "+bytes.length+" bytes");
 }
-const review = fs.readFileSync(path.join(root, "review/index.html"), "utf8");
-const projects = fs.readFileSync(path.join(root, "projects.js"), "utf8");
-for (const [name] of clips) {
-  if (!["holiday-story-long.mp4", "product-opening.mp4"].includes(name)) {
-    assert.ok(review.includes("../assets/video/" + name), "review does not use " + name);
-    assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
-  }
+const page=fs.readFileSync(path.join(site,"projects.js"),"utf8");
+const review=fs.readFileSync(path.join(site,"review/index.html"),"utf8");
+for(const [name] of clips){
+  assert.ok(page.includes('assets/video/'+name),'case missing '+name);
+  assert.ok(review.includes('../assets/video/'+name),'review missing '+name);
 }
-for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE", "1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y"]) {
-  assert.ok(review.includes("drive.google.com/file/d/" + id + "/preview"), "review misses public full film");
-  assert.ok(projects.includes("drive.google.com/file/d/" + id + "/preview"), "case misses public full film");
+for(const name of ["stair-demo.mp4","creator-livingroom-intro.mp4","product-opening.mp4","holiday-story.mp4"]){
+  assert.ok(!page.includes('assets/video/'+name),'retired short file in case page: '+name);
+  assert.ok(!review.includes('../assets/video/'+name),'retired short file in review: '+name);
 }
-assert.ok(projects.includes('id="thanksgiving-tvc"') && projects.includes('id="holiday-full-film"'), "two themed TVC projects not found");
-assert.ok(projects.includes('id="kol-shorts"'), "creator short-form video grouping missing");
-assert.ok(projects.includes('assets/video/creator-livingroom-intro.mp4'), "case must use a standalone living-room Creator file");
-assert.ok(review.includes('../assets/video/creator-livingroom-intro.mp4'), "review must use a standalone living-room Creator file");
-assert.ok(!review.includes('../assets/video/holiday-story.mp4') && !projects.includes('assets/video/holiday-story.mp4'), "TVC short cutdown should not appear publicly");
-assert.notEqual("stair-demo.mp4", "creator-livingroom-intro.mp4", "Creator playback should use two distinct files");
-assert.ok(!projects.includes("product-opening.mp4#t=") && !review.includes("product-opening.mp4#t="), "Do not rely on an unstable media-fragment end time");
-console.log("PASS Thanksgiving and Christmas full TVCs plus standalone living-room and stairs Creator scenes; no TVC cutdowns.");
+for(const id of ["1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y","15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]){
+  assert.ok(page.includes('drive.google.com/file/d/'+id+'/preview'),'full TVC missing in case: '+id);
+  assert.ok(review.includes('drive.google.com/file/d/'+id+'/preview'),'full TVC missing in review: '+id);
+}
+assert.ok(!page.includes("video-holiday-cutdown")&&!review.includes("video-holiday-cutdown"),"TVC cutdown control must not exist");
+console.log("PASS two full seasonal TVCs and two distinct seven-second Creator scenes; no TVC short cutdown.");
