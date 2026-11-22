@@ -195,8 +195,10 @@
     creator: ["按市场和内容风格筛选创作者，明确 Brief、产品演示、初稿审核与素材版本交接。", "依据交付质量、受众匹配及素材使用许可，决定哪些内容适合后续品牌传播。"],
   };
   function hasPublishableMetric(m) {
-    return !!m && m.status !== "PENDING" && typeof m.value === "number" &&
-      Number.isFinite(m.value) && !!m.display && !/待补|待核|暂无|未提供/.test(m.display);
+    if (!m || m.status === "PENDING" || !m.display || /待补|待核|暂无|未提供/.test(m.display)) return false;
+    const numeric = typeof m.value === "number" && Number.isFinite(m.value);
+    const range = Array.isArray(m.range) && m.range.length === 2 && m.range.every((x) => typeof x === "number" && Number.isFinite(x));
+    return numeric || range;
   }
   function metricCard(m) {
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(readerWindow(m))}</small><span class="metric-source">查看数据详情 ↗</span></button>`;
