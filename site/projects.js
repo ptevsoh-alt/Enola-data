@@ -429,7 +429,7 @@
         <h3>将 Campaign 主题拆成不同的传播内容</h3>
         <ul>
           <li><strong>品牌 TVC：</strong>保留感恩节或圣诞节的完整人物故事、节庆识别与产品进入情节的过程，用于集中解释品牌价值与情绪主张。</li>
-          <li><strong>内容短版：</strong>提取具有辨识度的场景、产品动作和核心情绪，重新安排 Social / Reels / 广告短版的开场、字幕和行动入口。</li>
+          <li><strong>完整 TVC 传播：</strong>感恩节与圣诞节分别保留完整视频，通过主视觉、社媒内容与渠道落地页延伸活动主题，不重复制作 TVC 短版作品。</li>
           <li><strong>KOL / Creator：</strong>把真实使用问题交给人物演示；先拍清接触位置与动作，再按渠道要求确定时长、画幅和说明重点。</li>
           <li><strong>后续优化：</strong>分别观察完整观看、动作片段观看和用户问题，调整剪辑、产品解释或 FAQ，而非用一项数据评价所有视频。</li>
         </ul>
@@ -497,15 +497,15 @@
         <div class="g-video-gallery">
           <figure class="g-video-demo">
             <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放 KOL 风格楼梯吸尘产品演示" aria-describedby="stairs-video-note">
-              <source src="assets/video/stair-demo.mp4" type="video/mp4">
-              <a href="assets/video/stair-demo.mp4">观看楼梯清洁短视频</a>
+              <source src="assets/video/creator-staircase-7s.mp4" type="video/mp4">
+              <a href="assets/video/creator-staircase-7s.mp4">观看楼梯清洁短视频</a>
             </video>
             <figcaption id="stairs-video-note"><h3>楼梯场景｜操作演示</h3><p>人物、扶手、踏面和吸头保持在同一生活空间中，通过移动路径让使用方式更清楚。</p></figcaption>
           </figure>
           <figure id="video-opening-comparison">
             <video controls playsinline preload="metadata" poster="assets/projects/vacuum-video-frame.webp" aria-label="播放 KOL 客厅产品介绍镜头（独立于楼梯使用演示）" aria-describedby="opening-video-note">
-              <source src="assets/video/creator-livingroom-intro.mp4" type="video/mp4">
-              <a href="assets/video/creator-livingroom-intro.mp4">观看客厅产品介绍</a>
+              <source src="assets/video/creator-livingroom-7s.mp4" type="video/mp4">
+              <a href="assets/video/creator-livingroom-7s.mp4">观看客厅产品介绍</a>
             </video>
             <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>人物正面展示、产品持握与讲解作为新品认知的入口；独立客厅展示视频与楼梯清洁演示分别承担产品介绍和操作教育，不再把两段动作拼在同一播放器里。</p></figcaption>
           </figure>
@@ -528,7 +528,7 @@
       <div class="g-story-note" id="video-management">
         <h3>我的创意参与与项目交付</h3>
         <p>参与节庆传播主题、创意脚本与画面审核，将品牌情绪、产品卖点和实际使用情境转化为可执行的镜头与传播物料。与产品、视觉、视频及社媒团队协作，分别检查故事连贯性、产品结构、动作真实性、字幕与渠道版本。</p>
-        <p>两支 TVC 保留完整的情绪与人物叙事；Creator 内容则分别展示产品介绍与使用动作，不再从 TVC 裁切短版充当独立作品。不同内容通过 Brief、审核和渠道版本管理保持品牌与产品信息一致。</p>
+        <p>两支 TVC 均以完整作品呈现；Creator 内容分别展示楼梯实操与客厅产品介绍，每条保留完整七秒镜头。通过 Brief、产品事实审核和渠道版本管理维持品牌表达一致。</p>
         <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
