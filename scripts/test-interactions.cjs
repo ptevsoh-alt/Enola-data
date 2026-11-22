@@ -89,8 +89,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".case-card").length, 1),
   );
   const publicMetrics = w.PORTFOLIO.metrics.filter((m) =>
-    m.status !== "PENDING" && typeof m.value === "number" &&
-    Number.isFinite(m.value) && !!m.display && !/待补|待核|暂无|未提供/.test(m.display));
+    m.status !== "PENDING" && !!m.display && !/待补|待核|暂无|未提供/.test(m.display) &&
+    ((typeof m.value === "number" && Number.isFinite(m.value)) ||
+     (Array.isArray(m.range) && m.range.length === 2 && m.range.every((x) => typeof x === "number" && Number.isFinite(x)))));
   const visibleDomains = [...new Set(publicMetrics.map(m => m.domain))];
   for (const domain of visibleDomains) {
     await route("/data/" + domain);
