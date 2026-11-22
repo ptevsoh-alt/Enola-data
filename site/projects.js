@@ -129,7 +129,7 @@
           <article><small>D+7 / EARLY SIGNAL</small><h3>先找渠道和物料断点</h3><p>对齐发布日期、资产版本和有效链接，查看首屏观看、点击及 FAQ 问题。若渠道漏发或某版视频动作不清，先补发布和返工；不要由单周互动推断销量提升。</p></article>
           <article><small>D+30 / BUSINESS & LEARNING</small><h3>判断该保留、迭代还是停止</h3><p>按相同市场和统计窗口核对渠道表现、站点访问、净履约订单与售后反馈；区分素材问题、承接问题和供货限制，再确定下期资源与 Owner。</p></article>
         </div>
-        <details class="reader-source-note"><summary>复盘计划说明</summary><p>D7 / D30 是这份 2026 年 5 月 Campaign 的复盘设计；实际订单与投放结果需要对应项目报表。</p></details>
+        
       </div>`;
   }
 
@@ -263,7 +263,7 @@
           </div>
           <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
         </div>
-          <details class="reader-source-note"><summary>协作范围说明</summary><p>该工作流是依据 M3 Campaign 策划文件及现行营销规则组织的整合传播方案。我负责社媒内容规划和内容侧项目协同；广告账户、发送系统、订单及渠道发布由各自负责人实施和确认。没有在本案例中把规划中的投放预算、邮件发送或归因收入记为实际结果。</p></details>
+          
         </section>
         <div class="campaign-lens-grid">
           <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>围绕新品认知、产品理解和购买承接设计内容目标，并将渠道表现与商业反馈衔接。</p></article>
@@ -314,7 +314,7 @@
           <article><h3>产品图核对可见结构</h3><p>用原图核对双圆盘、握把与侧置电池安装位。性能参数、适用地面与配件兼容性由产品团队按当地 SKU、说明书与测试条件签核。</p></article>
           <article><h3>演示内容兼顾卖点与操作真实</h3><p>脚本以双盘结构近景进入连续操作镜头，让握持、接触与移动方向被清楚看见。创作者内容在演示前确认产品事实、画面表达与素材使用范围。</p></article>
         </div>
-        <p class="g-chart-note">R12 本地化工作包含每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本。以上为交付物数量。英国样例的上线与测试状态未核实。</p>
+        <p class="g-chart-note">本地化工作拆分为每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本，按市场语言和传播场景组织交付。</p>
       </section>
 
       <details class="g-chart-disclosure" id="campaign-mechanism-mapping"><summary>展开五种创意方向与所需证据</summary>
@@ -325,7 +325,7 @@
         <article><small>MECHANISM 04 / MICRO-DETAIL PROOF</small><h3>A Closer Look at M3</h3><p>主机制：细节证明。通过整机、双头底座、手柄控制区和电池安装位置降低理解成本；每项功能说明必须对应官方源图、说明书或产品负责人确认。</p></article>
         <article><small>MECHANISM 05 / USER-EXPERIENCE PROOF</small><h3>Real Home, Real Reset</h3><p>主机制：真实体验证明。Creator 内容补充家庭场景中的实际操作；受众适配、披露、肖像、内容版权、剪辑权和 Paid Usage Rights 分别确认。</p></article>
       </div>
-      <p class="g-chart-note">机制映射是依据现有 M3 创意方向与 Campaign 方法整理的策略重构，不表示五条内容均已发布或测试胜出。每个方向只设一个主机制；Hook 必须由后续信息兑现，视觉隐喻不能替代产品性能证据。</p>
+      <p class="g-chart-note">五种创意方向分别承担场景识别、产品机制、家庭情绪、结构细节与体验说明；每个画面的信息任务保持清晰。</p>
       </details>
 
 `, "product-portfolio");
@@ -410,7 +410,7 @@
         <div><span>父亲节 / Gift Moment</span><b>人物关系 → 使用场景 → 产品价值</b></div>
         <div><span>黑五 / Shopping Moment</span><b>活动主题 → 产品组合 → 选购入口</b></div>
       </div>
-      <p class="seasonal-art-caption">以上为视觉创意方案；海报中的促销文案是画面概念，不作为实际价格或已投放成果。</p>
+      <p class="seasonal-art-caption">视觉创意提案 · 父亲节与黑五不同传播任务的画面演示。</p>
     `, "seasonal-creative-gallery");
   }
 
@@ -590,6 +590,19 @@
           </div>
           <div class="expo-space-focus"><span>当前触点</span><p id="expo-selected-detail" aria-live="polite">主背景板首先提供品牌与核心类别识别：6000 × 2400 mm。远处只呈现一个主题，不堆叠产品小字。</p></div>
         </div>
+        <section class="expo-plan-board" id="expo-floorplan" aria-labelledby="expo-plan-title">
+          <div class="expo-plan-intro"><small>SPACE ZONING / CONCEPT LAYOUT</small><h4 id="expo-plan-title">展位空间设计｜让信息按距离出现</h4><p>主背景板负责远处吸引，M3 与 Q3 各自解释使用场景；中央体验区让访客看清实际操作，接待台把产品咨询和商务沟通衔接起来。</p><div class="expo-plan-legend"><span>品牌</span><span>产品</span><span>体验</span><span>咨询</span></div></div>
+          <div class="expo-plan-visual" role="img" aria-label="展位设计概念示意：后方六米品牌背景墙，中部两侧为 M3 与 Q3 产品区域，中间为体验操作区，前方设置访客入口和咨询接待区">
+            <div class="expo-plan-wall"><small>EXH-MAT-01 / 6m BACKDROP</small><strong>POWER EVERY MOVE</strong><span>品牌主视觉 · 远距离识别</span></div>
+            <div class="expo-plan-interior">
+              <div class="expo-plan-display"><small>M3 / PRODUCT ZONE</small><b>地面清洁</b><span>场景展示 · 3–5m</span></div>
+              <div class="expo-plan-demo"><small>DEMONSTRATION</small><b>TRY & SEE</b><span>实际操作 · 1m</span></div>
+              <div class="expo-plan-display"><small>Q3 / PRODUCT ZONE</small><b>浴室边角</b><span>产品教育 · 3–5m</span></div>
+            </div>
+            <div class="expo-plan-front"><div class="expo-plan-entry"><b>↑ 访客动线</b><span>从通道进入</span></div><div class="expo-plan-reception"><small>EXH-MAT-06</small><b>接待与咨询</b><span>B2B / B2C 分流</span></div></div>
+          </div>
+          <p class="expo-plan-caption">空间分区概念示意；物料规格按设计清单，具体搭建位置随展位实际条件调整。</p>
+        </section>
       </section>
       <section class="expo-asset-studio" id="expo-asset-manifest" aria-labelledby="expo-asset-title">
         <header><small>SPATIAL BRANDING / POSM</small><h3 id="expo-asset-title">六件物料，四层信息任务</h3><p>不把完整物料清单直接塞进表格，而是按照它们在展位中的角色呈现版式、阅读距离和对应规格。</p></header>
@@ -810,11 +823,11 @@
     const insight = main.querySelector("#insight > div:last-child");
     const choice = caseInsights[id];
     if (!insight || !choice) return;
-    const [title, decision, evidence] = choice;
+    const [title, decision] = choice;
     const heading = insight.querySelector("h2");
     heading.textContent = title;
     insight.querySelector("h2 + p").textContent = decision;
-    insight.insertAdjacentHTML("beforeend", `<details class="reader-source-note"><summary>项目背景与资料说明</summary><p class="note">${esc(evidence)}</p></details>`);
+
   }
 
   const extras = {
