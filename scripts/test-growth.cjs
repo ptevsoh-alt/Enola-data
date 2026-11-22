@@ -137,6 +137,10 @@ const fs = require("fs"),
       const overview = d.querySelector(".g-case-overview");
       assert.deepEqual([...overview.querySelectorAll("h2")].map((h) => h.textContent), [w.PORTFOLIO.cases.find(x => x.id === id).title, "为什么这样做", "怎样组织交付"]);
       assert.ok(d.querySelector(".case-page-" + id), "editorial case theme missing");
+        if (["social","community","operations","seo","amazon","crm","creator"].includes(id)) {
+          assert.equal(overview.querySelectorAll(".case-diagram-step").length, 3, id + " should have a distinctive illustrated content system");
+        }
+
       if(id === "brand") assert.equal(overview.querySelectorAll(".case-story-pair img").length, 2);
       if(id === "b2b") assert.ok(overview.querySelector('img[src="assets/projects/exhibition-booth-overview-redacted.jpg"]'));
       const path = overview.querySelector("a").hash;
@@ -250,6 +254,12 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#expo-visitor-route .expo-visitor-map article").length, 4);
     assert.equal(d.querySelectorAll("#expo-event-plan .expo-flight-card").length, 3);
     assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 9);
+    assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
+    assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
+    assert.equal(d.querySelectorAll("#expo-experience-menu .expo-experience-card").length, 4);
+    assert.ok(d.querySelector("#expo-experience-menu").textContent.includes("Brochure") === false);
+    assert.ok(d.querySelector("#expo-visual-language").textContent.includes("Brochure"));
+
     assert.ok(d.querySelector("#expo-brand-activation").textContent.includes("Press Kit"));
     assert.ok(d.querySelector("#expo-floorplan .expo-plan-dimensions").textContent.includes("10 × 20 FT"));
     assert.equal(d.querySelectorAll("#expo-team-handoff .expo-handoff-rails>div").length, 4);
