@@ -50,8 +50,8 @@ const fs = require("fs"),
     assert.deepEqual([...d.querySelectorAll("#review-kpis strong")].map((node) => node.textContent), ["96.5万", "3.7万"]);
 
   });
-  check("review index renders all 38 metrics and six data domains", () => {
-    assert.equal(w.__PORTFOLIO_REVIEW_READY__.metrics, 38);
+  check("review index renders 36 supported metrics and six data domains", () => {
+    assert.equal(w.__PORTFOLIO_REVIEW_READY__.metrics, 36);
     assert.equal(d.querySelectorAll(".review-domain-card").length, 6);
     assert.equal(d.querySelectorAll(".review-outcome-card").length, 4);
   });
