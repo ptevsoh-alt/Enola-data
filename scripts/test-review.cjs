@@ -73,6 +73,12 @@ const fs = require("fs"),
       assert.ok(fs.existsSync(path.join(site, relative)), relative);
     });
   });
+  check("review showcases delivered 90s videos separately from 82s website cut", () => {
+    const links = [...d.querySelectorAll(".review-film-editions a")];
+    assert.equal(links.length, 2);
+    assert.ok(links.every(link => link.href.startsWith("https://drive.google.com/file/d/")));
+    assert.ok(d.querySelector("#review-videos video source[src='../assets/video/holiday-story-long.mp4']"));
+  });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
     assert.equal(images.length, 16);
