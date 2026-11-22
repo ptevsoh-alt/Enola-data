@@ -228,6 +228,20 @@
           </div>
           <div class="campaign-house-base"><span>MEASUREMENT & GOVERNANCE</span><p>内容表现 → 有效访问 → 商业承接 → 复盘迭代</p><small>相关渠道作为 Campaign 协作规划展示；实际发布与投放按各项目记录确认</small></div>
         </div>
+        <section class="campaign-operations-map" id="campaign-activation" aria-label="Campaign 从策划到各渠道激活的工作分工">
+          <header><small>INTEGRATED ACTIVATION</small><h4>一条主线，八种传播任务</h4><p>统一产品信息、Campaign 主张与素材版本；不同渠道沿着认知、理解、行动和关系维护的路径协作。</p></header>
+          <div class="campaign-workstreams">
+            <article><span>01 / OWNED SOCIAL</span><h5>内容运营</h5><p>以季度主题组织 Feed、Story、Reels 和社群内容，按用户问题安排教程、产品演示和互动。</p><dl><dt>交付</dt><dd>内容矩阵、发布日历、KV / 视频 Brief</dd><dt>复盘</dt><dd>曝光、互动质量、视频观看与有效点击</dd></dl></article>
+            <article><span>02 / PAID ADS</span><h5>投放创意与素材测试</h5><p>围绕场景问题、产品结构和操作演示规划不同创意家族；按 Awareness、Consideration 和获批的 Conversion 任务分配测试。</p><dl><dt>交付</dt><dd>广告素材变体、受众假设、测试方案与落地页接口</dd><dt>复盘</dt><dd>观看与点击质量；订单与获客成本由投放及数据负责人核对</dd></dl></article>
+            <article><span>03 / EDM & CRM</span><h5>邮件触达与生命周期沟通</h5><p>预热阶段传递使用场景，上市窗口介绍产品信息；结合订阅许可、浏览、加购、已购和退订状态安排消息及排除。</p><dl><dt>交付</dt><dd>Launch Email、邮件主题、受众分层、触发与退出规则</dd><dt>复盘</dt><dd>送达、有效点击、退订、购后行为及数据对账</dd></dl></article>
+            <article><span>04 / CREATOR</span><h5>第三方内容与素材供给</h5><p>按受众和产品使用场景筛选创作者，提供操作镜头要求、信息重点和使用说明。</p><dl><dt>交付</dt><dd>Creator Brief、成片审核与授权范围记录</dd><dt>复盘</dt><dd>交付完成、有效观看和获授权素材复用</dd></dl></article>
+            <article><span>05 / PR & PARTNERSHIP</span><h5>新闻价值与合作传播</h5><p>将产品真实信息转化为可沟通的新闻角度与媒体资料；联合活动明确合作主题、发布节奏和权益。</p><dl><dt>交付</dt><dd>Press Kit、事实表、发布稿及合作素材</dd><dt>复盘</dt><dd>实际刊发、引荐访问与活动参与</dd></dl></article>
+            <article><span>06 / SEARCH & CONTENT</span><h5>SEO / Blog / FAQ</h5><p>围绕清洁任务、选型和使用问题建设内容主题，为社媒和邮件带来的进一步搜索提供答案。</p><dl><dt>交付</dt><dd>Pillar Blog、FAQ、产品信息页内容接口</dd><dt>复盘</dt><dd>GSC 查询与点击、页面参与和有效承接</dd></dl></article>
+            <article><span>07 / COMMERCE</span><h5>商品页与渠道销售资料</h5><p>统一产品结构、适用场景、参数和 FAQ；把内容流量带到清晰的选购和咨询路径。</p><dl><dt>交付</dt><dd>落地页、Amazon A+ 信息、渠道产品资料</dd><dt>复盘</dt><dd>有效访问、加购及获批的订单经营数据</dd></dl></article>
+            <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
+          </div>
+          <details class="reader-source-note"><summary>协作范围说明</summary><p>该工作流是依据 M3 Campaign 策划文件及现行营销规则组织的整合传播方案。我负责社媒内容规划和内容侧项目协同；广告账户、发送系统、订单及渠道发布由各自负责人实施和确认。没有在本案例中把规划中的投放预算、邮件发送或归因收入记为实际结果。</p></details>
+        </section>
         <div class="campaign-lens-grid">
           <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>围绕新品认知、产品理解和购买承接设计内容目标，并将渠道表现与商业反馈衔接。</p></article>
           <article><small>AUDIENCE / 起始问题</small><h4>餐后硬地为什么值得先讲</h4><p>通过厨房与餐区的日常问题，让消费者先认出清洁需求，再理解双盘拖把的使用方式。</p></article>
@@ -323,6 +337,8 @@
           <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，不将两种产品混成同一功能。</p></article>
           <article><small>GROUP / 关系与参与</small><h3>让成员提供真实做法</h3><p>教程、投票和 UGC 邀约是自愿参与。投稿并不自动允许商业复用，活动 Owner、资格与奖励由实际执行方确认。</p></article>
           <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>若有真实家庭故事、Creator 视频或新闻角度，再单独安排 Brief、素材使用权与披露；仅有日历不等于外部合作已发生。</p></article>
+          <article><small>PAID ADS / 创意放大</small><h3>用节庆主题形成广告创意变体</h3><p>规划家庭关系开场、清洁任务开场和产品动作开场，按受众阶段匹配素材与落地页，投放测试与预算由广告负责人审批。</p></article>
+          <article><small>EDM / 邮件关系</small><h3>让活动内容进入订阅与购后沟通</h3><p>按活动主题设计邮件标题、产品故事与 FAQ，结合订阅许可和购买状态安排发送，避免向已购买用户重复催购。</p></article>
         </div>
         <p class="g-chart-note">该章节呈现父亲节 Campaign 传播提案的跨渠道内容设计。</p>
       </div>
