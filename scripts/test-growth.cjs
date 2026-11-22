@@ -77,7 +77,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["gtm", "brand", "social", "operations"];
+  const featured = ["social", "gtm", "brand", "creative", "operations"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
@@ -91,10 +91,13 @@ const fs = require("fs"),
     });
   }
   await route("/home");
-  check("homepage surfaces four featured cases and two period metrics", () => {
+  check("homepage links five selected works, six practice modules and distinct period metrics", () => {
     const links = [...d.querySelectorAll(".featured-nav a")];
     assert.deepEqual(links.map((item) => item.hash.split("/").at(-1)), featured);
-    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 4);
+    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 5);
+    assert.equal(d.querySelectorAll("#strategy-map .home-route-card").length, 6);
+    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
+    assert.equal(d.querySelector(".home-proof-bridge a strong").textContent, "4,009");
     const summary = d.querySelector(".home-summary");
     assert.ok(summary.textContent.includes("2025 年阶段汇总"));
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
@@ -104,8 +107,8 @@ const fs = require("fs"),
   let scrolledSection;
   w.HTMLElement.prototype.scrollIntoView = function () { scrolledSection = this.id; };
   await route(d.querySelector('.application-hero .btn').hash);
-  check("homepage selected work link scrolls to the project list", () => {
-    assert.equal(scrolledSection, "selected-work");
+  check("homepage topic action scrolls to the portfolio route index", () => {
+    assert.equal(scrolledSection, "strategy-map");
   });
   w.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
   for (const { id } of w.PORTFOLIO.cases) {
@@ -133,9 +136,21 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#launch-decisions tbody tr").length, 3);
     assert.equal(d.querySelectorAll("#launch-channel-plan tbody tr").length, 4);
   });
+  await route("/case/gtm/campaign-architecture");
+  check("M3 Campaign architecture preserves business targets, channel roles and content pillars", () => {
+    assert.ok(d.getElementById("campaign-architecture"));
+    assert.equal(d.querySelectorAll("#campaign-architecture .campaign-lens-grid article").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-architecture .campaign-journey>div").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-content-matrix tbody tr").length, 8);
+    assert.match(d.getElementById("campaign-architecture").textContent, /规划.*不代表已经发布/);
+  });
   await route("/case/gtm/campaign-mechanism-mapping");
   check("a direct link from review opens the M3 creative directions", () => {
     assert.equal(d.querySelector("#campaign-mechanism-mapping").open, true);
+  });
+  await route("/case/social/fathers-day-channel-roles");
+  check("Father's Day content plan distinguishes four channel responsibilities", () => {
+    assert.equal(d.querySelectorAll("#fathers-day-channel-roles article").length, 4);
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
@@ -155,6 +170,14 @@ const fs = require("fs"),
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
+  });
+  check("video editorial review compares three different viewing tasks", () => {
+    assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
+  });
+  await route("/case/b2b/b2b-scale-comparison");
+  check("B2B same-metric comparison uses two historical approximate bounds", () => {
+    assert.equal(d.querySelectorAll("#b2b-scale-comparison .b2b-range-plot>div").length, 2);
+    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不计算百分比"));
   });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
