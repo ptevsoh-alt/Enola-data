@@ -567,6 +567,55 @@
         <figure>${image("exhibition-booth-angle-redacted", "海外展台侧面，展示位置与物料层次，品牌标识已脱敏", "jpg")}<figcaption><b>展位视觉</b><span>主视觉、展位开放面与到访视角</span></figcaption></figure>
         <figure>${image("exhibition-product-display-redacted", "储能系统与产品展示墙，品牌标识已脱敏", "jpg")}<figcaption><b>产品讲解</b><span>系统关系、设备组合与应用场景</span></figcaption></figure>
       </div>
+      <section class="expo-concept-lab" id="expo-concept-lab" aria-labelledby="expo-concept-heading">
+        <div class="expo-concept-heading">
+          <div><small>EXHIBITION / SPACE CONCEPT</small><h3 id="expo-concept-heading">展会空间策划｜先让人看懂，再邀请上手</h3><p>按照访客的观察距离组织信息：远处识别品牌、中距理解产品、近处体验动作、接待区完成需求沟通。M3 / Q3 展位方案作为独立的清洁电器项目策划呈现，与上方储能展会实拍分开。</p></div>
+          <div class="expo-concept-signal"><strong>6–10m</strong><span>品牌第一眼识别</span><b>→ 3–5m → 1m → 0.5m</b></div>
+        </div>
+        <div class="expo-space-map" id="expo-distance-route">
+          <div class="expo-space-map-header"><span>VISITOR JOURNEY / 访客视角</span><b>从外侧走向接待台</b></div>
+          <div class="expo-space-track" role="group" aria-label="按观展距离切换现场信息">
+            <button type="button" class="expo-space-stop is-active" data-expo-select="0" data-expo-summary="主背景板首先提供品牌与核心类别识别：6000 × 2400 mm。远处只呈现一个主题，不堆叠产品小字。" aria-pressed="true">
+              <small>01 / 远距</small><strong>6–10m</strong><span>品牌主视觉</span><em>3 秒判断这是哪里</em>
+            </button>
+            <button type="button" class="expo-space-stop" data-expo-select="1" data-expo-summary="M3 / Q3 两支易拉宝在 3–5 米的中距承担产品区分与场景解释；每款对应一个问题、一个产品作用。" aria-pressed="false">
+              <small>02 / 中距</small><strong>3–5m</strong><span>产品与场景</span><em>知道这里能解决什么</em>
+            </button>
+            <button type="button" class="expo-space-stop" data-expo-select="2" data-expo-summary="A3 体验操作牌在 1 米以内解释演示动作；A4 参数卡在 0.5–1 米帮助核对规格。产品接触、姿势与适用表面需要按真实操作展示。" aria-pressed="false">
+              <small>03 / 近距</small><strong>1m</strong><span>实际体验</span><em>近距离看清操作与证明</em>
+            </button>
+            <button type="button" class="expo-space-stop" data-expo-select="3" data-expo-summary="接待台以 0.5 米面对面交流为目标：先了解访客需求，再选择 B2B 洽谈或 B2C 产品咨询入口；经许可后完成扫码与下一步交接。" aria-pressed="false">
+              <small>04 / 台前</small><strong>0.5m</strong><span>接待与留资</span><em>形成后续联系</em>
+            </button>
+          </div>
+          <div class="expo-space-focus"><span>当前触点</span><p id="expo-selected-detail" aria-live="polite">主背景板首先提供品牌与核心类别识别：6000 × 2400 mm。远处只呈现一个主题，不堆叠产品小字。</p></div>
+        </div>
+      </section>
+      <section class="expo-asset-studio" id="expo-asset-manifest" aria-labelledby="expo-asset-title">
+        <header><small>SPATIAL BRANDING / POSM</small><h3 id="expo-asset-title">六件物料，四层信息任务</h3><p>不把完整物料清单直接塞进表格，而是按照它们在展位中的角色呈现版式、阅读距离和对应规格。</p></header>
+        <div class="expo-asset-grid">
+          <article class="expo-asset-card expo-asset-wide"><div class="expo-asset-preview backdrop"><span>POWER EVERY MOVE</span><b>CLEANING MADE VISIBLE</b><i>M3 / Q3</i></div><div class="expo-asset-meta"><small>EXH-MAT-01 / BACKDROP</small><h4>展台主背景板</h4><p>远处优先显示品牌主张与核心品类，避免小参数夺走视觉焦点。</p><span>6000 × 2400 mm · 6–10m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>M3</b><span>地面清洁</span><i>双盘结构 / 使用场景</i></div><div class="expo-asset-meta"><small>EXH-MAT-02 / ROLL-UP A</small><h4>M3 场景易拉宝</h4><p>聚焦餐区硬地任务及双盘接地动作。</p><span>850 × 2000 mm · 3–5m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview rollup rollup-q3"><b>Q3</b><span>浴室边角</span><i>长柄 / 刷头角度</i></div><div class="expo-asset-meta"><small>EXH-MAT-03 / ROLL-UP B</small><h4>Q3 使用易拉宝</h4><p>说明长柄刷的站位、角度和接触位置。</p><span>850 × 2000 mm · 3–5m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview tabletop"><small>HOW TO TRY</small><b>握持 · 接地 · 推进</b><i>体验步骤</i></div><div class="expo-asset-meta"><small>EXH-MAT-04 / A3 GUIDE</small><h4>现场体验操作牌</h4><p>让访客在演示前看懂动作顺序与安全边界。</p><span>420 × 297 mm · 1m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview spec"><small>PRODUCT FACTS</small><b>M3</b><i>规格与适用说明</i></div><div class="expo-asset-meta"><small>EXH-MAT-05 / A4 CARD</small><h4>产品规格台卡</h4><p>近距回答参数、适用地面与操作问题。</p><span>210 × 297 mm · 0.5–1m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview reception"><b>WELCOME</b><span>LOOK · TALK · FOLLOW UP</span><i>扫码 · 咨询</i></div><div class="expo-asset-meta"><small>EXH-MAT-06 / RECEPTION</small><h4>接待台贴面与留资牌</h4><p>把 B2B 商务与 B2C 产品咨询分开引导，联系信息经许可记录。</p><span>1000 × 1000 mm 贴面 + A5 台牌</span></div></article>
+        </div>
+      </section>
+      <section class="expo-activation-lab" id="expo-activation-program" aria-labelledby="expo-activation-heading">
+        <header><small>ON-SITE ACTIVATION / 活动设计</small><h3 id="expo-activation-heading">一次体验，三种传播内容</h3><p>品牌识别不是终点。现场活动围绕演示、沟通与可延展内容安排，让线下动作能衔接线上 Campaign 和后续客户跟进。</p></header>
+        <div class="expo-activation-grid">
+          <article><span>01 / DEMO</span><h4>现场产品体验</h4><p>M3 看双盘接地与推进，Q3 看杆长、刷头角度和边角触达。主持人先展示正确操作，再邀请访客按说明体验。</p><strong>体验牌 · 演示脚本 · 产品 FAQ</strong></article>
+          <article><span>02 / CONTENT</span><h4>可传播的内容片段</h4><p>设置不干扰动线的拍摄位，记录产品结构与动作。社媒、PR 和 Creator 使用同一套产品事实，人物拍摄与商业复用另按授权处理。</p><strong>照片位 · 短视频镜头 · 媒体资料</strong></article>
+          <article><span>03 / LEAD</span><h4>B2B / B2C 双路径接待</h4><p>客户咨询先问需求。经销商进入商务需求记录与销售跟进；个人用户进入产品咨询或许可订阅，不将扫码人数直接视为成交。</p><strong>接待话术 · 扫码入口 · 跟进分工</strong></article>
+        </div>
+        <div class="expo-activation-rhythm" aria-label="展会项目关键协作节点">
+          <div><small>展前 / 内容准备</small><b>KV、易拉宝、产品事实与预热邀约</b></div>
+          <div><small>展前 / 现场验收</small><b>搭建、通电、动线与扫码跨设备检查</b></div>
+          <div><small>展中 / 接待运营</small><b>演示排队、日常维护、需求记录与交接</b></div>
+          <div><small>展后 / 项目复盘</small><b>询盘跟进、内容复用、物料清点与项目总结</b></div>
+        </div>
+      </section>
       <section class="expo-program" id="expo-event-plan" aria-labelledby="expo-program-title">
         <header><small>CAMPAIGN × OFFLINE / 传播与协作</small><h3 id="expo-program-title">展前、现场、会后：三段任务共同完成一个项目</h3><p>以实际展会参与经历为背景，将线上宣传、线下接待与客户后续联系纳入同一条工作流程。</p></header>
         <div class="expo-program-grid">
