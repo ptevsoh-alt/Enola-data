@@ -4,10 +4,9 @@ const assert = require("node:assert/strict");
 const { spawnSync } = require("node:child_process");
 const root = path.resolve(__dirname, "../site");
 const clips = [
-  ["holiday-story.mp4", "节庆故事短版"],
   ["holiday-story-long.mp4", "节庆故事长版"],
   ["stair-demo.mp4", "楼梯演示"],
-  ["product-opening.mp4", "开场对照"],
+  ["product-opening.mp4", "客厅产品介绍与楼梯开场来源"],
 ];
 
 function boxes(buffer) {
@@ -75,4 +74,8 @@ for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE", "1xuDMGJbNw4RZt9nBuyLkjy7
 }
 assert.ok(projects.includes('id="thanksgiving-tvc"') && projects.includes('id="holiday-full-film"'), "two themed TVC projects not found");
 assert.ok(projects.includes('id="kol-shorts"'), "creator short-form video grouping missing");
-console.log("PASS Thanksgiving TVC, Christmas TVC and Creator/KOL grouping with three local playable clips; rights and browser playback are separate.");
+assert.ok(projects.includes('assets/video/product-opening.mp4#t=0,3'), "case must isolate a living-room-only Creator intro");
+assert.ok(review.includes('../assets/video/product-opening.mp4#t=0,3'), "review must isolate living-room Creator intro");
+assert.ok(!review.includes('../assets/video/holiday-story.mp4') && !projects.includes('assets/video/holiday-story.mp4'), "TVC short cutdown should not appear publicly");
+assert.notEqual(clips[1][0], clips[2][0], "Creator playback should use two different base videos");
+console.log("PASS Thanksgiving and Christmas full TVCs plus two different Creator presentation scenes; no TVC cutdowns.");
