@@ -162,7 +162,10 @@
   const readerWindow = (m) => {
     const raw = String(m.window || "");
     if (["impressions", "engagements"].includes(m.id)) return "2025 年 Meta 阶段数据";
-    if (/截图未显示完整|具体起止未注明/.test(raw)) return "历史阶段数据";
+    if (m.id === "group-members") return "Facebook Group 成员规模快照";
+    if (m.id === "group-growth-1k") return "社群历史运营阶段";
+    if (m.id === "group") return "社群单阶段新增记录";
+    if (/未注明|待核|未完整|具体起止|截图未显示|不确定|未知/.test(raw)) return "历史阶段数据";
     return raw.replace(/（简历记录）/g, "").replace(/（字段待确认）/g, "");
   };
   const caseResultCopy = {
@@ -340,10 +343,10 @@
       ["execution", "Execution", "执行与工作物"],
       ["management", "Management Contribution", "管理贡献"],
       ["results", "Results", "项目成果"],
-      ["evidence", "Evidence", "项目资料"],
+      ["evidence", "Related Work", "相关项目"],
     ];
     const metrics = c.metrics.map(metric);
-    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1>${featured[c.id] ? "" : badge(c.status)}</div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">查看视觉方向 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Management Contribution</div><div><h2>管理贡献与协作</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>项目成果</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? metaSummary() : c.id === "seo" ? shareChart() : ""}<details class="reader-source-note"><summary>项目复盘与统计说明</summary><p>${esc(c.result)}</p><p>${esc(c.review)}</p></details></div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / Evidence</div><div><h2>项目资料</h2><p><a href="#/case/${c.id}/${caseDecisions[c.id].chapter}">${esc(caseDecisions[c.id].artifact)} ↗</a></p>${metrics.length ? metrics.map((m) => `<details><summary>${esc(m.label)} · ${P.statuses[m.status]}</summary><p>定义：${esc(m.definition)}</p><p>来源：${esc(m.source)}</p><p>统计窗口：${esc(m.window)}</p><p>限制：${esc(m.limits)}</p></details>`).join("") : '<p class="note">本案例展示策略与交付流程，暂无对应的量化结果。</p>'}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
+    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1>${featured[c.id] ? "" : badge(c.status)}</div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">查看视觉方向 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Management Contribution</div><div><h2>管理贡献与协作</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>项目成果</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? metaSummary() : c.id === "seo" ? shareChart() : ""}<details class="reader-source-note"><summary>项目复盘与统计说明</summary><p>${esc(c.result)}</p><p>${esc(c.review)}</p></details></div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / MORE WORK</div><div><h2>更多项目内容</h2><p><a href="#/case/${c.id}/${caseDecisions[c.id].chapter}">${esc(caseDecisions[c.id].artifact)} ↗</a></p>${metrics.length ? `<p><a href="#/data/${metrics[0].domain}">查看关联业务数据 ↗</a></p>` : ""}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
   }
   function metaSummary() {
     const ids = ["impressions", "engagements"];
@@ -360,7 +363,7 @@
   function dataPage(domain) {
     const selected = P.domains[domain] ? domain : "social",
       rows = P.metrics.filter((m) => m.domain === selected);
-    return `<div class="wrap page"><p class="eyebrow">MEASUREMENT / 数据与证据</p><h1>增长数据与业务表现</h1><p class="lede">按业务板块查看重点指标、阶段表现与项目成果。每项数据均可进一步查看统计说明。</p><nav class="filter-row" aria-label="数据领域">${Object.entries(
+    return `<div class="wrap page"><p class="eyebrow">BUSINESS PERFORMANCE / 项目结果</p><h1>项目数据与增长表现</h1><p class="lede">按社媒、社群、搜索和商业经营查看项目阶段成果。</p><nav class="filter-row" aria-label="数据领域">${Object.entries(
       P.domains,
     )
       .map(
@@ -369,7 +372,7 @@
       )
       .join(
         "",
-      )}</nav>${selected === "social" ? metaSummary() : selected === "search" ? shareChart() : ""}<div class="data-kpis">${rows.map(metricCard).join("")}</div><details><summary>查看完整指标列表</summary><div class="table-scroll"><table><thead><tr><th>指标</th><th>数值</th><th>统计窗口</th><th>数据说明</th></tr></thead><tbody>${rows.map((m) => `<tr><th scope="row">${esc(m.label)}</th><td>${esc(m.display)}</td><td>${esc(readerWindow(m))}</td><td>${P.statuses[m.status]}</td></tr>`).join("")}</tbody></table></div></details></div>`;
+      )}</nav>${selected === "social" ? metaSummary() : selected === "search" ? shareChart() : ""}<div class="data-kpis">${rows.map(metricCard).join("")}</div></div>`;
   }
   function simple(page) {
     if (page === "experience")
@@ -378,16 +381,7 @@
       return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>营销能力</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
     if (page === "contact")
       return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">${esc(P.profile.direction)}</p><p>工作重点：${esc(P.profile.focus)}。联系方式以随投递简历提供的信息为准。</p><div class="section">${link("operations", "了解团队管理与项目交付")}</div></div>`;
-    return `<div class="wrap page"><p class="eyebrow">ABOUT THE EVIDENCE</p><h1>事实与展示，<br>各有清晰的依据。</h1><div class="rights-grid">${Object.entries(
-      P.statuses,
-    )
-      .map(
-        ([s, n]) =>
-          `<article>${badge(s)}<h2>${n}</h2><p>${{ VERIFIED: "可由原始平台数据直接核对。", DOCUMENTED: "简历、项目记录或后台截图中有对应记录。", RECONSTRUCTED: "根据实际职责与项目流程整理的工作方法。", CONCEPT: "用于展示创意方向和内容表达的样例。", PENDING: "字段定义或统计窗口尚未完整。" }[s]}</p></article>`,
-      )
-      .join(
-        "",
-      )}</div><p>品牌与企业身份已匿名化。创作者合作重点展示受众筛选、Brief、内容审核和授权管理；视觉样例用于呈现创意方向。</p></div>`;
+    return `<div class="wrap page"><p class="eyebrow">HOW I WORK</p><h1>从品牌判断到项目交付</h1><p class="lede">以业务目标为起点，梳理市场机会、产品价值与传播任务，协调内容、创意和渠道团队将策略落地。</p><div class="cap-list"><article><h2>品牌与市场</h2><p>整理用户需求、市场与竞品信息，确定值得放大的核心价值与传播主张。</p><a href="#/case/brand">查看品牌传播案例 ↗</a></article><article><h2>上市与整合营销</h2><p>制定传播主题、阶段目标、内容矩阵与跨渠道项目节奏。</p><a href="#/case/gtm">查看 M3 上市方案 ↗</a></article><article><h2>内容与创意</h2><p>将用户场景和产品卖点转化为视频、视觉、社媒及 Creator 工作物。</p><a href="#/case/creative">查看创意作品 ↗</a></article><article><h2>团队与增长</h2><p>组织季度主题、月度日历、创意审核及数据复盘，协调多方按节点交付。</p><a href="#/case/operations">查看团队管理案例 ↗</a></article></div></div>`;
   }
   function scrollToChapter(chapter) {
     const target = document.getElementById(chapter);
@@ -484,10 +478,8 @@
           ["指标定义", m.definition],
         ]
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
-          .join("")}</dl><details class="evidence-method"><summary>查看数据依据与统计说明</summary><dl>${[
-          ["原始记录", m.source],
-          ["原始时间字段", m.window],
-          ["适用范围", m.limits],
+          .join("")}</dl><details class="evidence-method"><summary>数据出处</summary><dl>${[
+          ["原始数据来源", m.source],
         ]
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
           .join("")}</dl></details>${link(m.caseId, "查看对应项目")}`;
