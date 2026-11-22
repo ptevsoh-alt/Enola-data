@@ -6,11 +6,11 @@ window.PORTFOLIO = {
     summary: "近 6 年海外市场及跨境业务经历，覆盖 Amazon 店铺经营、海外 B2B 客户开发和北美消费品牌传播。2025.04—2026.09 担任社媒负责人 / 社媒管理组长，负责季度传播主题、月度内容日历、团队创意审核与项目交付；参与 4 条核心产品线的用户研究、卖点分层和上市传播，协调产品、设计、视频、电商及外部合作方。",
   },
   statuses: {
-    VERIFIED: "后台数据",
-    DOCUMENTED: "项目记录",
-    RECONSTRUCTED: "工作方法",
-    CONCEPT: "内容样例",
-    PENDING: "口径待确认",
+    VERIFIED: "平台数据",
+    DOCUMENTED: "项目成果",
+    RECONSTRUCTED: "策略案例",
+    CONCEPT: "创意展示",
+    PENDING: "数据待核",
   },
   domains: {
     social: "社媒传播",
