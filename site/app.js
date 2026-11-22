@@ -156,7 +156,14 @@
     return `<div class="project-cover cover-${c.id} ${img ? "has-image" : ""}">${img}<div class="cover-top"><span>${tags[c.id]}</span><span>${c.no} / SELECTED WORK</span></div><div class="cover-diagram" aria-hidden="true">${names[c.id].map((n, i) => `<span><small>0${i + 1}</small>${n}</span>`).join("")}</div><div class="cover-bottom"><b>${esc(c.subtitle)}</b><span>${img ? "视觉方向" : "项目重点"} · ${P.statuses[c.status]}</span></div></div>`;
   }
   function card(c) {
-    return `<article class="case-card"><a class="cover-link" href="#/case/${c.id}" aria-label="阅读${esc(c.title)}">${cover(c)}</a><div class="card-meta"><span>${tags[c.id]}</span></div><h3>${link(c.id, c.title)}</h3><p>${esc(c.role)}</p></article>`;
+    const lead = window.PORTFOLIO_SELECTED_WORK?.[c.id];
+    const highlight = lead?.highlight || c.subtitle;
+    return `<article class="case-card case-card-editorial" data-case-id="${c.id}">
+      <a class="cover-link" href="#/case/${c.id}" aria-label="阅读${esc(c.title)}">${cover(c)}</a>
+      <div class="case-card-body"><div class="card-meta"><span>CASE ${esc(c.no)} · ${esc(tags[c.id])}</span></div>
+      <h3>${link(c.id, c.title)}</h3><p>${esc(lead?.decision || c.role)}</p>
+      <div class="case-card-result"><strong>${esc(highlight)}</strong><a href="#/case/${c.id}/${esc(lead?.chapter || "insight")}">查看项目内容 ↗</a></div></div>
+    </article>`;
   }
   // Interview copy stays concise; audit details remain in expandable source notes.
   const readerWindow = (m) => {
