@@ -1,9 +1,9 @@
 /* Public portfolio data: anonymized; evidence maturity preserved. */
 window.PORTFOLIO = {
   profile: {
-    direction: "海外品牌营销 · GTM / 产品营销 · 整合营销 IMC",
-    focus: "品牌与用户洞察 · Campaign 策划 · 跨部门项目管理",
-    summary: "近 6 年海外市场与跨境业务经历，覆盖北美消费品牌传播、海外 B2B 客户开发及 Amazon 经营。2025.04—2026.09 负责社媒小组季度传播主题、月度内容日历、创意审核与交付复盘；参与 4 条产品线的场景研究、卖点分层与新品传播，并协调产品、设计、视频、电商和外部合作方完成内容交付。",
+    direction: "海外品牌营销 · 新品上市 GTM · 整合营销 IMC",
+    focus: "品牌与产品传播 · Campaign 策划 · 团队与项目交付",
+    summary: "近 6 年海外市场与跨境业务经历。负责北美品牌社媒的季度传播主题、内容日历及小组管理，参与四条清洁产品线的卖点转译、上市内容和跨部门交付；此前积累了海外 B2B 客户开发、展会推广及 Amazon 经营经验。",
   },
   statuses: {
     VERIFIED: "平台数据",
