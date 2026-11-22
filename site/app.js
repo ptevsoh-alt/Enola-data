@@ -199,13 +199,13 @@
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
   const homeRoutes = [
-    ["01", "GTM / 产品营销", "让用户在餐后清洁任务中理解新品，再决定哪些信息能进入 KV、视频和商品页。", "#/case/gtm/launch-decisions", "M3 使用场景与产品证明"],
-    ["02", "IMC / Campaign", "由一个主目标到 Big Idea、内容矩阵、渠道职责与发布条件，而非多平台同步发帖。", "#/case/gtm/campaign-architecture", "Campaign Strategy / 内容矩阵"],
-    ["03", "Brand / PR", "品牌屋确定任务分工，新闻稿和联合营销承担不同的可信信息角色。", "#/case/brand/brand-positioning", "品牌屋与实际传播作品"],
-    ["04", "Creative / Video", "节庆故事建立情绪关联，操作镜头证明产品如何接触与移动。", "#/case/creative/video-projects", "播放三段 MP4 节选"],
-    ["05", "Social / Growth", "季度主题、月度日历与平台数据相互关联，复盘不混用不同窗口。", "#/case/social/social-data-decisions", "2025 Meta 阶段结果"],
-    ["06", "Team / Delivery", "社媒小组管理、产品事实核验、设计返工及渠道放行责任分开记录。", "#/case/operations/asset-review", "真实视觉返工与协同"],
-    ["07", "Offline / Exhibition", "围绕展前传播、系统陈列、现场沟通与会后跟进，连接海外 B2B 客户需求。", "#/case/b2b/expo-project", "真实展会与客户项目"],
+    ["01","GTM / 新品上市","从家庭清洁任务选择主推卖点，安排产品证明、上市节奏与多渠道物料。","#/case/gtm/gtm-value-to-launch","M3 上市策略与跨团队排期"],
+    ["02","IMC / Campaign","把一个 Campaign 主张拆为 Social、Paid、PR / Creator、EDM 与商品页各自的任务。","#/case/gtm/campaign-architecture","Campaign 品牌屋与八条传播工作流"],
+    ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
+    ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
+    ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
+    ["06","Creative / Video","用圣诞家庭故事传达品牌关系，用吸尘器镜头回答实际使用问题。","#/case/creative/video-projects","82 秒长片 · 产品演示视频"],
+    ["07","Field / Exhibition","以真实储能展会为背景，呈现展位信息层级、产品讲解和 B2B 客户沟通。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
   ];
 
   function featuredCard(id, item) {
@@ -221,17 +221,26 @@
   function home() {
     return `<div class="home-intro-band"><div class="wrap">
       <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>整合传播与产品上市</em></h1>
+        <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>产品上市与整合传播</em></h1>
         <p class="profile-direction">${esc(P.profile.direction)}</p>
         <p class="hero-summary">${esc(P.profile.summary)}</p>
-        <div class="actions"><a class="btn" href="#/home/strategy-map">按主题看作品 ↘</a><a href="#/case/creative/video-projects">播放视频 ↗</a><a href="#/experience">经历与职责</a></div></div>
+        <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/case/creative/video-projects">观看品牌视频 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
+      <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
+        <div class="section-head"><div><p class="eyebrow">HOW I WORK / 项目决策路径</p><h2 id="jd-case-path-title">从用户需求到上市传播，再到业务复盘</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
+        <div class="home-decision-grid">
+          <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从家庭清洁场景、竞争内容和用户疑问中找到产品值得讲清的价值。</p><span>品牌屋与产品线定位 ↗</span></a>
+          <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>确定主张、传播节奏与渠道分工，把一个核心价值变成多触点内容。</p><span>M3 Campaign 品牌屋 ↗</span></a>
+          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>通过内容排期、Brief、审核和跨部门沟通，让创意按节点交付。</p><span>社媒小组与视觉返工案例 ↗</span></a>
+          <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>结合内容曝光、互动、链接动作和用户问题，调整后续传播内容。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
+        </div>
+      </section>
       <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
-        <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">从策略判断到作品与结果</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
-        <p class="home-route-intro">每张卡片都能打开对应的项目决策、实物或数据。沿着项目目标、传播创意、执行作品和增长成果，了解每项工作的实际内容。</p>
+        <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">按项目主题浏览</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
+        <p class="home-route-intro">每个主题都连接实际项目，包括上市排期、Campaign 创意、品牌视觉、团队协作、社媒数据、视频与线下展会。</p>
         <div class="home-route-grid">${homeRoutes.map(([no, title, note, href, evidence]) => `<a class="home-route-card" href="${href}"><span class="home-route-index">${no} / ${title}</span><p>${note}</p><strong>${evidence} <span aria-hidden="true">↗</span></strong></a>`).join("")}</div>
       </section>
       <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
@@ -239,7 +248,7 @@
         <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>查看海外 B2B 社媒增长成果 ↗</span></a>
         <a href="#/case/creative/video-projects"><small>品牌故事与产品演示</small><strong>长片 + 短视频</strong><span>节庆故事、产品使用与视频开场 ↗</span></a>
       </section>
-      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">重点案例与实际工作物</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
+      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
