@@ -866,3 +866,7 @@
 .review-outcome-card strong { display:block; font-size: clamp(1.8rem,3.5vw,2.7rem); line-height: 1.1; color: var(--accent); }
 .review-outcome-card a { margin-top: auto; color: var(--accent); font-size: .81rem; text-decoration: underline; text-underline-offset: 2px; }
 .review-domain-card p { font-size: .82rem; color: var(--muted); line-height: 1.55; }
+
+/* Drive-hosted feature film adopts the same ratio as the previous native player */
+.review-video-grid .review-feature-film iframe { display:block; width:100%; aspect-ratio:16/9; border:0; background:#101711; align-self:center; }
+.review-video-grid .review-feature-film figcaption a { display:inline-block; }
