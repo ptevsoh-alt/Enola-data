@@ -164,7 +164,11 @@ const fs = require("fs"),
   await route("/case/gtm/launch-delivery");
   check("the launch work sample connects milestones, an English brief and the asset review", () => {
     assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
-    assert.equal(d.querySelectorAll("#launch-delivery .campaign-flight-row").length, 6);
+    assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-lane").length, 6);
+    assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-axis span").length, 5);
+    assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-gates a").length, 5);
+    assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-scroll[tabindex='0']"));
+    assert.equal(d.querySelectorAll("#gtm-channel-orchestration article").length, 4);
     assert.ok(d.querySelector(".campaign-milestone-details"));
     assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
     assert.ok(d.querySelector('#english-brief a[href="#/case/operations/asset-review"]'));
@@ -179,7 +183,9 @@ const fs = require("fs"),
   await route("/case/gtm/campaign-architecture");
   check("M3 Campaign architecture preserves business targets, channel roles and content pillars", () => {
     assert.ok(d.getElementById("campaign-architecture"));
-    assert.equal(d.querySelectorAll("#campaign-architecture .campaign-lens-grid article").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-decision-logic .v-campaign-logic-steps article").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-channel-path>div").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-content-matrix .v-matrix-row").length, 8);
     assert.equal(d.querySelectorAll("#campaign-architecture .campaign-journey>div").length, 4);
     assert.equal(d.querySelectorAll("#campaign-content-matrix tbody tr").length, 8);
     assert.equal(d.querySelectorAll("#campaign-architecture .campaign-house-channels article").length, 8);
@@ -193,7 +199,9 @@ const fs = require("fs"),
   });
   await route("/case/gtm/campaign-mechanism-mapping");
   check("a direct link from review opens the M3 creative directions", () => {
-    assert.equal(d.querySelector("#campaign-mechanism-mapping").open, true);
+    assert.equal(d.querySelector("#campaign-mechanism-mapping").tagName, "SECTION");
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 5);
+    assert.equal(d.querySelectorAll("#market-adaptation .v-locale-panel").length, 2);
   });
   await route("/case/social/fathers-day-channel-roles");
   check("Father's Day content plan distinguishes four channel responsibilities", () => {
@@ -405,7 +413,10 @@ const fs = require("fs"),
     assert.ok(section);
     for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明"])
       assert.ok(section.textContent.includes(term), term);
-    assert.ok(section.parentElement.textContent.includes("五种创意方向分别承担场景识别"));
+    assert.ok(section.textContent.includes("同一个 Big Idea，五种不同的画面切入"));
+    assert.equal(section.querySelectorAll(".v-creative-art").length, 5);
+    assert.ok(d.querySelector('#market-adaptation [lang="en-US"]').textContent.includes("entryway"));
+    assert.ok(d.querySelector('#market-adaptation [lang="en-GB"]').textContent.includes("hallway"));
   });
   d.querySelector("[data-image]").click();
   await route("/case/gtm/strategy");
