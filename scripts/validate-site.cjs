@@ -12,11 +12,12 @@ function check(n, fn) {
 }
 vm.runInNewContext(fs.readFileSync(path.join(site, "data.js"), "utf8"), ctx);
 const p = ctx.window.PORTFOLIO;
-check("11 unique cases and 38 retained public metrics", () => {
+check("11 unique cases and 36 supported public metrics", () => {
   assert.equal(p.cases.length, 11);
-  assert.equal(p.metrics.length, 38);
+  assert.equal(p.metrics.length, 36);
   assert.equal(new Set(p.cases.map((c) => c.id)).size, 11);
-  assert.equal(new Set(p.metrics.map((m) => m.id)).size, 38);
+  assert.equal(new Set(p.metrics.map((m) => m.id)).size, 36);
+  assert.ok(p.metrics.every((m) => !["待补充","--"].includes(m.display)), "No placeholder outcomes in public metrics");
 });
 check("metric provenance, definitions, windows and limitations", () =>
   p.metrics.forEach((m) => {
