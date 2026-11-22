@@ -236,54 +236,25 @@
     });
   });
 
-  const statusRows = Object.entries(P.statuses)
-    .map(([key, label]) => {
-      const count = P.metrics.filter((item) => item.status === key).length;
-      const width = P.metrics.length
-        ? Math.round((count / P.metrics.length) * 100)
-        : 0;
-      return (
-        '<article class="review-evidence-status"><strong>' +
-        esc(count) +
-        '</strong><span>' +
-        esc(label) +
-        '</span><small>' +
-        esc(key) +
-        " · " +
-        esc(width) +
-        '%</small><div class="review-evidence-track" role="img" aria-label="' +
-        esc(label + "占指标记录 " + width + "%") +
-        '" style="--review-share:' +
-        width +
-        '%"><span></span></div></article>'
-      );
-    })
-    .join("");
-  $("#review-evidence-summary").innerHTML = statusRows;
+  const businessHighlights = [
+    { id: "impressions", label: "2025 · Meta 社媒曝光", href: "../#/case/social/results" },
+    { id: "engagements", label: "2025 · Meta 内容互动", href: "../#/case/social/results" },
+    { id: "group-members", label: "Facebook Group · 社群成员规模", href: "../#/case/community/results" },
+    { id: "organic-share", label: "自然搜索 · 收入份额", href: "../#/case/seo/results" },
+  ];
+  $("#review-evidence-summary").innerHTML = businessHighlights.map((item) => {
+    const data = P.metrics.find((metric) => metric.id === item.id);
+    if (!data) return "";
+    return '<article class="review-outcome-card"><span>' + esc(item.label) +
+      '</span><strong>' + esc(data.display) +
+      '</strong><a href="' + item.href + '">查看项目成果 ↗</a></article>';
+  }).join("");
 
-  $("#review-domain-grid").innerHTML = Object.entries(P.domains)
-    .map(([id, label]) => {
-      const rows = P.metrics.filter((item) => item.domain === id);
-      const share = P.metrics.length
-        ? Math.round((rows.length / P.metrics.length) * 100)
-        : 0;
-      return (
-        '<article class="review-domain-card"><h3>' +
-        esc(label) +
-        '</h3><div class="review-domain-meta"><strong>' +
-        esc(rows.length) +
-        " 项指标</strong><span>" +
-        esc(share) +
-        '%</span></div><div class="review-domain-track" role="img" aria-label="' +
-        esc(label + "占全部指标 " + share + "%") +
-        '" style="--review-share:' +
-        share +
-        '%"><span></span></div><a href="' +
-        dataHref(id) +
-        '">查看该领域数据与口径 ↗</a></article>'
-      );
-    })
-    .join("");
+  $("#review-domain-grid").innerHTML = Object.entries(P.domains).map(([id, label]) =>
+    '<article class="review-domain-card"><h3>' + esc(label) +
+    '</h3><p>查看该业务板块的阶段成果与项目表现。</p><a href="' +
+    dataHref(id) + '">查看相关项目 ↗</a></article>'
+  ).join("");
 
   const search = $("#review-search");
   const empty = $("#review-case-empty");
