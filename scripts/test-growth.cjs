@@ -188,7 +188,7 @@ const fs = require("fs"),
       assert.ok(d.getElementById(clip.getAttribute("aria-describedby")));
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
-    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/creator-livingroom-intro.mp4"]'));
+    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/creator-livingroom-7s.mp4"]'));
     const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
     assert.ok(christmas?.getAttribute("title").includes("90"));
     const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
@@ -201,7 +201,9 @@ const fs = require("fs"),
     assert.ok(!d.getElementById("video-projects").innerHTML.includes("product-opening.mp4#t="));
     assert.ok(!d.getElementById("video-projects").innerHTML.includes("assets/video/holiday-story.mp4"));
     const creatorClips = [...d.querySelectorAll("#kol-shorts video source")].map(x => x.getAttribute("src"));
-    assert.equal(new Set(creatorClips.map(x => x.split("#")[0])).size, 2);
+    assert.deepEqual(creatorClips.sort(), ["assets/video/creator-livingroom-7s.mp4", "assets/video/creator-staircase-7s.mp4"].sort());
+    assert.equal(new Set(creatorClips).size, 2);
+    assert.ok(!d.querySelector("#results .metric") || d.querySelector("#results .metric").textContent !== "待补充");
     assert.ok(d.getElementById("kol-shorts").textContent.includes("客厅"));
     assert.ok(!d.getElementById("video-projects").textContent.includes("另一版节庆广告"));
   });
