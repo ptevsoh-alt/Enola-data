@@ -203,6 +203,17 @@
         </div>
         <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
+      <section class="gtm-market-map" id="gtm-value-to-launch" aria-labelledby="gtm-market-title">
+        <header><small>PRODUCT MARKETING → GO-TO-MARKET</small><h3 id="gtm-market-title">把产品价值变成市场能够理解、渠道能够交付的上市方案</h3><p>在 M3 项目中，传播策划从具体清洁任务出发，再确定证明方式、素材组合和各渠道的上线准备。</p></header>
+        <div class="gtm-market-steps">
+          <article><span>01 / MARKET</span><h4>消费者从哪里开始理解产品</h4><p>以美国家庭餐后硬地场景为沟通起点，围绕地面污渍、站姿操作与清洁效率相关疑问规划信息。</p><b>我的参与</b><small>场景研究、评论/VOC 线索与竞品内容梳理</small></article>
+          <article><span>02 / PRODUCT VALUE</span><h4>一个卖点，需要不同层次的证明</h4><p>双盘外观先解决“这是什么”，真实连续动作回答“怎么用”，适用地面与维护问题由官方说明确认。</p><b>我的参与</b><small>卖点可视化、脚本、产品图与 FAQ Brief</small></article>
+          <article><span>03 / CHANNEL READINESS</span><h4>同一主张适配不同渠道任务</h4><p>社媒承担情境认知，短视频解释动作；广告测试不同切入，PR/Creator 建立可信表达，EDM 与商品页承接更深入的问题。</p><b>我的参与</b><small>内容矩阵、渠道 Brief、交付排期与创意审核</small></article>
+          <article><span>04 / LAUNCH & LEARN</span><h4>发布节奏与后续复盘相连</h4><p>产品/商业同事确认 SKU、Offer、库存、履约和追踪条件，内容侧按审核结果出片；上市后分 D7 / D30 复核内容与承接。</p><b>我的参与</b><small>物料准备、内容质量验收与项目复盘协作</small></article>
+        </div>
+        <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
+        <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
+      </section>
       <div class="g-story-note" id="launch-channel-plan">
         <h3>渠道分工｜从识别场景到确认选购</h3>
         <div class="g-proof-table">
