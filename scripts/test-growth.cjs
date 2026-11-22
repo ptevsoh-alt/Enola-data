@@ -112,21 +112,21 @@ const fs = require("fs"),
   w.HTMLElement.prototype.scrollIntoView = function () { scrolledSection = this.id; };
   await route(d.querySelector('.application-hero .btn').hash);
   check("homepage topic action scrolls to the portfolio route index", () => {
-    assert.equal(scrolledSection, "strategy-map");
+    assert.equal(scrolledSection, "jd-case-path");
   });
   w.HTMLElement.prototype.scrollIntoView = originalScrollIntoView;
   for (const { id } of w.PORTFOLIO.cases) {
     await route("/case/" + id);
     check("overview and chapter links: " + id, () => {
       const overview = d.querySelector(".g-case-overview");
-      assert.deepEqual([...overview.querySelectorAll("h2")].map((h) => h.textContent), ["我的职责", "关键决定", "产出与结果"]);
+      assert.deepEqual([...overview.querySelectorAll("h2")].map((h) => h.textContent), ["我的工作范围", "关键策略判断", "项目交付与成果"]);
       const path = overview.querySelector("a").hash;
       assert.equal(path.split("/")[2], id);
       assert.ok(d.getElementById(path.split("/")[3]));
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
       const evidencePath = d.querySelector("#evidence a").hash;
       assert.ok(d.getElementById(evidencePath.split("/")[3]));
-      assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["怎么分工交接", "结果怎么复核"]);
+      assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["组织与协作", "复盘与下一步"]);
       const insight = d.querySelector("#insight");
       assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
       assert.equal(insight.querySelectorAll("p").length, 2);
