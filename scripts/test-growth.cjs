@@ -179,16 +179,16 @@ const fs = require("fs"),
   await route("/case/creative/video-projects");
   check("the creative case shows distinct Thanksgiving/Christmas TVCs and KOL short-form examples", () => {
     const clips = [...d.querySelectorAll("#video-projects video")];
-    assert.equal(clips.length, 3);
+    assert.equal(clips.length, 2);
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
       const source = clip.querySelector('source[type="video/mp4"]');
-      assert.ok(fs.statSync(path.join(root, "site", source.getAttribute("src"))).size > 0);
+      assert.ok(fs.statSync(path.join(root, "site", source.getAttribute("src").split("#")[0])).size > 0);
       assert.ok(d.getElementById(clip.getAttribute("aria-describedby")));
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
-    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
+    assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4#t=0,3"]'));
     const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
     assert.ok(christmas?.getAttribute("title").includes("90"));
     const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
@@ -197,7 +197,11 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#long-film-note a[href*="15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]'));
     assert.equal(d.querySelectorAll('#kol-shorts video').length, 2);
     assert.ok(d.querySelector('#video-campaign-strategy'));
-    assert.ok(d.querySelector('#video-holiday-cutdown video'));
+    assert.ok(!d.querySelector("#video-holiday-cutdown"));
+    assert.ok(!d.getElementById("video-projects").innerHTML.includes("assets/video/holiday-story.mp4"));
+    const creatorClips = [...d.querySelectorAll("#kol-shorts video source")].map(x => x.getAttribute("src"));
+    assert.equal(new Set(creatorClips.map(x => x.split("#")[0])).size, 2);
+    assert.ok(d.getElementById("kol-shorts").textContent.includes("客厅"));
     assert.ok(!d.getElementById("video-projects").textContent.includes("另一版节庆广告"));
   });
   check("video editorial review compares three different viewing tasks", () => {
