@@ -177,9 +177,9 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
-  check("the creative case contains four playable MP4 works including an 82-second featured film and their strategy", () => {
+  check("the creative case uses a public Drive 90-second film and three supporting local MP4 clips", () => {
     const clips = [...d.querySelectorAll("#video-projects video")];
-    assert.equal(clips.length, 4);
+    assert.equal(clips.length, 3);
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
@@ -189,7 +189,10 @@ const fs = require("fs"),
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
-    assert.ok(d.querySelector('#holiday-full-film source[src="assets/video/holiday-story-long.mp4"]'));
+    const driveFilm = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
+    assert.ok(driveFilm?.getAttribute("title").includes("90 秒"));
+    assert.ok(d.querySelector('#video-drive-editions iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
+    assert.ok(d.querySelector('#long-film-note a[href*="15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]'));
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
