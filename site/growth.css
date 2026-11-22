@@ -2223,3 +2223,23 @@
   .campaign-workstreams article { padding: .8rem; }
   .campaign-milestone-map li { min-width: 0; }
 }
+
+/* Father's Day Campaign | brand-system style story map */
+.holiday-campaign-map { display:grid; gap:.55rem; border:1px solid var(--rule); padding:clamp(.9rem,3vw,1.4rem); background:#fffefa; margin:1rem 0 1.5rem; }
+.holiday-campaign-theme { background:#2e4f42; color:#fffaf0; text-align:center; padding:clamp(1.2rem,3vw,2rem); }
+.holiday-campaign-theme small { font-size:.7rem; letter-spacing:.12em; color:#d7e8da; }
+.holiday-campaign-theme h3 { font-size:clamp(1.25rem,3.3vw,2.2rem); margin:.5rem 0; }
+.holiday-campaign-theme p { color:#f0f4ea; font-size:.86rem; margin:0 auto; max-width:38rem; }
+.holiday-campaign-pillars {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem}
+.holiday-campaign-pillars>div{padding:1rem;background:#e9eee5;text-align:center;min-width:0}
+.holiday-campaign-pillars small,.holiday-phase-title small,.holiday-campaign-phases span{display:block;font-size:.7rem;color:var(--accent);font-weight:700}
+.holiday-campaign-pillars strong{display:block;font-size:1.05rem;margin:.3rem 0}
+.holiday-campaign-pillars p{font-size:.77rem;margin:0;color:var(--muted)}
+.holiday-phase-title{text-align:center;padding:1.1rem .7rem .4rem}
+.holiday-phase-title h4{margin:.25rem 0;font-size:clamp(.99rem,2vw,1.25rem)}
+.holiday-campaign-phases{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.55rem}
+.holiday-campaign-phases>div{border-top:3px solid var(--accent);background:#f4f6f0;padding:.9rem;min-width:0}
+.holiday-campaign-phases b{display:block;margin:.4rem 0}
+.holiday-campaign-phases p{font-size:.78rem;color:var(--muted);margin:0}
+@media(max-width:850px){.holiday-campaign-phases{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:600px){.holiday-campaign-pillars,.holiday-campaign-phases{grid-template-columns:minmax(0,1fr)}}
