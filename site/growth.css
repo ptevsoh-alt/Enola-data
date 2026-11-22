@@ -2136,3 +2136,32 @@
 @media (max-width: 950px) { .home-route-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); } }
 @media (max-width: 650px) { .home-route-grid, .home-proof-bridge { grid-template-columns: minmax(0,1fr); } .home-route-card { min-height: 9.5rem; } }
 @media (prefers-reduced-motion: reduce) { .home-route-card { transition: none; } .home-route-card:hover { transform: none; } }
+
+/* Case-study visual anchors: Campaign decisions, video logic and same-metric comparison. */
+.campaign-lens { background: #f5f5ef; }
+.campaign-lens .eyebrow { margin-bottom: .5rem; font-size: .75rem; }
+.campaign-lens-grid { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: .7rem; margin: 1rem 0; }
+.campaign-lens-grid article { padding: 1rem; background: var(--white); border: 1px solid var(--rule); border-radius: .3rem; }
+.campaign-lens-grid small, .campaign-journey span { display: block; color: var(--accent); font-size: .73rem; font-weight: 700; }
+.campaign-lens-grid h4, .campaign-lens-grid p { margin: .45rem 0; }
+.campaign-lens-grid h4 { font-size: .98rem; }
+.campaign-lens-grid p { font-size: .83rem; color: var(--muted); line-height: 1.75; }
+.campaign-journey { display: grid; grid-template-columns: repeat(4,minmax(0,1fr)); gap: .45rem; }
+.campaign-journey > div { padding: .85rem; border-top: 3px solid var(--accent); background: #e4ece2; min-width: 0; }
+.campaign-journey strong { font-size: .9rem; display: block; margin: .45rem 0; }
+.campaign-journey p { margin: 0; color: var(--muted); font-size: .77rem; }
+.campaign-lens-note { display: flex; gap: .55rem 1rem; flex-wrap: wrap; }
+.campaign-content-table th { text-align: left; }
+.campaign-content-table tbody tr:last-child { background: #eff2e9; }
+.g-video-decision-grid { display: grid; grid-template-columns: repeat(3,minmax(0,1fr)); gap: .65rem; }
+.g-video-decision-grid article { background: var(--white); border: 1px solid var(--rule); padding: .85rem; }
+.g-video-decision-grid h4 { margin: .35rem 0; }
+.g-video-decision-grid small { color: var(--accent); }
+.g-video-decision-grid p { color: var(--muted); font-size: .82rem; }
+.b2b-range-plot { display: grid; gap: .7rem; margin: 1rem 0; }
+.b2b-range-plot > div { display: grid; grid-template-columns: 6rem minmax(0,1fr) 6rem; align-items: center; gap: .75rem; font-size: .86rem; }
+.b2b-range-track { background: #dce5d9; width: 100%; height: 1rem; }
+.b2b-range-track span { display: block; height: 100%; background: var(--accent); }
+.b2b-range-plot strong { font: 700 1.16rem var(--serif); }
+@media(max-width:900px){.campaign-journey { grid-template-columns: repeat(2,minmax(0,1fr)); }.g-video-decision-grid {grid-template-columns: minmax(0,1fr);} }
+@media(max-width:650px){.campaign-lens-grid,.campaign-journey { grid-template-columns: minmax(0,1fr); }.b2b-range-plot > div{grid-template-columns:4.8rem minmax(0,1fr) 5rem;gap:.45rem;} .campaign-content-table{min-width:36rem;} .campaign-lens .g-proof-table { overflow-x:auto; }}
