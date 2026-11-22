@@ -177,7 +177,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
-  check("the creative case uses a public Drive 90-second film and three supporting local MP4 clips", () => {
+  check("the creative case shows distinct Thanksgiving/Christmas TVCs and KOL short-form examples", () => {
     const clips = [...d.querySelectorAll("#video-projects video")];
     assert.equal(clips.length, 3);
     clips.forEach((clip) => {
@@ -189,10 +189,16 @@ const fs = require("fs"),
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
-    const driveFilm = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
-    assert.ok(driveFilm?.getAttribute("title").includes("90 秒"));
-    assert.ok(d.querySelector('#video-drive-editions iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
+    const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
+    assert.ok(christmas?.getAttribute("title").includes("90"));
+    const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
+    assert.ok(thanksgiving?.getAttribute("title").includes("感恩节"));
+    assert.ok(d.querySelector('#video-drive-editions iframe'));
     assert.ok(d.querySelector('#long-film-note a[href*="15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]'));
+    assert.equal(d.querySelectorAll('#kol-shorts video').length, 2);
+    assert.ok(d.querySelector('#video-campaign-strategy'));
+    assert.ok(d.querySelector('#video-holiday-cutdown video'));
+    assert.ok(!d.getElementById("video-projects").textContent.includes("另一版节庆广告"));
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
