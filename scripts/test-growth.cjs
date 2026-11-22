@@ -161,9 +161,9 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
-  check("the creative case contains three portable MP4 excerpts and their strategy", () => {
+  check("the creative case contains four playable MP4 works including an 82-second featured film and their strategy", () => {
     const clips = [...d.querySelectorAll("#video-projects video")];
-    assert.equal(clips.length, 3);
+    assert.equal(clips.length, 4);
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
@@ -173,6 +173,7 @@ const fs = require("fs"),
     });
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/product-opening.mp4"]'));
+    assert.ok(d.querySelector('#holiday-full-film source[src="assets/video/holiday-story-long.mp4"]'));
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
