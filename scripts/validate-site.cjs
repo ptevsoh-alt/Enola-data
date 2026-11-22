@@ -121,7 +121,7 @@ check(
         // The two explicitly approved, publicly readable Drive films are embedded as media,
         // never as scripts or API calls; every other outbound URL remains prohibited.
         const approvedMedia = s.replace(
-          /https:\/\/drive\.google\.com\/file\/d\/(?:15m5TOYZh90NUqTmSbHget8BJbeBEhLKE|1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y)\/(?:preview|view\?usp=drivesdk)/g,
+          /https:\/\/drive\.google\.com\/file\/d\/(?:15m5TOYZh90NUqTmSbHget8BJbeBEhLKE|1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y)\/(?:preview|view(?:\?usp=drivesdk)?)/g,
           "APPROVED_DRIVE_VIDEO",
         );
         assert.ok(
