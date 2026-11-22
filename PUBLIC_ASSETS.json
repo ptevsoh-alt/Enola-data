@@ -110,11 +110,6 @@
     "sha256": "9f7e082431c34e47711aaee8765a5bc36616bc4f86a42f479baea9910fde10cf"
   },
   {
-    "file": "assets/video/holiday-story.mp4",
-    "bytes": 899919,
-    "sha256": "0dea98b46be3d4f0ea6d53c9a9bea573aa5278d4ad6c310daed494a9ce10467f"
-  },
-  {
     "file": "assets/video/product-opening.mp4",
     "bytes": 199053,
     "sha256": "3b9a811a05b17439b5ad717d77ca5b2aa2671f8e12bd80f59fc409fbbcc614d9"
@@ -141,18 +136,18 @@
   },
   {
     "file": "index.html",
-    "bytes": 3479,
-    "sha256": "799deabbddd665def8af2ae89c68aa9ddb5058d6a19ee1de6e86bb90c1f5b6a7"
+    "bytes": 3483,
+    "sha256": "f423baec6c492fc9fd3029d76864e35c7e7caa363bb76fcd9596b767aee2181a"
   },
   {
     "file": "projects.js",
-    "bytes": 96905,
-    "sha256": "b9645c8181eba9e1af42a5b70cf4c804b77ea23e65f7b0c743ce8e6c668eff0f"
+    "bytes": 96360,
+    "sha256": "539f1cfb594ef7b707b2451b9a86b45b87b5ffb4f86891ee7a16a55a63bfa650"
   },
   {
     "file": "review/index.html",
-    "bytes": 13005,
-    "sha256": "df52b9ce5c870fbcebbca503b0c08723fce1f17051b5d735e8e3a29b6d651193"
+    "bytes": 12700,
+    "sha256": "39695770fe9b9a147e1f02ec7039b743218f2f5a62e2c718b7df89e4f92d27f4"
   },
   {
     "file": "review/review.css",
