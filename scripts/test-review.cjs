@@ -73,10 +73,11 @@ const fs = require("fs"),
       assert.ok(fs.existsSync(path.join(site, relative)), relative);
     });
   });
-  check("review showcases delivered 90s videos separately from 82s website cut", () => {
+  check("review links the locally hosted long film and its creative case", () => {
     const links = [...d.querySelectorAll(".review-film-editions a")];
     assert.equal(links.length, 2);
-    assert.ok(links.every(link => link.href.startsWith("https://drive.google.com/file/d/")));
+    assert.ok(links.some(link => link.getAttribute("href") === "../assets/video/holiday-story-long.mp4"));
+    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/holiday-full-film"));
     assert.ok(d.querySelector("#review-videos video source[src='../assets/video/holiday-story-long.mp4']"));
   });
   check("visual gallery points to existing local assets", () => {
