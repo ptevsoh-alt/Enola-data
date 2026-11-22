@@ -859,3 +859,10 @@
 .review-film-editions { display: flex; flex-wrap: wrap; gap: .4rem 1.1rem; align-items: center; margin: .8rem 0; padding: .8rem 0; border-top: 1px solid var(--rule); }
 .review-film-editions span { font-size: .8rem; font-weight: 700; }
 .review-film-editions a { font-size: .82rem; color: var(--accent); text-decoration: underline; text-underline-offset: .14em; }
+
+/* Results-first review page: remove evidence maturity progress bars. */
+.review-outcome-card { background: #fffefa; border: 1px solid var(--rule); border-top: 3px solid var(--accent); min-width: 0; padding: clamp(1rem,2vw,1.5rem); display: flex; flex-direction: column; gap: .75rem; }
+.review-outcome-card span { color: var(--muted); font-size: .81rem; line-height: 1.5; }
+.review-outcome-card strong { display:block; font-size: clamp(1.8rem,3.5vw,2.7rem); line-height: 1.1; color: var(--accent); }
+.review-outcome-card a { margin-top: auto; color: var(--accent); font-size: .81rem; text-decoration: underline; text-underline-offset: 2px; }
+.review-domain-card p { font-size: .82rem; color: var(--muted); line-height: 1.55; }
