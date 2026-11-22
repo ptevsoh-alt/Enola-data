@@ -2558,3 +2558,35 @@
 .case-card-result>a:focus-visible {outline:3px solid #bf9f59;outline-offset:3px;}
 @media(max-width:650px){.visual-grid .case-card-editorial .project-cover{aspect-ratio:1.65;}.case-card-body{padding:1rem;}}
 @media(prefers-reduced-motion:reduce){.visual-grid .case-card-editorial{transition:none;transform:none!important;}}
+
+/* Exhibition spatial concept — readable exhibit zoning instead of a code block or wide matrix. */
+.expo-plan-board{display:grid;grid-template-columns:minmax(0,.65fr) minmax(0,1.35fr);column-gap:1.25rem;row-gap:.6rem;margin:1.5rem 0 .35rem;border:1px solid #c7d8c8;background:#f3f6f0;border-radius:.6rem;padding:clamp(.8rem,2vw,1.5rem);}
+.expo-plan-intro{padding:.5rem .3rem .3rem;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;}
+.expo-plan-intro small{font-size:.7rem;letter-spacing:.1em;font-weight:750;color:#41694b;}
+.expo-plan-intro h4{font-size:clamp(1.1rem,2.2vw,1.45rem);line-height:1.35;margin:.6rem 0;}
+.expo-plan-intro p{font-size:.82rem;line-height:1.83;color:#405545;margin:.25rem 0 1rem;}
+.expo-plan-legend{display:flex;gap:.35rem;flex-wrap:wrap;}
+.expo-plan-legend span{background:#e1ebdf;border:1px solid #becfbd;border-radius:4rem;padding:.27rem .57rem;font-size:.71rem;font-weight:650;color:#356044;}
+.expo-plan-visual{background:#dfe7dc;padding:.7rem;border:2px solid #9ab49d;display:grid;grid-template-rows:auto 1fr auto;gap:.65rem;border-radius:.5rem;min-height:20rem;min-width:0;}
+.expo-plan-wall{display:flex;align-items:center;justify-content:space-between;gap:.35rem .75rem;flex-wrap:wrap;background:linear-gradient(115deg,#1d3325,#385840);padding:1rem 1.1rem;color:#fff;border-radius:.25rem;min-height:5rem;}
+.expo-plan-wall small{color:#b8d4bc;font-size:.64rem;letter-spacing:.06em;}
+.expo-plan-wall strong{font-size:clamp(.9rem,1.8vw,1.28rem);letter-spacing:.07em;}
+.expo-plan-wall span{color:#e2ece1;font-size:.7rem;}
+.expo-plan-interior{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.45fr) minmax(0,1fr);gap:.55rem;align-items:stretch;}
+.expo-plan-display,.expo-plan-demo{min-width:0;display:flex;flex-direction:column;justify-content:center;gap:.3rem;border-radius:.3rem;padding:.75rem .55rem;text-align:center;}
+.expo-plan-display{background:#fffaf0;border:1px solid #dbcba8;}
+.expo-plan-demo{background:#fdf2cd;border:2px dashed #c49a40;}
+.expo-plan-display small,.expo-plan-demo small{font-size:.65rem;color:#6b654b;font-weight:700;letter-spacing:.04em;overflow-wrap:anywhere;}
+.expo-plan-display b,.expo-plan-demo b{font-size:clamp(.85rem,1.75vw,1.2rem);color:#213e2a;}
+.expo-plan-display span,.expo-plan-demo span{font-size:.68rem;color:#4c5d4b;line-height:1.4;}
+.expo-plan-front{display:grid;grid-template-columns:minmax(0,1.6fr) minmax(0,.9fr);gap:.55rem;min-height:4.5rem;}
+.expo-plan-entry{display:flex;align-items:center;justify-content:center;flex-direction:column;gap:.25rem;border:2px dashed #91af96;background:#edf3e9;border-radius:.3rem;}
+.expo-plan-entry b{font-size:.88rem;color:#31573a;}
+.expo-plan-entry span{font-size:.68rem;color:#55715c;}
+.expo-plan-reception{background:#315a41;color:#fff;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:.15rem;border-radius:.3rem;padding:.4rem;text-align:center;}
+.expo-plan-reception small{font-size:.62rem;color:#d4ead8;}
+.expo-plan-reception b{font-size:.84rem;}
+.expo-plan-reception span{font-size:.66rem;color:#d4ead8;}
+.expo-plan-caption{grid-column:1/-1;margin:.1rem 0 0;font-size:.72rem;color:#657563;line-height:1.6;}
+@media(max-width:900px){.expo-plan-board{grid-template-columns:minmax(0,1fr);}.expo-plan-intro{padding:.25rem;}.expo-plan-visual{min-height:18rem;}}
+@media(max-width:520px){.expo-plan-wall{flex-direction:column;justify-content:center;text-align:center;padding:.8rem .45rem;}.expo-plan-interior{grid-template-columns:1fr 1.25fr 1fr;gap:.25rem;}.expo-plan-display,.expo-plan-demo{padding:.65rem .15rem;}.expo-plan-display small,.expo-plan-demo small{font-size:.57rem;}.expo-plan-display span,.expo-plan-demo span{font-size:.58rem;}.expo-plan-visual{padding:.5rem;gap:.35rem;}.expo-plan-front{gap:.35rem;}}
