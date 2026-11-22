@@ -230,12 +230,12 @@
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
-        <div class="section-head"><div><p class="eyebrow">HOW I WORK / 项目决策路径</p><h2 id="jd-case-path-title">从用户需求到上市传播，再到业务复盘</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
+        <div class="section-head"><div><p class="eyebrow">HOW I WORK / 项目决策路径</p><h2 id="jd-case-path-title">从市场判断、上市传播到团队交付</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
         <div class="home-decision-grid">
-          <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从家庭清洁场景、竞争内容和用户疑问中找到产品值得讲清的价值。</p><span>品牌屋与产品线定位 ↗</span></a>
-          <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>确定主张、传播节奏与渠道分工，把一个核心价值变成多触点内容。</p><span>M3 Campaign 品牌屋 ↗</span></a>
-          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>通过内容排期、Brief、审核和跨部门沟通，让创意按节点交付。</p><span>社媒小组与视觉返工案例 ↗</span></a>
-          <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>结合内容曝光、互动、链接动作和用户问题，调整后续传播内容。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
+          <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从真实清洁任务、产品资料及用户问题识别传播机会，整理四条产品线的价值重点。</p><span>品牌屋与产品线定位 ↗</span></a>
+          <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>围绕 M3 餐后硬地场景规划上市节奏、Campaign 主题、渠道内容与交付节点。</p><span>M3 Campaign 品牌屋 ↗</span></a>
+          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>直接管理社媒内容小组，协调产品、视觉、视频和电商；用实际主视觉返工展示审核判断。</p><span>社媒小组与视觉返工案例 ↗</span></a>
+          <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>2025 年 Meta 内容曝光 96.5 万、互动 3.7 万次；结合实际表现安排后续选题和渠道动作。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
         </div>
       </section>
       <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
