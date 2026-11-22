@@ -223,6 +223,15 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#video-storyline .video-story-beats li").length, 4);
     assert.equal(d.querySelectorAll("#video-format-roles>div").length, 3);
   });
+  await route("/case/brand/seasonal-creative-gallery");
+  check("new Drive artwork is presented as Campaign concepts", () => {
+    const gallery = d.querySelector("#seasonal-art-gallery");
+    assert.ok(gallery);
+    assert.equal(gallery.querySelectorAll("img").length, 2);
+    assert.ok(gallery.querySelector('img[src="assets/projects/fathers-day-bbq-concept.jpg"]'));
+    assert.ok(gallery.querySelector('img[src="assets/projects/black-friday-suite-concept.jpg"]'));
+    assert.ok(gallery.textContent.includes("创意提案"));
+  });
   await route("/case/b2b/expo-project");
   check("overseas exhibition case combines original photos with visitor and follow-up work", () => {
     assert.equal(d.querySelectorAll("#expo-visitor-route .expo-visitor-map article").length, 4);
@@ -231,6 +240,16 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".expo-gallery figure").length, 2);
     assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
     assert.ok(d.querySelector("#expo-handoff"));
+    assert.equal(d.querySelectorAll("#expo-distance-route .expo-space-stop").length, 4);
+    assert.equal(d.querySelectorAll("#expo-asset-manifest .expo-asset-card").length, 6);
+    assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-grid article").length, 3);
+    assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-rhythm>div").length, 4);
+    const all = d.querySelector("#expo-asset-manifest").textContent;
+    for (let i = 1; i <= 6; i++) assert.ok(all.includes("EXH-MAT-0" + i));
+    const zone = d.querySelector('[data-expo-select="2"]');
+    zone.click();
+    assert.equal(zone.getAttribute("aria-pressed"), "true");
+    assert.ok(d.querySelector("#expo-selected-detail").textContent.includes("A3"));
   });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
