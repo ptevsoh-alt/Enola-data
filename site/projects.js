@@ -504,10 +504,10 @@
           </figure>
           <figure id="video-opening-comparison">
             <video controls playsinline preload="metadata" poster="assets/projects/vacuum-video-frame.webp" aria-label="播放 KOL 客厅产品介绍镜头（独立于楼梯使用演示）" aria-describedby="opening-video-note">
-              <source src="assets/video/product-opening.mp4#t=0,3" type="video/mp4">
-              <a href="assets/video/product-opening.mp4#t=0,3">观看客厅产品介绍</a>
+              <source src="assets/video/creator-livingroom-intro.mp4" type="video/mp4">
+              <a href="assets/video/creator-livingroom-intro.mp4">观看客厅产品介绍</a>
             </video>
-            <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>人物正面展示、产品持握与讲解作为新品认知的入口；只播放原开场剪辑中的客厅段落，不再重复楼梯操作。</p></figcaption>
+            <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>人物正面展示、产品持握与讲解作为新品认知的入口；独立客厅展示视频与楼梯清洁演示分别承担产品介绍和操作教育，不再把两段动作拼在同一播放器里。</p></figcaption>
           </figure>
         </div>
         <p class="kol-role-note">竖屏内容与完整 TVC 的叙事方式不同：先交代清洁问题，再用人物、产品和接触动作完成体验表达。审核重点放在动作是否清晰、产品外观是否准确、开场能否快速传递主题。</p>
