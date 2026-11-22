@@ -36,7 +36,7 @@ const fs = require("fs"),
   });
   check("selected work links to projects in the same personal portfolio", () => {
     const links = [...d.querySelectorAll("#review-path .review-path-card")];
-    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "social", "operations"]);
+    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["social", "gtm", "brand", "creative", "operations"]);
     assert.equal(d.querySelector("#review-path h2").textContent, "代表项目");
     assert.ok(d.querySelector('#review-path ~ #review-cases'));
     links.forEach((link) => {
@@ -59,6 +59,19 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
+  });
+  check("review entry directly plays three locally hosted anonymized video excerpts", () => {
+    const clips = [...d.querySelectorAll("#review-videos video")];
+    assert.equal(clips.length, 3);
+    assert.ok(d.querySelector('nav a[href="#review-videos"]'));
+    clips.forEach((clip) => {
+      assert.ok(clip.hasAttribute("controls"));
+      assert.ok(clip.hasAttribute("playsinline"));
+      const source = clip.querySelector('source[type="video/mp4"]');
+      assert.ok(source);
+      const relative = path.relative("/Enola-data", new URL(source.getAttribute("src"), w.location.href).pathname).replace(/^\//, "");
+      assert.ok(fs.existsSync(path.join(site, relative)), relative);
+    });
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
