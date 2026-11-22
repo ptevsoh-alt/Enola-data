@@ -2914,3 +2914,10 @@
 @media(prefers-reduced-motion:reduce) {
   .v-gantt-gates a {scroll-behavior:auto}
 }
+
+.v-creative-text .v-creative-method {display:block;padding:0;margin:0 0 .15rem;border:0;font-size:.67rem;font-weight:760;letter-spacing:.03em;color:#5b765f}
+.home-visual-jumps {display:flex;gap:.45rem .65rem;align-items:center;flex-wrap:wrap;padding:.95rem 0 .15rem;margin-top:.8rem;border-top:1px solid var(--rule)}
+.home-visual-jumps>span {font-size:.68rem;font-weight:800;letter-spacing:.08em;color:#69836e;margin-right:.45rem}
+.home-visual-jumps a {display:inline-flex;align-items:center;min-height:2.25rem;padding:.35rem .7rem;font-size:.76rem;font-weight:650;color:#2e5a40;border:1px solid #bad0bb;border-radius:2rem;text-decoration:none;background:#f6f9f2}
+.home-visual-jumps a:hover,.home-visual-jumps a:focus-visible {background:#e4efdf;border-color:#6a9774;outline-offset:2px}
+@media(max-width:600px){.home-visual-jumps {gap:.4rem}.home-visual-jumps>span {flex-basis:100%}.home-visual-jumps a {font-size:.72rem;min-height:2.1rem}}
