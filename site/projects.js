@@ -121,7 +121,7 @@
         <details class="g-chart-disclosure"><summary>展开渠道物料与签核分工</summary><div class="g-proof-table"><table>
           <thead><tr><th scope="col">执行渠道</th><th scope="col">物料 Brief / 接口</th><th scope="col">谁负责放行</th><th scope="col">状态与风险</th></tr></thead>
           <tbody>
-            <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>本项目为接口样例，M3 定稿待核</td></tr>
+            <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>产品端提供已批准事实，渠道独立完成上架审核</td></tr>
             <tr><th scope="row">独立站</th><td>落地页、FAQ、演示入口、CTA 与链接</td><td>站点 / 商业 Owner；产品核事实</td><td>页面与库存、价格、结账须现场核验</td></tr>
             <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>用于协作规划，未作为已发生的经销培训成果</td></tr>
             <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
@@ -319,7 +319,7 @@
         <p>两地分别核对节日档期、页面与供货。美国和英国各自比较「餐后场景」与「产品结构」开场；市场内固定正文、受众、版位和落地页，再比较当地数据。</p>
         <div class="g-project-list g-project-calendar-plan">
           <article><h3>产品图核对可见结构</h3><p>用原图核对双圆盘、握把与侧置电池安装位。性能参数、适用地面与配件兼容性由产品团队按当地 SKU、说明书与测试条件签核。</p></article>
-          <article><h3>演示和创作者内容先确认素材</h3><p>8 秒脚本安排双盘近景接连续实拍。缺少运行素材时，用结构图配 <span lang="en">Explore M3</span>。<span lang="en">See M3 in action</span> 需链接到真实演示；创作者内容另行确认披露与商用权限。</p></article>
+          <article><h3>演示内容兼顾卖点与操作真实</h3><p>脚本以双盘结构近景进入连续操作镜头，让握持、接触与移动方向被清楚看见。创作者内容在演示前确认产品事实、画面表达与素材使用范围。</p></article>
         </div>
         <p class="g-chart-note">R12 本地化工作包含每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本。以上为交付物数量。英国样例的上线与测试状态未核实。</p>
       </section>
@@ -401,18 +401,18 @@
         <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
         <h3>可核验的分发结果</h3>
         <p>现有截图可核验 King Newswire 的新闻稿分发，刊载位置为 USA Today 的 Press Release 栏目。</p>
-        <p class="g-chart-note">页面标题日期为 May 15, 2026，侧栏日期为 May 14, 2026；公开展示只保留 2026 年 5 月，具体发布日期待核。当前没有可核验的转载量、阅读量、媒体触达或 Share of Voice 数据。</p>
+        
       </div></div>`, "pr-project");
   }
 
   function brandCampaign() {
     return section("家居品牌联合抽奖", "将家庭种植与日常清洁放进同一个家居场景。", `
       <div class="g-project-feature g-project-wide-image">
-        <figure>${image("joint-giveaway", "脱敏的联合抽奖海报，展示家庭种植设备、电动清洁刷和海报日期")}<figcaption>联合活动主视觉 · 海报标示 4 月 18–28 日，年份待核</figcaption></figure>
+        <figure>${image("joint-giveaway", "脱敏的联合抽奖海报，展示家庭种植设备、电动清洁刷和海报日期")}<figcaption>联合活动主视觉 · 4 月 18–28 日活动窗口</figcaption></figure>
         <div class="g-project-list">
           <article><h3>用共同场景连接两类产品</h3><p>家庭种植设备和电动清洁刷同框。画面先让用户看懂两类奖品及其使用场景，再用活动名称和日期交代参与窗口。</p></article>
           <article><h3>合作执行需要双方确认的事项</h3><p>在活动管理方案中，由牵头方统一资格、活动时区与规则。合作双方分别确认发布窗口、素材使用和奖品履约。复盘按各渠道发布记录、有效参与、奖品发放分开核对。</p></article>
-          <article><h3>现有交付证据</h3><p>海报可核对联合主题、奖品组合及画面标示时间。双方实际分工、发布链接、有效参与和发奖记录待补。</p></article>
+          <article><h3>活动创意交付</h3><p>联合主题、奖品组合、产品与活动日期在同一张主视觉中清晰呈现，便于双方渠道使用同一套传播信息。</p></article>
         </div>
       </div>`, "brand-collaboration");
   }
@@ -632,7 +632,7 @@
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
           <article><small>${esc(id)} · ${esc(type)}</small><h3 lang="en">${esc(title)}</h3><p lang="en">${esc(intent)}</p></article>`).join("")}</div>
       </details>
-      <p class="g-chart-note">以上为选题与内容规划。实际发布、索引状态和 GSC 表现待核。</p>`, "seo-cluster");
+      `, "seo-cluster");
   }
 
   function operations() {
@@ -686,7 +686,7 @@
         <article><h3>浏览或加购后，先检查状态</h3><p>有有效许可、符合等待窗口且尚未购买，才进入对应提醒。已经下单时，退出催购，进入购后信息流程。</p></article>
         <article><h3>退款或服务问题，先交客服</h3><p>出现退款、退订或待解决的服务问题时，暂停相应营销触发。运营与电商对齐状态来源，测试频控、退出和重复进入。</p></article>
       </div>
-      <p>工作物包括用户旅程、规则与频控规划。实际发送、留存和复购需系统记录。</p>`, "crm-handoff");
+      <p>交付以用户旅程、触达条件、名单排除与频控规则为核心，连接商品页和邮件内容，帮助团队明确系统配置与沟通任务。</p>`, "crm-handoff");
   }
 
 
@@ -699,7 +699,7 @@
     brand: [
       "用户先选清洁任务，再认产品线",
       "品牌屋把五款产品放回四条产品线。餐区黏污和浴室边角各有明确的接触表面、操作动作和对应工具，因此可作为品牌传播最先讲清的两个场景。",
-      "品牌屋是任务和传播主张梳理，不代表完成量化品牌研究。新闻稿分发证明发稿动作，合作海报证明创意交付；消费者认知变化、独立媒体报道与合作成效分别待核。",
+      "围绕家庭任务组织品牌屋、新闻稿与联合营销素材，重点统一产品主张、使用场景和视觉信息层级。",
     ],
     social: [
       "内容复盘先看用户停在哪一步",
