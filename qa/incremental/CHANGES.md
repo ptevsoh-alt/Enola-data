@@ -79,3 +79,114 @@
 ## 最终视觉精修（2026-11-03）
 
 只在现有 PR #10 功能分支追加必要样式：自然卡片高度、桌面两列管理链路、更清晰的 12–14px 正文／证据说明、取消限制说明三行截断、移动端指标上下布局、主题色标签对比度。原业务文案和指标不变，PUBLIC_ASSETS.json 同步更新。详细问题、修复和 24 张当前代码实拍截图位于 qa/final-visual；本轮完整测试 143/143 PASS。
+
+
+## 新品上市 Campaign 策略与 IMC 工作物（2026-11-18）
+
+在现有 GTM 代表案例的 Strategy 章节内深化，不新增重复案例，不改写既有 11 案例结构。
+
+- 新增 2026 年 5 月匿名化 Campaign 规划重建：Objective、受众假设、Core Tension、Theme / Big Idea、Creative Territories。
+- 将内容策略展开为 7 个 Content Pillars：场景问题、机制证明、功能教育、情绪品牌、FAQ、Creator / UGC、转化承接。
+- 将上市节奏展示为 6 个阶段：场景预热、产品教育、倒计时、T0 发布、首销窗口、持续教育与复盘。
+- 增加 IMC 角色矩阵：Owned Social、Short Video、YouTube、Community、Creator / PR、Paid、CRM、Commerce / Operations、Measurement。
+- 展示跨部门职责、交付依赖和发布 Gate；明确个人职责集中于社媒策略与内容团队交付、参与产品定位和上市传播协同，不扩写为产品研发、定价、整体预算或供应链决策。
+- 对应工作簿包含 23 个社媒内容 / 运营槽位、15 条 IMC 协同链路；视觉资产 Tracker 有 25 项记录。以上均为规划与管理工作物数量，不是已发布内容数量。
+- 项目计划窗口为 2026 年 5 月；页面明确标注为规划版本重建，不代表已发布、已投放、已成交或已实现 ROI。简历记录的约 +3% 阶段销量表现与该计划分开呈现，不做因果归因。
+- 没有新增趋势图或 Campaign 成绩数字；无连续日期数据时不绘制表现折线。
+
+### QA 基准修正
+PR #15 原有 test-growth.cjs 因首页 SEO 元信息已按岗位方向更新，而 qa/incremental/baseline.json 仍保留旧的规范化首页哈希，导致 index copy retained 检查失败。本次将该测试基准同步到已审核的首页元信息版本；样式、原始数据、案例数量与指标数据保护规则保持不变。缓存版本更新后，PUBLIC_ASSETS.json 对修改的公开文件重新计算字节数和 SHA-256。
+
+本轮只更新 PR #15 工作分支，不写 main、不合并、不部署。
+
+
+另修正一项原有回归测试顺序：PR #15 首页代表案例已按招聘阅读顺序调整为 GTM → Brand / IMC → 项目管理 → Social，但 test-growth.cjs 仍断言旧顺序 GTM → Social → Brand → 项目管理。本次将测试预期同步到已批准的页面顺序，不改变页面内容或案例排序。
+
+
+## IMC / GTM 管理岗与 Campaign 框架深化（2026-11-19）
+
+- 在现有 GTM 代表案例中明确区分 M07 GTM / Launch Owner 与 M08 Campaign Owner：前者负责产品上市与商业承接准备，后者负责Campaign策略、Big Idea、渠道组合、内容激活、分发与复盘。
+- 新增 Campaign Strategy & Planning Framework：Business Context、Audience / Insight、Objective、Positioning / Message、Creative Platform、IMC Architecture、Content Matrix、Activation / Operations、Measurement / Learning。
+- 新增 Campaign Creative Theme Development：从用户场景/张力、产品真值、品牌承诺和目标行为推导Big Idea，再展开Creative Territories、Narrative、KV与渠道适配。
+- 明确 M3 Big Idea 为 MAKE ROOM FOR WHAT MATTERS.；保留 After-Dinner Reset、See the Motion、Make Room for What Matters、One Home, Different Cleaning Jobs 四个创意方向及各自证明边界。
+- 新增8类 Campaign Content Matrix：场景问题、情绪与品牌、产品机制证明、功能与操作教育、FAQ与异议、Creator / UGC、转化承接、品牌组合教育。矩阵与逐日内容日历分开呈现。
+- 作品集页面新增GTM / IMC管理视角、策略框架、创意主题构建、8类内容矩阵和视觉资产链接。
+- 视觉资产链接指向指定Google Drive目录中的R2 Draft / Review副本；不把静态草稿、Layout Prototype或R3 QA Reject标记为Approved。
+- 个人职责仍按真实边界表述：负责社媒传播策略和内容团队交付；参与用户研究、产品差异化定位、卖点分层与上市传播协同，不扩写为产品研发、定价、整体预算审批或供应链决策。
+- 不新增业务成绩或ROI；2026年5月仍标记为规划重建，约+3%阶段销量记录不归因于本Campaign。
+
+### 资产与QA
+- 更新 app.js / projects.js / index.html 的 PUBLIC_ASSETS.json 字节数与 SHA-256。
+- 静态缓存版本从 20261119a 更新至 20261119b；规范化 index baseline 不变。
+- 现有 data.js、styles.css、案例数量和历史指标保持不变。
+- 本轮仍仅更新 PR #15 工作分支，不写 main、不合并、不部署。
+
+
+视觉QA补充：已直接查看R2 Master KV与官方M3正视图。4:5版底部CTA框遮挡并裁切双盘拖布头，标记QA_FIX_REQUIRED；9:16版产品整机可见且轮廓与黄色M3源图一致，但主体偏小、留白偏大，标记VISUAL_REVIEW。Contact Sheet仅为预览索引；07/08/09为静态细节图，不证明产品运行或功能。上述问题已同步至实际视觉素材交付与状态表，并在作品集页面注明。
+
+
+页面资产展示治理补充：由于公开站点验证规则禁止在前端源码中写入外部URL，本轮仅在作品集页面展示KV资产名称、QA状态和归档说明；可访问的Google Drive文件链接保留在指定Campaign策略文档与工作簿中，避免把外部文件URL直接写入公开前端源码。
+
+
+最新分支复核：已移除公开前端中的外部Drive URL，文件链接仅保留在受控的Google Docs / Sheets工作文档；重新触发PR验证以确认当前HEAD而非旧merge ref的结果。
+
+
+## GTM / IMC 管理型作品集深化与 M3 R3 KV 版式修订（2026-11-19）
+
+- 新增GTM Launch Charter、商业准备Gate、RACI决策权、跨部门五条工作流、阶段Gate、资源容量管理、Measurement决策闭环和Lifecycle Handoff。
+- 强化M07 GTM / Launch Owner与M08 Campaign Owner的职责边界；每项交付物指定唯一A，专业Owner分别签核产品事实、价格/Offer、供应履约、渠道执行与测量口径。
+- 作品集明确管理交付物：Launch Charter、RACI、阶段里程碑、Gate/Risk、预算/资源、Content Matrix、Content Calendar、IMC Channel Matrix、Asset Register、KPI Dictionary和Closeout。
+- 新增IF/THEN管理逻辑：产品Claim/Proof缺失→HOLD_CLAIM；Offer/库存/履约未通过→PREPARE_ONLY；权利/许可不完整→HOLD_PUBLISH/HOLD_SEND；数据未成熟→INSUFFICIENT_EVIDENCE；Guardrail破线→REDUCE/STOP/ROLLBACK。
+- M3 KV R3以官方黄色M3整机正视图为产品源图，采用源图保真合成方式修正布局：4:5完整显示双盘底座且CTA不遮挡；9:16放大主体并保留整机。R3文件已上传指定Google Drive目录，状态为PENDING_BRAND_PRODUCT_QA，不标记为Approved。
+- R2 KV保留为历史版本；Contact Sheet v2继续作为R2审阅索引，不代表R3最终导出。
+- 2026年5月仍为规划重建；不新增已发布、已投放、成交或ROI结果。简历已有约+3%阶段销量记录不归因于本Campaign。
+- 公开站点不嵌入外部Drive URL；实际文件链接留在受控的Google Docs / Sheets中。
+
+### 更新与QA
+- 更新 site/projects.js / site/app.js / site/index.html，并刷新 PUBLIC_ASSETS.json 的字节数与 SHA-256。
+- 缓存版本更新至 20261119c；保持 data.js、styles.css、原始数据和案例数量不变。
+- 仅更新 PR #15 工作分支；不写 main、不合并、不部署。
+
+
+## 2026-11-19 — Enola Campaign & Community Event capability mapping
+
+- M3 GTM case now separates the single primary business result from marketing / behavior objectives.
+- Five existing M3 Creative Territories are mapped to a primary creative mechanism and the required proof boundary; all are labelled as strategy reconstruction, not published or tested winners.
+- Facebook Group case adds Program Owner routing, event contract, participation / UGC permission, metric separation and post-event handoff.
+- No new historical event results, activity-level attribution, budget, team size, ROI or causal claims were added.
+- Enola source repo remains read-only; the mapping is based on `CAP-CAMP-001`, `CAP-SOC-001 / ATOM-SOC-006`, `CAP-EARNED-001`, M16 and M18 boundaries.
+
+
+## 2026-11-19 CI verification after capability integration
+
+- First run #138 exposed a test-scope assertion: the creative-mechanism note sits adjacent to the mechanism card container. The test was corrected to inspect the containing project section; no production code or content was weakened.
+- Run #139 then passed: Validate SUCCESS, 139/139 checks (8 + 70 + 61); Deploy SKIPPED.
+- Candidate remains PR #15 Draft / Open. Automated validation does not replace new rendered browser visual QA.
+
+
+## 2026-11-19 latest PR-head confirmation
+
+- Current PR #15 HEAD: `4951517f73237f2d1e519e59674491c24ca312ff` (the changes after the site-code validation commit are QA-documentation updates only).
+- GitHub Actions Run #140 on the current PR HEAD: Validate SUCCESS; 139/139 checks; isolated preview uploaded; Deploy SKIPPED.
+- Latest preview artifact: [Run #140](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493011702/artifacts/14513452874).
+
+
+## 2026-11-19 /review/ route and manifest repair
+
+- Confirmed the independent review page already existed in the candidate branch; retained and validated it rather than duplicating the route.
+- Added missing `review/index.html`, `review/review.css`, `review/review.js` entries to `PUBLIC_ASSETS.json` and corrected the homepage entry byte / SHA-256 metadata.
+- Updated the regression test to explicitly permit the homepage footer link to `review/` while preserving the original index-copy baseline assertion.
+- GitHub Actions Run #152 passed: 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus independent review page / route / search / local preview checks.
+- Preview artifact: [Run #152](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR remains Draft / Open; main unchanged; Deploy skipped. New browser screenshot review remains pending.
+
+
+## 2026-11-19 Review entry visual organization
+
+- Added visualized M3 Campaign architecture, five creative-mechanism cards, community event governance and team delivery flows to `/review/`.
+- Organized 16 visual assets into four interactive categories; included all three redacted exhibition images.
+- Added proportional evidence-status and metric-domain bars with explicit non-performance interpretation notes.
+- Added direct review navigation in the main site header and retained footer link; review-only CSS and JS remain isolated from main portfolio rendering.
+- Cache-busted review assets and refreshed `PUBLIC_ASSETS.json` byte / SHA-256 entries.
+- Updated validation to accept versioned review asset URLs and adjusted homepage baseline normalization for the approved navigation link.
+- Run #164 passed: 9 structure/privacy/asset + 70 interaction + 61 growth/case checks; review-specific checks also passed. Deploy skipped.

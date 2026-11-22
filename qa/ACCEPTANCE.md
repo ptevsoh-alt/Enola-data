@@ -45,3 +45,47 @@
 仍存在的业务限制：原始后台报表、部分窗口与账户范围待核；PR／品牌／治理案例主要为经历重构，CRM 与创意概念不代表已执行。联系方式未提供，页面没有虚构联系方式。
 
 Console 补充：现有 Chrome 环境仍记录一条空信息 `Uncaught (in promise)`，消息无定位信息。站点自身路由巡检监听为空；未宣称浏览器 Console 完全无错误。站点资源请求为 200；扩展请求单独看待。
+
+
+## 2026-11-19 Enola Campaign / Community Event capability integration
+
+### Portfolio additions
+- M3 GTM case separates the single primary business result (net fulfilled orders / net contribution) from marketing and behavior objectives; product understanding, effective views, visits and engagement remain diagnostic / intermediate signals.
+- Five M3 Creative Territories are mapped to one primary mechanism each: pain-point emergence, mechanism reveal, relationship value transfer, micro-detail proof and user-experience proof. The mapping is a strategy reconstruction, not evidence that every territory was published or tested.
+- Facebook Group case adds Program Owner routing, minimum event contract, participation and UGC-rights handling, metric separation and post-event handoff.
+- No event-level results, budget, team size, ROI or causal attribution were invented.
+
+### Automated verification
+- Site code candidate HEAD: `27aa396e6ce6595ec9af17d55106ffa6bf8c3be2`; current PR HEAD: `4951517f73237f2d1e519e59674491c24ca312ff` (QA documentation updates only).
+- GitHub Actions Run #140: Validate SUCCESS; `npm test` = 139/139: site structure / privacy / asset checks 8/8, DOM / interaction checks 70/70, growth / case behavior checks 61/61.
+- `PUBLIC_ASSETS.json` byte sizes and SHA-256 values were refreshed for `growth.js`, `projects.js` and `index.html`; manifest validation passed.
+- Latest PR preview artifact uploaded: [Run #140 preview](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44493011702/artifacts/14513452874).
+- Deploy: SKIPPED. `main` remains unchanged; PR #15 remains Draft / Open; no merge or production deployment was performed.
+
+### Visual acceptance boundary
+The current candidate has passed automated structure, interaction, privacy and asset checks. This run did not perform new real-browser screenshot inspection at desktop / mobile viewports. Earlier screenshots are not reused as evidence for these new modules; rendered visual QA remains pending.
+
+
+## 2026-11-19 Independent /review/ entry validation
+
+- Independent entry: `site/review/index.html`; route: `/review/`; standalone styles and rendering script are under `site/review/`.
+- The main portfolio footer links to the review entry. The review page provides review path, searchable 11-case index, 15-asset visual gallery, 38 metric evidence-status summary, and six data-domain links.
+- Case and data links return to the main portfolio Hash Router; local asset paths remain relative and portable for GitHub Pages project paths.
+- The route is marked `noindex, nofollow`; no remote scripts, external asset dependencies, form submission or data transmission are added.
+- Public asset manifest now includes all three review files and has matching byte / SHA-256 metadata. Homepage manifest metadata was also reconciled.
+- GitHub Actions Run #152: Validate SUCCESS; 9 site/privacy/asset checks, 70 interaction checks, 61 Growth checks, plus review-route rendering, search, relative-link, noindex and local HTTP preview checks all passed.
+- Isolated PR preview ZIP: [Run #152 / Artifact 14518338411](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44505183583/artifacts/14518338411).
+- PR #15 remains Draft / Open; `main` is unchanged; Deploy is skipped. This artifact is a review build, not a production URL or live deployment.
+- New real-browser screenshot acceptance for the review page remains pending; the local HTTP route and automated content/asset checks passed.
+
+
+## 2026-11-19 Independent Review Visual Organization
+
+- Candidate site baseline: `c9555ff7cc22e7410b75487848ae0347286b51a6`.
+- `/review/` now visualizes the M3 GTM / Campaign 9-step architecture, five Creative Territories with proof boundaries, four-step Community Event Governance and four-step Team Delivery.
+- Gallery: 16 local assets across four filterable categories; all three anonymized exhibition photos are included.
+- Evidence view: five evidence-status bars and six metric-domain bars; bars represent record shares only, not business outcomes or project completion.
+- Homepage top navigation and footer link to the independent review entry. Route remains `noindex, nofollow`; this is not authentication or access control.
+- GitHub Actions Run #164: Validate SUCCESS; structure/privacy/assets 9/9, interaction 70/70, growth/case 61/61; review-route rendering, filters, local assets and HTTP serving passed.
+- Preview artifact: [Run #164 / Artifact 14527876412](https://github.com/ptevsoh-alt/Enola-data/actions/runs/44519884374/artifacts/14527876412).
+- PR #15 remains Draft / Open; `main` unchanged; Deploy skipped. Real-browser screenshot acceptance remains pending.

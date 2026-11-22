@@ -855,6 +855,20 @@ th {
 .career-list small {
   color: var(--muted);
 }
+.career-list .actions {
+  flex-wrap: wrap;
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.75rem;
+}
+.profile-direction {
+  margin: 1rem 0 0;
+  color: var(--accent);
+  font-weight: 700;
+}
+.profile-direction + .hero-summary,
+.profile-direction + .review-hero-intro {
+  margin-top: 0.65rem;
+}
 .cap-list {
   display: grid;
   grid-template-columns: repeat(3, minmax(0, 1fr));
@@ -1316,3 +1330,17 @@ dd {
     margin: 0 -20px -20px;
   }
 }
+
+/* Employer-first portfolio entry: a linked case narrative, not a skills checklist. */
+.home-decision-section { padding-top: clamp(1.6rem, 3vw, 2.9rem); padding-bottom: clamp(1.3rem, 2.5vw, 2.2rem); }
+.home-decision-section .section-head { gap: 1rem; align-items: end; }
+.home-decision-grid { display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: .8rem; margin-top: 1.25rem; }
+.home-decision-grid a { display: flex; flex-direction: column; min-width: 0; min-height: 13.5rem; padding: clamp(.95rem, 1.6vw, 1.45rem); border: 1px solid var(--rule); border-top: 3px solid var(--accent); background: var(--white); transition: transform .18s ease, box-shadow .18s ease; }
+.home-decision-grid a:hover { transform: translateY(-2px); box-shadow: 0 8px 22px rgba(26,53,42,.07); }
+.home-decision-grid small { font-size: .73rem; font-weight: 700; letter-spacing: .055em; color: var(--accent); }
+.home-decision-grid h3 { font-size: clamp(.98rem, 1.4vw, 1.18rem); margin-top: .55rem; }
+.home-decision-grid p { font-size: .82rem; line-height: 1.75; margin: .6rem 0 1rem; color: var(--muted); flex: 1; }
+.home-decision-grid span { font-size: .78rem; font-weight: 600; color: var(--accent); }
+@media (max-width: 960px) { .home-decision-grid { grid-template-columns: repeat(2, minmax(0,1fr)); } .home-decision-grid a { min-height: 11rem; } }
+@media (max-width: 580px) { .home-decision-grid { grid-template-columns: minmax(0,1fr); } .home-decision-grid a { min-height: 0; } .home-decision-section .section-head { align-items: flex-start; } }
+@media (prefers-reduced-motion: reduce) { .home-decision-grid a { transition: none; } .home-decision-grid a:hover { transform: none; } }

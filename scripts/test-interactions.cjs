@@ -30,6 +30,7 @@ const fs = require("fs"),
   };
   w.addEventListener("error", (e) => errors.push(e.message));
   w.eval(fs.readFileSync(path.join(site, "data.js"), "utf8"));
+  w.eval(fs.readFileSync(path.join(site, "selected-work.js"), "utf8"));
   w.eval(fs.readFileSync(path.join(site, "growth.js"), "utf8"));
   w.eval(fs.readFileSync(path.join(site, "app.js"), "utf8"));
   const check = (n, fn) => {
@@ -40,9 +41,14 @@ const fs = require("fs"),
       w.location.hash = s;
       await new Promise((r) => setTimeout(r, 5));
     };
-  check("homepage is a visual case index", () =>
-    assert.equal(d.querySelectorAll(".case-card").length, 4),
-  );
+  check("homepage shows the career direction alongside six projects", () => {
+    assert.equal(d.querySelectorAll(".case-card").length, 6);
+    assert.equal(d.querySelectorAll(".home-route-card").length, 7);
+    assert.equal(d.querySelectorAll("#jd-case-path .home-decision-grid a").length, 4);
+    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
+    assert.equal(d.querySelector(".profile-direction").textContent, w.PORTFOLIO.profile.direction);
+    assert.match(d.querySelector(".hero-summary").textContent, /近 6 年.*小组管理.*四条清洁产品线/);
+  });
   for (const c of w.PORTFOLIO.cases) {
     await route("/case/" + c.id);
     check("seven chapters and valid assets: " + c.id, () => {
@@ -82,31 +88,43 @@ const fs = require("fs"),
   check("search matches professional terms", () =>
     assert.equal(d.querySelectorAll(".case-card").length, 1),
   );
-  for (const domain of Object.keys(w.PORTFOLIO.domains)) {
+  const publicMetrics = w.PORTFOLIO.metrics.filter((m) =>
+    m.status !== "PENDING" && !!m.display && !/待补|待核|暂无|未提供/.test(m.display) &&
+    ((typeof m.value === "number" && Number.isFinite(m.value)) ||
+     (Array.isArray(m.range) && m.range.length === 2 && m.range.every((x) => typeof x === "number" && Number.isFinite(x)))));
+  const visibleDomains = [...new Set(publicMetrics.map(m => m.domain))];
+  for (const domain of visibleDomains) {
     await route("/data/" + domain);
-    check("data domain " + domain, () =>
-      assert.equal(
-        d.querySelectorAll(".data-kpis .metric").length,
-        w.PORTFOLIO.metrics.filter((m) => m.domain === domain).length,
-      ),
-    );
+    check("published data domain " + domain, () =>
+      assert.equal(d.querySelectorAll(".data-kpis .metric").length,
+        publicMetrics.filter(m => m.domain === domain).length));
   }
-  for (const m of w.PORTFOLIO.metrics) {
+  await route("/data/lifecycle");
+  check("empty lifecycle outcome excluded from public data", () => {
+    assert.ok(!d.querySelector('[href="#/data/lifecycle"]'));
+    assert.ok(!d.querySelector(".data-kpis").textContent.includes("待补充"));
+  });
+  for (const m of publicMetrics) {
     await route("/data/" + m.domain);
     const b = d.querySelector(`[data-evidence="${m.id}"]`);
     b.focus();
     b.click();
     check("metric evidence " + m.id, () => {
       assert.ok(d.querySelector("#evidence-dialog").open);
-      assert.ok(
-        d.querySelector("#evidence-content").textContent.includes(m.definition),
-      );
-      assert.ok(
-        d.querySelector("#evidence-content").textContent.includes(m.window),
-      );
+      assert.ok(d.querySelector("#evidence-content").textContent.includes(m.definition));
+      assert.ok(d.querySelector("#evidence-content").textContent.includes(m.source));
     });
     d.querySelector('[data-close="evidence-dialog"]').click();
     assert.equal(d.activeElement, b);
+  }
+  for (const c of w.PORTFOLIO.cases) {
+    await route("/case/" + c.id);
+    check("no placeholder outcomes in " + c.id, () => {
+      const t = d.querySelector("#results").textContent;
+      assert.ok(!/待补充|待核|暂无可核|未提供可核/.test(t));
+      const heading = d.querySelector("#results h2").textContent;
+      assert.ok(["项目成果", "代表交付"].includes(heading));
+    });
   }
   await route("/case/gtm");
   d.querySelector("[data-image]").click();
@@ -123,7 +141,17 @@ const fs = require("fs"),
   );
   for (const r of ["experience", "capabilities", "contact", "about"]) {
     await route("/" + r);
-    check("support page " + r, () => assert.ok(d.querySelector("main h1")));
+    check("support page " + r, () => {
+      assert.ok(d.querySelector("main h1"));
+      if (r === "experience") {
+        const jobs = d.querySelectorAll(".career-list article");
+        assert.equal(jobs.length, 4);
+        assert.equal(jobs[0].querySelector("time").textContent, "2025.04—2026.09");
+        assert.equal(jobs[0].querySelector("h2").textContent, "社媒负责人 / 管理组长");
+        assert.deepEqual([...jobs[0].querySelectorAll("a")].map((a) => a.hash), ["#/case/gtm", "#/case/operations", "#/case/social"]);
+      }
+      if (r === "contact") assert.equal(d.querySelector(".lede").textContent, w.PORTFOLIO.profile.direction);
+    });
   }
   d.querySelector(".skip").click();
   check("skip link preserves route and focuses main", () => {

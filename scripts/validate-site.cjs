@@ -12,11 +12,12 @@ function check(n, fn) {
 }
 vm.runInNewContext(fs.readFileSync(path.join(site, "data.js"), "utf8"), ctx);
 const p = ctx.window.PORTFOLIO;
-check("11 unique cases and 38 retained public metrics", () => {
+check("11 unique cases and 36 supported public metrics", () => {
   assert.equal(p.cases.length, 11);
-  assert.equal(p.metrics.length, 38);
+  assert.equal(p.metrics.length, 36);
   assert.equal(new Set(p.cases.map((c) => c.id)).size, 11);
-  assert.equal(new Set(p.metrics.map((m) => m.id)).size, 38);
+  assert.equal(new Set(p.metrics.map((m) => m.id)).size, 36);
+  assert.ok(p.metrics.every((m) => !["待补充","--"].includes(m.display)), "No placeholder outcomes in public metrics");
 });
 check("metric provenance, definitions, windows and limitations", () =>
   p.metrics.forEach((m) => {
@@ -55,8 +56,8 @@ check("no creator operating records in any public payload", () => {
   );
 });
 check("missing values and unverified comparison windows preserved", () => {
-  assert.equal(p.metrics.find((m) => m.id === "retention").value, null);
-  assert.equal(p.metrics.find((m) => m.id === "fb-viewers").value, null);
+  assert.ok(!p.metrics.some((m) => m.id === "retention"), "Unverified lifecycle outcome is excluded from public data");
+  assert.ok(!p.metrics.some((m) => m.id === "fb-viewers"), "Unavailable Facebook viewers value is not a public KPI");
   p.metrics
     .filter((m) => m.sourceType === "screenshot")
     .forEach((m) => {
@@ -70,9 +71,22 @@ check("all content links resolve", () => {
   );
   p.metrics.forEach((m) => assert.ok(p.cases.some((c) => c.id === m.caseId)));
   p.capabilities.forEach((c) => assert.ok(p.cases.some((x) => x.id === c[3])));
+  p.experiences.forEach((experience) =>
+    experience.work.forEach(([id]) => assert.ok(p.cases.some((c) => c.id === id))),
+  );
+});
+check("independent review entry and relative navigation", () => {
+  const review = fs.readFileSync(path.join(site, "review/index.html"), "utf8");
+  assert.ok(/href="review\.css(?:\?[^"]*)?"/.test(review));
+  assert.ok(/src="review\.js(?:\?[^"]*)?"/.test(review));
+  assert.match(review, /src="\.\.\/data\.js(?:\?[^"]*)?"/);
+  assert.ok(review.includes('name="robots" content="noindex, nofollow"'));
+  assert.ok(fs.existsSync(path.join(site, "review/review.css")));
+  assert.ok(fs.existsSync(path.join(site, "review/review.js")));
+  assert.ok(fs.readFileSync(path.join(site, "index.html"), "utf8").includes('href="review/"'));
 });
 check("scripts parse", () => {
-  for (const file of ["data.js", "app.js", "growth.js", "projects.js"])
+  for (const file of ["data.js", "selected-work.js", "app.js", "growth.js", "projects.js", "review/review.js"])
     new vm.Script(fs.readFileSync(path.join(site, file), "utf8"));
 });
 const files = [];
@@ -105,9 +119,15 @@ check(
       .filter((f) => /\.(js|html|css|txt)$/.test(f))
       .forEach((f) => {
         const s = fs.readFileSync(f, "utf8");
+        // The two explicitly approved, publicly readable Drive films are embedded as media,
+        // never as scripts or API calls; every other outbound URL remains prohibited.
+        const approvedMedia = s.replace(
+          /https:\/\/drive\.google\.com\/file\/d\/(?:15m5TOYZh90NUqTmSbHget8BJbeBEhLKE|1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y)\/(?:preview|view(?:\?usp=drivesdk)?)/g,
+          "APPROVED_DRIVE_VIDEO",
+        );
         assert.ok(
           !/(?:[CD]:[\\/]|sourceImage|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon)/.test(
-            s,
+            approvedMedia,
           ),
           f,
         );

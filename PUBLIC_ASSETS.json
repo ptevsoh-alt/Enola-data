@@ -6,8 +6,8 @@
   },
   {
     "file": "app.js",
-    "bytes": 28448,
-    "sha256": "d14e5adb6662d82cf61961e8e2481999a6f39422acb81063549434ec4b2dd6e4"
+    "bytes": 36207,
+    "sha256": "3446ea6b12e9ad03431c1b4ce1d5e2c23149c86f730fb380108a499d36dbeddc"
   },
   {
     "file": "assets/concept-01.png",
@@ -40,14 +40,34 @@
     "sha256": "fb2d4c1d4cb6fe65445725b2c888b4d6e3c41e574741166b2b9a711b13c7074a"
   },
   {
+    "file": "assets/projects/black-friday-suite-concept.jpg",
+    "bytes": 2301402,
+    "sha256": "9f3de8a1a68add0cd798837950d6afd25053025f82e2fdabb7c9af6e05c2c22c"
+  },
+  {
     "file": "assets/projects/brand-house.webp",
     "bytes": 192368,
     "sha256": "52c922be7bd7b7b36048b27f210ad98499d23f01f04661e34e2e1142db3e8e5d"
   },
   {
-    "file": "assets/projects/expo-display.webp",
-    "bytes": 26354,
-    "sha256": "11e1b1f5aa396ea7d581df9dccc1e8c7a13a9c568981e4a85d2f7d46aaba6df4"
+    "file": "assets/projects/exhibition-booth-angle-redacted.jpg",
+    "bytes": 250059,
+    "sha256": "8b87fc83a69f0f65e1bc4b20fcd9ea32ee7827b0a4d2327722bf74bad27677c9"
+  },
+  {
+    "file": "assets/projects/exhibition-booth-overview-redacted.jpg",
+    "bytes": 159598,
+    "sha256": "0ab3abf73bf2a9efc75f5ba09ef82ee1142229a8247b0ef98295a2024ec955f2"
+  },
+  {
+    "file": "assets/projects/exhibition-product-display-redacted.jpg",
+    "bytes": 174642,
+    "sha256": "e65f4cf1a2b1c053763c778b17f1aead42aa7448bedfdbc6c9ffd94fed4936a9"
+  },
+  {
+    "file": "assets/projects/fathers-day-bbq-concept.jpg",
+    "bytes": 2645910,
+    "sha256": "c97e49be025091f73a8be564b0e4057290dbd95b450ced329548a3c63914d870"
   },
   {
     "file": "assets/projects/holiday-scene-1.webp",
@@ -63,6 +83,16 @@
     "file": "assets/projects/joint-giveaway.webp",
     "bytes": 76780,
     "sha256": "f856ab71f0b69c182975afad02a012a9453c3054a951abd5b0d7024df0884c33"
+  },
+  {
+    "file": "assets/projects/m3-yellow-battery.webp",
+    "bytes": 10288,
+    "sha256": "9365f10b0231c76ee54ad15b01218a49f6deaff152edd2bed3b552d3384f91db"
+  },
+  {
+    "file": "assets/projects/m3-yellow-main.webp",
+    "bytes": 4580,
+    "sha256": "a855593ce0400aab524086e4e2812f635b4c3f0ca276fab45297b4d7b0728a5e"
   },
   {
     "file": "assets/projects/mop-kv-detail.webp",
@@ -85,29 +115,54 @@
     "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
+    "file": "assets/video/creator-livingroom-7s.mp4",
+    "bytes": 416334,
+    "sha256": "ce3a4a1b9e1691b85069ad2526aedb46627c8a697b9d7962002d92fd6c27cb8a"
+  },
+  {
+    "file": "assets/video/creator-staircase-7s.mp4",
+    "bytes": 777803,
+    "sha256": "8280505f8a30b9fdf65492aab51c1aa18d226c55c909385fcc08a11fd0bb4113"
+  },
+  {
     "file": "data.js",
-    "bytes": 87354,
-    "sha256": "30f83f16f38a0ef3563ffd5b9cb2827038bdba7b126998137c471a9cfa200f3e"
+    "bytes": 84802,
+    "sha256": "d8456381e3911b425ce1b38b6c8c672af02d1f54740ab1945facffb10d1b0409"
   },
   {
     "file": "growth.css",
-    "bytes": 41765,
-    "sha256": "a9a27a0c118fa091c7c82b93defe59b1d7968de81dfcc2667d3ac6e1ff5c6cfb"
+    "bytes": 113081,
+    "sha256": "e5b63f049b004799f3d021235eb9e55dde941015c018fe2987aaff13bd1646d6"
   },
   {
     "file": "growth.js",
-    "bytes": 40662,
-    "sha256": "ff809f92252b63e2a11a86ba4299d7fb47ca5cff0b28dd6ea7388c37837a4805"
+    "bytes": 49869,
+    "sha256": "9d4792e7cbb60c7b08b61ebb3bd6bc11970be00899ad098f2757a557ff2b9d72"
   },
   {
     "file": "index.html",
-    "bytes": 3571,
-    "sha256": "9541ccad0f01f0fb7256e081de6313f20f30c4febe828e1407ab36ec0de23aa4"
+    "bytes": 3508,
+    "sha256": "d3a18725ad4b61dc2dc8980be6b484aac4ec46229547fd7d0b70d114b5bcfab0"
   },
   {
     "file": "projects.js",
-    "bytes": 19739,
-    "sha256": "352b9106cb48f31e868094c7adb923898456057ca1585574914e5d8e2b2830a4"
+    "bytes": 114121,
+    "sha256": "310dda784d894d0f60646b0ab1c15d1e78ba634e7bbe8d779ed38a215e958b67"
+  },
+  {
+    "file": "review/index.html",
+    "bytes": 12754,
+    "sha256": "190970019f56b14d538721b19c08721602ce6055896b7336f8a413a6e34f2c44"
+  },
+  {
+    "file": "review/review.css",
+    "bytes": 20220,
+    "sha256": "29b9f5fe0b75ae68c4908a1cabbcba99dd9c855321bbef954cf966d90bd0e42f"
+  },
+  {
+    "file": "review/review.js",
+    "bytes": 12013,
+    "sha256": "39f7c3e2d533e58a2113e6abe9451e794eabcbf4ca0605318e6427ee622661d0"
   },
   {
     "file": "robots.txt",
@@ -115,8 +170,13 @@
     "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
   },
   {
+    "file": "selected-work.js",
+    "bytes": 4616,
+    "sha256": "77231bece5cf8d256073c1b47fa02df91427f6c162c84b2217a04a658ee60e20"
+  },
+  {
     "file": "styles.css",
-    "bytes": 22273,
-    "sha256": "36b9dfc4f4fc21dcada41b811957975171afa8e8349f324b0f0d9dd24127456f"
+    "bytes": 24231,
+    "sha256": "19f6873e86976aa311118233ab4a73bbdcfa31b2943e15a080c5727832f4c981"
   }
 ]

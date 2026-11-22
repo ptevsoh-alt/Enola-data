@@ -1,8 +1,6 @@
 (() => {
   "use strict";
   const P = window.PORTFOLIO,
-    main = document.querySelector("#main");
-  const $ = (s) => document.querySelector(s),
     esc = (s) =>
       String(s ?? "").replace(
         /[&<>"']/g,
@@ -15,389 +13,649 @@
             "'": "&#39;",
           })[c],
       );
-  const by = (id) => P.cases.find((c) => c.id === id),
-    metric = (id) => P.metrics.find((m) => m.id === id);
-  let filter = "全部",
-    query = "",
-    returnFocus;
-  const badge = (s) =>
-    `<span class="badge ${esc(s)}">${esc(P.statuses[s])}</span>`;
-  const link = (id, label = "查看案例") =>
-    `<a class="text-link" href="#/case/${id}">${label} <span aria-hidden="true">↗</span></a>`;
-  const names = {
-    gtm: ["产品事实", "用户任务", "价值主张", "上市交付"],
-    brand: ["受众需求", "品牌承诺", "可信证明", "渠道表达"],
-    social: ["季度主题", "内容支柱", "平台分工", "复盘决策"],
-    operations: ["确认输入", "拆解依赖", "审核验收", "异常闭环"],
-    creator: ["受众适配", "合作 Brief", "内容审核", "授权归档"],
-    community: ["用户问题", "参与机制", "内容审核", "反馈回流"],
-    b2b: ["客户研究", "分层触达", "询盘确认", "商务交接"],
-    seo: ["搜索意图", "内容集群", "站点承接", "字段复核"],
-    amazon: ["商品表达", "搜索流量", "经营协同", "结果复盘"],
-    creative: ["创意主张", "叙事结构", "镜头任务", "事实审核"],
-    crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
+  const m = (id) => P.metrics.find((x) => x.id === id);
+  const evidence = (id) =>
+    `<button class="g-evidence" data-evidence="${id}">查看数据详情 ↗</button>`;
+  const metric = (id) => {
+    const x = m(id);
+    const period = /^20\d{2}/.test(String(x.window || "")) && !/未注明|待核|具体/.test(x.window) ? x.window : "";
+    const platform = String(x.platform || "").replace(/（字段待核）|（口径待核）/g, "");
+    return `<article class="g-kpi" data-growth-metric="${id}"><p>${esc(x.label)}</p><button data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，打开数据出处"><strong>${esc(x.display)}</strong></button><small>${esc(platform)}</small>${period ? `<p class="g-window">${esc(period)}</p>` : ""}${evidence(id)}</article>`;
   };
-  const workDetails = {
-    gtm: ["整理 Review、VOC、竞品和购买顾虑。", "按 FABA / FABE 拆解产品特征、用户利益与证明。", "制定 KV、演示镜头、FAQ 和 Creator Brief。", "按上市阶段安排渠道内容与审核节点。"],
-    brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
-    social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
-    operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
-    creator: ["筛选受众、内容类型与产品适配度。", "明确合作目标、产品事实和交付要求。", "审核脚本、成片与平台版本。", "确认素材授权范围、期限和使用方式。"],
-    community: ["策划清洁教程、主题投票和挑战活动。", "组织 UGC 投稿与分享激励。", "核对产品信息、投稿内容和使用授权。", "整理高频问题，回流 FAQ 与下一轮选题。"],
-    b2b: ["按客户类型梳理采购需求和应用场景。", "组合搜索、社媒和邮件触达。", "跟进询盘、报价、合同与交期确认。", "整理展会反馈，推进客户资料和后续跟进。"],
-    seo: ["按关键词和搜索意图规划内容主题。", "组织 Pillar Blog、FAQ 与内容集群。", "协同商品页、EDM 和社媒选题。", "观察 GSC 点击与自然搜索收入结构。"],
-    amazon: ["优化 Listing、A+ 与 Store 商品信息。", "结合搜索词与竞争情况调整 CPC。", "协同促销、库存和售后。", "复盘转化、销售与经营表现。"],
-    creative: ["明确使用场景、创意主张与叙事结构。", "安排产品动作、镜头顺序和画面重点。", "审核字幕、产品事实与操作画面。", "检查剪辑节奏、成片质量和导出文件。"],
-    crm: ["区分新客、浏览、加购与购后状态。", "定义触发条件、同意记录和发送频控。", "规划邮件内容、会员权益与召回触点。", "完成域名、数据和权限核查后再上线。"],
-  };
-  const tags = {
-    gtm: "PMM / GTM",
-    brand: "BRAND / IMC / PR",
-    social: "SOCIAL STRATEGY",
-    operations: "TEAM / DELIVERY",
-    creator: "CREATOR GOVERNANCE",
-    community: "COMMUNITY",
-    b2b: "B2B / FIELD MARKETING",
-    seo: "SEARCH / CONTENT",
-    amazon: "COMMERCE",
-    creative: "CREATIVE DIRECTION",
-    crm: "LIFECYCLE",
-  };
-  function cover(c, large = false) {
-    const img = ["gtm", "brand", "creative"].includes(c.id)
-      ? `<img src="assets/concept-${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}.png" alt="${esc(c.subtitle)}视觉方向" ${large ? "" : 'loading="lazy"'} width="1000" height="1200">`
-      : "";
-    return `<div class="project-cover cover-${c.id} ${img ? "has-image" : ""}">${img}<div class="cover-top"><span>${tags[c.id]}</span><span>${c.no} / SELECTED WORK</span></div><div class="cover-diagram" aria-hidden="true">${names[c.id].map((n, i) => `<span><small>0${i + 1}</small>${n}</span>`).join("")}</div><div class="cover-bottom"><b>${esc(c.subtitle)}</b><span>${img ? "视觉方向" : "项目重点"} · ${P.statuses[c.status]}</span></div></div>`;
+  const header = (en, title, desc) =>
+    `<div class="g-heading"><div><p class="eyebrow">${en}</p><h2>${title}</h2></div><p>${desc}</p></div>`;
+  const socialSteps = [
+    [
+      "Social Media Foundation",
+      "账号基础与矩阵搭建",
+      "推动 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容体系从 0 到 1，建立渠道角色、内容规划和审核机制。",
+      "PENDING",
+      true,
+    ],
+    [
+      "Channel Positioning",
+      "平台角色与渠道分工",
+      "Facebook 承接品牌信息和链接导流；Instagram 组织产品视觉演示与活动内容；Group 承接用户交流和问题反馈。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Content Pillars",
+      "建立内容支柱",
+      "围绕产品演示、家庭清洁场景、教程与 FAQ、互动挑战、UGC 与用户反馈组织选题。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Editorial Calendar",
+      "季度主题与月度日历",
+      "季度确定主题与产品重点；月度安排选题、形式、负责人、素材、CTA 与站点承接；周度跟进制作与发布状态。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Cross-functional Delivery",
+      "跨团队任务与质量管理",
+      "协调社媒小组、产品、设计、视频、电商与 Creator / KOL；明确事实提供、制作、审核和发布分工。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Campaign Operations",
+      "线上活动工作包",
+      "将活动目标、用户洞察、Big Idea、参与机制、平台组合、素材、发布节奏和复盘指标拆成独立工作包。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Facebook Community",
+      "Facebook Group 社群运营",
+      "通过教程、投票、清洁挑战、UGC 与答疑组织参与；把高频问题整理为 FAQ 和下一轮内容选题。",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Performance Review",
+      "数据复盘与持续迭代",
+      "分别查看展示、互动、链接点击与社群反馈；不把不同账号和统计窗口拼成增长曲线或成交归因。",
+      "RECONSTRUCTED",
+    ],
+  ];
+  const topics = [
+    [
+      "Topic-driven Discussion",
+      "话题驱动",
+      "你最想解决哪一类清洁问题？",
+      "问题征集 → 评论归类 → 教程选题",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Weekly Discussion",
+      "周期讨论",
+      "本周分享：一个让清洁更轻松的小方法。",
+      "主题邀约 → 成员交流 → FAQ 沉淀；周频为方案节奏",
+      "CONCEPT",
+    ],
+    [
+      "UGC Collection",
+      "用户内容征集",
+      "分享一个清洁前后的使用场景，并说明条件。",
+      "投稿 → 事实审核 → 单独授权 → 可用素材归档",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Fan Product Reviews",
+      "粉丝产品测评",
+      "你会如何描述一次真实使用体验？",
+      "邀请真实体验 → 保留限制与负面反馈 → 产品端确认",
+      "CONCEPT",
+    ],
+    [
+      "Community Challenges",
+      "社群挑战",
+      "选择一个小区域，记录你的清洁步骤。",
+      "规则说明 → 自愿参与 → 讨论答疑 → 问题汇总",
+      "RECONSTRUCTED",
+    ],
+    [
+      "Sharing Incentives",
+      "分享激励",
+      "用内容贡献鼓励互助，而非承诺正面评价。",
+      "激励规则、资格、许可和履约先确认；无已执行奖品或规模",
+      "CONCEPT",
+    ],
+  ];
+  const campaigns = [
+    {
+      id: "challenge",
+      name: "清洁挑战 / UGC",
+      kind: "RECONSTRUCTED",
+      label: "参与机制重构",
+      art: "challenge",
+      objective: "围绕清洁问题建立自愿参与与讨论入口。",
+      insight: "成员需要知道分享什么、如何参与，以及反馈会如何被使用。",
+      idea: "一个小区域，一次可说明的清洁过程。",
+      mechanism:
+        "主题与规则 → 自愿投稿 → 审核与答疑 → 单独授权 → 内容与问题归档。",
+      mix: "Group 讨论承接；Facebook 解释规则；Instagram 以场景演示发起邀请。",
+      participation: "提交使用场景与条件；不要求正面评价，不默认取得商用权。",
+      measurement:
+        "分别查看成员新增、发帖评论人数与查看人数；原记录窗口不同，不据此归因活动效果。",
+      note: "依据社群案例中的清洁挑战、教程、投票和 UGC 机制整理；此卡没有已核实的单场活动日期或成果。",
+    },
+    {
+      id: "seasonal",
+      name: "节日内容 / 场景叙事",
+      kind: "CONCEPT",
+      label: "概念内容方案",
+      art: "03",
+      objective: "以节日场景解释用户任务与产品价值。",
+      insight: "以生活场景组织信息，需要同时保留产品条件与适用限制。",
+      idea: "从节日后的真实清洁任务切入，展示解决路径。",
+      mechanism: "场景开场 → 任务演示 → 可信说明 → 下一步入口。",
+      mix: "节庆海报确定主张，短视频展示产品操作，社群话题邀请读者补充家庭经验。",
+      participation: "通过问题征集和经验分享组织内容讨论，并明确参与入口与反馈方式。",
+      measurement: "按内容曝光、视频互动与后续问题反馈区分不同传播任务，依据同平台数据调整创意。",
+      note: "以节庆场景的内容策划与创意方案展示 Campaign 方法。",
+    },
+    {
+      id: "collab",
+      name: "家居品牌联合抽奖",
+      kind: "DOCUMENTED",
+      label: "联合活动海报",
+      art: "collab",
+      objective: "用同一张海报介绍家居种植与清洁电器的联合抽奖。",
+      insight: "家庭种植和清洁共用一个家居场景，奖品可以在同一画面里被理解。",
+      idea: "The Pristine Living Space Giveaway",
+      mechanism: "海报把家庭种植设备与电动清洁刷并排展示，并标出 4 月 18 日至 28 日的活动窗口。",
+      mix: "海报以奖品为主视觉，活动名称和日期形成两层信息。",
+      participation: "海报使用主题、奖品组合与日期引导用户了解联合活动。",
+      measurement: "联名视觉按照信息可读性、品牌一致性与参与入口完整度进行审核。",
+      note: "联合活动窗口按海报上注明的 4 月 18–28 日呈现。",
+    },
+  ];
+  function pathSteps(items) {
+    return `<ol class="g-path">${items.map((x, i) => `<li><span>0${i + 1}</span><b>${x[0]}</b><p>${x[1]}</p></li>`).join("")}</ol>`;
   }
-  function card(c) {
-    return `<article class="case-card"><a class="cover-link" href="#/case/${c.id}" aria-label="阅读${esc(c.title)}">${cover(c)}</a><div class="card-meta"><span>${tags[c.id]}</span>${badge(c.status)}</div><h3>${link(c.id, c.title)}</h3><p>${esc(c.role)}</p></article>`;
+  function b2bStage() {
+    const x = m("fb-follower-scale");
+    return `<section class="g-stage-grid g-b2b-stage">
+      <article class="g-stage-card">
+        <p class="eyebrow">B2B / FACEBOOK AUDIENCE</p>
+        <h3>任期内的粉丝规模记录</h3>
+        <div class="g-endpoints">
+          <span><b>${esc(x.comparisonValues.start)}</b><small>任职早期记录</small></span>
+          <i aria-hidden="true">→</i>
+          <span><b>${esc(x.comparisonValues.end)}</b><small>任职后期记录</small></span>
+        </div>
+        <p>海外 B2B 岗位期间的 Facebook 账号规模记录。</p>
+        ${evidence("fb-follower-scale")}
+      </article>
+    </section>`;
   }
-  function metricCard(m) {
-    return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(m.window)}</small><span class="metric-source">${P.statuses[m.status]} · 定义与来源 ↗</span></button>`;
-  }
-  const featured = {
-    gtm: {
-      label: "产品营销 / GTM",
-      title: "五款清洁电器的上市传播",
-      role: "负责社媒传播策略与内容团队交付，参与用户研究、差异化定位、卖点分层和上市传播。",
-      decision: "选餐区黏污和浴室边角作为主推场景。双盘拖把拍站姿推进和转向，长柄刷拍调杆、调角和刷头贴合。",
-      output: "五款产品、四条产品线的场景分工与卖点演示，配套 KV、社媒选题和创作者 Brief。",
-      artifact: "查看产品组合与演示规范",
-      chapter: "strategy",
-      image: "mop-kv-detail",
-      alt: "黄色双盘拖把的产品主视觉局部",
-    },
-    social: {
-      label: "海外社媒 / 品牌增长",
-      title: "从零搭建海外社媒内容体系",
-      role: "担任社媒负责人、管理组长，负责 Facebook、Instagram 和美国 Facebook Group 的内容规划与团队交付。",
-      decision: "Facebook 负责品牌信息和活动导流，Instagram 主做演示短片，Group 通过教程、挑战和答疑回收用户问题。",
-      output: "建立季度主题与月度日历。2025 年 Meta 阶段汇总记录 96.5 万次曝光、3.7 万次互动。",
-      artifact: "查看内容体系与活动日历",
-      chapter: "execution",
-    },
-    brand: {
-      label: "品牌策略 / 整合营销",
-      title: "清洁电器品牌定位与整合传播",
-      role: "参与品牌故事、视觉资产和产品卖点表达，协同社媒、创作者、PR 与展会的传播素材交付。",
-      decision: "让广告主视觉交代清洁姿势，社媒与创作者拍同机位演示，PR 用家庭场景解释产品分工。",
-      output: "匿名品牌屋、联合抽奖海报与北美家庭清洁 PR 选题。",
-      artifact: "查看品牌屋与渠道分工",
-      chapter: "strategy",
-      image: "pr-home-scene",
-      alt: "家庭餐区清洁主题的传播配图",
-    },
-    operations: {
-      label: "团队管理 / 项目交付",
-      title: "社媒团队排期与创意审核",
-      role: "安排社媒小组任务与创意评审，协调产品、设计、视频、电商及外部合作方。",
-      decision: "月度日历写清负责人和素材依赖。制作前核对产品事实与素材权限，发布前复核脚本、画面与链接。",
-      output: "把季度主题拆成月度排期、项目 Brief、脚本与视觉审核，以及周度跟进和月度复盘。",
-      artifact: "查看分工、审核与复盘",
-      chapter: "management",
-    },
-  };
+  function facebookSnapshot() {
+    const ids = [
+      "fb-views",
+      "fb-content-interactions",
+      "fb-link-clicks",
+      "fb-visits",
+      "fb-follows",
+    ];
+    return `<section class="g-snapshot-chart" aria-label="Facebook 页面关键数据">
+      ${header(
+        "FACEBOOK PAGE / 后台截图记录",
+        "Facebook 页面关键数据",
+        "展示 Facebook 品牌页面的内容浏览、互动、链接点击、访问与关注表现。",
+      )}
+      <div class="g-snapshot-grid">${ids
+        .map((id) => {
+          const x = m(id);
+          return `<article class="g-snapshot-card" data-growth-metric="${id}">
+            <div class="g-snapshot-card-top">
+              <b>${esc(x.label)}</b>
+            </div>
+            <div class="g-snapshot-value">
+              <strong>${esc(x.display)}</strong>
+              <span>${esc(x.unit)}</span>
+            </div>
+            <button type="button" data-evidence="${id}" aria-label="查看${esc(x.label)}数据详情">查看数据详情 ↗</button>
+          </article>`;
+        })
+        .join("")}</div>
 
-  function featuredCard(id, item) {
-    const image = item.image ? `<img src="assets/projects/${item.image}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
-    const signals = id === "social" ? `<div class="featured-metric-pair" aria-label="2025 年 Meta 阶段汇总"><span><b>${metric("impressions").display}</b> 曝光</span><span><b>${metric("engagements").display}</b> 互动</span></div>` : "";
-    const delivery = id === "operations" ? '<ol class="featured-rhythm"><li>季度主题</li><li>月度排期</li><li>周度审核</li></ol>' : "";
-    return `<article class="case-card featured-project${image ? " featured-project-photo" : ""}">
-      ${image}<div><p class="featured-label">${item.label}</p><h3>${link(id, item.title)}</h3>
-      ${signals}${delivery}<p>${item.decision}</p><a class="featured-detail" href="#/case/${id}/${item.chapter}">${item.artifact} <span aria-hidden="true">↗</span></a></div>
+    </section>`;
+  }
+  function historyCard(id) {
+    const x = m(id);
+    const value = ["group", "group-growth-1k"].includes(id) ? `${x.display} 人` : x.display;
+    const context = {
+      "group-growth-1k": "社群历史增长",
+      group: "单阶段新增成员",
+      "fb-reach": "Facebook 覆盖",
+      "fb-link-click-change": "Facebook 链接点击表现",
+      "engagement-change": "Meta 内容互动表现",
+      "ig-follower-change": "Instagram 账号增长",
+    };
+    return `<article class="g-history-card" data-growth-metric="${id}">
+      <div class="g-history-meta"><span>${esc(x.platform)}</span></div>
+      <button type="button" class="g-history-main" data-evidence="${id}" aria-label="查看${esc(x.label)}数据详情">
+        <span>${esc(context[id] || x.label)}</span>
+        <strong>${esc(value)}</strong>
+      </button>
     </article>`;
   }
-
-  function home() {
-    return `<div class="wrap">
-      <section class="portfolio-hero application-hero" aria-labelledby="home-title">
-        <div><p class="eyebrow">黄文琳 / HUANG WENLIN</p><h1 id="home-title">海外品牌营销<br><em>与产品上市策略</em></h1>
-        <p class="hero-intro">GTM · 产品营销 · 整合营销 · 品牌增长</p>
-        <p class="hero-summary">负责海外社媒策略和内容团队交付，参与清洁电器的用户研究、卖点定位与上市传播。季度定传播主题，月度排内容，周度审核脚本和视觉。</p>
-        <div class="actions"><a class="btn" href="#/cases">浏览案例 ↗</a><a href="#/experience">工作经历</a></div></div>
-        <nav class="featured-nav" aria-label="代表案例入口"><h2>代表案例</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><span>${item.label}</span><strong>${item.title}</strong></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
-      </section>
-      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总</p><a href="#/data/social">查看社媒数据 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
-      <section class="section featured-section" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 11 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
-      <section class="contact-band"><div><h2>工作经历与联系</h2><p>海外品牌营销、产品上市与社媒团队管理。</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
-    </div>`;
-  }
-
-  function caseOverview(c) {
-    const item = featured[c.id];
-    if (!item) return "";
-    return `<section class="g-case-overview" aria-label="项目速览">
-      <div><h2>我的职责</h2><p>${item.role}</p></div>
-      <div><h2>关键决定</h2><p>${item.decision}</p></div>
-      <div><h2>产出与结果</h2><p>${item.output}</p></div>
-      <a href="#/case/${c.id}/${item.chapter}">${item.artifact} <span aria-hidden="true">↗</span></a>
-      ${c.id === "social" ? '<a href="#/data/social">查看数据与口径 ↗</a>' : ""}
-    </section>`;
-  }
-  function listPage() {
-    return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>项目案例</h1><p class="lede">品牌、产品、传播与团队交付。按项目查看我的职责、关键决定、交付物与项目结果。</p><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
-  }
-  const groups = {
-    策略与上市: ["gtm", "brand"],
-    传播与合作: ["social", "community", "creator", "creative"],
-    团队与交付: ["operations"],
-    商业与生命周期: ["b2b", "amazon", "seo", "crm"],
-  };
-  function updateList() {
-    const rows = P.cases.filter(
-      (c) =>
-        (filter === "全部" || groups[filter]?.includes(c.id)) &&
-        `${c.title} ${c.subtitle} ${tags[c.id]} ${c.role}`
-          .toLowerCase()
-          .includes(query.toLowerCase()),
-    );
-    $("#case-list").innerHTML = rows.length
-      ? rows.map(card).join("")
-      : '<div class="empty-state"><h2>暂未找到匹配案例</h2><button class="btn" data-reset>重置筛选</button></div>';
-    $("#filter-count").textContent = `${rows.length} 个案例`;
-    document
-      .querySelectorAll("[data-filter]")
-      .forEach((b) =>
-        b.setAttribute("aria-pressed", String(b.dataset.filter === filter)),
-      );
-  }
-  function flow(c) {
-    return `<ol class="strategy-flow" aria-label="${esc(c.subtitle)}策略流程">${names[c.id].map((n, i) => `<li><span>0${i + 1}</span><h3>${esc(P.caseNarratives[c.id]?.stages[i]?.title || n)}</h3><p>${esc(P.caseNarratives[c.id]?.stages[i]?.detail || P.caseNarratives[c.id]?.stages[i]?.body || ["确认目标、输入与证据状态", "明确选择依据及优先级", "记录负责人、依赖与验收条件", "核对事实、权限并明确下一步"][i])}</p></li>`).join("")}</ol>`;
-  }
-  function brandHouse() {
-    return `<div class="brand-house"><div class="house-roof"><small>BRAND PROMISE / 价值主张结构</small><h3>从产品能力，走向用户的生活价值</h3></div><div class="house-pillars"><div><b>用户任务</b><p>使用场景与购买顾虑</p></div><div><b>产品价值</b><p>特征 → 利益 → 证明</p></div><div><b>可信表达</b><p>确认事实与适用限制</p></div></div><div class="house-base">品牌定位 → 产品事实 → PMM 解释 → 渠道 Brief</div></div><div class="channel-grid">${[
-      ["Owned", "社媒 / 官网", "解释场景与承接信息"],
-      ["Earned", "PR / 媒体", "事实包、新闻价值与编辑独立"],
-      ["Partner", "创作者合作", "受众适配、内容审核与授权"],
-      ["Commerce", "商品页 / 电商", "一致的价值主张与行动入口"],
-    ]
-      .map(
-        (x) =>
-          `<article><small>${x[0]}</small><h3>${x[1]}</h3><p>${x[2]}</p></article>`,
-      )
-      .join("")}</div>`;
-  }
-  function rights() {
-    return `<div class="rights-grid">${[
-      [
-        "策略与筛选",
-        "合作目标、目标市场、受众适配、内容质量、表达可信度；不以粉丝量代替影响力判断。",
-      ],
-      [
-        "合作流程",
-        "筛选 → 邀约 → Brief → 交付确认 → 审核 → 授权核验 → 归档；每个节点明确负责人和下一步。",
-      ],
-      [
-        "内容治理",
-        "产品事实、演示前提、脚本与画面一致；标明需确认的主张，记录版本与审核结论。",
-      ],
-      [
-        "授权机制",
-        "分别确认平台、地域、期限、用途、付费推广、改编、署名与撤回；发布不等于获得商用许可。",
-      ],
-    ]
-      .map(
-        (x, i) =>
-          `<article><span>0${i + 1}</span><h3>${x[0]}</h3><p>${x[1]}</p></article>`,
-      )
-      .join("")}</div>`;
-  }
-  function management(c) {
-    const detail =
-      c.id === "community"
-        ? "按主题和活动节点安排教程、投票、清洁挑战与 UGC；协调社媒、设计和产品信息审核，跟进用户问题与内容授权。"
-        : "围绕目标、交付物、负责人、审核节点和完成标准推进协作；出现产品信息、素材权限或排期问题时，先处理受影响交付，再完成复核。";
-    return `<div class="management-board"><article><small>本人职责</small><h3>组织决策与交付</h3><p>${esc(c.role)}</p></article><article><small>协同关系</small><h3>确认输入与依赖</h3><p>${esc(c.resources)}</p></article><article><small>项目协同</small><h3>审核与交付</h3><p>${detail}</p></article></div>`;
-  }
-  function casePage(c) {
-    const sections = [
-      ["background", "Background", "项目背景"],
-      ["insight", "Insight", "洞察与判断"],
-      ["strategy", "Strategy", "策略选择"],
-      ["execution", "Execution", "执行与工作物"],
-      ["management", "Management Contribution", "管理贡献"],
-      ["results", "Results", "结果与限制"],
-      ["evidence", "Evidence", "证据与来源"],
+  function historicalGrowth() {
+    const groups = [
+      {
+        title: "Meta / Facebook",
+        note: "覆盖、内容互动与链接表现",
+        ids: ["engagement-change", "fb-reach", "fb-link-click-change"],
+      },
+      {
+        title: "Instagram",
+        note: "账号规模变化",
+        ids: ["ig-follower-change"],
+      },
+      {
+        title: "Facebook Group",
+        note: "不同阶段的社群运营表现",
+        ids: ["group", "group-growth-1k"],
+      },
     ];
-    const metrics = c.metrics.map(metric);
-    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1>${featured[c.id] ? "" : `<p class="lede">${esc(c.role)}</p>${badge(c.status)}`}</div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.scope)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">查看视觉方向 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Management Contribution</div><div><h2>管理贡献与协作</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>结果与限制</h2><p>${esc(c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? metaSummary() : c.id === "seo" ? shareChart() : ""}<p class="note">${esc(c.review)}</p></div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / Evidence</div><div><h2>证据与来源</h2><p>指标定义、统计窗口与来源见下方。</p>${metrics.length ? metrics.map((m) => `<details><summary>${esc(m.label)} · ${P.statuses[m.status]}</summary><p>定义：${esc(m.definition)}</p><p>来源：${esc(m.source)}</p><p>统计窗口：${esc(m.window)}</p><p>限制：${esc(m.limits)}</p></details>`).join("") : '<p class="note">本案例展示策略与交付流程，暂无对应的量化结果。</p>'}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
-  }
-  function metaSummary() {
-    const ids = ["impressions", "engagements"];
-    return `<section class="g-meta-summary" aria-label="Meta 社媒阶段汇总">
-      <h3>Meta 社媒阶段汇总</h3>
-      <div class="g-meta-metrics">${ids.map((id) => metricCard(metric(id))).join("")}</div>
-      <button class="text-link" type="button" data-evidence="er">查看互动与曝光的估算口径 ↗</button>
+    return `<section class="g-history-growth">
+      ${header(
+        "CHANNEL PERFORMANCE / 品牌传播与增长",
+        "多平台传播与社群增长",
+        "将品牌传播、内容互动、链接表现与社群增长放在各自的业务场景中展示。",
+      )}
+      <div class="g-history-groups">${groups
+        .map(
+          (g) => `<section class="g-history-group">
+            <div class="g-history-group-heading">
+              <h3>${g.title}</h3>
+              <p>${g.note}</p>
+            </div>
+            <div class="g-history-cards">${g.ids.map(historyCard).join("")}</div>
+          </section>`,
+        )
+        .join("")}</div>
+
     </section>`;
   }
-  function shareChart() {
-    const m = metric("organic-share");
-    return `<figure class="share-chart"><div class="donut" role="img" aria-label="自然搜索收入份额 82.46%，其余渠道补数 17.54%"><b>82.46%<small>收入份额</small></b></div><figcaption><h3>渠道结构，不是增长率。</h3><p>${esc(m.window)} · ${P.statuses[m.status]}</p><p>其他渠道 17.54% 为 100% 减去原记录份额的补数。归因模型、收入定义与窗口待核，不建立与内容计划的因果关系。</p><button class="text-link" data-evidence="organic-share">查看来源 ↗</button></figcaption></figure>`;
+  function sourceEvidence() {
+    return `<details class="g-module g-source-evidence g-source-evidence-collapsed">
+      <summary>查看 Facebook 与社群后台数据截图</summary>
+      <div class="g-source-evidence-grid">
+        <details class="g-source-evidence-card">
+          <summary>Facebook 页面分析</summary>
+          <a href="assets/evidence/facebook-page-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 Facebook 页面分析后台截图"><img src="assets/evidence/facebook-page-insights.webp" alt="Facebook 页面分析后台截图，展示页面浏览、内容互动、链接点击、访问和关注指标" width="420" height="391" loading="lazy" decoding="async"></a>
+          <p>页面浏览量 138.2 万次 · 内容互动 5.3 万次 · 链接点击 7,364 次</p>
+        </details>
+        <details class="g-source-evidence-card">
+          <summary>Facebook Group 社群分析</summary>
+          <a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 Facebook Group 数据截图"><img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台截图，展示用户查看和发帖评论数据" width="420" height="359" loading="lazy" decoding="async"></a>
+          <div class="g-source-window"><span>参与数据统计范围</span><strong>2025.11.02 — 2026.09.30</strong></div>
+          <p>发帖和评论人数 146 · 查看人数 34,387</p>
+        </details>
+      </div>
+      <div class="g-source-evidence-actions"><a href="#/case/social">社媒管理案例 ↗</a><a href="#/case/community">社群运营案例 ↗</a></div>
+    </details>`;
   }
-  function dataPage(domain) {
-    const selected = P.domains[domain] ? domain : "social",
-      rows = P.metrics.filter((m) => m.domain === selected);
-    return `<div class="wrap page"><p class="eyebrow">MEASUREMENT / 数据与证据</p><h1>先解释口径，<br>再阅读结果。</h1><p class="lede">历史文档与截图记录不升级为原始数据验证；不同平台、窗口和业务对象分别呈现。</p><nav class="filter-row" aria-label="数据领域">${Object.entries(
-      P.domains,
+  function association() {
+    return `<section class="g-module g-association">${header("BUSINESS CONNECTION", "从内容信号，回到业务问题。", "从内容曝光、用户互动到链接访问，安排下一轮营销动作与团队协作。")}${pathSteps(
+      [
+        ["展示", "曝光 / 浏览：内容是否被看见？"],
+        ["参与", "互动 / 发帖评论：用户如何回应？"],
+        ["行动", "链接点击：是否发生导流动作？"],
+        ["承接", "通过页面访问、产品咨询与真实订单数据检验转化路径"],
+      ],
+    )}<p class="caption">社群反馈 → 用户问题归类 → 产品事实核对 → FAQ / 内容选题 → 下一轮讨论与验证。</p></section>`;
+  }
+  function growth() {
+    return `<section class="g-module g-growth" id="growth-overview">
+      ${header(
+        "SOCIAL PERFORMANCE / 传播与增长",
+        "社媒传播成果",
+        "从品牌内容表现到用户参与，呈现不同平台的实际运营成果。",
+      )}
+      ${facebookSnapshot()}
+      ${historicalGrowth()}
+      ${sourceEvidence()}
+    </section>`;
+  }
+  function editorial() {
+    return `<section class="g-module g-editorial">${header("EDITORIAL SYSTEM", "内容日历，也是团队交付计划。", "季度定主题，月度组织内容，周度跟进制作、审核与发布。")}<div class="g-editorial-grid"><article><span>QUARTER / 季度</span><h3>主题与产品重点</h3><p>主推产品、用户问题、内容目标、资源优先级。</p></article><article><span>MONTH / 月度</span><h3>内容与平台编排</h3><p>选题、形式、负责人、素材需求、CTA、承接页面。</p></article><article><span>WEEK / 周度</span><h3>审核与依赖管理</h3><p>脚本、设计、视频、事实、权限、发布状态。</p></article></div>${pathSteps(
+      [
+        ["准备", "目标、事实包与角色确认"],
+        ["制作", "创意、脚本与平台版本"],
+        ["发布前", "产品、视觉、权限、链接验收"],
+        ["发布后", "按来源复盘，更新下一轮日历"],
+      ],
+    )}<p class="caption">内容复盘聚焦内容支柱、表现形式、视频开场、CTA 与用户反馈，并把结论写入下一轮日历。</p></section>`;
+  }
+  function social() {
+    return `<section class="g-module g-social-story" id="social-foundation">
+      ${header(
+        "SOCIAL MEDIA MANAGEMENT / 2025.04—2026.09",
+        "从账号矩阵到内容经营，建立一套可持续的社媒管理机制。",
+        "负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略与小组交付；将平台定位、内容规划、活动组织、社群反馈和数据复盘连接起来。",
+      )}
+      <div class="g-social-ownership">
+        <article><span>ROLE / 本人职责</span><b>社媒负责人 / 管理组长</b><p>制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本与视觉审核及周 / 月复盘。</p></article>
+        <article><span>CHANNELS / 平台分工</span><b>Facebook · Instagram · Group</b><p>品牌信息与链接导流、产品视觉演示与活动沟通、用户交流与问题反馈分别承接。</p></article>
+        <article><span>COLLABORATION / 跨部门协作</span><b>从输入到发布的责任分工</b><p>协同社媒小组、产品、设计、视频、电商与 Creator / KOL，明确事实提供、制作、审核和发布责任。</p></article>
+      </div>
+      <div class="g-social-flow-heading">
+        <span>OPERATING JOURNEY / 管理链路</span>
+        <h3>八个管理节点，把策略转成日常交付。</h3>
+      </div>
+      <div class="g-foundation">${socialSteps.map((x, i) => `<article>
+        <span>0${i + 1} / ${x[0]}</span>
+        <h3>${x[1]}</h3>
+        <p>${x[2]}</p>
+        ${x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号阶段规模记录</small>${evidence("fb-size")}</div>` : ""}
+        <small>${P.statuses[x[3]]}</small>
+      </article>`).join("")}</div>
+      <div class="g-social-pillar-block">
+        <div><span>CONTENT PILLARS / 内容支柱</span><h3>五类内容，围绕用户任务组织。</h3></div>
+        <div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div>
+      </div>
+    </section>
+    ${editorial()}
+    ${campaignWall()}
+    ${communitySummary()}
+    ${socialDecisionBridge()}
+    ${socialLoop()}`;
+  }
+  function communitySummary() {
+    const growthIds = ["group-growth-1k", "group"];
+    const snapshotIds = ["group-members", "group-posters", "group-viewers"];
+    const cards = (ids) => ids.map((id) => {
+      const x = m(id);
+      return `<article class="g-social-community-card" data-growth-metric="${id}">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+        ${evidence(id)}
+      </article>`;
+    }).join("");
+    return `<section class="g-module g-social-community-summary" id="social-community-summary">
+      ${header(
+        "FACEBOOK GROUP / COMMUNITY",
+        "把社群做成用户参与与问题反馈的入口。",
+        "围绕教程、投票、清洁挑战、UGC 投稿和问题答疑组织参与；把高频问题回流到 FAQ、内容选题与产品信息核验。",
+      )}
+      <h3>成员增长记录</h3>
+      <div class="g-social-community-growth">${cards(growthIds)}</div>
+      <h3>社群规模与参与</h3>
+      <div class="g-social-community-grid">${cards(snapshotIds)}</div>
+
+      <div class="g-social-community-actions">
+        <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
+        <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
+        <a href="#/data/community">查看社群数据 ↗</a>
+      </div>
+    </section>`;
+  }
+  function socialDecisionBridge() {
+    const field = (id) => {
+      const x = m(id);
+      return `<div class="g-decision-metric" data-growth-metric="${id}">
+        <span>${esc(x.label)}</span>
+        <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
+        ${evidence(id)}
+      </div>`;
+    };
+    return `<section class="g-module g-social-decision" id="social-data-decisions">
+      ${header(
+        "DATA-LED CONTENT MANAGEMENT / 数据驱动内容运营",
+        "从数据复盘到下一轮内容决策",
+        "将页面表现、内容互动、链接动作和社群参与转化为可执行的团队任务。",
+      )}
+      <div class="g-decision-grid">
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>01 / PAGE VIEWS</span><h3>页面浏览量</h3></div>
+          <div class="g-decision-metrics">${field("fb-views")}</div>
+          <p class="g-decision-question">关注内容主题与发布频次带来的页面浏览表现。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>按内容支柱与表现形式组织月度复盘，调整选题、图文与短视频供给。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>02 / CONTENT INTERACTIONS</span><h3>内容互动</h3></div>
+          <div class="g-decision-metrics">${field("fb-content-interactions")}</div>
+          <p class="g-decision-question">识别用户更愿意参与的清洁情境与内容话题。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>将评论和社群高频问题转化为教程、FAQ、互动内容及视频开场。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>链接与页面访问</h3></div>
+          <div class="g-decision-metrics">${field("fb-link-clicks")}${field("fb-visits")}</div>
+          <p class="g-decision-question">观察内容引导用户进一步了解产品的意愿。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>与电商和数据同事检查 CTA、商品页面及追踪链路，优化内容到商品的承接。</p></div>
+        </article>
+        <article class="g-decision-card">
+          <div class="g-decision-card-head"><span>04 / COMMUNITY PARTICIPATION</span><h3>社群查看与参与</h3></div>
+          <div class="g-decision-metrics">${field("group-viewers")}${field("group-posters")}${field("group-members")}</div>
+          <p class="g-decision-question">结合成员规模、内容查看与实际讨论观察社群关系。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>优化教程、清洁挑战和 UGC 活动，把成员问题反馈给产品与内容团队。</p></div>
+        </article>
+      </div>
+      <div class="g-decision-review"><span>MANAGEMENT REVIEW LOOP</span><div><b>分析表现</b><i>→</i><b>归类用户问题</b><i>→</i><b>明确优化优先级</b><i>→</i><b>更新内容与社群计划</b></div></div>
+      <div class="g-story-note"><h3>如何将复盘结论交给团队</h3><p>按内容主题、表现形式和用户反馈筛选下期选题；涉及产品使用疑问时联动产品与客服，涉及链接承接时与电商、数据团队协作优化页面信息。</p></div>
+      <div class="g-decision-links"><a href="#/data/social">查看社媒增长数据 ↗</a><a href="#/case/community">查看 Facebook Group 项目 ↗</a></div>
+    </section>`;
+  }
+  function socialLoop() {
+    return `<section class="g-module g-social-loop">
+      ${header(
+        "PERFORMANCE REVIEW / CONTINUOUS IMPROVEMENT",
+        "复盘的终点，是下一轮内容决策。",
+        "用平台表现、链接行为与社群反馈安排下轮内容方向、产品说明和渠道协作。",
+      )}
+      ${pathSteps([
+        ["读取平台信号", "分别看曝光 / 浏览、互动与链接点击"],
+        ["归类用户反馈", "整理评论、社群问题与常见使用场景"],
+        ["核验产品事实", "与产品及电商协同确认信息和承接"],
+        ["回流内容计划", "更新 FAQ、内容支柱与下一轮选题"],
+      ])}
+    </section>`;
+  }
+  function topicPanel(index = 0) {
+    const t = topics[index];
+    return `<div class="g-topic-example"><span>${t[0]} / ${P.statuses[t[4]]}</span><h3>${t[1]}</h3><blockquote>${t[2]}</blockquote><p>${t[3]}</p></div>`;
+  }
+  function community() {
+    return `<section class="g-module g-community" id="community-management">${header("FACEBOOK COMMUNITY MANAGEMENT", "从内容互动，到用户共创。", "围绕教程、投票、清洁挑战与 UGC 组织成员参与，并将高频问题回流到内容选题和 FAQ。")}<div class="g-community-onboarding"><article><span>POSITIONING / 社群定位</span><h3>围绕真实清洁任务组织交流</h3><p>以产品使用、清洁方法和家庭场景为主题，让成员提问、投票并分享经验。</p></article><article><span>RULES / 参与规则</span><h3>明确讨论边界与投稿授权</h3><p>说明参与方式、隐私要求和内容使用范围；成员内容用于品牌传播前，单独确认授权。</p></article></div><div class="g-project-list g-project-calendar-plan" id="community-event-governance">
+      <article><small>PROGRAM OWNER / 活动归属</small><h3>先按主要业务目标确定唯一负责人</h3><p>公开激活、上市传播、整合 Campaign 或联合营销，由 GTM / Campaign 负责人统筹；成员关系、支持、教育与生命周期活动由社群 / CRM 负责人负责；单纯内容帖或提醒文案由内容负责人承担。活动落在 Group 时，按品牌传播、用户参与或社区关系的目标分配相应负责人。</p></article>
+      <article><small>EVENT CONTRACT / 活动准入</small><h3>先锁定规则，再开放参与</h3><p>每场活动明确一个主业务目标、目标成员状态、市场与平台、参与资格、日期窗口、用户动作、奖励与履约、素材、审核答疑、身份与许可、主指标、Guardrails、取消 / 回滚条件和活动后交接。</p></article>
+      <article><small>PARTICIPATION / 参与路径</small><h3>让参与、审核和内容复用各有边界</h3><p>话题邀约 → 自愿讨论 / 投稿 → 内容审核与答疑 → 单独确认使用授权 → 归档与复用。参与不要求正面评价；投稿不自动取得品牌商业使用权。</p></article>
+      <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>报名、出席、参与、查看、发帖评论、UGC、点击和购买分别记录。出席不等于营销同意，RSVP 不等于购买意向，抽奖参与不等于高价值客户，Group 活动也不自动形成 CRM 身份。</p></article>
+    </div><p class="g-chart-note">活动后将内容资产交回内容团队，成员关系与后续沟通交回社群 / CRM，已验证的事件数据交给 Measurement，Campaign 复盘回到项目负责人。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
+      [
+        ["话题邀约", "清洁问题、教程或投票提供入口"],
+        ["自愿参与", "成员讨论、投稿与问题答疑"],
+        ["治理与授权", "审核事实；二次使用单独确认许可"],
+        ["反馈闭环", "高频问题 → 产品确认 → FAQ 与选题"],
+      ],
+    )}<div class="g-feedback-loop"><b>User Feedback</b><span>收集问题</span><i>→</i><span>归类场景与障碍</span><i>→</i><span>产品核验</span><i>→</i><span>内容策划</span><i>↻</i><b>Community Insights</b></div>${communitySourceEvidence()}</section>`;
+  }
+  function communitySourceEvidence() {
+    const cards = [
+      ["group-viewers", "社群查看人数", "人", m("group-viewers").window],
+      ["group-posters", "发帖和评论人数", "人", m("group-posters").window],
+      ["group-members", "社群成员数", "名", "成员规模快照"],
+    ];
+    return `<section class="g-module g-community-proof" aria-label="Facebook Group 后台数据证据">
+      ${header(
+        "FACEBOOK GROUP INSIGHTS",
+        "社群查看与参与",
+        "Facebook Group · 平台分析",
+      )}
+      <div class="g-community-counts">${cards.map(([id, label, unit, window]) => `
+        <button class="g-community-metric" type="button" data-evidence="${id}">
+          <span>${label}</span><strong>${esc(m(id).display)} <small>${unit}</small></strong>
+          <span class="g-community-metric-window">${esc(window)}</span>
+          <span class="g-community-metric-link">查看数据详情 <span aria-hidden="true">↗</span></span>
+        </button>`).join("")}</div>
+      
+      <div class="g-source-evidence-actions"><a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer">打开匿名化后台截图 ↗</a><a href="#/data/social">查看完整社媒数据 ↗</a></div>
+    </section>`;
+  }
+  function visual(c) {
+    if (c.art === "03")
+      return `<img src="assets/concept-03.png" alt="节日内容概念视觉，非历史已执行活动" width="1000" height="1200" loading="lazy">`;
+    if (c.art === "collab")
+      return `<img src="assets/projects/joint-giveaway.webp" alt="匿名化联合抽奖海报，展示种植设备和电动清洁刷" loading="lazy" decoding="async">`;
+    return `<div class="g-campaign-art art-challenge" aria-hidden="true"><small>COMMUNITY / PARTICIPATION</small><strong>一个小区域，<br>一次清洁分享。</strong><div><span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span></div></div>`;
+  }
+  function campaignPanel(index = 0) {
+    const c = campaigns[index],
+      fields = [
+        ["Campaign Objective", c.objective],
+        ["Consumer Insight", c.insight],
+        ["Big Idea", c.idea],
+        ["Campaign Mechanism", c.mechanism],
+        ["Content & Channel Mix", c.mix],
+        ["UGC / Participation", c.participation],
+        ["Measurement & Review", c.measurement],
+      ];
+    return `<div class="g-campaign-detail"><header><div><span>${c.label} · ${P.statuses[c.kind]}</span><h3>${c.name}</h3></div><button class="g-preview-link" data-g-preview="${c.id}">预览视觉资产 ↗</button></header><div class="g-campaign-fields">${fields.map((f) => `<article><h4>${f[0]}</h4><p>${f[1]}</p></article>`).join("")}</div><h4>Communication Timeline / 相对节点示意</h4>${pathSteps(
+      [
+        ["准备", "目标 / 规则 / 事实与授权"],
+        ["预热", "主题解释 / 场景与参与说明"],
+        ["活动期", "内容分发 / 讨论与审核"],
+        ["复盘", "内容表现 / 用户反馈 / 调整动作"],
+      ],
+    )}<p class="g-campaign-note">${c.note} </p></div>`;
+  }
+  function campaignWall() {
+    return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("CAMPAIGNS", "活动项目", "清洁挑战、节庆内容与家居品牌联合抽奖。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
+  }
+  function trendSeries(series) {
+    if (
+      !series ||
+      series.evidenceStatus !== "VERIFIED" ||
+      !series.accountScope ||
+      !series.metricDefinition ||
+      !series.source ||
+      !series.window ||
+      !Array.isArray(series.points) ||
+      series.points.length < 2
     )
-      .map(
-        ([id, n]) =>
-          `<a class="chip ${id === selected ? "active" : ""}" href="#/data/${id}" ${id === selected ? 'aria-current="page"' : ""}>${n}</a>`,
+      return null;
+    const points = series.points;
+    if (
+      points.some(
+        (p, i) =>
+          !/^\d{4}-\d{2}-\d{2}$/.test(p.date) ||
+          !Number.isFinite(Date.parse(p.date)) ||
+          !Number.isFinite(p.value) ||
+          p.value < 0 ||
+          (i && Date.parse(p.date) <= Date.parse(points[i - 1].date)),
       )
-      .join(
-        "",
-      )}</nav>${selected === "social" ? metaSummary() : selected === "search" ? shareChart() : ""}<div class="data-kpis">${rows.map(metricCard).join("")}</div><details><summary>查看所有数值与口径</summary><div class="table-scroll"><table><thead><tr><th>指标</th><th>数值</th><th>统计窗口</th><th>证据状态</th></tr></thead><tbody>${rows.map((m) => `<tr><th scope="row">${esc(m.label)}</th><td>${esc(m.display)}</td><td>${esc(m.window)}</td><td>${P.statuses[m.status]}</td></tr>`).join("")}</tbody></table></div></details></div>`;
-  }
-  function simple(page) {
-    if (page === "experience")
-      return `<div class="wrap page"><p class="eyebrow">EXPERIENCE</p><h1>工作经历</h1><div class="career-list">${P.experiences.map((e) => `<article><time>${esc(e.date)}</time><div><small>${esc(e.title)} · 匿名化</small><h2>${esc(e.role)}</h2><p>${esc(e.body)}</p>${link(e.caseId, "关联案例")}</div></article>`).join("")}</div></div>`;
-    if (page === "capabilities")
-      return `<div class="wrap page"><p class="eyebrow">CAPABILITIES</p><h1>营销能力</h1><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p>${link(c[3])}</article>`).join("")}</div></div>`;
-    if (page === "contact")
-      return `<div class="wrap page"><p class="eyebrow">LET’S CONNECT</p><h1>联系黄文琳</h1><p class="lede">工作方向：品牌战略、产品上市传播、社媒团队管理与跨部门营销交付。</p><p>请使用随投递简历提供的联系方式。</p><div class="section">${link("operations", "了解管理与交付方式")}</div></div>`;
-    return `<div class="wrap page"><p class="eyebrow">ABOUT THE EVIDENCE</p><h1>事实与展示，<br>各有清晰的依据。</h1><div class="rights-grid">${Object.entries(
-      P.statuses,
     )
-      .map(
-        ([s, n]) =>
-          `<article>${badge(s)}<h2>${n}</h2><p>${{ VERIFIED: "可由原始平台数据直接核对。", DOCUMENTED: "简历、项目记录或后台截图中有对应记录。", RECONSTRUCTED: "根据实际职责与项目流程整理的工作方法。", CONCEPT: "用于展示创意方向和内容表达的样例。", PENDING: "字段定义或统计窗口尚未完整。" }[s]}</p></article>`,
-      )
-      .join(
-        "",
-      )}</div><p>品牌与企业身份已匿名化。创作者合作重点展示受众筛选、Brief、内容审核和授权管理；视觉样例用于呈现创意方向。</p></div>`;
+      return null;
+    return points;
   }
-  function route() {
-    document.querySelectorAll("dialog[open]").forEach(d => d.close());
-    const [rawPage, id, chapter] = location.hash
-      .replace(/^#\/?/, "")
-      .split("/");
-    const page = rawPage || "home";
-    const key = page + "/" + (id || "");
-    if (route.key === key && chapter) {
-      document.getElementById(chapter)?.scrollIntoView();
-      return;
+  // No time series is supplied by the current evidence set. Do not synthesize it.
+  window.PORTFOLIO_GROWTH = { validateSeries: trendSeries, series: [] };
+  window.enhancePortfolio = function (main, { page, id }) {
+    if (page === "case" && id === "social") {
+      const execution = main.querySelector("#execution>div:last-child");
+      const legacyGrid = execution?.querySelector(".deliverable-grid");
+      if (legacyGrid) {
+        legacyGrid.setAttribute("data-social-legacy-grid-hidden", "true");
+        legacyGrid.nextElementSibling?.setAttribute("data-social-legacy-caption-hidden", "true");
+        legacyGrid.insertAdjacentHTML("beforebegin", social());
+      }
+      main
+        .querySelector("#results>div:last-child")
+        ?.insertAdjacentHTML("beforeend", growth());
     }
-    route.key = key;
-    main.innerHTML =
-      page === "home"
-        ? home()
-        : ["cases", "special"].includes(page)
-          ? listPage()
-          : page === "case" && by(id)
-            ? casePage(by(id))
-            : page === "data"
-              ? dataPage(id)
-              : ["experience", "capabilities", "contact", "about"].includes(
-                    page,
-                  )
-                ? simple(page)
-                : '<div class="wrap page"><h1>未找到页面</h1><a href="#/cases">返回案例</a></div>';
-    if (["cases", "special"].includes(page)) updateList();
-    window.enhancePortfolio?.(main, {page, id});
-    document
-      .querySelectorAll("#navigation a")
-      .forEach((a) =>
-        a.setAttribute(
-          "aria-current",
-          a.hash === `#/${page}` ? "page" : "false",
-        ),
-      );
-    $("#navigation").classList.remove("open");
-    $(".menu-button").setAttribute("aria-expanded", "false");
-    document.title =
-      page === "case" && by(id)
-        ? `${featured[id]?.title || by(id).title}｜黄文琳作品集`
-        : "黄文琳｜品牌战略 · 产品营销 · 整合传播";
-    window.scrollTo(0, 0);
-    if (route.started) main.focus({ preventScroll: true });
-    route.started = true;
-    if (chapter)
-      requestAnimationFrame(() =>
-        document.getElementById(chapter)?.scrollIntoView(),
-      );
+    if (page === "case" && id === "community")
+      main
+        .querySelector("#execution>div:last-child")
+        ?.insertAdjacentHTML("beforeend", community());
+    if (page === "case" && id === "brand")
+      main
+        .querySelector("#execution>div:last-child")
+        ?.insertAdjacentHTML("beforeend", campaignWall());
+    if (page === "data") {
+      const domain = P.domains[id] ? id : "social";
+      if (domain === "social") {
+        main
+          .querySelector(".filter-row")
+          ?.insertAdjacentHTML("afterend", growth());
+        main
+          .querySelector(".page")
+          ?.insertAdjacentHTML("beforeend", association());
+      } else if (domain === "community")
+        main
+          .querySelector(".page")
+          ?.insertAdjacentHTML("beforeend", communitySourceEvidence() + association());
+      else if (domain === "b2b")
+        main
+          .querySelector(".page")
+          ?.insertAdjacentHTML("beforeend", b2bStage());
+    }
+    window.enhancePortfolioProjects?.(main, { page, id });
+    decorateCovers(main);
+  };
+  function decorateCovers(main) {
+    main.querySelectorAll(".cover-social").forEach((el) => {
+      if (!el.querySelector(".g-cover-signal"))
+        el.insertAdjacentHTML(
+          "beforeend",
+          '<div class="g-cover-signal"><b>0 → 1</b><span>账号基础 · 内容体系 · 团队交付</span></div>',
+        );
+    });
+    main.querySelectorAll(".cover-community").forEach((el) => {
+      if (!el.querySelector(".g-cover-signal"))
+        el.insertAdjacentHTML(
+          "beforeend",
+          '<div class="g-cover-signal"><b>JOIN → SHARE</b><span>话题 · UGC · 反馈闭环</span></div>',
+        );
+    });
   }
-  function open(id, trigger) {
-    returnFocus = trigger;
-    $("#" + id).showModal();
-  }
-  document.addEventListener("click", (e) => {
-    const t = e.target.closest("button,a");
-    if (!t) return;
-    if (t.matches(".skip")) {
-      e.preventDefault();
-      main.focus();
-      main.scrollIntoView();
-      return;
-    }
-    if (t.matches(".menu-button")) {
-      const on = t.getAttribute("aria-expanded") !== "true";
-      t.setAttribute("aria-expanded", String(on));
-      $("#navigation").classList.toggle("open", on);
-    }
-    if (t.dataset.filter) {
-      filter = t.dataset.filter;
-      updateList();
-    }
-    if (t.hasAttribute("data-reset")) {
-      filter = "全部";
-      query = "";
-      $("#case-search").value = "";
-      updateList();
-    }
-    if (t.dataset.evidence) {
-      const m = metric(t.dataset.evidence);
-      if (!m) return;
-      $("#evidence-content").innerHTML =
-        `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p>${badge(m.status)}<dl>${[
-          ["平台", m.platform],
-          ["统计窗口", m.window],
-          ["指标定义", m.definition],
-          ["来源", m.source],
-          ["限制", m.limits],
-        ]
-          .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
-          .join("")}</dl>${link(m.caseId, "查看关联案例")}`;
-      open("evidence-dialog", t);
-    }
-    if (t.dataset.image) {
-      $("#lightbox-content").innerHTML =
-        `<img src="assets/concept-${t.dataset.image}.png" alt="项目视觉方向"><p>视觉方向</p>`;
-      open("lightbox", t);
-    }
-    if (t.dataset.close) $("#" + t.dataset.close).close();
-    if (t.closest("dialog") && t.hash) t.closest("dialog").close();
-  });
+
   document.addEventListener("input", (e) => {
-    if (e.target.id === "case-search") {
-      query = e.target.value;
-      updateList();
-    }
+    if (e.target.id === "case-search")
+      queueMicrotask(() => decorateCovers(document.querySelector("main")));
   });
-  document.querySelectorAll("dialog").forEach((d) =>
-    d.addEventListener("close", () => {
-      if (returnFocus?.isConnected) returnFocus.focus({ preventScroll: true });
-    }),
-  );
-  window.addEventListener("hashchange", route);
-  route();
+  let previewFocus;
+  document.addEventListener("click", (e) => {
+    const b = e.target.closest("button");
+    if (!b) return;
+    if (b.matches("[data-filter], [data-reset]"))
+      queueMicrotask(() => decorateCovers(document.querySelector("main")));
+    if (b.hasAttribute("data-g-topic")) {
+      const module = b.closest(".g-community");
+      module
+        .querySelectorAll("[data-g-topic]")
+        .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      module.querySelector("[data-topic-panel]").innerHTML = topicPanel(
+        Number(b.dataset.gTopic),
+      );
+    }
+    if (b.hasAttribute("data-g-campaign")) {
+      const module = b.closest(".g-campaign-wall");
+      module
+        .querySelectorAll("[data-g-campaign]")
+        .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
+      module.querySelector("[data-campaign-panel]").innerHTML = campaignPanel(
+        Number(b.dataset.gCampaign),
+      );
+    }
+    if (b.hasAttribute("data-g-preview")) {
+      let dialog = document.querySelector("#growth-preview");
+      if (!dialog) {
+        document.body.insertAdjacentHTML(
+          "beforeend",
+          '<dialog id="growth-preview" class="g-preview" aria-labelledby="growth-preview-title"><div class="dialog-bar"><h2 id="growth-preview-title">活动视觉样张</h2><button data-g-close>关闭 ×</button></div><div data-growth-preview-body></div></dialog>',
+        );
+        dialog = document.querySelector("#growth-preview");
+        dialog.addEventListener("close", () => {
+          if (previewFocus?.isConnected)
+            previewFocus.focus({ preventScroll: true });
+        });
+      }
+      const c = campaigns.find((c) => c.id === b.dataset.gPreview);
+      dialog.querySelector("[data-growth-preview-body]").innerHTML =
+        `${visual(c)}<h3>${c.name}</h3><p>${c.label} · ${P.statuses[c.kind]}。${c.note}</p>`;
+      previewFocus = b;
+      dialog.showModal();
+    }
+    if (b.hasAttribute("data-g-close")) b.closest("dialog").close();
+  });
 })();
