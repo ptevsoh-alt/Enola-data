@@ -276,49 +276,31 @@
     </section>`;
   }
   function sourceEvidence() {
-    return `<section class="g-module g-source-evidence" aria-label="平台后台趋势截图证据">
-      ${header(
-        "SOURCE MATERIAL / BACKEND INSIGHTS",
-        "数据来源",
-        "展开查看匿名化平台截图及对应指标。",
-      )}
+    return `<details class="g-module g-source-evidence g-source-evidence-collapsed">
+      <summary>查看 Facebook 与社群后台数据截图</summary>
       <div class="g-source-evidence-grid">
         <details class="g-source-evidence-card">
           <summary>Facebook 页面分析</summary>
-          <a href="assets/evidence/facebook-page-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook 页面分析后台截图">
-            <img src="assets/evidence/facebook-page-insights.webp" alt="Facebook 页面分析后台截图，展示浏览量、内容互动、链接点击、访问和关注的原生趋势曲线；浏览人数显示为未提供" width="420" height="391" loading="lazy" decoding="async">
-          </a>
-          <p>
-            页面浏览量 138.2 万次；内容互动 5.3 万次；链接点击 7,364 次；页面访问 5.4 万次；关注次数 1 万次。后台显示的变化百分比保留在各自指标卡中，比较周期未注明。
-          </p>
-          <small>公开图像已裁去无关界面区域；截图未显示完整日期范围。浏览人数显示“--”，不以 0 代替。</small>
+          <a href="assets/evidence/facebook-page-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 Facebook 页面分析后台截图"><img src="assets/evidence/facebook-page-insights.webp" alt="Facebook 页面分析后台截图，展示页面浏览、内容互动、链接点击、访问和关注指标" width="420" height="391" loading="lazy" decoding="async"></a>
+          <p>页面浏览量 138.2 万次 · 内容互动 5.3 万次 · 链接点击 7,364 次</p>
         </details>
         <details class="g-source-evidence-card">
           <summary>Facebook Group 社群分析</summary>
-          <a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="打开裁切匿名化后的 Facebook Group 后台截图">
-            <img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台趋势截图，显示发帖和评论人数及查看人数两组曲线" width="420" height="359" loading="lazy" decoding="async">
-          </a>
-          <div class="g-source-window">
-            <span>后台所选统计范围</span>
-            <strong>2025.11.02 — 2026.09.30</strong>
-          </div>
-          <p>
-            平台显示 146 人发帖和评论、34,387 人查看；页面另显示 4,009 名成员，但该成员快照日期未注明。三项指标分别保留，不计算活跃率或成员转化率。
-          </p>
-          <small>公开图像已裁去群组名称与左侧管理导航；曲线为后台原图，不是逐日数据导出。</small>
+          <a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer" aria-label="查看 Facebook Group 数据截图"><img src="assets/evidence/facebook-group-insights.webp" alt="Facebook Group Insights 后台截图，展示用户查看和发帖评论数据" width="420" height="359" loading="lazy" decoding="async"></a>
+          <div class="g-source-window"><span>参与数据统计范围</span><strong>2025.11.02 — 2026.09.30</strong></div>
+          <p>发帖和评论人数 146 · 查看人数 34,387</p>
         </details>
       </div>
-      <p class="g-source-evidence-note">日级或周级趋势需要同一账号、同一字段的连续日期导出。</p>
-      <div class="g-source-evidence-actions"><a href="#/case/social">返回社媒管理案例 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
-    </section>`;
+      <div class="g-source-evidence-actions"><a href="#/case/social">社媒管理案例 ↗</a><a href="#/case/community">社群运营案例 ↗</a></div>
+    </details>`;
   }
   function association() {
-    return `<section class="g-module g-association">${header("BUSINESS CONNECTION", "从内容信号，回到业务问题。", "以下是分析路径，不是可计算的转化漏斗。缺少同范围分母、归因或对照时不建立因果关系。")}${pathSteps(
+    return `<section class="g-module g-association">${header("BUSINESS CONNECTION", "从内容信号，回到业务问题。", "从内容曝光、用户互动到链接访问，安排下一轮营销动作与团队协作。")}${pathSteps(
       [
         ["展示", "曝光 / 浏览：内容是否被看见？"],
         ["参与", "互动 / 发帖评论：用户如何回应？"],
         ["行动", "链接点击：是否发生导流动作？"],
-        ["承接", "站内行为需核对追踪与归因；不推定收入贡献。"],
+        ["承接", "通过页面访问、产品咨询与真实订单数据检验转化路径"],
       ],
     )}<p class="caption">社群反馈 → 用户问题归类 → 产品事实核对 → FAQ / 内容选题 → 下一轮讨论与验证。</p></section>`;
   }
@@ -335,14 +317,14 @@
     </section>`;
   }
   function editorial() {
-    return `<section class="g-module g-editorial">${header("EDITORIAL SYSTEM", "内容日历，也是团队交付计划。", "相对节点为重构流程，不是历史活动日历；未指定具体活动日期或发布日期。")}<div class="g-editorial-grid"><article><span>QUARTER / 季度</span><h3>主题与产品重点</h3><p>主推产品、用户问题、内容目标、资源优先级。</p></article><article><span>MONTH / 月度</span><h3>内容与平台编排</h3><p>选题、形式、负责人、素材需求、CTA、承接页面。</p></article><article><span>WEEK / 周度</span><h3>审核与依赖管理</h3><p>脚本、设计、视频、事实、权限、发布状态。</p></article></div>${pathSteps(
+    return `<section class="g-module g-editorial">${header("EDITORIAL SYSTEM", "内容日历，也是团队交付计划。", "季度定主题，月度组织内容，周度跟进制作、审核与发布。")}<div class="g-editorial-grid"><article><span>QUARTER / 季度</span><h3>主题与产品重点</h3><p>主推产品、用户问题、内容目标、资源优先级。</p></article><article><span>MONTH / 月度</span><h3>内容与平台编排</h3><p>选题、形式、负责人、素材需求、CTA、承接页面。</p></article><article><span>WEEK / 周度</span><h3>审核与依赖管理</h3><p>脚本、设计、视频、事实、权限、发布状态。</p></article></div>${pathSteps(
       [
         ["准备", "目标、事实包与角色确认"],
         ["制作", "创意、脚本与平台版本"],
         ["发布前", "产品、视觉、权限、链接验收"],
         ["发布后", "按来源复盘，更新下一轮日历"],
       ],
-    )}<p class="caption">内容表现复盘维度：内容支柱 / 形式 / Hook / CTA / 平台窗口。现有数据没有逐条内容明细，不虚构最佳内容排名。</p></section>`;
+    )}<p class="caption">内容复盘聚焦内容支柱、表现形式、视频开场、CTA 与用户反馈，并把结论写入下一轮日历。</p></section>`;
   }
   function social() {
     return `<section class="g-module g-social-story" id="social-foundation">
@@ -386,7 +368,6 @@
       return `<article class="g-social-community-card" data-growth-metric="${id}">
         <span>${esc(x.label)}</span>
         <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
-        <p>${esc(x.window)}</p>
         ${evidence(id)}
       </article>`;
     }).join("");
@@ -400,72 +381,58 @@
       <div class="g-social-community-growth">${cards(growthIds)}</div>
       <h3>社群规模与参与</h3>
       <div class="g-social-community-grid">${cards(snapshotIds)}</div>
-      <p class="g-social-community-note">
-        1K+ 与 +227 是两项独立增长记录；4,009 为成员快照，146 与 34,387 为 2025/11/02–2026/09/30 所选范围的平台字段。各项分开呈现，不合并为增长率或活跃率。
-      </p>
+
       <div class="g-social-community-actions">
         <span>运营动作：教程 / 投票 / 清洁挑战 / UGC / 问题答疑</span>
         <a href="#/case/community">查看 Facebook Group 社群经营专项案例 ↗</a>
-        <a href="#/data/social">查看后台数据与证据 ↗</a>
+        <a href="#/data/community">查看社群数据 ↗</a>
       </div>
     </section>`;
   }
   function socialDecisionBridge() {
     const field = (id) => {
       const x = m(id);
-      const change = x.changeDisplay
-        ? `<small class="g-decision-change">${esc(x.changeDisplay)} · 比较周期未注明</small>`
-        : "";
       return `<div class="g-decision-metric" data-growth-metric="${id}">
         <span>${esc(x.label)}</span>
         <strong>${esc(x.display)} <small>${esc(x.unit)}</small></strong>
-        ${change}
         ${evidence(id)}
       </div>`;
     };
     return `<section class="g-module g-social-decision" id="social-data-decisions">
       ${header(
-        "FROM SIGNAL TO DECISION / DATA-LED MANAGEMENT",
-        "让后台数据进入内容与社群管理决策。",
-        "将已记录的平台字段与日常管理动作对应。这里展示的是复盘方法，不是单项内容的因果归因；需要逐条内容或同窗口站点数据时，仍以原始导出为准。",
+        "DATA-LED CONTENT MANAGEMENT / 数据驱动内容运营",
+        "从数据复盘到下一轮内容决策",
+        "将页面表现、内容互动、链接动作和社群参与转化为可执行的团队任务。",
       )}
       <div class="g-decision-grid">
         <article class="g-decision-card">
           <div class="g-decision-card-head"><span>01 / PAGE VIEWS</span><h3>页面浏览量</h3></div>
           <div class="g-decision-metrics">${field("fb-views")}</div>
-          <p class="g-decision-question">观察问题：页面浏览量反映浏览规模，不等同于曝光、覆盖人数或独立访客。</p>
-          <div class="g-decision-action"><b>管理复盘动作</b><p>按平台、内容支柱与形式拆分内容明细，复核主题供给和发布节奏。当前没有逐条内容导出，不据此判断哪条内容贡献最高。</p></div>
+          <p class="g-decision-question">关注内容主题与发布频次带来的页面浏览表现。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>按内容支柱与表现形式组织月度复盘，调整选题、图文与短视频供给。</p></div>
         </article>
         <article class="g-decision-card">
           <div class="g-decision-card-head"><span>02 / CONTENT INTERACTIONS</span><h3>内容互动</h3></div>
           <div class="g-decision-metrics">${field("fb-content-interactions")}</div>
-          <p class="g-decision-question">观察问题：互动次数是平台汇总字段；后台变化值未注明比较周期，不解释为同比或环比。</p>
-          <div class="g-decision-action"><b>管理复盘动作</b><p>结合评论、社群提问和内容主题复核用户反馈，再调整教程、FAQ 与互动话题。当前没有互动动作拆分，不推断点赞、评论或分享的贡献比例。</p></div>
+          <p class="g-decision-question">识别用户更愿意参与的清洁情境与内容话题。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>将评论和社群高频问题转化为教程、FAQ、互动内容及视频开场。</p></div>
         </article>
         <article class="g-decision-card">
           <div class="g-decision-card-head"><span>03 / LINK & PAGE ACTION</span><h3>链接与页面访问</h3></div>
           <div class="g-decision-metrics">${field("fb-link-clicks")}${field("fb-visits")}</div>
-          <p class="g-decision-question">观察问题：链接点击与页面访问是两个不同字段，不能相加，也不能直接视为站点会话。</p>
-          <div class="g-decision-action"><b>管理复盘动作</b><p>检查 CTA、目标链接与落地页信息一致性；若要判断站内后续行为，需核对同一窗口的 UTM、GA4 会话与关键事件。点击不等于订单或收入。</p></div>
+          <p class="g-decision-question">观察内容引导用户进一步了解产品的意愿。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>与电商和数据同事检查 CTA、商品页面及追踪链路，优化内容到商品的承接。</p></div>
         </article>
         <article class="g-decision-card">
           <div class="g-decision-card-head"><span>04 / COMMUNITY PARTICIPATION</span><h3>社群查看与参与</h3></div>
           <div class="g-decision-metrics">${field("group-viewers")}${field("group-posters")}${field("group-members")}</div>
-          <p class="g-decision-question">观察问题：查看人数、发帖和评论人数、成员数分别代表不同维度；成员数是日期未注明的快照。</p>
-          <div class="g-decision-action"><b>管理复盘动作</b><p>通过教程、投票、清洁挑战、UGC 与问题答疑设置参与入口；把高频问题回流 FAQ 和内容计划。不以这三项数据计算活跃率或成员转化率。</p></div>
+          <p class="g-decision-question">结合成员规模、内容查看与实际讨论观察社群关系。</p>
+          <div class="g-decision-action"><b>下一步行动</b><p>优化教程、清洁挑战和 UGC 活动，把成员问题反馈给产品与内容团队。</p></div>
         </article>
       </div>
-      <div class="g-decision-review">
-        <span>MANAGEMENT REVIEW LOOP</span>
-        <div><b>拆分字段</b><i>→</i><b>核对窗口与定义</b><i>→</i><b>识别可行动问题</b><i>→</i><b>调整内容与社群计划</b></div>
-      </div>
-      <div class="g-story-note">
-        <h3>一次阶段复盘怎样分派下一步</h3>
-        <p>复盘工作样例。社媒组把同一阶段的内容按场景、形式和链接动作拆开，确认该继续验证哪类开场。反馈集中在操作问题时，产品与客服先核对用法，内容组再补 FAQ 或短演示。若链接点击出现变化，由电商和数据同事核对对应窗口、落地页访问与关键事件，再决定改 CTA 还是改页面承接。</p>
-        <p class="g-chart-note">现有 Meta 阶段汇总支持规模判断。继续、修正或暂缓的决策需要对应内容和承接数据。</p>
-      </div>
-      <p class="g-decision-note">证据边界：当前后台截图支持平台字段汇总与原生曲线展示；没有同账号、同口径的逐日导出，不能重建日级趋势，也不能把平台表现归因到某一条内容或单场活动。</p>
-      <div class="g-decision-links"><a href="#/data/social">查看平台数据与后台截图 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
+      <div class="g-decision-review"><span>MANAGEMENT REVIEW LOOP</span><div><b>分析表现</b><i>→</i><b>归类用户问题</b><i>→</i><b>明确优化优先级</b><i>→</i><b>更新内容与社群计划</b></div></div>
+      <div class="g-story-note"><h3>如何将复盘结论交给团队</h3><p>按内容主题、表现形式和用户反馈筛选下期选题；涉及产品使用疑问时联动产品与客服，涉及链接承接时与电商、数据团队协作优化页面信息。</p></div>
+      <div class="g-decision-links"><a href="#/data/social">查看社媒增长数据 ↗</a><a href="#/case/community">查看 Facebook Group 项目 ↗</a></div>
     </section>`;
   }
   function socialLoop() {
@@ -473,7 +440,7 @@
       ${header(
         "PERFORMANCE REVIEW / CONTINUOUS IMPROVEMENT",
         "复盘的终点，是下一轮内容决策。",
-        "把平台表现、链接动作与社群反馈拆开观察，再回到内容规划；不将点击直接解释为成交，也不将反馈样本外推为普遍结论。",
+        "用平台表现、链接行为与社群反馈安排下轮内容方向、产品说明和渠道协作。",
       )}
       ${pathSteps([
         ["读取平台信号", "分别看曝光 / 浏览、互动与链接点击"],
@@ -489,11 +456,11 @@
   }
   function community() {
     return `<section class="g-module g-community" id="community-management">${header("FACEBOOK COMMUNITY MANAGEMENT", "从内容互动，到用户共创。", "围绕教程、投票、清洁挑战与 UGC 组织成员参与，并将高频问题回流到内容选题和 FAQ。")}<div class="g-community-onboarding"><article><span>POSITIONING / 社群定位</span><h3>围绕真实清洁任务组织交流</h3><p>以产品使用、清洁方法和家庭场景为主题，让成员提问、投票并分享经验。</p></article><article><span>RULES / 参与规则</span><h3>明确讨论边界与投稿授权</h3><p>说明参与方式、隐私要求和内容使用范围；成员内容用于品牌传播前，单独确认授权。</p></article></div><div class="g-project-list g-project-calendar-plan" id="community-event-governance">
-      <article><small>PROGRAM OWNER / 活动归属</small><h3>先按主要业务目标确定唯一负责人</h3><p>公开激活、上市传播、整合 Campaign 或联合营销，由 GTM / Campaign 负责人统筹；成员关系、支持、教育与生命周期活动由社群 / CRM 负责人负责；单纯内容帖或提醒文案由内容负责人承担。活动发生在 Group 内，不自动改变最终 Owner。</p></article>
+      <article><small>PROGRAM OWNER / 活动归属</small><h3>先按主要业务目标确定唯一负责人</h3><p>公开激活、上市传播、整合 Campaign 或联合营销，由 GTM / Campaign 负责人统筹；成员关系、支持、教育与生命周期活动由社群 / CRM 负责人负责；单纯内容帖或提醒文案由内容负责人承担。活动落在 Group 时，按品牌传播、用户参与或社区关系的目标分配相应负责人。</p></article>
       <article><small>EVENT CONTRACT / 活动准入</small><h3>先锁定规则，再开放参与</h3><p>每场活动明确一个主业务目标、目标成员状态、市场与平台、参与资格、日期窗口、用户动作、奖励与履约、素材、审核答疑、身份与许可、主指标、Guardrails、取消 / 回滚条件和活动后交接。</p></article>
       <article><small>PARTICIPATION / 参与路径</small><h3>让参与、审核和内容复用各有边界</h3><p>话题邀约 → 自愿讨论 / 投稿 → 内容审核与答疑 → 单独确认使用授权 → 归档与复用。参与不要求正面评价；投稿不自动取得品牌商业使用权。</p></article>
       <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>报名、出席、参与、查看、发帖评论、UGC、点击和购买分别记录。出席不等于营销同意，RSVP 不等于购买意向，抽奖参与不等于高价值客户，Group 活动也不自动形成 CRM 身份。</p></article>
-    </div><p class="g-chart-note">活动后将内容资产交回内容团队，成员关系与后续沟通交回社群 / CRM，已验证的事件数据交给 Measurement，Campaign 复盘回到项目负责人。现有资料未提供每场活动完整的资格规则、奖励履约、发布记录和活动级效果，因此本模块展示治理方法，不补造单场活动成果。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
+    </div><p class="g-chart-note">活动后将内容资产交回内容团队，成员关系与后续沟通交回社群 / CRM，已验证的事件数据交给 Measurement，Campaign 复盘回到项目负责人。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
       [
         ["话题邀约", "清洁问题、教程或投票提供入口"],
         ["自愿参与", "成员讨论、投稿与问题答疑"],
@@ -506,7 +473,7 @@
     const cards = [
       ["group-viewers", "社群查看人数", "人", m("group-viewers").window],
       ["group-posters", "发帖和评论人数", "人", m("group-posters").window],
-      ["group-members", "社群成员数", "名", "成员快照 · 采集日期未注明"],
+      ["group-members", "社群成员数", "名", "成员规模快照"],
     ];
     return `<section class="g-module g-community-proof" aria-label="Facebook Group 后台数据证据">
       ${header(
@@ -518,9 +485,9 @@
         <button class="g-community-metric" type="button" data-evidence="${id}">
           <span>${label}</span><strong>${esc(m(id).display)} <small>${unit}</small></strong>
           <span class="g-community-metric-window">${esc(window)}</span>
-          <span class="g-community-metric-link">查看指标口径 <span aria-hidden="true">↗</span></span>
+          <span class="g-community-metric-link">查看数据详情 <span aria-hidden="true">↗</span></span>
         </button>`).join("")}</div>
-      <p class="g-chart-note">平台分别统计查看和发帖评论人数，两组人群的重合情况未注明。</p>
+      
       <div class="g-source-evidence-actions"><a href="assets/evidence/facebook-group-insights.webp" target="_blank" rel="noopener noreferrer">打开匿名化后台截图 ↗</a><a href="#/data/social">查看完整社媒数据 ↗</a></div>
     </section>`;
   }
@@ -549,7 +516,7 @@
         ["活动期", "内容分发 / 讨论与审核"],
         ["复盘", "独立窗口 / 来源 / 待核问题"],
       ],
-    )}<p class="g-campaign-note">${c.note} Instagram 活动期互动变化的具体活动日期和基期未注明，不绑定到这里的任一方案。</p></div>`;
+    )}<p class="g-campaign-note">${c.note} </p></div>`;
   }
   function campaignWall() {
     return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("CAMPAIGNS", "活动项目", "清洁挑战、节庆内容与家居品牌联合抽奖。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
