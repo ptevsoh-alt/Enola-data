@@ -131,13 +131,13 @@
   },
   {
     "file": "index.html",
-    "bytes": 3513,
-    "sha256": "76e72bd148a7bdf74c79052d1402a903981c3482b92de196940aceb9fc01952c"
+    "bytes": 3517,
+    "sha256": "26b75f7402d1c079822c5be84493200c3d31bc604ffef93fee76cb3d3b81d0db"
   },
   {
     "file": "projects.js",
-    "bytes": 95936,
-    "sha256": "761170f6ed03b0ec2a0d085574cc3a229ee6cb57e96dce7b3017db5583323873"
+    "bytes": 94182,
+    "sha256": "b7863955d444d994db5a790ca33031c49de7d205997d7b3803cd09a5af017b74"
   },
   {
     "file": "review/index.html",
