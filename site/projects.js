@@ -101,17 +101,23 @@
       <div class="g-story-note" id="launch-four-stages">
         <h3>从预热到复盘｜新品上市传播节奏</h3>
         <p>从生活场景建立关注，再通过产品演示、上市内容及用户反馈，形成连续的营销节奏。</p>
-        <div class="g-project-list g-project-calendar-plan campaign-stage-roadmap" aria-label="新品上市传播四阶段">
-          <article><small>01 / PREHEAT</small><h3>预热｜先把问题讲清</h3><p>锁定餐后硬地、用户疑问和允许的产品主张；社媒先用场景和产品结构建立理解。若适用条件与产品事实未确认，先交教育素材，不承诺销售。</p></article>
-          <article><small>02 / LAUNCH</small><h3>首发｜同一主张，多触点交付</h3><p>Feed、演示、FAQ 和页面信息同步核验。价格、库存、支付及当地履约未经商业侧确认时，不将 Explore CTA 改为购买承诺。</p></article>
-          <article><small>03 / SCALE</small><h3>放量｜先解决断点再加资源</h3><p>按渠道检查有效观看、商品页访问及用户疑问；若首屏没解释结构，先改素材。Paid 预算及渠道资源是否增加，由授权 Owner 决定。</p></article>
-          <article><small>04 / CLOSEOUT</small><h3>收尾｜撤旧口径，留下可复用资产</h3><p>撤除过期活动信息、核对页面与渠道状态，归档有使用权的素材、反馈和未解决问题，交给内容、客服和后续生命周期运营。</p></article>
-        </div>
+        <ol class="v-stage-track" aria-label="新品上市传播的四段决策路径">
+          <li><span class="v-stage-number">01</span><small>PREHEAT · 预热</small><h4>先识别问题</h4><p>餐后硬地场景、双盘结构、消费者疑问</p><b>阶段交付 · 场景与产品信息</b></li>
+          <li><span class="v-stage-number">02</span><small>LAUNCH · 首发</small><h4>让内容同时到位</h4><p>KV、真实演示、FAQ 与渠道页面相互支持</p><b>阶段交付 · 已审核的渠道素材</b></li>
+          <li><span class="v-stage-number">03</span><small>SCALE · 持续</small><h4>按反馈调整表达</h4><p>先排查观看、有效访问及用户理解断点</p><b>阶段交付 · 素材与内容优化</b></li>
+          <li><span class="v-stage-number">04</span><small>CLOSEOUT · 收束</small><h4>整理下一轮判断</h4><p>统一过期信息、用户反馈与可复用内容</p><b>阶段交付 · 复盘与团队交接</b></li>
+        </ol>
       </div>
       <div class="g-story-note" id="launch-cross-channel">
         <h3>多渠道协同｜让每个触点承担不同任务</h3>
         <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
-        <details class="g-chart-disclosure"><summary>展开渠道物料与签核分工</summary><div class="g-proof-table"><table>
+        <div class="v-channel-journey" id="gtm-channel-orchestration" aria-label="新品上市多渠道协作路径">
+          <article><span>01 / ATTRACT</span><h4>让用户看见问题</h4><b>Social · Paid · PR</b><p>场景切入、节庆与产品卖点建立相关性</p><small>内容组提供 KV / Hook，投放与公关由对应负责人执行</small></article>
+          <article><span>02 / EXPLAIN</span><h4>讲清产品动作</h4><b>Creator · Video · SEO</b><p>使用镜头、结构说明与常见问题回答</p><small>脚本、真实产品演示、FAQ 与素材授权</small></article>
+          <article><span>03 / DECIDE</span><h4>完成选购确认</h4><b>Commerce · Paid · EDM</b><p>型号、适用表面与商品信息保持一致</p><small>定价、库存、支付与购买型 CTA 由商业团队放行</small></article>
+          <article><span>04 / RELATE</span><h4>把使用反馈带回来</h4><b>CRM · Community · Data</b><p>购后使用教育、社群问题与复盘调整</p><small>许可触达、实际用户反馈与同口径测量</small></article>
+        </div>
+        <details class="g-chart-disclosure"><summary>查看渠道 Brief 与审核负责人</summary><div class="g-proof-table"><table>
           <thead><tr><th scope="col">执行渠道</th><th scope="col">物料 Brief / 接口</th><th scope="col">谁负责放行</th><th scope="col">状态与风险</th></tr></thead>
           <tbody>
             <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>产品端提供已批准事实，渠道独立完成上架审核</td></tr>
@@ -145,15 +151,28 @@
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
         <h3>五月上市协作｜内容、渠道与交付节奏</h3>
         <p>围绕首发窗口，把产品核验、创意制作、广告准备、邮件触达、页面承接与数据复盘放进同一张营销排期图。我的主要交付是社媒内容计划、素材 Brief 和跨团队协调。</p>
-        <div class="campaign-flight-plan" role="group" aria-label="五月 Campaign 多渠道协作可视化时间轴">
-          <div class="campaign-flight-head"><b>执行工作流</b><span>5/01–10<br>定位与创意</span><span>5/11–21<br>内容制作</span><span>5/22–25<br>计划首发</span><span>5/26–31<br>持续运营</span></div>
-          <div class="campaign-flight-row"><b>社媒 / 内容</b><span>场景与信息主张</span><span>KV、短视频、FAQ</span><span>上市内容 / 互动</span><span>问题整理与调整</span></div>
-          <div class="campaign-flight-row"><b>Paid Ads</b><span>目标与受众假设</span><span>Hook 变体与 UTM</span><span>投放前 Gate</span><span>创意表现复核</span></div>
-          <div class="campaign-flight-row"><b>EDM / CRM</b><span>订阅分层与许可</span><span>邮件主题与模板</span><span>Launch Email 放行</span><span>购后信息与排除</span></div>
-          <div class="campaign-flight-row"><b>PR / Creator</b><span>角度与筛选</span><span>Brief、事实和授权</span><span>条件性合作发布</span><span>素材授权归档</span></div>
-          <div class="campaign-flight-row"><b>商品与承接</b><span>SKU / KSP 对齐</span><span>页面、FAQ、库存</span><span>购买承接核验</span><span>履约及用户反馈</span></div>
-          <div class="campaign-flight-row"><b>数据与复盘</b><span>目标与指标</span><span>事件 / 链接检查</span><span>首发观测</span><span>早期诊断与复盘</span></div>
-        </div>
+        <section class="v-release-gantt" id="gtm-visual-schedule" aria-labelledby="v-release-heading">
+          <header class="v-release-heading"><div><span>LAUNCH CONTROL / MAY 2026</span><h4 id="v-release-heading">一张排期图，看懂并行任务与放行节点</h4></div><p>从 4 月立项到 5 月收尾，展示内容与渠道协同的计划节奏。各泳道对应不同职能，里程碑可在下方展开查看。</p></header>
+          <div class="v-gantt-legend" aria-label="排期图说明"><span><i class="v-legend-plan"></i>策略 / Brief</span><span><i class="v-legend-produce"></i>制作 / 准备</span><span><i class="v-legend-launch"></i>渠道放行</span><span><i class="v-legend-learn"></i>运营 / 复盘</span></div>
+          <div class="v-gantt-scroll" tabindex="0" role="region" aria-label="五月上市多渠道可横向浏览排期图">
+            <div class="v-gantt-grid" role="table" aria-label="M3 五月上市传播工作流、阶段日期和主要交付">
+              <div class="v-gantt-axis" role="row"><b role="columnheader">执行工作流</b><span role="columnheader">04 / 28<small>立项</small></span><span role="columnheader">05 / 01–10<small>定位与 Brief</small></span><span role="columnheader">05 / 15–21<small>制作与预检</small></span><span role="columnheader">05 / 22–25<small>计划首发</small></span><span role="columnheader">05 / 26–31<small>交接与复盘</small></span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">内容 / Social<small>我的主要协调工作</small></b><span class="is-plan" role="cell">传播任务</span><span class="is-plan" role="cell">场景、KSP、Brief</span><span class="is-produce" role="cell">KV / 视频 / FAQ</span><span class="is-launch" role="cell">社媒发布规划</span><span class="is-learn" role="cell">选题与内容优化</span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">Paid Media<small>广告负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">目标 / 受众假设</span><span class="is-produce" role="cell">Hook 变体 / 追踪</span><span class="is-launch" role="cell">投放前审批</span><span class="is-learn" role="cell">创意测试反馈</span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">EDM / CRM<small>邮件与用户运营</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">许可 / 用户分层</span><span class="is-produce" role="cell">主题 / 模板 / 排除</span><span class="is-launch" role="cell">邮件发送放行</span><span class="is-learn" role="cell">购后教育</span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">PR / Creator<small>品牌及合作负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">传播角度 / 筛选</span><span class="is-produce" role="cell">合作 Brief / 授权</span><span class="is-launch" role="cell">合作内容审核</span><span class="is-learn" role="cell">素材归档</span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">商品与渠道<small>产品、电商、商业</small></b><span class="is-plan" role="cell">目标与型号</span><span class="is-plan" role="cell">SKU / 价值主张</span><span class="is-produce" role="cell">页面 / FAQ / 库存</span><span class="is-launch" role="cell">可售条件确认</span><span class="is-learn" role="cell">履约与用户反馈</span></div>
+              <div class="v-gantt-lane" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">目标及 Owner</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
+            </div>
+          </div>
+          <div class="v-gantt-gates" aria-label="关键上市里程碑">
+            <a href="#/case/gtm/launch-decisions"><strong>G0</strong><span>4/28 · 立项</span></a>
+            <a href="#/case/gtm/english-brief"><strong>G1</strong><span>5/1–10 · Brief</span></a>
+            <a href="#/case/operations/asset-review"><strong>G2</strong><span>5/15–21 · 素材审核</span></a>
+            <a href="#/case/gtm/campaign-architecture"><strong>G3</strong><span>5/22–25 · 渠道放行</span></a>
+            <a href="#/case/gtm/launch-d7-d30"><strong>G4</strong><span>5/26–31 · 交接</span></a>
+          </div>
+        </section>
         <details class="g-chart-disclosure campaign-milestone-details"><summary>查看五个里程碑的负责人、物料与验收要求</summary>
           <ol class="g-milestone-list campaign-milestone-map">
           ${milestones.map(([date, owner, input, approval]) => `
