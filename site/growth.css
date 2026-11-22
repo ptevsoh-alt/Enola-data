@@ -2243,3 +2243,18 @@
 .holiday-campaign-phases p{font-size:.78rem;color:var(--muted);margin:0}
 @media(max-width:850px){.holiday-campaign-phases{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.holiday-campaign-pillars,.holiday-campaign-phases{grid-template-columns:minmax(0,1fr)}}
+
+/* Long-form portfolio film: editorial viewing priority over technical footage labels. */
+.g-featured-film { display:grid;grid-template-columns:minmax(0,1.4fr) minmax(17rem,.7fr);gap:0;margin:1rem 0 2.2rem;background:#21342d;color:#fffefa;border-radius:.55rem;overflow:hidden; }
+.g-featured-film-screen {align-self:center;background:#101711;min-width:0}
+.g-featured-film video {display:block;width:100%;aspect-ratio:16/9;background:#101711;object-fit:contain}
+.g-featured-film figcaption {display:flex;flex-direction:column;gap:.7rem;justify-content:center;padding:clamp(1rem,3vw,1.75rem)}
+.g-featured-film figcaption small {font-size:.72rem;letter-spacing:.1em;color:#bfdbc8}
+.g-featured-film figcaption h3 {font-size:clamp(1.25rem,2.5vw,1.8rem);color:#fffafa;margin:0}
+.g-featured-film figcaption p {font-size:.85rem;line-height:1.8;color:#e3e9dd;margin:0}
+.g-featured-film figcaption a {color:#f1d9ba;text-decoration:underline;text-underline-offset:3px}
+.g-featured-film .reader-source-note {border-top:1px solid #486052;color:#e3e9dd;margin-top:.2rem}
+.g-featured-film .reader-source-note summary {color:#d9e5d9}
+.g-video-gallery-heading{margin:1.5rem 0 .3rem;font-size:clamp(1.2rem,2.4vw,1.6rem)}
+.g-video-gallery-lede{color:var(--muted);margin:0 0 1rem}
+@media(max-width:950px){.g-featured-film{grid-template-columns:minmax(0,1fr)}.g-featured-film figcaption{padding:1.1rem}}
