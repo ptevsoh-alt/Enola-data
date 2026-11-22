@@ -37,10 +37,9 @@ for (const [name, label] of clips) {
   const pathname = path.join(root, "assets/video", name);
   const file = fs.readFileSync(pathname);
   assert.ok(file.length > 10000, "empty / truncated video: " + name);
-  // The Drive portfolio source listing and this existing web edition both show 1,744,928 bytes.
-  // File size confirms the expected delivery variant, while local manifest SHA-256 guards changes.
+  // Preserve the older 82-second local edit as an archived resource; feature film uses Drive's 90-second release.
   if (name === "holiday-story-long.mp4") {
-    assert.equal(file.length, 1744928, "unexpected 82-second web-film edition");
+    assert.equal(file.length, 1744928, "legacy 82-second asset changed unexpectedly");
   }
   const found = boxes(file);
   assert.ok(found.includes("ftyp") && found.includes("moov") && found.includes("mdat"), "missing MP4 media atoms: " + name);
@@ -65,7 +64,14 @@ for (const [name, label] of clips) {
 const review = fs.readFileSync(path.join(root, "review/index.html"), "utf8");
 const projects = fs.readFileSync(path.join(root, "projects.js"), "utf8");
 for (const [name] of clips) {
-  assert.ok(review.includes("../assets/video/" + name), "review does not use " + name);
-  assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
+  if (name !== "holiday-story-long.mp4") {
+    assert.ok(review.includes("../assets/video/" + name), "review does not use " + name);
+    assert.ok(projects.includes('assets/video/' + name), "case study does not use " + name);
+  }
 }
-console.log("PASS full holiday film and three shorter excerpts are linked from both case study and review; actual browser playback and rights approval are separate.");
+for (const id of ["15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]) {
+  assert.ok(review.includes("drive.google.com/file/d/" + id + "/preview"), "review misses public full film");
+  assert.ok(projects.includes("drive.google.com/file/d/" + id + "/preview"), "case misses public full film");
+}
+assert.ok(projects.includes("drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"), "alternate public film missing");
+console.log("PASS two permission-checked Drive long films selected plus three native short clips; browser access remains separately tested.");
