@@ -417,24 +417,25 @@
       </div>`, "brand-collaboration");
   }
 
+
   function creativeStrategy() {
-    return section("为什么节庆故事与功能演示要分开做", "家庭片让观众识别品牌和场景，产品短片回答一个具体使用问题。", `
+    return section("节庆 Campaign 创意与视频内容分工", "感恩节、圣诞节 TVC 建立品牌情绪；KOL / Creator 内容通过具体清洁任务讲清产品使用。", `
       <div class="g-project-list g-project-calendar-plan">
-        <article><h3>把日常照料拍成一段节庆故事</h3><p>圣诞夜的家居氛围与长者照顾家人的动作先建立情绪。人物随后使用黄色清洁工具整理地面，故事再回到家庭与礼物，让产品价值成为关怀的一部分，而不是独立插入一段卖点广告。</p></article>
-        <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
+        <article><small>THANKSGIVING / TVC</small><h3>以团聚和感谢进入产品故事</h3><p>感恩节餐桌、火鸡与人物互动先建立节庆情境，随后进入家人照料和地面清洁。情绪故事与双盘功能展示交替推进，让产品出现在实际生活问题中。</p></article>
+        <article><small>CHRISTMAS / TVC</small><h3>让日常家务成为关怀的表达</h3><p>圣诞夜的家庭空间、长者整理地面和家人团聚形成完整故事。产品结构和操作镜头为人物动作服务，最后以家庭关系收束品牌情绪。</p></article>
+        <article><small>KOL / CREATOR</small><h3>用竖屏场景回答具体使用问题</h3><p>楼梯吸尘素材聚焦吸头接触、握持、移动方向与开场节奏。与完整 TVC 不同，这类内容优先让观众看清产品如何使用。</p></article>
       </div>
       <div class="g-story-note" id="video-channel-plan">
-        <h3>品牌故事和产品教育各看什么</h3>
+        <h3>将 Campaign 主题拆成不同的传播内容</h3>
         <ul>
-          <li><strong>品牌叙事</strong> 横版保留聚餐、工具介入和结尾。社媒短版从餐后问题切入，观察用户是否看到故事转折与品牌露出。</li>
-          <li><strong>产品教育</strong> 竖版保留接触、推进或转向；轮播与 FAQ 回答适用条件。优先观察动作段留存，以及评论里仍没有得到回答的操作问题。</li>
-          <li><strong>下一轮怎么改</strong> 用同版位、同窗口的数据定位流失。观众没看到动作时，先调整剪辑。观众看完仍追问用法时，补镜头或更新 FAQ。</li>
+          <li><strong>品牌 TVC：</strong>保留感恩节或圣诞节的完整人物故事、节庆识别与产品进入情节的过程，用于集中解释品牌价值与情绪主张。</li>
+          <li><strong>内容短版：</strong>提取具有辨识度的场景、产品动作和核心情绪，重新安排 Social / Reels / 广告短版的开场、字幕和行动入口。</li>
+          <li><strong>KOL / Creator：</strong>把真实使用问题交给人物演示；先拍清接触位置与动作，再按渠道要求确定时长、画幅和说明重点。</li>
+          <li><strong>后续优化：</strong>分别观察完整观看、动作片段观看和用户问题，调整剪辑、产品解释或 FAQ，而非用一项数据评价所有视频。</li>
         </ul>
-        <p>这套复盘口径用于规划。页面展示节庆片段、无线吸尘器素材和独立的 M3 上市脚本。</p>
-        <p><a href="#/case/creative/video-projects">播放三个视频样例 ↗</a> · <a href="#/case/gtm/english-brief">查看 M3 上市英文 Brief ↗</a></p>
+        <p><a href="#/case/creative/video-projects">观看感恩节、圣诞节 TVC 与 KOL 视频 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道角色 ↗</a></p>
       </div>`, "video-strategy");
   }
-
 
   function creative() {
     return section("节庆 TVC 与 KOL 内容", "以感恩节、圣诞节两支主题广告建立品牌情绪，用 KOL / Creator 短视频回答真实的产品使用问题。", `
