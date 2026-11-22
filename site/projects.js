@@ -406,7 +406,24 @@
   }
 
   function creative() {
-    return section("节庆叙事与产品演示", "以节庆故事、产品使用和镜头节奏，展示我如何把传播主题转化为可观看的内容作品。", `
+    return section("节庆叙事与产品演示", "从家庭节庆故事到产品使用细节，展示创意主题、内容表达与不同场景的传播设计。", `
+      <figure class="g-featured-film" id="holiday-full-film">
+        <div class="g-featured-film-screen">
+          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆品牌故事长版" aria-describedby="long-film-note">
+            <source src="assets/video/holiday-story-long.mp4" type="video/mp4">
+            <a href="assets/video/holiday-story-long.mp4">播放节庆品牌故事长版</a>
+          </video>
+        </div>
+        <figcaption id="long-film-note">
+          <small>FEATURED FILM / CHRISTMAS STORY</small><h3>让清洁成为故事的一部分</h3>
+          <p>节日将至，家人团聚。影片从生活中自然出现的清洁任务开始，通过人物、室内氛围与电动清洁工具的使用，把产品价值融入一段有关家庭陪伴的故事。</p>
+          <p>观看重点：情绪建立 → 场景转折 → 产品进入 → 家庭关系收束。</p>
+          <a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">单独播放长版 ↗</a>
+          <details class="reader-source-note"><summary>视频版本信息</summary><p>本版为从项目 90 秒原片整理的 82 秒作品集观看剪辑，保留原有声音并去除末端品牌片尾；按网站播放需求压缩为 640 × 360 的 H.264/AAC 文件。创作素材与公开使用授权由项目权利资料管理。</p></details>
+        </figcaption>
+      </figure>
+      <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
+      <p class="g-video-gallery-lede">不同镜头对应不同用户问题：从产品亮相、实际操作到场景功能解释。</p>
       <div class="g-video-gallery">
         <figure>
           <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
