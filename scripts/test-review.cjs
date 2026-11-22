@@ -60,9 +60,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
-  check("review entry directly plays three locally hosted anonymized video excerpts", () => {
+  check("review entry plays featured full holiday film and three supporting short clips", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
-    assert.equal(clips.length, 3);
+    assert.equal(clips.length, 4);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
