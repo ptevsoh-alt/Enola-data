@@ -50,7 +50,7 @@ const fs = require("fs"),
   check("review index renders all 38 metrics and six data domains", () => {
     assert.equal(w.__PORTFOLIO_REVIEW_READY__.metrics, 38);
     assert.equal(d.querySelectorAll(".review-domain-card").length, 6);
-    assert.equal(d.querySelectorAll(".review-evidence-status").length, 5);
+    assert.equal(d.querySelectorAll(".review-outcome-card").length, 4);
   });
 
   check("review page renders Campaign, creative, community and delivery visual maps", () => {
@@ -98,9 +98,12 @@ const fs = require("fs"),
     d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
     assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 16);
   });
-  check("evidence and domain cards expose proportional visual bars", () => {
-    assert.equal(d.querySelectorAll(".review-evidence-track").length, 5);
-    assert.equal(d.querySelectorAll(".review-domain-track").length, 6);
+  check("review page shows four real results without evidence-status visual noise", () => {
+    const metrics = [...d.querySelectorAll(".review-outcome-card strong")].map(el => el.textContent);
+    assert.deepEqual(metrics, ["96.5万", "3.7万", "4,009", "82.46%"]);
+    assert.equal(d.querySelectorAll(".review-evidence-track").length, 0);
+    assert.equal(d.querySelectorAll(".review-domain-track").length, 0);
+    assert.ok(!d.querySelector("#review-evidence").textContent.includes("证据状态分布"));
   });
   check("homepage exposes a direct independent review entry", () => {
     const homepage = fs.readFileSync(path.join(site, "index.html"), "utf8");
