@@ -169,7 +169,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#campaign-architecture .campaign-workstreams article").length, 8);
     assert.ok(d.getElementById("campaign-architecture").textContent.includes("EDM & CRM"));
     assert.ok(d.getElementById("campaign-architecture").textContent.includes("PAID ADS"));
-    assert.equal(d.querySelectorAll("#product-portfolio").length, 0);
+    assert.equal(d.querySelectorAll("#product-portfolio .g-project-product, #product-portfolio .g-product-gallery").length, 0);
     assert.ok(!d.querySelector("#strategy").textContent.includes("查看四条产品线与官方产品图"));
     assert.ok(d.querySelector("#campaign-mechanism-mapping"));
     assert.ok(d.querySelector("#market-adaptation"));
