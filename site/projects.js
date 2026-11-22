@@ -91,11 +91,11 @@
       </div>
       <div class="g-story-note" id="regional-campaign-planning">
         <h3>区域 Campaign｜固定品牌事实，调整当地节奏</h3>
-        <p>围绕北美市场的季度传播、节庆活动和 M3 英美文案适配，我将跨区域营销的工作重点归纳为三个动作：明确本地消费场景，统一品牌与产品信息，再依据各市场的渠道和时区安排内容交付。</p>
+        <p>我在北美品牌项目中统筹季度传播主题与节庆内容，并在 M3 传播方案中比较美国、英国的语言习惯和渠道素材。区域策划的核心，是保持品牌与产品价值一致，同时让当地场景、发布节奏和页面表达适合目标受众。</p>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>节奏 / CALENDAR</small><h3>先看本地消费者日历</h3><p>按地区确认节日日期、季节、渠道档期、物流和审批时区；活动目标与目标人群先于海报排期确定，不直接套用北美节庆时间。</p></article>
-          <article><small>创意 / LOCALIZATION</small><h3>保留核心主张，调整使用语境</h3><p>产品事实、证明和品牌主张保持一致；美英文字样例显示用词可不同。迁移到欧洲各语言市场或澳洲前，仍须验证当地搜索词、文化语境及可售条件。</p></article>
-          <article><small>协作 / OWNERSHIP</small><h3>让各职能明确交付和批准</h3><p>活动 Owner 负责整体节奏与冲突升级；产品核事实、创意团队交素材、当地渠道核页面与投放条件。协调不等于管理各团队的人员及预算。</p></article>
+          <article><small>创意 / LOCALIZATION</small><h3>保留核心主张，调整使用语境</h3><p>保留品牌主张与产品事实，结合美英市场不同的使用情境、搜索措辞和语言习惯调整标题、场景与 CTA。</p></article>
+          <article><small>协作 / OWNERSHIP</small><h3>让各职能明确交付和批准</h3><p>把上市日期、素材版本、内容交付和发布前检查纳入共同排期；我负责内容团队的计划与审核，并与产品、创意及渠道同事对齐交付。</p></article>
           <article><small>学习 / REVIEW</small><h3>同市场内复盘，再讨论跨市场复制</h3><p>先按相同窗口观察内容表现、有效访问和反馈，记录版本与外部变化；市场之间的季节、渠道组合和统计口径不同，不直接拼接结果。</p></article>
         </div>
         <p><a href="#/case/social/fathers-day-calendar">查看节庆双语日历样例 ↗</a> · <a href="#/case/gtm/market-adaptation">查看 M3 美英文案对照 ↗</a></p>
@@ -406,7 +406,7 @@
   }
 
   function creative() {
-    return section("节庆叙事与产品演示", "从家庭节庆故事到产品使用细节，展示创意主题、内容表达与不同场景的传播设计。", `
+    return section("节庆叙事与产品演示", "以家庭节庆故事传递品牌温度，用产品使用场景解释实际价值，并展示不同镜头如何适配传播目标。", `
       <figure class="g-featured-film" id="holiday-full-film">
         <div class="g-featured-film-screen">
           <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆品牌故事长版" aria-describedby="long-film-note">
@@ -418,8 +418,8 @@
           <small>FEATURED FILM / CHRISTMAS STORY</small><h3>让清洁成为故事的一部分</h3>
           <p>节日将至，家人团聚。影片从生活中自然出现的清洁任务开始，通过人物、室内氛围与电动清洁工具的使用，把产品价值融入一段有关家庭陪伴的故事。</p>
           <p>观看重点：情绪建立 → 场景转折 → 产品进入 → 家庭关系收束。</p>
-          <a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">单独播放长版 ↗</a>
-          <details class="reader-source-note"><summary>视频版本信息</summary><p>本版为从项目 90 秒原片整理的 82 秒作品集观看剪辑，保留原有声音并去除末端品牌片尾；按网站播放需求压缩为 640 × 360 的 H.264/AAC 文件。创作素材与公开使用授权由项目权利资料管理。</p></details>
+          <div class="film-edition-actions"><a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">观看 82 秒网页剪辑 ↗</a><a href="https://drive.google.com/file/d/1SbnNlvRdpGARtbEzYIfmoIYm7Oy_pylR/view" target="_blank" rel="noopener noreferrer">查看 90 秒 US 完整交付版 ↗</a><a href="https://drive.google.com/file/d/1wm7IsA2bZEryC7iUvMJYn4v8h5hH-WM2/view" target="_blank" rel="noopener noreferrer">查看 90 秒 UK 版本 ↗</a></div>
+          <details class="reader-source-note"><summary>影片版本与交付说明</summary><p>网页播放的是 82 秒观看剪辑（H.264/AAC，640 × 360），保留故事声轨、去除原品牌片尾。Drive 中的 90 秒 US/UK REV08 FFmpeg 交付版通过技术解码、字幕与抽样连续性检查；其配音仍为指导版本，原 AI 动作尚未完成逐帧语义验收。REV09 是后续片尾预览，不作为最终配音成片。对外发布与素材复用以相关权利批准为准。</p></details>
         </figcaption>
       </figure>
       <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
@@ -467,9 +467,9 @@
         </div>
       </div>
       <div class="g-story-note" id="video-management">
-        <h3>从创意方向到可验收的交付</h3>
+        <h3>从创意方向到完整的视频表达</h3>
         <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
-        <p>画面可以说明握持、行进方向和接触位置。清洁效果和性能主张需要真实产品素材、同条件前后对照及产品签核。当前可展示结果为视频节选与相应的策略和审核样例，发布与投放数据待核。</p>
+        <p>视频以生活情境建立注意，再使用人物动作、产品特写、字幕与节奏传递单一信息点。通过脚本、分镜与画面审核，让不同长度和版位的内容保持同一价值表达。</p><details class="reader-source-note"><summary>产品演示与效果证明说明</summary><p>操作画面主要呈现握持、移动方向和接触位置；清洁效果与性能主张需用可核验的同条件素材和产品事实确认。公开视频传播数据另按发布记录统计。</p></details>
         <p><a href="#/case/creative/video-strategy">查看创意选择与渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看一次物料如何返工 ↗</a></p>
       </div>`, "video-projects");
   }
@@ -502,7 +502,7 @@
           <div><span>较早阶段</span><div class="b2b-range-track"><span style="width: 21.05%"></span></div><strong>400+</strong></div>
           <div><span>较晚阶段</span><div class="b2b-range-track"><span style="width: 100%"></span></div><strong>1,900+</strong></div>
         </div>
-        <p class="g-chart-note">两个数字来自 2023.11–2025.03 任职期简历记录，均为约数下限。条形长度仅用这两个下限作视觉参照；账号范围、准确采样日期及实际净增长未核，不计算百分比，也不归因于某次展会。</p>
+        <p class="g-chart-note">任职期两个阶段的 Facebook 账号粉丝规模由 400+ 发展至 1,900+。</p><details class="reader-source-note"><summary>数据来源与比较范围</summary><p>依据 2023.11–2025.03 任期内的项目记录；两个数为约数下限，采样日期和账号范围尚未明确，因此只做规模对照，不计算增长率或归因于单场展会。</p></details>
         <p><a href="#/data/b2b">查看 B2B 其他经营字段及定义 ↗</a></p>
       </section>
       <p class="g-chart-note">照片中的展位标识、设备品牌、型号和编号已脱敏。具体展会分工和活动级业绩待核。</p>`, "expo-project");
