@@ -420,7 +420,7 @@
   function creativeStrategy() {
     return section("为什么节庆故事与功能演示要分开做", "家庭片让观众识别品牌和场景，产品短片回答一个具体使用问题。", `
       <div class="g-project-list g-project-calendar-plan">
-        <article><h3>把餐后清洁放进家庭故事</h3><p>我参与的创意策划从节庆聚餐出发。食物滴落让清洁任务自然出现，握持和推进说明工具如何进入场景，结尾回到家庭氛围。这条内容着重建立品牌记忆，产品出现要服务故事的转折。</p></article>
+        <article><h3>把日常照料拍成一段节庆故事</h3><p>圣诞夜的家居氛围与长者照顾家人的动作先建立情绪。人物随后使用黄色清洁工具整理地面，故事再回到家庭与礼物，让产品价值成为关怀的一部分，而不是独立插入一段卖点广告。</p></article>
         <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
       </div>
       <div class="g-story-note" id="video-channel-plan">
@@ -446,19 +446,19 @@
         </div>
         <figcaption id="long-film-note">
           <small>FEATURED FILM / CHRISTMAS STORY</small><h3>让清洁成为故事的一部分</h3>
-          <p>节日将至，家人团聚。影片从生活中自然出现的清洁任务开始，通过人物、室内氛围与电动清洁工具的使用，把产品价值融入一段有关家庭陪伴的故事。</p>
-          <p>观看重点：情绪建立 → 场景转折 → 产品进入 → 家庭关系收束。</p>
+          <p>影片从圣诞夜的家庭氛围展开：年长者照顾正在休息的家人，随后使用黄色电动拖把整理木地板。镜头在产品动作、节日礼物与家庭关系之间切换，把“日常照料”作为贯穿故事的情绪线索。</p>
+          <p>观看重点：圣诞氛围 → 默默照料与清洁 → 产品使用与礼物 → 家庭情感收束。</p>
           <div class="film-edition-actions"><a href="assets/video/holiday-story-long.mp4" target="_blank" rel="noopener">播放 82 秒节庆故事长版 ↗</a><a href="#/case/creative/video-strategy">查看完整创意说明 ↗</a></div>
           <details class="reader-source-note"><summary>影片版本与交付说明</summary><p>网页播放的是 82 秒观看剪辑（H.264/AAC，640 × 360），保留故事声轨、去除原品牌片尾。Drive 中的 90 秒 US/UK REV08 FFmpeg 交付版通过技术解码、字幕与抽样连续性检查；其配音仍为指导版本，原 AI 动作尚未完成逐帧语义验收。REV09 是后续片尾预览，不作为最终配音成片。对外发布与素材复用以相关权利批准为准。</p></details>
         </figcaption>
       </figure>
       <section class="video-storyline" id="video-storyline" aria-label="节庆故事的四段画面节奏">
-        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>长片先建立节日氛围，再让生活中的清洁任务自然出现，最后把焦点重新交给人物。</p></header>
+        <header><small>BRAND STORY / 影片内容结构</small><h3>一段家庭故事，四次信息推进</h3><p>先用人物与冬日室内氛围建立情绪，再让日常清洁成为爱的行动，最后以家庭礼物和人物反应收束。</p></header>
         <ol class="video-story-beats">
-          <li><span>01 / EMOTION</span><strong>家庭相聚</strong><p>人物与节庆氛围建立情绪起点</p></li>
-          <li><span>02 / TENSION</span><strong>生活中的小问题</strong><p>清洁需求推动故事发生转折</p></li>
-          <li><span>03 / PRODUCT</span><strong>产品进入情节</strong><p>通过握持、动作与接触让功能被看见</p></li>
-          <li><span>04 / BRAND</span><strong>回到家庭时刻</strong><p>以陪伴与日常生活收束品牌记忆</p></li>
+          <li><span>01 / EMOTION</span><strong>圣诞夜与关怀</strong><p>家庭空间、休息中的亲人与长者照料建立情绪起点</p></li>
+          <li><span>02 / ACTION</span><strong>默默整理家务</strong><p>人物拿起清洁工具，地面操作成为关爱的具体动作</p></li>
+          <li><span>03 / PRODUCT</span><strong>工具与使用特写</strong><p>握持、双盘接地、行进与节日礼物形成产品记忆</p></li>
+          <li><span>04 / BRAND</span><strong>礼物与家庭关系</strong><p>人物互动承接情绪，让产品回到陪伴与关怀的意义</p></li>
         </ol>
       </section>
       <h3 class="g-video-gallery-heading">产品演示与短视频表达</h3>
@@ -469,7 +469,7 @@
             <source src="assets/video/holiday-story.mp4" type="video/mp4">
             <a href="assets/video/holiday-story.mp4">打开节庆短片 MP4</a>
           </video>
-          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>节庆家庭故事以聚餐、清洁需求和产品介入形成自然转折，最后将注意力带回家庭相处的时刻。</p><p class="g-chart-note">从家庭场景进入产品价值，再回到节庆情感。</p></figcaption>
+          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>从圣诞家庭关怀与日常清洁的动作切入，用产品使用画面承接人物情绪，再回到家庭与礼物。</p></figcaption>
         </figure>
         <figure class="g-video-demo">
           <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放楼梯吸尘演示节选" aria-describedby="stairs-video-note">
@@ -505,7 +505,7 @@
       <div class="g-story-note" id="video-decision-strip">
         <h3>视频作品如何承担不同传播任务</h3>
         <div class="g-video-decision-grid">
-          <article><small>品牌片 / 故事转折</small><h4>先让用户进入晚餐后的生活时刻</h4><p>节庆聚餐→地面问题→产品介入→回到家庭。画面验证叙事顺序，产品运行的真实性另按连续镜头检查。</p></article>
+          <article><small>品牌片 / 故事转折</small><h4>用无声的照料建立情感</h4><p>圣诞氛围→关怀与家务→清洁工具使用→礼物与陪伴。镜头服务人物关系，产品成为故事中的实际行动。</p></article>
           <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
           <article><small>内容开场 / 创意判断</small><h4>认识产品，还是先解决一个问题</h4><p>客厅亮相优先建立产品识别；楼梯操作直接展示使用方法。围绕传播目标和观看任务选择开头，而不是让每条视频使用同一种节奏。</p></article>
         </div>
