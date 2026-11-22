@@ -71,7 +71,8 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
     assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
-    assert.ok(d.querySelector('#review-videos source[src="../assets/video/creator-livingroom-intro.mp4"]'));
+    assert.ok(d.querySelector('#review-videos source[src="../assets/video/creator-livingroom-7s.mp4"]'));
+    assert.ok(d.querySelector('#review-videos source[src="../assets/video/creator-staircase-7s.mp4"]'));
     assert.ok(!d.querySelector('#review-videos source[src*="holiday-story.mp4"]'));
     assert.ok(!d.querySelector('#review-videos source[src*="#t="]'));
     clips.forEach((clip) => {
