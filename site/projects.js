@@ -89,7 +89,55 @@
         <p>品牌故事从餐后硬地和浴室边角两个使用任务展开。下一轮选题时，从社群与客服的问题中找真实做法，核对在什么表面、用什么配件、哪一步卡住。共性问题优先补进 FAQ；有完整使用过程并取得授权的故事，进入创作者拍摄 Brief。</p>
         <p><a href="#/case/community">查看社群如何收集问题 ↗</a> · <a href="#/case/creative/video-projects">查看家庭场景如何转成镜头 ↗</a></p>
       </div>
+      <div class="g-story-note" id="regional-campaign-planning">
+        <h3>区域 Campaign｜固定品牌事实，调整当地节奏</h3>
+        <p>我在北美消费品牌项目中负责社媒季度主题、月度内容日历与活动节点；M3 还留有美国/英国文案适配样例。以下将这段经验归纳为区域策划判断，不等于已有欧洲及澳洲市场独立管理项目。</p>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>节奏 / CALENDAR</small><h3>先看本地消费者日历</h3><p>按地区确认节日日期、季节、渠道档期、物流和审批时区；活动目标与目标人群先于海报排期确定，不直接套用北美节庆时间。</p></article>
+          <article><small>创意 / LOCALIZATION</small><h3>保留核心主张，调整使用语境</h3><p>产品事实、证明和品牌主张保持一致；美英文字样例显示用词可不同。迁移到欧洲各语言市场或澳洲前，仍须验证当地搜索词、文化语境及可售条件。</p></article>
+          <article><small>协作 / OWNERSHIP</small><h3>让各职能明确交付和批准</h3><p>活动 Owner 负责整体节奏与冲突升级；产品核事实、创意团队交素材、当地渠道核页面与投放条件。协调不等于管理各团队的人员及预算。</p></article>
+          <article><small>学习 / REVIEW</small><h3>同市场内复盘，再讨论跨市场复制</h3><p>先按相同窗口观察内容表现、有效访问和反馈，记录版本与外部变化；市场之间的季节、渠道组合和统计口径不同，不直接拼接结果。</p></article>
+        </div>
+        <p><a href="#/case/social/fathers-day-calendar">查看节庆双语日历样例 ↗</a> · <a href="#/case/gtm/market-adaptation">查看 M3 美英文案对照 ↗</a></p>
+      </div>
       <p class="g-chart-note">品牌屋中的竞品参照属于功能与任务层面的定性比较；现有材料没有市场规模、竞品份额或价格调查数据。</p>`, "brand-positioning");
+  }
+
+  function launchFourStage() {
+    return `
+      <div class="g-story-note" id="launch-four-stages">
+        <h3>四阶段上市节奏｜从预热到收尾</h3>
+        <p>先确认场景定位、卖点和可公开的证据，再倒排渠道交付。下面是基于 M3 2026 年 5 月重建规划整理的上市传播决策视图，不是已执行的四阶段业绩。</p>
+        <div class="g-project-list g-project-calendar-plan" aria-label="新品上市传播四阶段">
+          <article><small>01 / PREHEAT</small><h3>预热｜先把问题讲清</h3><p>锁定餐后硬地、用户疑问和允许的产品主张；社媒先用场景和产品结构建立理解。若适用条件与产品事实未确认，先交教育素材，不承诺销售。</p></article>
+          <article><small>02 / LAUNCH</small><h3>首发｜同一主张，多触点交付</h3><p>Feed、演示、FAQ 和页面信息同步核验。价格、库存、支付及当地履约未经商业侧确认时，不将 Explore CTA 改为购买承诺。</p></article>
+          <article><small>03 / SCALE</small><h3>放量｜先解决断点再加资源</h3><p>按渠道检查有效观看、商品页访问及用户疑问；若首屏没解释结构，先改素材。Paid 预算及渠道资源是否增加，由授权 Owner 决定。</p></article>
+          <article><small>04 / CLOSEOUT</small><h3>收尾｜撤旧口径，留下可复用资产</h3><p>撤除过期活动信息、核对页面与渠道状态，归档有使用权的素材、反馈和未解决问题，交给内容、客服和后续生命周期运营。</p></article>
+        </div>
+      </div>
+      <div class="g-story-note" id="launch-cross-channel">
+        <h3>四类渠道接口｜横向推进，而非管理四支团队</h3>
+        <p>以同一卖点清单为输入，针对渠道回答“需要什么、谁有权确认、何时交、未就绪怎么办”。下表是可迁移的上市协作清单；M3 的 Amazon A+ 和海外经销商培训文件尚无定稿或发布证据，不写作已完成成果。</p>
+        <div class="g-proof-table"><table>
+          <thead><tr><th scope="col">执行渠道</th><th scope="col">物料 Brief / 接口</th><th scope="col">谁负责放行</th><th scope="col">状态与风险</th></tr></thead>
+          <tbody>
+            <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>本项目为接口样例，M3 定稿待核</td></tr>
+            <tr><th scope="row">独立站</th><td>落地页、FAQ、演示入口、CTA 与链接</td><td>站点 / 商业 Owner；产品核事实</td><td>页面与库存、价格、结账须现场核验</td></tr>
+            <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>用于协作规划，未作为已发生的经销培训成果</td></tr>
+            <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
+          </tbody>
+        </table></div>
+        <p>我的直接管理范围是社媒小组的内容和审核；跨渠道工作是推动节点、回收反馈和统一口径，不等于拥有其他渠道的预算、人事或最终发布权限。</p>
+        <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看真实视觉返工 ↗</a></p>
+      </div>
+      <div class="g-story-note" id="launch-d7-d30">
+        <h3>D7 / D30｜计划如何检查，而非宣称已复盘</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>D+7 / EARLY SIGNAL</small><h3>先找渠道和物料断点</h3><p>对齐发布日期、资产版本和有效链接，查看首屏观看、点击及 FAQ 问题。若渠道漏发或某版视频动作不清，先补发布和返工；不要由单周互动推断销量提升。</p></article>
+          <article><small>D+30 / BUSINESS & LEARNING</small><h3>判断该保留、迭代还是停止</h3><p>按相同市场和统计窗口核对渠道表现、站点访问、净履约订单与售后反馈；区分素材问题、承接问题和供货限制，再确定下期资源与 Owner。</p></article>
+        </div>
+        <p class="g-chart-note">D7、D30 是复盘设计，不是已经发生的两次复盘。M3 上市的实际发布日期、订单和按渠道对账记录仍待原始资料。</p>
+      </div>`;
   }
 
   function launchDelivery() {
@@ -159,6 +207,7 @@
         </div>
         <p>素材审核通过后再承诺「看演示」。商业侧还需核可当地价格、库存、支付与履约，才开放购买。</p>
       </div>
+      ${launchFourStage()}
       ${launchDelivery()}
       ${englishBrief()}
       <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
@@ -393,6 +442,15 @@
         </ul>
         <p class="g-chart-note">依据 M3 视觉样稿的审核和修订记录。该记录对应物料工作样例。</p>
         <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
+      </div>
+      <div class="g-story-note" id="cross-functional-governance">
+        <h3>横向推进的三件事：催节点、收反馈、对齐口径</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
+          <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>例如 M3 主视觉 CTA 遮挡双盘，返工要求是让关键结构完整可见，而非笼统反馈“再高级一点”。图片由制作方修改，内容侧复核。</p></article>
+          <article><small>口径</small><h3>同一 Claim，只能有一个已批准版本</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
+          <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>若产品条件、素材权利或购买承接未就绪，标记 HOLD / REWORK，明确需要谁确认。本人直接负责社媒内容组，不推定拥有其他团队的最终决策权。</p></article>
+        </div>
       </div>
       <div class="g-story-note">
         <h3>用父亲节日历演示一次项目交接</h3>
