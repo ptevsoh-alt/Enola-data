@@ -128,7 +128,7 @@
       choice: "品牌片先建立节庆家庭场景，操作短片直接切入工具如何接触、推进和转向。",
       handoff: "我参与创意策划与脚本、画面审核。产品确认结构和用途；制作交对应镜头；运营核渠道版本和使用权。",
       review: "不同开场承担不同任务。阶段测试可固定其余条件比较留存；去污表现需要可核实的同条件镜头。",
-      output: "三段静音网页节选，含节庆叙事、楼梯演示及两种开场对照。另有脚本和审核样例。",
+      output: "节庆故事长版与短视频案例覆盖家庭叙事、产品操作和开场表达，配合脚本与画面审核展示创意方法。",
       chapter: "video-projects",
       artifact: "播放节庆故事和产品演示",
     },
@@ -223,7 +223,7 @@
         <div class="actions"><a class="btn" href="#/home/strategy-map">按主题看作品 ↘</a><a href="#/case/creative/video-projects">播放视频 ↗</a><a href="#/experience">经历与职责</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
-      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年阶段汇总 · 历史项目记录</p><a href="#/case/social/results">查看社媒增长成果 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
+      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
         <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">从策略判断到作品与结果</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
@@ -231,9 +231,9 @@
         <div class="home-route-grid">${homeRoutes.map(([no, title, note, href, evidence]) => `<a class="home-route-card" href="${href}"><span class="home-route-index">${no} / ${title}</span><p>${note}</p><strong>${evidence} <span aria-hidden="true">↗</span></strong></a>`).join("")}</div>
       </section>
       <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
-        <a href="#/data/community"><small>美国 Facebook Group · 成员快照</small><strong>${esc(metric("group-members").display)}</strong><span>采集日期未注明；与 2025 Meta 汇总不合并 ↗</span></a>
-        <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>粉丝规模起止值，日期和账号范围待核 ↗</span></a>
-        <a href="#/case/creative/video-projects"><small>节庆与产品教育 · 本地播放器</small><strong>3 段视频</strong><span>节庆叙事、实际操作及开场对照 ↗</span></a>
+        <a href="#/data/community"><small>美国 Facebook Group · 成员快照</small><strong>${esc(metric("group-members").display)}</strong><span>查看社群规模与参与表现 ↗</span></a>
+        <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>查看海外 B2B 社媒增长成果 ↗</span></a>
+        <a href="#/case/creative/video-projects"><small>品牌故事与产品演示</small><strong>长片 + 短视频</strong><span>节庆故事、产品使用与视频开场 ↗</span></a>
       </section>
       <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">重点案例与实际工作物</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
@@ -369,7 +369,7 @@
       )
       .join(
         "",
-      )}</nav>${selected === "social" ? metaSummary() : selected === "search" ? shareChart() : ""}<div class="data-kpis">${rows.map(metricCard).join("")}</div><details><summary>查看完整指标列表</summary><div class="table-scroll"><table><thead><tr><th>指标</th><th>数值</th><th>统计窗口</th><th>数据说明</th></tr></thead><tbody>${rows.map((m) => `<tr><th scope="row">${esc(m.label)}</th><td>${esc(m.display)}</td><td>${esc(m.window)}</td><td>${P.statuses[m.status]}</td></tr>`).join("")}</tbody></table></div></details></div>`;
+      )}</nav>${selected === "social" ? metaSummary() : selected === "search" ? shareChart() : ""}<div class="data-kpis">${rows.map(metricCard).join("")}</div><details><summary>查看完整指标列表</summary><div class="table-scroll"><table><thead><tr><th>指标</th><th>数值</th><th>统计窗口</th><th>数据说明</th></tr></thead><tbody>${rows.map((m) => `<tr><th scope="row">${esc(m.label)}</th><td>${esc(m.display)}</td><td>${esc(readerWindow(m))}</td><td>${P.statuses[m.status]}</td></tr>`).join("")}</tbody></table></div></details></div>`;
   }
   function simple(page) {
     if (page === "experience")
@@ -480,13 +480,17 @@
       $("#evidence-content").innerHTML =
         `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p>${badge(m.status)}<dl>${[
           ["平台", m.platform],
-          ["统计时间", m.window],
+          ["统计时间", readerWindow(m)],
           ["指标定义", m.definition],
-          ["数据来源", m.source],
-          ["说明", m.limits],
         ]
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
-          .join("")}</dl>${link(m.caseId, "查看关联案例")}`;
+          .join("")}</dl><details class="evidence-method"><summary>查看数据依据与统计说明</summary><dl>${[
+          ["原始记录", m.source],
+          ["原始时间字段", m.window],
+          ["适用范围", m.limits],
+        ]
+          .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
+          .join("")}</dl></details>${link(m.caseId, "查看对应项目")}`;
       open("evidence-dialog", t);
     }
     if (t.dataset.image) {
