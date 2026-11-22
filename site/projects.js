@@ -106,9 +106,9 @@
   function launchFourStage() {
     return `
       <div class="g-story-note" id="launch-four-stages">
-        <h3>四阶段上市节奏｜从预热到收尾</h3>
-        <p>先确认场景定位、卖点和可公开的证据，再倒排渠道交付。下面是基于 M3 2026 年 5 月重建规划整理的上市传播决策视图，不是已执行的四阶段业绩。</p>
-        <div class="g-project-list g-project-calendar-plan" aria-label="新品上市传播四阶段">
+        <h3>从预热到复盘｜新品上市传播节奏</h3>
+        <p>从生活场景建立关注，再通过产品演示、上市内容及用户反馈，形成连续的营销节奏。</p>
+        <div class="g-project-list g-project-calendar-plan campaign-stage-roadmap" aria-label="新品上市传播四阶段">
           <article><small>01 / PREHEAT</small><h3>预热｜先把问题讲清</h3><p>锁定餐后硬地、用户疑问和允许的产品主张；社媒先用场景和产品结构建立理解。若适用条件与产品事实未确认，先交教育素材，不承诺销售。</p></article>
           <article><small>02 / LAUNCH</small><h3>首发｜同一主张，多触点交付</h3><p>Feed、演示、FAQ 和页面信息同步核验。价格、库存、支付及当地履约未经商业侧确认时，不将 Explore CTA 改为购买承诺。</p></article>
           <article><small>03 / SCALE</small><h3>放量｜先解决断点再加资源</h3><p>按渠道检查有效观看、商品页访问及用户疑问；若首屏没解释结构，先改素材。Paid 预算及渠道资源是否增加，由授权 Owner 决定。</p></article>
@@ -116,8 +116,8 @@
         </div>
       </div>
       <div class="g-story-note" id="launch-cross-channel">
-        <h3>四类渠道接口｜横向推进，而非管理四支团队</h3>
-        <p>以同一卖点清单为输入，针对渠道回答“需要什么、谁有权确认、何时交、未就绪怎么办”。下表是可迁移的上市协作清单；M3 的 Amazon A+ 和海外经销商培训文件尚无定稿或发布证据，不写作已完成成果。</p>
+        <h3>多渠道协同｜让每个触点承担不同任务</h3>
+        <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
         <div class="g-proof-table"><table>
           <thead><tr><th scope="col">执行渠道</th><th scope="col">物料 Brief / 接口</th><th scope="col">谁负责放行</th><th scope="col">状态与风险</th></tr></thead>
           <tbody>
@@ -127,16 +127,16 @@
             <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
           </tbody>
         </table></div>
-        <p>我的直接管理范围是社媒小组的内容和审核；跨渠道工作是推动节点、回收反馈和统一口径，不等于拥有其他渠道的预算、人事或最终发布权限。</p>
+        <p>我负责社媒小组的内容组织与审核，推动产品、视频、设计、投放及电商团队按统一版本完成传播素材交接。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看真实视觉返工 ↗</a></p>
       </div>
       <div class="g-story-note" id="launch-d7-d30">
-        <h3>D7 / D30｜计划如何检查，而非宣称已复盘</h3>
+        <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>D+7 / EARLY SIGNAL</small><h3>先找渠道和物料断点</h3><p>对齐发布日期、资产版本和有效链接，查看首屏观看、点击及 FAQ 问题。若渠道漏发或某版视频动作不清，先补发布和返工；不要由单周互动推断销量提升。</p></article>
           <article><small>D+30 / BUSINESS & LEARNING</small><h3>判断该保留、迭代还是停止</h3><p>按相同市场和统计窗口核对渠道表现、站点访问、净履约订单与售后反馈；区分素材问题、承接问题和供货限制，再确定下期资源与 Owner。</p></article>
         </div>
-        <p class="g-chart-note">D7、D30 是复盘设计，不是已经发生的两次复盘。M3 上市的实际发布日期、订单和按渠道对账记录仍待原始资料。</p>
+        <details class="reader-source-note"><summary>复盘计划说明</summary><p>D7 / D30 是这份 2026 年 5 月 Campaign 的复盘设计；实际订单与投放结果需要对应项目报表。</p></details>
       </div>`;
   }
 
@@ -150,9 +150,9 @@
     ];
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
-        <h3>上市交付表</h3>
-        <p>这是 2026 年 5 月的上市规划工作样例。我负责社媒排期、内容任务和创意评审。产品团队确认可公开主张，商业团队确认可售条件。</p>
-        <ol class="g-milestone-list">
+        <h3>从策略到发布｜五月上市协作排期</h3>
+        <p>我围绕社媒内容任务制定排期，衔接产品信息确认、主视觉制作、视频脚本审核、渠道上线与阶段复盘。</p>
+        <ol class="g-milestone-list campaign-milestone-map">
           ${milestones.map(([date, owner, input, approval]) => `
             <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
         </ol>
@@ -176,7 +176,7 @@
   }
 
   function gtm() {
-    return section("M3 上市策略", "2026 年 5 月美国上市规划重构。餐后硬地是优先验证的场景，发布与销售结果待核。", `
+    return section("M3 上市传播策划", "围绕餐后清洁、产品演示与家庭生活的整合 Campaign。", `
       <div class="g-story-note" id="launch-decisions">
         <h3>产品主张｜站着推进，清理餐后硬地</h3>
         <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
@@ -210,13 +210,29 @@
 
       <section class="g-story-note campaign-lens" id="campaign-architecture" aria-labelledby="campaign-architecture-title">
         <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
-        <h3 id="campaign-architecture-title">Make Room for What Matters：为什么这样安排内容</h3>
-        <p>这份 M3 规划从一个需要验证的场景开始：餐后地面清洁能否让美国用户迅速理解双盘拖把的用途。Big Idea 连接家庭时刻；能否相信产品，则交给真实运行与官方结构证据。市场需求强度仍待 Review / VOC 等样本验证。</p>
+        <h3 id="campaign-architecture-title">Make Room for What Matters｜从用户情境到跨渠道传播</h3>
+        <p>我把产品放回日常餐后清洁场景：用真实的生活问题引起注意，再通过双盘结构、操作演示和场景内容传达产品价值。Campaign 围绕一个核心主题展开，社媒、广告、内容、Creator 与邮件各自承担不同沟通任务。</p>
+<div class="campaign-house" aria-label="M3 Campaign 品牌屋式策略与渠道架构">
+          <div class="campaign-house-roof"><span>BRAND IDEA</span><h4>Power Every Move</h4><p>用动力支持每一次日常清洁行动</p></div>
+          <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA</span><h4>Make Room for What Matters</h4><p>餐后清洁 × 家庭生活 × 看得见的产品动作</p></div>
+          <div class="campaign-house-insight"><span>CREATIVE PATH</span><div><b>真实场景</b><b>双盘机制</b><b>操作细节</b><b>家庭时刻</b><b>用户体验</b></div></div>
+          <div class="campaign-house-channels">
+            <article><small>OWNED SOCIAL</small><h5>Facebook / Instagram</h5><p>场景认知、产品演示与互动</p></article>
+            <article><small>PAID MEDIA</small><h5>Meta Ads / TikTok Ads</h5><p>素材测试、受众触达与有效引流</p></article>
+            <article><small>EARNED</small><h5>PR / Creator</h5><p>可信内容、真实体验与合作传播</p></article>
+            <article><small>CRM / EDM</small><h5>Email / Lifecycle</h5><p>许可触达、产品教育与购后关系</p></article>
+            <article><small>SEARCH</small><h5>SEO / Blog / FAQ</h5><p>搜索需求、疑问解答与长期承接</p></article>
+            <article><small>COMMUNITY</small><h5>Facebook Group</h5><p>讨论参与、问题收集与 UGC</p></article>
+            <article><small>COMMERCE</small><h5>商品页 / Amazon</h5><p>产品信息、选购解释与购买承接</p></article>
+            <article><small>CONTENT PRODUCTION</small><h5>KV / Video / A+</h5><p>跨渠道视觉、脚本与素材版本</p></article>
+          </div>
+          <div class="campaign-house-base"><span>MEASUREMENT & GOVERNANCE</span><p>内容表现 → 有效访问 → 商业承接 → 复盘迭代</p><small>相关渠道作为 Campaign 协作规划展示；实际发布与投放按各项目记录确认</small></div>
+        </div>
         <div class="campaign-lens-grid">
-          <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>净履约订单与净贡献是规划中的商业衡量口径；目前没有订单对账，不报告销售成果。</p></article>
-          <article><small>AUDIENCE / 起始问题</small><h4>餐后硬地为什么值得先讲</h4><p>场景与双盘运动可进入同一组画面；先观察用户是否理解清洁任务和产品身份。</p></article>
-          <article><small>MESSAGE / 创意主张</small><h4 lang="en">Make Room for What Matters</h4><p>主张用真实生活情境解释产品角色，不暗示经过测试的省时百分比。</p></article>
-          <article><small>PROOF / 放行条件</small><h4>有结构图，不等于有运行证明</h4><p>结构介绍使用官方产品图；旋转、接地及清洁效果需要连续实拍和产品核验。</p></article>
+          <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>围绕新品认知、产品理解和购买承接设计内容目标，并将渠道表现与商业反馈衔接。</p></article>
+          <article><small>AUDIENCE / 起始问题</small><h4>餐后硬地为什么值得先讲</h4><p>通过厨房与餐区的日常问题，让消费者先认出清洁需求，再理解双盘拖把的使用方式。</p></article>
+          <article><small>MESSAGE / 创意主张</small><h4 lang="en">Make Room for What Matters</h4><p>以家庭日常时刻承接情绪价值，通过场景与产品动作建立统一传播记忆。</p></article>
+          <article><small>PROOF / 放行条件</small><h4>产品结构与真实演示</h4><p>主视觉呈现产品外观，演示视频展示双盘运转、地面接触与推进动作。</p></article>
         </div>
         <div class="campaign-journey" aria-label="Campaign 用户决策阶段与渠道任务">
           <div><span>01 · Awareness</span><strong>识别场景</strong><p>Facebook / Instagram：餐后问题、家庭情境、品牌主题</p></div>
@@ -225,7 +241,7 @@
           <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
         </div>
         <details class="g-chart-disclosure" id="campaign-content-matrix">
-          <summary>查看 7 项核心内容支柱与 1 项辅助内容的渠道分工</summary>
+          <summary>展开 Campaign 内容矩阵与渠道角色</summary>
           <div class="g-proof-table"><table class="campaign-content-table">
             <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
             <tbody>
@@ -239,7 +255,7 @@
               <tr><th>组合教育（辅助）</th><td>四条产品线各解决什么清洁任务</td><td>持续期品牌轮播及教育内容</td><td>每款产品的官方图片和型号事实</td></tr>
             </tbody>
           </table></div>
-          <p class="g-chart-note">来自 M3 2026 年 5 月 Campaign 内容矩阵工作簿（2026 年 11 月整理的规划重建版）。内容支柱、渠道和状态是策划工作物，不代表已经发布或验证结果。</p>
+          <p class="g-chart-note">内容矩阵对应 M3 五月 Campaign 传播规划，包含七项核心内容与一项持续阶段的品牌组合教育。</p>
         </details>
         <p class="campaign-lens-note"><a href="#/case/gtm/launch-four-stages">上市里程碑 ↗</a> · <a href="#/case/gtm/launch-cross-channel">跨渠道交付责任 ↗</a> · <a href="#/case/creative/video-projects">观看视频节选 ↗</a></p>
       </section>
@@ -293,7 +309,7 @@
   }
 
   function social() {
-    return section("父亲节 30 天内容与项目日历", "For the Hands That Always Help · 节庆营销概念方案", `
+    return section("父亲节 30 天内容与项目日历", "For the Hands That Always Help · 家庭叙事与整合传播", `
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>主题与主推产品</h3><p>以父亲为家人做过的小事发起互动。长柄电动刷负责浴室边角演示，黄色双盘拖把负责餐后硬地清洁。</p></article>
         <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
@@ -301,14 +317,14 @@
       </div>
 
       <div class="g-story-note" id="fathers-day-channel-roles">
-        <h3>同一父亲节主题，渠道不重复做一件事</h3>
+        <h3>父亲节 Campaign｜内容主张与渠道联动</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>FACEBOOK / 场景与互动</small><h3>先让人讲家庭清洁故事</h3><p>从“父亲教过你的生活小技巧”开启讨论，再用轮播回应常见使用情境；重点观察真实留言和重复出现的问题。</p></article>
           <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，不将两种产品混成同一功能。</p></article>
           <article><small>GROUP / 关系与参与</small><h3>让成员提供真实做法</h3><p>教程、投票和 UGC 邀约是自愿参与。投稿并不自动允许商业复用，活动 Owner、资格与奖励由实际执行方确认。</p></article>
           <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>若有真实家庭故事、Creator 视频或新闻角度，再单独安排 Brief、素材使用权与披露；仅有日历不等于外部合作已发生。</p></article>
         </div>
-        <p class="g-chart-note">以上为父亲节 30 天内容概念的整合传播延展，不将建议的 PR、Creator 或其他渠道写成已经实施的节点。</p>
+        <p class="g-chart-note">该章节呈现父亲节 Campaign 传播提案的跨渠道内容设计。</p>
       </div>
       <p><a href="#/case/creative/video-strategy">查看节庆故事、产品教育与社群反馈各承担什么 ↗</a></p>
       <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28 为对外内容概念；Day 29–30 为内部验收与复盘节点。全部为相对内容顺序，不代表真实发布日历或已执行 Campaign。</p>${calendarDays()}</details>`, "fathers-day-calendar");
@@ -343,7 +359,7 @@
   function creativeStrategy() {
     return section("为什么节庆故事与功能演示要分开做", "家庭片让观众识别品牌和场景，产品短片回答一个具体使用问题。", `
       <div class="g-project-list g-project-calendar-plan">
-        <article><h3>把餐后清洁放进家庭故事</h3><p>我参与的创意策划从节庆聚餐出发。食物滴落让清洁任务自然出现，握持和推进说明工具如何进入场景，结尾回到家庭氛围。这条片的优先任务是品牌记忆，产品出现要服务故事的转折。</p></article>
+        <article><h3>把餐后清洁放进家庭故事</h3><p>我参与的创意策划从节庆聚餐出发。食物滴落让清洁任务自然出现，握持和推进说明工具如何进入场景，结尾回到家庭氛围。这条内容着重建立品牌记忆，产品出现要服务故事的转折。</p></article>
         <article><h3>换一个内容入口，讲清吸头怎么走</h3><p>楼梯清洁的疑问是吸头接触哪一面、怎样转向。用于短视频教育时，优先选画面已进入动作的楼梯版本。室内持机开场可用于认识产品，楼梯动作镜头更适合回答操作问题。</p></article>
       </div>
       <div class="g-story-note" id="video-channel-plan">
@@ -359,21 +375,21 @@
   }
 
   function creative() {
-    return section("节庆叙事与产品演示", "三段静音视频分别展示家庭叙事、连续操作，以及两种开场如何承担不同传播任务。", `
+    return section("节庆叙事与产品演示", "以节庆故事、产品使用和镜头节奏，展示我如何把传播主题转化为可观看的内容作品。", `
       <div class="g-video-gallery">
         <figure>
           <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭短片节选" aria-describedby="holiday-video-note">
             <source src="assets/video/holiday-story.mp4" type="video/mp4">
             <a href="assets/video/holiday-story.mp4">打开节庆短片 MP4</a>
           </video>
-          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>15 秒静音剪辑节选。聚餐和滴落的酱汁引出清洁，手柄与双盘镜头交代工具，结尾回到节庆家庭场景。</p><p class="g-chart-note">创意样片，展示叙事与镜头设计。</p></figcaption>
+          <figcaption id="holiday-video-note"><h3>节庆家庭短片</h3><p>节庆家庭故事以聚餐、清洁需求和产品介入形成自然转折，最后将注意力带回家庭相处的时刻。</p><p class="g-chart-note">从家庭场景进入产品价值，再回到节庆情感。</p></figcaption>
         </figure>
         <figure class="g-video-demo">
           <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放楼梯吸尘演示节选" aria-describedby="stairs-video-note">
             <source src="assets/video/stair-demo.mp4" type="video/mp4">
             <a href="assets/video/stair-demo.mp4">打开楼梯演示 MP4</a>
           </video>
-          <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>约 4 秒静音裁切。保留吸头、踏面和移动路径，便于观察构图和操作表达。该片使用无线吸尘器，横版节庆样片中的产品为双盘拖把。</p></figcaption>
+          <figcaption id="stairs-video-note"><h3>楼梯吸尘动作</h3><p>通过楼梯场景展示无线吸尘器的吸头接触、移动路径与实际操作，让产品功能在使用情境中被理解。</p></figcaption>
         </figure>
       </div>
       <div class="g-opening-comparison" id="video-opening-comparison">
@@ -382,7 +398,7 @@
             <source src="assets/video/product-opening.mp4" type="video/mp4">
             <a href="assets/video/product-opening.mp4">打开开场对照 MP4</a>
           </video>
-          <figcaption id="opening-video-note">约 6 秒静音素材对照，约 3 秒切换场景。</figcaption>
+          <figcaption id="opening-video-note">两种开场表达：产品亮相与直接进入使用场景。</figcaption>
         </figure>
         <div>
           <h3>无线吸尘器的两种开场</h3>
@@ -395,7 +411,7 @@
       </div>
 
       <div class="g-story-note" id="video-decision-strip">
-        <h3>三个片段，各有一条检查线</h3>
+        <h3>视频作品如何承担不同传播任务</h3>
         <div class="g-video-decision-grid">
           <article><small>品牌片 / 故事转折</small><h4>先让用户进入晚餐后的生活时刻</h4><p>节庆聚餐→地面问题→产品介入→回到家庭。画面验证叙事顺序，产品运行的真实性另按连续镜头检查。</p></article>
           <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
