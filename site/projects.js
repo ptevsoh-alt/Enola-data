@@ -342,33 +342,56 @@
       ${launchDelivery()}
       ${englishBrief()}
       <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
-      <section class="g-module g-project" id="market-adaptation" aria-labelledby="market-adaptation-heading">
-        <header><h2 id="market-adaptation-heading">M3 美英本地化工作样例</h2><p>沿用美国上市规划的产品与传播主线，另做两地可用的文案和素材适配。以下样例来自 R12 创意指南和双市场文案表。</p></header>
-        <div class="g-project-list">
-          <article><small>共享主视觉</small><h3 lang="en">From grip to floor.</h3><p>整机亮相用同一产品原图与版式。进入餐后场景时，两地沿用 <span lang="en">Dinner’s done. Floor’s next.</span>，把焦点放在日常清洁。</p></article>
+      <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
+        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">同一个传播主张，两种当地语言表达</h2><p>M3 的产品结构与核心价值保持一致，面向美国、英国市场调整 Story 提问、拼写习惯及场景用语。样例对应 R12 创意指南与双市场文案表。</p></header>
+        <div class="v-localization-common"><small>ONE PRODUCT · ONE CORE IDEA</small><h3 lang="en">From grip to floor.</h3><p lang="en">Dinner’s done. Floor’s next.</p><span>共享产品原图、场景主题与视觉识别</span></div>
+        <div class="v-localization-compare" aria-label="美国和英国市场本地化英文文案并排对照">
+          <article lang="en-US" class="v-locale-panel is-us">
+            <header><span>US / EN-US</span><b>United States · 美国</b></header>
+            <div class="v-locale-copy"><small>STORY / INTERACTION</small><h3>Kitchen or <mark>entryway</mark>?</h3><p>After-dinner <mark>cleanup</mark></p><p><mark>Mom’s favorite</mark> moments</p></div>
+            <footer><strong>文案切入</strong><span>以 entryway、cleanup 和美式拼写对齐当地受众</span></footer>
+          </article>
+          <article lang="en-GB" class="v-locale-panel is-uk">
+            <header><span>UK / EN-GB</span><b>United Kingdom · 英国</b></header>
+            <div class="v-locale-copy"><small>STORY / INTERACTION</small><h3>Kitchen or <mark>hallway</mark>?</h3><p>After-dinner <mark>clean-up</mark></p><p><mark>Mum’s favourite</mark> moments</p></div>
+            <footer><strong>文案切入</strong><span>以 hallway、clean-up 和英式拼写减少理解偏差</span></footer>
+          </article>
         </div>
-        <div class="g-project-list g-project-calendar-plan" aria-label="Story 投票美英对照">
-          <article><small>美国 · en-US</small><h3 lang="en-US">Kitchen or entryway?</h3><p lang="en-US">After-dinner cleanup · Mom’s favorite moments</p></article>
-          <article><small>英国 · en-GB</small><h3 lang="en-GB">Kitchen or hallway?</h3><p lang="en-GB">After-dinner clean-up · Mum’s favourite moments</p></article>
+        <div class="v-localization-decisions" aria-label="本地化发布检查重点">
+          <div><span>01 / 共享不变</span><strong>产品真值与主视觉</strong><p>同一双盘结构、品牌主张和核心演示镜头</p></div>
+          <div><span>02 / 本地调整</span><strong>语境、用词与节日</strong><p>根据当地语言及市场节奏重新组织文案</p></div>
+          <div><span>03 / 各自验证</span><strong>商品信息与内容反馈</strong><p>本地 SKU、页面、履约和市场内创意表现分别检查</p></div>
         </div>
-        <p>两地分别核对节日档期、页面与供货。美国和英国各自比较「餐后场景」与「产品结构」开场；市场内固定正文、受众、版位和落地页，再比较当地数据。</p>
-        <div class="g-project-list g-project-calendar-plan">
-          <article><h3>产品图核对可见结构</h3><p>用原图核对双圆盘、握把与侧置电池安装位。性能参数、适用地面与配件兼容性由产品团队按当地 SKU、说明书与测试条件签核。</p></article>
-          <article><h3>演示内容兼顾卖点与操作真实</h3><p>脚本以双盘结构近景进入连续操作镜头，让握持、接触与移动方向被清楚看见。创作者内容在演示前确认产品事实、画面表达与素材使用范围。</p></article>
-        </div>
-        <p class="g-chart-note">本地化工作拆分为每个市场 25 条文案、17 份共享及分区静态文件、6 组视频与创作者脚本，按市场语言和传播场景组织交付。</p>
+        <p class="v-localization-foot">规划工作物按美国 / 英国分别组织文案与素材：每个市场 25 条文案，并关联共享及分区静态、视频与 Creator 脚本。产品事实与可售条件仍由对应职能确认。</p>
       </section>
 
-      <details class="g-chart-disclosure" id="campaign-mechanism-mapping"><summary>展开五种创意方向与所需证据</summary>
-      <div class="g-project-list g-project-calendar-plan">
-        <article><small>MECHANISM 01 / PAIN-POINT EMERGENCE</small><h3>The After-Dinner Reset</h3><p>主机制：问题显化。用餐后地面黏污作为具体任务入口；辅助机制：连续过程证明。后续必须展示真实产品操作和相同条件的清洁过程，不能用夸张污渍或单次画面推导普遍性能。</p></article>
-        <article><small>MECHANISM 02 / MECHANISM REVEAL</small><h3>See the Motion</h3><p>主机制：机制揭示。通过真实双头运行、接地和移动路径解释产品如何工作；辅助机制：微距细节证明。静态 KV、生成画面或渲染不能代替真实运行视频。</p></article>
-        <article><small>MECHANISM 03 / ROLE-VALUE TRANSFER</small><h3>Make Room for What Matters</h3><p>主机制：关系价值转移。把产品动作放进家庭共同生活的情境；辅助机制：人物动作叙事。情绪收束不等于量化省时承诺，人物、音乐和场景素材仍需授权。</p></article>
-        <article><small>MECHANISM 04 / MICRO-DETAIL PROOF</small><h3>A Closer Look at M3</h3><p>主机制：细节证明。通过整机、双头底座、手柄控制区和电池安装位置降低理解成本；每项功能说明必须对应官方源图、说明书或产品负责人确认。</p></article>
-        <article><small>MECHANISM 05 / USER-EXPERIENCE PROOF</small><h3>Real Home, Real Reset</h3><p>主机制：真实体验证明。Creator 内容补充家庭场景中的实际操作；受众适配、披露、肖像、内容版权、剪辑权和 Paid Usage Rights 分别确认。</p></article>
-      </div>
-      <p class="g-chart-note">五种创意方向分别承担场景识别、产品机制、家庭情绪、结构细节与体验说明；每个画面的信息任务保持清晰。</p>
-      </details>
+      <section class="v-creative-directions" id="campaign-mechanism-mapping" aria-labelledby="v-creative-heading">
+        <header><div><span class="v-section-kicker">CREATIVE TERRITORIES</span><h2 id="v-creative-heading">同一个 Big Idea，五种不同的画面切入</h2></div><p>创意不是平行堆卖点，而是从“场景—机制—情绪—细节—体验”五个角度解释同一产品价值。</p></header>
+        <div class="v-creative-gallery" aria-label="五种创意机制与视觉方向">
+          <article class="v-creative-card">
+            <div class="v-creative-art is-scene"><span>01 / PAIN POINT</span><b>AFTER<br>DINNER</b><small>生活任务先出现</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-text"><h3>The After-Dinner Reset</h3><p>以餐后地面问题引入使用任务，让产品操作自然发生。</p><span><b>画面任务</b> 真实场景与连续操作</span></div>
+          </article>
+          <article class="v-creative-card">
+            <div class="v-creative-art is-motion"><span>02 / MECHANISM</span><b>SEE THE<br>MOTION</b><small>双盘动作被看见</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-text"><h3>See the Motion</h3><p>通过运转、接地与移动路径解释清洁工具如何工作。</p><span><b>画面任务</b> 真实运行和结构细节</span></div>
+          </article>
+          <article class="v-creative-card">
+            <div class="v-creative-art is-relationship"><span>03 / EMOTION</span><b>WHAT<br>MATTERS</b><small>清洁与家庭生活相连</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-text"><h3>Make Room for What Matters</h3><p>将日常清洁动作放进人物关系中，用情绪承接品牌价值。</p><span><b>画面任务</b> 人物、生活与产品</span></div>
+          </article>
+          <article class="v-creative-card">
+            <div class="v-creative-art is-detail"><span>04 / PRODUCT DETAIL</span><b>A CLOSER<br>LOOK</b><small>让结构一目了然</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-text"><h3>A Closer Look at M3</h3><p>以双盘底座、手柄和电池位置降低产品理解成本。</p><span><b>画面任务</b> 官方结构图与已核准信息</span></div>
+          </article>
+          <article class="v-creative-card">
+            <div class="v-creative-art is-home"><span>05 / REAL EXPERIENCE</span><b>REAL<br>HOME</b><small>回到实际使用环境</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-text"><h3>Real Home, Real Reset</h3><p>通过 Creator 的家居体验视角交代使用方式和场景。</p><span><b>画面任务</b> 使用过程与授权素材</span></div>
+          </article>
+        </div>
+        <p class="v-creative-foot">创意方向用于指导 Brief、KV 和视频镜头。涉及运转、性能和实际体验的证明，以真实素材及已批准的产品事实为依据。</p>
+      </section>
+
 
 `, "product-portfolio");
   }
