@@ -268,12 +268,23 @@
       chapter: focus.chapter,
       artifact: focus.artifact,
     };
-    return `<section class="g-case-overview" aria-label="项目速览">
-      <div><h2>我的工作范围</h2><p>${esc(item.role)}</p></div>
-      <div><h2>关键策略判断</h2><p>${esc(item.decision)}</p></div>
-      <div><h2>项目交付与成果</h2><p>${esc(item.output)}</p></div>
-      <a href="#/case/${c.id}/${item.chapter}">${esc(item.artifact)} <span aria-hidden="true">↗</span></a>
-      ${c.id === "social" ? '<a href="#/data/social">查看社媒表现 ↗</a>' : ""}
+    const image = item.image
+      ? `<figure class="case-story-visual"><img src="assets/projects/${esc(item.image)}.${esc(item.imageExt || "webp")}" alt="${esc(item.alt || item.title || c.title)}" loading="lazy" decoding="async"><figcaption>${esc(c.category)}</figcaption></figure>`
+      : `<div class="case-story-identity" aria-hidden="true"><span>CASE</span><strong>${esc(c.no)}</strong><small>${esc(c.subtitle)}</small></div>`;
+    const firstResult = c.metrics.map(metric).find(hasPublishableMetric);
+    return `<section class="g-case-overview case-story-lead case-story-${esc(c.id)}" aria-label="项目速览">
+      <div class="case-story-primary">
+        <div class="case-story-copy"><small>PROJECT VIEW / CASE ${esc(c.no)}</small><h2>我的工作范围</h2><p>${esc(item.role)}</p>
+          <span class="case-story-category">${esc(c.category)}</span></div>
+        ${image}
+      </div>
+      <div class="case-story-judgement"><span>01 / WHY THIS DIRECTION</span><h2>关键策略判断</h2><p>${esc(item.decision)}</p></div>
+      <div class="case-story-deliverables"><span>02 / WHAT WAS BUILT</span><h2>项目交付与成果</h2><p>${esc(item.output)}</p></div>
+      <div class="case-story-foot">
+        <a href="#/case/${c.id}/${item.chapter}">${esc(item.artifact)} <span aria-hidden="true">↗</span></a>
+        ${firstResult ? `<div class="case-story-evidence"><strong>${esc(firstResult.display)}</strong><span>${esc(firstResult.label)}</span></div>` : `<small>PROJECT / ${esc(c.subtitle)}</small>`}
+        ${c.id === "social" ? '<a class="case-story-secondary" href="#/data/social">社媒结果 ↗</a>' : ""}
+      </div>
     </section>`;
   }
   function listPage() {
