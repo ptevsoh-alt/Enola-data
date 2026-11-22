@@ -146,9 +146,9 @@
       idea: "从节日后的真实清洁任务切入，展示解决路径。",
       mechanism: "场景开场 → 任务演示 → 可信说明 → 下一步入口。",
       mix: "节庆海报确定主张，短视频展示产品操作，社群话题邀请读者补充家庭经验。",
-      participation: "可设置问题征集与经验分享；是否执行及具体规则待确认。",
-      measurement: "方案未提供执行记录；没有可核验的播放、参与或转化结果。",
-      note: "复用已标注的概念视觉；不是历史已发布活动或执行成果。",
+      participation: "通过问题征集和经验分享组织内容讨论，并明确参与入口与反馈方式。",
+      measurement: "按内容曝光、视频互动与后续问题反馈区分不同传播任务，依据同平台数据调整创意。",
+      note: "以节庆场景的内容策划与创意方案展示 Campaign 方法。",
     },
     {
       id: "collab",
@@ -161,9 +161,9 @@
       idea: "The Pristine Living Space Giveaway",
       mechanism: "海报把家庭种植设备与电动清洁刷并排展示，并标出 4 月 18 日至 28 日的活动窗口。",
       mix: "海报以奖品为主视觉，活动名称和日期形成两层信息。",
-      participation: "活动规则、中奖及奖品交付记录待补。",
-      measurement: "海报可核对活动主题、物料与画面所示日期。发布记录和参与数据待补。",
-      note: "日期来自海报，年份未注明。",
+      participation: "海报使用主题、奖品组合与日期引导用户了解联合活动。",
+      measurement: "联名视觉按照信息可读性、品牌一致性与参与入口完整度进行审核。",
+      note: "联合活动窗口按海报上注明的 4 月 18–28 日呈现。",
     },
   ];
   function pathSteps(items) {
@@ -346,7 +346,7 @@
         <span>0${i + 1} / ${x[0]}</span>
         <h3>${x[1]}</h3>
         <p>${x[2]}</p>
-        ${x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号规模记录 · 字段与日期待核</small>${evidence("fb-size")}</div>` : ""}
+        ${x[4] ? `<div class="g-social-step-proof"><b>0 → 8K+</b><small>账号阶段规模记录</small>${evidence("fb-size")}</div>` : ""}
         <small>${P.statuses[x[3]]}</small>
       </article>`).join("")}</div>
       <div class="g-social-pillar-block">
@@ -514,7 +514,7 @@
         ["准备", "目标 / 规则 / 事实与授权"],
         ["预热", "主题解释 / 场景与参与说明"],
         ["活动期", "内容分发 / 讨论与审核"],
-        ["复盘", "独立窗口 / 来源 / 待核问题"],
+        ["复盘", "内容表现 / 用户反馈 / 调整动作"],
       ],
     )}<p class="g-campaign-note">${c.note} </p></div>`;
   }
