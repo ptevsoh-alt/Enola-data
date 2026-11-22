@@ -277,6 +277,15 @@
       chapter: focus.chapter,
       artifact: focus.artifact,
     };
+    const visualStoryboard = {
+      social: { tag:"SOCIAL / CONTENT ENGINE", headline:"有节奏的内容，才有可复盘的增长", steps:[["PLAN","季度主题与渠道分工"],["MAKE","月历、创意与团队审核"],["LEARN","内容表现与社群反馈"]], end:"Content → Community → Learning" },
+      community: { tag:"COMMUNITY / PARTICIPATION", headline:"把围观变成真实讨论", steps:[["JOIN","问题与规则入口"],["SHARE","教程、经验与互动"],["RETURN","反馈整理和后续答疑"]], end:"Conversation → UGC → Feedback" },
+      operations: { tag:"TEAM / DELIVERY SYSTEM", headline:"从 Brief 到发布，每一步都有负责人", steps:[["BRIEF","明确主题与制作标准"],["REVIEW","产品事实和画面验收"],["DELIVER","版本交接与复盘"]], end:"Owner → Review → Handoff" },
+      seo: { tag:"SEARCH / CONTENT JOURNEY", headline:"从搜索问题，找到正确答案", steps:[["QUERY","识别高意图问题"],["PILLAR","主指南连接专题"],["ACTION","FAQ 与商品信息承接"]], end:"Search → Answer → Next step" },
+      amazon: { tag:"COMMERCE / OPERATING LOOP", headline:"先看问题发生在哪个经营环节", steps:[["TRAFFIC","关键词与广告流量"],["PAGE","Listing 与价值证明"],["DELIVERY","库存、售后与复盘"]], end:"Discover → Decide → Deliver" },
+      crm: { tag:"LIFECYCLE / MESSAGE PATH", headline:"在正确的用户状态，发送正确的信息", steps:[["STATE","区分浏览、加购与购买"],["RULE","许可、频次与排除"],["HANDOFF","内容、售后与下一步"]], end:"Consent → Relevance → Timing" },
+      creator: { tag:"CREATOR / COLLABORATION", headline:"好内容还需要清楚的交付与授权", steps:[["SELECT","受众与内容适配"],["PROVE","真实演示与脚本审核"],["RIGHTS","版本、用途与复用权限"]], end:"Brief → Review → Usage rights" }
+    }[c.id];
     const image = c.id === "brand"
       ? `<div class="case-story-visual case-story-pair" aria-label="两组节庆 Campaign 创意画面">
           <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看父亲节节庆主题视觉"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="父亲节户外 BBQ 清洁视觉提案" loading="lazy" decoding="async"><span>FATHER'S DAY / VISUAL IDEA</span></a>
@@ -288,6 +297,12 @@
       ? `<figure class="case-story-visual"><img src="assets/projects/holiday-scene-1.webp" alt="节庆视频内容与家庭清洁情景画面" loading="lazy" decoding="async"><figcaption>CAMPAIGN / FULL FILM</figcaption></figure>`
       : item.image
       ? `<figure class="case-story-visual"><img src="assets/projects/${esc(item.image)}.${esc(item.imageExt || "webp")}" alt="${esc(item.alt || item.title || c.title)}" loading="lazy" decoding="async"><figcaption>${esc(c.category)}</figcaption></figure>`
+      : visualStoryboard
+      ? `<div class="case-story-visual case-story-diagram case-story-diagram-${esc(c.id)}" role="img" aria-label="${esc(visualStoryboard.headline)}">
+          <div class="case-diagram-top"><small>${esc(visualStoryboard.tag)}</small><strong>${esc(visualStoryboard.headline)}</strong></div>
+          <div class="case-diagram-steps">${visualStoryboard.steps.map(([label,note],i)=>`<div class="case-diagram-step"><i>0${i+1}</i><b>${esc(label)}</b><span>${esc(note)}</span></div>`).join("")}</div>
+          <div class="case-diagram-end">${esc(visualStoryboard.end)}</div>
+        </div>`
       : `<div class="case-story-identity" aria-hidden="true"><span>CASE</span><strong>${esc(c.no)}</strong><small>${esc(c.subtitle)}</small></div>`;
     const firstResult = c.metrics.map(metric).find(hasPublishableMetric);
     return `<section class="g-case-overview case-story-lead case-story-${esc(c.id)}" aria-label="项目速览">
