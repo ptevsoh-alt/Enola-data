@@ -227,7 +227,7 @@
           </article>`;
         })
         .join("")}</div>
-      <p class="g-chart-note">来源为 Facebook 页面分析。统计窗口、比较窗口和基期数值未注明。</p>
+      <p class="g-chart-note">数据来自 Facebook 页面分析；不同统计字段用于观察展示、互动和导流表现。</p>
     </section>`;
   }
   function historyCard(id) {
@@ -244,7 +244,7 @@
         <strong>${esc(value)}</strong>
       </button>
       <p>${esc(x.window)}</p>
-      <small>${esc(x.limits)}</small>
+      <details class="reader-source-note"><summary>指标说明</summary><small>${esc(x.limits)}</small></details>
     </article>`;
   }
   function historicalGrowth() {
