@@ -380,7 +380,7 @@ const fs = require("fs"),
     assert.ok(section);
     for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明"])
       assert.ok(section.textContent.includes(term), term);
-    assert.ok(section.parentElement.textContent.includes("视觉隐喻不能替代产品性能证据"));
+    assert.ok(section.parentElement.textContent.includes("五种创意方向分别承担场景识别"));
   });
   d.querySelector("[data-image]").click();
   await route("/case/gtm/strategy");
