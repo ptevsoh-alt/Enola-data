@@ -2680,3 +2680,75 @@
 @media(max-width:900px){.expo-workstream{grid-template-columns:repeat(2,minmax(0,1fr))}.expo-flight-grid{grid-template-columns:minmax(0,1fr)}.expo-flight-card h4{min-height:0;max-width:none}.expo-brand-stage{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey{grid-template-columns:repeat(3,minmax(0,1fr));gap:.8rem}.expo-brand-stage-journey>div{border-bottom:0;border-right:1px solid #4c6a57;padding-right:.6rem;grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey span{text-align:left;}}
 @media(max-width:570px){.expo-workstream{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey{grid-template-columns:minmax(0,1fr)}.expo-brand-stage-journey>div{border-right:0;border-bottom:1px solid #4c6a57;padding-bottom:.7rem}.expo-flight-note{display:block}.expo-flight-note span{display:block;margin-top:.3rem}.expo-plan-dimensions{flex-wrap:wrap}}
 @media(prefers-reduced-motion:reduce){.case-story-pair img{transition:none;}}
+
+
+/* Case-study-specific editorial covers: decisions and real work rather than generic case numerals. */
+.case-story-diagram {display:flex;flex-direction:column;justify-content:space-between;gap:clamp(.9rem,2vw,1.5rem);padding:clamp(1.1rem,2.3vw,2rem);background:#e9f0e6;color:#1d352b;}
+.case-diagram-top {display:flex;flex-direction:column;gap:.55rem;}
+.case-diagram-top small {color:#365b4b;font-size:.64rem;letter-spacing:.13em;font-weight:800;}
+.case-diagram-top strong {font-size:clamp(1.15rem,2.05vw,1.75rem);line-height:1.35;max-width:20ch;letter-spacing:-.035em;}
+.case-diagram-steps {display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.38rem;align-items:stretch;}
+.case-diagram-step {display:flex;flex-direction:column;min-width:0;padding:clamp(.55rem,1.1vw,.9rem);background:rgba(255,255,255,.75);border-top:3px solid var(--case-tone,#476954);gap:.35rem;}
+.case-diagram-step i {font-size:.65rem;font-style:normal;color:#59766a;font-weight:750;}
+.case-diagram-step b {font-size:clamp(.65rem,1vw,.83rem);letter-spacing:.035em;}
+.case-diagram-step span {font-size:clamp(.66rem,1vw,.8rem);line-height:1.55;}
+.case-diagram-end {align-self:flex-start;font-size:.67rem;font-weight:750;letter-spacing:.07em;border-top:1px solid currentColor;padding-top:.5rem;}
+.case-story-diagram-social {background:linear-gradient(145deg,#d9eadc,#c0d5c7);}
+.case-story-diagram-community {background:radial-gradient(circle at 70% 20%,#f0ddad,#dce7ca 68%);}
+.case-story-diagram-operations {background:linear-gradient(130deg,#dfe9ca,#c9d8bc);}
+.case-story-diagram-seo {background:linear-gradient(140deg,#d9e9e9,#c7ded9);}
+.case-story-diagram-amazon {background:linear-gradient(140deg,#d5e2e8,#b9d0dd);}
+.case-story-diagram-crm {background:linear-gradient(140deg,#e6e9d2,#d1dcb8);}
+.case-story-diagram-creator {background:linear-gradient(140deg,#ece2d3,#dacdb9);}
+.case-story-diagram-community .case-diagram-step {border-radius:1rem 1rem .1rem .1rem;}
+.case-story-diagram-operations .case-diagram-step {border-top-width:0;border-left:3px solid var(--case-tone);}
+.case-story-diagram-seo .case-diagram-top {border:1px solid #7d9d98;border-radius:1.4rem;padding:.65rem 1rem;}
+@media(max-width:760px){.case-story-diagram {min-height:15rem;}.case-diagram-step b{font-size:.77rem;}}
+@media(max-width:410px){.case-diagram-steps{gap:.25rem;}.case-diagram-step{padding:.45rem .38rem;}.case-diagram-step span{font-size:.66rem;}}
+/* Exhibition identity, physical collateral and participation design. */
+.expo-identity-editorial,.expo-experience-menu {margin:clamp(1.5rem,3.5vw,3rem) 0;min-width:0;}
+.expo-identity-editorial>header,.expo-experience-menu>header {margin-bottom:1.15rem;}
+.expo-identity-editorial>header small,.expo-experience-menu>header small {display:block;font-size:.69rem;font-weight:800;letter-spacing:.1em;color:#375b49;}
+.expo-identity-editorial>header h4,.expo-experience-menu>header h3 {font-size:clamp(1.4rem,2.6vw,2rem);margin:.4rem 0;line-height:1.35;}
+.expo-identity-editorial>header p,.expo-experience-menu>header p {max-width:65ch;font-size:.88rem;line-height:1.8;color:var(--muted);}
+.expo-identity-grid {display:grid;grid-template-columns:1.15fr 1fr 1fr;gap:.7rem;}
+.expo-identity-grid>article {min-width:0;padding:clamp(1rem,1.8vw,1.4rem);border-radius:.3rem;display:flex;flex-direction:column;}
+.expo-identity-poster {background:#17231e;color:#fff;min-height:24rem;justify-content:space-between;position:relative;overflow:hidden;}
+.expo-identity-poster::after {content:"";position:absolute;width:11rem;height:11rem;background:#e8ca31;right:-4rem;bottom:4rem;border-radius:50%;opacity:.92;}
+.expo-identity-poster>* {position:relative;z-index:1;}
+.expo-identity-poster>small,.expo-identity-poster-brand {font-size:.68rem;font-weight:750;letter-spacing:.12em;color:#dfecdf;}
+.expo-identity-poster>strong {font-size:clamp(1.55rem,2.5vw,2.6rem);line-height:1.2;letter-spacing:-.04em;max-width:12ch;}
+.expo-identity-poster>p {font-size:.67rem;letter-spacing:.06em;max-width:18ch;}
+.expo-identity-poster-rule {display:flex;flex-wrap:wrap;gap:.55rem;border-top:1px solid #82948a;padding-top:.65rem;}
+.expo-identity-poster-rule span {font-size:.6rem;font-weight:800;}
+.expo-identity-hierarchy {background:#f0f1e7;border:1px solid #d8dfd4;}
+.expo-identity-hierarchy>small,.expo-identity-collateral>small {font-size:.65rem;font-weight:800;letter-spacing:.1em;color:#526d5a;}
+.expo-identity-hierarchy h4,.expo-identity-collateral h4 {font-size:clamp(1rem,1.5vw,1.3rem);line-height:1.4;margin:.7rem 0 1rem;}
+.expo-identity-hierarchy ol {padding-left:1.2rem;margin:0;display:grid;gap:.9rem;flex:1;}
+.expo-identity-hierarchy li b,.expo-brand-touch b {display:block;font-size:.8rem;}
+.expo-identity-hierarchy li span,.expo-brand-touch span {display:block;font-size:.77rem;line-height:1.65;margin-top:.2rem;}
+.expo-identity-swatches {display:flex;gap:.2rem;margin-top:1rem;flex-wrap:wrap;}
+.expo-identity-swatches span {padding:.6rem .45rem;min-height:2.6rem;flex:1 1 5rem;font-size:.61rem;text-align:center;}
+.expo-identity-swatches .swatch-dark {background:#192820;color:#fff;}
+.expo-identity-swatches .swatch-yellow {background:#e8ca31;color:#17231e;}
+.expo-identity-swatches .swatch-light {background:#fffdf3;color:#17231e;border:1px solid #d3d5c9;}
+.expo-identity-collateral {background:#f5f0e6;border:1px solid #ded8ca;}
+.expo-brand-touch {display:grid;gap:.55rem;flex:1;}
+.expo-brand-touch>div {padding:.7rem .85rem;background:#fff;border-left:3px solid #af9c6d;}
+.expo-identity-collateral>p {font-size:.72rem;line-height:1.65;color:#5e645f;margin:.95rem 0 0;}
+.expo-experience-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem;}
+.expo-experience-card {min-width:0;background:#f4f5ed;border:1px solid #d9e1d5;padding:clamp(.95rem,1.5vw,1.3rem);}
+.expo-experience-card:nth-child(2n) {background:#edf0e8;}
+.expo-experience-icon {display:flex;justify-content:space-between;gap:.5rem;align-items:center;border-bottom:2px solid #749277;padding-bottom:.7rem;font:700 clamp(1.5rem,2.5vw,2.4rem) var(--serif);}
+.expo-experience-icon span {font:750 .6rem var(--sans);letter-spacing:.09em;}
+.expo-experience-card h4 {font-size:clamp(.95rem,1.5vw,1.2rem);margin:.8rem 0 .5rem;}
+.expo-experience-card p {font-size:.79rem;line-height:1.8;min-height:7.5em;}
+.expo-experience-card dl {margin:1rem 0 0;display:grid;gap:.65rem;}
+.expo-experience-card dl>div {border-top:1px solid #ccd6c9;padding-top:.55rem;}
+.expo-experience-card dt {font-size:.68rem;font-weight:800;color:#426451;}
+.expo-experience-card dd {margin:.2rem 0 0;font-size:.77rem;line-height:1.6;}
+.expo-experience-close {background:#183528;color:#fff;display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:1.2rem 1.45rem;margin-top:.7rem;flex-wrap:wrap;}
+.expo-experience-close strong {font-size:.9rem;}
+.expo-experience-close span {font-size:.75rem;line-height:1.6;color:#d1e3d5;}
+@media(max-width:1000px){.expo-identity-grid {grid-template-columns:repeat(2,minmax(0,1fr));}.expo-identity-collateral{grid-column:1/-1;}.expo-experience-grid{grid-template-columns:repeat(2,minmax(0,1fr));}.expo-experience-card p{min-height:0;}}
+@media(max-width:620px){.expo-identity-grid,.expo-experience-grid{grid-template-columns:minmax(0,1fr);}.expo-identity-collateral{grid-column:auto;}.expo-identity-poster{min-height:18rem;}.expo-identity-poster::after{width:9rem;height:9rem;}.expo-experience-card{padding:1rem;}.expo-experience-close{display:block;}.expo-experience-close span{display:block;margin-top:.35rem;}}
