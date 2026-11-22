@@ -676,7 +676,7 @@
     const heading = insight.querySelector("h2");
     heading.textContent = title;
     insight.querySelector("h2 + p").textContent = decision;
-    insight.insertAdjacentHTML("beforeend", `<p class="note">${esc(evidence)}</p>`);
+    insight.insertAdjacentHTML("beforeend", `<details class="reader-source-note"><summary>项目背景与资料说明</summary><p class="note">${esc(evidence)}</p></details>`);
   }
 
   const extras = {
