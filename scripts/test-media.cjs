@@ -37,6 +37,11 @@ for (const [name, label] of clips) {
   const pathname = path.join(root, "assets/video", name);
   const file = fs.readFileSync(pathname);
   assert.ok(file.length > 10000, "empty / truncated video: " + name);
+  // The Drive portfolio source listing and this existing web edition both show 1,744,928 bytes.
+  // File size confirms the expected delivery variant, while local manifest SHA-256 guards changes.
+  if (name === "holiday-story-long.mp4") {
+    assert.equal(file.length, 1744928, "unexpected 82-second web-film edition");
+  }
   const found = boxes(file);
   assert.ok(found.includes("ftyp") && found.includes("moov") && found.includes("mdat"), "missing MP4 media atoms: " + name);
   if (hasFfprobe) {
