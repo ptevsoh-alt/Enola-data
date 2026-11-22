@@ -56,7 +56,7 @@ check("no creator operating records in any public payload", () => {
 });
 check("missing values and unverified comparison windows preserved", () => {
   assert.ok(!p.metrics.some((m) => m.id === "retention"), "Unverified lifecycle outcome is excluded from public data");
-  assert.equal(p.metrics.find((m) => m.id === "fb-viewers").value, null);
+  assert.ok(!p.metrics.some((m) => m.id === "fb-viewers"), "Unavailable Facebook viewers value is not a public KPI");
   p.metrics
     .filter((m) => m.sourceType === "screenshot")
     .forEach((m) => {
