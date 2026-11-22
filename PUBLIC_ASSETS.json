@@ -110,29 +110,9 @@
     "sha256": "ce3a4a1b9e1691b85069ad2526aedb46627c8a697b9d7962002d92fd6c27cb8a"
   },
   {
-    "file": "assets/video/creator-livingroom-intro.mp4",
-    "bytes": 145302,
-    "sha256": "4d561c7de8d57b4c2c1a6f3a9a6806e7fd6377e541f5554d1d9ed9f75f844b35"
-  },
-  {
     "file": "assets/video/creator-staircase-7s.mp4",
     "bytes": 777803,
     "sha256": "8280505f8a30b9fdf65492aab51c1aa18d226c55c909385fcc08a11fd0bb4113"
-  },
-  {
-    "file": "assets/video/holiday-story-long.mp4",
-    "bytes": 1744928,
-    "sha256": "9f7e082431c34e47711aaee8765a5bc36616bc4f86a42f479baea9910fde10cf"
-  },
-  {
-    "file": "assets/video/product-opening.mp4",
-    "bytes": 199053,
-    "sha256": "3b9a811a05b17439b5ad717d77ca5b2aa2671f8e12bd80f59fc409fbbcc614d9"
-  },
-  {
-    "file": "assets/video/stair-demo.mp4",
-    "bytes": 250816,
-    "sha256": "783bb6cc016574f5df11d6f07a8b92be7bbe86cb0ac573054af874c6028d2d64"
   },
   {
     "file": "data.js",
