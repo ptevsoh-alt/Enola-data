@@ -14,6 +14,7 @@ const fs = require("fs"),
     checks.push({ name, status: "PASS" });
   };
   const baseline = JSON.parse(read("qa/incremental/baseline.json"));
+  const publicMetricsRevision = JSON.parse(read("qa/incremental/public-metrics-20261122.json"));
   const originalApp = read("site/app.js")
     .replace(
       '    document.querySelectorAll("dialog[open]").forEach(d => d.close());\n',
@@ -54,8 +55,14 @@ const fs = require("fs"),
   const old = create(originalApp, false),
     cur = create(read("site/app.js"), true),
     { w, d } = cur;
-  check("approved metric records remain unchanged after editorial updates", () => {
-    assert.equal(sha(JSON.stringify(w.PORTFOLIO.metrics)), baseline.publicMetricsSha256);
+  check("approved public metric revision removes only missing-outcome placeholders", () => {
+    assert.equal(publicMetricsRevision.baselineSha256, baseline.publicMetricsSha256);
+    assert.equal(sha(JSON.stringify(w.PORTFOLIO.metrics)), publicMetricsRevision.publicMetricsSha256);
+    assert.equal(w.PORTFOLIO.metrics.length, publicMetricsRevision.publicMetricCount);
+    for (const id of publicMetricsRevision.removedPlaceholderIds) {
+      assert.ok(!w.PORTFOLIO.metrics.some((m) => m.id === id), id + " was not removed");
+    }
+    assert.ok(w.PORTFOLIO.metrics.some((m) => m.id === publicMetricsRevision.retainDocumentedRangeMetric));
   });
   check("index metadata reflects the portfolio career direction", () => {
     assert.match(d.querySelector('meta[name="description"]').content, /海外品牌营销.*IMC.*GTM/);
