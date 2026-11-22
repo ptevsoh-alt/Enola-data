@@ -91,7 +91,7 @@
       </div>
       <div class="g-story-note" id="regional-campaign-planning">
         <h3>区域 Campaign｜固定品牌事实，调整当地节奏</h3>
-        <p>我在北美消费品牌项目中负责社媒季度主题、月度内容日历与活动节点；M3 还留有美国/英国文案适配样例。以下将这段经验归纳为区域策划判断，不等于已有欧洲及澳洲市场独立管理项目。</p>
+        <p>围绕北美市场的季度传播、节庆活动和 M3 英美文案适配，我将跨区域营销的工作重点归纳为三个动作：明确本地消费场景，统一品牌与产品信息，再依据各市场的渠道和时区安排内容交付。</p>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>节奏 / CALENDAR</small><h3>先看本地消费者日历</h3><p>按地区确认节日日期、季节、渠道档期、物流和审批时区；活动目标与目标人群先于海报排期确定，不直接套用北美节庆时间。</p></article>
           <article><small>创意 / LOCALIZATION</small><h3>保留核心主张，调整使用语境</h3><p>产品事实、证明和品牌主张保持一致；美英文字样例显示用词可不同。迁移到欧洲各语言市场或澳洲前，仍须验证当地搜索词、文化语境及可售条件。</p></article>
@@ -324,6 +324,21 @@
 
   function social() {
     return section("父亲节 30 天内容与项目日历", "For the Hands That Always Help · 家庭叙事与整合传播", `
+      <div class="holiday-campaign-map" aria-label="父亲节 Campaign 主题、场景与阶段规划">
+        <div class="holiday-campaign-theme"><small>FATHER'S DAY / CAMPAIGN IDEA</small><h3>For the Hands That Always Help</h3><p>从父亲为家庭做过的日常小事出发，让清洁工具成为家人之间传递关怀的故事载体。</p></div>
+        <div class="holiday-campaign-pillars">
+          <div><small>INSIGHT</small><strong>日常关怀</strong><p>从家庭生活的小事切入</p></div>
+          <div><small>PRODUCT ROLE</small><strong>清洁工具</strong><p>让可观察的操作进入故事</p></div>
+          <div><small>EMOTIONAL PAYOFF</small><strong>共同生活</strong><p>将关注点重新带回家人</p></div>
+        </div>
+        <div class="holiday-phase-title"><small>30-DAY CONTENT JOURNEY</small><h4>主题预热 → 使用场景 → 互动参与 → 内容复盘</h4></div>
+        <div class="holiday-campaign-phases">
+          <div><span>01 / 预热</span><b>家庭故事</b><p>情绪海报、提问帖与故事征集</p></div>
+          <div><span>02 / 教育</span><b>产品演示</b><p>浴室边角与餐后地面使用场景</p></div>
+          <div><span>03 / 互动</span><b>社群共创</b><p>Group 讨论、Reels、UGC 与用户问题</p></div>
+          <div><span>04 / 收束</span><b>总结回流</b><p>精选内容、FAQ 更新和内容检查</p></div>
+        </div>
+      </div>
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>主题与主推产品</h3><p>以父亲为家人做过的小事发起互动。长柄电动刷负责浴室边角演示，黄色双盘拖把负责餐后硬地清洁。</p></article>
         <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
