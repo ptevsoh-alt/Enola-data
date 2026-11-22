@@ -82,7 +82,8 @@ const fs = require("fs"),
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
       if (r === "about") {
-        assert.equal(d.querySelectorAll(".rights-grid .badge").length, Object.keys(w.PORTFOLIO.statuses).length);
+        assert.equal(d.querySelectorAll(".cap-list article").length, 4);
+        assert.ok(d.querySelector("main h1").textContent.includes("从品牌判断到项目交付"));
       } else {
         const current = [...d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
         const previous = [...old.d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
