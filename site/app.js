@@ -172,11 +172,11 @@
     if (m.id === "group-members") return "Facebook Group 成员规模快照";
     if (m.id === "group-growth-1k") return "社群历史运营阶段";
     if (m.id === "group") return "社群单阶段新增记录";
-    if (/未注明|待核|未完整|具体起止|截图未显示|不确定|未知/.test(raw)) return "历史阶段数据";
-    return raw.replace(/（简历记录）/g, "").replace(/（字段待确认）/g, "");
+    if (/未注明|待核|未完整|具体起止|截图未显示|不确定|未知/.test(raw)) return "";
+    return raw.replace(/（简历记录）|（字段待确认）/g, "").replace(/历史阶段；?/g, "").trim();
   };
   const caseResultCopy = {
-    gtm: "参与四条核心产品线的卖点分层、传播内容策划与跨部门协同；历史阶段相关产品销量约增长 3%。M3 项目另展示上市传播策略与素材交付方案。",
+    gtm: "参与四条核心产品线的卖点分层、传播内容策划与跨部门协同，相关产品内容上线期间销量约增长 3%。M3 项目展示上市策略、跨渠道内容及物料交付。",
     social: "2025 年 Meta 内容曝光 96.5 万次、互动 3.7 万次。通过季度主题、月度内容规划和跨平台运营机制，持续优化品牌传播与社群参与。",
     community: "围绕教程、清洁挑战和 UGC 分享持续运营美国 Facebook Group。现有成员规模快照为 4,009 人，另有超过 1,000 人的阶段增长记录与单阶段新增 227 人。",
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
@@ -209,7 +209,7 @@
   }
   function metricCard(m) {
     const period = readerWindow(m);
-    const visiblePeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) ? "" : `<small>${esc(period)}</small>`;
+    const visiblePeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) || !period ? "" : `<small>${esc(period)}</small>`;
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span>${visiblePeriod}<span class="metric-source">查看数据详情 ↗</span></button>`;
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
@@ -277,18 +277,27 @@
       chapter: focus.chapter,
       artifact: focus.artifact,
     };
-    const image = item.image
+    const image = c.id === "brand"
+      ? `<div class="case-story-visual case-story-pair" aria-label="两组节庆 Campaign 创意画面">
+          <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看父亲节节庆主题视觉"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="父亲节户外 BBQ 清洁视觉提案" loading="lazy" decoding="async"><span>FATHER'S DAY / VISUAL IDEA</span></a>
+          <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看黑五主题视觉"><img src="assets/projects/black-friday-suite-concept.jpg" alt="黑五产品组合活动视觉提案" loading="lazy" decoding="async"><span>BLACK FRIDAY / VISUAL IDEA</span></a>
+        </div>`
+      : c.id === "b2b"
+      ? `<figure class="case-story-visual"><img src="assets/projects/exhibition-booth-overview-redacted.jpg" alt="海外 B2B 储能展会展位现场照片" loading="lazy" decoding="async"><figcaption>EXHIBITION / ON SITE</figcaption></figure>`
+      : c.id === "creative"
+      ? `<figure class="case-story-visual"><img src="assets/projects/holiday-scene-1.webp" alt="节庆视频内容与家庭清洁情景画面" loading="lazy" decoding="async"><figcaption>CAMPAIGN / FULL FILM</figcaption></figure>`
+      : item.image
       ? `<figure class="case-story-visual"><img src="assets/projects/${esc(item.image)}.${esc(item.imageExt || "webp")}" alt="${esc(item.alt || item.title || c.title)}" loading="lazy" decoding="async"><figcaption>${esc(c.category)}</figcaption></figure>`
       : `<div class="case-story-identity" aria-hidden="true"><span>CASE</span><strong>${esc(c.no)}</strong><small>${esc(c.subtitle)}</small></div>`;
     const firstResult = c.metrics.map(metric).find(hasPublishableMetric);
     return `<section class="g-case-overview case-story-lead case-story-${esc(c.id)}" aria-label="项目速览">
       <div class="case-story-primary">
-        <div class="case-story-copy"><small>PROJECT VIEW / CASE ${esc(c.no)}</small><h2>我的工作范围</h2><p>${esc(item.role)}</p>
+        <div class="case-story-copy"><small>SELECTED WORK / CASE ${esc(c.no)}</small><h2>${esc(c.title)}</h2><p>${esc(item.role)}</p>
           <span class="case-story-category">${esc(c.category)}</span></div>
         ${image}
       </div>
-      <div class="case-story-judgement"><span>01 / WHY THIS DIRECTION</span><h2>关键策略判断</h2><p>${esc(item.decision)}</p></div>
-      <div class="case-story-deliverables"><span>02 / WHAT WAS BUILT</span><h2>项目交付与成果</h2><p>${esc(item.output)}</p></div>
+      <div class="case-story-judgement"><span>01 / STRATEGIC DECISION</span><h2>为什么这样做</h2><p>${esc(item.decision)}</p></div>
+      <div class="case-story-deliverables"><span>02 / WORK & DELIVERY</span><h2>怎样组织交付</h2><p>${esc(item.output)}</p></div>
       <div class="case-story-foot">
         <a href="#/case/${c.id}/${item.chapter}">${esc(item.artifact)} <span aria-hidden="true">↗</span></a>
         ${firstResult ? `<div class="case-story-evidence"><strong>${esc(firstResult.display)}</strong><span>${esc(firstResult.label)}</span></div>` : `<small>PROJECT / ${esc(c.subtitle)}</small>`}
@@ -383,7 +392,7 @@
     ];
     const metrics = c.metrics.map(metric).filter(hasPublishableMetric);
     const resultsLabel = metrics.length ? "项目成果" : "代表交付";
-    return `<div class="wrap page case-page"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1></div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">查看视觉方向 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Team & Delivery</div><div><h2>我的分工与项目推动</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>${resultsLabel}</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? metaSummary() : c.id === "seo" ? shareChart() : ""}</div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / MORE WORK</div><div><h2>更多项目内容</h2><p><a href="#/case/${c.id}/${caseDecisions[c.id].chapter}">${esc(caseDecisions[c.id].artifact)} ↗</a></p>${metrics.length ? `<p><a href="#/data/${metrics[0].domain}">查看关联业务数据 ↗</a></p>` : ""}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
+    return `<div class="wrap page case-page case-page-${esc(c.id)}"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1></div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<button class="btn secondary" data-image="${c.id === "gtm" ? "01" : c.id === "brand" ? "02" : "03"}">查看视觉方向 ↗</button>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Team & Delivery</div><div><h2>我的分工与项目推动</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>${resultsLabel}</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "social" ? metaSummary() : c.id === "seo" ? shareChart() : ""}</div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / MORE WORK</div><div><h2>更多项目内容</h2><p><a href="#/case/${c.id}/${caseDecisions[c.id].chapter}">${esc(caseDecisions[c.id].artifact)} ↗</a></p>${metrics.length ? `<p><a href="#/data/${metrics[0].domain}">查看关联业务数据 ↗</a></p>` : ""}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
   }
   function metaSummary() {
     const ids = ["impressions", "engagements"];
