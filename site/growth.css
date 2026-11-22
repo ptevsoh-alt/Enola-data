@@ -2258,3 +2258,40 @@
 .g-video-gallery-heading{margin:1.5rem 0 .3rem;font-size:clamp(1.2rem,2.4vw,1.6rem)}
 .g-video-gallery-lede{color:var(--muted);margin:0 0 1rem}
 @media(max-width:950px){.g-featured-film{grid-template-columns:minmax(0,1fr)}.g-featured-film figcaption{padding:1.1rem}}
+
+/* Interview-first Campaign: multi-channel timing, Paid / EDM assets, focused evidence. */
+.campaign-flight-plan { border: 1px solid var(--rule); background: #fffefa; padding: .7rem; margin: 1.1rem 0; overflow-x: auto; scrollbar-gutter: stable; }
+.campaign-flight-head,.campaign-flight-row { display: grid; grid-template-columns: minmax(7.6rem,.95fr) repeat(4,minmax(8.2rem,1fr)); gap: .3rem; min-width: 44rem; }
+.campaign-flight-head { margin-bottom: .3rem; }
+.campaign-flight-head>* { background: #254a3a; color: #fffef7; padding: .7rem .55rem; text-align: center; font-size: .76rem; line-height: 1.55; }
+.campaign-flight-head b { display: grid; place-items: center; letter-spacing: .02em; }
+.campaign-flight-row { margin-bottom: .3rem; }
+.campaign-flight-row b { display: grid; place-items: center; background: #dce9dc; padding: .72rem .5rem; font-size: .8rem; text-align: center; }
+.campaign-flight-row span { display: grid; place-items: center; min-width: 0; background: #eef3eb; border-bottom: 2px solid #a3bca5; padding: .7rem .4rem; text-align: center; font-size: .75rem; line-height: 1.5; }
+.campaign-flight-row span:nth-child(4) { background: #dae9d8; border-color: #315b47; font-weight: 650; }
+.campaign-milestone-details { margin: 1rem 0 1.5rem; }
+.campaign-milestone-details summary { font-weight: 650; }
+.campaign-milestone-details .g-milestone-list li { padding: .75rem; background: #fffefa; border: 1px solid var(--rule); margin-bottom: .45rem; }
+.campaign-assets-showcase { margin: 1rem 0 1.5rem; border-top: 1px solid var(--rule); padding-top: 1.2rem; }
+.campaign-assets-heading small { color: var(--accent); font-size: .75rem; letter-spacing: .08em; }
+.campaign-assets-heading h4 { margin: .4rem 0; font-size: 1.15rem; }
+.campaign-assets-heading p { color: var(--muted); font-size: .84rem; margin: .4rem 0 1rem; }
+.campaign-assets-pair { display: grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap: .85rem; }
+.campaign-assets-pair article { display: flex; flex-direction: column; min-width: 0; min-height: 15.5rem; padding: clamp(1rem,2.5vw,1.6rem); border-radius: .35rem; }
+.campaign-assets-pair article>span { font-size: .7rem; font-weight: 700; letter-spacing: .1em; }
+.campaign-assets-pair h5 { font-size: clamp(1.25rem,2.5vw,2rem); line-height: 1.35; margin: 1rem 0 .5rem; }
+.campaign-assets-pair article>p { margin: .45rem 0; font-size: .84rem; }
+.campaign-ad-visual { background: #284c3e; color: #fffbf3; }
+.campaign-ad-visual>p { color: #e5eee3; }
+.campaign-email-visual { background: #f2e6d5; color: #293e32; border: 1px solid #d6c6ad; }
+.campaign-email-head { display: flex; justify-content: space-between; border-top: 1px solid currentColor; border-bottom: 1px solid currentColor; margin: 1rem 0 0; padding: .25rem 0; font-size: .75rem; }
+.campaign-asset-tags { display: flex; flex-wrap: wrap; gap: .35rem; margin: .7rem 0; }
+.campaign-asset-tags small { font-size: .7rem; border: 1px solid currentColor; border-radius: 1rem; padding: .1rem .5rem; }
+.campaign-assets-pair .campaign-asset-caption { font-size: .72rem; opacity: .85; margin-top: auto; }
+.campaign-asset-links { display: flex; gap: .6rem 1.2rem; flex-wrap: wrap; margin-top: .85rem; font-size: .84rem; }
+.campaign-asset-links a { color: var(--accent); text-decoration: underline; }
+.film-edition-actions { display: flex; flex-wrap: wrap; gap: .65rem 1rem; margin-top: .9rem; }
+.g-featured-film .film-edition-actions a { font-size: .82rem; min-height: 34px; text-decoration: underline; text-underline-offset: .15em; }
+.evidence-method { margin: 1rem 0; padding: .65rem 1rem; background: #eff3eb; border: 1px solid var(--rule); }
+.evidence-method summary { cursor: pointer; font-weight: 650; }
+@media (max-width: 720px) { .campaign-assets-pair { grid-template-columns: minmax(0,1fr); }.campaign-flight-plan { margin-inline: -.5rem; } }
