@@ -55,4 +55,18 @@ window.PORTFOLIO_SELECTED_WORK = {
     "artifact": "查看项目协作与返工案例",
     "chapter": "asset-review"
   }
+,
+  "b2b": {
+    "label": "海外 B2B · 真实展会项目",
+    "title": "海外展会｜从产品陈列到客户沟通",
+    "role": "在海外渠道推广岗位参与储能行业展会、营销物料与客户沟通，跟进客户需求及商务交接。",
+    "decision": "以客户用电场景解释光伏、逆变器、储能电池与负载之间的关系，让展台展示成为业务沟通的起点；现场问题回流到产品资料与后续跟进。",
+    "output": "真实参展照片与产品系统展示、海外客户开发经验，以及展前传播、现场演示、线索跟进的项目工作方式。",
+    "highlight": "真实展会照片 · 海外客户开发与跟进",
+    "artifact": "看展会现场、营销物料和客户沟通",
+    "chapter": "expo-project",
+    "image": "exhibition-booth-overview-redacted",
+    "imageExt": "jpg",
+    "alt": "已匿名化的海外储能展会展位全景"
+  }
 };
