@@ -510,7 +510,7 @@
             <figcaption id="opening-video-note"><h3>两种开场｜产品亮相与直接上手</h3><p>产品先出现，适合新品认知；先给出吸头接地的动作，更适合使用教育。</p></figcaption>
           </figure>
         </div>
-        <p class="kol-role-note">内容方向：KOL / Creator 产品体验与短视频素材。公开展示的是可播放的剪辑样例；合作方正式发布与内容商业复用，以实际授权和发布记录为准。</p>
+        <p class="kol-role-note">竖屏内容与完整 TVC 的叙事方式不同：先交代清洁问题，再用人物、产品和接触动作完成体验表达。审核重点放在动作是否清晰、产品外观是否准确、开场能否快速传递主题。</p>
       </section>
       <details class="video-cutdown" id="video-holiday-cutdown">
         <summary>观看节庆 TVC 的短版剪辑</summary>
