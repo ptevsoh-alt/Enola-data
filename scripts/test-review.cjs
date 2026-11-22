@@ -63,10 +63,11 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
-  check("review entry plays featured full holiday film and three supporting short clips", () => {
+  check("review entry embeds the Drive 90-second film and three supporting short clips", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
-    assert.equal(clips.length, 4);
+    assert.equal(clips.length, 3);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
+    assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
@@ -76,12 +77,12 @@ const fs = require("fs"),
       assert.ok(fs.existsSync(path.join(site, relative)), relative);
     });
   });
-  check("review links the locally hosted long film and its creative case", () => {
+  check("review links the published Drive film, alternate version and creative case", () => {
     const links = [...d.querySelectorAll(".review-film-editions a")];
-    assert.equal(links.length, 2);
-    assert.ok(links.some(link => link.getAttribute("href") === "../assets/video/holiday-story-long.mp4"));
-    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/holiday-full-film"));
-    assert.ok(d.querySelector("#review-videos video source[src='../assets/video/holiday-story-long.mp4']"));
+    assert.equal(links.length, 3);
+    assert.ok(links.some(link => link.getAttribute("href").includes("15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view")));
+    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-drive-editions"));
+    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-storyline"));
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
