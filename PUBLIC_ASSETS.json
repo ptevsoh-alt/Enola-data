@@ -6,8 +6,8 @@
   },
   {
     "file": "app.js",
-    "bytes": 43670,
-    "sha256": "9c57b48eaa947efe7f916e41228b5b939b947712a5ee9565f16178515ba5add5"
+    "bytes": 44235,
+    "sha256": "30765c4908bdb9c9dd27bb644f416d02fe3464008ce24188653aa962beeb35fe"
   },
   {
     "file": "assets/concept-01.png",
@@ -105,9 +105,19 @@
     "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
+    "file": "assets/video/creator-livingroom-7s.mp4",
+    "bytes": 416334,
+    "sha256": "ce3a4a1b9e1691b85069ad2526aedb46627c8a697b9d7962002d92fd6c27cb8a"
+  },
+  {
     "file": "assets/video/creator-livingroom-intro.mp4",
     "bytes": 145302,
     "sha256": "4d561c7de8d57b4c2c1a6f3a9a6806e7fd6377e541f5554d1d9ed9f75f844b35"
+  },
+  {
+    "file": "assets/video/creator-staircase-7s.mp4",
+    "bytes": 777803,
+    "sha256": "8280505f8a30b9fdf65492aab51c1aa18d226c55c909385fcc08a11fd0bb4113"
   },
   {
     "file": "assets/video/holiday-story-long.mp4",
@@ -126,8 +136,8 @@
   },
   {
     "file": "data.js",
-    "bytes": 87089,
-    "sha256": "17cb838e2f6d4e1857e6ce6b4cdb74505c2c6656ab780a4e41a0ca0f445e4c1d"
+    "bytes": 86954,
+    "sha256": "92b780cebd4a8017e3d6f8cd9cdba452e718faa50eeb178ea6f75514703992c9"
   },
   {
     "file": "growth.css",
@@ -136,23 +146,23 @@
   },
   {
     "file": "growth.js",
-    "bytes": 36043,
-    "sha256": "ed07a84fa117d171921e552fc49e406d76953c69be940a895115480e3762f71c"
+    "bytes": 36115,
+    "sha256": "e0657d494410a1667800e70eb86034aaf47fd079a71edc25d32d1c102a9184b6"
   },
   {
     "file": "index.html",
-    "bytes": 3491,
-    "sha256": "ad3db6f4554ff2be3289489abdd0a1097d8549c41132b9ce4276b6db06314808"
+    "bytes": 3509,
+    "sha256": "925418e371b33832987601c2439d25a4cf04c8d9a25d72a08f17992acd3561e2"
   },
   {
     "file": "projects.js",
-    "bytes": 96429,
-    "sha256": "2306d1a2bac555998db8e4bd35b26c861cba219e04c9ea5ebb1e06c96feb1f6f"
+    "bytes": 95936,
+    "sha256": "761170f6ed03b0ec2a0d085574cc3a229ee6cb57e96dce7b3017db5583323873"
   },
   {
     "file": "review/index.html",
-    "bytes": 12707,
-    "sha256": "8172ec35b1ceaa8c1a364cc3f2661bafcf13cac97e8f940fde2ac87426cba8a7"
+    "bytes": 12742,
+    "sha256": "3c89859e968b8a8ce3e8f0930147336949843216197f390c1938f601bb895f56"
   },
   {
     "file": "review/review.css",
