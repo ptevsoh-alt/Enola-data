@@ -7,7 +7,7 @@
   {
     "file": "app.js",
     "bytes": 43514,
-    "sha256": "b786417bee1ac544dbc65f852107cade4d79c97dadbb69b75adcb5664ce6a0e8"
+    "sha256": "efbc55695716e42d03df41c58b879c1318753fe2027af0c62ecca852d666987f"
   },
   {
     "file": "assets/concept-01.png",
@@ -126,13 +126,13 @@
   },
   {
     "file": "data.js",
-    "bytes": 87190,
-    "sha256": "1d3711700ed5cd448381f8a4635adf50ea00e5df69080790bb47fedcc1d65aae"
+    "bytes": 87089,
+    "sha256": "17cb838e2f6d4e1857e6ce6b4cdb74505c2c6656ab780a4e41a0ca0f445e4c1d"
   },
   {
     "file": "growth.css",
-    "bytes": 71212,
-    "sha256": "2e8380a25b1ebf14a0f3a7af343c1cf8e29b856ec1ce9fcb75f2af5724e9658c"
+    "bytes": 72394,
+    "sha256": "774f9bef28f92f81fd749d24e5f215680f750cada94e453352d5b7a84044d05d"
   },
   {
     "file": "growth.js",
@@ -142,22 +142,22 @@
   {
     "file": "index.html",
     "bytes": 3467,
-    "sha256": "78eae7e2d619c2eafe4da31ae036cb22b94f9bd934f7820fe8c8ec725cb163cf"
+    "sha256": "54dec772ca0ca5e6815863b6eedbd84de60afc8256bd9c4d6ef15e7635aa6628"
   },
   {
     "file": "projects.js",
-    "bytes": 94074,
-    "sha256": "50f54c09717816872b386349170d02c9854055779713a9a7ba26a4edacef8179"
+    "bytes": 94363,
+    "sha256": "1c9013cdcb61a451d0c1b255fd1c9c734fc84f9851f9dcb10e27c562d99909a6"
   },
   {
     "file": "review/index.html",
-    "bytes": 12012,
-    "sha256": "71d52941ce8cec33517f46f059da112360a42b32108ea25b75a8ecd171fe7a6d"
+    "bytes": 12014,
+    "sha256": "0d32e8c0201930b58ce0fb0b81d039475fe1089be8681521f9381ac26a13e61c"
   },
   {
     "file": "review/review.css",
-    "bytes": 18912,
-    "sha256": "bd814ce1587700b473bac663895705a9b798d025be9703272a1d19408c29f281"
+    "bytes": 19222,
+    "sha256": "531009e59a00fbacc29892ee90f3485bdee4383a5fd5757c8729f9da8b4ee8b8"
   },
   {
     "file": "review/review.js",
@@ -171,8 +171,8 @@
   },
   {
     "file": "selected-work.js",
-    "bytes": 4543,
-    "sha256": "c953c30117c0842273ddfbf2efb508c43662fcab325969ddd9dcb78402b45aa2"
+    "bytes": 4553,
+    "sha256": "f42332c3f4633653bdaf795bc0f671eb3c9977a6aa194df021b445c971439730"
   },
   {
     "file": "styles.css",
