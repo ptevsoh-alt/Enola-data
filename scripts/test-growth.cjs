@@ -136,7 +136,8 @@ const fs = require("fs"),
       assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["组织与协作", "复盘与下一步"]);
       const insight = d.querySelector("#insight");
       assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
-      assert.equal(insight.querySelectorAll("p").length, 2);
+      assert.equal(insight.querySelectorAll("p").length, 1);
+      assert.equal(insight.querySelectorAll(".reader-source-note").length, 0);
     });
   }
   await route("/case/gtm/campaign-paid-email-assets");
