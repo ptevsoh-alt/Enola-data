@@ -31,7 +31,7 @@
   $("#review-selected-work").innerHTML = Object.entries(window.PORTFOLIO_SELECTED_WORK)
     .map(([id, item]) => {
       const image = item.image
-        ? `<img src="../assets/projects/${esc(item.image)}.webp" alt="${esc(item.alt)}" loading="lazy" decoding="async">`
+        ? `<img src="../assets/projects/${esc(item.image)}.${esc(item.imageExt || "webp")}" alt="${esc(item.alt)}" loading="lazy" decoding="async">`
         : "";
       return `<a class="review-path-card${image ? " review-path-photo" : ""}" href="${caseHref(id)}/${esc(item.chapter)}">
         ${image}<div><span class="review-path-label">${esc(item.label)}</span>
