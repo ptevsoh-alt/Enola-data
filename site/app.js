@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["上市规划先明确美国市场、五月窗口和可售条件。价格、库存、支付和履约由商业及供应链确认。", "围绕餐后硬地设置传播主张，确定主视觉、连续演示和 FAQ 分别回答的问题，并把要求写入 Brief。", "按预热、首发、放量、收尾安排社媒内容和跨渠道依赖；四渠道分别由电商、站点、海外渠道和社媒负责人验收，不把横向协调误写成管理四个团队。", "计划在 D7 查渠道排期、素材与链接断点，在 D30 查有效访问、净订单和售后，再决定保留、返工或停止；未宣称执行过 D7 / D30 复盘。"],
+    gtm: ["上市规划先明确美国市场、五月窗口和可售条件。价格、库存、支付和履约由商业及供应链确认。", "围绕餐后硬地设置传播主张，确定主视觉、连续演示和 FAQ 分别回答的问题，并把要求写入 Brief。", "按预热、首发、放量、收尾安排社媒内容和跨渠道依赖；四渠道分别由电商、站点、海外渠道和社媒负责人验收，不把横向协调误写成管理四个团队。", "上市计划设置 D7 / D30 两个复盘节点：首周检查内容与链接表现，月度关注订单、售后及用户反馈，形成下一轮传播动作。"],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和展会分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -394,7 +394,7 @@
     </section>`;
   }
   function shareChart() {
-    return `<figure class="share-chart"><div class="donut" role="img" aria-label="自然搜索收入份额 82.46%"><b>82.46%<small>收入份额</small></b></div><figcaption><h3>搜索内容对经营结果的贡献</h3><p>围绕清洁场景组织 Blog、FAQ 与商品页内容，让搜索需求进入产品理解与选购环节。</p></figcaption></figure>`;
+    return `<figure class="share-chart"><div class="donut" role="img" aria-label="自然搜索收入份额 82.46%"><b>82.46%<small>收入份额</small></b></div><figcaption><h3>自然搜索渠道收入结构</h3><p>历史渠道报告中，自然搜索收入占整体收入的 82.46%；对应内容策略围绕 Blog、FAQ 与产品信息组织。</p></figcaption></figure>`;
   }
   function dataPage(domain) {
     const visibleDomains = Object.entries(P.domains).filter(([id]) => P.metrics.some((m) => m.domain === id && hasPublishableMetric(m)));
@@ -506,10 +506,13 @@
     if (t.dataset.evidence) {
       const m = metric(t.dataset.evidence);
       if (!m) return;
+      const period = readerWindow(m);
+      const meaningfulPeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) ? "" : period;
+      const platform = String(m.platform || "").replace(/（口径待核）/g, "").replace(/，字段待核/g, "");
       $("#evidence-content").innerHTML =
-        `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p>${badge(m.status)}<dl>${[
-          ["平台", m.platform],
-          ["统计时间", readerWindow(m)],
+        `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p><dl>${[
+          ["平台", platform],
+          ...(meaningfulPeriod ? [["统计时间", meaningfulPeriod]] : []),
           ["指标定义", m.definition],
         ]
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
