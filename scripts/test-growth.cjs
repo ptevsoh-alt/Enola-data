@@ -241,6 +241,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
     assert.ok(d.querySelector("#expo-handoff"));
     assert.equal(d.querySelectorAll("#expo-distance-route .expo-space-stop").length, 4);
+    assert.ok(d.querySelector("#expo-floorplan .expo-plan-wall"));
+    assert.equal(d.querySelectorAll("#expo-floorplan .expo-plan-interior>div").length, 3);
+    assert.ok(d.querySelector("#expo-floorplan .expo-plan-reception"));
     assert.equal(d.querySelectorAll("#expo-asset-manifest .expo-asset-card").length, 6);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-grid article").length, 3);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-rhythm>div").length, 4);
