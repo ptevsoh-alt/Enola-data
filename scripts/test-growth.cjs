@@ -128,9 +128,16 @@ const fs = require("fs"),
       assert.equal(insight.querySelectorAll("p").length, 2);
     });
   }
+  await route("/case/gtm/campaign-paid-email-assets");
+  check("Paid Ads and EDM creative variants are present", () => {
+    assert.equal(d.querySelectorAll("#campaign-paid-email-assets article").length, 2);
+    assert.equal(d.querySelectorAll("#campaign-activation .campaign-workstreams article").length, 8);
+  });
   await route("/case/gtm/launch-delivery");
   check("the launch work sample connects milestones, an English brief and the asset review", () => {
     assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
+    assert.equal(d.querySelectorAll("#launch-delivery .campaign-flight-row").length, 6);
+    assert.ok(d.querySelector(".campaign-milestone-details"));
     assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
     assert.ok(d.querySelector('#english-brief a[href="#/case/operations/asset-review"]'));
     assert.equal(d.querySelectorAll("#launch-decisions tbody tr").length, 3);
