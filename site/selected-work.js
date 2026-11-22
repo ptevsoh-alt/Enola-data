@@ -44,13 +44,13 @@ window.PORTFOLIO_SELECTED_WORK = {
     "chapter": "asset-review"
   },
   "creative": {
-    "label": "Creative Strategy · 视频内容",
-    "title": "节庆品牌片｜故事创意与产品演示",
+    "label": "Seasonal Campaign · TVC / Creator",
+    "title": "感恩节与圣诞节 TVC｜Campaign 创意与 KOL 内容",
     "role": "参与视频创意、脚本与画面审核，并协调产品信息、镜头与不同渠道版本。",
-    "decision": "家庭照料的圣诞故事传递品牌情绪；楼梯吸尘镜头独立承担产品使用教育，不把两类内容或产品型号混为一谈。",
-    "output": "90 秒圣诞品牌成片、101 秒延伸剪辑，以及产品操作和开场对照视频。",
-    "highlight": "90 秒品牌成片 · 3 组短视频表达",
-    "artifact": "播放视频并查看创意选择",
+    "decision": "感恩节以家庭餐叙与感谢切入，圣诞节以日常照料承接品牌情感；KOL / Creator 竖屏内容聚焦真实使用情境与产品动作。",
+    "output": "感恩节主题 101 秒 TVC 展示版本、圣诞节 90 秒成片、楼梯吸尘 Creator 短视频及开场剪辑。",
+    "highlight": "感恩节 TVC · 圣诞节 TVC · KOL 短视频",
+    "artifact": "观看两支节庆 TVC 与 KOL 内容",
     "chapter": "video-projects",
     "image": "holiday-scene-1",
     "alt": "节庆家庭清洁故事的视频画面"
