@@ -207,6 +207,42 @@
         </div>
         <p>素材审核通过后再承诺「看演示」。商业侧还需核可当地价格、库存、支付与履约，才开放购买。</p>
       </div>
+
+      <section class="g-story-note campaign-lens" id="campaign-architecture" aria-labelledby="campaign-architecture-title">
+        <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
+        <h3 id="campaign-architecture-title">Make Room for What Matters：为什么这样安排内容</h3>
+        <p>这份 M3 规划从一个需要验证的场景开始：餐后地面清洁能否让美国用户迅速理解双盘拖把的用途。Big Idea 连接家庭时刻；能否相信产品，则交给真实运行与官方结构证据。市场需求强度仍待 Review / VOC 等样本验证。</p>
+        <div class="campaign-lens-grid">
+          <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>净履约订单与净贡献是规划中的商业衡量口径；目前没有订单对账，不报告销售成果。</p></article>
+          <article><small>AUDIENCE / 起始问题</small><h4>餐后硬地为什么值得先讲</h4><p>场景与双盘运动可进入同一组画面；先观察用户是否理解清洁任务和产品身份。</p></article>
+          <article><small>MESSAGE / 创意主张</small><h4 lang="en">Make Room for What Matters</h4><p>主张用真实生活情境解释产品角色，不暗示经过测试的省时百分比。</p></article>
+          <article><small>PROOF / 放行条件</small><h4>有结构图，不等于有运行证明</h4><p>结构介绍使用官方产品图；旋转、接地及清洁效果需要连续实拍和产品核验。</p></article>
+        </div>
+        <div class="campaign-journey" aria-label="Campaign 用户决策阶段与渠道任务">
+          <div><span>01 · Awareness</span><strong>识别场景</strong><p>Facebook / Instagram：餐后问题、家庭情境、品牌主题</p></div>
+          <div><span>02 · Consideration</span><strong>理解产品</strong><p>Reels / Shorts：真实运动；FAQ：适用条件；Creator：授权体验</p></div>
+          <div><span>03 · Conversion</span><strong>核对购买条件</strong><p>商品页 / CRM / Paid：价格、库存、支付和数据全通过后才开放购买型 CTA</p></div>
+          <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
+        </div>
+        <details class="g-chart-disclosure" id="campaign-content-matrix">
+          <summary>查看 7 项核心内容支柱与 1 项辅助内容的渠道分工</summary>
+          <div class="g-proof-table"><table class="campaign-content-table">
+            <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
+            <tbody>
+              <tr><th>场景问题</th><td>餐后仍需处理的地面清洁任务</td><td>FB / IG Feed、Story 与短视频建立相关性</td><td>真实场景，不以互动投票代替用户研究</td></tr>
+              <tr><th>情绪与品牌</th><td>把清洁放回家庭生活的情境</td><td>节庆 KV、短片和较长品牌故事</td><td>人物、音乐与场景使用权待确认</td></tr>
+              <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>真实 M3 运行视频不足时 HOLD_ASSET</td></tr>
+              <tr><th>操作教育</th><td>手柄控制、电池安装和结构细节</td><td>轮播、结构短片与商品信息说明</td><td>官方源图及产品功能核验</td></tr>
+              <tr><th>FAQ 与异议</th><td>适用范围、操作方式和维护问题</td><td>Group、FAQ 内容及客服答疑</td><td>真实问题来源与产品签核</td></tr>
+              <tr><th>Creator / UGC</th><td>真实家庭中的第三方使用过程</td><td>Creator 渠道；品牌复用需单独授权</td><td>真实交付、披露及 Paid Usage Rights</td></tr>
+              <tr><th>转化承接</th><td>已经了解产品的用户如何完成购买</td><td>商品页、许可邮件与获批的 Paid</td><td>Offer、库存、支付、履约、客服、数据核验</td></tr>
+              <tr><th>组合教育（辅助）</th><td>四条产品线各解决什么清洁任务</td><td>持续期品牌轮播及教育内容</td><td>每款产品的官方图片和型号事实</td></tr>
+            </tbody>
+          </table></div>
+          <p class="g-chart-note">来自 M3 2026 年 5 月 Campaign 内容矩阵工作簿（2026 年 11 月整理的规划重建版）。内容支柱、渠道和状态是策划工作物，不代表已经发布或验证结果。</p>
+        </details>
+        <p class="campaign-lens-note"><a href="#/case/gtm/launch-four-stages">上市里程碑 ↗</a> · <a href="#/case/gtm/launch-cross-channel">跨渠道交付责任 ↗</a> · <a href="#/case/creative/video-projects">观看视频节选 ↗</a></p>
+      </section>
       ${launchFourStage()}
       ${launchDelivery()}
       ${englishBrief()}
@@ -262,6 +298,17 @@
         <article><h3>主题与主推产品</h3><p>以父亲为家人做过的小事发起互动。长柄电动刷负责浴室边角演示，黄色双盘拖把负责餐后硬地清洁。</p></article>
         <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
         <article><h3>内容与交付节奏</h3><p>日历按相对顺序编排内容。28 个节点面向用户发布，最后 2 个节点用于内部素材验收与活动复盘；不是实际发布日期或发布记录。</p></article>
+      </div>
+
+      <div class="g-story-note" id="fathers-day-channel-roles">
+        <h3>同一父亲节主题，渠道不重复做一件事</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>FACEBOOK / 场景与互动</small><h3>先让人讲家庭清洁故事</h3><p>从“父亲教过你的生活小技巧”开启讨论，再用轮播回应常见使用情境；重点观察真实留言和重复出现的问题。</p></article>
+          <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，不将两种产品混成同一功能。</p></article>
+          <article><small>GROUP / 关系与参与</small><h3>让成员提供真实做法</h3><p>教程、投票和 UGC 邀约是自愿参与。投稿并不自动允许商业复用，活动 Owner、资格与奖励由实际执行方确认。</p></article>
+          <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>若有真实家庭故事、Creator 视频或新闻角度，再单独安排 Brief、素材使用权与披露；仅有日历不等于外部合作已发生。</p></article>
+        </div>
+        <p class="g-chart-note">以上为父亲节 30 天内容概念的整合传播延展，不将建议的 PR、Creator 或其他渠道写成已经实施的节点。</p>
       </div>
       <p><a href="#/case/creative/video-strategy">查看节庆故事、产品教育与社群反馈各承担什么 ↗</a></p>
       <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28 为对外内容概念；Day 29–30 为内部验收与复盘节点。全部为相对内容顺序，不代表真实发布日历或已执行 Campaign。</p>${calendarDays()}</details>`, "fathers-day-calendar");
@@ -346,6 +393,15 @@
           <p>这是两个源镜头的剪辑对照。若要判断哪种开场更有效，发布测试时保持受众、正文、时长与下一步一致，再看开场留存和演示段观看。</p>
         </div>
       </div>
+
+      <div class="g-story-note" id="video-decision-strip">
+        <h3>三个片段，各有一条检查线</h3>
+        <div class="g-video-decision-grid">
+          <article><small>品牌片 / 故事转折</small><h4>先让用户进入晚餐后的生活时刻</h4><p>节庆聚餐→地面问题→产品介入→回到家庭。画面验证叙事顺序，产品运行的真实性另按连续镜头检查。</p></article>
+          <article><small>产品片 / 动作教育</small><h4>镜头必须同时看见吸头和踏面</h4><p>楼梯短版用于说明接触面与行进路线。它不是 M3 双盘拖把的运行证明，不能混用型号。</p></article>
+          <article><small>开场测试 / 待验证</small><h4>亮相与直接上手，取决于观看任务</h4><p>两种镜头适合不同的信息阶段；若比较留存，需固定受众、版位、时长和后续镜头，当前没有可发布的胜负结论。</p></article>
+        </div>
+      </div>
       <div class="g-story-note" id="video-management">
         <h3>从创意方向到可验收的交付</h3>
         <p>我参与创意策划、脚本与画面审核。内容团队先定每条片要回答的问题，产品团队核对型号和可公开卖点，制作团队按镜头清单提交横竖版本。审核时看产品结构、接触点、动作连续性和平台安全区，运营按渠道与素材权限排期。</p>
@@ -375,6 +431,16 @@
           <p class="g-chart-note">这是基于现场展示整理的工作样例。照片支持展会参与和现场陈列。</p>
         </div>
       </details>
+
+      <section class="g-story-note b2b-compare" id="b2b-scale-comparison" aria-label="Facebook 粉丝规模对比">
+        <h3>任职期 Facebook 粉丝规模的前后记录</h3>
+        <div class="b2b-range-plot" role="img" aria-label="任职期 Facebook 粉丝由四百以上变化至一千九百以上。起止为近似下限值，日期未注明。">
+          <div><span>较早阶段</span><div class="b2b-range-track"><span style="width: 21.05%"></span></div><strong>400+</strong></div>
+          <div><span>较晚阶段</span><div class="b2b-range-track"><span style="width: 100%"></span></div><strong>1,900+</strong></div>
+        </div>
+        <p class="g-chart-note">两个数字来自 2023.11–2025.03 任职期简历记录，均为约数下限。条形长度仅用这两个下限作视觉参照；账号范围、准确采样日期及实际净增长未核，不计算百分比，也不归因于某次展会。</p>
+        <p><a href="#/data/b2b">查看 B2B 其他经营字段及定义 ↗</a></p>
+      </section>
       <p class="g-chart-note">照片中的展位标识、设备品牌、型号和编号已脱敏。具体展会分工和活动级业绩待核。</p>`, "expo-project");
   }
 
