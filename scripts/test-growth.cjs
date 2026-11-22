@@ -188,7 +188,7 @@ const fs = require("fs"),
   await route("/case/b2b/b2b-scale-comparison");
   check("B2B same-metric comparison uses two historical approximate bounds", () => {
     assert.equal(d.querySelectorAll("#b2b-scale-comparison .b2b-range-plot>div").length, 2);
-    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不计算百分比"));
+    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不计算增长率"));
   });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
