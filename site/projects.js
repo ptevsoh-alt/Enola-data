@@ -842,5 +842,19 @@
       if (introduction) introduction.insertAdjacentHTML("afterend", render());
       else content.querySelector("h2")?.insertAdjacentHTML("afterend", render());
     }
+    if (id === "b2b") {
+      const steps = [...main.querySelectorAll("#expo-distance-route [data-expo-select]")];
+      const output = main.querySelector("#expo-selected-detail");
+      if (output) {
+        steps.forEach((button) => button.addEventListener("click", () => {
+          steps.forEach((item) => {
+            const active = item === button;
+            item.classList.toggle("is-active", active);
+            item.setAttribute("aria-pressed", String(active));
+          });
+          output.textContent = button.dataset.expoSummary || "";
+        }));
+      }
+    }
   };
 })();
