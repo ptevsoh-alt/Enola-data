@@ -93,8 +93,17 @@ const fs = require("fs"),
         assert.ok(d.querySelector("main h1").textContent.includes("从品牌判断到项目交付"));
       } else {
         const current = [...d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
-        const previous = [...old.d.querySelectorAll(".data-kpis .metric")].map((x) => [x.dataset.evidence, x.querySelector("strong").textContent]);
-        assert.deepEqual(current, previous);
+        const desiredDomain = r.slice("data/".length);
+        const allowedDomains = new Set(w.PORTFOLIO.metrics.filter((m) => m.status !== "PENDING" &&
+          !!m.display && ((typeof m.value === "number" && Number.isFinite(m.value)) ||
+          (Array.isArray(m.range) && m.range.length === 2 && m.range.every((v) => Number.isFinite(v))))).map((m) => m.domain));
+        const domain = allowedDomains.has(desiredDomain) ? desiredDomain : "social";
+        const expected = w.PORTFOLIO.metrics.filter((m) => m.domain === domain &&
+          m.status !== "PENDING" && !!m.display &&
+          ((typeof m.value === "number" && Number.isFinite(m.value)) ||
+           (Array.isArray(m.range) && m.range.length === 2 && m.range.every((v) => Number.isFinite(v)))))
+          .map((m) => [m.id, m.display]);
+        assert.deepEqual(current, expected);
       }
     });
   }
