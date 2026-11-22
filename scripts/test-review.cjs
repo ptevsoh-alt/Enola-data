@@ -63,11 +63,14 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
-  check("review entry embeds the Drive 90-second film and three supporting short clips", () => {
+  check("review gallery embeds two seasonal TVCs and three labeled supporting clips", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
     assert.equal(clips.length, 3);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
+    assert.equal(d.querySelectorAll('#review-videos iframe').length, 2);
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
+    assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
+    assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
     clips.forEach((clip) => {
       assert.ok(clip.hasAttribute("controls"));
       assert.ok(clip.hasAttribute("playsinline"));
@@ -77,12 +80,12 @@ const fs = require("fs"),
       assert.ok(fs.existsSync(path.join(site, relative)), relative);
     });
   });
-  check("review links the published Drive film, alternate version and creative case", () => {
+  check("review links both themed Campaign TVCs and the creative strategy", () => {
     const links = [...d.querySelectorAll(".review-film-editions a")];
     assert.equal(links.length, 3);
     assert.ok(links.some(link => link.getAttribute("href").includes("15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view")));
-    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-drive-editions"));
-    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-storyline"));
+    assert.ok(links.some(link => link.getAttribute("href").includes("1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view")));
+    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-campaign-strategy"));
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
