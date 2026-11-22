@@ -77,7 +77,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["social", "gtm", "brand", "creative", "operations"];
+  const featured = ["social", "gtm", "brand", "creative", "operations", "b2b"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
@@ -92,11 +92,11 @@ const fs = require("fs"),
     });
   }
   await route("/home");
-  check("homepage links five selected works, six practice modules and distinct period metrics", () => {
+  check("homepage links six selected works, seven practice modules and distinct period metrics", () => {
     const links = [...d.querySelectorAll(".featured-nav a")];
     assert.deepEqual(links.map((item) => item.hash.split("/").at(-1)), featured);
-    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 5);
-    assert.equal(d.querySelectorAll("#strategy-map .home-route-card").length, 6);
+    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 6);
+    assert.equal(d.querySelectorAll("#strategy-map .home-route-card").length, 7);
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".home-proof-bridge a strong").textContent, "4,009");
     const summary = d.querySelector(".home-summary");
@@ -144,6 +144,11 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#launch-decisions tbody tr").length, 3);
     assert.equal(d.querySelectorAll("#launch-channel-plan tbody tr").length, 4);
   });
+  await route("/case/gtm/gtm-value-to-launch");
+  check("GTM case links consumer task, product proof, channel readiness and D7/D30", () => {
+    assert.equal(d.querySelectorAll("#gtm-value-to-launch .gtm-market-steps article").length, 4);
+    assert.ok(d.querySelector('#gtm-value-to-launch a[href="#/case/gtm/launch-d7-d30"]'));
+  });
   await route("/case/gtm/campaign-architecture");
   check("M3 Campaign architecture preserves business targets, channel roles and content pillars", () => {
     assert.ok(d.getElementById("campaign-architecture"));
@@ -185,11 +190,17 @@ const fs = require("fs"),
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
+    assert.equal(d.querySelectorAll("#video-storyline .video-story-beats li").length, 4);
+    assert.equal(d.querySelectorAll("#video-format-roles>div").length, 3);
   });
-  await route("/case/b2b/b2b-scale-comparison");
-  check("B2B same-metric comparison uses two historical approximate bounds", () => {
-    assert.equal(d.querySelectorAll("#b2b-scale-comparison .b2b-range-plot>div").length, 2);
-    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不计算增长率"));
+  await route("/case/b2b/expo-project");
+  check("overseas exhibition case combines original photos with visitor and follow-up work", () => {
+    assert.equal(d.querySelectorAll("#expo-visitor-route .expo-visitor-map article").length, 4);
+    assert.equal(d.querySelectorAll("#expo-event-plan .expo-program-grid article").length, 3);
+    assert.equal(d.querySelectorAll("#expo-team-handoff .expo-handoff-rails>div").length, 4);
+    assert.equal(d.querySelectorAll(".expo-gallery figure").length, 2);
+    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
+    assert.ok(d.querySelector("#expo-handoff"));
   });
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
