@@ -175,7 +175,7 @@
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
     operations: "组织季度主题与月度内容日历，推进文案、设计、视频、产品信息审核与渠道交付，并以 M3 主视觉返工展示具体质量管理方式。",
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
-    seo: "规划以主题指南带动 FAQ 与产品内容的搜索承接。历史阶段自然搜索收入占比 82.46%，GSC 点击量环比约增长 20%。",
+    seo: "规划以主题指南带动 FAQ 与产品内容的搜索承接。经营记录中自然搜索收入占比 82.46%，GSC 点击量环比约增长 20%。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
     creative: "展示感恩节与圣诞节完整 TVC，以及楼梯实操、客厅介绍两支 Creator 视频；结合镜头和审核说明不同传播任务。",
     crm: "搭建从用户状态识别到邮件内容、触发规则和发送排除条件的生命周期传播方案，与商品页、SEO 内容及社媒信息保持一致。",
@@ -201,7 +201,9 @@
     return numeric || range;
   }
   function metricCard(m) {
-    return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span><small>${esc(readerWindow(m))}</small><span class="metric-source">查看数据详情 ↗</span></button>`;
+    const period = readerWindow(m);
+    const visiblePeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) ? "" : `<small>${esc(period)}</small>`;
+    return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span>${visiblePeriod}<span class="metric-source">查看数据详情 ↗</span></button>`;
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
   const homeRoutes = [
@@ -385,8 +387,7 @@
     </section>`;
   }
   function shareChart() {
-    const m = metric("organic-share");
-    return `<figure class="share-chart"><div class="donut" role="img" aria-label="自然搜索收入份额 82.46%，其余渠道补数 17.54%"><b>82.46%<small>收入份额</small></b></div><figcaption><h3>自然搜索收入在渠道中的占比</h3><p>搜索内容与商品页、FAQ 形成互相承接的用户路径。</p><details class="reader-source-note"><summary>查看统计说明</summary><p>${esc(m.window)} · ${P.statuses[m.status]}。其他渠道占比由原始份额的补数表示；不同统计来源按其定义解释。</p></details><button class="text-link" data-evidence="organic-share">查看来源 ↗</button></figcaption></figure>`;
+    return `<figure class="share-chart"><div class="donut" role="img" aria-label="自然搜索收入份额 82.46%"><b>82.46%<small>收入份额</small></b></div><figcaption><h3>搜索内容对经营结果的贡献</h3><p>围绕清洁场景组织 Blog、FAQ 与商品页内容，让搜索需求进入产品理解与选购环节。</p></figcaption></figure>`;
   }
   function dataPage(domain) {
     const visibleDomains = Object.entries(P.domains).filter(([id]) => P.metrics.some((m) => m.domain === id && hasPublishableMetric(m)));
