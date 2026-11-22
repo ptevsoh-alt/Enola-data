@@ -442,7 +442,7 @@
       <section class="tvc-creative-intro" id="video-campaign-showcase">
         <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
         <h3>同一个清洁品牌，不同节日讲不同的家庭故事</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 都让产品进入人物情节，而不是将功能参数单独堆进故事。KOL / Creator 短视频则承担更直接的产品演示与使用教育。</p>
+        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 都让产品进入人物情节，而不是将功能参数单独堆进故事。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
       </section>
       <div class="tvc-work-grid" aria-label="感恩节和圣诞节两支独立 Campaign TVC">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
@@ -479,7 +479,7 @@
         <div class="tvc-campaign-bridge-grid">
           <article><span>BRAND / TVC</span><h4>情绪与记忆</h4><p>感恩节围绕感谢与相聚，圣诞节围绕日常关怀。让人物和产品动作在故事中发生联系。</p></article>
           <article><span>SOCIAL / PAID CREATIVE</span><h4>节奏与创意适配</h4><p>从完整故事中选取场景、人物和产品镜头，分别适配 Feed、Reels、视频广告等渠道的信息顺序。</p></article>
-          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>围绕楼梯清洁等具体任务设计竖屏演示、产品亮相、接触面与动作镜头，独立承担可信使用说明。</p></article>
+          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>拆分两个不同画面：楼梯清洁强调吸头接触与行进路径；客厅介绍强调人物讲解、产品识别与握持展示。</p></article>
         </div>
         <p><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道协同 ↗</a> · <a href="#/case/operations/asset-review">查看创意与物料审核 ↗</a></p>
       </section>
@@ -493,7 +493,7 @@
         </ol>
       </section>
       <section class="kol-story" id="kol-shorts">
-        <header><small>CREATOR / KOL-STYLE SHORT VIDEO</small><h3>KOL 内容｜用具体的使用情境回答产品问题</h3><p>竖屏楼梯吸尘素材以真实家庭环境、人物持机和吸头移动建立内容可信度。相比完整 TVC，短视频更强调一开始就出现清洁任务，并把产品动作留在镜头里。</p></header>
+        <header><small>CREATOR / KOL-STYLE SHORT VIDEO</small><h3>KOL 内容｜用具体的使用情境回答产品问题</h3><p>两支竖屏 Creator 内容分别选择楼梯清洁和客厅产品介绍：前者展示动作与接触面，后者由人物面对镜头介绍产品。不同的空间和镜头任务放在一起，便于看出内容策略差异。</p></header>
         <div class="g-video-gallery">
           <figure class="g-video-demo">
             <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放 KOL 风格楼梯吸尘产品演示" aria-describedby="stairs-video-note">
@@ -503,42 +503,32 @@
             <figcaption id="stairs-video-note"><h3>楼梯场景｜操作演示</h3><p>人物、扶手、踏面和吸头保持在同一生活空间中，通过移动路径让使用方式更清楚。</p></figcaption>
           </figure>
           <figure id="video-opening-comparison">
-            <video controls playsinline preload="metadata" poster="assets/projects/vacuum-video-frame.webp" aria-label="播放 KOL 风格产品亮相与楼梯清洁开场对照" aria-describedby="opening-video-note">
-              <source src="assets/video/product-opening.mp4" type="video/mp4">
-              <a href="assets/video/product-opening.mp4">观看产品开场对照</a>
+            <video controls playsinline preload="metadata" poster="assets/projects/vacuum-video-frame.webp" aria-label="播放 KOL 客厅产品介绍镜头（独立于楼梯使用演示）" aria-describedby="opening-video-note">
+              <source src="assets/video/product-opening.mp4#t=0,3" type="video/mp4">
+              <a href="assets/video/product-opening.mp4#t=0,3">观看客厅产品介绍</a>
             </video>
-            <figcaption id="opening-video-note"><h3>两种开场｜产品亮相与直接上手</h3><p>产品先出现，适合新品认知；先给出吸头接地的动作，更适合使用教育。</p></figcaption>
+            <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>人物正面展示、产品持握与讲解作为新品认知的入口；只播放原开场剪辑中的客厅段落，不再重复楼梯操作。</p></figcaption>
           </figure>
         </div>
         <p class="kol-role-note">竖屏内容与完整 TVC 的叙事方式不同：先交代清洁问题，再用人物、产品和接触动作完成体验表达。审核重点放在动作是否清晰、产品外观是否准确、开场能否快速传递主题。</p>
       </section>
-      <details class="video-cutdown" id="video-holiday-cutdown">
-        <summary>观看节庆 TVC 的短版剪辑</summary>
-        <figure>
-          <video controls playsinline preload="metadata" poster="assets/projects/holiday-scene-1.webp" aria-label="播放节庆家庭故事短版" aria-describedby="holiday-video-note">
-            <source src="assets/video/holiday-story.mp4" type="video/mp4">
-            <a href="assets/video/holiday-story.mp4">观看节庆短版剪辑</a>
-          </video>
-          <figcaption id="holiday-video-note"><strong>品牌片短版</strong><p>从完整节庆故事提取人物、清洁动作与产品画面，用于理解长片如何转化成短视频信息结构。</p></figcaption>
-        </figure>
-      </details>
       <div class="video-format-roles" id="video-format-roles" aria-label="节庆 TVC 与 KOL 内容的传播分工">
         <div><small>THANKSGIVING TVC</small><b>节庆情境与感谢</b><p>用餐桌与家庭互助进入故事，让产品功能自然承接生活场景。</p></div>
         <div><small>CHRISTMAS TVC</small><b>关怀与家庭陪伴</b><p>以默默照料建立品牌情绪，产品实际使用推动人物关系。</p></div>
-        <div><small>CREATOR / KOL</small><b>使用证明与动作教育</b><p>聚焦楼梯吸尘、持机方式和镜头开场，突出产品使用过程。</p></div>
+        <div><small>CREATOR / KOL</small><b>使用证明与动作教育</b><p>将楼梯的操作证明与客厅的人物介绍分开展示，前者解决如何使用，后者帮助快速认识产品。</p></div>
       </div>
       <div class="g-story-note" id="video-decision-strip">
         <h3>三种视频内容，各自解决不同的传播任务</h3>
         <div class="g-video-decision-grid">
           <article><small>感恩节 / TVC</small><h4>从团聚进入产品价值</h4><p>火鸡餐桌、生活问题、家人照料与双盘清洁演示组合成情绪和功能都能被理解的品牌内容。</p></article>
           <article><small>圣诞节 / TVC</small><h4>用清洁动作讲关怀</h4><p>圣诞家庭布置、年长者整理地面和家人团聚形成完整叙事，产品是人物关系中的行动。</p></article>
-          <article><small>KOL / Creator</small><h4>让用户看见具体怎么用</h4><p>竖屏楼梯短视频直达操作问题，素材重点是吸头接触、握持、移动路线和观看时长内的清晰表达。</p></article>
+          <article><small>KOL / Creator</small><h4>让用户看见具体怎么用</h4><p>楼梯演示看实际吸头路径，客厅介绍看人物展示和产品认知。两种不同内容场景分别对应操作教育与新品介绍。</p></article>
         </div>
       </div>
       <div class="g-story-note" id="video-management">
         <h3>我的创意参与与项目交付</h3>
         <p>参与节庆传播主题、创意脚本与画面审核，将品牌情绪、产品卖点和实际使用情境转化为可执行的镜头与传播物料。与产品、视觉、视频及社媒团队协作，分别检查故事连贯性、产品结构、动作真实性、字幕与渠道版本。</p>
-        <p>广告长片承担完整的故事表达；短视频围绕具体使用问题重新安排开场与镜头，而不是简单把 TVC 缩短。不同内容通过 Brief、审核和渠道版本管理保持品牌与产品信息一致。</p>
+        <p>两支 TVC 保留完整的情绪与人物叙事；Creator 内容则分别展示产品介绍与使用动作，不再从 TVC 裁切短版充当独立作品。不同内容通过 Brief、审核和渠道版本管理保持品牌与产品信息一致。</p>
         <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
