@@ -103,7 +103,7 @@ const fs = require("fs"),
           ((typeof m.value === "number" && Number.isFinite(m.value)) ||
            (Array.isArray(m.range) && m.range.length === 2 && m.range.every((v) => Number.isFinite(v)))))
           .map((m) => [m.id, m.display]);
-        assert.deepEqual(current, expected);
+        assert.deepEqual(current, JSON.parse(JSON.stringify(expected)));
       }
     });
   }
