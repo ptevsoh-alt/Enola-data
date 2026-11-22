@@ -118,7 +118,7 @@
       <div class="g-story-note" id="launch-cross-channel">
         <h3>多渠道协同｜让每个触点承担不同任务</h3>
         <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
-        <div class="g-proof-table"><table>
+        <details class="g-chart-disclosure"><summary>展开渠道物料与签核分工</summary><div class="g-proof-table"><table>
           <thead><tr><th scope="col">执行渠道</th><th scope="col">物料 Brief / 接口</th><th scope="col">谁负责放行</th><th scope="col">状态与风险</th></tr></thead>
           <tbody>
             <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>本项目为接口样例，M3 定稿待核</td></tr>
@@ -126,8 +126,8 @@
             <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>用于协作规划，未作为已发生的经销培训成果</td></tr>
             <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
           </tbody>
-        </table></div>
-        <p>我负责社媒小组的内容组织与审核，推动产品、视频、设计、投放及电商团队按统一版本完成传播素材交接。</p>
+        </table></div></details>
+        <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看真实视觉返工 ↗</a></p>
       </div>
       <div class="g-story-note" id="launch-d7-d30">
@@ -150,12 +150,23 @@
     ];
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
-        <h3>从策略到发布｜五月上市协作排期</h3>
-        <p>我围绕社媒内容任务制定排期，衔接产品信息确认、主视觉制作、视频脚本审核、渠道上线与阶段复盘。</p>
-        <ol class="g-milestone-list campaign-milestone-map">
+        <h3>五月上市协作｜内容、渠道与交付节奏</h3>
+        <p>围绕首发窗口，把产品核验、创意制作、广告准备、邮件触达、页面承接与数据复盘放进同一张营销排期图。我的主要交付是社媒内容计划、素材 Brief 和跨团队协调。</p>
+        <div class="campaign-flight-plan" role="group" aria-label="五月 Campaign 多渠道协作可视化时间轴">
+          <div class="campaign-flight-head"><b>执行工作流</b><span>5/01–10<br>定位与创意</span><span>5/11–21<br>内容制作</span><span>5/22–25<br>计划首发</span><span>5/26–31<br>持续运营</span></div>
+          <div class="campaign-flight-row"><b>社媒 / 内容</b><span>场景与信息主张</span><span>KV、短视频、FAQ</span><span>上市内容 / 互动</span><span>问题整理与调整</span></div>
+          <div class="campaign-flight-row"><b>Paid Ads</b><span>目标与受众假设</span><span>Hook 变体与 UTM</span><span>投放前 Gate</span><span>创意表现复核</span></div>
+          <div class="campaign-flight-row"><b>EDM / CRM</b><span>订阅分层与许可</span><span>邮件主题与模板</span><span>Launch Email 放行</span><span>购后信息与排除</span></div>
+          <div class="campaign-flight-row"><b>PR / Creator</b><span>角度与筛选</span><span>Brief、事实和授权</span><span>条件性合作发布</span><span>素材授权归档</span></div>
+          <div class="campaign-flight-row"><b>商品与承接</b><span>SKU / KSP 对齐</span><span>页面、FAQ、库存</span><span>购买承接核验</span><span>履约及用户反馈</span></div>
+          <div class="campaign-flight-row"><b>数据与复盘</b><span>目标与指标</span><span>事件 / 链接检查</span><span>首发观测</span><span>早期诊断与复盘</span></div>
+        </div>
+        <details class="g-chart-disclosure campaign-milestone-details"><summary>查看五个里程碑的负责人、物料与验收要求</summary>
+          <ol class="g-milestone-list campaign-milestone-map">
           ${milestones.map(([date, owner, input, approval]) => `
             <li><h4>${esc(date)}</h4><div><b>${esc(owner)}</b><p>${esc(input)}</p></div><p>${esc(approval)}</p></li>`).join("")}
-        </ol>
+          </ol>
+        </details>
         <p><a href="#/case/gtm/english-brief">查看交给创意与制作团队的英文 Brief ↗</a> · <a href="#/case/creative/video-strategy">查看品牌片与演示片的渠道分工 ↗</a></p>
       </div>`;
   }
@@ -240,6 +251,14 @@
             <article><span>07 / COMMERCE</span><h5>商品页与渠道销售资料</h5><p>统一产品结构、适用场景、参数和 FAQ；把内容流量带到清晰的选购和咨询路径。</p><dl><dt>交付</dt><dd>落地页、Amazon A+ 信息、渠道产品资料</dd><dt>复盘</dt><dd>有效访问、加购及获批的订单经营数据</dd></dl></article>
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
+        <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
+          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 渠道创意</small><h4>同一产品价值，在不同触点怎样表达</h4><p>从同一个用户问题出发，广告优先呈现注意力与动作，邮件负责解释产品和下一步。</p></div>
+          <div class="campaign-assets-pair">
+            <article class="campaign-ad-visual"><span>ADS / PAID CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>场景钩子 → 产品出场 → 双盘操作近景 → 观看完整演示</p><div class="campaign-asset-tags"><small>Hook A · 场景</small><small>Hook B · 结构</small><small>Hook C · 操作</small></div><p class="campaign-asset-caption">Meta / TikTok 广告创意方向；测试和预算由投放负责人核准。</p></article>
+            <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热邮件引导认知；上市邮件说明产品结构与适用场景；购后邮件围绕使用教育与 FAQ。</p><div class="campaign-asset-tags"><small>Subscribed</small><small>Interested</small><small>Purchased</small></div><p class="campaign-asset-caption">邮件内容、分层与退出逻辑为策划设计；实际发送受用户许可、系统就绪和商业条件约束。</p></article>
+          </div>
+          <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
+        </div>
           <details class="reader-source-note"><summary>协作范围说明</summary><p>该工作流是依据 M3 Campaign 策划文件及现行营销规则组织的整合传播方案。我负责社媒内容规划和内容侧项目协同；广告账户、发送系统、订单及渠道发布由各自负责人实施和确认。没有在本案例中把规划中的投放预算、邮件发送或归因收入记为实际结果。</p></details>
         </section>
         <div class="campaign-lens-grid">
