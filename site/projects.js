@@ -264,6 +264,13 @@
         </div>
         <section class="campaign-operations-map" id="campaign-activation" aria-label="Campaign 从策划到各渠道激活的工作分工">
           <header><small>INTEGRATED ACTIVATION</small><h4>一条主线，八种传播任务</h4><p>统一产品信息、Campaign 主张与素材版本；不同渠道沿着认知、理解、行动和关系维护的路径协作。</p></header>
+          <div class="v-activation-journey" id="campaign-channel-path" aria-label="Campaign渠道在四个用户决策阶段中的任务">
+            <div><small>01 / AWARENESS</small><strong>让问题被看见</strong><p>Social · Paid · PR</p><span>家庭场景 / Campaign 主题</span></div>
+            <div><small>02 / EXPLAIN</small><strong>帮助理解产品</strong><p>Video · Creator · SEO</p><span>双盘动作 / 结构 / FAQ</span></div>
+            <div><small>03 / ACTION</small><strong>核对购买信息</strong><p>Commerce · CRM · Paid</p><span>页面信息 / 许可触达 / 可售条件</span></div>
+            <div><small>04 / RELATIONSHIP</small><strong>让反馈进入下一轮</strong><p>Group · CRM · Data</p><span>使用教育 / 问题回收 / 复盘</span></div>
+          </div>
+          <details class="v-channel-detail"><summary><span>渠道工作流</span><b>展开八条渠道的 Brief、物料与复盘任务</b></summary>
           <div class="campaign-workstreams">
             <article><span>01 / OWNED SOCIAL</span><h5>内容运营</h5><p>以季度主题组织 Feed、Story、Reels 和社群内容，按用户问题安排教程、产品演示和互动。</p><dl><dt>交付</dt><dd>内容矩阵、发布日历、KV / 视频 Brief</dd><dt>复盘</dt><dd>曝光、互动质量、视频观看与有效点击</dd></dl></article>
             <article><span>02 / PAID ADS</span><h5>投放创意与素材测试</h5><p>围绕场景问题、产品结构和操作演示规划不同创意家族；按 Awareness、Consideration 和获批的 Conversion 任务分配测试。</p><dl><dt>交付</dt><dd>广告素材变体、受众假设、测试方案与落地页接口</dd><dt>复盘</dt><dd>观看与点击质量；订单与获客成本由投放及数据负责人核对</dd></dl></article>
@@ -274,6 +281,7 @@
             <article><span>07 / COMMERCE</span><h5>商品页与渠道销售资料</h5><p>统一产品结构、适用场景、参数和 FAQ；把内容流量带到清晰的选购和咨询路径。</p><dl><dt>交付</dt><dd>落地页、Amazon A+ 信息、渠道产品资料</dd><dt>复盘</dt><dd>有效访问、加购及获批的订单经营数据</dd></dl></article>
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
+          </details>
         <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
           <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 渠道创意</small><h4>同一产品价值，在不同触点怎样表达</h4><p>从同一个用户问题出发，广告优先呈现注意力与动作，邮件负责解释产品和下一步。</p></div>
           <div class="campaign-assets-pair">
@@ -284,12 +292,15 @@
         </div>
           
         </section>
-        <div class="campaign-lens-grid">
-          <article><small>BUSINESS / 首要结果</small><h4>准备可交易、可交付的上市路径</h4><p>围绕新品认知、产品理解和购买承接设计内容目标，并将渠道表现与商业反馈衔接。</p></article>
-          <article><small>AUDIENCE / 起始问题</small><h4>餐后硬地为什么值得先讲</h4><p>通过厨房与餐区的日常问题，让消费者先认出清洁需求，再理解双盘拖把的使用方式。</p></article>
-          <article><small>MESSAGE / 创意主张</small><h4 lang="en">Make Room for What Matters</h4><p>以家庭日常时刻承接情绪价值，通过场景与产品动作建立统一传播记忆。</p></article>
-          <article><small>PROOF / 放行条件</small><h4>产品结构与真实演示</h4><p>主视觉呈现产品外观，演示视频展示双盘运转、地面接触与推进动作。</p></article>
-        </div>
+        <section class="v-campaign-logic" id="campaign-decision-logic" aria-label="Campaign 策略决策路径">
+          <header><small>THE STRATEGY IN ONE VIEW</small><h4>把一个生活问题，转化成整合传播的核心故事</h4></header>
+          <div class="v-campaign-logic-steps">
+            <article><span>CONTEXT</span><strong>餐后硬地清洁</strong><small>用户真正面对的日常任务</small></article>
+            <article><span>INSIGHT</span><strong>希望清洁更顺手</strong><small>先理解场景，再介绍工具</small></article>
+            <article class="is-idea"><span>BIG IDEA</span><strong>Make Room for What Matters</strong><small>让清洁行动回到家庭生活</small></article>
+            <article><span>PROOF</span><strong>结构 × 连续操作</strong><small>产品外观、动作与 FAQ 各有证据</small></article>
+          </div>
+        </section>
         <div class="campaign-journey" aria-label="Campaign 用户决策阶段与渠道任务">
           <div><span>01 · Awareness</span><strong>识别场景</strong><p>Facebook / Instagram：餐后问题、家庭情境、品牌主题</p></div>
           <div><span>02 · Consideration</span><strong>理解产品</strong><p>Reels / Shorts：真实运动；FAQ：适用条件；Creator：授权体验</p></div>
@@ -298,6 +309,18 @@
         </div>
         <details class="g-chart-disclosure" id="campaign-content-matrix">
           <summary>展开 Campaign 内容矩阵与渠道角色</summary>
+          <div class="v-content-matrix" aria-label="八个内容支柱与四个传播阶段对应关系">
+            <div class="v-matrix-head"><b>内容支柱</b><span>认知</span><span>理解</span><span>行动</span><span>持续</span></div>
+            <div class="v-matrix-row"><b>场景问题</b><i class="hit" aria-label="对应认知阶段">●</i><i>·</i><i>·</i><i>·</i></div>
+            <div class="v-matrix-row"><b>情绪与品牌</b><i class="hit" aria-label="对应认知阶段">●</i><i>·</i><i>·</i><i>·</i></div>
+            <div class="v-matrix-row"><b>产品机制</b><i>·</i><i class="hit" aria-label="对应理解阶段">●</i><i>·</i><i>·</i></div>
+            <div class="v-matrix-row"><b>操作教育</b><i>·</i><i class="hit" aria-label="对应理解阶段">●</i><i>·</i><i>·</i></div>
+            <div class="v-matrix-row"><b>FAQ 与异议</b><i>·</i><i class="hit" aria-label="对应理解阶段">●</i><i class="hit" aria-label="对应行动阶段">●</i><i>·</i></div>
+            <div class="v-matrix-row"><b>Creator / UGC</b><i class="hit" aria-label="对应认知阶段">●</i><i class="hit" aria-label="对应理解阶段">●</i><i>·</i><i>·</i></div>
+            <div class="v-matrix-row"><b>转化承接</b><i>·</i><i>·</i><i class="hit" aria-label="对应行动阶段">●</i><i>·</i></div>
+            <div class="v-matrix-row is-secondary"><b>品牌组合（辅助）</b><i>·</i><i>·</i><i>·</i><i class="hit" aria-label="对应持续阶段">●</i></div>
+          </div>
+          <p class="v-matrix-help">实心圆表示该内容在传播路径中的主要任务。点击下方原有内容矩阵可查看渠道、素材和审核依赖。</p>
           <div class="g-proof-table"><table class="campaign-content-table">
             <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
             <tbody>
