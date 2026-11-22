@@ -15,7 +15,7 @@
       );
   const m = (id) => P.metrics.find((x) => x.id === id);
   const evidence = (id) =>
-    `<button class="g-evidence" data-evidence="${id}">定义、窗口与来源 ↗</button>`;
+    `<button class="g-evidence" data-evidence="${id}">查看数据详情 ↗</button>`;
   const metric = (id) => {
     const x = m(id);
     return `<article class="g-kpi" data-growth-metric="${id}"><p>${esc(x.label)}</p><button data-evidence="${id}" aria-label="${esc(x.label)} ${esc(x.display)}，打开证据"><strong>${esc(x.display)}</strong></button><small>${esc(x.platform)} · ${P.statuses[x.status]}</small><p class="g-window">${esc(x.window)}</p>${evidence(id)}</article>`;
@@ -26,7 +26,7 @@
     [
       "Social Media Foundation",
       "账号基础与矩阵搭建",
-      "推动 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容体系从 0 到 1；0→8K+ 账号规模记录的字段与起止日期待核。",
+      "推动 Facebook、Instagram 品牌账号与美国 Facebook Group 的内容体系从 0 到 1，建立渠道角色、内容规划和审核机制。",
       "PENDING",
       true,
     ],
@@ -198,22 +198,11 @@
       ${header(
         "FACEBOOK PAGE / 后台截图记录",
         "Facebook 页面关键数据",
-        "五项汇总数据及平台显示的变化值。点选任一指标查看定义、统计窗口与来源。",
+        "展示 Facebook 品牌页面的内容浏览、互动、链接点击、访问与关注表现。",
       )}
       <div class="g-snapshot-grid">${ids
         .map((id) => {
           const x = m(id);
-          const change = x.changeDisplay
-            ? `<div class="g-snapshot-change">
-                <span>后台显示变化</span>
-                <strong>${esc(x.changeDisplay)}</strong>
-                <small>比较周期未注明</small>
-              </div>`
-            : `<div class="g-snapshot-change is-muted">
-                <span>历史对照</span>
-                <strong>未提供</strong>
-                <small>截图未提供可核验的变化值</small>
-              </div>`;
           return `<article class="g-snapshot-card" data-growth-metric="${id}">
             <div class="g-snapshot-card-top">
               <b>${esc(x.label)}</b>
@@ -222,57 +211,55 @@
               <strong>${esc(x.display)}</strong>
               <span>${esc(x.unit)}</span>
             </div>
-            ${change}
-            <button type="button" data-evidence="${id}" aria-label="${esc(x.label)}，查看字段定义与来源">查看字段定义与来源 ↗</button>
+            <button type="button" data-evidence="${id}" aria-label="查看${esc(x.label)}数据详情">查看数据详情 ↗</button>
           </article>`;
         })
         .join("")}</div>
-      <p class="g-chart-note">数据来自 Facebook 页面分析；不同统计字段用于观察展示、互动和导流表现。</p>
+
     </section>`;
   }
   function historyCard(id) {
     const x = m(id);
-    const pending = x.status === "PENDING";
     const value = ["group", "group-growth-1k"].includes(id) ? `${x.display} 人` : x.display;
+    const context = {
+      "group-growth-1k": "社群历史增长",
+      group: "单阶段新增成员",
+      "fb-reach": "Facebook 覆盖",
+      "fb-link-click-change": "Facebook 链接点击表现",
+      "engagement-change": "Meta 内容互动表现",
+      "ig-follower-change": "Instagram 账号增长",
+    };
     return `<article class="g-history-card" data-growth-metric="${id}">
-      <div class="g-history-meta">
-        <span>${esc(x.platform)}</span>
-        <small class="${pending ? "is-pending" : "is-documented"}">${esc(P.statuses[x.status])}</small>
-      </div>
-      <button type="button" class="g-history-main" data-evidence="${id}" aria-label="${esc(x.label)} ${esc(value)}，查看证据">
-        <span>${esc(x.label)}</span>
+      <div class="g-history-meta"><span>${esc(x.platform)}</span></div>
+      <button type="button" class="g-history-main" data-evidence="${id}" aria-label="查看${esc(x.label)}数据详情">
+        <span>${esc(context[id] || x.label)}</span>
         <strong>${esc(value)}</strong>
       </button>
-      <p>${esc(x.window)}</p>
-      <details class="reader-source-note"><summary>指标说明</summary><small>${esc(x.limits)}</small></details>
     </article>`;
   }
   function historicalGrowth() {
     const groups = [
       {
         title: "Meta / Facebook",
-        note: "平台阶段变化记录",
+        note: "覆盖、内容互动与链接表现",
         ids: ["engagement-change", "fb-reach", "fb-link-click-change"],
       },
       {
         title: "Instagram",
-        note: "活动期与历史阶段记录",
-        ids: [
-          "ig-event-engagement-change",
-          "ig-follower-change",
-        ],
+        note: "账号规模变化",
+        ids: ["ig-follower-change"],
       },
       {
         title: "Facebook Group",
-        note: "社群成员增长记录",
+        note: "不同阶段的社群运营表现",
         ids: ["group", "group-growth-1k"],
       },
     ];
     return `<section class="g-history-growth">
       ${header(
-        "HISTORICAL GROWTH / 过往项目",
-        "过往项目的增长表现",
-        "这里汇总 Meta、Facebook、Instagram 与社群的历史记录。平台、账号和统计周期并不完全相同，因此分组展示，不按百分比排名。",
+        "CHANNEL PERFORMANCE / 品牌传播与增长",
+        "多平台传播与社群增长",
+        "将品牌传播、内容互动、链接表现与社群增长放在各自的业务场景中展示。",
       )}
       <div class="g-history-groups">${groups
         .map(
@@ -285,11 +272,8 @@
           </section>`,
         )
         .join("")}</div>
-      <p class="g-history-footnote">点击指标可查看统计窗口、来源与口径说明。</p>
+
     </section>`;
-  }
-  function anchors() {
-    return `<div class="g-evidence-anchors"><div><p class="eyebrow">TIME ANCHORS / 活动与数据</p><h3>知道发生了什么，也说明尚缺什么。</h3></div><article><span>已知年份 / 2025</span><b>Meta 阶段汇总</b><p>曝光与互动有历史汇总，缺少逐期原值。</p>${evidence("impressions")}</article><article><span>活动节点 / 日期待补</span><b>Instagram 活动期互动变化</b><p>原记录 +1,870.9%；具体活动、比较基期与日期未注明。不绑定到任一概念活动。</p>${evidence("ig-event-engagement-change")}</article><article><span>社群窗口 / 2025/11/02–2026/09/30</span><b>查看与参与分别记录</b><p>平台截图所选分析范围，不是活动举办日期。无活动级归因。</p>${evidence("group-posters")}</article></div>`;
   }
   function sourceEvidence() {
     return `<section class="g-module g-source-evidence" aria-label="平台后台趋势截图证据">
@@ -328,45 +312,6 @@
       <div class="g-source-evidence-actions"><a href="#/case/social">返回社媒管理案例 ↗</a><a href="#/case/community">查看 Facebook Group 社群案例 ↗</a></div>
     </section>`;
   }
-  function trends() {
-    return `<p class="g-chart-note">Facebook Page 和 Group 的现有数据为阶段汇总。日级或周级趋势需使用连续日期导出。</p>`;
-  }
-  const platformGroups = {
-    Meta: ["impressions", "engagements", "er"],
-    Facebook: [
-      "fb-reach",
-      "fb-link-click-change",
-      "fb-views",
-      "fb-content-interactions",
-      "fb-link-clicks",
-    ],
-    Instagram: ["ig-event-engagement-change", "ig-follower-change"],
-    Group: ["group-members", "group-posters", "group-viewers"],
-  };
-  function platformCards(platform) {
-    return platformGroups[platform].map(metric).join("");
-  }
-  function platformView() {
-    return `<section class="g-module" data-platform-module>${header("PLATFORM SIGNALS", "平台各司其职，结果分别阅读。", "用于对照各平台的角色与可用证据；口径与窗口不同，不作增长高低排名。")}<div class="g-platform-tabs" role="group" aria-label="平台筛选">${Object.keys(
-      platformGroups,
-    )
-      .map(
-        (x, i) =>
-          `<button data-g-platform="${x}" aria-pressed="${i === 0}">${x}</button>`,
-      )
-      .join(
-        "",
-      )}</div><div class="g-platform-grid" data-platform-cards aria-live="polite">${platformCards("Meta")}</div><div class="g-role-matrix">${[
-      ["Facebook", "品牌信息 / 链接导流", "覆盖与点击是不同字段"],
-      ["Instagram", "视觉演示 / 活动沟通", "活动期互动变化不等于成交"],
-      ["Group", "讨论 / 问题反馈", "成员、查看和参与人数分别解读"],
-    ]
-      .map(
-        (x) =>
-          `<article><b>${x[0]}</b><h3>${x[1]}</h3><p>${x[2]}</p></article>`,
-      )
-      .join("")}</div></section>`;
-  }
   function association() {
     return `<section class="g-module g-association">${header("BUSINESS CONNECTION", "从内容信号，回到业务问题。", "以下是分析路径，不是可计算的转化漏斗。缺少同范围分母、归因或对照时不建立因果关系。")}${pathSteps(
       [
@@ -380,14 +325,12 @@
   function growth() {
     return `<section class="g-module g-growth" id="growth-overview">
       ${header(
-        "GROWTH / EVIDENCE FIRST",
-        "社媒增长：历史变化与页面表现",
-        "按平台、账号和统计阶段阅读已有记录；不同指标不放在同一尺度上比较，也不把阶段汇总推算成月度趋势。",
+        "SOCIAL PERFORMANCE / 传播与增长",
+        "社媒传播成果",
+        "从品牌内容表现到用户参与，呈现不同平台的实际运营成果。",
       )}
       ${facebookSnapshot()}
       ${historicalGrowth()}
-      ${trends()}
-      ${anchors()}
       ${sourceEvidence()}
     </section>`;
   }
@@ -668,7 +611,7 @@
           ?.insertAdjacentHTML("afterend", growth());
         main
           .querySelector(".page")
-          ?.insertAdjacentHTML("beforeend", platformView() + association());
+          ?.insertAdjacentHTML("beforeend", association());
       } else if (domain === "community")
         main
           .querySelector(".page")
@@ -708,15 +651,6 @@
     if (!b) return;
     if (b.matches("[data-filter], [data-reset]"))
       queueMicrotask(() => decorateCovers(document.querySelector("main")));
-    if (b.hasAttribute("data-g-platform")) {
-      const module = b.closest("[data-platform-module]");
-      module
-        .querySelectorAll("[data-g-platform]")
-        .forEach((x) => x.setAttribute("aria-pressed", String(x === b)));
-      module.querySelector("[data-platform-cards]").innerHTML = platformCards(
-        b.dataset.gPlatform,
-      );
-    }
     if (b.hasAttribute("data-g-topic")) {
       const module = b.closest(".g-community");
       module
