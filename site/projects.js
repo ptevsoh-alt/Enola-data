@@ -372,23 +372,23 @@
         <div class="v-creative-gallery" aria-label="五种创意机制与视觉方向">
           <article class="v-creative-card">
             <div class="v-creative-art is-scene"><span>01 / PAIN POINT</span><b>AFTER<br>DINNER</b><small>生活任务先出现</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><h3>The After-Dinner Reset</h3><p>以餐后地面问题引入使用任务，让产品操作自然发生。</p><span><b>画面任务</b> 真实场景与连续操作</span></div>
+            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 问题显化</span><h3>The After-Dinner Reset</h3><p>以餐后地面问题引入使用任务，让产品操作自然发生。</p><span><b>画面任务</b> 真实场景与连续操作</span></div>
           </article>
           <article class="v-creative-card">
             <div class="v-creative-art is-motion"><span>02 / MECHANISM</span><b>SEE THE<br>MOTION</b><small>双盘动作被看见</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><h3>See the Motion</h3><p>通过运转、接地与移动路径解释清洁工具如何工作。</p><span><b>画面任务</b> 真实运行和结构细节</span></div>
+            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 机制揭示</span><h3>See the Motion</h3><p>通过运转、接地与移动路径解释清洁工具如何工作。</p><span><b>画面任务</b> 真实运行和结构细节</span></div>
           </article>
           <article class="v-creative-card">
             <div class="v-creative-art is-relationship"><span>03 / EMOTION</span><b>WHAT<br>MATTERS</b><small>清洁与家庭生活相连</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><h3>Make Room for What Matters</h3><p>将日常清洁动作放进人物关系中，用情绪承接品牌价值。</p><span><b>画面任务</b> 人物、生活与产品</span></div>
+            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 关系价值转移</span><h3>Make Room for What Matters</h3><p>将日常清洁动作放进人物关系中，用情绪承接品牌价值。</p><span><b>画面任务</b> 人物、生活与产品</span></div>
           </article>
           <article class="v-creative-card">
             <div class="v-creative-art is-detail"><span>04 / PRODUCT DETAIL</span><b>A CLOSER<br>LOOK</b><small>让结构一目了然</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><h3>A Closer Look at M3</h3><p>以双盘底座、手柄和电池位置降低产品理解成本。</p><span><b>画面任务</b> 官方结构图与已核准信息</span></div>
+            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 细节证明</span><h3>A Closer Look at M3</h3><p>以双盘底座、手柄和电池位置降低产品理解成本。</p><span><b>画面任务</b> 官方结构图与已核准信息</span></div>
           </article>
           <article class="v-creative-card">
             <div class="v-creative-art is-home"><span>05 / REAL EXPERIENCE</span><b>REAL<br>HOME</b><small>回到实际使用环境</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><h3>Real Home, Real Reset</h3><p>通过 Creator 的家居体验视角交代使用方式和场景。</p><span><b>画面任务</b> 使用过程与授权素材</span></div>
+            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 真实体验证明</span><h3>Real Home, Real Reset</h3><p>通过 Creator 的家居体验视角交代使用方式和场景。</p><span><b>画面任务</b> 使用过程与授权素材</span></div>
           </article>
         </div>
         <p class="v-creative-foot">创意方向用于指导 Brief、KV 和视频镜头。涉及运转、性能和实际体验的证明，以真实素材及已批准的产品事实为依据。</p>
