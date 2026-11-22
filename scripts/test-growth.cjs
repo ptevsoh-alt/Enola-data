@@ -211,14 +211,13 @@ const fs = require("fs"),
     assert.equal(section.querySelectorAll(".g-decision-card").length, 4);
     for (const id of ["fb-views", "fb-content-interactions", "fb-link-clicks", "fb-visits", "group-viewers", "group-posters", "group-members"])
       assert.ok(section.querySelector(`.g-decision-metric[data-growth-metric="${id}"]`), id);
-    assert.ok(section.textContent.includes("不等于订单或收入"));
+    assert.ok(section.textContent.includes("从数据复盘到下一轮内容决策"));
     assert.equal(section.querySelectorAll(".g-decision-card")[0].querySelector("h3").textContent, "页面浏览量");
     assert.equal(section.querySelectorAll(".g-decision-card")[1].querySelector("h3").textContent, "内容互动");
     assert.equal(section.querySelectorAll(".g-decision-card")[2].querySelector("h3").textContent, "链接与页面访问");
     assert.ok(!section.textContent.includes("内容触达"));
     assert.ok(!section.textContent.includes("站点导流"));
-    assert.ok(section.textContent.includes("计算活跃率或成员转化率"));
-    assert.ok(section.textContent.includes("不是单项内容的因果归因"));
+    assert.ok(section.textContent.includes("更新内容与社群计划"));
     assert.ok(section.querySelector('a[href="#/data/social"]'));
     assert.ok(section.querySelector('a[href="#/case/community"]'));
   });
@@ -236,11 +235,11 @@ const fs = require("fs"),
       [...d.querySelectorAll(".g-social-community-grid .g-social-community-card")].map((x) => x.dataset.growthMetric),
       ["group-members", "group-posters", "group-viewers"],
     );
-    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("1K+"));
-    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("+227"));
-    assert.ok(d.querySelector(".g-social-community-note").textContent.includes("不合并为增长率或活跃率"));
+    assert.equal(d.querySelector(".g-social-community-note"), null);
+    assert.ok(d.querySelector(".g-social-community-growth").textContent.includes("1K+"));
+    assert.ok(d.querySelector(".g-social-community-growth").textContent.includes("+227"));
     assert.ok(d.querySelector('.g-social-community-actions a[href="#/case/community"]'));
-    assert.ok(d.querySelector('.g-social-community-actions a[href="#/data/social"]'));
+    assert.ok(d.querySelector('.g-social-community-actions a[href="#/data/community"]'));
   });
   check("B2B Facebook follower scale is not mixed into the social case", () => {
     assert.equal(d.querySelectorAll('[data-growth-metric="fb-follower-scale"]').length, 0);
@@ -257,9 +256,19 @@ const fs = require("fs"),
   d.querySelector('[data-close="evidence-dialog"]').click();
   check("aggregate data never supplies a fabricated daily series", () => {
     assert.equal(w.PORTFOLIO_GROWTH.series.length, 0);
-    assert.ok(
-      d.querySelector(".g-growth").textContent.includes("连续日期导出"),
-    );
+    assert.equal(d.querySelector(".g-evidence-anchors"), null);
+    assert.equal(d.querySelector("[data-platform-module]"), null);
+  });
+  check("HR-facing social page avoids technical caveat sections", () => {
+    assert.equal(d.querySelector(".g-evidence-anchors"), null);
+    assert.equal(d.querySelector("[data-platform-module]"), null);
+    assert.equal(d.querySelector(".g-history-footnote"), null);
+    assert.equal(d.querySelector(".g-social-community-note"), null);
+    assert.equal(d.querySelector(".g-source-evidence-collapsed").tagName, "DETAILS");
+    assert.ok(!d.querySelector(".g-source-evidence-collapsed").open);
+    for (const text of ["TIME ANCHORS", "平台各司其职", "历史增长记录；具体统计窗口未注明", "不是统计期间的新增人数"]) {
+      assert.ok(!d.querySelector(".g-growth").textContent.includes(text), text);
+    }
   });
   check("Facebook source evidence contains two anonymized backend screenshots", () => {
     const cards = d.querySelectorAll(".g-source-evidence-card");
@@ -279,19 +288,15 @@ const fs = require("fs"),
     assert.ok(d.querySelector('.g-source-evidence-actions a[href="#/case/community"]'));
   });
   await route("/data/social");
-  d.querySelector('[data-g-platform="Instagram"]').click();
-  check("Instagram filter preserves metric identities", () => {
-    assert.deepEqual(
-      [...d.querySelectorAll("[data-platform-cards] [data-growth-metric]")].map(
-        (e) => e.dataset.growthMetric,
-      ),
-      ["ig-event-engagement-change", "ig-follower-change"],
-    );
+  check("social results have no audit-style platform selector", () => {
+    assert.equal(d.querySelector("[data-platform-module]"), null);
+    assert.equal(d.querySelector(".g-evidence-anchors"), null);
+    assert.ok(d.querySelector(".data-kpis"));
   });
-  const evidence = d.querySelector("[data-platform-cards] [data-evidence]");
+  const evidence = d.querySelector('.data-kpis [data-evidence="ig-follower-change"]');
   evidence.focus();
   evidence.click();
-  check("new KPI invokes existing evidence drawer", () =>
+  check("social KPI still opens source drawer", () =>
     assert.ok(d.querySelector("#evidence-dialog").open),
   );
   await route("/cases");
@@ -393,23 +398,10 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll(".g-bar-row, .g-chart-scale").length, 0);
     assert.ok(!d.querySelector(".g-snapshot-chart").textContent.includes("内容表现的数量级"));
   });
-  check("Facebook backend change values stay attached to their own fields", () => {
-    const expected = new Map([
-      ["fb-content-interactions", "↑ 1,358.3%"],
-      ["fb-link-clicks", "↑ 1.7万%"],
-      ["fb-visits", "↑ 1,517.8%"],
-      ["fb-follows", "↑ 2,129.2%"],
-    ]);
-    for (const [id, value] of expected) {
-      const card = d.querySelector(`.g-snapshot-card[data-growth-metric="${id}"]`);
-      assert.ok(card.textContent.includes(value), id);
-      assert.ok(card.textContent.includes("比较周期未注明"), id);
-      assert.ok(card.querySelector(".g-snapshot-change").textContent.includes(value));
-    }
-    assert.ok(
-      d.querySelector('.g-snapshot-card[data-growth-metric="fb-views"]').textContent.includes("未提供"),
-    );
-    assert.equal(d.querySelector(".g-compare-chart, .bar-row, [role='progressbar']"), null);
+  check("Facebook case shows five business metrics without unanchored comparison percentages", () => {
+    assert.equal(d.querySelectorAll(".g-snapshot-card").length, 5);
+    assert.equal(d.querySelectorAll(".g-snapshot-change").length, 0);
+    assert.ok(!d.querySelector(".g-snapshot-chart").textContent.includes("比较周期未注明"));
     const summary = d.querySelector(".g-meta-summary");
     assert.deepEqual([...summary.querySelectorAll(".metric")].map((card) => card.dataset.evidence), ["impressions", "engagements"]);
     assert.ok(summary.querySelector('[data-evidence="er"]'));
@@ -420,9 +412,9 @@ const fs = require("fs"),
     assert.ok(days.every((day) => day.querySelector('[lang="en"]') && day.querySelector('summary b')));
   });
   check("social historical growth is grouped by social channel without B2B metrics", () => {
-    assert.equal(d.querySelectorAll(".g-history-card").length, 7);
+    assert.equal(d.querySelectorAll(".g-history-card").length, 6);
     assert.equal(d.querySelectorAll(".g-history-group").length, 3);
-    assert.ok(d.querySelector(".g-history-growth").textContent.includes("不按百分比排名"));
+    assert.ok(d.querySelector(".g-history-growth").textContent.includes("多平台传播与社群增长"));
     assert.ok(d.querySelector(".g-history-growth").textContent.includes("Instagram"));
     assert.ok(!d.querySelector(".g-history-growth").textContent.includes("LinkedIn"));
     assert.deepEqual(
@@ -431,7 +423,6 @@ const fs = require("fs"),
         "engagement-change",
         "fb-reach",
         "fb-link-click-change",
-        "ig-event-engagement-change",
         "ig-follower-change",
         "group",
         "group-growth-1k",
@@ -441,7 +432,7 @@ const fs = require("fs"),
   check("Facebook Group 1K+ growth is documented separately from +227", () => {
     const growth = d.querySelector('.g-history-card[data-growth-metric="group-growth-1k"]');
     const stage = d.querySelector('.g-history-card[data-growth-metric="group"]');
-    assert.ok(growth.querySelector(".is-documented"));
+    assert.equal(growth.querySelector(".reader-source-note"), null);
     assert.ok(growth.textContent.includes("1K+"));
     assert.ok(!growth.textContent.includes("≈1K/月"));
     assert.ok(stage.textContent.includes("+227"));
