@@ -2541,3 +2541,20 @@
 @media(max-width:700px){.expo-concept-heading{grid-template-columns:1fr;}.expo-space-track{grid-template-columns:repeat(2,minmax(0,1fr));}.expo-space-stop{min-height:9rem;}.expo-space-stop strong{font-size:1.65rem;}.seasonal-art-grid,.seasonal-art-decision{grid-template-columns:1fr;}}
 @media(max-width:540px){.expo-space-track,.expo-asset-grid,.expo-activation-grid,.expo-activation-rhythm{grid-template-columns:minmax(0,1fr);}.expo-asset-wide{grid-column:auto;display:flex;}.expo-asset-preview.backdrop{min-height:11rem;}.expo-asset-preview.rollup{width:min(70%,12rem);}.expo-space-focus{flex-direction:column;gap:.3rem;}.expo-space-stop{min-height:7.7rem;}.expo-space-stop em{margin-top:.3rem;}.expo-concept-signal{padding:1rem;}}
 @media(prefers-reduced-motion:reduce){.expo-space-stop{transition:none;transform:none!important;}}
+
+/* Case index — project thumbnail, decision and an actual deliverable at a glance. */
+.visual-grid .case-card-editorial {min-width:0;display:flex;flex-direction:column;background:#fffefa;border:1px solid #d4ded4;border-radius:.45rem;overflow:hidden;transition:border-color .18s ease,transform .18s ease,box-shadow .18s ease;}
+.visual-grid .case-card-editorial:hover {transform:translateY(-3px);border-color:#719579;box-shadow:0 12px 28px rgba(35,62,43,.08);}
+.visual-grid .case-card-editorial>.cover-link {display:block;overflow:hidden;}
+.visual-grid .case-card-editorial .project-cover {aspect-ratio:1.7;padding:1rem;}
+.visual-grid .case-card-editorial .cover-link:hover img {transform:scale(1.025);}
+.case-card-body {padding:1.05rem 1.2rem 1.2rem;display:flex;flex-direction:column;flex:1;min-width:0;}
+.case-card-body>.card-meta {display:flex;align-items:center;gap:.5rem;font-size:.72rem;color:#55745b;font-weight:720;letter-spacing:.07em;margin-bottom:.35rem;}
+.case-card-body h3 {font-size:clamp(1.06rem,1.65vw,1.3rem);line-height:1.5;margin:.35rem 0 .45rem;}
+.case-card-body>p {font-size:.82rem;color:#4d5c50;line-height:1.75;margin:0 0 .75rem;display:-webkit-box;-webkit-line-clamp:3;-webkit-box-orient:vertical;overflow:hidden;}
+.case-card-result {border-top:1px solid #dbe4db;padding-top:.75rem;margin-top:auto;display:flex;flex-direction:column;gap:.45rem;align-items:flex-start;}
+.case-card-result strong {font-size:.75rem;color:#356247;line-height:1.5;}
+.case-card-result>a {font-size:.78rem;font-weight:700;color:var(--accent);text-decoration:underline;text-underline-offset:3px;}
+.case-card-result>a:focus-visible {outline:3px solid #bf9f59;outline-offset:3px;}
+@media(max-width:650px){.visual-grid .case-card-editorial .project-cover{aspect-ratio:1.65;}.case-card-body{padding:1rem;}}
+@media(prefers-reduced-motion:reduce){.visual-grid .case-card-editorial{transition:none;transform:none!important;}}
