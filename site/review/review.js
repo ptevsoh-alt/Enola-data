@@ -103,43 +103,20 @@
 
   const cases = P.cases
     .map((item) => {
-      const count = Array.isArray(item.metrics) ? item.metrics.length : 0;
-      const status = P.statuses[item.status] || item.status;
       const searchText = [
-        item.no,
-        item.title,
-        item.subtitle,
-        item.category,
-        item.role,
-        item.scope,
+        item.no, item.title, item.subtitle, item.category, item.role, item.scope,
       ].join(" ");
       return (
         '<article class="review-case-card" data-review-case-card data-search="' +
         esc(searchText) +
-        '">' +
-        '<div class="review-case-top"><span>' +
-        esc(item.no) +
-        " / " +
-        esc(item.category || item.subtitle) +
-        '</span><span class="review-status">' +
-        esc(status) +
-        "</span></div>" +
-        '<p class="review-case-type">' +
-        esc(item.subtitle) +
-        "</p>" +
-        "<h3>" +
-        esc(item.title) +
-        "</h3>" +
-        '<p class="review-case-role">' +
-        esc(item.role) +
-        '</p><div class="review-case-bottom"><span>' +
-        esc(count) +
-        " 项关联指标</span><a href=\"" +
-        caseHref(item.id) +
-        '\">查看案例 ↗</a></div></article>'
+        '"><div class="review-case-top"><span>' + esc(item.no) + " / " + esc(item.category || item.subtitle) +
+        '</span></div><p class="review-case-type">' + esc(item.subtitle) +
+        "</p><h3>" + esc(item.title) + "</h3>" +
+        '<p class="review-case-role">' + esc(item.role) +
+        '</p><div class="review-case-bottom"><a href="' + caseHref(item.id) +
+        '">阅读项目案例 ↗</a></div></article>'
       );
-    })
-    .join("");
+    }).join("");
   $("#review-case-grid").innerHTML = cases;
 
   const visuals = [
