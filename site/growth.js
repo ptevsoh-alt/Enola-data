@@ -252,6 +252,14 @@
           <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>直接管理社媒内容小组，协调产品、视觉、视频和电商；用实际主视觉返工展示审核判断。</p><span>社媒小组与视觉返工案例 ↗</span></a>
           <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>2025 年 Meta 内容曝光 96.5 万、互动 3.7 万次；结合实际表现安排后续选题和渠道动作。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
         </div>
+        <nav class="home-visual-jumps" aria-label="直接查看 GTM 和 Campaign 关键可视化">
+          <span>项目图解 / QUICK VIEW</span>
+          <a href="#/case/gtm/campaign-architecture">Campaign 策略</a>
+          <a href="#/case/gtm/gtm-visual-schedule">五月上市排期</a>
+          <a href="#/case/gtm/gtm-channel-orchestration">跨渠道协作</a>
+          <a href="#/case/gtm/campaign-mechanism-mapping">五种创意方向</a>
+          <a href="#/case/gtm/market-adaptation">美英本地化</a>
+        </nav>
       </section>
       <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
         <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">按项目主题浏览</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
