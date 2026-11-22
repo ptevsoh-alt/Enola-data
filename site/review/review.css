@@ -845,3 +845,13 @@
 .review-video-footnote { color: var(--muted); font-size: .8rem; }
 @media(max-width:880px){.review-video-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
 @media(max-width:600px){.review-video-grid{grid-template-columns:minmax(0,1fr)}}
+
+/* Featured long-format film in the independent review gallery. */
+.review-video-grid .review-feature-film{grid-column:1/-1;display:grid;grid-template-columns:minmax(0,1.4fr) minmax(15rem,.7fr);background:#21342d;border-color:#21342d;color:#fffefa}
+.review-video-grid .review-feature-film video{aspect-ratio:16/9;align-self:center;background:#101711}
+.review-video-grid .review-feature-film figcaption{display:flex;flex-direction:column;justify-content:center;gap:.65rem;padding:clamp(1rem,3vw,1.8rem)}
+.review-feature-film figcaption small{color:#c2d6c8;font-weight:700;letter-spacing:.12em}
+.review-feature-film figcaption strong{font-size:clamp(1.2rem,2.3vw,1.65rem)}
+.review-feature-film figcaption p{color:#e7eee3;font-size:.85rem;margin:0}
+.review-feature-film figcaption a{color:#f4dfb8;font-size:.8rem;text-decoration:underline}
+@media(max-width:800px){.review-video-grid .review-feature-film{grid-template-columns:minmax(0,1fr)}}
