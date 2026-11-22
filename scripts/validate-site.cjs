@@ -55,7 +55,7 @@ check("no creator operating records in any public payload", () => {
   );
 });
 check("missing values and unverified comparison windows preserved", () => {
-  assert.equal(p.metrics.find((m) => m.id === "retention").value, null);
+  assert.ok(!p.metrics.some((m) => m.id === "retention"), "Unverified lifecycle outcome is excluded from public data");
   assert.equal(p.metrics.find((m) => m.id === "fb-viewers").value, null);
   p.metrics
     .filter((m) => m.sourceType === "screenshot")
