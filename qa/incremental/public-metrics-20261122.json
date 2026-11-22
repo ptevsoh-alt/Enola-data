@@ -1,0 +1,13 @@
+{
+  "purpose": "Public portfolio removes empty result placeholders without changing documented numeric performance",
+  "approvedAt": "2026-11-22",
+  "baselineSha256": "f74d32307d932e03d9a4bc8eaeb52959b3a6982c3b9ed104824c216c03c6c036",
+  "publicMetricsSha256": "6331b2bdde4c313709753a41ae8099e25dd6edecdb53bc0b738f50b06d749c50",
+  "publicMetricCount": 36,
+  "removedPlaceholderIds": [
+    "retention",
+    "fb-viewers"
+  ],
+  "retainDocumentedRangeMetric": "b2b-email-open",
+  "displayRule": "Only non-pending numeric metrics or documented numeric ranges appear on public pages; planning deliverables remain as narrative work, not invented performance results."
+}
