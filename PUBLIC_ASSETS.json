@@ -105,6 +105,11 @@
     "sha256": "7567e98f482af6b7f135016d49ceb40d0e5e73c215690272d0b2b1147c3f12d4"
   },
   {
+    "file": "assets/video/creator-livingroom-intro.mp4",
+    "bytes": 145302,
+    "sha256": "4d561c7de8d57b4c2c1a6f3a9a6806e7fd6377e541f5554d1d9ed9f75f844b35"
+  },
+  {
     "file": "assets/video/holiday-story-long.mp4",
     "bytes": 1744928,
     "sha256": "9f7e082431c34e47711aaee8765a5bc36616bc4f86a42f479baea9910fde10cf"
