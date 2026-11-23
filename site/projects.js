@@ -222,7 +222,7 @@
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
       <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
-  <header class="pmm-board-head"><small>ENOLA / MARKET → PMM → KSP → GTM</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
+  <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
   <div class="pmm-decision-layout">
     <div class="pmm-decision-process" aria-label="从使用任务到传播交付的策略决策链">
       <article><span>01 / USER TASK</span><h4>餐后地面整理</h4><p>以真实家庭的具体清洁任务作为产品理解入口。</p><strong>场景优先，而非参数优先</strong></article>
@@ -900,12 +900,13 @@
    </div>
  </div>
 </section>
-      <div class="g-project-list g-project-calendar-plan">
+      <details class="operations-process-details"><summary>查看内容组排期与审核工作流程</summary><div class="g-project-list g-project-calendar-plan">
         <article><h3>选题与排期</h3><p>我从季度主推主题选定产品和场景，给 Facebook、Instagram 和 Group 分配内容任务，并确认每条内容的负责人和交付时间。</p></article>
         <article><h3>产品与素材确认</h3><p>产品同事核对功能、参数和适用条件。社媒小组确认拍摄清单、素材权限和链接后，将 Brief 交给设计和视频同事。</p></article>
         <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
+      </div></details>
       <div class="g-story-note" id="asset-review">
         <h3>一次真实的物料返工：首图看不到双盘</h3>
         <ul>
