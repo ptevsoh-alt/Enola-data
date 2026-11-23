@@ -63,7 +63,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#review-territories").textContent.includes("One Home, Different Cleaning Jobs"));
     assert.equal(d.querySelector("#review-territories").textContent.includes("Real Home, Real Reset"), false);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
-    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
+    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "协调制作", "分析与调整"]);
   });
   check("review gallery embeds two full TVCs and two distinct Creator scenes", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
