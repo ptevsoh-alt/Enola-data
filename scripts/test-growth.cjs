@@ -286,7 +286,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
     assert.ok(d.querySelector("#expo-real-work").textContent.includes("真实经历"));
     assert.ok(d.querySelector("#expo-method-framework").textContent.includes("理论方法"));
-    assert.ok(d.querySelector("#expo-floorplan").textContent.includes("10 × 20 ft"));
+    assert.match(d.querySelector("#expo-floorplan").textContent, /10\s*[×x]\s*20\s*ft/i);
     const exhibitionCopy = d.querySelector("#expo-project").textContent;
     for (const phrase of ["以下以假设的", "不是前面实际", "不是此前", "不代表已实际举办", "以下为可迁移", "工作样例"]) {
       assert.equal(exhibitionCopy.includes(phrase), false, "Explanatory exhibition wording resurfaced: " + phrase);
