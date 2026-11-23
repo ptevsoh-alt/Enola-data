@@ -70,6 +70,8 @@ const fs = require("fs"),
     assert.equal(clips.length, 2);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
     assert.equal(d.querySelectorAll('#review-videos iframe').length, 2);
+    assert.ok([...d.querySelectorAll('#review-videos iframe')].every(frame => frame.getAttribute("title").includes("视频预览")));
+    assert.equal(d.querySelector('#review-territories').textContent.includes("五个 M3 创意方向"), false);
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
     assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
