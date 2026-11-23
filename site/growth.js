@@ -162,13 +162,13 @@
       title:"海外社媒内容策略与增长",
       intro:"管理 Facebook、Instagram 及 Group 内容工作，制定季度主题、月度日历和素材审核标准。",
       fact:"2025 Meta · 96.5 万曝光 / 3.7 万互动",
-      cover:"96.5万",eyebrow:"SOCIAL / GROWTH",detail:"2025 Meta 内容曝光",kind:"number"
+      cover:"海外社媒增长",eyebrow:"SOCIAL / GROWTH",detail:"内容策略 · Meta 经营表现",kind:"type"
     },
     community: {
       title:"美国 Facebook Group 社群运营",
       intro:"策划清洁教程、用户讨论及 UGC 互动，持续整理社群反馈和内容选题。",
       fact:"Facebook Group · 4,009 名成员",
-      cover:"4,009",eyebrow:"COMMUNITY / UGC",detail:"Facebook Group 成员规模",kind:"number"
+      cover:"社群运营",eyebrow:"COMMUNITY / UGC",detail:"内容参与 · 用户关系",kind:"type"
     },
     brand: {
       title:"品牌策略与整合传播",
@@ -181,7 +181,7 @@
       title:"社媒团队管理与项目交付",
       intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
       fact:"季度主题 · 月度排期 · 视觉审核",
-      cover:"Campaign 管理",eyebrow:"TEAM / DELIVERY",detail:"季度规划 · 团队排期 · 素材审核",kind:"type"
+      cover:"社媒团队管理",eyebrow:"TEAM / DELIVERY",detail:"季度主题 · 内容排期 · 协作交付",kind:"type"
     },
     b2b: {
       title:"储能行业展会与海外 B2B 客户开发",
@@ -200,7 +200,7 @@
       title:"Amazon 店铺运营与广告优化",
       intro:"参与 Amazon 店铺从 0 到 1 的运营，覆盖 Listing、广告、促销和库存。",
       fact:"店铺 0–1 · 阶段销售额约 +10%",
-      cover:"0 → 1",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
+      cover:"Amazon 运营",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
     },
     creative: {
       title:"节庆 TVC 与短视频创意",
@@ -260,7 +260,7 @@
     social: "2025 年 Meta 内容曝光 96.5 万次、互动 3.7 万次。通过季度主题、月度内容规划和跨平台运营机制，持续优化品牌传播与社群参与。",
     community: "围绕教程、清洁挑战和 UGC 分享持续运营美国 Facebook Group。现有成员规模快照为 4,009 人，另有超过 1,000 人的阶段增长记录与单阶段新增 227 人。",
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
-    operations: "组织季度主题与月度内容日历，推进文案、设计、视频、产品信息审核与渠道交付，并以 M3 主视觉返工展示具体质量管理方式。",
+    operations: "制定季度传播重点与月度内容日历，安排社媒小组交付，衔接设计、视频和产品信息审核。",
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
     seo: "规划以主题指南带动 FAQ 与产品内容的搜索承接。经营记录中自然搜索收入占比 82.46%，GSC 点击量环比约增长 20%。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
@@ -297,7 +297,7 @@
     ["01","GTM / 新品上市","从家庭清洁任务选择主推卖点，安排产品证明、上市节奏与多渠道物料。","#/case/gtm/gtm-value-to-launch","M3 上市策略与跨团队排期"],
     ["02","IMC / Campaign","把一个 Campaign 主张拆为 Social、Paid、PR / Creator、EDM 与商品页各自的任务。","#/case/gtm/campaign-architecture","Campaign 品牌屋与八条传播工作流"],
     ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
-    ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
+    ["04","Project / Delivery","负责季度主题和月度内容计划，安排社媒小组分工，协调视觉、视频与产品资料交付。","#/case/operations/asset-review","季度主题 · 内容日历 · 团队交付"],
     ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
     ["06","TVC / KOL 创意","感恩节与圣诞节两支主题 TVC 讲述不同家庭故事；KOL 短视频负责产品体验和操作教育。","#/case/creative/video-projects","感恩节 TVC · 圣诞节 TVC · KOL 内容"],
     ["07","Field / Exhibition","以真实储能展会为背景，呈现展位信息层级、产品讲解和 B2B 客户沟通。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
@@ -350,7 +350,7 @@
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
-        <div class="section-head"><div><p class="eyebrow">HOW I WORK / 项目决策路径</p><h2 id="jd-case-path-title">从市场判断、上市传播到团队交付</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
+        <div class="section-head"><div><p class="eyebrow">PROJECTS / 项目经历</p><h2 id="jd-case-path-title">从市场判断、上市传播到团队交付</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
         <div class="home-decision-grid">
           <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从真实清洁任务、产品资料及用户问题识别传播机会，整理四条产品线的价值重点。</p><span>品牌屋与产品线定位 ↗</span></a>
           <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>围绕 M3 餐后硬地场景规划上市节奏、Campaign 主题、渠道内容与交付节点。</p><span>M3 Campaign 品牌屋 ↗</span></a>
