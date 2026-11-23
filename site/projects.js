@@ -470,6 +470,14 @@
 
   function social() {
     return section("父亲节 30 天内容与项目日历", "For the Hands That Always Help · 家庭叙事与整合传播", `
+<section class="social-outcome-bridge" id="social-outcome-bridge" aria-labelledby="social-outcome-heading">
+  <div class="social-outcome-main"><small>2025 / META CONTENT PERFORMANCE</small><h3 id="social-outcome-heading">把内容经营结果连接到下一轮选题</h3><div class="social-outcome-values"><div><strong>96.5万</strong><span>内容曝光 · Meta</span></div><div><strong>3.7万</strong><span>内容互动 · Meta</span></div></div><a href="#/case/social/social-data-decisions">查看社媒分析与优化判断 ↗</a></div>
+  <div class="social-decision-loop" aria-label="社媒数据复盘与内容计划循环">
+    <article><span>01 / PLAN</span><h4>季度主题与月度日历</h4><p>按主推产品、渠道和季节性话题组织内容。</p></article>
+    <article><span>02 / OBSERVE</span><h4>浏览、互动和点击</h4><p>按平台拆开评估内容作用与用户反馈。</p></article>
+    <article><span>03 / DECIDE</span><h4>保留、改写或停止</h4><p>将高频问题、内容形式和素材质量写回下期 Brief。</p></article>
+  </div>
+</section>
       <div class="holiday-campaign-map" aria-label="父亲节 Campaign 主题、场景与阶段规划">
         <div class="holiday-campaign-theme"><small>FATHER'S DAY / CAMPAIGN IDEA</small><h3>For the Hands That Always Help</h3><p>从父亲为家庭做过的日常小事出发，让清洁工具成为家人之间传递关怀的故事载体。</p></div>
         <div class="holiday-campaign-pillars">
