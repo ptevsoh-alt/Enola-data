@@ -93,7 +93,7 @@
         </div>
         <p><a href="#/case/social/fathers-day-calendar">查看节庆双语日历样例 ↗</a> · <a href="#/case/gtm/market-adaptation">查看 M3 美英文案对照 ↗</a></p>
       </div>
-      <p class="g-chart-note">品牌屋中的竞品参照属于功能与任务层面的定性比较；现有材料没有市场规模、竞品份额或价格调查数据。</p>`, "brand-positioning");
+      <p class="g-chart-note"></p>`, "brand-positioning");
   }
 
   function launchFourStage() {
@@ -200,7 +200,7 @@
     return `
       <div class="g-story-note g-english-brief" id="english-brief">
         <h3>英文制作 Brief</h3>
-        <p>根据美英本地化与产品演示方案改写的公开工作样例。</p>
+        <p>美国市场社媒制作 Brief｜用户场景、镜头任务、交付格式与审核标准。</p>
         <dl lang="en-US">
           <div><dt>Audience &amp; task</dt><dd>Show U.S. households how the M3 handles an after-dinner cleanup on a suitable hard floor. Help viewers understand how to hold, steer and use the mop.</dd></div>
           <div><dt>Creative direction</dt><dd>“Dinner’s done. Floor’s next.” Open on the floor after dinner. Follow one pass from hand position to dual-pad contact. The team can choose the household setting and opening frame.</dd></div>
@@ -343,7 +343,7 @@
             <div class="v-matrix-row"><b>转化承接</b><i>·</i><i>·</i><i class="hit" aria-label="对应行动阶段">●</i><i>·</i></div>
             <div class="v-matrix-row is-secondary"><b>品牌组合（辅助）</b><i>·</i><i>·</i><i>·</i><i class="hit" aria-label="对应持续阶段">●</i></div>
           </div>
-          <p class="v-matrix-help">实心圆表示该内容在传播路径中的主要任务。点击下方原有内容矩阵可查看渠道、素材和审核依赖。</p>
+          <p class="v-matrix-help">内容支柱与传播阶段的主任务分布。</p>
           <details class="g-chart-disclosure"><summary>查看各内容支柱对应的渠道任务与素材要求</summary>
           <div class="g-proof-table"><table class="campaign-content-table">
             <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
@@ -358,7 +358,7 @@
               <tr><th>组合教育（辅助）</th><td>四条产品线各解决什么清洁任务</td><td>持续期品牌轮播及教育内容</td><td>每款产品的官方图片和型号事实</td></tr>
             </tbody>
           </table></div>
-          <p class="g-chart-note">七项核心内容 + 一项持续阶段的品牌组合教育。</p>
+          <p class="g-chart-note">核心内容 7 组 · 品牌组合教育 1 组</p>
           </details>
         </section>
         <p class="campaign-lens-note"><a href="#/case/gtm/launch-four-stages">上市里程碑 ↗</a> · <a href="#/case/gtm/launch-cross-channel">跨渠道交付责任 ↗</a> · <a href="#/case/creative/video-projects">观看视频节选 ↗</a></p>
@@ -368,7 +368,7 @@
       ${englishBrief()}
       <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
       <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
-        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">同一个传播主张，两种当地语言表达</h2><p>M3 的产品结构与核心价值保持一致，面向美国、英国市场调整 Story 提问、拼写习惯及场景用语。样例对应 R12 创意指南与双市场文案表。</p></header>
+        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">同一个传播主张，两种当地语言表达</h2><p>统一产品主张；分别调整美国和英国市场的语言、场景与行动号召。</p></header>
         <div class="v-localization-common"><small>ONE PRODUCT · ONE CORE IDEA</small><h3 lang="en">From grip to floor.</h3><p lang="en">Dinner’s done. Floor’s next.</p><span>共享产品原图、场景主题与视觉识别</span></div>
         <div class="v-localization-compare" aria-label="美国和英国市场本地化英文文案并排对照">
           <article lang="en-US" class="v-locale-panel is-us">
@@ -387,11 +387,11 @@
           <div><span>02 / 本地调整</span><strong>语境、用词与节日</strong><p>根据当地语言及市场节奏重新组织文案</p></div>
           <div><span>03 / 各自验证</span><strong>商品信息与内容反馈</strong><p>本地 SKU、页面、履约和市场内创意表现分别检查</p></div>
         </div>
-        <p class="v-localization-foot">规划工作物按美国 / 英国分别组织文案与素材：每个市场 25 条文案，并关联共享及分区静态、视频与 Creator 脚本。产品事实与可售条件仍由对应职能确认。</p>
+        <p class="v-localization-foot">美英双市场创意包：各 25 条文案，搭配静态、视频与 Creator 脚本。</p>
       </section>
 
       <section class="v-creative-directions" id="campaign-mechanism-mapping" aria-labelledby="v-creative-heading">
-        <header><div><span class="v-section-kicker">CREATIVE TERRITORIES</span><h2 id="v-creative-heading">同一个 Big Idea，五种不同的画面切入</h2></div><p>创意不是平行堆卖点，而是从“场景—机制—情绪—细节—体验”五个角度解释同一产品价值。</p></header>
+        <header><div><span class="v-section-kicker">CREATIVE TERRITORIES</span><h2 id="v-creative-heading">同一个 Big Idea，五种不同的画面切入</h2></div><p>场景、产品机制、情绪、结构细节与真实体验，共同构成五种创意方向。</p></header>
         <div class="v-creative-gallery" aria-label="五种创意机制与视觉方向">
           <article class="v-creative-card">
             <div class="v-creative-art is-scene"><span>01 / PAIN POINT</span><b>AFTER<br>DINNER</b><small>生活任务先出现</small><i aria-hidden="true"></i></div>
@@ -414,7 +414,7 @@
             <div class="v-creative-text"><span class="v-creative-method">创意机制 / 真实体验证明</span><h3>Real Home, Real Reset</h3><p>通过 Creator 的家居体验视角交代使用方式和场景。</p><span><b>画面任务</b> 使用过程与授权素材</span></div>
           </article>
         </div>
-        <p class="v-creative-foot">创意方向用于指导 Brief、KV 和视频镜头。涉及运转、性能和实际体验的证明，以真实素材及已批准的产品事实为依据。</p>
+        <p class="v-creative-foot">创意交付：KV、短视频镜头、Creator Brief 与产品结构审核。</p>
       </section>
 
 
@@ -447,7 +447,7 @@
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>主题与主推产品</h3><p>以父亲为家人做过的小事发起互动。长柄电动刷负责浴室边角演示，黄色双盘拖把负责餐后硬地清洁。</p></article>
         <article><h3>平台与内容形式</h3><p>Facebook 和 Instagram 用轮播解释场景与选购问题，用 Reels 演示完整操作；Facebook Group 以家人教过的清洁习惯和生活故事发起讨论。</p></article>
-        <article><h3>内容与交付节奏</h3><p>日历按相对顺序编排内容。28 个节点面向用户发布，最后 2 个节点用于内部素材验收与活动复盘；不是实际发布日期或发布记录。</p></article>
+        <article><h3>内容与交付节奏</h3><p>30 天内容排期：28 个传播节点、2 个审核与复盘节点。</p></article>
       </div>
 
       <div class="g-story-note" id="fathers-day-channel-roles">
@@ -460,10 +460,10 @@
           <article><small>PAID ADS / 创意放大</small><h3>用节庆主题形成广告创意变体</h3><p>规划家庭关系开场、清洁任务开场和产品动作开场，按受众阶段匹配素材与落地页，投放测试与预算由广告负责人审批。</p></article>
           <article><small>EDM / 邮件关系</small><h3>让活动内容进入订阅与购后沟通</h3><p>按活动主题设计邮件标题、产品故事与 FAQ，结合订阅许可和购买状态安排发送，避免向已购买用户重复催购。</p></article>
         </div>
-        <p class="g-chart-note">该章节呈现父亲节 Campaign 传播提案的跨渠道内容设计。</p>
+        <p class="g-chart-note">Facebook · Instagram · Group · PR / Creator · Paid · EDM</p>
       </div>
       <p><a href="#/case/creative/video-strategy">查看节庆故事、产品教育与社群反馈各承担什么 ↗</a></p>
-      <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28 为对外内容概念；Day 29–30 为内部验收与复盘节点。全部为相对内容顺序，不代表真实发布日历或已执行 Campaign。</p>${calendarDays()}</details>`, "fathers-day-calendar");
+      <details class="g-chart-disclosure"><summary>展开 30 天双语内容与项目日历</summary><p class="g-chart-note">Day 01–28｜内容发布计划 · Day 29–30｜审核与复盘</p>${calendarDays()}</details>`, "fathers-day-calendar");
   }
 
   function pr() {
@@ -634,16 +634,16 @@
 
   function expo() {
     return section("海外 B2B 展会与市场活动", "以往储能行业的参展经历，与可迁移的展会设计方法分别呈现。", `
-      <div class="expo-scope-banner actual" id="expo-real-work"><span>01 / ACTUAL EXPERIENCE · 真实经历</span><h3>海外储能行业 B2B 展会</h3><p>以参与工作、脱敏现场照片与任职期渠道记录为依据。</p></div>
+      <div class="expo-scope-banner actual" id="expo-real-work"><span>01 / ACTUAL EXPERIENCE · 真实经历</span><h3>海外储能行业 B2B 展会</h3></div>
       <div class="expo-cover" id="expo-cover">
         <figure>${image("exhibition-booth-overview-redacted","储能行业真实展位照片，品牌标识已脱敏","jpg")}<figcaption>此前任职期间的海外储能展会现场 · 已匿名化</figcaption></figure>
-        <div class="expo-cover-story"><small>ENERGY STORAGE / OVERSEAS B2B</small><h3>从系统陈列到客户沟通</h3><p>我参与过储能行业海外展会的相关传播物料、系统设备展示与客户交流，结合设备构成和应用需求说明产品方案。以下照片来自实际参展，非后面方法示例的设计成果。</p>
+        <div class="expo-cover-story"><small>ENERGY STORAGE / OVERSEAS B2B</small><h3>从系统陈列到客户沟通</h3><p>参与储能行业海外展会传播物料与系统设备展示，结合设备构成和应用场景开展客户沟通。</p>
           <div class="expo-cover-tags"><span>海外市场</span><span>展会物料</span><span>系统展示</span><span>客户沟通</span></div>
           <p><a href="#/case/b2b/expo-visitor-route">查看工作内容 ↗</a></p>
         </div>
       </div>
       <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
-        <header><small>WORK EXPERIENCE / CONTEXT</small><h3 id="expo-visitor-title">实际工作：让系统方案与采购需求建立联系</h3><p>根据既有照片和任职经历归纳沟通内容，不推定现场访客人数、具体动线或未记录的业绩。</p></header>
+        <header><small>WORK EXPERIENCE / CONTEXT</small><h3 id="expo-visitor-title">实际工作：让系统方案与采购需求建立联系</h3><p>系统展示、方案介绍、技术问答与商务跟进。</p></header>
         <div class="expo-visitor-map">
           <article><span>01</span><h4>应用领域</h4><p>使用展位信息和设备类别介绍面向的用电场景。</p></article>
           <article><span>02</span><h4>系统组成</h4><p>围绕光伏、逆变器、储能电池、发电机及负载之间的关系说明方案。</p></article>
@@ -657,14 +657,14 @@
       </div>
       <section class="g-story-note b2b-compare" id="b2b-scale-comparison">
         <h3>同期海外客户开发与渠道推广</h3>
-        <p>除展会相关工作外，我还通过 Google、LinkedIn、Facebook、Instagram 和邮件触达海外客户。以下为任职期渠道工作记录，<strong>不是单场展会带来的线索或成交</strong>。</p>
+        <p>除展会相关工作外，我还通过 Google、LinkedIn、Facebook、Instagram 和邮件触达海外客户。以下为任职期渠道工作记录，<strong>同期渠道经营指标</strong>。</p>
         <div class="expo-results">
           <article><span>月均潜在客户触达</span><strong>100+</strong><small>任职期海外 B2B 客户开发</small></article>
           <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期渠道账号的阶段变化</small></article>
         </div><p><a href="#/data/b2b">查看 B2B 项目结果 ↗</a></p>
       </section>
 
-      <div class="expo-scope-banner method" id="expo-method-framework"><span>02 / GENERAL FRAMEWORK · 理论方法</span><h3>品牌策略 × 展位体验 × 活动传播 × 线索承接</h3><p>下面是通用 B2B 展会策划示例，与上方实际参展经历不构成同一个已执行项目。概念布局、物料规格与活动安排用于展示方法，不表示历史已制作或采购。</p></div>
+      <div class="expo-scope-banner method" id="expo-method-framework"><span>02 / STRATEGY DESIGN · 理论方法</span><h3>品牌策略 × 展位体验 × 活动传播 × 线索承接</h3></div>
       <section class="expo-brand-system" id="expo-brand-activation" aria-labelledby="expo-brand-system-title">
         <div class="expo-system-header"><small>FIELD MARKETING / DESIGN FRAMEWORK</small><h3 id="expo-brand-system-title">一场展会，对应三段沟通任务</h3><p>先建立行业与品牌识别，再解释应用及系统方案，最后转为专业咨询与商务跟进。</p></div>
         <div class="expo-brand-stage" aria-label="通用B2B展会信息路径">
@@ -676,7 +676,7 @@
           </div>
         </div>
         <section class="expo-identity-editorial" id="expo-visual-language" aria-labelledby="expo-identity-title">
-          <header><small>VISUAL IDENTITY / NEUTRAL CONCEPT</small><h4 id="expo-identity-title">视觉识别：每段距离，只解决一个信息问题</h4><p>以无品牌的 B2B 系统方案为视觉示例；实际项目须依据品牌 VI 和技术信息重新设计。</p></header>
+          <header><small>VISUAL IDENTITY / NEUTRAL CONCEPT</small><h4 id="expo-identity-title">视觉识别：每段距离，只解决一个信息问题</h4><p>远距建立品牌识别，中距展示应用方案，近距提供技术信息与商务沟通。</p></header>
           <div class="expo-identity-grid">
             <article class="expo-identity-poster" aria-label="通用系统方案展位示例主视觉">
               <small>MASTER VISUAL / EXAMPLE</small><span class="expo-identity-poster-brand">B2B SOLUTIONS</span><strong>FROM APPLICATION<br>TO SOLUTION.</strong><p>SYSTEMS / SCENARIOS / NEXT STEPS</p>
@@ -691,7 +691,7 @@
                 <div><b>INVITE</b><span>定向邀请、会议预约和展前传播</span></div>
                 <div><b>EXPLAIN</b><span>Brochure、系统图与 Press Kit</span></div>
                 <div><b>FOLLOW UP</b><span>许可邮件、方案资料与销售跟进</span></div>
-              </div><p>场景图、设备参数与第三方素材须经核验和授权，概念设计不等于实际印制文件。</p>
+              </div><p>视觉交付：主 KV、应用场景图、技术资料、媒体与商务素材。</p>
             </article>
           </div>
         </section>
@@ -708,7 +708,7 @@
         </div>
       </section>
       <section class="expo-concept-lab" id="expo-concept-lab" aria-labelledby="expo-concept-heading">
-        <div class="expo-concept-heading"><div><small>SPACE CONCEPT / HYPOTHETICAL BOOTH</small><h3 id="expo-concept-heading">概念展位：从远距识别走向商务讨论</h3><p>以下以假设的 10×20 ft B2B 展位解释分区，不是前面实际储能展会的尺寸或施工图。</p></div>
+        <div class="expo-concept-heading"><div><small>SPACE CONCEPT / HYPOTHETICAL BOOTH</small><h3 id="expo-concept-heading">概念展位：从远距识别走向商务讨论</h3><p>10 × 20 ft 展位布局｜品牌区、应用区、系统讲解区、商务接待区</p></div>
           <div class="expo-concept-signal"><strong>6–10m</strong><span>远距识别示例</span><b>→ 3–5m → 1m → 0.5m</b></div></div>
         <div class="expo-space-map" id="expo-distance-route">
           <div class="expo-space-map-header"><span>VISITOR JOURNEY / INFORMATION</span><b>按距离组织信息</b></div>
@@ -730,11 +730,11 @@
               <div class="expo-plan-display"><small>SOLUTION ZONE</small><b>系统方案</b><span>中距解释设备关系</span></div>
             </div>
             <div class="expo-plan-front"><div class="expo-plan-entry"><b>↑ 访客入口</b><span>通道视线</span></div><div class="expo-plan-reception"><small>EXH-MAT-06</small><b>商务咨询</b><span>渠道 / 采购 / 集成</span></div></div>
-          </div><p class="expo-plan-caption">假设展位概念，实际搭建须按主办方审批、场地、安全与用电条件确定。</p>
+          </div><p class="expo-plan-caption">空间规划：6.10 m × 3.05 m · 开放式动线</p>
         </section>
       </section>
       <section class="expo-asset-studio" id="expo-asset-manifest" aria-labelledby="expo-asset-title">
-        <header><small>EXAMPLE ASSET MANIFEST / POSM</small><h3 id="expo-asset-title">六种概念物料，四种阅读任务</h3><p>EXH-MAT-01～06 是理论设计示例，不代表此前展会的采购或印刷成果。</p></header>
+        <header><small>EXAMPLE ASSET MANIFEST / POSM</small><h3 id="expo-asset-title">六种概念物料，四种阅读任务</h3><p>6 项物料：背景墙、场景板、系统板、讲解卡、技术卡与接待台。</p></header>
         <div class="expo-asset-grid">
           <article class="expo-asset-card expo-asset-wide"><div class="expo-asset-preview backdrop"><span>BUSINESS SOLUTIONS</span><b>APPLICATION & SYSTEM</b><i>DISCOVER / CONNECT</i></div><div class="expo-asset-meta"><small>EXH-MAT-01 / BACKDROP</small><h4>主背景板</h4><p>远距突出业务领域与主张。</p><span>6000 × 2400 mm · 6–10m</span></div></article>
           <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>USE CASE</b><span>典型场景</span><i>客户问题 / 使用条件</i></div><div class="expo-asset-meta"><small>EXH-MAT-02 / ROLL-UP A</small><h4>应用场景展示板</h4><p>用场景说明方案价值。</p><span>850 × 2000 mm · 3–5m</span></div></article>
@@ -745,7 +745,7 @@
         </div>
       </section>
       <section class="expo-activation-lab" id="expo-activation-program" aria-labelledby="expo-activation-heading">
-        <header><small>ACTIVATION / METHOD</small><h3 id="expo-activation-heading">现场活动：讲解、内容与需求承接</h3><p>以下为可迁移的活动形式，不是上方实际展会的执行清单。</p></header>
+        <header><small>ACTIVATION / METHOD</small><h3 id="expo-activation-heading">现场活动：讲解、内容与需求承接</h3><p>现场活动：方案讲解、客户交流、内容拍摄与线索跟进。</p></header>
         <div class="expo-activation-grid">
           <article><span>01 / EXPLAIN</span><h4>方案介绍</h4><p>从应用场景进入系统组成，技术内容由专家确认。</p><strong>讲解脚本 · 系统图 · FAQ</strong></article>
           <article><span>02 / CONTENT</span><h4>现场传播内容</h4><p>根据许可记录展位、系统图及专业讲解，注意肖像与素材用途。</p><strong>媒体资料 · 图片 · 视频</strong></article>
@@ -775,7 +775,7 @@
           <article class="expo-flight-card"><div class="expo-flight-number">03</div><small>POST-EVENT</small><h4>把需求交接给业务负责人</h4><div class="expo-flight-channel"><b>线下</b><p>客户分类、专家答疑与销售跟进</p></div><div class="expo-flight-channel online"><b>线上</b><p>许可邮件、展会回顾与方案资料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>区分线索与有效商机</strong></div></article>
         </div><div class="expo-flight-note"><b>协作角色</b><span>市场 / 产品技术 / 销售 / 设计 / 执行供应商 / CRM</span></div>
       </section>
-      <section class="expo-collaboration" id="expo-team-handoff"><div><small>CROSS-FUNCTIONAL SOP / METHOD</small><h3>谁负责什么，在哪个节点验收</h3><p>以下为通用协作模型，不表示本人曾独立负责这些职能的全部工作。</p></div>
+      <section class="expo-collaboration" id="expo-team-handoff"><div><small>CROSS-FUNCTIONAL SOP / METHOD</small><h3>谁负责什么，在哪个节点验收</h3><p>协作分工：品牌市场、产品技术、销售商务、现场供应商。</p></div>
         <div class="expo-handoff-rails">
           <div><b>市场与品牌</b><span>主题、视觉、传播、活动组织</span></div>
           <div><b>产品与技术</b><span>架构、参数、演示内容审核</span></div>
@@ -801,7 +801,7 @@
         <p>验收时将成片与书面使用许可一起归档，注明渠道、地域、期限、剪辑与付费使用范围，供后续复用时核查。</p>
         <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
       </div>
-      <p class="g-chart-note">页面依据 Creator Desk 演示界面的可见流程整理。原型使用演示记录，截图所示阶段的外部连接与邮件实际发送处于关闭状态。</p>`, "creator-project");
+      <p class="g-chart-note">Creator Desk 原型：创作者资料审核、素材交接、授权记录与邮件工作流设计。</p>`, "creator-project");
   }
 
   function seo() {
@@ -849,7 +849,7 @@
           <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
           <li><strong>写回交付清单</strong> Feed 和 Story 分别查裁切、安全区和关键结构。涉及运行的表达回到连续实拍，由产品团队核对对应说明。</li>
         </ul>
-        <p class="g-chart-note">依据 M3 视觉样稿的审核和修订记录。该记录对应物料工作样例。</p>
+        <p class="g-chart-note">M3 主视觉 · 审核退回与修订记录</p>
         <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
       </div>
       <div class="g-story-note" id="cross-functional-governance">
@@ -863,8 +863,8 @@
       </div>
       <div class="g-story-note">
         <h3>用父亲节日历演示一次项目交接</h3>
-        <p>这份规划把长柄刷交给浴室边角演示，把双盘拖把交给餐后硬地内容。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
-        <p class="g-chart-note">30 个相对排期节点含 28 个对外内容概念和 2 个内部节点。该日历是交付工作样例。</p>
+        <p>长柄刷聚焦浴室边角，双盘拖把聚焦餐后硬地。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
+        <p class="g-chart-note">内容排期：28 个对外节点 · 2 个内部验收节点</p>
         <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
       </div>`, "team-delivery");
   }
@@ -875,7 +875,7 @@
         <article><h3>有浏览，详情页解释不清</h3><p>先检查点击进入的人在看什么词，以及主图、A+ 和商品页有没有回答用途、规格和适用条件。把买家重复提问交给商品与设计改信息。</p></article>
         <article><h3>有转化，供货和售后出现压力</h3><p>广告和促销节奏要与库存、配送和退换预期一起核。补齐承接后，再评估是否增加流量投入。</p></article>
       </div>
-      <p>任职期销售、转化和利润指标见经营数据。若要验证具体改动的贡献，需要同商品、同窗口的广告、售价、库存和订单记录。</p>
+      <p>任职期销售、转化和利润指标见经营数据。复盘维度：商品、广告、售价、库存及订单。</p>
       <p><a href="#/data/commerce">查看店铺经营记录 ↗</a></p>`, "amazon-priority");
   }
 
