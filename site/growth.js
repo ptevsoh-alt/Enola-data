@@ -374,7 +374,7 @@
       <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
         <a href="#/data/community"><small>美国 Facebook Group · 成员快照</small><strong>${esc(metric("group-members").display)}</strong><span>查看社群规模与参与表现 ↗</span></a>
         <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>查看海外 B2B 社媒增长成果 ↗</span></a>
-        <a href="#/case/creative/video-projects"><small>节庆品牌传播与 KOL 内容</small><strong>2 支 TVC · KOL 短视频</strong><span>感恩节 / 圣诞节 Campaign 与产品使用 ↗</span></a>
+        <a href="#/case/creative/video-projects"><small>节庆品牌传播与 KOL 内容</small><strong>视频创意 · 产品演示 · KOL 内容</strong><span>感恩节 / 圣诞节 Campaign 与产品使用 ↗</span></a>
       </section>
       <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>

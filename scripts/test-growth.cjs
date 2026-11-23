@@ -357,6 +357,8 @@ const fs = require("fs"),
     assert.ok(!d.querySelector("#results .metric") || d.querySelector("#results .metric").textContent !== "待补充");
     assert.ok(d.getElementById("kol-shorts").textContent.includes("客厅"));
     assert.ok(!d.getElementById("video-projects").textContent.includes("另一版节庆广告"));
+    assert.ok(!d.getElementById("video-projects").textContent.includes("两支 TVC"));
+    assert.ok(!d.getElementById("video-projects").textContent.includes("完整七秒镜头"));
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
