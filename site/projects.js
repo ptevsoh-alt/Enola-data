@@ -415,9 +415,9 @@
   </div>
   <footer><span>CAMPAIGN DECISION → CHANNEL BRIEF → ASSET VERSION → REVIEW</span><a href="#/case/gtm/gtm-visual-schedule">对应上市排期 ↗</a></footer>
 </section>
-      <section class="g-module g-project v-localization" id="market-adaptation"      <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
-        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">美英市场传播内容适配</h2><p>统一产品主张；分别调整美国和英国市场的语言、场景与行动号召。</p></header>
-        <div class="v-localization-common"><small>ONE PRODUCT · ONE CORE IDEA</small><h3 lang="en">From grip to floor.</h3><p lang="en">Dinner’s done. Floor’s next.</p><span>共享产品原图、场景主题与视觉识别</span></div>
+      <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
+        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">美英市场传播内容适配</h2><p>产品信息保持一致，美国与英国分别校对内容用词、场景和发布渠道。</p></header>
+        <div class="v-localization-common"><small>M3 / 市场文案对照</small><h3 lang="en">POWER EVERY MOVE.</h3><p lang="en">MAKE ROOM FOR WHAT MATTERS.</p><span>共享产品原图、场景主题与视觉识别</span></div>
         <div class="v-localization-compare" aria-label="美国和英国市场本地化英文文案并排对照">
           <article lang="en-US" class="v-locale-panel is-us">
             <header><span>US / EN-US</span><b>United States · 美国</b></header>
@@ -436,12 +436,12 @@
           <div><span>03 / 各自验证</span><strong>商品信息与内容反馈</strong><p>本地 SKU、页面、履约和市场内创意表现分别检查</p></div>
         </div>
 <section class="locale-decision-matrix" id="locale-decision-matrix" aria-labelledby="locale-decision-matrix-heading">
-  <div class="locale-decision-head"><small>REGIONAL GO-TO-MARKET / LOCAL PLAYBOOK</small><h3 id="locale-decision-matrix-heading">从文案改写，延伸到当地市场决策</h3></div>
+  <div class="locale-decision-head"><small>REGIONAL GO-TO-MARKET / LOCAL PLAYBOOK</small><h3 id="locale-decision-matrix-heading">美英市场内容与发布检查</h3></div>
   <div class="locale-matrix-grid" role="group" aria-label="美英两市场共同的本地化决策维度">
     <article><span>01 / LANGUAGE</span><b>场景与类别词汇</b><p><strong>US</strong> entryway / cleanup / Mom</p><p><strong>UK</strong> hallway / clean-up / Mum</p></article>
     <article><span>02 / MESSAGE & PROOF</span><b>信息与产品证明</b><p>共享已核对的产品结构、核心价值和连续演示。</p><p>按地区重写 Hook、字幕、FAQ 与购买顾虑表达。</p></article>
     <article><span>03 / CHANNEL ROLE</span><b>传播路径与媒体接口</b><p>社媒与 Creator 负责场景教育，搜索回答高意图问题。</p><p>区域渠道投入依据当地触点表现和可执行资源确定。</p></article>
-    <article><span>04 / COMMERCIAL READINESS</span><b>本地购买与服务承接</b><p>分别核对 SKU、价格显示、库存、配送、退货及客户支持。</p><p>每个地区独立复盘内容、有效访问与实际订单链路。</p></article>
+    <article><span>04 / COMMERCIAL READINESS</span><b>素材与链接发布前核对</b><p>内容组确认产品版本、CTA 和渠道链接；价格、库存与履约条件由相应业务团队核验。</p><p>发布后分别查看两地内容互动、有效访问与实际用户问题。</p></article>
   </div>
 </section>
         <p class="v-localization-foot">美英双市场创意包：各 25 条文案，搭配静态、视频与 Creator 脚本。</p>
