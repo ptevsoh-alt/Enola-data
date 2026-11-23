@@ -124,11 +124,11 @@
             <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>产品端提供已批准事实，渠道独立完成上架审核</td></tr>
             <tr><th scope="row">独立站</th><td>落地页、FAQ、演示入口、CTA 与链接</td><td>站点 / 商业 Owner；产品核事实</td><td>页面与库存、价格、结账须现场核验</td></tr>
             <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>渠道资料包与培训物料规划</td></tr>
-            <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
+            <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、内容排期与素材版本记录</td></tr>
           </tbody>
         </table></div></details>
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
-        <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看真实视觉返工 ↗</a></p>
+        <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
       <div class="g-story-note" id="launch-d7-d30">
         <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
