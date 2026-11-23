@@ -419,9 +419,10 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-foundation").textContent.includes("Facebook Group 社群运营"));
     assert.ok(d.querySelector(".g-foundation").textContent.includes("数据复盘与持续迭代"));
   });
-  check("social management case shows ownership and collaboration", () => {
+  check("social management case shows ownership and creative content work", () => {
     assert.equal(d.querySelectorAll(".g-social-ownership>article").length, 3);
-    assert.ok(d.querySelector(".g-social-ownership").textContent.includes("产品、设计、视频、电商"));
+    assert.ok(d.querySelector(".g-social-ownership").textContent.includes("创意主题与内容表现"));
+    assert.ok(!d.querySelector(".g-social-ownership").textContent.includes("从输入到发布的责任分工"));
   });
   check("social metrics are connected to management decisions without causal claims", () => {
     const section = d.querySelector("#social-data-decisions");
