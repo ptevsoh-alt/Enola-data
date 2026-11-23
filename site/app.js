@@ -134,8 +134,8 @@
       mix: "Group 讨论承接；Facebook 解释规则；Instagram 以场景演示发起邀请。",
       participation: "提交使用场景与条件；不要求正面评价，不默认取得商用权。",
       measurement:
-        "分别查看成员新增、发帖评论人数与查看人数；原记录窗口不同，不据此归因活动效果。",
-      note: "依据社群案例中的清洁挑战、教程、投票和 UGC 机制整理；此卡没有已核实的单场活动日期或成果。",
+        "分别分析成员增长、讨论参与和内容查看情况。",
+      note: "社群参与机制与内容设计",
     },
     {
       id: "seasonal",
@@ -150,7 +150,7 @@
       mix: "节庆海报确定主张，短视频展示产品操作，社群话题邀请读者补充家庭经验。",
       participation: "通过问题征集和经验分享组织内容讨论，并明确参与入口与反馈方式。",
       measurement: "按内容曝光、视频互动与后续问题反馈区分不同传播任务，依据同平台数据调整创意。",
-      note: "以节庆场景的内容策划与创意方案展示 Campaign 方法。",
+      note: "节庆场景与 Campaign 创意",
     },
     {
       id: "collab",
@@ -460,8 +460,8 @@
       <article><small>PROGRAM OWNER / 活动归属</small><h3>先按主要业务目标确定唯一负责人</h3><p>公开激活、上市传播、整合 Campaign 或联合营销，由 GTM / Campaign 负责人统筹；成员关系、支持、教育与生命周期活动由社群 / CRM 负责人负责；单纯内容帖或提醒文案由内容负责人承担。活动落在 Group 时，按品牌传播、用户参与或社区关系的目标分配相应负责人。</p></article>
       <article><small>EVENT CONTRACT / 活动准入</small><h3>先锁定规则，再开放参与</h3><p>每场活动明确一个主业务目标、目标成员状态、市场与平台、参与资格、日期窗口、用户动作、奖励与履约、素材、审核答疑、身份与许可、主指标、Guardrails、取消 / 回滚条件和活动后交接。</p></article>
       <article><small>PARTICIPATION / 参与路径</small><h3>让参与、审核和内容复用各有边界</h3><p>话题邀约 → 自愿讨论 / 投稿 → 内容审核与答疑 → 单独确认使用授权 → 归档与复用。参与不要求正面评价；投稿不自动取得品牌商业使用权。</p></article>
-      <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>报名、出席、参与、查看、发帖评论、UGC、点击和购买分别记录。出席不等于营销同意，RSVP 不等于购买意向，抽奖参与不等于高价值客户，Group 活动也不自动形成 CRM 身份。</p></article>
-    </div><p class="g-chart-note">活动后将内容资产交回内容团队，成员关系与后续沟通交回社群 / CRM，已验证的事件数据交给 Measurement，Campaign 复盘回到项目负责人。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
+      <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>分开管理报名、活动参与、互动、UGC、链接点击及购买；营销许可独立确认。</p></article>
+    </div><p class="g-chart-note">内容素材交付内容团队，用户关系交接 CRM，活动表现由 Campaign 负责人复盘。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
       [
         ["话题邀约", "清洁问题、教程或投票提供入口"],
         ["自愿参与", "成员讨论、投稿与问题答疑"],
@@ -517,7 +517,7 @@
         ["活动期", "内容分发 / 讨论与审核"],
         ["复盘", "内容表现 / 用户反馈 / 调整动作"],
       ],
-    )}<p class="g-campaign-note">${c.note} </p></div>`;
+    )}</div>`;
   }
   function campaignWall() {
     return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("CAMPAIGNS", "活动项目", "清洁挑战、节庆内容与家居品牌联合抽奖。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
