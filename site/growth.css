@@ -3385,3 +3385,49 @@
 .operations-calendar-rows article>b{font-size:.73rem;font-weight:690;color:#45634f;text-align:right}
 @media(max-width:800px){.m3-kv-comps{grid-template-columns:minmax(0,1fr) minmax(0,.65fr)}.operations-qa-track{grid-template-columns:minmax(0,1fr)}.operations-qa-track article{padding:.85rem}.operations-calendar-rows article{grid-template-columns:5rem minmax(0,1fr)}.operations-calendar-rows article>b{grid-column:2;text-align:left}}
 @media(max-width:650px){.m3-kv-comps{grid-template-columns:1fr}.m3-kv-landscape{aspect-ratio:1.45}.m3-kv-comps .m3-kv-copy h4{font-size:clamp(1.7rem,7vw,3rem)}.m3-kv-feed{max-width:26rem;width:100%;justify-self:center}.operations-qa-output{align-items:flex-start}.operations-qa-output figure{width:31%}.operations-qa-output img{height:7rem}}
+
+
+/* Portfolio editorial samples: accessible working controls, never decorative fake buttons. */
+.operations-role-board button{appearance:none;cursor:pointer;display:flex;text-align:left;flex-direction:column;min-width:0;padding:.85rem;background:#fff;border:1px solid #d8e2d8;border-top:3px solid #789e81;color:#263e32;font:inherit}
+.operations-role-board button.is-my-role,.operations-role-board button[aria-selected="true"]{background:#234b35;color:#fff;border-top-color:#b5d9bd}
+.operations-role-board button span{font-size:.65rem;letter-spacing:.07em;color:#54765d;font-weight:800}
+.operations-role-board button.is-my-role span{color:#d3e8d5}
+.operations-role-board button h4{font-size:clamp(.9rem,1.2vw,1.05rem);line-height:1.35;margin:.45rem 0;color:inherit}
+.operations-role-board button p{font-size:.77rem;line-height:1.5;margin:0 0 .8rem;flex:1;color:inherit}
+.operations-role-board button b{font-size:.73rem;padding-top:.48rem;border-top:1px solid currentColor;color:inherit}
+.operations-role-board button:hover{outline:2px solid #5c8066;outline-offset:0}
+.operations-role-board button:focus-visible,.cap-links a:focus-visible{outline:3px solid #c79547;outline-offset:3px}
+.operations-work-views{margin-top:1rem;border:1px solid #d8e2d9;background:#fff;padding:clamp(.85rem,2.2vw,1.5rem)}
+.operations-work-panel[hidden]{display:none!important}
+.operations-work-panel>h4{font-size:clamp(1.1rem,1.75vw,1.45rem);margin:.2rem 0 1rem}
+.operations-quarter-map,.operations-review-grid,.creator-assessment-grid,.seo-method-matrix,.creator-workflow{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.7rem}
+.operations-quarter-map article,.operations-review-grid article,.creator-assessment-grid article,.seo-method-matrix article,.creator-workflow article{padding:1rem;border:1px solid #d9e1d7;background:#f7f9f5;min-width:0}
+.operations-quarter-map small,.operations-review-grid small,.creator-assessment-grid small,.seo-method-matrix small,.creator-workflow small{font-size:.7rem;color:#58735d;font-weight:800;letter-spacing:.08em}
+.operations-quarter-map strong,.operations-review-grid strong,.creator-assessment-grid h4,.seo-method-matrix h4,.creator-workflow h4{display:block;margin:.45rem 0;color:#1c3d2f;font-size:clamp(.9rem,1.2vw,1.03rem);line-height:1.45}
+.operations-quarter-map p,.operations-review-grid p,.creator-assessment-grid p,.seo-method-matrix p,.creator-workflow p{font-size:.8rem;line-height:1.65;margin:.35rem 0;color:#4a5c4e}
+.operations-table-scroll{max-width:100%;overflow-x:auto}
+.operations-sample-table{width:100%;border-collapse:collapse;font-size:.78rem;line-height:1.55;min-width:560px}
+.operations-sample-table th,.operations-sample-table td{text-align:left;border-bottom:1px solid #dae2d9;padding:.72rem .6rem;vertical-align:top}
+.operations-sample-table th{background:#e8f0e8;color:#315642;font-weight:800;white-space:nowrap}
+.operations-brief-sheet{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:.6rem}
+.operations-brief-sheet>div{padding:.85rem 1rem;border-left:3px solid #5b8266;background:#f3f7f2}
+.operations-brief-sheet span{display:block;color:#5c715f;font-size:.74rem;font-weight:750;margin-bottom:.35rem}
+.operations-brief-sheet strong{font-size:.87rem;line-height:1.55;display:block;color:#253a2c}
+.operations-work-panel>p{font-size:.82rem;margin:1rem 0 0}
+.promotion-kv-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.85rem;margin:1.25rem 0}
+.promotion-kv-card{min-width:0;background:#fff;border:1px solid #d8ddd8;margin:0}
+.promotion-kv-art{aspect-ratio:4/5;display:flex;flex-direction:column;align-items:flex-start;justify-content:flex-end;padding:clamp(1rem,2.4vw,2rem);gap:.8rem;position:relative;isolation:isolate;overflow:hidden}
+.promotion-kv-art:after{content:"";position:absolute;width:68%;aspect-ratio:1;right:-28%;top:12%;border:1px solid currentColor;border-radius:50%;opacity:.17;pointer-events:none}
+.promotion-kv-black-art{background:linear-gradient(130deg,#101615 0%,#263f31 66%,#647d53 100%);color:#fff}
+.promotion-kv-mother-art{background:linear-gradient(145deg,#f7e5dd,#ddc3b1);color:#512f33}
+.promotion-kv-father-art{background:linear-gradient(135deg,#243e43,#62755f);color:#fff}
+.promotion-kv-art small{font-weight:750;font-size:clamp(.61rem,.75vw,.75rem);letter-spacing:.12em;line-height:1.45}
+.promotion-kv-art strong{font-size:clamp(1.45rem,2.3vw,2.85rem);line-height:1.03;letter-spacing:-.035em;max-width:15ch;overflow-wrap:anywhere}
+.promotion-kv-art span{font-size:clamp(.65rem,.8vw,.84rem);letter-spacing:.07em;line-height:1.5}
+.promotion-kv-art b{font-size:.77rem;border:1px solid currentColor;padding:.65rem .85rem}
+.promotion-kv-card figcaption{padding:1rem;line-height:1.6}
+.promotion-kv-card figcaption h4{margin:0 0 .45rem;font-size:1rem}
+.promotion-kv-card figcaption p{margin:0 0 .55rem;font-size:.8rem;color:#4f5d51}
+.promotion-kv-card figcaption small{color:#617063;font-size:.7rem}
+@media(max-width:920px){.operations-quarter-map,.operations-review-grid,.creator-assessment-grid,.seo-method-matrix,.creator-workflow{grid-template-columns:repeat(2,minmax(0,1fr))}.promotion-kv-grid{grid-template-columns:repeat(2,minmax(0,1fr))}}
+@media(max-width:620px){.operations-role-board{grid-template-columns:repeat(2,minmax(0,1fr))}.operations-quarter-map,.operations-review-grid,.creator-assessment-grid,.seo-method-matrix,.creator-workflow,.operations-brief-sheet,.promotion-kv-grid{grid-template-columns:1fr}.promotion-kv-art{aspect-ratio:5/4}.promotion-kv-art strong{font-size:clamp(1.8rem,8vw,2.55rem)}}
