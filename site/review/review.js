@@ -66,7 +66,7 @@
   const territories = [
     ["The After-Dinner Reset", "问题显化", "以餐后地面任务切入；用真实、同条件的连续过程证明。"],
     ["See the Motion", "机制揭示", "展示真实双头运行、接地与移动路径；静态 KV 不替代运行证明。"],
-    ["Make Room for What Matters", "关系价值转移", "把产品动作放进家庭生活情境；不推导未经验证的省时承诺。"],
+    ["Make Room for What Matters", "关系价值转移", "让产品动作融入家庭生活情境，以真实使用镜头支撑传播表达。"],
     ["A Closer Look at M3", "细节证明", "用官方源图、说明书或产品确认支撑结构与功能说明。"],
     ["Real Home, Real Reset", "真实体验证明", "Creator 实际体验；披露、肖像、版权和 Paid Usage Rights 分别确认。"],
   ];
