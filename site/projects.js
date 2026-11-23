@@ -91,9 +91,9 @@
           <article><small>协作 / OWNERSHIP</small><h3>让各职能明确交付和批准</h3><p>把上市日期、素材版本、内容交付和发布前检查纳入共同排期；我负责内容团队的计划与审核，并与产品、创意及渠道同事对齐交付。</p></article>
           <article><small>学习 / REVIEW</small><h3>同市场内复盘，再讨论跨市场复制</h3><p>先按相同窗口观察内容表现、有效访问和反馈，记录版本与外部变化；市场之间的季节、渠道组合和统计口径不同，不直接拼接结果。</p></article>
         </div>
-        <p><a href="#/case/social/fathers-day-calendar">查看节庆双语日历样例 ↗</a> · <a href="#/case/gtm/market-adaptation">查看 M3 美英文案对照 ↗</a></p>
+        <p><a href="#/case/social/fathers-day-calendar">查看父亲节双语日历 ↗</a> · <a href="#/case/gtm/market-adaptation">查看 M3 美英文案对照 ↗</a></p>
       </div>
-      <p class="g-chart-note"></p>`, "brand-positioning");
+      `, "brand-positioning");
   }
 
   function launchFourStage() {
@@ -283,7 +283,7 @@
             <article><small>COMMERCE</small><h5>商品页 / Amazon</h5><p>产品信息、选购解释与购买承接</p></article>
             <article><small>CONTENT PRODUCTION</small><h5>KV / Video / A+</h5><p>跨渠道视觉、脚本与素材版本</p></article>
           </div>
-          <div class="campaign-house-base"><span>MEASUREMENT & GOVERNANCE</span><p>内容表现 → 有效访问 → 商业承接 → 复盘迭代</p><small>相关渠道作为 Campaign 协作规划展示；实际发布与投放按各项目记录确认</small></div>
+          <div class="campaign-house-base"><span>MEASUREMENT & GOVERNANCE</span><p>内容表现 → 有效访问 → 商业承接 → 复盘迭代</p><small>Social / Paid / PR / CRM / Commerce · 渠道协作规划</small></div>
         </div>
         <section class="campaign-operations-map" id="campaign-activation" aria-label="Campaign 从策划到各渠道激活的工作分工">
           <header><small>INTEGRATED ACTIVATION</small><h4>一条主线，八种传播任务</h4><p>统一产品信息、Campaign 主张与素材版本；不同渠道沿着认知、理解、行动和关系维护的路径协作。</p></header>
@@ -606,7 +606,7 @@
               <source src="assets/video/creator-livingroom-7s.mp4" type="video/mp4">
               <a href="assets/video/creator-livingroom-7s.mp4">观看客厅产品介绍</a>
             </video>
-            <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>人物正面展示、产品持握与讲解作为新品认知的入口；独立客厅展示视频与楼梯清洁演示分别承担产品介绍和操作教育，不再把两段动作拼在同一播放器里。</p></figcaption>
+            <figcaption id="opening-video-note"><h3>客厅场景｜人物介绍产品</h3><p>客厅片段聚焦人物介绍与产品持握；楼梯片段聚焦实际操作与接触面。</p></figcaption>
           </figure>
         </div>
         <p class="kol-role-note">竖屏内容与完整 TVC 的叙事方式不同：先交代清洁问题，再用人物、产品和接触动作完成体验表达。审核重点放在动作是否清晰、产品外观是否准确、开场能否快速传递主题。</p>
@@ -768,7 +768,7 @@
         </div><div class="expo-experience-close"><strong>一次专业交流，连接后续业务动作</strong><span>邀请 → 系统讲解 → 答疑 → 内容复用 → 跟进</span></div>
       </section>
       <section class="expo-program expo-campaign-flight" id="expo-event-plan" aria-labelledby="expo-program-title">
-        <header><small>FIELD MARKETING / PLAN</small><h3 id="expo-program-title">展前、现场、展后的整合协作</h3><p>通用传播和执行模型，与历史业务结果分开。</p></header>
+        <header><small>FIELD MARKETING / PLAN</small><h3 id="expo-program-title">展前、现场、展后的整合协作</h3><p>线上邀约、现场专业交流、展后商务跟进。</p></header>
         <div class="expo-flight-grid">
           <article class="expo-flight-card"><div class="expo-flight-number">01</div><small>PRE-EVENT</small><h4>建立目标客户到访理由</h4><div class="expo-flight-channel"><b>线下</b><p>展位、物料、设备与专业接待准备</p></div><div class="expo-flight-channel online"><b>线上</b><p>LinkedIn、官网、许可邮件和商务预约</p></div><div class="expo-flight-outcome"><span>目的</span><strong>让合适客户找到展位</strong></div></article>
           <article class="expo-flight-card"><div class="expo-flight-number">02</div><small>AT EVENT</small><h4>让客户理解系统方案</h4><div class="expo-flight-channel"><b>线下</b><p>场景讲解、设备展示与技术答疑</p></div><div class="expo-flight-channel online"><b>线上</b><p>获准的现场内容与媒体材料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>形成具体采购沟通</strong></div></article>
@@ -870,7 +870,7 @@
   }
 
   function amazonPriority() {
-    return section("店铺先解决哪一段问题", "经营判断样例 · 用商品、流量和履约信息决定行动。", `
+    return section("店铺先解决哪一段问题", "运营诊断 · 商品、流量与履约", `
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>有浏览，详情页解释不清</h3><p>先检查点击进入的人在看什么词，以及主图、A+ 和商品页有没有回答用途、规格和适用条件。把买家重复提问交给商品与设计改信息。</p></article>
         <article><h3>有转化，供货和售后出现压力</h3><p>广告和促销节奏要与库存、配送和退换预期一起核。补齐承接后，再评估是否增加流量投入。</p></article>
@@ -880,7 +880,7 @@
   }
 
   function crmHandoff() {
-    return section("谁可以收到邮件，谁要先排除", "旅程规划样例 · 从事件、许可和售后状态判断。", `
+    return section("谁可以收到邮件，谁要先排除", "生命周期策略 · 事件、许可与顾客状态", `
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>浏览或加购后，先检查状态</h3><p>有有效许可、符合等待窗口且尚未购买，才进入对应提醒。已经下单时，退出催购，进入购后信息流程。</p></article>
         <article><h3>退款或服务问题，先交客服</h3><p>出现退款、退订或待解决的服务问题时，暂停相应营销触发。运营与电商对齐状态来源，测试频控、退出和重复进入。</p></article>
@@ -903,7 +903,7 @@
     social: [
       "内容复盘先看用户停在哪一步",
       "同样是数据上涨，浏览、互动与点击回答的问题不同。复盘时先检查内容有没有吸引人停留，再看用户是在讨论场景、追问用法，还是进入下一步。",
-      "我负责季度主题、月度日历与社媒小组审核。Meta 历史汇总能说明阶段规模，不合并 Facebook、Instagram 与 Group 的不同窗口数据；具体改动仍需同内容、同窗口记录验证。",
+      "负责季度主题、月度日历和社媒小组审核；以展示、互动、点击和社群反馈调整内容结构。",
     ],
     operations: [
       "主视觉返工，优先保护用户需要看到的结构",
