@@ -174,14 +174,14 @@
       title:"品牌策略与整合传播",
       intro:"整合品牌屋、产品视觉、节庆 Campaign、PR 和合作活动的传播素材。",
       fact:"品牌屋 · Campaign KV · PR 内容",
-      cover:"Campaign KV",eyebrow:"BRAND / IMC",detail:"品牌策略与节庆视觉",
-      media:"assets/projects/fathers-day-bbq-concept.jpg",alt:"父亲节 BBQ 主题 Campaign 视觉提案",kind:"photo"
+      cover:"品牌策略",eyebrow:"BRAND / IMC",detail:"品牌屋 · 视觉与传播",
+      media:"assets/projects/brand-house.webp",alt:"匿名品牌屋与产品传播结构图",kind:"product"
     },
     operations: {
       title:"社媒团队管理与项目交付",
       intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
       fact:"季度主题 · 月度排期 · 视觉审核",
-      cover:"团队交付",eyebrow:"TEAM / DELIVERY",detail:"任务分工 · Brief · 素材验收",kind:"type"
+      cover:"Campaign 管理",eyebrow:"TEAM / DELIVERY",detail:"季度规划 · 团队排期 · 素材审核",kind:"type"
     },
     b2b: {
       title:"储能行业展会与海外 B2B 客户开发",
@@ -194,7 +194,7 @@
       title:"SEO 主题内容与搜索增长",
       intro:"组织 Pillar Blog、英文专题与 FAQ 选题，连接用户搜索需求和产品信息。",
       fact:"1 篇主指南 + 9 篇专题规划",
-      cover:"01 / 09",eyebrow:"SEARCH / CONTENT",detail:"Pillar Blog · Topic Cluster",kind:"type"
+      cover:"SEO 内容",eyebrow:"SEARCH / CONTENT",detail:"1 篇主指南 · 9 篇专题规划",kind:"type"
     },
     amazon: {
       title:"Amazon 店铺运营与广告优化",
@@ -213,7 +213,7 @@
       title:"EDM 用户生命周期传播方案",
       intro:"设计欢迎、浏览、加购与购后邮件的内容、触发、排除和频控规则。",
       fact:"Welcome · Cart · Post-purchase（方案）",
-      cover:"EDM",eyebrow:"CRM / LIFECYCLE",detail:"Welcome · Cart · Post-purchase",kind:"type"
+      cover:"邮件旅程",eyebrow:"CRM / LIFECYCLE",detail:"Welcome · Cart · Post-purchase",kind:"type"
     },
     creator: {
       title:"Creator 合作与视频审核",
@@ -335,9 +335,9 @@
             <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五阶段 Gate · 六条工作流</span></div>
           </a>
           <div class="career-side-projects">
-            <a href="#/case/brand/seasonal-creative-gallery" class="career-side-card career-side-creative">
-              <div class="career-side-photo"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="父亲节 BBQ Campaign 主视觉" loading="lazy" decoding="async"></div>
-              <div><small>02 / BRAND & IMC</small><h3>从 Big Idea 到 Campaign 视觉</h3><p>主题策略、创意概念、KV 与多触点素材</p><span>查看创意作品 ↗</span></div>
+            <a href="#/case/brand/brand-positioning" class="career-side-card career-side-creative">
+              <div class="career-side-photo"><img src="assets/projects/brand-house.webp" alt="匿名品牌屋与传播主张示意" loading="lazy" decoding="async"></div>
+              <div><small>02 / BRAND & IMC</small><h3>品牌定位与整合传播</h3><p>品牌屋、信息层级、Campaign 与传播素材</p><span>查看品牌策略 ↗</span></div>
             </a>
             <a href="#/case/operations/asset-review" class="career-side-card career-side-operations">
               <div><small>03 / MANAGEMENT & DELIVERY</small><h3>让团队按同一标准交付</h3><p>季度主题 · 月度排期 · 内容审核 · 跨部门协作</p></div>
@@ -400,9 +400,9 @@
       creator: { tag:"CREATOR / COLLABORATION", headline:"Creator 合作、交付与授权", steps:[["SELECT","受众与内容适配"],["PROVE","真实演示与脚本审核"],["RIGHTS","版本、用途与复用权限"]], end:"Brief → Review → Usage rights" }
     }[c.id];
     const image = c.id === "brand"
-      ? `<div class="case-story-visual case-story-pair" aria-label="两组节庆 Campaign 创意画面">
-          <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看父亲节节庆主题视觉"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="父亲节户外 BBQ 清洁视觉提案" loading="lazy" decoding="async"><span>FATHER'S DAY / VISUAL IDEA</span></a>
-          <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看黑五主题视觉"><img src="assets/projects/black-friday-suite-concept.jpg" alt="黑五产品组合活动视觉提案" loading="lazy" decoding="async"><span>BLACK FRIDAY / VISUAL IDEA</span></a>
+      ? `<div class="case-story-visual case-story-pair" aria-label="品牌屋与整合传播工作物">
+          <a href="#/case/brand/brand-positioning" aria-label="查看品牌定位与品牌屋"><img src="assets/projects/brand-house.webp" alt="匿名品牌屋与信息架构" loading="lazy" decoding="async"><span>BRAND HOUSE / STRATEGY</span></a>
+          <a href="#/case/brand/seasonal-creative-gallery" aria-label="查看品牌合作与视觉素材"><img src="assets/projects/joint-giveaway.webp" alt="品牌联合活动视觉素材" loading="lazy" decoding="async"><span>BRAND ACTIVATION / CREATIVE</span></a>
         </div>`
       : c.id === "b2b"
       ? `<figure class="case-story-visual"><img src="assets/projects/exhibition-booth-overview-redacted.jpg" alt="海外 B2B 储能展会展位现场照片" loading="lazy" decoding="async"><figcaption>EXHIBITION / ON SITE</figcaption></figure>`
