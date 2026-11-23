@@ -3015,3 +3015,18 @@
 @media(max-width:860px) {.v-gate-detail {grid-template-columns:minmax(0,1fr)}}
 @media(max-width:620px) {.v-gate-detail-fields {grid-template-columns:minmax(0,1fr)}.v-gantt-gates button {min-height:3.65rem}}
 @media print {.v-gate-detail{break-inside:avoid}.v-gantt-gates button[aria-pressed="true"]{color:#fff}}
+
+
+/* Clearly separate actual exhibition work from transferable, brand-neutral methods. */
+.expo-scope-banner{padding:clamp(1rem,2.4vw,1.6rem);margin:1.5rem 0 1.2rem;background:#eaf2f6;border-left:5px solid #597f90}
+.expo-scope-banner span{font-size:.71rem;letter-spacing:.09em;font-weight:800;color:#487486}
+.expo-scope-banner h3{margin:.45rem 0;font-size:clamp(1.2rem,2.4vw,1.7rem);line-height:1.35}
+.expo-scope-banner p{margin:0;line-height:1.75;font-size:.84rem;max-width:70ch}
+.expo-scope-banner.actual{background:#eaf1e7;border-left-color:#4c7957}
+.expo-scope-banner.actual span{color:#44764f}
+.expo-scope-banner.method{margin-top:clamp(2.6rem,5vw,4rem)}
+.expo-identity-poster{background:#263c48}
+.expo-identity-poster::after{background:#79adc4;border-radius:24%;transform:rotate(18deg)}
+.expo-identity-swatches .swatch-blue{background:#79adc4;color:#143243}
+.expo-brand-stage-copy{background:#2c4653}
+@media(max-width:620px){.expo-scope-banner{padding:1rem}}
