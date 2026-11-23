@@ -67,43 +67,43 @@
     gtm: {
       choice: "先用餐后硬地验证相关性，按结构图、操作实拍与说明书的证据强度决定讲什么。",
       handoff: "我负责社媒排期、Brief 和内容审核，横向收集电商、站点及渠道的依赖；产品、商业和各渠道 Owner 分别对事实、可售状态和发布进行签核。",
-      review: "D7 / D30 是下一轮复盘设计：先诊断排期、素材、链接，再核实有效访问、净订单与售后。不把规划当作已发生的订单成果。",
+      review: "上市复盘节点：D+7 检查素材、链接与访问；D+30 结合订单、售后与用户反馈调整传播安排。",
       chapter: "launch-cross-channel",
       artifact: "四渠道接口与上市节奏",
     },
     brand: {
       choice: "先用餐区和浴室两种清洁任务解释产品分工，再把同一个场景分别写成社媒演示、联合活动和新闻稿。",
       handoff: "产品确认事实，营销把事实写成渠道 Brief。媒体稿先核验分发性质，合作活动另核参与规则和授权。",
-      review: "新闻稿可核对分发，联合活动可核对海报。媒体影响、参与和履约需各自的数据。",
+      review: "将新闻稿分发、联合活动素材、参与反馈和传播表现纳入复盘。",
       chapter: "pr-project",
       artifact: "北美新闻稿分发",
     },
     social: {
       choice: "把平台分工落实到季度主题、月度日历和周度审核，避免各渠道反复发布同一套内容。",
       handoff: "内容组定选题和渠道；产品核事实，设计和视频交创意，社群把用户问题带回下轮选题。",
-      review: "页面浏览、内容互动、链接动作和社群参与分别诊断。只有范围和日期对齐，才比较表现。",
+      review: "按浏览、互动、链接点击和社群讨论诊断内容表现，优化下一轮传播。",
       chapter: "social-data-decisions",
       artifact: "社媒增长与内容复盘",
     },
     operations: {
       choice: "把容易返工的产品结构、文案主张和渠道安全区写进 Brief，按不同交付物逐项验收。",
-      handoff: "我直接负责社媒小组的优先级、Brief 和审核；跨部门推动节点、回收反馈、同步口径，不代替其他渠道负责人批准预算、人事和发布。",
-      review: "主视觉遮挡双盘的样稿进入返工。复核外观、裁切和 CTA 之后，最终品牌与产品签核仍待确认。",
+      handoff: "负责社媒小组优先级、Brief 与素材审核，协调产品、设计、视频及渠道负责人交付。",
+      review: "针对产品主视觉结构遮挡问题组织返工，逐项复核外观、裁切、信息和 CTA。",
       chapter: "cross-functional-governance",
       artifact: "横向协作与返工记录",
     },
     community: {
       choice: "先用投票和教程降低参与门槛，再让愿意分享使用过程的人投稿。根据用户提问补内容与 FAQ。",
       handoff: "我安排主题和活动素材，社群负责答疑和投稿审核，产品确认高频问题；创作者或成员素材复用需要单独核权利。",
-      review: "成员规模、查看和发帖评论是三类指标。单场活动还需要参与窗口、规则、履约与复用授权。",
-      output: "成员快照为 4,009；另有超过 1,000 人与新增 227 人的独立阶段记录。",
+      review: "结合成员规模、查看和讨论参与复盘社群，完善活动规则与内容授权。",
+      output: "社群成员规模 4,009 人；另有 1,000+ 历史增长及 227 人阶段新增。",
       chapter: "community-event-governance",
       artifact: "活动职责、参与规则与反馈",
     },
     b2b: {
       choice: "先按采购场景、系统适配度和推进阶段筛选对象，再分别安排触达、技术答疑和报价。",
-      handoff: "客户开发负责判断意向和跟进，把配置及交付问题交产品和商务。以真实储能展会照片说明参与经历；展会概念方案和活动 SOP 作为独立通用方法展示。",
-      review: "任职期触达、转化和成交属于经营记录。若要评估展会，需另核现场登记与会后机会来源。",
+      handoff: "分层开发海外客户，组织系统资料与商务交接，配合储能展会传播物料和现场沟通。",
+      review: "从客户来源、响应、询盘和合作阶段评估渠道质量，持续优化后续跟进。",
       output: "海外 B2B 客户开发月均触达潜客 100+，参与海外展会传播与客户跟进，配有匿名化现场作品。",
       chapter: "expo-project",
       artifact: "展会与客户沟通工作样例",
@@ -111,15 +111,15 @@
     seo: {
       choice: "按任务和搜索意图分流。先以万圣节清洁总指南接住主题，再用专题回答黏污、边角和选型问题。",
       handoff: "我参与选题与内容协同。产品核使用条件，内容组写指南和 FAQ，商品信息负责选型与承接。",
-      review: "主题集群需要按页面核收录和点击。站点自然搜索收入份额与历史 GSC 点击单独解释。",
-      output: "规划 1 篇主指南与 9 篇英文专题，配合 FAQ、选型内容和搜索承接；搜索表现另列业务指标。",
+      review: "结合搜索查询、页面收录、点击和高意图内容表现调整主题集群。",
+      output: "1 篇主指南＋9 篇英文专题规划，连接 FAQ 与产品选型内容。",
       chapter: "seo-cluster",
       artifact: "主题集群规划",
     },
     amazon: {
       choice: "先判断曝光、点击、页面转化或履约哪一段出现问题，再决定改关键词、商品页还是促销安排。",
       handoff: "经营侧拆问题与优先级，设计负责商品表达，广告侧核关键词和流量，供应链与售后核库存、退换和差评。",
-      review: "相近窗口里复核流量、转化和成本，再观察库存和售后。阶段销售变化不能单独归因于某一动作。",
+      review: "以广告流量、转化、成本、库存和售后反馈确定经营优化优先级。",
       output: "Amazon 店铺从 0 到 1 的经营过程中，阶段销售额约增长 10%、转化率约提升 5%，同时优化商品信息与广告结构。",
       chapter: "amazon-priority",
       artifact: "店铺经营取舍",
@@ -127,7 +127,7 @@
     creative: {
       choice: "品牌片先建立节庆家庭场景，操作短片直接切入工具如何接触、推进和转向。",
       handoff: "我参与创意策划与脚本、画面审核。产品确认结构和用途；制作交对应镜头；运营核渠道版本和使用权。",
-      review: "不同开场承担不同任务。阶段测试可固定其余条件比较留存；去污表现需要可核实的同条件镜头。",
+      review: "按品牌情绪与产品演示的不同传播目标检查镜头，并根据观看反馈优化节奏。",
       output: "感恩节与圣诞节完整 TVC 分别承载节庆叙事；Creator 独立展示楼梯实操与客厅产品介绍，结合脚本和画面审核说明内容决策。",
       chapter: "video-projects",
       artifact: "播放节庆故事和产品演示",
@@ -263,7 +263,7 @@
       </section>
       <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
         <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">按项目主题浏览</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
-        <p class="home-route-intro">每个主题都连接实际项目，包括上市排期、Campaign 创意、品牌视觉、团队协作、社媒数据、视频与线下展会。</p>
+        <p class="home-route-intro">上市策略 · Campaign 创意 · 品牌视觉 · 团队管理 · 增长与展会</p>
         <div class="home-route-grid">${homeRoutes.map(([no, title, note, href, evidence]) => `<a class="home-route-card" href="${href}"><span class="home-route-index">${no} / ${title}</span><p>${note}</p><strong>${evidence} <span aria-hidden="true">↗</span></strong></a>`).join("")}</div>
       </section>
       <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
