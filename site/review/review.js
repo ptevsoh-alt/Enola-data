@@ -231,7 +231,7 @@
 
   $("#review-domain-grid").innerHTML = Object.entries(P.domains).map(([id, label]) =>
     '<article class="review-domain-card"><h3>' + esc(label) +
-    '</h3><p>查看该业务板块的阶段成果与项目表现。</p><a href="' +
+    '</h3><p>代表指标与业务项目。</p><a href="' +
     dataHref(id) + '">查看相关项目 ↗</a></article>'
   ).join("");
 
