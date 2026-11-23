@@ -127,8 +127,6 @@
     ["../assets/concept-02.png", "Brand / IMC", "品牌整合传播视觉方向", "brand", "contain", "brand"],
     ["../assets/projects/brand-house.webp", "Brand House", "品牌屋与信息架构工作物", "brand", "cover", "brand"],
     ["../assets/projects/joint-giveaway.webp", "Joint Campaign", "联合活动视觉素材", "brand", "cover", "brand"],
-    ["../assets/projects/fathers-day-bbq-concept.jpg", "Father’s Day / Gift Guide", "父亲节烧烤清洁主题 · AIGC 创意方案", "brand", "cover", "brand"],
-    ["../assets/projects/black-friday-suite-concept.jpg", "Black Friday / Product Suite", "黑五产品组合主视觉 · AIGC 创意方案", "brand", "cover", "brand"],
     ["../assets/projects/holiday-scene-1.webp", "Seasonal Campaign", "节庆传播场景素材", "brand", "cover", "brand"],
     ["../assets/projects/pr-home-scene.webp", "PR / Home Scene", "家庭场景传播素材", "brand", "cover", "brand"],
     ["../assets/projects/holiday-scene-2.webp", "Seasonal Visual", "节庆传播视觉素材", "brand", "cover", "brand"],
