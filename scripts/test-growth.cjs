@@ -497,7 +497,7 @@ const fs = require("fs"),
   check("community activation has a single-owner event contract and consent boundaries", () => {
     const section = d.querySelector("#community-event-governance");
     assert.ok(section);
-    for (const term of ["唯一负责人", "活动落在 Group 时", "参与资格", "奖励与履约", "单独确认使用授权", "出席不等于营销同意", "RSVP 不等于购买意向", "抽奖参与不等于高价值客户"])
+    for (const term of ["唯一负责人", "活动落在 Group 时", "参与资格", "奖励与履约", "单独确认使用授权", "分开管理报名", "营销许可独立确认"])
       assert.ok(section.textContent.includes(term), term);
   });
   check("new evidence modules use readable typography", () => {
