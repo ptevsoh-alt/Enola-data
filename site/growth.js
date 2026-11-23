@@ -155,12 +155,12 @@
     social:{title:"海外社媒内容与增长",intro:"负责 Facebook、Instagram 和 Group 的季度主题、月度内容日历及社媒小组审核。",fact:"2025 Meta · 96.5 万曝光 / 3.7 万互动",cover:"96.5万",eyebrow:"2025 / META CONTENT",detail:"曝光 · 3.7 万互动",kind:"number"},
     community:{title:"Facebook Group 社群运营",intro:"围绕清洁教程、主题互动及用户分享运营美国 Facebook Group，整理反馈与常见问题。",fact:"成员规模 4,009 人",cover:"4,009",eyebrow:"FACEBOOK GROUP",detail:"社群成员规模",kind:"number"},
     brand:{title:"品牌策略与整合传播",intro:"参与品牌屋、产品视觉、节庆 Campaign 和 PR 素材策划，协调不同渠道的信息表达。",fact:"品牌屋 · Campaign KV · PR 内容",cover:"品牌与 Campaign",eyebrow:"BRAND STRATEGY / IMC",detail:"节庆创意 · KV 提案",media:"assets/projects/fathers-day-bbq-concept.jpg",alt:"父亲节户外 BBQ Campaign 视觉创意提案",kind:"photo"},
-    operations:{title:"社媒团队管理与项目交付",intro:"管理社媒小组的内容排期、任务分派和素材审核，协调产品、设计与视频交付。",fact:"季度主题 · 月度日历 · 视觉审核",cover:"TEAM / DELIVERY",eyebrow:"SOCIAL CONTENT OPERATIONS",detail:"排期 · Brief · 审核",kind:"type"},
+    operations:{title:"社媒团队管理与项目交付",intro:"管理社媒小组的内容排期、任务分派和素材审核，协调产品、设计与视频交付。",fact:"季度主题 · 月度日历 · 视觉审核",cover:"社媒小组",eyebrow:"SOCIAL CONTENT OPERATIONS",detail:"排期 · Brief · 审核",kind:"type"},
     b2b:{title:"储能展会与海外 B2B 客户开发",intro:"参与储能展会传播物料和系统展示，开展客户研究、需求沟通与商务跟进。",fact:"真实展会照片 · 海外客户开发",cover:"海外储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"现场传播 · 客户沟通",media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"匿名处理后的真实海外储能展会展位照片",kind:"photo"},
     seo:{title:"SEO 主题内容与搜索增长",intro:"规划 Pillar Blog、英文专题和 FAQ，衔接搜索需求、内容选题和商品信息。",fact:"1 篇 Pillar + 9 篇专题规划",cover:"01 + 09",eyebrow:"SEO / CONTENT",detail:"Pillar Blog + Topic Cluster · 规划",kind:"type"},
     amazon:{title:"Amazon 店铺经营与广告优化",intro:"参与 Amazon 店铺从 0 到 1 的商品运营，覆盖 Listing、CPC、促销和库存协同。",fact:"0–1 经营 · 阶段销售额约 +10%",cover:"0 → 1",eyebrow:"AMAZON / COMMERCE",detail:"Listing · CPC · Store",kind:"type"},
     creative:{title:"节庆 TVC 与短视频创意",intro:"参与感恩节、圣诞节品牌片及 Creator 视频的脚本、镜头规划与画面审核。",fact:"2 支节庆 TVC · 2 支 Creator 视频",cover:"节庆品牌影像",eyebrow:"TVC / CREATIVE DIRECTION",detail:"感恩节 · 圣诞节",media:"assets/projects/holiday-scene-1.webp",alt:"节庆品牌故事视频的家庭场景画面",kind:"photo"},
-    crm:{title:"EDM 用户生命周期方案",intro:"规划欢迎、浏览、加购与购后邮件内容，设计触发、排除及频控规则。",fact:"Welcome · Cart · Post-purchase（方案）",cover:"EDM",eyebrow:"CRM / LIFECYCLE",detail:"客户旅程 · 邮件内容规划",kind:"type"},
+    crm:{title:"EDM 用户生命周期方案",intro:"规划欢迎、浏览、加购与购后邮件内容，设计触发、排除及频控规则。",fact:"Welcome · Cart · Post-purchase（方案）",cover:"邮件旅程",eyebrow:"CRM / LIFECYCLE",detail:"客户旅程 · 邮件内容规划",kind:"type"},
     creator:{title:"Creator 合作与内容审核",intro:"组织创作者筛选、英文 Brief、脚本反馈、视频审片和素材授权交接。",fact:"合作 Brief · 审片 · 授权管理",cover:"Creator 内容合作",eyebrow:"CREATOR / PARTNERSHIPS",detail:"产品实拍 · 短视频",media:"assets/projects/stairs-video-frame.webp",alt:"Creator 楼梯产品实操视频截帧",kind:"photo"},
   };
   function cover(c, large = false) {
@@ -174,14 +174,14 @@
       +media+'<div class="case-cover-v3-overlay" aria-hidden="true"></div>'
       +'<div class="case-cover-v3-top"><span>'+esc(item.eyebrow)+'</span><span>CASE '+esc(c.no)+'</span></div>'
       +'<div class="case-cover-v3-main">'+caption+'</div>'
-      +'<div class="case-cover-v3-bottom">'+esc(c.subtitle)+'</div></div>';
+      +'</div>';
   }
   function card(c) {
     const item = caseCatalog[c.id] || {};
     const lead = window.PORTFOLIO_SELECTED_WORK?.[c.id];
     return '<article class="case-card case-card-editorial" data-case-id="'+esc(c.id)+'">'
       +'<a class="cover-link" href="#/case/'+esc(c.id)+'" aria-label="阅读'+esc(item.title||c.title)+'">'+cover(c)+'</a>'
-      +'<div class="case-card-body"><div class="card-meta"><span>CASE '+esc(c.no)+' · '+esc(tags[c.id])+'</span></div>'
+      +'<div class="case-card-body"><div class="card-meta"><span>'+esc(tags[c.id])+'</span></div>'
       +'<h3>'+link(c.id,esc(item.title||c.title))+'</h3><p>'+esc(item.intro||c.role)+'</p>'
       +'<div class="case-card-result"><strong>'+esc(item.fact||lead?.highlight||c.subtitle)+'</strong><a href="#/case/'+esc(c.id)+'/'+esc(lead?.chapter||"insight")+'">查看案例 ↗</a></div></div></article>';
   }
@@ -374,7 +374,7 @@
     </section>`;
   }
   function listPage() {
-    return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>项目案例</h1><p class="lede">品牌、产品、传播与团队交付。从项目出发，查看我的分工、关键取舍与交付记录。</p><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
+    return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>项目案例</h1><p class="lede">产品上市、品牌传播、社媒增长、团队管理与海外 B2B。</p><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
   }
   const groups = {
     策略与上市: ["gtm", "brand"],
