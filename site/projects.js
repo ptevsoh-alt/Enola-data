@@ -587,7 +587,7 @@
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
           <div class="tvc-work-heading"><small>01 / THANKSGIVING · SEASONAL TVC</small><h3 id="thanksgiving-heading">感恩节｜感谢藏在日常照料里</h3><p>节日餐桌、火鸡和家人之间的互动建立节庆氛围；地面清洁成为人物彼此照顾的动作，随后进入双盘清洁工具的使用与功能演示。</p></div>
           <div class="tvc-work-player" id="video-drive-editions">
-            <iframe loading="lazy" title="播放感恩节主题 TVC · 1114 版本约101秒" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe loading="lazy" title="播放感恩节主题 TVC · 101秒视频预览" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
           <div class="tvc-work-copy">
             <dl>
@@ -601,7 +601,7 @@
         <article class="tvc-work-card" id="holiday-full-film" aria-labelledby="christmas-heading">
           <div class="tvc-work-heading"><small>02 / CHRISTMAS · SEASONAL TVC</small><h3 id="christmas-heading">圣诞节｜把关心放进每一个小动作</h3><p>圣诞树、礼物与夜晚的家庭空间建立情绪，年长者默默整理地面、使用黄色双盘拖把，最后让镜头回到一家人的相聚时刻。</p></div>
           <div class="tvc-work-player">
-            <iframe loading="lazy" title="播放圣诞节主题 TVC · 90秒完整成片" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe loading="lazy" title="播放圣诞节主题 TVC · 90秒视频预览" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
           <div class="tvc-work-copy" id="long-film-note">
             <dl>
@@ -609,7 +609,7 @@
               <div><dt>创意机制</dt><dd>节日空间 → 地面清洁 → 产品操作 → 家人团聚</dd></div>
               <div><dt>传播价值</dt><dd>让功能表达融入人物关系，用完整叙事承载品牌情绪</dd></div>
             </dl>
-            <a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view" target="_blank" rel="noopener noreferrer">观看圣诞节 TVC 完整成片 ↗</a>
+            <a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view" target="_blank" rel="noopener noreferrer">观看圣诞节 TVC 视频预览 ↗</a>
           </div>
         </article>
       </div>
@@ -667,7 +667,7 @@
       <div class="g-story-note" id="video-management">
         <h3>我的创意参与与项目交付</h3>
         <p>参与节庆传播主题、创意脚本与画面审核，将品牌情绪、产品卖点和实际使用情境转化为可执行的镜头与传播物料。与产品、视觉、视频及社媒团队协作，分别检查故事连贯性、产品结构、动作真实性、字幕与渠道版本。</p>
-        <p>两支 TVC 均以完整作品呈现；Creator 内容分别展示楼梯实操与客厅产品介绍，每条保留完整七秒镜头。通过 Brief、产品事实审核和渠道版本管理维持品牌表达一致。</p>
+        <p>两支 TVC 作为节庆创意预览呈现，Creator 内容分别展示楼梯实操与客厅产品介绍，每条保留完整七秒镜头。通过 Brief、产品事实审核和渠道版本管理维持品牌表达一致。</p>
         <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
