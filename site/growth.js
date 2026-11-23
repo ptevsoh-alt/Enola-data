@@ -246,7 +246,7 @@
       <section class="career-showcase" id="career-showcase" aria-labelledby="career-showcase-heading">
         <header class="career-showcase-heading"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">策略先于内容，交付连接结果</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
         <div class="career-showcase-grid">
-          <a class="career-spotlight" href="#/case/gtm/gtm-value-to-launch">
+          <a class="career-spotlight" href="#/case/gtm/gtm-positioning-decision">
             <div class="career-spotlight-hero">
               <div class="career-spotlight-copy"><small>01 / PRODUCT MARKETING · GTM</small><h3>M3 新品上市<br>策略与传播排期</h3><p>餐后硬地任务 → 产品价值与证明 → 视觉创意 → 渠道协作</p><span class="career-view">打开上市策略与排期 ↗</span></div>
               <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘拖把主视觉" loading="lazy" decoding="async">
