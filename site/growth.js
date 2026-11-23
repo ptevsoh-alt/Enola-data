@@ -151,17 +151,77 @@
   };
 
   const caseCatalog = {
-    gtm:{title:"四条产品线营销与 M3 上市规划",intro:"梳理四条产品线的传播重点，负责社媒内容策划、Brief 与审核，参与 M3 上市协作。",fact:"M3 / 2026.05 · 上市传播规划",cover:"M3 新品上市",eyebrow:"PRODUCT MARKETING / GTM",detail:"产品定位 · KV · 上市排期",media:"assets/projects/m3-yellow-main.webp",alt:"黄色双盘拖把 M3 产品图片",kind:"product"},
-    social:{title:"海外社媒内容与增长",intro:"负责 Facebook、Instagram 和 Group 的季度主题、月度内容日历及社媒小组审核。",fact:"2025 Meta · 96.5 万曝光 / 3.7 万互动",cover:"96.5万",eyebrow:"2025 / META CONTENT",detail:"曝光 · 3.7 万互动",kind:"number"},
-    community:{title:"Facebook Group 社群运营",intro:"围绕清洁教程、主题互动及用户分享运营美国 Facebook Group，整理反馈与常见问题。",fact:"成员规模 4,009 人",cover:"4,009",eyebrow:"FACEBOOK GROUP",detail:"社群成员规模",kind:"number"},
-    brand:{title:"品牌策略与整合传播",intro:"参与品牌屋、产品视觉、节庆 Campaign 和 PR 素材策划，协调不同渠道的信息表达。",fact:"品牌屋 · Campaign KV · PR 内容",cover:"品牌与 Campaign",eyebrow:"BRAND STRATEGY / IMC",detail:"节庆创意 · KV 提案",media:"assets/projects/fathers-day-bbq-concept.jpg",alt:"父亲节户外 BBQ Campaign 视觉创意提案",kind:"photo"},
-    operations:{title:"社媒团队管理与项目交付",intro:"管理社媒小组的内容排期、任务分派和素材审核，协调产品、设计与视频交付。",fact:"季度主题 · 月度日历 · 视觉审核",cover:"社媒小组",eyebrow:"SOCIAL CONTENT OPERATIONS",detail:"排期 · Brief · 审核",kind:"type"},
-    b2b:{title:"储能展会与海外 B2B 客户开发",intro:"参与储能展会传播物料和系统展示，开展客户研究、需求沟通与商务跟进。",fact:"真实展会照片 · 海外客户开发",cover:"海外储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"现场传播 · 客户沟通",media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"匿名处理后的真实海外储能展会展位照片",kind:"photo"},
-    seo:{title:"SEO 主题内容与搜索增长",intro:"规划 Pillar Blog、英文专题和 FAQ，衔接搜索需求、内容选题和商品信息。",fact:"1 篇 Pillar + 9 篇专题规划",cover:"01 + 09",eyebrow:"SEO / CONTENT",detail:"Pillar Blog + Topic Cluster · 规划",kind:"type"},
-    amazon:{title:"Amazon 店铺经营与广告优化",intro:"参与 Amazon 店铺从 0 到 1 的商品运营，覆盖 Listing、CPC、促销和库存协同。",fact:"0–1 经营 · 阶段销售额约 +10%",cover:"0 → 1",eyebrow:"AMAZON / COMMERCE",detail:"Listing · CPC · Store",kind:"type"},
-    creative:{title:"节庆 TVC 与短视频创意",intro:"参与感恩节、圣诞节品牌片及 Creator 视频的脚本、镜头规划与画面审核。",fact:"2 支节庆 TVC · 2 支 Creator 视频",cover:"节庆品牌影像",eyebrow:"TVC / CREATIVE DIRECTION",detail:"感恩节 · 圣诞节",media:"assets/projects/holiday-scene-1.webp",alt:"节庆品牌故事视频的家庭场景画面",kind:"photo"},
-    crm:{title:"EDM 用户生命周期方案",intro:"规划欢迎、浏览、加购与购后邮件内容，设计触发、排除及频控规则。",fact:"Welcome · Cart · Post-purchase（方案）",cover:"邮件旅程",eyebrow:"CRM / LIFECYCLE",detail:"客户旅程 · 邮件内容规划",kind:"type"},
-    creator:{title:"Creator 合作与内容审核",intro:"组织创作者筛选、英文 Brief、脚本反馈、视频审片和素材授权交接。",fact:"合作 Brief · 审片 · 授权管理",cover:"Creator 内容合作",eyebrow:"CREATOR / PARTNERSHIPS",detail:"产品实拍 · 短视频",media:"assets/projects/stairs-video-frame.webp",alt:"Creator 楼梯产品实操视频截帧",kind:"photo"},
+    gtm: {
+      title:"四条产品线营销与 M3 上市规划",
+      intro:"负责产品线内容规划与社媒 Brief，参与 M3 上市 Campaign 的素材和渠道协作。",
+      fact:"2026.05 · M3 上市传播方案",
+      cover:"M3",eyebrow:"PRODUCT MARKETING / GTM",detail:"新品上市 · Campaign · 排期",
+      media:"assets/projects/m3-yellow-main.webp",alt:"黄色 M3 双盘电动拖把官方产品照片",kind:"product"
+    },
+    social: {
+      title:"海外社媒内容策略与增长",
+      intro:"管理 Facebook、Instagram 及 Group 内容工作，制定季度主题、月度日历和素材审核标准。",
+      fact:"2025 Meta · 96.5 万曝光 / 3.7 万互动",
+      cover:"96.5万",eyebrow:"SOCIAL / GROWTH",detail:"2025 Meta 内容曝光",kind:"number"
+    },
+    community: {
+      title:"美国 Facebook Group 社群运营",
+      intro:"策划清洁教程、用户讨论及 UGC 互动，持续整理社群反馈和内容选题。",
+      fact:"Facebook Group · 4,009 名成员",
+      cover:"4,009",eyebrow:"COMMUNITY / UGC",detail:"Facebook Group 成员规模",kind:"number"
+    },
+    brand: {
+      title:"品牌策略与整合传播",
+      intro:"整合品牌屋、产品视觉、节庆 Campaign、PR 和合作活动的传播素材。",
+      fact:"品牌屋 · Campaign KV · PR 内容",
+      cover:"Campaign KV",eyebrow:"BRAND / IMC",detail:"品牌策略与节庆视觉",
+      media:"assets/projects/fathers-day-bbq-concept.jpg",alt:"父亲节 BBQ 主题 Campaign 视觉提案",kind:"photo"
+    },
+    operations: {
+      title:"社媒团队管理与项目交付",
+      intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
+      fact:"季度主题 · 月度排期 · 视觉审核",
+      cover:"团队交付",eyebrow:"TEAM / DELIVERY",detail:"任务分工 · Brief · 素材验收",kind:"type"
+    },
+    b2b: {
+      title:"储能行业展会与海外 B2B 客户开发",
+      intro:"参与储能展会物料与系统展示，并负责海外客户需求沟通和商务跟进。",
+      fact:"真实参展记录 · 海外客户开发",
+      cover:"储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"系统展示 · 现场沟通",
+      media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"脱敏后的真实储能行业展会现场照片",kind:"photo"
+    },
+    seo: {
+      title:"SEO 主题内容与搜索增长",
+      intro:"组织 Pillar Blog、英文专题与 FAQ 选题，连接用户搜索需求和产品信息。",
+      fact:"1 篇主指南 + 9 篇专题规划",
+      cover:"01 / 09",eyebrow:"SEARCH / CONTENT",detail:"Pillar Blog · Topic Cluster",kind:"type"
+    },
+    amazon: {
+      title:"Amazon 店铺运营与广告优化",
+      intro:"参与 Amazon 店铺从 0 到 1 的运营，覆盖 Listing、广告、促销和库存。",
+      fact:"店铺 0–1 · 阶段销售额约 +10%",
+      cover:"0 → 1",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
+    },
+    creative: {
+      title:"节庆 TVC 与短视频创意",
+      intro:"参与感恩节和圣诞节品牌影片、Creator 视频的脚本、镜头规划与审片。",
+      fact:"2 支节庆 TVC · 2 支 Creator 视频",
+      cover:"TVC",eyebrow:"VIDEO / CREATIVE",detail:"感恩节 · 圣诞节",
+      media:"assets/projects/holiday-scene-1.webp",alt:"节庆 TVC 的家庭生活场景画面",kind:"photo"
+    },
+    crm: {
+      title:"EDM 用户生命周期传播方案",
+      intro:"设计欢迎、浏览、加购与购后邮件的内容、触发、排除和频控规则。",
+      fact:"Welcome · Cart · Post-purchase（方案）",
+      cover:"EDM",eyebrow:"CRM / LIFECYCLE",detail:"Welcome · Cart · Post-purchase",kind:"type"
+    },
+    creator: {
+      title:"Creator 合作与视频审核",
+      intro:"完成创作者筛选、英文 Brief、视频反馈与素材使用权交接。",
+      fact:"合作 Brief · 审片 · 素材授权",
+      cover:"Creator",eyebrow:"CREATOR / PARTNERSHIPS",detail:"产品实拍与合作交付",
+      media:"assets/projects/stairs-video-frame.webp",alt:"Creator 楼梯清洁短视频截帧",kind:"photo"
+    }
   };
   function cover(c, large = false) {
     const item = caseCatalog[c.id] || {title:c.title,cover:c.subtitle,eyebrow:tags[c.id],detail:c.subtitle,kind:"type"};
