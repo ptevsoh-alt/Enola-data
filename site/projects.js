@@ -123,7 +123,7 @@
           <tbody>
             <tr><th scope="row">Amazon</th><td>A+、主图、场景图、规格与使用限制</td><td>电商渠道 Owner；产品核事实</td><td>产品端提供已批准事实，渠道独立完成上架审核</td></tr>
             <tr><th scope="row">独立站</th><td>落地页、FAQ、演示入口、CTA 与链接</td><td>站点 / 商业 Owner；产品核事实</td><td>页面与库存、价格、结账须现场核验</td></tr>
-            <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>用于协作规划，未作为已发生的经销培训成果</td></tr>
+            <tr><th scope="row">海外渠道</th><td>产品卖点单页、对比说明、渠道培训资料</td><td>销售 / 渠道 Owner</td><td>渠道资料包与培训物料规划</td></tr>
             <tr><th scope="row">社媒</th><td>KV、Feed / Story、短视频脚本、Creator Brief</td><td>我负责内容组排期与审核；产品及品牌分别签核</td><td>有英文 Brief、素材方案和可核验的返工记录</td></tr>
           </tbody>
         </table></div></details>
@@ -224,7 +224,7 @@
       <div class="g-story-note" id="launch-decisions">
         <h3>产品主张｜站着推进，清理餐后硬地</h3>
         <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
-        <details class="v-supporting-evidence"><summary>查看产品主张对应的三类证明与内容物料</summary>
+        <details class="v-supporting-evidence"><summary>查看产品主张与视觉交付</summary>
         <div class="g-proof-table">
           <table>
             <thead><tr><th scope="col">用户会问</th><th scope="col">主张需要的证据</th><th scope="col">对应物料</th></tr></thead>
@@ -456,7 +456,7 @@
           <article><small>FACEBOOK / 场景与互动</small><h3>先让人讲家庭清洁故事</h3><p>从“父亲教过你的生活小技巧”开启讨论，再用轮播回应常见使用情境；重点观察真实留言和重复出现的问题。</p></article>
           <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，不将两种产品混成同一功能。</p></article>
           <article><small>GROUP / 关系与参与</small><h3>让成员提供真实做法</h3><p>教程、投票和 UGC 邀约是自愿参与。投稿并不自动允许商业复用，活动 Owner、资格与奖励由实际执行方确认。</p></article>
-          <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>若有真实家庭故事、Creator 视频或新闻角度，再单独安排 Brief、素材使用权与披露；仅有日历不等于外部合作已发生。</p></article>
+          <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>围绕家庭故事与产品使用场景设计合作 Brief，同步规划创作者交付、内容披露和素材授权。</p></article>
           <article><small>PAID ADS / 创意放大</small><h3>用节庆主题形成广告创意变体</h3><p>规划家庭关系开场、清洁任务开场和产品动作开场，按受众阶段匹配素材与落地页，投放测试与预算由广告负责人审批。</p></article>
           <article><small>EDM / 邮件关系</small><h3>让活动内容进入订阅与购后沟通</h3><p>按活动主题设计邮件标题、产品故事与 FAQ，结合订阅许可和购买状态安排发送，避免向已购买用户重复催购。</p></article>
         </div>
@@ -541,7 +541,7 @@
       <section class="tvc-creative-intro" id="video-campaign-showcase">
         <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
         <h3>同一个清洁品牌，不同节日讲不同的家庭故事</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 都让产品进入人物情节，而不是将功能参数单独堆进故事。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
+        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
       </section>
       <div class="tvc-work-grid" aria-label="感恩节和圣诞节两支独立 Campaign TVC">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
@@ -657,7 +657,7 @@
       </div>
       <section class="g-story-note b2b-compare" id="b2b-scale-comparison">
         <h3>同期海外客户开发与渠道推广</h3>
-        <p>除展会相关工作外，我还通过 Google、LinkedIn、Facebook、Instagram 和邮件触达海外客户。以下为任职期渠道工作记录，<strong>同期渠道经营指标</strong>。</p>
+        <p>同期通过 Google、LinkedIn、Facebook、Instagram 与邮件开展海外客户开发和业务沟通。</p>
         <div class="expo-results">
           <article><span>月均潜在客户触达</span><strong>100+</strong><small>任职期海外 B2B 客户开发</small></article>
           <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期渠道账号的阶段变化</small></article>
@@ -759,7 +759,7 @@
         </div>
       </section>
       <section class="expo-experience-menu" id="expo-experience-menu" aria-labelledby="expo-experience-title">
-        <header><small>ACTIVITY DESIGN / GENERIC</small><h3 id="expo-experience-title">四种活动机制，服务不同 B2B 沟通需求</h3><p>可选的策划方法，不代表已实际举办。</p></header>
+        <header><small>ACTIVITY DESIGN / GENERIC</small><h3 id="expo-experience-title">四种活动机制，服务不同 B2B 沟通需求</h3><p>专业讲解、采购问答、现场内容与商务跟进。</p></header>
         <div class="expo-experience-grid">
           <article class="expo-experience-card"><div class="expo-experience-icon">01<span>EXPLAIN</span></div><h4>专家系统讲解</h4><p>展示应用场景、系统架构与配置选择。</p><dl><div><dt>现场</dt><dd>技术图与 A3 讲解卡</dd></div><div><dt>传播</dt><dd>技术图解及 FAQ</dd></div></dl></article>
           <article class="expo-experience-card"><div class="expo-experience-icon">02<span>ASK</span></div><h4>采购问题征集</h4><p>收集技术适配、交付和合作模式问题。</p><dl><div><dt>现场</dt><dd>问答卡与专家咨询</dd></div><div><dt>传播</dt><dd>解决方案文章和答疑</dd></div></dl></article>
@@ -797,7 +797,7 @@
       </div>
       <div class="g-story-note" id="partner-handoff">
         <h3>外部创作者从 Brief 到交付</h3>
-        <p>工作样例。邀约时确认寄样、脚本初稿和成片日期。首稿审核看开场能否交代使用场景、动作能否支持主张，以及合作披露是否清楚。把返修意见标到对应版本和时间点。</p>
+        <p>合作交付：邀约时确认寄样、脚本初稿与成片日期。首稿审核看开场能否交代使用场景、动作能否支持主张，以及合作披露是否清楚。把返修意见标到对应版本和时间点。</p>
         <p>验收时将成片与书面使用许可一起归档，注明渠道、地域、期限、剪辑与付费使用范围，供后续复用时核查。</p>
         <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
       </div>
@@ -858,11 +858,11 @@
           <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
           <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>例如 M3 主视觉 CTA 遮挡双盘，返工要求是让关键结构完整可见，而非笼统反馈“再高级一点”。图片由制作方修改，内容侧复核。</p></article>
           <article><small>口径</small><h3>同一 Claim，只能有一个已批准版本</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
-          <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>若产品条件、素材权利或购买承接未就绪，标记 HOLD / REWORK，明确需要谁确认。本人直接负责社媒内容组，不推定拥有其他团队的最终决策权。</p></article>
+          <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>对于产品信息、素材权利和购买承接，使用 HOLD / REWORK 管理异常；社媒内容组负责 Brief 和审核，其他业务由对应负责人放行。</p></article>
         </div>
       </div>
       <div class="g-story-note">
-        <h3>用父亲节日历演示一次项目交接</h3>
+        <h3>父亲节 Campaign 交付节奏</h3>
         <p>长柄刷聚焦浴室边角，双盘拖把聚焦餐后硬地。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
         <p class="g-chart-note">内容排期：28 个对外节点 · 2 个内部验收节点</p>
         <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
@@ -893,7 +893,7 @@
     gtm: [
       "为什么首发从餐后硬地讲起",
       "同一品牌覆盖地面、浴室等多种清洁任务。美国上市规划把优先场景收敛到餐后硬地，因为餐区污渍、站姿推进和双盘接地可以在同一组镜头里讲清。长柄刷继续承接浴室边角的问题。",
-      "这是 2026 年 5 月 Campaign 的后续规划重建，不等于该月已上市或有订单。餐后场景的优先级还需 Review/VOC、客服及搜索问题验证，产品事实、购买承接与发布条件由各职能签核。",
+      "2026 年 5 月上市规划以餐后硬地为优先场景，串联 VOC、产品事实、内容制作与各渠道发布 Gate。",
     ],
     brand: [
       "用户先选清洁任务，再认产品线",
@@ -938,12 +938,12 @@
     crm: [
       "发送之前先核对用户的真实状态",
       "加购用户可能已经下单，也可能正在处理退款。旅程规划先核同意记录、订单与售后状态，再决定发提醒、转入购后信息或暂停营销。",
-      "上线前要实测触发、退出、频控和重复进入。现有案例展示旅程与规则规划，实际发送与复购需要系统数据。",
+      "旅程设计围绕触发、退出、频控、重复进入与发送测试展开。",
     ],
     creator: [
       "先看创作者能否拍清用户最关心的动作",
       "为产品教育筛选创作者时，优先看目标受众、过往镜头和理解产品的能力。Brief 明确需要拍到的动作，验收时逐项对照片段、披露与可使用范围。",
-      "目前可展示工作台原型与交接样例。真实合作进度以合同、交付版本、发布链接和授权记录为准。",
+      "以创作者筛选、合作 Brief、版本审核、授权记录和发布回链组织交付。",
     ],
   };
 
