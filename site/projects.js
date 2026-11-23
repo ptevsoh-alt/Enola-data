@@ -225,12 +225,12 @@
         <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
         <div class="m3-kv-comps">
           <figure class="m3-kv-landscape">
-            <div class="m3-kv-copy"><small>QIMEDO / M3</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
+            <div class="m3-kv-copy"><small>M3 / PRODUCT MARKETING</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
             <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘电动拖把官方产品图，包含手柄与双盘结构" loading="lazy" decoding="async">
             <figcaption>16:9 / Campaign KV</figcaption>
           </figure>
           <figure class="m3-kv-feed">
-            <div class="m3-kv-copy"><small>QIMEDO / HOME</small><h4>Make Room for<br>What Matters.</h4><p>Meet M3.</p></div>
+            <div class="m3-kv-copy"><small>M3 / BRAND CAMPAIGN</small><h4>Make Room for<br>What Matters.</h4><p>Meet M3.</p></div>
             <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 产品主视觉用于社媒 Feed 版式" loading="lazy" decoding="async">
             <figcaption>4:5 / Social Feed</figcaption>
           </figure>
