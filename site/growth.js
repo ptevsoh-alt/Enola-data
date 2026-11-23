@@ -170,7 +170,7 @@
     const raw = String(m.window || "");
     if (["impressions", "engagements"].includes(m.id)) return "2025 年 Meta 阶段数据";
     if (m.id === "group-members") return "Facebook Group 成员规模快照";
-    if (m.id === "group-growth-1k") return "社群历史运营阶段";
+    if (m.id === "group-growth-1k") return "社群增长记录";
     if (m.id === "group") return "社群单阶段新增记录";
     if (/未注明|待核|未完整|具体起止|截图未显示|不确定|未知/.test(raw)) return "";
     return raw.replace(/（简历记录）|（字段待确认）/g, "").replace(/历史阶段；?/g, "").trim();
@@ -209,7 +209,7 @@
   }
   function metricCard(m) {
     const period = readerWindow(m);
-    const visiblePeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) || !period ? "" : `<small>${esc(period)}</small>`;
+    const visiblePeriod = /^(历史阶段数据|社群增长记录)$/.test(period) || !period ? "" : `<small>${esc(period)}</small>`;
     return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span>${visiblePeriod}<span class="metric-source">查看数据详情 ↗</span></button>`;
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
@@ -539,7 +539,7 @@
       const m = metric(t.dataset.evidence);
       if (!m) return;
       const period = readerWindow(m);
-      const meaningfulPeriod = /^(历史阶段数据|社群历史运营阶段)$/.test(period) ? "" : period;
+      const meaningfulPeriod = /^(历史阶段数据|社群增长记录)$/.test(period) ? "" : period;
       const platform = String(m.platform || "").replace(/（口径待核）/g, "").replace(/，字段待核/g, "");
       $("#evidence-content").innerHTML =
         `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p><dl>${[
