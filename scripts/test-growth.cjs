@@ -228,6 +228,15 @@ const fs = require("fs"),
       assert.equal(insight.querySelectorAll(".reader-source-note").length, 0);
     });
   }
+  await route("/case/gtm/gtm-visual-schedule");
+  check("May plan starts at marketing work, not personal product initiation", () => {
+    const schedule = d.querySelector("#gtm-visual-schedule");
+    assert.ok(schedule);
+    assert.ok(schedule.textContent.includes("05 / 01–03"));
+    assert.ok(schedule.textContent.includes("内容方向"));
+    assert.equal(schedule.textContent.includes("4/28"), false);
+    assert.equal(schedule.textContent.includes("立项"), false);
+  });
   await route("/case/gtm/campaign-paid-email-assets");
   check("Paid Ads and EDM creative variants are present", () => {
     assert.equal(d.querySelectorAll("#campaign-paid-email-assets article").length, 2);
