@@ -440,8 +440,8 @@
     return `<section class="g-module g-social-loop">
       ${header(
         "PERFORMANCE REVIEW / CONTINUOUS IMPROVEMENT",
-        "复盘的终点，是下一轮内容决策。",
-        "用平台表现、链接行为与社群反馈安排下轮内容方向、产品说明和渠道协作。",
+        "社媒数据复盘与内容调整",
+        "结合浏览、互动、链接点击与社群反馈，调整后续选题和产品演示内容。",
       )}
       ${pathSteps([
         ["读取平台信号", "分别看曝光 / 浏览、互动与链接点击"],
