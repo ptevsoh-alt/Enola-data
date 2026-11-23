@@ -59,7 +59,9 @@ const fs = require("fs"),
   check("review page renders Campaign, creative, community and delivery visual maps", () => {
     assert.deepEqual([...d.querySelectorAll("#review-campaign-flow li b")].map((node) => node.textContent), ["选场景", "定主张", "拆交付", "核上线"]);
     assert.ok(d.querySelector('#review-systems a[href="../#/case/gtm/campaign-mechanism-mapping"]'));
-    assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
+    assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 4);
+    assert.ok(d.querySelector("#review-territories").textContent.includes("One Home, Different Cleaning Jobs"));
+    assert.equal(d.querySelector("#review-territories").textContent.includes("Real Home, Real Reset"), false);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
   });
