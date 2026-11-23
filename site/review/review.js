@@ -64,11 +64,10 @@
   $("#review-campaign-flow").innerHTML = renderFlow(campaignFlow);
 
   const territories = [
-    ["The After-Dinner Reset", "问题显化", "以餐后地面任务切入；用真实、同条件的连续过程证明。"],
-    ["See the Motion", "机制揭示", "展示真实双头运行、接地与移动路径；静态 KV 不替代运行证明。"],
-    ["Make Room for What Matters", "关系价值转移", "让产品动作融入家庭生活情境，以真实使用镜头支撑传播表达。"],
-    ["A Closer Look at M3", "细节证明", "用官方源图、说明书或产品确认支撑结构与功能说明。"],
-    ["Real Home, Real Reset", "真实体验证明", "Creator 实际体验；披露、肖像、版权和 Paid Usage Rights 分别确认。"],
+    ["The After-Dinner Reset", "餐后清洁场景", "以餐后的真实地面问题进入产品故事，素材为场景 KV 和连续操作。"],
+    ["See the Motion", "双盘操作演示", "用产品原图交代结构，用真实镜头说明旋转、接地和推进路径。"],
+    ["Make Room for What Matters", "家庭生活叙事", "把日常清洁任务放进家庭生活中，以人物和场景表达品牌情绪。"],
+    ["One Home, Different Cleaning Jobs", "辅助 / 产品组合教育", "用四条产品线说明不同任务，作为常态内容补充，不作为第四条 M3 Campaign 主线。"],
   ];
   $("#review-territories").innerHTML = territories
     .map(
