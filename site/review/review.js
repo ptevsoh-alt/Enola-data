@@ -119,18 +119,15 @@
   $("#review-case-grid").innerHTML = cases;
 
   const visuals = [
-    ["../assets/concept-01.png", "GTM / Product Launch", "产品上市策略与视觉方向", "gtm", "contain", "launch"],
     ["../assets/projects/m3-yellow-main.webp", "M3 Product Identity", "产品外观与型号识别素材", "gtm", "contain", "launch"],
     ["../assets/projects/mop-kv-detail.webp", "M3 Campaign KV", "Campaign 主视觉细节", "gtm", "cover", "launch"],
     ["../assets/projects/m3-yellow-battery.webp", "M3 Battery Detail", "产品细节素材", "gtm", "contain", "launch"],
-    ["../assets/concept-02.png", "Brand / IMC", "品牌整合传播视觉方向", "brand", "contain", "brand"],
     ["../assets/projects/brand-house.webp", "Brand House", "品牌屋与信息架构工作物", "brand", "cover", "brand"],
     ["../assets/projects/joint-giveaway.webp", "Joint Campaign", "联合活动视觉素材", "brand", "cover", "brand"],
     ["../assets/projects/pr-home-scene.webp", "PR / Home Scene", "家庭场景传播素材", "brand", "cover", "brand"],
     ["../assets/projects/exhibition-booth-overview-redacted.jpg", "B2B Exhibition", "展会现场图 · 已匿名化", "b2b", "cover", "b2b"],
     ["../assets/projects/exhibition-booth-angle-redacted.jpg", "Exhibition Angle", "展位角度图 · 已匿名化", "b2b", "cover", "b2b"],
     ["../assets/projects/exhibition-product-display-redacted.jpg", "Product Display", "产品展示图 · 已匿名化", "b2b", "cover", "b2b"],
-    ["../assets/concept-03.png", "Creative Direction", "创意策略与视觉方向", "creative", "contain", "creative"],
     ["../assets/projects/vacuum-video-frame.webp", "Video Content", "产品演示视频画面", "creative", "cover", "creative"],
     ["../assets/projects/stairs-video-frame.webp", "Use Case / Video", "场景演示视频画面", "creative", "cover", "creative"],
   ];

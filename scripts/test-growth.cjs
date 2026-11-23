@@ -169,10 +169,16 @@ const fs = require("fs"),
   });
   await route("/case/operations");
   check("team case distinguishes directly managed social work from peer execution", () => {
-    assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
+    assert.equal(d.querySelectorAll("#operations-control .operations-role-board button[role=tab]").length, 4);
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
     assert.equal(d.querySelectorAll("#operations-control .operations-issue-panel").length, 0);
     assert.ok(d.querySelector("#operations-control").textContent.includes("月度内容日历"));
+    const tabs=d.querySelectorAll("#operations-control [data-ops-tab]");
+    tabs[2].click();
+    assert.equal(tabs[2].getAttribute("aria-selected"),"true");
+    assert.equal(d.querySelector("#ops-panel-brief").hidden,false);
+    assert.equal(d.querySelector("#ops-panel-quarter").hidden,true);
+    tabs[0].click();
   });
 
   await route("/case/gtm");
@@ -219,8 +225,13 @@ const fs = require("fs"),
       assert.equal(path.split("/")[2], id);
       assert.ok(d.getElementById(path.split("/")[3]));
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
-      const evidencePath = d.querySelector("#evidence a").hash;
-      assert.ok(d.getElementById(evidencePath.split("/")[3]));
+      const related = [...d.querySelectorAll("#evidence .case-related-links a")];
+      assert.ok(related.length >= 1);
+      for (const a of related) {
+        const parts=a.hash.split("/");
+        assert.ok(w.PORTFOLIO.cases.some(x=>x.id === parts[2]), "unknown related case: "+a.hash);
+        assert.notEqual(parts[2], id, "related link must open a different case");
+      }
       assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["组织与协作", "复盘与下一步"]);
       const insight = d.querySelector("#insight");
       assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
@@ -441,7 +452,7 @@ const fs = require("fs"),
     assert.ok(section.querySelector('a[href="#/case/community"]'));
   });
   check("editorial and campaign planning are connected to the social case", () => {
-    assert.ok(d.querySelector(".g-editorial"));
+    assert.equal(d.querySelector(".g-editorial"),null);
     assert.ok(d.querySelector(".g-campaign-wall"));
     assert.ok(d.querySelector(".g-social-loop"));
   });
@@ -539,11 +550,12 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#market-adaptation [lang="en-US"]').textContent.includes("entryway"));
     assert.ok(d.querySelector('#market-adaptation [lang="en-GB"]').textContent.includes("hallway"));
   });
-  d.querySelector("[data-image]").click();
-  await route("/case/gtm/strategy");
-  check("same case chapter route closes image modal", () =>
-    assert.equal(d.querySelector("#lightbox").open, false),
-  );
+  check("case visual opens real asset chapter instead of concept lightbox", () => {
+    assert.equal(d.querySelectorAll("[data-image]").length, 0);
+    assert.ok(d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
+  });
+  await route("/case/gtm/m3-campaign-kv");
+  check("GTM visual chapter is linked and available", () => assert.ok(d.getElementById("m3-campaign-kv")));
   await route("/case/community");
   check("community case shows both documented growth records without AI copy", () => {
     const copy = d.querySelector("main").textContent;

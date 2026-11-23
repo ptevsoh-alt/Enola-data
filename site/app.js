@@ -493,7 +493,7 @@
   }
   function visual(c) {
     if (c.art === "03")
-      return `<img src="assets/concept-03.png" alt="节日内容概念视觉，非历史已执行活动" width="1000" height="1200" loading="lazy">`;
+      return `<div class="g-campaign-art art-challenge" aria-label="节庆社群传播内容设计"><small>SEASONAL / SOCIAL CAMPAIGN</small><strong>家务日常<br>也有节日故事。</strong><div><span>节庆主题</span><i>→</i><span>场景</span><i>→</i><span>互动</span></div></div>`;
     if (c.art === "collab")
       return `<img src="assets/projects/joint-giveaway.webp" alt="匿名化联合抽奖海报，展示种植设备和电动清洁刷" loading="lazy" decoding="async">`;
     return `<div class="g-campaign-art art-challenge" aria-hidden="true"><small>COMMUNITY / PARTICIPATION</small><strong>一个小区域，<br>一次清洁分享。</strong><div><span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span></div></div>`;
