@@ -107,6 +107,23 @@ const fs = require("fs"),
       }
     });
   }
+  await route("/cases");
+  check("all 11 case cards use project-specific cover art or editorial color fields", () => {
+    const covers = [...d.querySelectorAll("#case-list .case-cover-v3")];
+    assert.equal(covers.length, 11);
+    assert.equal(new Set(covers.map((x) => x.className.match(/case-cover-v3--(gtm|social|community|brand|operations|b2b|seo|amazon|creative|crm|creator)/)?.[1])).size, 11);
+    assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
+    assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
+    assert.equal(d.querySelectorAll('#case-list img[src^="assets/concept-"]').length, 0);
+    assert.ok(d.querySelector('#case-list .case-cover-v3--b2b img[src="assets/projects/exhibition-booth-overview-redacted.jpg"]'));
+    assert.ok(d.querySelector('#case-list .case-cover-v3--gtm img[src="assets/projects/m3-yellow-main.webp"]'));
+    assert.ok(d.querySelector("#case-list .case-cover-v3--social").textContent.includes("96.5万"));
+    const copy = d.querySelector("#case-list").textContent;
+    for (const phrase of ["先看任务", "再选工具", "项目方法与交付", "复盘的终点", "我的分工与项目推动"]) {
+      assert.equal(copy.includes(phrase), false, phrase + " should not appear in the case index");
+    }
+    assert.equal(d.querySelectorAll('#case-list a[href^="#/case/"]').length >= 22, true);
+  });
   await route("/home");
   check("homepage links six selected works, seven practice modules and distinct period metrics", () => {
     const links = [...d.querySelectorAll(".featured-nav a")];
