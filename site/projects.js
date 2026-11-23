@@ -221,6 +221,19 @@
         <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
+      <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
+  <header class="pmm-board-head"><small>ENOLA / MARKET → PMM → KSP → GTM</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
+  <div class="pmm-decision-layout">
+    <div class="pmm-decision-process" aria-label="从使用任务到传播交付的策略决策链">
+      <article><span>01 / USER TASK</span><h4>餐后地面整理</h4><p>以真实家庭的具体清洁任务作为产品理解入口。</p><strong>场景优先，而非参数优先</strong></article>
+      <article><span>02 / PRODUCT VALUE</span><h4>双盘接地与站姿推进</h4><p>将结构、握持和推进路径转为能够看见的使用价值。</p><strong>产品事实 → 用户收益</strong></article>
+      <article><span>03 / PROOF</span><h4>外观、连续演示与 FAQ</h4><p>静态 KV 识别产品；连续实拍说明操作；FAQ 承接适用条件。</p><strong>视觉、视频和技术信息分工</strong></article>
+      <article><span>04 / GO-TO-MARKET</span><h4>Social → Creator → Commerce</h4><p>场景内容建立认知，真实使用镜头解释动作，商品信息完成选购理解。</p><strong>传播与选购承接相连</strong></article>
+    </div>
+    <figure class="pmm-decision-photo"><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节视觉" loading="lazy" decoding="async"><figcaption><small>POSITIONING / DECISION</small><b>让用户先看懂使用价值</b><span>餐后硬地 · 产品机制 · 连续动作</span></figcaption></figure>
+  </div>
+  <div class="pmm-tradeoff"><strong>STRATEGIC CHOICE</strong><p><b>弱化</b> 以转速、单一规格作内容开场</p><p><b>强化</b> 场景问题、结构证明与可连续复核的演示</p></div>
+</section>
       <div class="g-story-note" id="launch-decisions">
         <h3>产品主张｜站着推进，清理餐后硬地</h3>
         <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
@@ -269,6 +282,11 @@
         <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
         <h3 id="campaign-architecture-title">Make Room for What Matters｜从用户情境到跨渠道传播</h3>
         <p>我把产品放回日常餐后清洁场景：用真实的生活问题引起注意，再通过双盘结构、操作演示和场景内容传达产品价值。Campaign 围绕一个核心主题展开，社媒、广告、内容、Creator 与邮件各自承担不同沟通任务。</p>
+<div class="campaign-proof-gallery" id="campaign-proof-gallery" aria-label="M3 上市的产品与视觉素材">
+ <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>KV · 外观与品牌信息</span></figcaption></figure>
+ <figure><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节" loading="lazy" decoding="async"><figcaption><b>02 / 机制展示</b><span>操作镜头 Brief · 结构细节</span></figcaption></figure>
+ <figure><img src="assets/projects/m3-yellow-battery.webp" alt="M3 电池部件外观图" loading="lazy" decoding="async"><figcaption><b>03 / 产品教育</b><span>FAQ · 产品细节与信息承接</span></figcaption></figure>
+</div>
 <div class="campaign-house" aria-label="M3 Campaign 品牌屋式策略与渠道架构">
           <div class="campaign-house-roof"><span>BRAND IDEA</span><h4>Power Every Move</h4><p>用动力支持每一次日常清洁行动</p></div>
           <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA</span><h4>Make Room for What Matters</h4><p>餐后清洁 × 家庭生活 × 看得见的产品动作</p></div>
@@ -836,6 +854,21 @@
 
   function operations() {
     return section("一次活动如何排期和验收", "社媒小组的项目分工与审核清单", `
+      <section class="operations-control" id="operations-control" aria-labelledby="operations-control-heading">
+ <header><span>TEAM OWNERSHIP / DELIVERY SYSTEM</span><h3 id="operations-control-heading">从季度主题到发布验收，明确每一个交接</h3><p>社媒小组直接管理与审核，横向对齐产品、视觉、视频和渠道负责人。</p></header>
+ <div class="operations-role-board" aria-label="跨职能工作流与责任">
+  <article class="is-my-role"><span>01 / 我的主责 · SOCIAL</span><h4>主题、Brief 与内容审核</h4><p>季度主题、月度日历、素材初审、反馈与复盘。</p><b>OWNER / CONTENT</b></article>
+  <article><span>02 / 产品同事 · FACT</span><h4>参数与适用条件</h4><p>确认产品结构、关键规格和传播主张。</p><b>PROOF / CLAIM GATE</b></article>
+  <article><span>03 / 设计与视频 · ASSET</span><h4>素材制作与版本</h4><p>制作 KV、轮播、演示镜头及渠道版本。</p><b>VERSION / REWORK</b></article>
+  <article><span>04 / 渠道负责人 · RELEASE</span><h4>发布与商业承接</h4><p>按渠道核查链接、权限、发布和商业条件。</p><b>HANDOFF / RELEASE</b></article>
+ </div>
+ <div class="operations-issue-panel">
+   <div class="operations-issue-visual"><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品结构核对参考图" loading="lazy" decoding="async"><span>PRODUCT STRUCTURE / REFERENCE</span></div>
+   <div class="operations-issue-copy"><span>REAL REVIEW / M3 KV</span><h4>CTA 遮挡双盘：一次具体的退回修改</h4>
+    <ol><li><b>发现</b><span>4:5 主视觉底部 CTA 侵占关键产品结构。</span></li><li><b>修订</b><span>调整 CTA 安全区，确保双盘完整露出。</span></li><li><b>验收</b><span>Feed / Story 分别检查产品外观、裁切与文字区域。</span></li></ol><a href="#/case/operations/asset-review">查看审核记录 ↗</a>
+   </div>
+ </div>
+</section>
       <div class="g-project-list g-project-calendar-plan">
         <article><h3>选题与排期</h3><p>我从季度主推主题选定产品和场景，给 Facebook、Instagram 和 Group 分配内容任务，并确认每条内容的负责人和交付时间。</p></article>
         <article><h3>产品与素材确认</h3><p>产品同事核对功能、参数和适用条件。社媒小组确认拍摄清单、素材权限和链接后，将 Brief 交给设计和视频同事。</p></article>
