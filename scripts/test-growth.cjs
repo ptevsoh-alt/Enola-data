@@ -341,7 +341,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/creator-livingroom-7s.mp4"]'));
     const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
-    assert.ok(christmas?.getAttribute("title").includes("视频"));
+    assert.ok(christmas?.getAttribute("title").includes("圣诞节"));
     const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
     assert.ok(thanksgiving?.getAttribute("title").includes("感恩节"));
     assert.ok(d.querySelector('#video-drive-editions iframe'));
