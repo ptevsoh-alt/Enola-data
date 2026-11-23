@@ -166,7 +166,14 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#launch-delivery .g-milestone-list li").length, 5);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-lane").length, 6);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-axis span").length, 5);
-    assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-gates a").length, 5);
+    assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-gates button").length, 5);
+    assert.equal(d.querySelectorAll("#v-gate-detail .v-gate-detail-fields>div").length, 3);
+    const gateG2 = d.querySelector('#gtm-visual-schedule [data-gtm-gate="2"]');
+    gateG2.click();
+    assert.equal(gateG2.getAttribute("aria-pressed"), "true");
+    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="approval"]').textContent.includes("库存"));
+    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="title"]').textContent.includes("5/15"));
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-product-source").length, 2);
     assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-scroll[tabindex='0']"));
     assert.equal(d.querySelectorAll(".v-gtm-quicknav a").length, 5);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]").length, 4);
