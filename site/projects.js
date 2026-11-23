@@ -596,7 +596,7 @@
     return section("节庆 TVC 与 KOL 内容", "以感恩节、圣诞节两支主题广告建立品牌情绪，用 KOL / Creator 短视频回答真实的产品使用问题。", `
       <section class="tvc-creative-intro" id="video-campaign-showcase">
         <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
-        <h3>同一个清洁品牌，不同节日讲不同的家庭故事</h3>
+        <h3>感恩节与圣诞节的两支品牌短片</h3>
         <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
       </section>
       <div class="tvc-work-grid" aria-label="感恩节和圣诞节两支独立 Campaign TVC">
@@ -879,9 +879,14 @@
         <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
       </div>
       <div class="g-story-note">
-        <h3>选题决定入口，内容决定下一步</h3>
-        <p>节庆社媒先让读者识别「派对结束后的黏脚印」。搜索端用总指南承接这个问题，再按地面、浴室与厨房分流。已经在比较工具的读者可从专题进入选型或 FAQ。规划复盘时，先看每个入口的搜索点击，再看访问后是否继续阅读相关内容。</p>
+        <h3>节庆搜索内容如何承接社媒话题</h3>
+        <p>以万圣节后清洁为入口规划一篇主题指南，按地面、浴室、厨房和工具选择拆分九篇专题。FAQ 解决操作问题，比较型内容解释不同工具的适用场景。该组合是内容规划，不代表十篇文章已经发布或获得排名。</p>
         <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
+      </div>
+      <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
+        <article><small>SEARCH INTENT</small><h3>关键词与页面匹配</h3><p>将 Informational、How-to 和 Commercial Investigation 查询分别映射到主题指南、专题文章与产品解释；保留查询来源，避免不同意图共用同一页面。</p></article>
+        <article><small>GSC / DISCOVERY</small><h3>检查搜索曝光与点击</h3><p>按 Query 和 Page 对照曝光、点击、CTR 与平均排名。优先处理有展示但摘要表达不匹配的页面，不能把 GSC Click 写成站内会话。</p></article>
+        <article><small>GA4 / CONTENT QUALITY</small><h3>评估内容阅读与后续行为</h3><p>查看 Landing Page 的来源、参与和进一步访问；确认事件口径后再判断内容是否为 FAQ、产品比较和选购路径带来有效访问。</p></article>
       </div>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
@@ -901,9 +906,9 @@
   <article><span>04 / 渠道负责人 · RELEASE</span><h4>发布与商业承接</h4><p>按渠道核查链接、权限、发布和商业条件。</p><b>HANDOFF / RELEASE</b></article>
  </div>
  <div class="operations-issue-panel">
-   <div class="operations-issue-visual"><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品结构核对参考图" loading="lazy" decoding="async"><span>PRODUCT STRUCTURE / REFERENCE</span></div>
-   <div class="operations-issue-copy"><span>M3 / CREATIVE REVIEW</span><h4>CTA 遮挡双盘：一次具体的退回修改</h4>
-    <ol><li><b>发现</b><span>4:5 主视觉底部 CTA 侵占关键产品结构。</span></li><li><b>修订</b><span>调整 CTA 安全区，确保双盘完整露出。</span></li><li><b>验收</b><span>Feed / Story 分别检查产品外观、裁切与文字区域。</span></li></ol><a href="#/case/operations/asset-review">查看审核记录 ↗</a>
+   <div class="operations-issue-visual"><img src="assets/projects/m3-yellow-main.webp" alt="M3 上市传播使用的官方产品外观图" loading="lazy" decoding="async"><span>M3 / MAY CAMPAIGN</span></div>
+   <div class="operations-issue-copy"><span>CONTENT PLANNING / TEAM DELIVERY</span><h4>季度主题怎样进入月度内容计划</h4>
+    <ol><li><b>内容重点</b><span>按产品线、节日和用户问题确定当月主要传播方向。</span></li><li><b>平台分工</b><span>Facebook 负责主题和讨论，Instagram 组织视觉与短视频，Group 承接问题及社群参与。</span></li><li><b>协作交付</b><span>内容组准备 Brief 和排期，设计与视频制作素材，产品同事核对公开信息。</span></li></ol><a href="#/case/operations/operations-content-calendar">查看 M3 五月内容排期 ↗</a>
    </div>
  </div>
 </section>
@@ -915,15 +920,15 @@
       </div>
       </details>
       <section class="operations-qa-showcase" id="operations-kv-review" aria-labelledby="operations-kv-review-heading">
-        <header><small>CAMPAIGN ASSET REVIEW / M3</small><h3 id="operations-kv-review-heading">主视觉审核：R2 到 R4 的三次调整</h3><p>最初的 CTA 挡住了双盘，后续改用官方右视图，再分别校对横竖版。</p></header>
+        <header><small>EDITORIAL MANAGEMENT / CAMPAIGN</small><h3 id="operations-kv-review-heading">M3 Campaign 的内容安排与协作</h3><p>以社媒内容为主责，将场景预热、产品说明和上市传播拆成可以交付的素材包。</p></header>
         <div class="operations-qa-track" role="list">
-          <article role="listitem" class="needs-rework"><small>R2 / FIRST DRAFT</small><h4>双盘被 CTA 遮挡</h4><p>4:5 主图的底部按钮压住了双盘；9:16 版本没充分展示辅助握把。</p><span>退回调整版式</span></article>
-          <article role="listitem" class="structure-checked"><small>R3 / PRODUCT STRUCTURE</small><h4>改用官方右视图</h4><p>黄色 D 型手柄、黑色辅助握把和双盘全部进入画面；竖版继续调整安全区。</p><span>外观复核</span></article>
-          <article role="listitem" class="exported"><small>R4 / ASSET DELIVERY</small><h4>横竖版分别导出</h4><p>4:5 与 9:16 独立输出，并完成文件尺寸及哈希校验。</p><span>视觉文件完成 · 发布签核另行确认</span></article>
+          <article role="listitem"><small>CONTENT / SCENARIO</small><h4>餐后清洁场景</h4><p>以场景 KV、轮播和互动题目建立传播切入点；内容组负责选题、文案与平台排期。</p><span>Facebook / Instagram</span></article>
+          <article role="listitem"><small>EDUCATION / PRODUCT</small><h4>M3 结构与使用说明</h4><p>围绕双盘、手柄与常见疑问整理素材需求；产品同事核验功能，视频制作方提供真实操作素材。</p><span>轮播 / 短视频 / FAQ</span></article>
+          <article role="listitem"><small>ACTIVATION / HANDOFF</small><h4>主题素材与渠道交接</h4><p>整理 KV、短视频及各渠道内容版本，并把发布所需的产品信息与权利确认交给对应负责人。</p><span>素材 Brief / 渠道版本</span></article>
         </div>
         <div class="operations-qa-output">
-          <figure><img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘拖把官方外观图，作为结构审核参考" loading="lazy" decoding="async"><figcaption>用于审核的官方产品外观</figcaption></figure>
-          <div><span>我负责的内容工作</span><strong>Brief、视觉反馈、渠道版本核对</strong><p>产品事实由产品同事核验，最终发布条件由对应负责人确认。</p></div>
+          <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 官方产品图" loading="lazy" decoding="async"><figcaption>上市传播使用的产品视觉素材</figcaption></figure>
+          <div><span>本人负责的工作</span><strong>季度内容规划 · 月度日历 · 小组分工 · 传播素材审核</strong><p>以上为营销内容规划与跨部门交付；产品立项、商业报价和研发签核不属于本人工作范围。</p></div>
         </div>
       </section>
       <section class="operations-calendar-board" id="operations-content-calendar" aria-labelledby="operations-content-calendar-heading">
@@ -936,20 +941,19 @@
         </div>
       </section>
       <div class="g-story-note" id="asset-review">
-        <h3>M3 主视觉｜审核与修改</h3>
+        <h3>我的主要工作：社媒内容与项目推进</h3>
         <ul>
-          <li><strong>发现</strong> 4:5 版主视觉底部 CTA 框遮挡并裁切了双盘。静态首图的任务是让人看懂产品结构，这一版需要返工。</li>
-          <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
-          <li><strong>写回交付清单</strong> Feed 和 Story 分别查裁切、安全区和关键结构。涉及运行的表达回到连续实拍，由产品团队核对对应说明。</li>
+          <li><strong>季度规划：</strong>确定重点产品、节日 Campaign 和内容支柱，并为 Facebook、Instagram 与社群安排不同任务。</li>
+          <li><strong>团队交付：</strong>把月度内容日历拆成文案、视觉、视频与产品核验事项，安排负责人与交付时间。</li>
+          <li><strong>效果复盘：</strong>分别查看曝光、内容互动、有效访问和用户提问，调整后续选题，不把浏览量等同于销售结果。</li>
         </ul>
-        <p class="g-chart-note">M3 主视觉 · 审核退回与修订记录</p>
-        <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
+        <a class="featured-detail" href="#/case/operations/operations-content-calendar">查看内容排期 ↗</a>
       </div>
       <div class="g-story-note" id="cross-functional-governance">
-        <h3>横向推进的三件事：催节点、收反馈、对齐口径</h3>
+        <h3>团队协作与交付职责</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
-          <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>例如 M3 主视觉 CTA 遮挡双盘，返工要求是让关键结构完整可见，而非笼统反馈“再高级一点”。图片由制作方修改，内容侧复核。</p></article>
+          <article><small>内容</small><h3>保持各平台信息一致</h3><p>给视觉、视频和社媒明确同一产品信息的表达重点，并根据受众阅读习惯调整画面形式。产品性能与适用条件由产品同事提供。</p></article>
           <article><small>口径</small><h3>同一 Claim，只能有一个已批准版本</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
           <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>对于产品信息、素材权利和购买承接，使用 HOLD / REWORK 管理异常；社媒内容组负责 Brief 和审核，其他业务由对应负责人放行。</p></article>
         </div>
