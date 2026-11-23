@@ -115,9 +115,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
     assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
     const coverSubjects = {
-      gtm:"M3",social:"96.5万",community:"4,009",brand:"Campaign KV",
-      operations:"团队交付",b2b:"储能展会",seo:"01 / 09",amazon:"0 → 1",
-      creative:"TVC",crm:"EDM",creator:"Creator"
+      gtm:"M3",social:"96.5万",community:"4,009",brand:"品牌策略",
+      operations:"Campaign 管理",b2b:"储能展会",seo:"SEO 内容",amazon:"0 → 1",
+      creative:"TVC",crm:"邮件旅程",creator:"Creator"
     };
     for (const [id, subject] of Object.entries(coverSubjects)) {
       const card = d.querySelector('#case-list [data-case-id="' + id + '"]');
@@ -243,9 +243,9 @@ const fs = require("fs"),
     const gateG2 = d.querySelector('#gtm-visual-schedule [data-gtm-gate="2"]');
     gateG2.click();
     assert.equal(gateG2.getAttribute("aria-pressed"), "true");
-    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="approval"]').textContent.includes("库存"));
+    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="approval"]').textContent.includes("产品结构"));
     assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="title"]').textContent.includes("5/15"));
-    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-product-source").length, 2);
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-product-source").length, 1);
     assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-scroll[tabindex='0']"));
     assert.equal(d.querySelectorAll(".v-gtm-quicknav a").length, 5);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]").length, 4);
@@ -293,7 +293,7 @@ const fs = require("fs"),
   await route("/case/gtm/campaign-mechanism-mapping");
   check("a direct link from review opens the M3 creative directions", () => {
     assert.equal(d.querySelector("#campaign-mechanism-mapping").tagName, "SECTION");
-    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 5);
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 3);
     assert.equal(d.querySelectorAll("#market-adaptation .v-locale-panel").length, 2);
   });
   await route("/case/social/fathers-day-channel-roles");
@@ -341,14 +341,20 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#video-storyline .video-story-beats li").length, 4);
     assert.equal(d.querySelectorAll("#video-format-roles>div").length, 3);
   });
+  await route("/cases");
+  check("case index excludes synthetic imagery with unverified product structure or claims", () => {
+    assert.equal(d.querySelectorAll('#case-list img[src*="fathers-day-bbq-concept"]').length, 0);
+    assert.equal(d.querySelectorAll('#case-list img[src*="black-friday-suite-concept"]').length, 0);
+    assert.ok(d.querySelector('#case-list [data-case-id="brand"] img[src="assets/projects/brand-house.webp"]'));
+  });
   await route("/case/brand/seasonal-creative-gallery");
-  check("new Drive artwork is presented as Campaign concepts", () => {
+  check("brand visual gallery uses sourced brand and partner assets", () => {
     const gallery = d.querySelector("#seasonal-art-gallery");
     assert.ok(gallery);
     assert.equal(gallery.querySelectorAll("img").length, 2);
-    assert.ok(gallery.querySelector('img[src="assets/projects/fathers-day-bbq-concept.jpg"]'));
-    assert.ok(gallery.querySelector('img[src="assets/projects/black-friday-suite-concept.jpg"]'));
-    assert.ok(gallery.textContent.includes("创意提案"));
+    assert.ok(gallery.querySelector('img[src="assets/projects/brand-house.webp"]'));
+    assert.ok(gallery.querySelector('img[src="assets/projects/joint-giveaway.webp"]'));
+    assert.ok(gallery.textContent.includes("品牌屋"));
   });
   await route("/case/b2b/expo-project");
   check("overseas exhibition case combines original photos with visitor and follow-up work", () => {
@@ -524,10 +530,10 @@ const fs = require("fs"),
   check("GTM creative territories map to one primary mechanism and proof boundary", () => {
     const section = d.querySelector("#campaign-mechanism-mapping");
     assert.ok(section);
-    for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明"])
+    for (const term of ["The After-Dinner Reset", "See the Motion", "Make Room for What Matters", "One Home, Different Cleaning Jobs"])
       assert.ok(section.textContent.includes(term), term);
-    assert.ok(section.textContent.includes("同一个 Big Idea，五种不同的画面切入"));
-    assert.equal(section.querySelectorAll(".v-creative-art").length, 5);
+    assert.ok(section.textContent.includes("M3 Campaign｜三条创意主线"));
+    assert.equal(section.querySelectorAll(".v-creative-art").length, 3);
     assert.ok(d.querySelector('#market-adaptation [lang="en-US"]').textContent.includes("entryway"));
     assert.ok(d.querySelector('#market-adaptation [lang="en-GB"]').textContent.includes("hallway"));
   });
