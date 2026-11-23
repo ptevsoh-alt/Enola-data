@@ -162,13 +162,13 @@
       title:"海外社媒内容策略与增长",
       intro:"管理 Facebook、Instagram 及 Group 内容工作，制定季度主题、月度日历和素材审核标准。",
       fact:"2025 Meta · 96.5 万曝光 / 3.7 万互动",
-      cover:"96.5万",eyebrow:"SOCIAL / GROWTH",detail:"2025 Meta 内容曝光",kind:"number"
+      cover:"海外社媒增长",eyebrow:"SOCIAL / GROWTH",detail:"内容策略 · Meta 经营表现",kind:"type"
     },
     community: {
       title:"美国 Facebook Group 社群运营",
       intro:"策划清洁教程、用户讨论及 UGC 互动，持续整理社群反馈和内容选题。",
       fact:"Facebook Group · 4,009 名成员",
-      cover:"4,009",eyebrow:"COMMUNITY / UGC",detail:"Facebook Group 成员规模",kind:"number"
+      cover:"社群运营",eyebrow:"COMMUNITY / UGC",detail:"内容参与 · 用户关系",kind:"type"
     },
     brand: {
       title:"品牌策略与整合传播",
@@ -181,7 +181,7 @@
       title:"社媒团队管理与项目交付",
       intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
       fact:"季度主题 · 月度排期 · 视觉审核",
-      cover:"团队排期",eyebrow:"TEAM / DELIVERY",detail:"季度规划 · 团队排期 · 素材审核",kind:"type"
+      cover:"社媒团队管理",eyebrow:"TEAM / DELIVERY",detail:"季度主题 · 内容排期 · 协作交付",kind:"type"
     },
     b2b: {
       title:"储能行业展会与海外 B2B 客户开发",
@@ -200,7 +200,7 @@
       title:"Amazon 店铺运营与广告优化",
       intro:"参与 Amazon 店铺从 0 到 1 的运营，覆盖 Listing、广告、促销和库存。",
       fact:"店铺 0–1 · 阶段销售额约 +10%",
-      cover:"0 → 1",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
+      cover:"Amazon 运营",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
     },
     creative: {
       title:"节庆 TVC 与短视频创意",
