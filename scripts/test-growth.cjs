@@ -115,8 +115,8 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
     assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
     const coverSubjects = {
-      gtm:"M3",social:"96.5万",community:"4,009",brand:"品牌策略",
-      operations:"Campaign 管理",b2b:"储能展会",seo:"SEO 内容",amazon:"0 → 1",
+      gtm:"M3",social:"海外社媒增长",community:"社群运营",brand:"品牌策略",
+      operations:"社媒团队管理",b2b:"储能展会",seo:"SEO 内容",amazon:"Amazon 运营",
       creative:"TVC",crm:"邮件旅程",creator:"Creator"
     };
     for (const [id, subject] of Object.entries(coverSubjects)) {
@@ -129,7 +129,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll('#case-list img[src^="assets/concept-"]').length, 0);
     assert.ok(d.querySelector('#case-list .case-cover-v3--b2b img[src="assets/projects/exhibition-booth-overview-redacted.jpg"]'));
     assert.ok(d.querySelector('#case-list .case-cover-v3--gtm img[src="assets/projects/m3-yellow-main.webp"]'));
-    assert.ok(d.querySelector("#case-list .case-cover-v3--social").textContent.includes("96.5万"));
+    assert.ok(d.querySelector("#case-list .case-cover-v3--social").textContent.includes("海外社媒增长"));
     const copy = d.querySelector("#case-list").textContent;
     for (const phrase of ["先看任务", "再选工具", "项目方法与交付", "复盘的终点", "我的分工与项目推动"]) {
       assert.equal(copy.includes(phrase), false, phrase + " should not appear in the case index");
@@ -172,7 +172,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
     assert.equal(d.querySelectorAll("#operations-control .operations-issue-copy li").length, 3);
-    assert.ok(d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
+    assert.ok(d.querySelector("#operations-control").textContent.includes("季度主题怎样进入月度内容计划"));
   });
 
   await route("/case/gtm");
