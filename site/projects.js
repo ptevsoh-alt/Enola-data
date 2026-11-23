@@ -221,6 +221,22 @@
         <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
+      <section class="m3-kv-showcase" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
+        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
+        <div class="m3-kv-comps">
+          <figure class="m3-kv-landscape">
+            <div class="m3-kv-copy"><small>QIMEDO / M3</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
+            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘电动拖把官方产品图，包含手柄与双盘结构" loading="lazy" decoding="async">
+            <figcaption>16:9 / Campaign KV</figcaption>
+          </figure>
+          <figure class="m3-kv-feed">
+            <div class="m3-kv-copy"><small>QIMEDO / HOME</small><h4>Make Room for<br>What Matters.</h4><p>Meet M3.</p></div>
+            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 产品主视觉用于社媒 Feed 版式" loading="lazy" decoding="async">
+            <figcaption>4:5 / Social Feed</figcaption>
+          </figure>
+        </div>
+        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
+      </section>
       <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
   <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
   <div class="pmm-decision-layout">
