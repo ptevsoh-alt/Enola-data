@@ -574,7 +574,7 @@
 
 
   function creativeStrategy() {
-    return section("节庆 Campaign 创意与视频内容分工", "感恩节、圣诞节 TVC 建立品牌情绪；KOL / Creator 内容通过具体清洁任务讲清产品使用。", `
+    return section("视频创意策划与渠道内容", "围绕节庆情绪、产品演示和 Creator 真实使用内容安排创意与镜头任务。", `
       <div class="g-project-list g-project-calendar-plan">
         <article><small>THANKSGIVING / TVC</small><h3>以团聚和感谢进入产品故事</h3><p>感恩节餐桌、火鸡与人物互动先建立节庆情境，随后进入家人照料和地面清洁。情绪故事与双盘功能展示交替推进，让产品出现在实际生活问题中。</p></article>
         <article><small>CHRISTMAS / TVC</small><h3>让日常家务成为关怀的表达</h3><p>圣诞夜的家庭空间、长者整理地面和家人团聚形成完整故事。产品结构和操作镜头为人物动作服务，最后以家庭关系收束品牌情绪。</p></article>
@@ -593,17 +593,17 @@
   }
 
   function creative() {
-    return section("节庆 TVC 与 KOL 内容", "以感恩节、圣诞节两支主题广告建立品牌情绪，用 KOL / Creator 短视频回答真实的产品使用问题。", `
+    return section("视频创意与 Campaign 内容案例", "展示部分节庆品牌影片与 Creator 产品演示，说明创意方向、脚本、镜头审核和渠道适配工作。", `
       <section class="tvc-creative-intro" id="video-campaign-showcase">
         <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
-        <h3>同一个清洁品牌，不同节日讲不同的家庭故事</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。两支 TVC 将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
+        <h3>节庆品牌叙事与产品演示</h3>
+        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。节庆影片将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
       </section>
-      <div class="tvc-work-grid" aria-label="感恩节和圣诞节两支独立 Campaign TVC">
+      <div class="tvc-work-grid" aria-label="节庆 Campaign 视频案例">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
           <div class="tvc-work-heading"><small>01 / THANKSGIVING · SEASONAL TVC</small><h3 id="thanksgiving-heading">感恩节｜感谢藏在日常照料里</h3><p>节日餐桌、火鸡和家人之间的互动建立节庆氛围；地面清洁成为人物彼此照顾的动作，随后进入双盘清洁工具的使用与功能演示。</p></div>
           <div class="tvc-work-player" id="video-drive-editions">
-            <iframe loading="lazy" title="播放感恩节主题 TVC · 101秒视频预览" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe loading="lazy" title="播放感恩节主题 TVC 作品片段" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
           <div class="tvc-work-copy">
             <dl>
@@ -617,7 +617,7 @@
         <article class="tvc-work-card" id="holiday-full-film" aria-labelledby="christmas-heading">
           <div class="tvc-work-heading"><small>02 / CHRISTMAS · SEASONAL TVC</small><h3 id="christmas-heading">圣诞节｜把关心放进每一个小动作</h3><p>圣诞树、礼物与夜晚的家庭空间建立情绪，年长者默默整理地面、使用黄色双盘拖把，最后让镜头回到一家人的相聚时刻。</p></div>
           <div class="tvc-work-player">
-            <iframe loading="lazy" title="播放圣诞节主题 TVC · 90秒视频预览" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <iframe loading="lazy" title="播放圣诞节主题 TVC 作品片段" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
           </div>
           <div class="tvc-work-copy" id="long-film-note">
             <dl>
@@ -630,7 +630,7 @@
         </article>
       </div>
       <section class="tvc-campaign-bridge" id="video-campaign-strategy">
-        <header><small>CAMPAIGN → STORY → CHANNEL</small><h3>从节庆主题，到可用于渠道传播的创意内容</h3><p>两支品牌片的任务是情绪联结与产品价值沟通；短视频与商品内容进一步解释使用方式。Campaign 中的素材分工围绕同一产品信息展开。</p></header>
+        <header><small>CAMPAIGN → STORY → CHANNEL</small><h3>从节庆主题，到可用于渠道传播的创意内容</h3><p>节庆影片的任务是情绪联结与产品价值沟通；短视频与商品内容进一步解释使用方式。Campaign 中的素材分工围绕同一产品信息展开。</p></header>
         <div class="tvc-campaign-bridge-grid">
           <article><span>BRAND / TVC</span><h4>情绪与记忆</h4><p>感恩节围绕感谢与相聚，圣诞节围绕日常关怀。让人物和产品动作在故事中发生联系。</p></article>
           <article><span>SOCIAL / PAID CREATIVE</span><h4>节奏与创意适配</h4><p>从完整故事中选取场景、人物和产品镜头，分别适配 Feed、Reels、视频广告等渠道的信息顺序。</p></article>
@@ -648,7 +648,7 @@
         </ol>
       </section>
       <section class="kol-story" id="kol-shorts">
-        <header><small>CREATOR / KOL-STYLE SHORT VIDEO</small><h3>KOL 内容｜用具体的使用情境回答产品问题</h3><p>两支竖屏 Creator 内容分别选择楼梯清洁和客厅产品介绍：前者展示动作与接触面，后者由人物面对镜头介绍产品。不同的空间和镜头任务放在一起，便于看出内容策略差异。</p></header>
+        <header><small>CREATOR / KOL-STYLE SHORT VIDEO</small><h3>Creator 产品演示与短视频内容</h3><p>案例选取的 Creator 竖屏片段分别展示楼梯清洁和客厅产品介绍：前者展示动作与接触面，后者由人物面对镜头介绍产品。不同的空间和镜头任务放在一起，便于看出内容策略差异。</p></header>
         <div class="g-video-gallery">
           <figure class="g-video-demo">
             <video controls playsinline preload="metadata" poster="assets/projects/stairs-video-frame.webp" aria-label="播放 KOL 风格楼梯吸尘产品演示" aria-describedby="stairs-video-note">
@@ -689,156 +689,94 @@
   }
 
   function expo() {
-    return section("海外 B2B 展会与市场活动", "以往储能行业的参展经历，与可迁移的展会设计方法分别呈现。", `
-      <div class="expo-scope-banner actual" id="expo-real-work"><span>01 / ACTUAL EXPERIENCE · 真实经历</span><h3>海外储能行业 B2B 展会</h3></div>
+    return section("海外展会｜展位策划与现场营销", "储能行业海外展会 · 展位规划、物料准备、现场接待与客户跟进", `
+      <div class="expo-scope-banner actual" id="expo-real-work"><span>OVERSEAS B2B / EXHIBITION PROJECT</span><h3>海外储能行业展会</h3></div>
       <div class="expo-cover" id="expo-cover">
-        <figure>${image("exhibition-booth-overview-redacted","储能行业真实展位照片，品牌标识已脱敏","jpg")}<figcaption>此前任职期间的海外储能展会现场 · 已匿名化</figcaption></figure>
-        <div class="expo-cover-story"><small>ENERGY STORAGE / OVERSEAS B2B</small><h3>从系统陈列到客户沟通</h3><p>参与储能行业海外展会传播物料与系统设备展示，结合设备构成和应用场景开展客户沟通。</p>
-          <div class="expo-cover-tags"><span>海外市场</span><span>展会物料</span><span>系统展示</span><span>客户沟通</span></div>
-          <p><a href="#/case/b2b/expo-visitor-route">查看工作内容 ↗</a></p>
+        <figure>${image("exhibition-booth-overview-redacted","海外储能展会展位实景，品牌信息已匿名化","jpg")}<figcaption>海外储能行业展会现场 · 已匿名化</figcaption></figure>
+        <div class="expo-cover-story">
+          <small>EXHIBITION MARKETING / B2B</small>
+          <h3>展位策划、物料准备与现场客户沟通</h3>
+          <p>工作覆盖展位策划、展区展示内容、展墙与产品物料准备、现场咨询及后续客户需求跟进。展墙、产品陈列与技术资料围绕储能系统组成和实际应用组织，方便销售与技术同事向客户介绍方案。</p>
+          <div class="expo-cover-tags"><span>展位策划</span><span>展会物料</span><span>现场执行</span><span>客户需求</span></div>
+          <p><a href="#/case/b2b/expo-visitor-route">查看参展项目工作 ↗</a></p>
         </div>
       </div>
       <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
-        <header><small>WORK EXPERIENCE / CONTEXT</small><h3 id="expo-visitor-title">实际工作：让系统方案与采购需求建立联系</h3><p>系统展示、方案介绍、技术问答与商务跟进。</p></header>
+        <header><small>PROJECT RESPONSIBILITIES</small><h3 id="expo-visitor-title">展前筹备、现场执行与会后跟进</h3><p>将品牌宣传、产品介绍和客户沟通安排进同一场参展计划。</p></header>
         <div class="expo-visitor-map">
-          <article><span>01</span><h4>应用领域</h4><p>使用展位信息和设备类别介绍面向的用电场景。</p></article>
-          <article><span>02</span><h4>系统组成</h4><p>围绕光伏、逆变器、储能电池、发电机及负载之间的关系说明方案。</p></article>
-          <article><span>03</span><h4>技术与商务问题</h4><p>讨论容量、安装、配置及交付条件，专业事项由对应人员确认。</p></article>
-          <article><span>04</span><h4>后续业务沟通</h4><p>整理客户意向与问题，衔接销售和渠道负责人。</p></article>
+          <article><span>01 / 展前</span><h4>展位策划</h4><p>参与展区规划、展示主题与产品陈列安排，整理展墙信息、主视觉和现场展示需求。</p></article>
+          <article><span>02 / 物料</span><h4>视觉与产品资料</h4><p>准备画册、产品介绍、系统图及现场宣传内容，和产品同事核对专业信息，跟进制作及到场安排。</p></article>
+          <article><span>03 / 展中</span><h4>客户接待与需求沟通</h4><p>围绕客户行业、应用场景、采购需求与合作方式介绍产品；技术细节交由专业人员确认。</p></article>
+          <article><span>04 / 展后</span><h4>商机记录与跟进</h4><p>整理客户关注的配置、采购计划、报价和交付问题，与销售对接后续商务沟通。</p></article>
         </div>
       </section>
-      <div class="g-product-gallery expo-gallery" aria-label="真实海外储能展会脱敏照片">
-        <figure>${image("exhibition-booth-angle-redacted","真实海外储能展台侧面，品牌标识已脱敏","jpg")}<figcaption><b>展位展示</b><span>空间入口、展墙与设备陈列</span></figcaption></figure>
-        <figure>${image("exhibition-product-display-redacted","真实储能系统与设备展示墙，品牌标识已脱敏","jpg")}<figcaption><b>方案沟通</b><span>系统结构、应用与产品资料</span></figcaption></figure>
+      <div class="g-product-gallery expo-gallery" aria-label="海外展会现场照片">
+        <figure>${image("exhibition-booth-angle-redacted","展会现场展墙与展品陈列，已匿名化","jpg")}<figcaption><b>展位与视觉</b><span>展墙内容、入口及设备陈列</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted","现场储能设备与系统展示，已匿名化","jpg")}<figcaption><b>产品与方案介绍</b><span>实物展示、系统组成与产品资料</span></figcaption></figure>
+      </div>
+      <section class="expo-brand-system" id="expo-brand-activation">
+        <div class="expo-system-header"><small>BOOTH / BRANDING</small><h3>展位规划与现场品牌呈现</h3><p>从实际展品、客户需求和会场条件确定展示内容，展墙与印刷品使用一致的品牌识别和产品说法。</p></div>
+        <div class="expo-workstream" aria-label="展位策划工作内容">
+          <article><span>01</span><b>空间与展品</b><small>入口、展示区、设备陈列与接待区</small></article>
+          <article><span>02</span><b>品牌视觉</b><small>展墙、主画面、导视与信息层级</small></article>
+          <article><span>03</span><b>物料制作</b><small>画册、产品页、系统图与展示资料</small></article>
+          <article><span>04</span><b>现场安排</b><small>接待、产品讲解、物料与问题记录</small></article>
+        </div>
+        <section class="expo-identity-editorial" id="expo-visual-language">
+          <header><small>COLLATERAL / BRAND COMMUNICATION</small><h4>展会品牌物料与沟通内容</h4><p>围绕系统方案与采购问题准备材料，兼顾现场观看和客户带走后的阅读。</p></header>
+          <div class="expo-identity-grid">
+            <article class="expo-identity-hierarchy"><small>BOOTH GRAPHICS</small><h4>展墙与品牌画面</h4><p>品牌名称、业务领域、主要产品线与应用场景；主视觉突出行业识别，展示内容与实际展品一致。</p></article>
+            <article class="expo-identity-collateral"><small>PRODUCT MATERIALS</small><h4>画册与产品资料</h4><p>Brochure、产品型录、系统组成图和技术参数页；型号、接口与适用范围由产品团队核实。</p></article>
+            <article class="expo-identity-collateral"><small>EVENT COMMUNICATION</small><h4>展前与展后传播</h4><p>展前邀请、展会信息、现场活动照片与后续资料邮件；与客户沟通使用适合的版本。</p>
+              <div class="expo-brand-touch"><div><b>BEFORE</b><span>邀请与展会信息</span></div><div><b>ONSITE</b><span>讲解与资料取用</span></div><div><b>AFTER</b><span>跟进与产品介绍</span></div></div>
+            </article>
+          </div>
+        </section>
+      </section>
+      <section class="expo-asset-studio" id="expo-asset-manifest">
+        <header><small>EXHIBITION MATERIALS</small><h3>展会物料准备</h3><p>按现场使用位置整理物料，提前核对内容、印刷尺寸与交付时间；不以未核实的数量或尺寸代替实际工作。</p></header>
+        <div class="expo-asset-grid">
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>BRANDING</small><h4>背景墙与品牌画面</h4><p>品牌识别、主营业务、产品与应用主题。</p></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>CATALOGUE</small><h4>产品画册与宣传页</h4><p>产品系列、用途、图片及核心信息。</p></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>TECHNICAL</small><h4>系统图与参数资料</h4><p>技术同事确认设备组成及专业表述。</p></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>ONSITE</small><h4>展品与展示说明</h4><p>样品、演示资料、展签与现场放置。</p></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>OUTREACH</small><h4>展前邀请与活动信息</h4><p>面向客户的沟通内容和展会时间地点信息。</p></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-meta"><small>FOLLOW-UP</small><h4>客户资料与跟进内容</h4><p>产品方案、问题记录与商务联系资料。</p></div></article>
+        </div>
+      </section>
+      <section class="expo-activation-lab" id="expo-activation-program">
+        <header><small>ON-SITE EXECUTION</small><h3>现场工作与客户沟通</h3><p>销售、市场和产品人员围绕同一套展品资料进行客户沟通。</p></header>
+        <div class="expo-activation-grid">
+          <article><span>01 / SETUP</span><h4>现场布置与物料检查</h4><p>核对展品、展墙信息、画册、导视及现场可用资料，跟进临时调整。</p><strong>展位图 · 物料清单 · 现场照片</strong></article>
+          <article><span>02 / CUSTOMER</span><h4>客户需求记录</h4><p>记录应用场景、采购数量、合作类型、交付时间等关键信息，后续由商务核实。</p><strong>需求记录 · 商务跟进</strong></article>
+          <article><span>03 / CONTENT</span><h4>展会内容整理</h4><p>在允许的范围内整理现场展示照片、产品介绍与客户高频问题，用于后续品牌和销售内容。</p><strong>现场素材 · 常见问题 · 产品资料</strong></article>
+        </div>
+        <div class="expo-activation-rhythm">
+          <div><small>展前策划</small><b>展位规划、主视觉、展品与目标客户</b></div>
+          <div><small>展前准备</small><b>画册资料、制作排期、印刷和物流确认</b></div>
+          <div><small>展会现场</small><b>布置检查、接待与产品说明</b></div>
+          <div><small>展后工作</small><b>线索整理、需求跟进与资料更新</b></div>
+        </div>
+      </section>
+      <section class="expo-program" id="expo-event-plan">
+        <header><small>EVENT DELIVERY</small><h3>参展工作排期</h3></header>
+        <div class="expo-campaign-flight">
+          <article class="expo-flight-card"><span>BEFORE</span><h4>展前</h4><p>确定产品展示重点、展位与物料需求，推进视觉设计、印刷制作、客户邀约和现场准备。</p></article>
+          <article class="expo-flight-card"><span>ONSITE</span><h4>展中</h4><p>检查布展、展示资料和人员安排，配合产品介绍、媒体素材记录与客户需求整理。</p></article>
+          <article class="expo-flight-card"><span>AFTER</span><h4>展后</h4><p>整理潜在客户的合作类型、应用场景与未解决问题，衔接商务跟进和内容更新。</p></article>
+        </div>
+      </section>
+      <div class="g-story-note" id="expo-handoff">
+        <h3>现场反馈如何用于后续销售资料</h3>
+        <p>展会期间收集客户对产品配置、技术适配与合作条件的疑问，反馈给销售与产品团队；后续更新客户所需的产品资料及商务沟通内容。</p>
       </div>
       <section class="g-story-note b2b-compare" id="b2b-scale-comparison">
         <h3>同期海外客户开发与渠道推广</h3>
-        <p>同期通过 Google、LinkedIn、Facebook、Instagram 与邮件开展海外客户开发和业务沟通。</p>
+        <p>任职期间也通过 Google、LinkedIn、Facebook、Instagram 与邮件开展海外客户开发。以下指标为整体渠道工作记录，不单独归因于本次展会。</p>
         <div class="expo-results">
-          <article><span>月均潜在客户触达</span><strong>100+</strong><small>任职期海外 B2B 客户开发</small></article>
-          <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期渠道账号的阶段变化</small></article>
+          <article><span>月均潜在客户触达</span><strong>100+</strong><small>海外 B2B 客户开发阶段数据</small></article>
+          <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期间渠道账号记录</small></article>
         </div><p><a href="#/data/b2b">查看 B2B 项目结果 ↗</a></p>
-      </section>
-
-      <div class="expo-scope-banner method" id="expo-method-framework"><span>02 / STRATEGY DESIGN · 理论方法</span><h3>品牌策略 × 展位体验 × 活动传播 × 线索承接</h3></div>
-      <section class="expo-brand-system" id="expo-brand-activation" aria-labelledby="expo-brand-system-title">
-        <div class="expo-system-header"><small>FIELD MARKETING / DESIGN FRAMEWORK</small><h3 id="expo-brand-system-title">一场展会，对应三段沟通任务</h3><p>先建立行业与品牌识别，再解释应用及系统方案，最后转为专业咨询与商务跟进。</p></div>
-        <div class="expo-brand-stage" aria-label="通用B2B展会信息路径">
-          <div class="expo-brand-stage-copy"><span>GENERIC B2B / NON-BRANDED CONCEPT</span><strong>DISCOVER.<br>UNDERSTAND.<br>CONNECT.</strong><p>识别 → 理解 → 交流</p></div>
-          <div class="expo-brand-stage-journey">
-            <div><small>01 / ATTENTION</small><b>品牌与行业</b><span>KV · 背景墙 · 导视</span></div>
-            <div><small>02 / EXPLAIN</small><b>应用与系统</b><span>系统图 · 专家讲解 · FAQ</span></div>
-            <div><small>03 / CONTACT</small><b>商务承接</b><span>资料包 · 需求分类 · CRM</span></div>
-          </div>
-        </div>
-        <section class="expo-identity-editorial" id="expo-visual-language" aria-labelledby="expo-identity-title">
-          <header><small>VISUAL IDENTITY / NEUTRAL CONCEPT</small><h4 id="expo-identity-title">视觉识别：每段距离，只解决一个信息问题</h4><p>远距建立品牌识别，中距展示应用方案，近距提供技术信息与商务沟通。</p></header>
-          <div class="expo-identity-grid">
-            <article class="expo-identity-poster" aria-label="通用系统方案展位示例主视觉">
-              <small>MASTER VISUAL / EXAMPLE</small><span class="expo-identity-poster-brand">B2B SOLUTIONS</span><strong>FROM APPLICATION<br>TO SOLUTION.</strong><p>SYSTEMS / SCENARIOS / NEXT STEPS</p>
-              <div class="expo-identity-poster-rule"><span>01 / SEE</span><span>02 / LEARN</span><span>03 / TALK</span></div>
-            </article>
-            <article class="expo-identity-hierarchy"><small>MESSAGE HIERARCHY</small><h4>按观看距离安排信息</h4>
-              <ol><li><b>远距：品牌与领域</b><span>一眼识别业务场景与核心类别。</span></li><li><b>中距：应用与方案</b><span>展示系统结构、典型应用和关键价值。</span></li><li><b>近距：技术与决策</b><span>说明参数、适配要求与采购问题。</span></li></ol>
-              <div class="expo-identity-swatches" aria-label="通用概念色板"><span class="swatch-dark">深色背景</span><span class="swatch-blue">信息蓝</span><span class="swatch-light">暖白说明区</span></div>
-            </article>
-            <article class="expo-identity-collateral"><small>ONE STORY / MANY TOUCHPOINTS</small><h4>同一条信息路径，三套渠道物料</h4>
-              <div class="expo-brand-touch">
-                <div><b>INVITE</b><span>定向邀请、会议预约和展前传播</span></div>
-                <div><b>EXPLAIN</b><span>Brochure、系统图与 Press Kit</span></div>
-                <div><b>FOLLOW UP</b><span>许可邮件、方案资料与销售跟进</span></div>
-              </div><p>视觉交付：主 KV、应用场景图、技术资料、媒体与商务素材。</p>
-            </article>
-          </div>
-        </section>
-        <div class="expo-workstream" aria-label="通用展会九类工作模块">
-          <article><span>01</span><b>品牌策略</b><small>定位 / 主题 / 信息层级</small></article>
-          <article><span>02</span><b>空间设计</b><small>Booth Layout / 动线</small></article>
-          <article><span>03</span><b>视觉识别</b><small>KV / 展墙 / 导视</small></article>
-          <article><span>04</span><b>宣传物料</b><small>Brochure / 邀请函</small></article>
-          <article><span>05</span><b>方案讲解</b><small>系统演示 / 技术 FAQ</small></article>
-          <article><span>06</span><b>活动物料</b><small>周边 / 证件 / 包装</small></article>
-          <article><span>07</span><b>媒体传播</b><small>Press Kit / 拍摄</small></article>
-          <article><span>08</span><b>现场执行</b><small>搭建 / 用电 / 人员</small></article>
-          <article><span>09</span><b>后续承接</b><small>Lead Capture / CRM</small></article>
-        </div>
-      </section>
-      <section class="expo-concept-lab" id="expo-concept-lab" aria-labelledby="expo-concept-heading">
-        <div class="expo-concept-heading"><div><small>SPACE CONCEPT / HYPOTHETICAL BOOTH</small><h3 id="expo-concept-heading">概念展位：从远距识别走向商务讨论</h3><p>10 × 20 ft 展位布局｜品牌区、应用区、系统讲解区、商务接待区</p></div>
-          <div class="expo-concept-signal"><strong>6–10m</strong><span>远距识别示例</span><b>→ 3–5m → 1m → 0.5m</b></div></div>
-        <div class="expo-space-map" id="expo-distance-route">
-          <div class="expo-space-map-header"><span>VISITOR JOURNEY / INFORMATION</span><b>按距离组织信息</b></div>
-          <div class="expo-space-track" role="group" aria-label="通用展位访客距离信息示例">
-            <button type="button" class="expo-space-stop is-active" data-expo-select="0" data-expo-summary="主背景墙在远距呈现业务领域与核心方案，内容密度应随场地与真实品牌调整。" aria-pressed="true"><small>01 / 远距</small><strong>6–10m</strong><span>品牌识别</span><em>知道这里做什么</em></button>
-            <button type="button" class="expo-space-stop" data-expo-select="1" data-expo-summary="两侧展示板分别介绍应用场景与系统方案，中距解释产品关系和客户问题。" aria-pressed="false"><small>02 / 中距</small><strong>3–5m</strong><span>应用与方案</span><em>看懂系统价值</em></button>
-            <button type="button" class="expo-space-stop" data-expo-select="2" data-expo-summary="A3 系统讲解牌和 A4 技术资料卡用于近距解释方案；关键技术信息须经专业人员确认。" aria-pressed="false"><small>03 / 近距</small><strong>1m</strong><span>技术解释</span><em>确认关键问题</em></button>
-            <button type="button" class="expo-space-stop" data-expo-select="3" data-expo-summary="接待区分类记录经销、采购与系统集成需求，在取得许可后安排下一步跟进。" aria-pressed="false"><small>04 / 接待</small><strong>0.5m</strong><span>商务咨询</span><em>建立后续联系</em></button>
-          </div><div class="expo-space-focus"><span>概念触点</span><p id="expo-selected-detail" aria-live="polite">主背景墙在远距呈现业务领域与核心方案，内容密度应随场地与真实品牌调整。</p></div>
-        </div>
-        <section class="expo-plan-board" id="expo-floorplan" aria-labelledby="expo-plan-title">
-          <div class="expo-plan-intro"><small>SPACE ZONING / DESIGN EXAMPLE</small><h4 id="expo-plan-title">概念平面图：品牌、应用、讲解与接待</h4><p>主墙负责远距识别，左右两区解释场景和系统，中央进行专业讲解，前台承接业务咨询。</p><div class="expo-plan-legend"><span>品牌</span><span>应用</span><span>方案</span><span>咨询</span></div></div>
-          <div class="expo-plan-visual" role="img" aria-label="假设10乘20英尺B2B展位，后方主视觉，中部场景、系统与讲解，前方接待">
-            <div class="expo-plan-dimensions"><span>CONCEPT / 10 × 20 FT</span><b>6.10m W × 3.05m D</b></div>
-            <div class="expo-plan-wall"><small>EXH-MAT-01 / BACKDROP</small><strong>B2B SOLUTIONS</strong><span>业务领域与核心方案</span></div>
-            <div class="expo-plan-interior">
-              <div class="expo-plan-display"><small>APPLICATION ZONE</small><b>应用场景</b><span>中距解释客户任务</span></div>
-              <div class="expo-plan-demo"><small>SYSTEM BRIEFING</small><b>系统讲解</b><span>近距沟通技术问题</span></div>
-              <div class="expo-plan-display"><small>SOLUTION ZONE</small><b>系统方案</b><span>中距解释设备关系</span></div>
-            </div>
-            <div class="expo-plan-front"><div class="expo-plan-entry"><b>↑ 访客入口</b><span>通道视线</span></div><div class="expo-plan-reception"><small>EXH-MAT-06</small><b>商务咨询</b><span>渠道 / 采购 / 集成</span></div></div>
-          </div><p class="expo-plan-caption">空间规划：6.10 m × 3.05 m · 开放式动线</p>
-        </section>
-      </section>
-      <section class="expo-asset-studio" id="expo-asset-manifest" aria-labelledby="expo-asset-title">
-        <header><small>EXAMPLE ASSET MANIFEST / POSM</small><h3 id="expo-asset-title">六种概念物料，四种阅读任务</h3><p>6 项物料：背景墙、场景板、系统板、讲解卡、技术卡与接待台。</p></header>
-        <div class="expo-asset-grid">
-          <article class="expo-asset-card expo-asset-wide"><div class="expo-asset-preview backdrop"><span>BUSINESS SOLUTIONS</span><b>APPLICATION & SYSTEM</b><i>DISCOVER / CONNECT</i></div><div class="expo-asset-meta"><small>EXH-MAT-01 / BACKDROP</small><h4>主背景板</h4><p>远距突出业务领域与主张。</p><span>6000 × 2400 mm · 6–10m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>USE CASE</b><span>典型场景</span><i>客户问题 / 使用条件</i></div><div class="expo-asset-meta"><small>EXH-MAT-02 / ROLL-UP A</small><h4>应用场景展示板</h4><p>用场景说明方案价值。</p><span>850 × 2000 mm · 3–5m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>SYSTEM</b><span>方案结构</span><i>组成 / 接口</i></div><div class="expo-asset-meta"><small>EXH-MAT-03 / ROLL-UP B</small><h4>系统方案展示板</h4><p>用结构图解释设备关系。</p><span>850 × 2000 mm · 3–5m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview tabletop"><small>HOW IT WORKS</small><b>场景 · 系统 · 配置</b><i>讲解步骤</i></div><div class="expo-asset-meta"><small>EXH-MAT-04 / A3 GUIDE</small><h4>系统讲解牌</h4><p>让专家讲解更有层次。</p><span>420 × 297 mm · 1m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview spec"><small>TECHNICAL FACTS</small><b>SPEC</b><i>规格与适配</i></div><div class="expo-asset-meta"><small>EXH-MAT-05 / A4 CARD</small><h4>技术规格台卡</h4><p>近距核实参数与适配条件。</p><span>210 × 297 mm · 0.5–1m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview reception"><b>LET'S TALK</b><span>DISCUSS · CONNECT</span><i>商务咨询</i></div><div class="expo-asset-meta"><small>EXH-MAT-06 / RECEPTION</small><h4>接待台与留资牌</h4><p>按 B2B 合作类型分类联络。</p><span>1000 × 1000 mm + A5 台牌</span></div></article>
-        </div>
-      </section>
-      <section class="expo-activation-lab" id="expo-activation-program" aria-labelledby="expo-activation-heading">
-        <header><small>ACTIVATION / METHOD</small><h3 id="expo-activation-heading">现场活动：讲解、内容与需求承接</h3><p>现场活动：方案讲解、客户交流、内容拍摄与线索跟进。</p></header>
-        <div class="expo-activation-grid">
-          <article><span>01 / EXPLAIN</span><h4>方案介绍</h4><p>从应用场景进入系统组成，技术内容由专家确认。</p><strong>讲解脚本 · 系统图 · FAQ</strong></article>
-          <article><span>02 / CONTENT</span><h4>现场传播内容</h4><p>根据许可记录展位、系统图及专业讲解，注意肖像与素材用途。</p><strong>媒体资料 · 图片 · 视频</strong></article>
-          <article><span>03 / LEAD</span><h4>B2B 需求分流</h4><p>区分经销、采购、系统集成和后续商务问题。</p><strong>问题清单 · 表单 · CRM</strong></article>
-        </div>
-        <div class="expo-activation-rhythm">
-          <div><small>展前 / 准备</small><b>目标与受众、物料、邀约、展品检查</b></div>
-          <div><small>展前 / 验收</small><b>搭建、安全、用电、系统图、现场排班</b></div>
-          <div><small>展中 / 执行</small><b>专业讲解、访客交流、内容采集与记录</b></div>
-          <div><small>展后 / 跟进</small><b>商机分层、销售交接、内容复用与复盘</b></div>
-        </div>
-      </section>
-      <section class="expo-experience-menu" id="expo-experience-menu" aria-labelledby="expo-experience-title">
-        <header><small>ACTIVITY DESIGN / GENERIC</small><h3 id="expo-experience-title">四种活动机制，服务不同 B2B 沟通需求</h3><p>专业讲解、采购问答、现场内容与商务跟进。</p></header>
-        <div class="expo-experience-grid">
-          <article class="expo-experience-card"><div class="expo-experience-icon">01<span>EXPLAIN</span></div><h4>专家系统讲解</h4><p>展示应用场景、系统架构与配置选择。</p><dl><div><dt>现场</dt><dd>技术图与 A3 讲解卡</dd></div><div><dt>传播</dt><dd>技术图解及 FAQ</dd></div></dl></article>
-          <article class="expo-experience-card"><div class="expo-experience-icon">02<span>ASK</span></div><h4>采购问题征集</h4><p>收集技术适配、交付和合作模式问题。</p><dl><div><dt>现场</dt><dd>问答卡与专家咨询</dd></div><div><dt>传播</dt><dd>解决方案文章和答疑</dd></div></dl></article>
-          <article class="expo-experience-card"><div class="expo-experience-icon">03<span>SHARE</span></div><h4>专业内容拍摄</h4><p>仅使用取得许可的讲解和展示画面。</p><dl><div><dt>现场</dt><dd>拍摄位、授权核验</dd></div><div><dt>传播</dt><dd>LinkedIn、PR 与展会回顾</dd></div></dl></article>
-          <article class="expo-experience-card"><div class="expo-experience-icon">04<span>CONNECT</span></div><h4>商务分流与跟进</h4><p>按照合作意向和阶段交给不同的销售负责人。</p><dl><div><dt>现场</dt><dd>接待表单与分层标签</dd></div><div><dt>传播</dt><dd>许可邮件与商务回访</dd></div></dl></article>
-        </div><div class="expo-experience-close"><strong>一次专业交流，连接后续业务动作</strong><span>邀请 → 系统讲解 → 答疑 → 内容复用 → 跟进</span></div>
-      </section>
-      <section class="expo-program expo-campaign-flight" id="expo-event-plan" aria-labelledby="expo-program-title">
-        <header><small>FIELD MARKETING / PLAN</small><h3 id="expo-program-title">展前、现场、展后的整合协作</h3><p>线上邀约、现场专业交流、展后商务跟进。</p></header>
-        <div class="expo-flight-grid">
-          <article class="expo-flight-card"><div class="expo-flight-number">01</div><small>PRE-EVENT</small><h4>建立目标客户到访理由</h4><div class="expo-flight-channel"><b>线下</b><p>展位、物料、设备与专业接待准备</p></div><div class="expo-flight-channel online"><b>线上</b><p>LinkedIn、官网、许可邮件和商务预约</p></div><div class="expo-flight-outcome"><span>目的</span><strong>让合适客户找到展位</strong></div></article>
-          <article class="expo-flight-card"><div class="expo-flight-number">02</div><small>AT EVENT</small><h4>让客户理解系统方案</h4><div class="expo-flight-channel"><b>线下</b><p>场景讲解、设备展示与技术答疑</p></div><div class="expo-flight-channel online"><b>线上</b><p>获准的现场内容与媒体材料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>形成具体采购沟通</strong></div></article>
-          <article class="expo-flight-card"><div class="expo-flight-number">03</div><small>POST-EVENT</small><h4>把需求交接给业务负责人</h4><div class="expo-flight-channel"><b>线下</b><p>客户分类、专家答疑与销售跟进</p></div><div class="expo-flight-channel online"><b>线上</b><p>许可邮件、展会回顾与方案资料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>区分线索与有效商机</strong></div></article>
-        </div><div class="expo-flight-note"><b>协作角色</b><span>市场 / 产品技术 / 销售 / 设计 / 执行供应商 / CRM</span></div>
-      </section>
-      <section class="expo-collaboration" id="expo-team-handoff"><div><small>CROSS-FUNCTIONAL SOP / METHOD</small><h3>谁负责什么，在哪个节点验收</h3><p>协作分工：品牌市场、产品技术、销售商务、现场供应商。</p></div>
-        <div class="expo-handoff-rails">
-          <div><b>市场与品牌</b><span>主题、视觉、传播、活动组织</span></div>
-          <div><b>产品与技术</b><span>架构、参数、演示内容审核</span></div>
-          <div><b>销售与商务</b><span>采购问题、客户分流与跟进</span></div>
-          <div><b>现场与供应商</b><span>搭建、安全、运输和人员安排</span></div>
-        </div>
-        <details class="g-chart-disclosure" id="expo-handoff"><summary>展会执行 SOP 与交接核查</summary><p>展前核对场地与展品、图纸、审批、预算、人员和物流；现场核对安全、设备、导视、接待与数据许可；展后安排客户交接、授权素材归档、物料清点与效果复盘。</p></details>
       </section>
     `, "expo-project");
   }
@@ -880,13 +818,13 @@
       </div>
       <div class="g-story-note">
         <h3>节庆搜索内容如何承接社媒话题</h3>
-        <p>以万圣节后清洁为入口规划一篇主题指南，按地面、浴室、厨房和工具选择拆分九篇专题。FAQ 解决操作问题，比较型内容解释不同工具的适用场景。该组合是内容规划，不代表十篇文章已经发布或获得排名。</p>
+        <p>以万圣节节后清洁为选题，按地面污渍、浴室、厨房、宠物毛发与工具比较拆分英文专题。主指南汇总任务，细分文章回答不同搜索问题，FAQ 与商品内容进一步解释使用条件和工具选择；稿件按原有策划目录展示。</p>
         <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
       </div>
       <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
-        <article><small>SEARCH INTENT</small><h3>关键词与页面匹配</h3><p>将 Informational、How-to 和 Commercial Investigation 查询分别映射到主题指南、专题文章与产品解释；保留查询来源，避免不同意图共用同一页面。</p></article>
-        <article><small>GSC / DISCOVERY</small><h3>检查搜索曝光与点击</h3><p>按 Query 和 Page 对照曝光、点击、CTR 与平均排名。优先处理有展示但摘要表达不匹配的页面，不能把 GSC Click 写成站内会话。</p></article>
-        <article><small>GA4 / CONTENT QUALITY</small><h3>评估内容阅读与后续行为</h3><p>查看 Landing Page 的来源、参与和进一步访问；确认事件口径后再判断内容是否为 FAQ、产品比较和选购路径带来有效访问。</p></article>
+        <article><small>KEYWORD / INTENT</small><h3>关键词分组与页面安排</h3><p>按照污渍类型、清洁表面、使用场景及选购意图整理英文关键词，为主指南、专题、FAQ 和商品页分别设定内容任务。</p></article>
+        <article><small>CONTENT BRIEF / INTERNAL LINKS</small><h3>英文写作 Brief 与内部链接</h3><p>逐篇确定主要问题、建议标题、H2/H3 结构、素材需求和下一步阅读链接；主指南连接专题，专题指向相关 FAQ 与产品解释页面。</p></article>
+        <article><small>GSC / GA4</small><h3>发布后的内容评估</h3><p>以 GSC Query / Page 分析展示、点击和 CTR，以 GA4 Landing Page 观察访问与站内下一步行为；对照实际发布页面调整标题、链接和内容。</p></article>
       </div>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
@@ -896,53 +834,44 @@
   }
 
   function operations() {
-    return section("社媒团队｜内容规划与素材审核", "社媒小组的项目分工与审核清单", `
+    return section("社媒团队｜季度规划与月度内容管理", "社媒内容规划、创意审核与效果复盘", `
       <section class="operations-control" id="operations-control" aria-labelledby="operations-control-heading">
- <header><span>TEAM OWNERSHIP / DELIVERY SYSTEM</span><h3 id="operations-control-heading">从季度主题到发布验收，明确每一个交接</h3><p>社媒小组直接管理与审核，横向对齐产品、视觉、视频和渠道负责人。</p></header>
- <div class="operations-role-board" aria-label="跨职能工作流与责任">
-  <article class="is-my-role"><span>01 / 我的主责 · SOCIAL</span><h4>主题、Brief 与内容审核</h4><p>季度主题、月度日历、素材初审、反馈与复盘。</p><b>OWNER / CONTENT</b></article>
-  <article><span>02 / 产品同事 · FACT</span><h4>参数与适用条件</h4><p>确认产品结构、关键规格和传播主张。</p><b>PROOF / CLAIM GATE</b></article>
-  <article><span>03 / 设计与视频 · ASSET</span><h4>素材制作与版本</h4><p>制作 KV、轮播、演示镜头及渠道版本。</p><b>VERSION / REWORK</b></article>
-  <article><span>04 / 渠道负责人 · RELEASE</span><h4>发布与商业承接</h4><p>按渠道核查链接、权限、发布和商业条件。</p><b>HANDOFF / RELEASE</b></article>
- </div>
-
-</section>
-      <details class="operations-process-details"><summary>查看内容组排期与审核工作流程</summary><div class="g-project-list g-project-calendar-plan">
-        <article><h3>选题与排期</h3><p>我从季度主推主题选定产品和场景，给 Facebook、Instagram 和 Group 分配内容任务，并确认每条内容的负责人和交付时间。</p></article>
-        <article><h3>产品与素材确认</h3><p>产品同事核对功能、参数和适用条件。社媒小组确认拍摄清单、素材权限和链接后，将 Brief 交给设计和视频同事。</p></article>
-        <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
-        <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
-      </div>
+        <header><span>SOCIAL CONTENT MANAGEMENT</span><h3 id="operations-control-heading">季度主题、月度排期和内容质量管理</h3><p>负责 Facebook、Instagram 和 Group 的季度内容方向、月度发布安排，组织创意审核与数据复盘。</p></header>
+        <div class="operations-role-board" aria-label="社媒团队内容管理工作">
+          <article class="is-my-role"><span>01 / PLAN</span><h4>季度内容方向</h4><p>结合节庆、产品重点与平台受众确定主题和内容优先级。</p><b>QUARTERLY THEMES</b></article>
+          <article><span>02 / CALENDAR</span><h4>月度内容日历</h4><p>按平台安排产品演示、教程、互动和活动内容，跟进发布节点。</p><b>MONTHLY PLAN</b></article>
+          <article><span>03 / CREATIVE</span><h4>主题、Brief 与内容审核</h4><p>审核文案、脚本、视觉和视频中的产品表现及渠道要求。</p><b>CONTENT REVIEW</b></article>
+          <article><span>04 / LEARNING</span><h4>内容表现复盘</h4><p>结合 Meta 浏览、互动、点击和社群反馈调整下月选题。</p><b>PERFORMANCE</b></article>
+        </div>
+      </section>
+      <details class="operations-process-details"><summary>查看日常内容管理流程</summary>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><h3>排期确认</h3><p>月初对照季度主题，把各平台内容和预计交付时间排进月历；重要节庆另安排预热、主推和收尾。</p></article>
+          <article><h3>素材准备</h3><p>根据产品演示重点填写 Brief，核对功能信息、拍摄动作、版位要求和素材权限。</p></article>
+          <article><h3>审核与发布</h3><p>检查标题、英文文案、字幕、产品动作和不同平台版本，再确认发布时间。</p></article>
+          <article><h3>月度复盘</h3><p>整理表现较好的内容类型和用户高频问题，调整次月主题与内容组合。</p></article>
+        </div>
       </details>
       <section class="operations-calendar-board" id="operations-content-calendar" aria-labelledby="operations-content-calendar-heading">
-        <header><small>CONTENT CALENDAR / MAY 2026 · PLANNING</small><h3 id="operations-content-calendar-heading">M3 五月内容制作排期</h3><p>同一主题下，社媒规划与设计、视频、产品审核按时间推进。</p></header>
+        <header><small>M3 / MAY 2026 · CAMPAIGN CONTENT PLAN</small><h3 id="operations-content-calendar-heading">M3 五月内容排期示例</h3><p>以下是营销策划文件中的内容安排，不与任职期间已发布的月度日历混为一谈。</p></header>
         <div class="operations-calendar-rows" role="list">
-          <article role="listitem"><time>05 / 01</time><div><strong>餐后场景预热</strong><span>Facebook / Instagram · 内容组 + 设计</span></div><b>场景图与互动文案</b></article>
-          <article role="listitem"><time>05 / 06</time><div><strong>场景轮播</strong><span>Facebook / Instagram · 设计 + 内容组</span></div><b>4:5 轮播与审核</b></article>
-          <article role="listitem"><time>05 / 13</time><div><strong>双盘结构说明</strong><span>Facebook / Instagram · 产品核验 + 设计</span></div><b>结构图与 FAQ</b></article>
-          <article role="listitem"><time>05 / 22</time><div><strong>上市 KV 传播计划</strong><span>社媒组 + 各渠道负责人</span></div><b>主视觉与渠道适配</b></article>
+          <article role="listitem"><time>05 / 01</time><div><strong>餐后场景预热</strong><span>Facebook / Instagram · 场景与话题</span></div><b>场景图与互动文案</b></article>
+          <article role="listitem"><time>05 / 06</time><div><strong>场景轮播</strong><span>Facebook / Instagram · 创意表现</span></div><b>4:5 轮播与审核</b></article>
+          <article role="listitem"><time>05 / 13</time><div><strong>双盘结构说明</strong><span>Facebook / Instagram · 产品教育</span></div><b>结构图与 FAQ</b></article>
+          <article role="listitem"><time>05 / 22</time><div><strong>新品传播主视觉计划</strong><span>社媒 · 节点传播</span></div><b>主视觉与渠道适配</b></article>
         </div>
       </section>
       <div class="g-story-note" id="asset-review">
-        <h3>社媒内容与制作交接</h3>
-        <p>我负责季度主题、月度内容排期、素材 Brief 与内容审核。设计和视频团队根据平台要求制作不同尺寸；产品同事核对产品结构及功能说明。我汇总修改意见、确认内容版本，并与渠道负责人安排素材交接。</p>
+        <h3>内容审核与发布管理</h3>
+        <p>组织月度日历和内容 Brief，核对脚本、画面、英文文案与产品信息。设计、视频完成修改后按社媒版位检查最终素材，并跟进发布和平台表现。</p>
         <p><a class="featured-detail" href="#/case/gtm/english-brief">查看 M3 英文内容 Brief ↗</a></p>
       </div>
-      <div class="g-story-note" id="cross-functional-governance">
-        <h3>社媒项目的协作分工</h3>
-        <div class="g-project-list g-project-calendar-plan">
-          <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
-          <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>通过 Brief 指出产品信息、画面内容和渠道规格中的具体问题，设计与视频同事负责修改，内容组复核并更新交付版本。</p></article>
-          <article><small>口径</small><h3>产品参数须经产品同事确认</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
-          <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>对于产品信息、素材权利和购买承接，使用 HOLD / REWORK 管理异常；社媒内容组负责 Brief 和审核，其他业务由对应负责人放行。</p></article>
-        </div>
-      </div>
       <div class="g-story-note">
-        <h3>父亲节 Campaign｜30 天内容规划</h3>
-        <p>围绕 Q3 Pro 的浴室场景与 M3 的餐区地面场景，安排 Facebook、Instagram 和 Group 的内容槽位。视觉、视频与产品信息分别进入 Brief 和审核环节。</p>
-        <p class="g-chart-note">双语内容方案 · 30 个相对日序</p>
-        <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
-      </div>`, "team-delivery");
+        <h3>父亲节 Campaign｜双语内容日历</h3>
+        <p>围绕 Q3 Pro 浴室场景与 M3 餐区场景安排 Facebook、Instagram 和 Group 选题，包含内容类型、开场、英文文案与素材审核重点。</p>
+        <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语内容日历 ↗</a>
+      </div>
+    `, "team-delivery");
   }
 
   function amazonPriority() {
@@ -956,12 +885,29 @@
   }
 
   function crmHandoff() {
-    return section("谁可以收到邮件，谁要先排除", "生命周期策略 · 事件、许可与顾客状态", `
-      <div class="g-project-list g-project-calendar-plan">
-        <article><h3>浏览或加购后，先检查状态</h3><p>有有效许可、符合等待窗口且尚未购买，才进入对应提醒。已经下单时，退出催购，进入购后信息流程。</p></article>
-        <article><h3>退款或服务问题，先交客服</h3><p>出现退款、退订或待解决的服务问题时，暂停相应营销触发。运营与电商对齐状态来源，测试频控、退出和重复进入。</p></article>
+    return section("EDM｜节庆活动与用户邮件规划", "以邮件主题、受众、内容节奏和站内承接组织 EDM 工作", `
+      <div class="g-story-note" id="crm-campaign-email-plan">
+        <h3>母亲节 EDM 活动内容规划</h3>
+        <p>围绕母亲节活动准备英文邮件主题、卖点、版式文案及 CTA。内容从节日送礼场景展开，衔接产品使用优势、活动优惠和截止提醒；邮件内容与社媒主题、Blog 和商品信息保持一致。</p>
       </div>
-      <p>交付以用户旅程、触达条件、名单排除与频控规则为核心，连接商品页和邮件内容，帮助团队明确系统配置与沟通任务。</p>`, "crm-handoff");
+      <div class="g-project-list g-project-calendar-plan" id="crm-email-content">
+        <article><small>BRIEF</small><h3>确定受众与本封邮件的任务</h3><p>区分新订阅用户、已浏览产品的潜在客户与已购客户；活动邮件先说明目标、主推产品及要回答的购买疑问。</p></article>
+        <article><small>CONTENT</small><h3>主题行、首屏与产品内容</h3><p>把邮件主题、预览文字、首屏视觉、产品卖点和主 CTA 写进制作 Brief，检查移动端阅读与跳转后页面的一致性。</p></article>
+        <article><small>SEND PLAN</small><h3>安排发送节奏与名单排除</h3><p>按预热、活动进行和收尾安排内容，避免同一用户重复收到不适合其购买状态的促销邮件。</p></article>
+        <article><small>REVIEW</small><h3>评估邮件实际带来的访问</h3><p>分别看送达、有效点击、退订及站内访问与购买；将用户反应反馈给下一轮选题和邮件设计。</p></article>
+      </div>
+      <div class="g-story-note" id="crm-customer-state">
+        <h3>生命周期邮件怎样对应购物阶段</h3>
+        <p>订阅后先介绍品牌和重点产品；浏览后补充适用场景；加购或进入结账后核查是否已经下单；购后围绕使用说明、常见问题和适合的后续推荐。已退订、已购买或正在处理售后问题的用户不应继续收到不匹配的催购内容。</p>
+      </div>
+      <div class="g-project-list g-project-calendar-plan" id="crm-lifecycle-flow">
+        <article><small>WELCOME</small><h3>新订阅欢迎邮件</h3><p>介绍品牌、产品分类和使用场景，承接订阅入口承诺。</p></article>
+        <article><small>BROWSE / CART</small><h3>浏览与加购提醒</h3><p>以近期兴趣和有效购物状态选择内容；开始结账或完成购买后退出过时提醒。</p></article>
+        <article><small>POST-PURCHASE</small><h3>购后使用教育</h3><p>结合商品类别提供上手指南、清洁保养和 FAQ，营销信息尊重订阅许可及售后状态。</p></article>
+        <article><small>WINBACK / LOYALTY</small><h3>复访与会员沟通</h3><p>根据顾客实际使用与购买周期讨论内容，积分和优惠规则须与店铺最终配置一致。</p></article>
+      </div>
+      <p class="g-chart-note">展示范围：节庆邮件内容方案与用户旅程规划；不将邮件自动化配置或发送量写成个人既有业绩。</p>
+    `, "crm-handoff");
   }
 
 
@@ -982,9 +928,9 @@
       "负责季度主题、月度日历和社媒小组审核；以展示、互动、点击和社群反馈调整内容结构。",
     ],
     operations: [
-      "主视觉返工，优先保护用户需要看到的结构",
-      "M3 的 4:5 主视觉被 CTA 框遮住双盘。首图承担介绍产品结构的任务，因此审核时先要求双盘完整可见，再调整按钮位置和不同版位的裁切。",
-      "我负责内容侧交付与审核；产品事实由产品/研发确认，最终公开权限由相应角色签核。把必须入镜的部件、安全区、素材版本和审核责任写回 Brief，现有记录不支持量化节省工时。",
+      "季度主题与月度内容日历",
+      "负责社媒季度主题与月度内容规划，按 Facebook、Instagram 和 Group 的内容任务安排产品演示、场景话题、互动活动及节庆专题。审核文案、视觉和视频版本，并根据内容表现调整后续排期。",
+      "工作覆盖主题规划、日历制作、内容 Brief、素材审核和周月复盘；相关栏目展示实际职责与已有排期工作物。",
     ],
     community: [
       "把成员的使用问题带回内容和产品",
@@ -992,9 +938,9 @@
       "成员快照说明社群规模，查看和发帖评论说明各自窗口内的行为。评估单场活动还需要参与记录、反馈和素材授权。",
     ],
     b2b: [
-      "先问客户怎么用，再决定跟进什么",
-      "客户开发按应用场景、产品匹配和采购条件判断优先级。展会现场的系统展示可以从具体用电场景开启对话，后续由商务核实报价、配置和交付。",
-      "照片支持展会参与和陈列。衡量展会贡献需要核对现场登记、会后跟进和机会来源。任职期经营数据按各自窗口查看。",
+      "从展位策划到现场客户沟通",
+      "参展前准备展区展示方案、品牌视觉、产品资料与客户邀约；现场结合展品介绍系统应用并记录采购问题，会后跟进产品资料、报价需求和合作条件。",
+      "现有照片展示参展现场与产品陈列。同期 B2B 客户开发指标另作展示，不单独归因于展会。",
     ],
     seo: [
       "用搜索问题决定页面分工",
@@ -1013,8 +959,8 @@
     ],
     crm: [
       "发送之前先核对用户的真实状态",
-      "加购用户可能已经下单，也可能正在处理退款。旅程规划先核同意记录、订单与售后状态，再决定发提醒、转入购后信息或暂停营销。",
-      "旅程设计围绕触发、退出、频控、重复进入与发送测试展开。",
+      "将母亲节等 Campaign 的英文邮件内容与产品卖点、社媒主题和站内页面对齐；按订阅、浏览、加购、已购等状态规划对应邮件内容和名单排除。",
+      "负责邮件主题、文案结构、受众与发送节奏的营销方案；触发与退出规则作为实施时的配置要求。",
     ],
     creator: [
       "先看创作者能否拍清用户最关心的动作",

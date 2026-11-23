@@ -117,7 +117,7 @@ const fs = require("fs"),
     const coverSubjects = {
       gtm:"M3",social:"海外社媒增长",community:"社群运营",brand:"品牌策略",
       operations:"社媒团队管理",b2b:"储能展会",seo:"SEO 内容",amazon:"Amazon 运营",
-      creative:"TVC",crm:"邮件旅程",creator:"Creator"
+      creative:"视频创意",crm:"邮件旅程",creator:"Creator"
     };
     for (const [id, subject] of Object.entries(coverSubjects)) {
       const card = d.querySelector('#case-list [data-case-id="' + id + '"]');
@@ -172,7 +172,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
     assert.equal(d.querySelectorAll("#operations-control .operations-issue-panel").length, 0);
-    assert.ok(d.querySelector("#operations-control").textContent.includes("主题、Brief 与内容审核"));
+    assert.ok(d.querySelector("#operations-control").textContent.includes("月度内容日历"));
   });
 
   await route("/case/gtm");
@@ -321,10 +321,10 @@ const fs = require("fs"),
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
-    assert.ok(d.querySelector("#asset-review").textContent.includes("社媒内容与制作交接"));
+    assert.ok(d.querySelector("#asset-review").textContent.includes("内容审核与发布管理"));
     assert.equal(d.querySelectorAll("#operations-kv-review").length, 0);
     assert.equal(d.querySelectorAll("#operations-content-calendar .operations-calendar-rows article").length, 4);
-    assert.ok(!d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
+    assert.ok(!d.getElementById("team-delivery").textContent.includes("社媒项目的协作分工"));
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
@@ -341,7 +341,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/creator-livingroom-7s.mp4"]'));
     const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
-    assert.ok(christmas?.getAttribute("title").includes("90"));
+    assert.ok(christmas?.getAttribute("title").includes("视频"));
     const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
     assert.ok(thanksgiving?.getAttribute("title").includes("感恩节"));
     assert.ok(d.querySelector('#video-drive-editions iframe'));
@@ -379,45 +379,22 @@ const fs = require("fs"),
     assert.ok(gallery.textContent.includes("品牌屋"));
   });
   await route("/case/b2b/expo-project");
-  check("overseas exhibition case combines original photos with visitor and follow-up work", () => {
+  check("exhibition case shows real booth planning, materials and customer follow-up without fictional dimensions", () => {
+    const block = d.querySelector("#expo-project");
+    assert.ok(block);
     assert.equal(d.querySelectorAll("#expo-visitor-route .expo-visitor-map article").length, 4);
     assert.equal(d.querySelectorAll("#expo-event-plan .expo-flight-card").length, 3);
-    assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 9);
+    assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 4);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
-    assert.ok(d.querySelector("#expo-real-work").textContent.includes("真实经历"));
-    assert.ok(d.querySelector("#expo-method-framework").textContent.includes("理论方法"));
-    assert.match(d.querySelector("#expo-floorplan").textContent, /10\s*[×x]\s*20\s*ft/i);
-    const exhibitionCopy = d.querySelector("#expo-project").textContent;
-    for (const phrase of ["以下以假设的", "不是前面实际", "不是此前", "不代表已实际举办", "以下为可迁移", "工作样例"]) {
-      assert.equal(exhibitionCopy.includes(phrase), false, "Explanatory exhibition wording resurfaced: " + phrase);
-    }
-    assert.ok(d.querySelector("#b2b-scale-comparison h3").textContent.includes("同期海外客户开发"));
-    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
-    for (const token of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!d.querySelector("#expo-project").textContent.includes(token), "Exhibition branding leakage: "+token);
-    assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
-    assert.equal(d.querySelectorAll("#expo-experience-menu .expo-experience-card").length, 4);
-    assert.ok(d.querySelector("#expo-experience-menu").textContent.includes("Brochure") === false);
-    assert.ok(d.querySelector("#expo-visual-language").textContent.includes("Brochure"));
-
-    assert.ok(d.querySelector("#expo-brand-activation").textContent.includes("Press Kit"));
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-dimensions").textContent.includes("10 × 20 FT"));
-    assert.equal(d.querySelectorAll("#expo-team-handoff .expo-handoff-rails>div").length, 4);
+    assert.ok(d.querySelector("#expo-real-work").textContent.includes("海外储能行业展会"));
     assert.equal(d.querySelectorAll(".expo-gallery figure").length, 2);
-    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
-    assert.ok(d.querySelector("#expo-handoff"));
-    assert.equal(d.querySelectorAll("#expo-distance-route .expo-space-stop").length, 4);
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-wall"));
-    assert.equal(d.querySelectorAll("#expo-floorplan .expo-plan-interior>div").length, 3);
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-reception"));
     assert.equal(d.querySelectorAll("#expo-asset-manifest .expo-asset-card").length, 6);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-grid article").length, 3);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-rhythm>div").length, 4);
-    const all = d.querySelector("#expo-asset-manifest").textContent;
-    for (let i = 1; i <= 6; i++) assert.ok(all.includes("EXH-MAT-0" + i));
-    const zone = d.querySelector('[data-expo-select="2"]');
-    zone.click();
-    assert.equal(zone.getAttribute("aria-pressed"), "true");
-    assert.ok(d.querySelector("#expo-selected-detail").textContent.includes("A3"));
+    assert.ok(d.querySelector("#expo-handoff"));
+    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
+    for (const phrase of ["概念展位", "HYPOTHETICAL BOOTH", "10 × 20 FT", "6–10m", "远距识别", "虚构尺寸"]) assert.ok(!block.textContent.includes(phrase), phrase);
+    for (const brand of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!block.textContent.includes(brand), "Exhibition brand leak: "+brand);
   });
   for (const item of w.PORTFOLIO.cases) {
     await route("/case/" + item.id);

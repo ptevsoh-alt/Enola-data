@@ -86,11 +86,11 @@
       artifact: "社媒增长与内容复盘",
     },
     operations: {
-      choice: "将季度主题落实到各平台选题、负责人和制作 Brief，发布前逐项核对产品事实、内容与素材版本。",
-      handoff: "负责社媒小组优先级、Brief 与素材审核，协调产品、设计、视频及渠道负责人交付。",
+      choice: "围绕季度主题制定 Facebook、Instagram 和 Group 的月度日历，安排节庆选题、产品内容与用户互动。",
+      handoff: "负责内容排期、创意审核、素材反馈和团队日常管理，跟进社媒不同平台的发布节奏。",
       review: "按照渠道规格和产品事实审核图文及视频版本，跟进修改意见、交付时间及最终素材版本。",
-      chapter: "cross-functional-governance",
-      artifact: "内容排期与审核流程",
+      chapter: "operations-content-calendar",
+      artifact: "季度主题与月度内容日历",
     },
     community: {
       choice: "先用投票和教程降低参与门槛，再让愿意分享使用过程的人投稿。根据用户提问补内容与 FAQ。",
@@ -101,8 +101,8 @@
       artifact: "活动职责、参与规则与反馈",
     },
     b2b: {
-      choice: "先按采购场景、系统适配度和推进阶段筛选对象，再分别安排触达、技术答疑和报价。",
-      handoff: "分层开发海外客户，组织系统资料与商务交接，配合储能展会传播物料和现场沟通。",
+      choice: "围绕参展目标与展品确定展位展示内容、宣传物料和客户沟通重点；会后按需求继续跟进。",
+      handoff: "参与展位策划与现场物料准备，协调展品资料和品牌视觉；现场记录需求并衔接商务跟进。",
       review: "从客户来源、响应、询盘和合作阶段评估渠道质量，持续优化后续跟进。",
       output: "海外 B2B 客户开发月均触达潜客 100+，参与海外展会传播与客户跟进，配有匿名化现场作品。",
       chapter: "expo-project",
@@ -133,10 +133,10 @@
       artifact: "播放节庆故事和产品演示",
     },
     crm: {
-      choice: "先判断客户状态、有效许可和排除条件，再规划欢迎、购物车、购后或召回邮件。",
+      choice: "先确定邮件活动目标、受众与核心内容，再按用户订阅、浏览、加购和购后阶段安排合适信息。",
       handoff: "运营定义旅程目标；电商和邮件平台核事件及同意记录；客服提供退款与用户状态，避免触发冲突。",
       review: "通过用户状态、许可、排除和频控决定邮件触达的节奏，并与电商、客服保持信息一致。",
-      output: "设计从订阅、浏览、加购到购后的邮件内容旅程，明确分层、触发、频控与退出条件。",
+      output: "母亲节 EDM 活动邮件方案、英文文案结构和用户分层触达流程，包含触发、排除与发送节奏。",
       chapter: "crm-handoff",
       artifact: "发送条件与旅程交接",
     },
@@ -179,14 +179,14 @@
     },
     operations: {
       title:"社媒团队管理与项目交付",
-      intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
+      intro:"负责季度主题、月度社媒内容日历、创意审核与日常内容复盘。",
       fact:"季度主题 · 月度排期 · 视觉审核",
-      cover:"社媒团队管理",eyebrow:"TEAM / DELIVERY",detail:"季度主题 · 内容排期 · 协作交付",kind:"type"
+      cover:"社媒团队管理",eyebrow:"TEAM / DELIVERY",detail:"季度主题 · 月度排期 · 内容审核",kind:"type"
     },
     b2b: {
       title:"储能行业展会与海外 B2B 客户开发",
-      intro:"参与储能展会物料与系统展示，并负责海外客户需求沟通和商务跟进。",
-      fact:"真实参展记录 · 海外客户开发",
+      intro:"参与海外储能展位策划与品牌物料准备，负责客户需求沟通及会后跟进。",
+      fact:"展位策划 · 视觉物料 · 客户开发",
       cover:"储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"系统展示 · 现场沟通",
       media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"脱敏后的真实储能行业展会现场照片",kind:"photo"
     },
@@ -203,16 +203,16 @@
       cover:"Amazon 运营",eyebrow:"AMAZON / COMMERCE",detail:"Listing · PPC · 经营优化",kind:"type"
     },
     creative: {
-      title:"节庆 TVC 与短视频创意",
-      intro:"参与感恩节和圣诞节品牌影片、Creator 视频的脚本、镜头规划与审片。",
-      fact:"2 支节庆 TVC · 2 支 Creator 视频",
-      cover:"TVC",eyebrow:"VIDEO / CREATIVE",detail:"感恩节 · 圣诞节",
+      title:"品牌视频与短视频创意案例",
+      intro:"参与品牌影片、产品演示与 Creator 视频的创意策划、脚本、镜头审核和渠道版本制作；现有页面展示部分案例。",
+      fact:"品牌影片 · 产品演示 · Creator 合作内容",
+      cover:"视频创意",eyebrow:"VIDEO / CREATIVE",detail:"感恩节 · 圣诞节",
       kind:"type"
     },
     crm: {
-      title:"EDM 用户生命周期传播方案",
-      intro:"设计欢迎、浏览、加购与购后邮件的内容、触发、排除和频控规则。",
-      fact:"Welcome · Cart · Post-purchase（方案）",
+      title:"EDM 内容策划与用户生命周期运营",
+      intro:"围绕节庆活动规划英文邮件主题、受众、卖点与发送节奏，并设计欢迎、加购和购后沟通的内容规则。",
+      fact:"Campaign Email · Welcome · Cart · Post-purchase",
       cover:"邮件旅程",eyebrow:"CRM / LIFECYCLE",detail:"Welcome · Cart · Post-purchase",kind:"type"
     },
     creator: {
@@ -264,7 +264,7 @@
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
     seo: "规划以主题指南带动 FAQ 与产品内容的搜索承接。经营记录中自然搜索收入占比 82.46%，GSC 点击量环比约增长 20%。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
-    creative: "展示感恩节与圣诞节完整 TVC，以及楼梯实操、客厅介绍两支 Creator 视频；结合镜头和审核说明不同传播任务。",
+    creative: "以节庆品牌影片、演示短视频及 Creator 内容说明创意策划、脚本、画面审核和渠道适配；播放素材只是现有案例的一部分。",
     crm: "搭建从用户状态识别到邮件内容、触发规则和发送排除条件的生命周期传播方案，与商品页、SEO 内容及社媒信息保持一致。",
     creator: "建立创作者筛选、合作 Brief、脚本审核与素材授权的工作流程，强调内容的受众匹配、演示质量和跨渠道复用价值。",
   };
@@ -299,8 +299,8 @@
     ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
     ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
     ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
-    ["06","TVC / KOL 创意","感恩节与圣诞节两支主题 TVC 讲述不同家庭故事；KOL 短视频负责产品体验和操作教育。","#/case/creative/video-projects","感恩节 TVC · 圣诞节 TVC · KOL 内容"],
-    ["07","Field / Exhibition","以真实储能展会为背景，呈现展位信息层级、产品讲解和 B2B 客户沟通。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
+    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本和镜头审核，节庆视频为其中部分案例。","#/case/creative/video-projects","感恩节 TVC · 圣诞节 TVC · KOL 内容"],
+    ["07","海外展会策划","参与海外储能展会的展位规划、品牌物料准备、现场产品介绍和客户需求跟进。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
   ];
 
   function featuredCard(id, item) {
