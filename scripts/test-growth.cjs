@@ -114,6 +114,18 @@ const fs = require("fs"),
     assert.equal(new Set(covers.map((x) => x.className.match(/case-cover-v3--(gtm|social|community|brand|operations|b2b|seo|amazon|creative|crm|creator)/)?.[1])).size, 11);
     assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
     assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
+    const coverSubjects = {
+      gtm:"M3",social:"96.5万",community:"4,009",brand:"Campaign KV",
+      operations:"团队交付",b2b:"储能展会",seo:"01 / 09",amazon:"0 → 1",
+      creative:"TVC",crm:"EDM",creator:"Creator"
+    };
+    for (const [id, subject] of Object.entries(coverSubjects)) {
+      const card = d.querySelector('#case-list [data-case-id="' + id + '"]');
+      assert.ok(card, "missing case " + id);
+      assert.ok(card.querySelector(".case-cover-v3-main").textContent.includes(subject), id + " cover subject");
+      for (const image of card.querySelectorAll("img")) assert.ok(image.getAttribute("alt"), id + " missing image description");
+    }
+
     assert.equal(d.querySelectorAll('#case-list img[src^="assets/concept-"]').length, 0);
     assert.ok(d.querySelector('#case-list .case-cover-v3--b2b img[src="assets/projects/exhibition-booth-overview-redacted.jpg"]'));
     assert.ok(d.querySelector('#case-list .case-cover-v3--gtm img[src="assets/projects/m3-yellow-main.webp"]'));
