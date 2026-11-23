@@ -168,6 +168,20 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-axis span").length, 5);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule .v-gantt-gates a").length, 5);
     assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-scroll[tabindex='0']"));
+    assert.equal(d.querySelectorAll(".v-gtm-quicknav a").length, 5);
+    assert.equal(d.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]").length, 4);
+    assert.equal(d.querySelector("#launch-four-stages").tagName, "DETAILS");
+    assert.equal(d.querySelector("#launch-channel-plan").tagName, "DETAILS");
+    assert.equal(d.querySelector("#launch-decisions .v-supporting-evidence").open, false);
+    const options = [...d.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]")];
+    const option = (name) => options.find(x => x.dataset.gtmFocus === name);
+    const visible = () => [...d.querySelectorAll("#gtm-visual-schedule .v-gantt-lane")].filter(x => !x.hidden);
+    for (const [name, count] of [["lead", 1], ["partner", 3], ["support", 2], ["all", 6]]) {
+      option(name).click();
+      assert.equal(visible().length, count, name + " must show the intended workstreams");
+      assert.equal(option(name).getAttribute("aria-pressed"), "true");
+    }
+    assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-view-caption").textContent.includes("6 条工作流"));
     assert.equal(d.querySelectorAll("#gtm-channel-orchestration article").length, 4);
     assert.ok(d.querySelector(".campaign-milestone-details"));
     assert.equal(d.querySelectorAll('#english-brief dl[lang="en-US"] dt').length, 4);
