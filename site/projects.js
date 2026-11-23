@@ -809,20 +809,36 @@
   }
 
   function creator() {
-    return section("Creator Desk 创作者合作审核", "工作台原型 · 从来信提取候选事项，由负责人确认合作承诺及素材权利。", `
-      <div class="g-project-list g-project-calendar-plan">
+    return section("Creator / KOL｜合作策略、创意制作与素材管理", "创作者筛选、英文邀约、合作谈判、产品演示与授权", `
+      <section class="g-story-note" id="creator-assessment"><h3>创作者筛选维度</h3><div class="creator-assessment-grid"><article><small>AUDIENCE</small><h4>受众与市场</h4><p>国家、语言、品类兴趣、粉丝质量与受众相关性</p></article><article><small>CREATIVE</small><h4>内容与演示</h4><p>过往视频结构、讲解能力、产品真实使用与内容稳定度</p></article><article><small>COMMERCIAL</small><h4>合作条件</h4><p>邀约报价、寄样、交付形式、返修与付款条件</p></article><article><small>RIGHTS</small><h4>素材使用</h4><p>自然发布、品牌转发、二次剪辑、广告授权与期限</p></article></div></section><div class="g-project-list g-project-calendar-plan">
         <article><h3>选题和交付先写进 Brief</h3><p>按目标市场、受众和内容风格筛选创作者。Brief 写清产品事实、演示任务、交付形式和审核责任，供内容审核时逐项核对。</p></article>
         <article><h3>报价、交付和付款逐项核对</h3><p>演示邮件将报价、交付、付款放入待确认清单。负责人查原邮件，确认条款后再审核对应回复草稿。</p></article>
         <article><h3>授权用途分开管理</h3><p>合作内容的品牌转发、剪辑和付费广告需要分别明确可使用的平台、地域、期限与用途；内容审核与商业授权同步交接。</p></article>
         <article><h3>交付审核对应具体版本</h3><p>逐条核对产品事实、合作披露和修订意见。通过审核的内容版本与对应授权一起留档，方便后续查找和复用。</p></article>
       </div>
+      <section class="g-story-note" id="creator-cooperation-brief">
+        <h3>英文合作 Brief｜产品体验内容</h3>
+        <div class="operations-brief-sheet">
+          <div><span>合作目标</span><strong>产品教育 / 品牌认知 / 真实体验</strong></div>
+          <div><span>内容方向</span><strong>家庭场景、产品动作、使用问题和创作者真实表达</strong></div>
+          <div><span>审核重点</span><strong>产品结构、适用条件、字幕、品牌信息与商业披露</strong></div>
+          <div><span>商业与交付</span><strong>寄样、稿期、修改、付款与取消约定</strong></div>
+          <div><span>资产版本</span><strong>原始成片、审核版本、约定可二次使用的素材</strong></div>
+          <div><span>权限记录</span><strong>发布平台、剪辑范围、广告使用、地域及期限</strong></div>
+        </div>
+        <p><a href="#/case/creative/video-projects">查看 Creator 实拍视频案例 ↗</a> · <a href="#/case/gtm/english-brief">英文内容 Brief ↗</a></p>
+      </section>
+      <section class="g-story-note" id="creator-performance">
+        <h3>合作表现与后续合作判断</h3>
+        <p>围绕合作任务分别评估受众契合度、内容交付质量、演示清晰度、互动中的真实问题与素材可复用性；带链接的合作另看有效点击、站点行为及订单信息。结合报价、修改和授权条件决定后续是否合作。</p>
+      </section>
       <div class="g-story-note" id="partner-handoff">
         <h3>外部创作者从 Brief 到交付</h3>
         <p>合作交付：邀约时确认寄样、脚本初稿与成片日期。首稿审核看开场能否交代使用场景、动作能否支持主张，以及合作披露是否清楚。把返修意见标到对应版本和时间点。</p>
         <p>验收时将成片与书面使用许可一起归档，注明渠道、地域、期限、剪辑与付费使用范围，供后续复用时核查。</p>
         <p><a href="#/case/gtm/english-brief">查看一份英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">查看接触面与操作路径的镜头样例 ↗</a></p>
       </div>
-      <p class="g-chart-note">Creator Desk 原型：创作者资料审核、素材交接、授权记录与邮件工作流设计。</p>`, "creator-project");
+      <p class="g-chart-note">Creator 合作｜筛选、邀约、议价、寄样、脚本审核、发布与素材授权</p>`, "creator-project");
   }
 
   function seo() {
@@ -851,12 +867,23 @@
       <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
         <article><small>KEYWORD / INTENT</small><h3>关键词与搜索意图分组</h3><p>按 Halloween 污渍类型、清洁表面、使用场景和产品比较分组关键词，分别识别教程型、选型型需求，避免同类文章重复覆盖同一查询。</p></article>
         <article><small>CONTENT BRIEF / INTERNAL LINKS</small><h3>英文 Brief 与内部链接方案</h3><p>逐篇确定主要搜索问题、页面标题、H2/H3、素材和产品事实检查点；从主指南引向问题专题，再连接 FAQ 和相关产品说明，减少重复内容。</p></article>
-        <article><small>GSC / GA4</small><h3>搜索表现评估安排</h3><p>实际页面发布后，以 GSC Query / Page 检查收录、展示、点击和 CTR，以 GA4 Landing Page 观察访问及后续浏览行为。未核实发布的目录不直接计算流量或订单贡献。</p></article>
+        <article><small>GSC / GA4</small><h3>搜索表现评估安排</h3><p>页面发布后使用 GSC Query / Page 检查收录、展示、点击和 CTR，并从 GA4 Landing Page 分析访问与页面承接。</p></article>
       </div>
+      <section class="g-story-note" id="seo-method-and-pr">
+        <h3>SEO 内容策划与搜索增长能力</h3>
+        <div class="seo-method-matrix">
+          <article><small>INTENT</small><h4>关键词与意图匹配</h4><p>把信息型、解决问题型、比较型与购买型搜索需求映射到不同页面，不让多个专题重复覆盖同一查询。</p></article>
+          <article><small>ARCHITECTURE</small><h4>页面结构与内部链接</h4><p>安排 Pillar、专题、FAQ 和商品页的任务，检查内容重叠、孤立页面及内链关系。</p></article>
+          <article><small>TECHNICAL</small><h4>收录与技术基础</h4><p>核对可抓取性、Canonical、Robots、Sitemap、标题和移动端阅读体验，配合站点团队处理。</p></article>
+          <article><small>MEASUREMENT</small><h4>GSC、GA4 与转化承接</h4><p>按 Query/Page 检查展示、点击和 CTR，再用 Landing Page 数据分析访问与下一步行为。</p></article>
+        </div>
+        <p>SEO 面向主动搜索需求；PR 围绕新闻价值、可信产品信息和媒体素材进行对外传播。两者共享已核准的事实，但分别评估搜索表现和新闻稿分发。</p>
+        <p><a href="#/case/brand/pr-project">查看 PR 新闻稿案例 ↗</a> · <a href="#/data/search">查看搜索表现 ↗</a></p>
+      </section>
       <section class="g-story-note" id="seo-case-workflow">
         <h3>这次 Halloween SEO 策划的内容安排</h3>
         <p>主指南围绕节后清洁的常见任务组织阅读路径；专题分别处理糖浆黏污、化妆残留、厨房、浴室、门廊和宠物毛发等问题，并安排清洁工具比较内容。文章 Brief 对应搜索意图、场景、标题结构、可核对的使用条件及下一步内容。</p>
-        <p>主指南和九个专题是已有策划文件中的工作物。发布状态和后续查询数据单独核验，不将站点其他时段的搜索结果归因于这组内容。</p>
+        <p>主指南、专题目录及内容 Brief 共同构成这次节庆搜索内容的策划成果。</p>
       </section>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
@@ -977,9 +1004,9 @@
       <div class="g-story-note" id="crm-platform-handoff">
         <h3>邮件流程与 Shopify 用户数据如何配合</h3>
         <p>方案以 Shopify 的客户、订单、结账和邮件许可作为购物状态依据；Omnisend 负责获客订阅环节，Klaviyo 为规划中的生命周期执行端，会员系统提供积分和权益信息。对同一用户的浏览、加购、结账与购买事件设置流程优先级和退出条件，检查频控、退订和重复发送。</p>
-        <p>我的职责是营销内容、邮件 Brief、用户分组、发送计划和跨渠道信息核对。系统启用、邮件发送、会员权益和商业优惠须经各平台负责人验证；这里展示的是已完成的邮件策划和流程方案，不宣称所有自动化均已上线。</p>
+        <p>我的职责是营销内容、邮件 Brief、用户分组、发送计划和跨渠道信息核对。系统启用、邮件发送、会员权益和商业优惠须经各平台负责人验证；邮件内容、受众规则与流程规划是此项目的核心工作物。</p>
       </div>
-      <p class="g-chart-note">邮件案例展示策划成果与触达流程，不公开用户记录，也不将未核实的邮件发送或复购结果记作个人业绩。</p>
+      <p class="g-chart-note">母亲节英文邮件方案 · 用户分组 · 生命周期触达流程</p>
     `, "crm-handoff");
   }
 
