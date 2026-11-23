@@ -48,7 +48,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "title": "感恩节与圣诞节 TVC｜Campaign 创意与 KOL 内容",
     "role": "参与视频创意、脚本与画面审核，并协调产品信息、镜头与不同渠道版本。",
     "decision": "感恩节以家庭餐叙与感谢切入，圣诞节以日常照料承接品牌情感；KOL / Creator 竖屏内容聚焦真实使用情境与产品动作。",
-    "output": "感恩节主题 101 秒 TVC、圣诞节 90 秒成片，以及楼梯清洁和客厅产品介绍两支独立 Creator 视频。",
+    "output": "感恩节约 101 秒、圣诞节 90 秒的 TVC 预览，以及楼梯和客厅两支独立 Creator 视频。",
     "highlight": "感恩节 TVC · 圣诞节 TVC · KOL 短视频",
     "artifact": "观看两支节庆 TVC 与 KOL 内容",
     "chapter": "video-projects",
