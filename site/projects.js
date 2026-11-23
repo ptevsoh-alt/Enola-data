@@ -906,7 +906,7 @@
         <article><h3>创意与发布审核</h3><p>脚本审用户问题和演示顺序，画面审产品结构与操作，发布前检查文案、字幕、链接和平台版本。</p></article>
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
-      </div></details>
+      </details>
       <div class="g-story-note" id="asset-review">
         <h3>一次真实的物料返工：首图看不到双盘</h3>
         <ul>
