@@ -213,8 +213,10 @@ const fs = require("fs"),
   await route("/case/operations");
   check("verbose operational detail is available on demand after the visual ownership view", () => {
     assert.equal(d.querySelector("#operations-control").tagName, "SECTION");
-    assert.equal(d.querySelector(".operations-process-details").tagName, "DETAILS");
-    assert.ok(d.querySelector(".operations-process-details summary"));
+    assert.equal(d.querySelectorAll(".operations-work-panel").length,4);
+    assert.ok(d.querySelector("#ops-panel-month .operations-sample-table"));
+    assert.ok(d.querySelector("#ops-panel-brief .operations-brief-sheet"));
+    assert.equal(d.querySelectorAll("#ops-panel-review .operations-review-grid article").length,4);
   });
   await route("/home");
   const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
