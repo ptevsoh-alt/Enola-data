@@ -866,42 +866,78 @@
   }
 
   function operations() {
-    return section("社媒团队｜季度规划与月度内容管理", "社媒内容规划、创意审核与效果复盘", `
-      <section class="operations-control" id="operations-control" aria-labelledby="operations-control-heading">
-        <header><span>SOCIAL CONTENT MANAGEMENT</span><h3 id="operations-control-heading">季度主题、月度排期和内容质量管理</h3><p>负责 Facebook、Instagram 和 Group 的季度内容方向、月度发布安排，组织创意审核与数据复盘。</p></header>
-        <div class="operations-role-board" aria-label="社媒团队内容管理工作">
-          <article class="is-my-role"><span>01 / PLAN</span><h4>季度内容方向</h4><p>结合节庆、产品重点与平台受众确定主题和内容优先级。</p><b>QUARTERLY THEMES</b></article>
-          <article><span>02 / CALENDAR</span><h4>月度内容日历</h4><p>按平台安排产品演示、教程、互动和活动内容，跟进发布节点。</p><b>MONTHLY PLAN</b></article>
-          <article><span>03 / CREATIVE</span><h4>主题、Brief 与内容审核</h4><p>审核文案、脚本、视觉和视频中的产品表现及渠道要求。</p><b>CONTENT REVIEW</b></article>
-          <article><span>04 / LEARNING</span><h4>内容表现复盘</h4><p>结合 Meta 浏览、互动、点击和社群反馈调整下月选题。</p><b>PERFORMANCE</b></article>
+    const tabs = [
+      ["quarter","PLAN","季度主题","主题、受众与内容支柱"],
+      ["month","CALENDAR","月度内容日历","各平台的周度选题与形式"],
+      ["brief","CREATIVE","主题与制作 Brief","视频 Hook、镜头及文案要求"],
+      ["review","REVIEW","内容质量审核","产品、创意、版位与发布"]
+    ];
+    return section("社媒团队｜季度规划、内容日历与创意审核", "点击管理模块，可查看对应的策划与制作工作物", `
+      <section class="operations-control" id="operations-control">
+        <header><span>SOCIAL CONTENT MANAGEMENT</span><h3>季度主题、月度排期和内容质量管理</h3><p>负责 Facebook、Instagram 和 Group 的内容规划、创意评审与制作进度管理。</p></header>
+        <div class="operations-role-board" role="tablist" aria-label="社媒工作展示模块">
+          ${tabs.map(([id,en,title,desc],i)=>`<button class="${i===0?"is-my-role":""}" role="tab" type="button" id="ops-tab-${id}" data-ops-tab="${id}" aria-controls="ops-panel-${id}" aria-selected="${i===0}"><span>0${i+1} / ${en}</span><h4>${title}</h4><p>${desc}</p><b>点击查看内容</b></button>`).join("")}
+        </div>
+        <div class="operations-work-views">
+          <section class="operations-work-panel" id="ops-panel-quarter" data-ops-panel="quarter" role="tabpanel" aria-labelledby="ops-tab-quarter">
+            <h4>季度主题规划</h4>
+            <div class="operations-quarter-map">
+              <article><small>01 / 场景</small><strong>家庭清洁与季节性问题</strong><p>节庆、日常场景与用户关注问题</p></article>
+              <article><small>02 / 栏目</small><strong>产品演示与使用教育</strong><p>真实清洁动作、教程与 FAQ</p></article>
+              <article><small>03 / 活动</small><strong>节庆与社群参与</strong><p>Campaign KV、互动、UGC 与 Creator</p></article>
+              <article><small>04 / 复盘</small><strong>选题与形式调整</strong><p>按平台表现和用户问题调整下期安排</p></article>
+            </div>
+          </section>
+          <section class="operations-work-panel" id="ops-panel-month" data-ops-panel="month" role="tabpanel" aria-labelledby="ops-tab-month" hidden>
+            <h4>月度社媒内容日历</h4>
+            <div class="operations-table-scroll"><table class="operations-sample-table"><thead><tr><th>周次</th><th>内容主题</th><th>Facebook</th><th>Instagram</th><th>Group</th><th>素材</th></tr></thead><tbody>
+              <tr><td>W1</td><td>生活清洁场景</td><td>场景图文</td><td>Reels</td><td>话题提问</td><td>KV、Hook</td></tr>
+              <tr><td>W2</td><td>使用教程</td><td>功能轮播</td><td>操作短片</td><td>FAQ 答疑</td><td>脚本、演示</td></tr>
+              <tr><td>W3</td><td>UGC 与互动</td><td>教程内容</td><td>Before/After</td><td>投稿征集</td><td>授权、字幕</td></tr>
+              <tr><td>W4</td><td>节庆与活动</td><td>主题 KV</td><td>Story / Reel</td><td>活动规则</td><td>活动素材</td></tr>
+            </tbody></table></div>
+            <p><a href="#/case/social/fathers-day-calendar">查看父亲节内容日历 ↗</a></p>
+          </section>
+          <section class="operations-work-panel" id="ops-panel-brief" data-ops-panel="brief" role="tabpanel" aria-labelledby="ops-tab-brief" hidden>
+            <h4>社媒短视频制作 Brief｜餐后清洁主题</h4>
+            <div class="operations-brief-sheet">
+              <div><span>内容任务</span><strong>展示家庭清洁场景与真实操作方法</strong></div>
+              <div><span>开场 Hook</span><strong>地面黏污特写，先交代清洁问题</strong></div>
+              <div><span>镜头要求</span><strong>握持、接触表面、连续推进、转向与清洁结果</strong></div>
+              <div><span>文案结构</span><strong>问题 → 操作 → 使用条件 → 下一步</strong></div>
+              <div><span>渠道版本</span><strong>Feed、Reels、Story 的画幅与字幕安全区</strong></div>
+              <div><span>上线前核对</span><strong>产品事实、字幕、CTA、授权与交付版本</strong></div>
+            </div>
+            <p><a href="#/case/gtm/english-brief">查看英文制作 Brief ↗</a></p>
+          </section>
+          <section class="operations-work-panel" id="ops-panel-review" data-ops-panel="review" role="tabpanel" aria-labelledby="ops-tab-review" hidden>
+            <h4>创意与发布审核项目</h4>
+            <div class="operations-review-grid">
+              <article><small>PRODUCT</small><strong>产品事实</strong><p>外观结构、适用表面、操作条件与动作连续性</p></article>
+              <article><small>CREATIVE</small><strong>创意内容</strong><p>Hook、镜头、情绪、卖点和真实产品证明</p></article>
+              <article><small>FORMAT</small><strong>渠道规格</strong><p>画幅、字幕安全区、封面与落地页信息</p></article>
+              <article><small>RELEASE</small><strong>发布准备</strong><p>授权、链接、素材版本与发布计划</p></article>
+            </div>
+          </section>
         </div>
       </section>
-      <details class="operations-process-details"><summary>查看日常内容管理流程</summary>
-        <div class="g-project-list g-project-calendar-plan">
-          <article><h3>排期确认</h3><p>月初对照季度主题，把各平台内容和预计交付时间排进月历；重要节庆另安排预热、主推和收尾。</p></article>
-          <article><h3>素材准备</h3><p>根据产品演示重点填写 Brief，核对功能信息、拍摄动作、版位要求和素材权限。</p></article>
-          <article><h3>审核与发布</h3><p>检查标题、英文文案、字幕、产品动作和不同平台版本，再确认发布时间。</p></article>
-          <article><h3>月度复盘</h3><p>整理表现较好的内容类型和用户高频问题，调整次月主题与内容组合。</p></article>
-        </div>
-      </details>
-      <section class="operations-calendar-board" id="operations-content-calendar" aria-labelledby="operations-content-calendar-heading">
-        <header><small>M3 / MAY 2026 · CAMPAIGN CONTENT PLAN</small><h3 id="operations-content-calendar-heading">M3 五月内容排期示例</h3><p>以下是营销策划文件中的内容安排，不与任职期间已发布的月度日历混为一谈。</p></header>
+      <section class="operations-calendar-board" id="operations-content-calendar">
+        <header><small>MONTHLY SOCIAL / CONTENT PLAN</small><h3>月度内容排期</h3><p>不同账号的内容任务按周安排，并根据节庆节点、素材准备和反馈调整。</p></header>
         <div class="operations-calendar-rows" role="list">
-          <article role="listitem"><time>05 / 01</time><div><strong>餐后场景预热</strong><span>Facebook / Instagram · 场景与话题</span></div><b>场景图与互动文案</b></article>
-          <article role="listitem"><time>05 / 06</time><div><strong>场景轮播</strong><span>Facebook / Instagram · 创意表现</span></div><b>4:5 轮播与审核</b></article>
-          <article role="listitem"><time>05 / 13</time><div><strong>双盘结构说明</strong><span>Facebook / Instagram · 产品教育</span></div><b>结构图与 FAQ</b></article>
-          <article role="listitem"><time>05 / 22</time><div><strong>新品传播主视觉计划</strong><span>社媒 · 节点传播</span></div><b>主视觉与渠道适配</b></article>
+          <article role="listitem"><time>WEEK 01</time><div><strong>清洁场景与问题</strong><span>Facebook 图文 · Instagram 视频</span></div><b>场景 KV · Hook</b></article>
+          <article role="listitem"><time>WEEK 02</time><div><strong>产品使用教育</strong><span>Facebook 轮播 · Instagram Reels</span></div><b>操作脚本 · FAQ</b></article>
+          <article role="listitem"><time>WEEK 03</time><div><strong>社群内容与 UGC</strong><span>Group 讨论 · 清洁教程</span></div><b>参与规则 · 视觉审核</b></article>
+          <article role="listitem"><time>WEEK 04</time><div><strong>节庆活动与复盘</strong><span>品牌主题 · 互动回顾</span></div><b>Campaign KV · 内容报告</b></article>
         </div>
       </section>
       <div class="g-story-note" id="asset-review">
         <h3>内容审核与发布管理</h3>
-        <p>组织月度日历和内容 Brief，核对脚本、画面、英文文案与产品信息。设计、视频完成修改后按社媒版位检查最终素材，并跟进发布和平台表现。</p>
-        <p><a class="featured-detail" href="#/case/gtm/english-brief">查看 M3 英文内容 Brief ↗</a></p>
+        <p>把脚本与视觉逐项对照产品事实、画面动作、英文文案和平台规格。设计、视频完成修订后核对成片与发布版本，并根据内容表现调整下一期 Brief。</p>
+        <p><a href="#/case/gtm/english-brief">英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">视频案例 ↗</a></p>
       </div>
-      <div class="g-story-note">
-        <h3>父亲节 Campaign｜双语内容日历</h3>
-        <p>围绕 Q3 Pro 浴室场景与 M3 餐区场景安排 Facebook、Instagram 和 Group 选题，包含内容类型、开场、英文文案与素材审核重点。</p>
-        <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语内容日历 ↗</a>
+      <div class="g-story-note"><h3>父亲节 Campaign｜内容日历</h3>
+        <p>围绕家人关怀、清洁场景和产品使用教育安排 Facebook、Instagram 与 Group 的内容主题和英文文案。</p>
+        <p><a href="#/case/social/fathers-day-calendar">查看父亲节内容日历 ↗</a></p>
       </div>
     `, "team-delivery");
   }
@@ -1075,7 +1111,20 @@
         field("approval", button.dataset.gateApproval || "");
       });
     }
-    if (id === "b2b") {
+    if (id === "operations") {
+      const tabs=[...main.querySelectorAll("[data-ops-tab]")];
+      const panels=[...main.querySelectorAll("[data-ops-panel]")];
+      for (const tab of tabs) tab.addEventListener("click", () => {
+        const selected=tab.dataset.opsTab;
+        for (const item of tabs) {
+          const active=item===tab;
+          item.classList.toggle("is-my-role",active);
+          item.setAttribute("aria-selected",String(active));
+        }
+        for (const panel of panels) panel.hidden=panel.dataset.opsPanel!==selected;
+      });
+    }
+        if (id === "b2b") {
       const steps = [...main.querySelectorAll("#expo-distance-route [data-expo-select]")];
       const output = main.querySelector("#expo-selected-detail");
       if (output) {
