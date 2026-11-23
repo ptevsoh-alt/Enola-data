@@ -284,6 +284,10 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#expo-event-plan .expo-flight-card").length, 3);
     assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 9);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
+    assert.ok(d.querySelector("#expo-real-work").textContent.includes("真实经历"));
+    assert.ok(d.querySelector("#expo-method-framework").textContent.includes("理论方法"));
+    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不是单场展会"));
+    for (const token of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!d.querySelector("#expo-project").textContent.includes(token), "Exhibition branding leakage: "+token);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
     assert.equal(d.querySelectorAll("#expo-experience-menu .expo-experience-card").length, 4);
     assert.ok(d.querySelector("#expo-experience-menu").textContent.includes("Brochure") === false);
