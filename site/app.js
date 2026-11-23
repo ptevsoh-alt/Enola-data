@@ -355,7 +355,6 @@
         <div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div>
       </div>
     </section>
-    ${editorial()}
     ${campaignWall()}
     ${communitySummary()}
     ${socialDecisionBridge()}
