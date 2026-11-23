@@ -252,7 +252,7 @@
         <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
       <section class="gtm-market-map" id="gtm-value-to-launch" aria-labelledby="gtm-market-title">
-        <header><small>PRODUCT MARKETING → GO-TO-MARKET</small><h3 id="gtm-market-title">把产品价值变成市场能够理解、渠道能够交付的上市方案</h3><p>在 M3 项目中，传播策划从具体清洁任务出发，再确定证明方式、素材组合和各渠道的上线准备。</p></header>
+        <header><small>PRODUCT MARKETING → GO-TO-MARKET</small><h3 id="gtm-market-title">M3 产品信息与上市传播方案</h3><p>在 M3 项目中，传播策划从具体清洁任务出发，再确定证明方式、素材组合和各渠道的上线准备。</p></header>
         <div class="gtm-market-steps">
           <article><span>01 / MARKET</span><h4>消费者从哪里开始理解产品</h4><p>以美国家庭餐后硬地场景为沟通起点，围绕地面污渍、站姿操作与清洁效率相关疑问规划信息。</p><b>我的参与</b><small>场景研究、评论/VOC 线索与竞品内容梳理</small></article>
           <article><span>02 / PRODUCT VALUE</span><h4>一个卖点，需要不同层次的证明</h4><p>双盘外观先解决“这是什么”，真实连续动作回答“怎么用”，适用地面与维护问题由官方说明确认。</p><b>我的参与</b><small>卖点可视化、脚本、产品图与 FAQ Brief</small></article>
@@ -304,7 +304,7 @@
           <div class="campaign-house-base"><span>MEASUREMENT & GOVERNANCE</span><p>内容表现 → 有效访问 → 商业承接 → 复盘迭代</p><small>Social / Paid / PR / CRM / Commerce · 渠道协作规划</small></div>
         </div>
         <section class="campaign-operations-map" id="campaign-activation" aria-label="Campaign 从策划到各渠道激活的工作分工">
-          <header><small>INTEGRATED ACTIVATION</small><h4>一条主线，八种传播任务</h4><p>统一产品信息、Campaign 主张与素材版本；不同渠道沿着认知、理解、行动和关系维护的路径协作。</p></header>
+          <header><small>INTEGRATED ACTIVATION</small><h4>Campaign 渠道分工</h4><p>统一产品信息、Campaign 主张与素材版本；不同渠道沿着认知、理解、行动和关系维护的路径协作。</p></header>
           <div class="v-activation-journey" id="campaign-channel-path" aria-label="Campaign渠道在四个用户决策阶段中的任务">
             <div><small>01 / AWARENESS</small><strong>让问题被看见</strong><p>Social · Paid · PR</p><span>家庭场景 / Campaign 主题</span></div>
             <div><small>02 / EXPLAIN</small><strong>帮助理解产品</strong><p>Video · Creator · SEO</p><span>双盘动作 / 结构 / FAQ</span></div>
@@ -400,7 +400,7 @@
   <footer><span>CAMPAIGN DECISION → CHANNEL BRIEF → ASSET VERSION → REVIEW</span><a href="#/case/gtm/gtm-visual-schedule">对应上市排期 ↗</a></footer>
 </section>
       <section class="g-module g-project v-localization" id="market-adaptation"      <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
-        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">同一个传播主张，两种当地语言表达</h2><p>统一产品主张；分别调整美国和英国市场的语言、场景与行动号召。</p></header>
+        <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">美英市场传播内容适配</h2><p>统一产品主张；分别调整美国和英国市场的语言、场景与行动号召。</p></header>
         <div class="v-localization-common"><small>ONE PRODUCT · ONE CORE IDEA</small><h3 lang="en">From grip to floor.</h3><p lang="en">Dinner’s done. Floor’s next.</p><span>共享产品原图、场景主题与视觉识别</span></div>
         <div class="v-localization-compare" aria-label="美国和英国市场本地化英文文案并排对照">
           <article lang="en-US" class="v-locale-panel is-us">
@@ -432,30 +432,22 @@
       </section>
 
       <section class="v-creative-directions" id="campaign-mechanism-mapping" aria-labelledby="v-creative-heading">
-        <header><div><span class="v-section-kicker">CREATIVE TERRITORIES</span><h2 id="v-creative-heading">同一个 Big Idea，五种不同的画面切入</h2></div><p>场景、产品机制、情绪、结构细节与真实体验，共同构成五种创意方向。</p></header>
-        <div class="v-creative-gallery" aria-label="五种创意机制与视觉方向">
+        <header><div><span class="v-section-kicker">M3 / CAMPAIGN CREATIVE</span><h2 id="v-creative-heading">M3 Campaign｜三条创意主线</h2></div><p>餐后清洁场景、双盘操作演示、家庭生活情绪。每条路线对应具体素材和渠道任务。</p></header>
+        <div class="v-creative-gallery" aria-label="三条 Campaign 核心创意路线">
           <article class="v-creative-card">
-            <div class="v-creative-art is-scene"><span>01 / PAIN POINT</span><b>AFTER<br>DINNER</b><small>生活任务先出现</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 问题显化</span><h3>The After-Dinner Reset</h3><p>以餐后地面问题引入使用任务，让产品操作自然发生。</p><span><b>画面任务</b> 真实场景与连续操作</span></div>
+            <div class="v-creative-art is-scene"><span>01 / SCENARIO</span><b>AFTER<br>DINNER</b><small>餐后地面场景</small></div>
+            <div class="v-creative-text"><span class="v-creative-method">The After-Dinner Reset</span><h3>餐后地面清洁</h3><p>以餐区的具体清洁问题开场，接入 M3 的使用动作。</p><span><b>素材</b> 场景 KV、短视频、Story 互动</span></div>
           </article>
           <article class="v-creative-card">
-            <div class="v-creative-art is-motion"><img class="v-creative-product-source" src="assets/projects/m3-yellow-main.webp" alt="" loading="lazy" decoding="async"><span>02 / MECHANISM</span><b>SEE THE<br>MOTION</b><small>双盘动作被看见</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 机制揭示</span><h3>See the Motion</h3><p>通过运转、接地与移动路径解释清洁工具如何工作。</p><span><b>画面任务</b> 真实运行和结构细节</span></div>
+            <div class="v-creative-art is-motion"><img class="v-creative-product-source" src="assets/projects/m3-yellow-main.webp" alt="M3 双盘电动拖把产品原图" loading="lazy" decoding="async"><span>02 / DEMO</span><b>SEE THE<br>MOTION</b><small>结构与操作</small></div>
+            <div class="v-creative-text"><span class="v-creative-method">See the Motion</span><h3>看清双盘如何工作</h3><p>用产品特写和连续操作镜头交代双盘接地、移动路径。</p><span><b>素材</b> 结构图、演示镜头 Brief、FAQ</span></div>
           </article>
           <article class="v-creative-card">
-            <div class="v-creative-art is-relationship"><span>03 / EMOTION</span><b>WHAT<br>MATTERS</b><small>清洁与家庭生活相连</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 关系价值转移</span><h3>Make Room for What Matters</h3><p>将日常清洁动作放进人物关系中，用情绪承接品牌价值。</p><span><b>画面任务</b> 人物、生活与产品</span></div>
-          </article>
-          <article class="v-creative-card">
-            <div class="v-creative-art is-detail"><img class="v-creative-product-source" src="assets/projects/m3-yellow-battery.webp" alt="" loading="lazy" decoding="async"><span>04 / PRODUCT DETAIL</span><b>A CLOSER<br>LOOK</b><small>让结构一目了然</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 细节证明</span><h3>A Closer Look at M3</h3><p>以双盘底座、手柄和电池位置降低产品理解成本。</p><span><b>画面任务</b> 官方结构图与已核准信息</span></div>
-          </article>
-          <article class="v-creative-card">
-            <div class="v-creative-art is-home"><span>05 / REAL EXPERIENCE</span><b>REAL<br>HOME</b><small>回到实际使用环境</small><i aria-hidden="true"></i></div>
-            <div class="v-creative-text"><span class="v-creative-method">创意机制 / 真实体验证明</span><h3>Real Home, Real Reset</h3><p>通过 Creator 的家居体验视角交代使用方式和场景。</p><span><b>画面任务</b> 使用过程与授权素材</span></div>
+            <div class="v-creative-art is-relationship"><span>03 / BRAND STORY</span><b>WHAT<br>MATTERS</b><small>家庭生活</small></div>
+            <div class="v-creative-text"><span class="v-creative-method">Make Room for What Matters</span><h3>把时间留给生活</h3><p>以清洁任务和家庭相处构建品牌情绪，产品动作仍是故事的一部分。</p><span><b>素材</b> 品牌片脚本、生活场景、节庆内容</span></div>
           </article>
         </div>
-        <p class="v-creative-foot">创意交付：KV、短视频镜头、Creator Brief 与产品结构审核。</p>
+        <aside class="v-creative-aux"><small>SUPPORTING CONTENT / 品牌组合教育</small><h3>One Home, Different Cleaning Jobs</h3><p>围绕五款产品、四条产品线说明不同清洁任务，作为持续内容补充。</p></aside>
       </section>
 
 
@@ -530,26 +522,25 @@
   }
 
   function seasonalCreative() {
-    return section("节庆营销视觉｜从使用场景到活动主张", "父亲节礼赠与黑五产品组合：不同营销任务采用不同的视觉信息结构。", `
+    return section("品牌传播视觉｜品牌屋与合作活动", "品牌定位、传播视觉和跨渠道活动物料。", `
       <div class="seasonal-art-grid" id="seasonal-art-gallery">
         <figure class="seasonal-art-card">
-          <a href="assets/projects/fathers-day-bbq-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大父亲节烧烤清洁主题视觉创意">
-            ${image("fathers-day-bbq-concept", "父亲节主题概念海报：户外烧烤清洁场景、家庭陪伴、黄色清洁刷与英文标题", "jpg")}
+          <a href="assets/projects/brand-house.webp" target="_blank" rel="noopener noreferrer" aria-label="放大匿名品牌屋">
+            ${image("brand-house", "匿名品牌屋与四条产品线传播信息架构")}
           </a>
-          <figcaption><small>FATHER'S DAY / GIFT GUIDE · 创意提案</small><h3>Give Dad the Power. He'll Bring the Flavor.</h3><p>用烧烤场景连接家庭情绪与电动清洁工具。父亲节礼赠的创意重点是人物、动作、产品用途与活动入口在同一个画面中被理解。</p></figcaption>
+          <figcaption><small>BRAND STRATEGY / MESSAGE HOUSE</small><h3>品牌屋与产品线定位</h3><p>以家庭清洁任务划分产品信息层次，统一品牌主张与各产品线的传播重点。</p></figcaption>
         </figure>
         <figure class="seasonal-art-card">
-          <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大黑五产品组合传播视觉创意">
-            ${image("black-friday-suite-concept", "黑五主题概念海报：黑金活动视觉、黄色清洁电器组合、Power Every Move 品牌主张", "jpg")}
+          <a href="assets/projects/joint-giveaway.webp" target="_blank" rel="noopener noreferrer" aria-label="放大品牌联合活动视觉">
+            ${image("joint-giveaway", "联合活动主视觉，包含合作产品与活动信息")}
           </a>
-          <figcaption><small>BLACK FRIDAY / PRODUCT SUITE · 创意提案</small><h3>Power Every Move</h3><p>用统一背景、产品组合陈列和高对比标题强化大促识别。产品线共同传递全屋清洁的品牌主张，活动利益点与购买入口形成明确层级。</p></figcaption>
+          <figcaption><small>CO-MARKETING / CAMPAIGN VISUAL</small><h3>品牌联合活动主视觉</h3><p>围绕共同家居场景组织两类产品、活动日期和参与信息，供双方渠道使用。</p></figcaption>
         </figure>
       </div>
-      <div class="seasonal-art-decision" aria-label="两种节庆内容的信息层次">
-        <div><span>父亲节 / Gift Moment</span><b>人物关系 → 使用场景 → 产品价值</b></div>
-        <div><span>黑五 / Shopping Moment</span><b>活动主题 → 产品组合 → 选购入口</b></div>
+      <div class="seasonal-art-decision" aria-label="品牌定位与合作活动视觉">
+        <div><span>品牌策略</span><b>目标场景 → 产品信息 → 品牌表达</b></div>
+        <div><span>联合活动</span><b>共用场景 → 活动主题 → 渠道素材</b></div>
       </div>
-      <p class="seasonal-art-caption">视觉创意提案 · 父亲节与黑五不同传播任务的画面演示。</p>
     `, "seasonal-creative-gallery");
   }
 
@@ -884,7 +875,7 @@
   }
 
   function operations() {
-    return section("一次活动如何排期和验收", "社媒小组的项目分工与审核清单", `
+    return section("社媒团队｜内容规划与素材审核", "社媒小组的项目分工与审核清单", `
       <section class="operations-control" id="operations-control" aria-labelledby="operations-control-heading">
  <header><span>TEAM OWNERSHIP / DELIVERY SYSTEM</span><h3 id="operations-control-heading">从季度主题到发布验收，明确每一个交接</h3><p>社媒小组直接管理与审核，横向对齐产品、视觉、视频和渠道负责人。</p></header>
  <div class="operations-role-board" aria-label="跨职能工作流与责任">
