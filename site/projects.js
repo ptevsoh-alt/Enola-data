@@ -879,9 +879,14 @@
         <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
       </div>
       <div class="g-story-note">
-        <h3>选题决定入口，内容决定下一步</h3>
-        <p>节庆社媒先让读者识别「派对结束后的黏脚印」。搜索端用总指南承接这个问题，再按地面、浴室与厨房分流。已经在比较工具的读者可从专题进入选型或 FAQ。规划复盘时，先看每个入口的搜索点击，再看访问后是否继续阅读相关内容。</p>
+        <h3>节庆搜索内容如何承接社媒话题</h3>
+        <p>以万圣节后清洁为入口规划一篇主题指南，按地面、浴室、厨房和工具选择拆分九篇专题。FAQ 解决操作问题，比较型内容解释不同工具的适用场景。该组合是内容规划，不代表十篇文章已经发布或获得排名。</p>
         <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
+      </div>
+      <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
+        <article><small>SEARCH INTENT</small><h3>关键词与页面匹配</h3><p>将 Informational、How-to 和 Commercial Investigation 查询分别映射到主题指南、专题文章与产品解释；保留查询来源，避免不同意图共用同一页面。</p></article>
+        <article><small>GSC / DISCOVERY</small><h3>检查搜索曝光与点击</h3><p>按 Query 和 Page 对照曝光、点击、CTR 与平均排名。优先处理有展示但摘要表达不匹配的页面，不能把 GSC Click 写成站内会话。</p></article>
+        <article><small>GA4 / CONTENT QUALITY</small><h3>评估内容阅读与后续行为</h3><p>查看 Landing Page 的来源、参与和进一步访问；确认事件口径后再判断内容是否为 FAQ、产品比较和选购路径带来有效访问。</p></article>
       </div>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
@@ -924,7 +929,7 @@
         <p><a class="featured-detail" href="#/case/gtm/english-brief">查看 M3 英文内容 Brief ↗</a></p>
       </div>
       <div class="g-story-note" id="cross-functional-governance">
-        <h3>横向推进的三件事：催节点、收反馈、对齐口径</h3>
+        <h3>社媒项目的协作分工</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
           <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>通过 Brief 指出产品信息、画面内容和渠道规格中的具体问题，设计与视频同事负责修改，内容组复核并更新交付版本。</p></article>
