@@ -142,43 +142,43 @@
 
   function launchDelivery() {
     const milestones = [
-      ["4/28 · 立项", "GTM／IMC", "立项说明、市场与型号、主目标、待确认事项", "确认谁对整体上市决策负责。"],
-      ["5/1–10 · 定位与 Brief", "产品／产品营销、IMC", "产品事实、主推场景、卖点与拍摄 Brief", "产品签核可公开的事实，社媒组据此拆解内容。"],
-      ["5/15–21 · 物料与商业预检", "IMC 协调；设计、视频、供应链及电商分工", "KV、轮播、真实演示、FAQ、素材权限与链接", "逐项检查素材；库存、配送、支付与客服就绪后才开放购买。"],
-      ["5/22–25 · 计划发布与首销", "IMC／渠道；商业团队核可售条件", "计划发布 KV、演示及 FAQ；跟进创作者、PR 或许可邮件的放行", "按素材与渠道准备情况放行。缺演示则引导了解产品。"],
-      ["5/26–31 · 复盘与交接", "IMC／渠道、数据及客服", "观看、商品页访问、净履约订单；常见问题与素材权利归档", "用同一窗口检查表现，分派需要修正的物料和承接问题。"],
+      ["5/1–3 · 内容方向", "社媒内容组；产品提供事实支持", "目标场景、内容主题、传播重点与视觉需求", "明确本轮内容计划与产品资料的交接人。"],
+      ["5/4–10 · 视觉与视频 Brief", "社媒内容组、设计与视频", "创意方向、镜头清单、KV 版式及平台规格", "内容组审 Brief，产品团队复核结构与适用条件。"],
+      ["5/15–21 · 素材审核", "社媒内容组、设计、视频与产品", "KV、轮播、演示镜头、FAQ 与各渠道版本", "复核画面、文案、产品结构、平台安全区和素材使用条件。"],
+      ["5/22–25 · 传播发布计划", "社媒内容组与各渠道负责人", "社媒内容、视频及 PR / Creator / EDM 素材交接", "各渠道自行确认发布条件，社媒组完成内容和链接复核。"],
+      ["5/26–31 · 内容复盘", "社媒内容组、渠道与数据负责人", "内容表现、用户反馈、素材问题和下期选题", "按平台原有口径调整内容，商业销售结果由业务部门确认。"],
     ];
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
         <h3>五月上市协作｜内容、渠道与交付节奏</h3>
         <p>围绕首发窗口，把产品核验、创意制作、广告准备、邮件触达、页面承接与数据复盘放进同一张营销排期图。我的主要交付是社媒内容计划、素材 Brief 和跨团队协调。</p>
         <section class="v-release-gantt" id="gtm-visual-schedule" aria-labelledby="v-release-heading">
-          <header class="v-release-heading"><div><span>LAUNCH CONTROL / MAY 2026</span><h4 id="v-release-heading">一张排期图，看懂并行任务与放行节点</h4></div><p>从 4 月立项到 5 月收尾，展示内容与渠道协同的计划节奏。各泳道对应不同职能，里程碑可在下方展开查看。</p></header>
+          <header class="v-release-heading"><div><span>MARKETING DELIVERY / MAY 2026</span><h4 id="v-release-heading">2026 年 5 月｜M3 上市传播排期</h4></div><p>按周安排内容策划、KV 与视频制作、渠道素材准备和发布审核。可筛选社媒主责、渠道协同与业务支持。</p></header>
           <div class="v-gantt-legend" aria-label="排期图说明"><span><i class="v-legend-plan"></i>策略 / Brief</span><span><i class="v-legend-produce"></i>制作 / 准备</span><span><i class="v-legend-launch"></i>渠道放行</span><span><i class="v-legend-learn"></i>运营 / 复盘</span></div>
-          <div class="v-gantt-filters" role="group" aria-label="按责任范围筛选上市工作流">
+          <div class="v-gantt-filters" role="group" aria-label="按协作职责筛选传播工作流">
             <button type="button" data-gtm-focus="all" aria-controls="v-gantt-rows" aria-pressed="true">全部工作流 <b>6</b></button>
             <button type="button" data-gtm-focus="lead" aria-controls="v-gantt-rows" aria-pressed="false">内容主责 <b>1</b></button>
             <button type="button" data-gtm-focus="partner" aria-controls="v-gantt-rows" aria-pressed="false">渠道协同 <b>3</b></button>
             <button type="button" data-gtm-focus="support" aria-controls="v-gantt-rows" aria-pressed="false">商业与验收 <b>2</b></button>
           </div>
-          <p class="v-gantt-view-caption" aria-live="polite">正在展示 6 条工作流 · 日期对应 2026 年 4–5 月的上市规划</p>
+          <p class="v-gantt-view-caption" aria-live="polite">正在展示 6 条工作流 · 2026 年 5 月营销传播计划</p>
           <p class="v-gantt-mobile-hint" aria-hidden="true">左右滑动排期图，可查看全部阶段 →</p>
           <div class="v-gantt-scroll" tabindex="0" role="region" aria-label="五月上市多渠道可横向浏览排期图">
             <div class="v-gantt-grid" id="v-gantt-rows" role="table" aria-label="M3 五月上市传播工作流、阶段日期和主要交付">
-              <div class="v-gantt-axis" role="row"><b role="columnheader">执行工作流</b><span role="columnheader">04 / 28<small>立项</small></span><span role="columnheader">05 / 01–10<small>定位与 Brief</small></span><span role="columnheader">05 / 15–21<small>制作与预检</small></span><span role="columnheader">05 / 22–25<small>计划首发</small></span><span role="columnheader">05 / 26–31<small>交接与复盘</small></span></div>
-              <div class="v-gantt-lane" data-gtm-group="lead" role="row"><b role="rowheader">内容 / Social<small>我的主要协调工作</small></b><span class="is-plan" role="cell">传播任务</span><span class="is-plan" role="cell">场景、KSP、Brief</span><span class="is-produce" role="cell">KV / 视频 / FAQ</span><span class="is-launch" role="cell">社媒发布规划</span><span class="is-learn" role="cell">选题与内容优化</span></div>
+              <div class="v-gantt-axis" role="row"><b role="columnheader">执行工作流</b><span role="columnheader">05 / 01–03<small>内容方向</small></span><span role="columnheader">05 / 04–10<small>视觉与视频 Brief</small></span><span role="columnheader">05 / 15–21<small>制作与预检</small></span><span role="columnheader">05 / 22–25<small>计划首发</small></span><span role="columnheader">05 / 26–31<small>交接与复盘</small></span></div>
+              <div class="v-gantt-lane" data-gtm-group="lead" role="row"><b role="rowheader">内容 / Social<small>我的主责</small></b><span class="is-plan" role="cell">主题与场景</span><span class="is-plan" role="cell">场景、KSP、Brief</span><span class="is-produce" role="cell">KV / 视频 / FAQ</span><span class="is-launch" role="cell">社媒发布规划</span><span class="is-learn" role="cell">选题与内容优化</span></div>
               <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">Paid Media<small>广告负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">目标 / 受众假设</span><span class="is-produce" role="cell">Hook 变体 / 追踪</span><span class="is-launch" role="cell">投放前审批</span><span class="is-learn" role="cell">创意测试反馈</span></div>
               <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">EDM / CRM<small>邮件与用户运营</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">许可 / 用户分层</span><span class="is-produce" role="cell">主题 / 模板 / 排除</span><span class="is-launch" role="cell">邮件发送放行</span><span class="is-learn" role="cell">购后教育</span></div>
               <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">PR / Creator<small>品牌及合作负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">传播角度 / 筛选</span><span class="is-produce" role="cell">合作 Brief / 授权</span><span class="is-launch" role="cell">合作内容审核</span><span class="is-learn" role="cell">素材归档</span></div>
-              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">商品与渠道<small>产品、电商、商业</small></b><span class="is-plan" role="cell">目标与型号</span><span class="is-plan" role="cell">SKU / 价值主张</span><span class="is-produce" role="cell">页面 / FAQ / 库存</span><span class="is-launch" role="cell">可售条件确认</span><span class="is-learn" role="cell">履约与用户反馈</span></div>
-              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">目标及 Owner</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
+              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">商品与渠道<small>产品、电商、商业</small></b><span class="is-plan" role="cell">产品信息支持</span><span class="is-plan" role="cell">SKU / 价值主张</span><span class="is-produce" role="cell">页面 / FAQ / 库存</span><span class="is-launch" role="cell">可售条件确认</span><span class="is-learn" role="cell">履约与用户反馈</span></div>
+              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">指标需求</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
             </div>
           </div>
-          <div class="v-gantt-gates" role="group" aria-label="点击五个上市节点，查看计划中的负责人、交付与放行判断">
+          <div class="v-gantt-gates" role="group" aria-label="五个传播交付节点：负责人、素材与审核任务">
             ${milestones.map(([date, owner, input, approval], i) => `<button type="button" data-gtm-gate="${i}" data-gate-owner="${esc(owner)}" data-gate-input="${esc(input)}" data-gate-approval="${esc(approval)}" aria-pressed="${i === 0 ? "true" : "false"}" aria-controls="v-gate-detail"><strong>G${i}</strong><span>${esc(date)}</span></button>`).join("")}
           </div>
-          <div class="v-gate-detail" id="v-gate-detail" role="group" aria-label="上市计划节点的责任与验收详情">
-            <div class="v-gate-detail-title"><small data-gate-slot="number">G0 / PLANNING GATE</small><strong data-gate-slot="title">${esc(milestones[0][0])}</strong><span>计划检查点 · 非执行进度</span></div>
+          <div class="v-gate-detail" id="v-gate-detail" role="group" aria-label="传播排期节点的协作与验收详情">
+            <div class="v-gate-detail-title"><small data-gate-slot="number">G0 / PLANNING GATE</small><strong data-gate-slot="title">${esc(milestones[0][0])}</strong><span>传播计划节点</span></div>
             <dl class="v-gate-detail-fields">
               <div><dt>决策与协作负责人</dt><dd data-gate-slot="owner">${esc(milestones[0][1])}</dd></div>
               <div><dt>本阶段交付物</dt><dd data-gate-slot="input">${esc(milestones[0][2])}</dd></div>
