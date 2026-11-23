@@ -915,7 +915,7 @@
       </div>
       </details>
       <section class="operations-qa-showcase" id="operations-kv-review" aria-labelledby="operations-kv-review-heading">
-        <header><small>CAMPAIGN ASSET REVIEW / M3</small><h3 id="operations-kv-review-heading">主视觉审核：R2 到 R4 的三次调整</h3><p>查看一次主视觉审核中，产品结构、版式和渠道裁切分别出了什么问题。</p></header>
+        <header><small>CAMPAIGN ASSET REVIEW / M3</small><h3 id="operations-kv-review-heading">主视觉审核：R2 到 R4 的三次调整</h3><p>最初的 CTA 挡住了双盘，后续改用官方右视图，再分别校对横竖版。</p></header>
         <div class="operations-qa-track" role="list">
           <article role="listitem" class="needs-rework"><small>R2 / FIRST DRAFT</small><h4>双盘被 CTA 遮挡</h4><p>4:5 主图的底部按钮压住了双盘；9:16 版本没充分展示辅助握把。</p><span>退回调整版式</span></article>
           <article role="listitem" class="structure-checked"><small>R3 / PRODUCT STRUCTURE</small><h4>改用官方右视图</h4><p>黄色 D 型手柄、黑色辅助握把和双盘全部进入画面；竖版继续调整安全区。</p><span>外观复核</span></article>
