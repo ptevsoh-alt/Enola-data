@@ -98,7 +98,8 @@
 
   function launchFourStage() {
     return `
-      <div class="g-story-note" id="launch-four-stages">
+      <details class="g-story-note v-supporting-evidence" id="launch-four-stages">
+        <summary>四阶段传播逻辑 · 查看预热、首发与复盘</summary>
         <h3>从预热到复盘｜新品上市传播节奏</h3>
         <p>从生活场景建立关注，再通过产品演示、上市内容及用户反馈，形成连续的营销节奏。</p>
         <ol class="v-stage-track" aria-label="新品上市传播的四段决策路径">
@@ -107,7 +108,7 @@
           <li><span class="v-stage-number">03</span><small>SCALE · 持续</small><h4>按反馈调整表达</h4><p>先排查观看、有效访问及用户理解断点</p><b>阶段交付 · 素材与内容优化</b></li>
           <li><span class="v-stage-number">04</span><small>CLOSEOUT · 收束</small><h4>整理下一轮判断</h4><p>统一过期信息、用户反馈与可复用内容</p><b>阶段交付 · 复盘与团队交接</b></li>
         </ol>
-      </div>
+      </details>
       <div class="g-story-note" id="launch-cross-channel">
         <h3>多渠道协同｜让每个触点承担不同任务</h3>
         <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
@@ -154,15 +155,23 @@
         <section class="v-release-gantt" id="gtm-visual-schedule" aria-labelledby="v-release-heading">
           <header class="v-release-heading"><div><span>LAUNCH CONTROL / MAY 2026</span><h4 id="v-release-heading">一张排期图，看懂并行任务与放行节点</h4></div><p>从 4 月立项到 5 月收尾，展示内容与渠道协同的计划节奏。各泳道对应不同职能，里程碑可在下方展开查看。</p></header>
           <div class="v-gantt-legend" aria-label="排期图说明"><span><i class="v-legend-plan"></i>策略 / Brief</span><span><i class="v-legend-produce"></i>制作 / 准备</span><span><i class="v-legend-launch"></i>渠道放行</span><span><i class="v-legend-learn"></i>运营 / 复盘</span></div>
+          <div class="v-gantt-filters" role="group" aria-label="按责任范围筛选上市工作流">
+            <button type="button" data-gtm-focus="all" aria-controls="v-gantt-rows" aria-pressed="true">全部工作流 <b>6</b></button>
+            <button type="button" data-gtm-focus="lead" aria-controls="v-gantt-rows" aria-pressed="false">内容主责 <b>1</b></button>
+            <button type="button" data-gtm-focus="partner" aria-controls="v-gantt-rows" aria-pressed="false">渠道协同 <b>3</b></button>
+            <button type="button" data-gtm-focus="support" aria-controls="v-gantt-rows" aria-pressed="false">商业与验收 <b>2</b></button>
+          </div>
+          <p class="v-gantt-view-caption" aria-live="polite">正在展示 6 条工作流 · 日期对应 2026 年 4–5 月的上市规划</p>
+          <p class="v-gantt-mobile-hint" aria-hidden="true">左右滑动排期图，可查看全部阶段 →</p>
           <div class="v-gantt-scroll" tabindex="0" role="region" aria-label="五月上市多渠道可横向浏览排期图">
-            <div class="v-gantt-grid" role="table" aria-label="M3 五月上市传播工作流、阶段日期和主要交付">
+            <div class="v-gantt-grid" id="v-gantt-rows" role="table" aria-label="M3 五月上市传播工作流、阶段日期和主要交付">
               <div class="v-gantt-axis" role="row"><b role="columnheader">执行工作流</b><span role="columnheader">04 / 28<small>立项</small></span><span role="columnheader">05 / 01–10<small>定位与 Brief</small></span><span role="columnheader">05 / 15–21<small>制作与预检</small></span><span role="columnheader">05 / 22–25<small>计划首发</small></span><span role="columnheader">05 / 26–31<small>交接与复盘</small></span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">内容 / Social<small>我的主要协调工作</small></b><span class="is-plan" role="cell">传播任务</span><span class="is-plan" role="cell">场景、KSP、Brief</span><span class="is-produce" role="cell">KV / 视频 / FAQ</span><span class="is-launch" role="cell">社媒发布规划</span><span class="is-learn" role="cell">选题与内容优化</span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">Paid Media<small>广告负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">目标 / 受众假设</span><span class="is-produce" role="cell">Hook 变体 / 追踪</span><span class="is-launch" role="cell">投放前审批</span><span class="is-learn" role="cell">创意测试反馈</span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">EDM / CRM<small>邮件与用户运营</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">许可 / 用户分层</span><span class="is-produce" role="cell">主题 / 模板 / 排除</span><span class="is-launch" role="cell">邮件发送放行</span><span class="is-learn" role="cell">购后教育</span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">PR / Creator<small>品牌及合作负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">传播角度 / 筛选</span><span class="is-produce" role="cell">合作 Brief / 授权</span><span class="is-launch" role="cell">合作内容审核</span><span class="is-learn" role="cell">素材归档</span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">商品与渠道<small>产品、电商、商业</small></b><span class="is-plan" role="cell">目标与型号</span><span class="is-plan" role="cell">SKU / 价值主张</span><span class="is-produce" role="cell">页面 / FAQ / 库存</span><span class="is-launch" role="cell">可售条件确认</span><span class="is-learn" role="cell">履约与用户反馈</span></div>
-              <div class="v-gantt-lane" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">目标及 Owner</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
+              <div class="v-gantt-lane" data-gtm-group="lead" role="row"><b role="rowheader">内容 / Social<small>我的主要协调工作</small></b><span class="is-plan" role="cell">传播任务</span><span class="is-plan" role="cell">场景、KSP、Brief</span><span class="is-produce" role="cell">KV / 视频 / FAQ</span><span class="is-launch" role="cell">社媒发布规划</span><span class="is-learn" role="cell">选题与内容优化</span></div>
+              <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">Paid Media<small>广告负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">目标 / 受众假设</span><span class="is-produce" role="cell">Hook 变体 / 追踪</span><span class="is-launch" role="cell">投放前审批</span><span class="is-learn" role="cell">创意测试反馈</span></div>
+              <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">EDM / CRM<small>邮件与用户运营</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">许可 / 用户分层</span><span class="is-produce" role="cell">主题 / 模板 / 排除</span><span class="is-launch" role="cell">邮件发送放行</span><span class="is-learn" role="cell">购后教育</span></div>
+              <div class="v-gantt-lane" data-gtm-group="partner" role="row"><b role="rowheader">PR / Creator<small>品牌及合作负责人</small></b><span class="is-empty" role="cell">—</span><span class="is-plan" role="cell">传播角度 / 筛选</span><span class="is-produce" role="cell">合作 Brief / 授权</span><span class="is-launch" role="cell">合作内容审核</span><span class="is-learn" role="cell">素材归档</span></div>
+              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">商品与渠道<small>产品、电商、商业</small></b><span class="is-plan" role="cell">目标与型号</span><span class="is-plan" role="cell">SKU / 价值主张</span><span class="is-produce" role="cell">页面 / FAQ / 库存</span><span class="is-launch" role="cell">可售条件确认</span><span class="is-learn" role="cell">履约与用户反馈</span></div>
+              <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">目标及 Owner</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
             </div>
           </div>
           <div class="v-gantt-gates" aria-label="关键上市里程碑">
@@ -200,9 +209,18 @@
 
   function gtm() {
     return section("M3 上市传播策划", "围绕餐后清洁、产品演示与家庭生活的整合 Campaign。", `
+      <nav class="v-gtm-quicknav" aria-label="M3 上市案例关键章节">
+        <span>CASE NAVIGATION / 快速阅读</span>
+        <a href="#/case/gtm/campaign-architecture"><b>01</b> Campaign 策略</a>
+        <a href="#/case/gtm/gtm-visual-schedule"><b>02</b> 上市排期</a>
+        <a href="#/case/gtm/launch-cross-channel"><b>03</b> 渠道协作</a>
+        <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
+        <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
+      </nav>
       <div class="g-story-note" id="launch-decisions">
         <h3>产品主张｜站着推进，清理餐后硬地</h3>
         <p>把双盘拖把最先放进餐后地面的清洁任务。主视觉交代握把和双盘，动作镜头回答怎么用，FAQ 解释适用条件。</p>
+        <details class="v-supporting-evidence"><summary>查看产品主张对应的三类证明与内容物料</summary>
         <div class="g-proof-table">
           <table>
             <thead><tr><th scope="col">用户会问</th><th scope="col">主张需要的证据</th><th scope="col">对应物料</th></tr></thead>
@@ -213,6 +231,7 @@
             </tbody>
           </table>
         </div>
+        </details>
         <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
       <section class="gtm-market-map" id="gtm-value-to-launch" aria-labelledby="gtm-market-title">
@@ -226,8 +245,9 @@
         <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
         <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
       </section>
-      <div class="g-story-note" id="launch-channel-plan">
-        <h3>渠道分工｜从识别场景到确认选购</h3>
+      <details class="g-story-note v-supporting-evidence" id="launch-channel-plan">
+        <summary>渠道分工与用户任务 · 查看四类触点明细</summary>
+        <h3>从识别场景到确认选购</h3>
         <div class="g-proof-table">
           <table>
             <thead><tr><th scope="col">触点</th><th scope="col">用户在这里要解决什么</th><th scope="col">下一步</th></tr></thead>
@@ -240,8 +260,7 @@
           </table>
         </div>
         <p>素材审核通过后再承诺「看演示」。商业侧还需核可当地价格、库存、支付与履约，才开放购买。</p>
-      </div>
-
+      </details>
       <section class="g-story-note campaign-lens" id="campaign-architecture" aria-labelledby="campaign-architecture-title">
         <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
         <h3 id="campaign-architecture-title">Make Room for What Matters｜从用户情境到跨渠道传播</h3>
@@ -1007,6 +1026,25 @@
       const introduction = content.querySelector("h2 + p");
       if (introduction) introduction.insertAdjacentHTML("afterend", render());
       else content.querySelector("h2")?.insertAdjacentHTML("afterend", render());
+    }
+    if (id === "gtm") {
+      const filters = [...main.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]")];
+      const lanes = [...main.querySelectorAll("#gtm-visual-schedule .v-gantt-lane")];
+      const status = main.querySelector("#gtm-visual-schedule .v-gantt-view-caption");
+      const scroller = main.querySelector("#gtm-visual-schedule .v-gantt-scroll");
+      const labels = {all: "全部工作流", lead: "内容主责", partner: "渠道协同", support: "商业与验收"};
+      for (const button of filters) button.addEventListener("click", () => {
+        const focus = button.dataset.gtmFocus;
+        if (!Object.hasOwn(labels, focus)) return;
+        filters.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+        let shown = 0;
+        for (const row of lanes) {
+          row.hidden = focus !== "all" && row.dataset.gtmGroup !== focus;
+          if (!row.hidden) shown++;
+        }
+        if (status) status.textContent = `正在展示 ${shown} 条工作流 · ${labels[focus]}`;
+        if (scroller) scroller.scrollLeft = 0;
+      });
     }
     if (id === "b2b") {
       const steps = [...main.querySelectorAll("#expo-distance-route [data-expo-select]")];
