@@ -3182,3 +3182,9 @@
 .social-decision-loop h4{font-size:.88rem;margin:.25rem 0;color:#2f513d}
 .social-decision-loop p{font-size:.72rem;color:#647064;line-height:1.55;margin:.15rem 0}
 @media(max-width:750px){.social-outcome-bridge{grid-template-columns:1fr}}
+
+
+.operations-process-details{margin:.7rem 0 1.2rem;border:1px solid #d1ded1;background:#f7f9f4}
+.operations-process-details>summary{cursor:pointer;padding:.82rem 1rem;font-size:.82rem;font-weight:800;color:#365d45;list-style-position:inside}
+.operations-process-details>summary:focus-visible{outline:3px solid #bc9d43;outline-offset:1px}
+.operations-process-details[open]>.g-project-list{padding:0 .7rem .7rem}
