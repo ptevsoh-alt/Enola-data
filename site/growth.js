@@ -324,7 +324,7 @@
       </section>
 
       <section class="career-showcase" id="career-showcase" aria-labelledby="career-showcase-heading">
-        <header class="career-showcase-heading"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">策略先于内容，交付连接结果</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
+        <header class="career-showcase-heading"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">重点项目</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
         <div class="career-showcase-grid">
           <a class="career-spotlight" href="#/case/gtm/gtm-positioning-decision">
             <div class="career-spotlight-hero">
@@ -332,7 +332,7 @@
               <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘拖把主视觉" loading="lazy" decoding="async">
             </div>
             <div class="career-stage-strip" aria-label="五月上市传播的五阶段规划"><span><b>01</b>市场判断</span><span><b>02</b>卖点与 Brief</span><span><b>03</b>创意交付</span><span><b>04</b>渠道放行</span><span><b>05</b>复盘</span></div>
-            <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五阶段 Gate · 六条工作流</span></div>
+            <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五个传播阶段 · 六条协作工作流</span></div>
           </a>
           <div class="career-side-projects">
             <a href="#/case/brand/brand-positioning" class="career-side-card career-side-creative">
@@ -340,7 +340,7 @@
               <div><small>02 / BRAND & IMC</small><h3>品牌定位与整合传播</h3><p>品牌屋、信息层级、Campaign 与传播素材</p><span>查看品牌策略 ↗</span></div>
             </a>
             <a href="#/case/operations/asset-review" class="career-side-card career-side-operations">
-              <div><small>03 / MANAGEMENT & DELIVERY</small><h3>让团队按同一标准交付</h3><p>季度主题 · 月度排期 · 内容审核 · 跨部门协作</p></div>
+              <div><small>03 / MANAGEMENT & DELIVERY</small><h3>社媒排期与素材审核</h3><p>季度主题 · 月度排期 · 内容审核 · 跨部门协作</p></div>
               <div class="career-mini-flow" aria-label="内容交付过程"><span>Brief</span><i>→</i><span>Review</span><i>→</i><span>Release</span></div>
               <div class="career-operations-link">查看真实素材返工与协作 ↗</div>
             </a>
@@ -362,7 +362,7 @@
           <a href="#/case/gtm/campaign-architecture">Campaign 策略</a>
           <a href="#/case/gtm/gtm-visual-schedule">五月上市排期</a>
           <a href="#/case/gtm/gtm-channel-orchestration">跨渠道协作</a>
-          <a href="#/case/gtm/campaign-mechanism-mapping">五种创意方向</a>
+          <a href="#/case/gtm/campaign-mechanism-mapping">三条创意主线</a>
           <a href="#/case/gtm/market-adaptation">美英本地化</a>
         </nav>
       </section>
