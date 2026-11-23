@@ -181,7 +181,7 @@
       title:"社媒团队管理与项目交付",
       intro:"负责社媒小组内容排期、分工与审核，对接产品、设计、视频及渠道人员。",
       fact:"季度主题 · 月度排期 · 视觉审核",
-      cover:"Campaign 管理",eyebrow:"TEAM / DELIVERY",detail:"季度规划 · 团队排期 · 素材审核",kind:"type"
+      cover:"团队排期",eyebrow:"TEAM / DELIVERY",detail:"季度规划 · 团队排期 · 素材审核",kind:"type"
     },
     b2b: {
       title:"储能行业展会与海外 B2B 客户开发",
@@ -207,7 +207,7 @@
       intro:"参与感恩节和圣诞节品牌影片、Creator 视频的脚本、镜头规划与审片。",
       fact:"2 支节庆 TVC · 2 支 Creator 视频",
       cover:"TVC",eyebrow:"VIDEO / CREATIVE",detail:"感恩节 · 圣诞节",
-      media:"assets/projects/holiday-scene-1.webp",alt:"节庆 TVC 的家庭生活场景画面",kind:"photo"
+      kind:"type"
     },
     crm: {
       title:"EDM 用户生命周期传播方案",
@@ -220,7 +220,7 @@
       intro:"完成创作者筛选、英文 Brief、视频反馈与素材使用权交接。",
       fact:"合作 Brief · 审片 · 素材授权",
       cover:"Creator",eyebrow:"CREATOR / PARTNERSHIPS",detail:"产品实拍与合作交付",
-      media:"assets/projects/stairs-video-frame.webp",alt:"Creator 楼梯清洁短视频截帧",kind:"photo"
+      kind:"type"
     }
   };
   function cover(c, large = false) {
@@ -260,7 +260,7 @@
     social: "2025 年 Meta 内容曝光 96.5 万次、互动 3.7 万次。通过季度主题、月度内容规划和跨平台运营机制，持续优化品牌传播与社群参与。",
     community: "围绕教程、清洁挑战和 UGC 分享持续运营美国 Facebook Group。现有成员规模快照为 4,009 人，另有超过 1,000 人的阶段增长记录与单阶段新增 227 人。",
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
-    operations: "组织季度主题与月度内容日历，推进文案、设计、视频、产品信息审核与渠道交付，并以 M3 主视觉返工展示具体质量管理方式。",
+    operations: "组织季度主题与月度内容日历，推进文案、设计、视频、产品信息审核与渠道交付，重点展示内容排期、任务分工、素材审核与渠道交接。",
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
     seo: "规划以主题指南带动 FAQ 与产品内容的搜索承接。经营记录中自然搜索收入占比 82.46%，GSC 点击量环比约增长 20%。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
@@ -347,14 +347,14 @@
           </div>
         </div>
       </section>
-      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
+      <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看 Meta 传播结果 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
-        <div class="section-head"><div><p class="eyebrow">HOW I WORK / 项目决策路径</p><h2 id="jd-case-path-title">从市场判断、上市传播到团队交付</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
+        <div class="section-head"><div><p class="eyebrow">重点工作 / 项目案例</p><h2 id="jd-case-path-title">新品上市、品牌传播与社媒团队管理</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
         <div class="home-decision-grid">
           <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从真实清洁任务、产品资料及用户问题识别传播机会，整理四条产品线的价值重点。</p><span>品牌屋与产品线定位 ↗</span></a>
           <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>围绕 M3 餐后硬地场景规划上市节奏、Campaign 主题、渠道内容与交付节点。</p><span>M3 Campaign 品牌屋 ↗</span></a>
-          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>直接管理社媒内容小组，协调产品、视觉、视频和电商；用实际主视觉返工展示审核判断。</p><span>社媒小组与视觉返工案例 ↗</span></a>
+          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>直接管理社媒内容小组，协调产品、视觉、视频和电商；用内容日历和交付记录说明分工与审核。</p><span>社媒内容日历与团队协作 ↗</span></a>
           <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>2025 年 Meta 内容曝光 96.5 万、互动 3.7 万次；结合实际表现安排后续选题和渠道动作。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
         </div>
         <nav class="home-visual-jumps" aria-label="直接查看 GTM 和 Campaign 关键可视化">
