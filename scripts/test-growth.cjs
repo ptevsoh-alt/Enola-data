@@ -123,6 +123,29 @@ const fs = require("fs"),
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
     assert.equal(d.querySelector(".application-hero img"), null);
   });
+
+  await route("/home");
+  check("career-led visual homepage places GTM, Campaign and management before metrics", () => {
+    assert.equal(d.querySelectorAll("#career-showcase .career-spotlight").length, 1);
+    assert.equal(d.querySelectorAll("#career-showcase .career-side-card").length, 2);
+    assert.equal(d.querySelectorAll("#career-showcase .career-stage-strip span").length, 5);
+    assert.ok(d.querySelector('#career-showcase img[src="assets/projects/m3-yellow-main.webp"]'));
+    assert.ok(d.querySelector('#career-showcase a[href="#/case/operations/asset-review"]'));
+  });
+  await route("/case/gtm");
+  check("PMM strategy, proof chain and real creative assets lead the GTM case", () => {
+    assert.equal(d.querySelectorAll("#gtm-positioning-decision .pmm-decision-process article").length, 4);
+    assert.equal(d.querySelectorAll("#campaign-proof-gallery figure").length, 3);
+    assert.ok(d.querySelector("#gtm-positioning-decision").textContent.includes("餐后"));
+  });
+  await route("/case/operations");
+  check("team case distinguishes directly managed social work from peer execution", () => {
+    assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
+    assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
+    assert.equal(d.querySelectorAll("#operations-control .operations-issue-copy li").length, 3);
+    assert.ok(d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
+  });
+  await route("/home");
   const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
   let scrolledSection;
   w.HTMLElement.prototype.scrollIntoView = function () { scrolledSection = this.id; };
