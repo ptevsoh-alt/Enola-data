@@ -228,6 +228,15 @@ const fs = require("fs"),
       assert.equal(insight.querySelectorAll(".reader-source-note").length, 0);
     });
   }
+  await route("/case/gtm/m3-campaign-kv");
+  check("M3 Campaign exposes two product-accurate KV compositions", () => {
+    const view = d.querySelector("#m3-campaign-kv");
+    assert.ok(view);
+    assert.equal(view.querySelectorAll("figure").length, 2);
+    assert.equal(view.querySelectorAll("img[src='assets/projects/m3-yellow-main.webp']").length, 2);
+    assert.ok(view.textContent.includes("From grip"));
+    assert.ok(view.textContent.includes("Make Room for"));
+  });
   await route("/case/gtm/gtm-visual-schedule");
   check("May plan starts at marketing work, not personal product initiation", () => {
     const schedule = d.querySelector("#gtm-visual-schedule");
@@ -312,6 +321,9 @@ const fs = require("fs"),
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
     assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
+    assert.equal(d.querySelectorAll("#operations-kv-review .operations-qa-track article").length, 3);
+    assert.equal(d.querySelectorAll("#operations-content-calendar .operations-calendar-rows article").length, 4);
+    assert.ok(d.querySelector("#operations-kv-review").textContent.includes("R4"));
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
