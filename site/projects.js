@@ -886,7 +886,7 @@
  </div>
  <div class="operations-issue-panel">
    <div class="operations-issue-visual"><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品结构核对参考图" loading="lazy" decoding="async"><span>PRODUCT STRUCTURE / REFERENCE</span></div>
-   <div class="operations-issue-copy"><span>REAL REVIEW / M3 KV</span><h4>CTA 遮挡双盘：一次具体的退回修改</h4>
+   <div class="operations-issue-copy"><span>M3 / CREATIVE REVIEW</span><h4>CTA 遮挡双盘：一次具体的退回修改</h4>
     <ol><li><b>发现</b><span>4:5 主视觉底部 CTA 侵占关键产品结构。</span></li><li><b>修订</b><span>调整 CTA 安全区，确保双盘完整露出。</span></li><li><b>验收</b><span>Feed / Story 分别检查产品外观、裁切与文字区域。</span></li></ol><a href="#/case/operations/asset-review">查看审核记录 ↗</a>
    </div>
  </div>
@@ -898,8 +898,29 @@
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
       </details>
+      <section class="operations-qa-showcase" id="operations-kv-review" aria-labelledby="operations-kv-review-heading">
+        <header><small>CAMPAIGN ASSET REVIEW / M3</small><h3 id="operations-kv-review-heading">主视觉审核：R2 到 R4 的三次调整</h3><p>查看一次主视觉审核中，产品结构、版式和渠道裁切分别出了什么问题。</p></header>
+        <div class="operations-qa-track" role="list">
+          <article role="listitem" class="needs-rework"><small>R2 / FIRST DRAFT</small><h4>双盘被 CTA 遮挡</h4><p>4:5 主图的底部按钮压住了双盘；9:16 版本没充分展示辅助握把。</p><span>退回调整版式</span></article>
+          <article role="listitem" class="structure-checked"><small>R3 / PRODUCT STRUCTURE</small><h4>改用官方右视图</h4><p>黄色 D 型手柄、黑色辅助握把和双盘全部进入画面；竖版继续调整安全区。</p><span>外观复核</span></article>
+          <article role="listitem" class="exported"><small>R4 / ASSET DELIVERY</small><h4>横竖版分别导出</h4><p>4:5 与 9:16 独立输出，并完成文件尺寸及哈希校验。</p><span>视觉文件完成 · 发布签核另行确认</span></article>
+        </div>
+        <div class="operations-qa-output">
+          <figure><img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘拖把官方外观图，作为结构审核参考" loading="lazy" decoding="async"><figcaption>用于审核的官方产品外观</figcaption></figure>
+          <div><span>我负责的内容工作</span><strong>Brief、视觉反馈、渠道版本核对</strong><p>产品事实由产品同事核验，最终发布条件由对应负责人确认。</p></div>
+        </div>
+      </section>
+      <section class="operations-calendar-board" id="operations-content-calendar" aria-labelledby="operations-content-calendar-heading">
+        <header><small>CONTENT CALENDAR / MAY 2026 · PLANNING</small><h3 id="operations-content-calendar-heading">M3 五月内容制作排期</h3><p>同一主题下，社媒规划与设计、视频、产品审核按时间推进。</p></header>
+        <div class="operations-calendar-rows" role="list">
+          <article role="listitem"><time>05 / 01</time><div><strong>餐后场景预热</strong><span>Facebook / Instagram · 内容组 + 设计</span></div><b>场景图与互动文案</b></article>
+          <article role="listitem"><time>05 / 06</time><div><strong>场景轮播</strong><span>Facebook / Instagram · 设计 + 内容组</span></div><b>4:5 轮播与审核</b></article>
+          <article role="listitem"><time>05 / 13</time><div><strong>双盘结构说明</strong><span>Facebook / Instagram · 产品核验 + 设计</span></div><b>结构图与 FAQ</b></article>
+          <article role="listitem"><time>05 / 22</time><div><strong>上市 KV 传播计划</strong><span>社媒组 + 各渠道负责人</span></div><b>主视觉与渠道适配</b></article>
+        </div>
+      </section>
       <div class="g-story-note" id="asset-review">
-        <h3>一次真实的物料返工：首图看不到双盘</h3>
+        <h3>M3 主视觉｜审核与修改</h3>
         <ul>
           <li><strong>发现</strong> 4:5 版主视觉底部 CTA 框遮挡并裁切了双盘。静态首图的任务是让人看懂产品结构，这一版需要返工。</li>
           <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
@@ -918,9 +939,9 @@
         </div>
       </div>
       <div class="g-story-note">
-        <h3>父亲节 Campaign 交付节奏</h3>
-        <p>长柄刷聚焦浴室边角，双盘拖把聚焦餐后硬地。社媒小组先确定平台、负责人和素材需求，产品同事确认结构及使用条件，设计与视频分别完成轮播和操作镜头。Day 29 核对文案、画面、字幕、链接和各平台版本，Day 30 汇总待处理问题，作为下一轮 Brief 的输入。</p>
-        <p class="g-chart-note">内容排期：28 个对外节点 · 2 个内部验收节点</p>
+        <h3>父亲节 Campaign｜30 天内容规划</h3>
+        <p>围绕 Q3 Pro 的浴室场景与 M3 的餐区地面场景，安排 Facebook、Instagram 和 Group 的内容槽位。视觉、视频与产品信息分别进入 Brief 和审核环节。</p>
+        <p class="g-chart-note">双语内容方案 · 30 个相对日序</p>
         <a class="featured-detail" href="#/case/social/fathers-day-calendar">查看双语日历与验收节点 ↗</a>
       </div>`, "team-delivery");
   }
