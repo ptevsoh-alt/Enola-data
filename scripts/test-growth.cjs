@@ -286,6 +286,11 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
     assert.ok(d.querySelector("#expo-real-work").textContent.includes("真实经历"));
     assert.ok(d.querySelector("#expo-method-framework").textContent.includes("理论方法"));
+    assert.ok(d.querySelector("#expo-floorplan").textContent.includes("10 × 20 ft"));
+    const exhibitionCopy = d.querySelector("#expo-project").textContent;
+    for (const phrase of ["以下以假设的", "不是前面实际", "不是此前", "不代表已实际举办", "以下为可迁移", "工作样例"]) {
+      assert.equal(exhibitionCopy.includes(phrase), false, "Explanatory exhibition wording resurfaced: " + phrase);
+    }
     assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不是单场展会"));
     for (const token of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!d.querySelector("#expo-project").textContent.includes(token), "Exhibition branding leakage: "+token);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
@@ -313,6 +318,16 @@ const fs = require("fs"),
     assert.equal(zone.getAttribute("aria-pressed"), "true");
     assert.ok(d.querySelector("#expo-selected-detail").textContent.includes("A3"));
   });
+  for (const item of w.PORTFOLIO.cases) {
+    await route("/case/" + item.id);
+    check("editorial copy avoids explanatory disclaimers in " + item.id, () => {
+      const copy = d.querySelector(".case-page")?.textContent || "";
+      assert.ok(copy.length > 300, item.id + " must retain case content");
+      for (const phrase of ["以下以假设的", "不代表已实际举办", "不是前面实际", "当前资料未显示", "本页旨在", "该章节呈现", "仅作工作样例"]) {
+        assert.equal(copy.includes(phrase), false, item.id + ": " + phrase);
+      }
+    });
+  }
   await route("/case/creator/partner-handoff");
   check("the partner handoff is available as a case chapter", () => {
     assert.ok(d.querySelector('#partner-handoff a[href="#/case/gtm/english-brief"]'));
