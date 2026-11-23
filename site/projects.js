@@ -486,6 +486,15 @@
     <article><span>03 / DECIDE</span><h4>保留、改写或停止</h4><p>将高频问题、内容形式和素材质量写回下期 Brief。</p></article>
   </div>
 </section>
+      <section class="g-story-note" id="social-creative-editorial">
+        <h3>社媒内容策略与创意制作</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>TOPICS</small><h4>主题与内容支柱</h4><p>结合季度主题、节庆活动、产品重点和评论区问题，安排产品演示、家庭清洁、教程 FAQ、互动和 UGC 栏目，并落实到月度日历。</p></article>
+          <article><small>CREATIVE HOOK</small><h4>开场与视觉创意</h4><p>根据内容任务选择 POV、Before/After、产品细节、LED 显尘和家庭清洁突发场景；审核画面中的产品结构、操作动作与字幕。</p></article>
+          <article><small>PLATFORMS</small><h4>平台与内容形式</h4><p>Facebook 以品牌信息与导流为主，Instagram 用视觉演示和 Reels 组织关注，Group 以教程、讨论和反馈推进参与。</p></article>
+          <article><small>OPTIMIZATION</small><h4>内容效果与选题调整</h4><p>分别观察内容展示、互动、点击和社群提问；把高频问题、有效 Hook 与需要调整的画面写入次月 Brief。</p></article>
+        </div>
+      </section>
       <div class="holiday-campaign-map" aria-label="父亲节 Campaign 主题、场景与阶段规划">
         <div class="holiday-campaign-theme"><small>FATHER'S DAY / CAMPAIGN IDEA</small><h3>For the Hands That Always Help</h3><p>从父亲为家庭做过的日常小事出发，让清洁工具成为家人之间传递关怀的故事载体。</p></div>
         <div class="holiday-campaign-pillars">
@@ -584,11 +593,11 @@
         <h3>将 Campaign 主题拆成不同的传播内容</h3>
         <ul>
           <li><strong>品牌 TVC：</strong>保留感恩节或圣诞节的完整人物故事、节庆识别与产品进入情节的过程，用于集中解释品牌价值与情绪主张。</li>
-          <li><strong>完整 TVC 传播：</strong>感恩节与圣诞节分别展示完整视频，配合主视觉、社媒内容与渠道落地页统一活动主题。</li>
+          <li><strong>短视频与渠道版本：</strong>按 Feed、Reels 和视频广告等版位调整开场、画面比例、字幕、产品证明与行动信息，保留已确认的产品事实。</li>
           <li><strong>KOL / Creator：</strong>把真实使用问题交给人物演示；先拍清接触位置与动作，再按渠道要求确定时长、画幅和说明重点。</li>
           <li><strong>后续优化：</strong>分别观察完整观看、动作片段观看和用户问题，调整剪辑、产品解释或 FAQ，而非用一项数据评价所有视频。</li>
         </ul>
-        <p><a href="#/case/creative/video-projects">观看感恩节、圣诞节 TVC 与 KOL 视频 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道角色 ↗</a></p>
+        <p><a href="#/case/creative/video-projects">查看节庆品牌片与 Creator 内容案例 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道角色 ↗</a></p>
       </div>`, "video-strategy");
   }
 
@@ -634,7 +643,7 @@
         <div class="tvc-campaign-bridge-grid">
           <article><span>BRAND / TVC</span><h4>情绪与记忆</h4><p>感恩节围绕感谢与相聚，圣诞节围绕日常关怀。让人物和产品动作在故事中发生联系。</p></article>
           <article><span>SOCIAL / PAID CREATIVE</span><h4>节奏与创意适配</h4><p>从完整故事中选取场景、人物和产品镜头，分别适配 Feed、Reels、视频广告等渠道的信息顺序。</p></article>
-          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>拆分两个不同画面：楼梯清洁强调吸头接触与行进路径；客厅介绍强调人物讲解、产品识别与握持展示。</p></article>
+          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>楼梯清洁审核吸头接触与行进路径，客厅介绍审核人物讲解、产品识别与握持展示；不同版本按平台和任务分别剪辑。</p></article>
         </div>
         <p><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道协同 ↗</a> · <a href="#/case/operations/asset-review">查看创意与物料审核 ↗</a></p>
       </section>
@@ -673,17 +682,26 @@
         <div><small>CREATOR / KOL</small><b>使用证明与动作教育</b><p>将楼梯的操作证明与客厅的人物介绍分开展示，前者解决如何使用，后者帮助快速认识产品。</p></div>
       </div>
       <div class="g-story-note" id="video-decision-strip">
-        <h3>三种视频内容，各自解决不同的传播任务</h3>
+        <h3>不同视频形式对应不同的传播任务</h3>
         <div class="g-video-decision-grid">
           <article><small>感恩节 / TVC</small><h4>从团聚进入产品价值</h4><p>火鸡餐桌、生活问题、家人照料与双盘清洁演示组合成情绪和功能都能被理解的品牌内容。</p></article>
           <article><small>圣诞节 / TVC</small><h4>用清洁动作讲关怀</h4><p>圣诞家庭布置、年长者整理地面和家人团聚形成完整叙事，产品是人物关系中的行动。</p></article>
           <article><small>KOL / Creator</small><h4>让用户看见具体怎么用</h4><p>楼梯演示看实际吸头路径，客厅介绍看人物展示和产品认知。两种不同内容场景分别对应操作教育与新品介绍。</p></article>
         </div>
       </div>
+      <section class="g-story-note" id="creative-production-scope">
+        <h3>视频与社媒创意的实际工作范围</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>CAMPAIGN CREATIVE</small><h4>节庆与日常主题创意</h4><p>结合用户清洁任务、节日情境和品牌主张确定创意主题，组织故事提案、场景选择和视觉风格，不以目前上传的样片数量代表所有项目。</p></article>
+          <article><small>VIDEO BRIEF</small><h4>脚本、分镜与产品演示</h4><p>拆解视频开场、冲突、解决过程和结尾信息；明确产品需要拍到的接触表面、握持、移动方向及连续动作，逐项审核脚本和成片。</p></article>
+          <article><small>SOCIAL FORMAT</small><h4>社媒短片与视觉表达</h4><p>根据 Feed、Reels、Story 的阅读方式调整 Hook、字幕、画幅和剪辑节奏；组合 POV、Before/After、产品特写和场景教育内容。</p></article>
+          <article><small>CREATOR REVIEW</small><h4>创作者内容与素材验收</h4><p>在合作 Brief 中说明受众、演示任务、产品事实和披露要求，审阅初稿、修改版本及素材使用范围。</p></article>
+        </div>
+      </section>
       <div class="g-story-note" id="video-management">
         <h3>我的创意参与与项目交付</h3>
-        <p>参与节庆传播主题、创意脚本与画面审核，将品牌情绪、产品卖点和实际使用情境转化为可执行的镜头与传播物料。与产品、视觉、视频及社媒团队协作，分别检查故事连贯性、产品结构、动作真实性、字幕与渠道版本。</p>
-        <p>当前页面选取节庆品牌片和 Creator 产品演示作为代表素材，分别介绍家庭故事、楼梯实操和客厅产品展示。完整工作范围还包括创意策划、脚本修改、画面审核及不同平台的内容适配。</p>
+        <p>依据 Campaign 目标和受众场景提出创意方向，完成脚本修改、镜头要求及内容审核；制作过程中核对产品结构、真实操作、字幕与画幅，分别准备不同平台的发布版本。</p>
+        <p>当前影片与 Creator 片段只作案例节选，不代表历年视频产量。工作内容还包括 Campaign 创意主题、社媒短视频选题、内容 Hook、分镜脚本、人物与产品动作审核、成片修改及不同平台的内容适配。</p>
         <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
@@ -696,13 +714,13 @@
         <div class="expo-cover-story">
           <small>EXHIBITION MARKETING / B2B</small>
           <h3>展位策划、物料准备与现场客户沟通</h3>
-          <p>工作覆盖展位策划、展区展示内容、展墙与产品物料准备、现场咨询及后续客户需求跟进。展墙、产品陈列与技术资料围绕储能系统组成和实际应用组织，方便销售与技术同事向客户介绍方案。</p>
+          <p>工作覆盖展位规划、展示内容、展墙与产品资料、物料制作协调、现场客户接待和展后需求跟进。展墙、产品陈列与技术资料围绕储能系统组成和实际应用组织，方便销售与技术同事向客户介绍方案。</p>
           <div class="expo-cover-tags"><span>展位策划</span><span>展会物料</span><span>现场执行</span><span>客户需求</span></div>
           <p><a href="#/case/b2b/expo-visitor-route">查看参展项目工作 ↗</a></p>
         </div>
       </div>
       <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
-        <header><small>PROJECT RESPONSIBILITIES</small><h3 id="expo-visitor-title">展前筹备、现场执行与会后跟进</h3><p>将品牌宣传、产品介绍和客户沟通安排进同一场参展计划。</p></header>
+        <header><small>PROJECT RESPONSIBILITIES</small><h3 id="expo-visitor-title">展前筹备、现场执行与会后跟进</h3><p>参与展前策划、展位物料准备与布展协调，并负责现场客户需求沟通与后续跟进。</p></header>
         <div class="expo-visitor-map">
           <article><span>01 / 展前</span><h4>展位策划</h4><p>参与展区规划、展示主题与产品陈列安排，整理展墙信息、主视觉和现场展示需求。</p></article>
           <article><span>02 / 物料</span><h4>视觉与产品资料</h4><p>准备画册、产品介绍、系统图及现场宣传内容，和产品同事核对专业信息，跟进制作及到场安排。</p></article>
@@ -766,6 +784,15 @@
           <article class="expo-flight-card"><span>AFTER</span><h4>展后</h4><p>整理潜在客户的合作类型、应用场景与未解决问题，衔接商务跟进和内容更新。</p></article>
         </div>
       </section>
+      <section class="g-story-note" id="expo-material-delivery">
+        <h3>展位和物料准备的具体职责</h3>
+        <div class="g-project-list g-project-calendar-plan">
+          <article><small>BOOTH PLAN</small><h4>展位规划与陈列内容</h4><p>结合参展产品与潜在客户类型安排展区重点，确认品牌展示、产品陈列和现场讲解所需信息。</p></article>
+          <article><small>BRAND MATERIALS</small><h4>展墙、画册与系统资料</h4><p>准备展墙内容、品牌视觉、产品介绍、系统示意和现场宣传资料，核对技术信息、设计版本及物料交付。</p></article>
+          <article><small>ON-SITE EXECUTION</small><h4>布展检查与现场传播</h4><p>配合现场布置、产品展示、拍摄与介绍材料使用，及时补充客户重点关注的产品说明。</p></article>
+          <article><small>LEAD FOLLOW-UP</small><h4>客户需求记录与商务交接</h4><p>记录目标客户的应用场景、采购方向、系统配置疑问和后续资料需求，协同销售与产品同事推进报价和沟通。</p></article>
+        </div>
+      </section>
       <div class="g-story-note" id="expo-handoff">
         <h3>现场反馈如何用于后续销售资料</h3>
         <p>展会期间收集客户对产品配置、技术适配与合作条件的疑问，反馈给销售与产品团队；后续更新客户所需的产品资料及商务沟通内容。</p>
@@ -817,15 +844,20 @@
         <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
       </div>
       <div class="g-story-note">
-        <h3>节庆搜索内容如何承接社媒话题</h3>
+        <h3>Halloween 内容如何连接搜索与站内页面</h3>
         <p>以万圣节节后清洁为选题，按地面污渍、浴室、厨房、宠物毛发与工具比较拆分英文专题。主指南汇总任务，细分文章回答不同搜索问题，FAQ 与商品内容进一步解释使用条件和工具选择；稿件按原有策划目录展示。</p>
         <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
       </div>
       <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
-        <article><small>KEYWORD / INTENT</small><h3>关键词分组与页面安排</h3><p>按照污渍类型、清洁表面、使用场景及选购意图整理英文关键词，为主指南、专题、FAQ 和商品页分别设定内容任务。</p></article>
-        <article><small>CONTENT BRIEF / INTERNAL LINKS</small><h3>英文写作 Brief 与内部链接</h3><p>逐篇确定主要问题、建议标题、H2/H3 结构、素材需求和下一步阅读链接；主指南连接专题，专题指向相关 FAQ 与产品解释页面。</p></article>
-        <article><small>GSC / GA4</small><h3>发布后的内容评估</h3><p>以 GSC Query / Page 分析展示、点击和 CTR，以 GA4 Landing Page 观察访问与站内下一步行为；对照实际发布页面调整标题、链接和内容。</p></article>
+        <article><small>KEYWORD / INTENT</small><h3>关键词与搜索意图分组</h3><p>按 Halloween 污渍类型、清洁表面、使用场景和产品比较分组关键词，分别识别教程型、选型型需求，避免同类文章重复覆盖同一查询。</p></article>
+        <article><small>CONTENT BRIEF / INTERNAL LINKS</small><h3>英文 Brief 与内部链接方案</h3><p>逐篇确定主要搜索问题、页面标题、H2/H3、素材和产品事实检查点；从主指南引向问题专题，再连接 FAQ 和相关产品说明，减少重复内容。</p></article>
+        <article><small>GSC / GA4</small><h3>搜索表现评估安排</h3><p>实际页面发布后，以 GSC Query / Page 检查收录、展示、点击和 CTR，以 GA4 Landing Page 观察访问及后续浏览行为。未核实发布的目录不直接计算流量或订单贡献。</p></article>
       </div>
+      <section class="g-story-note" id="seo-case-workflow">
+        <h3>这次 Halloween SEO 策划的内容安排</h3>
+        <p>主指南围绕节后清洁的常见任务组织阅读路径；专题分别处理糖浆黏污、化妆残留、厨房、浴室、门廊和宠物毛发等问题，并安排清洁工具比较内容。文章 Brief 对应搜索意图、场景、标题结构、可核对的使用条件及下一步内容。</p>
+        <p>主指南和九个专题是已有策划文件中的工作物。发布状态和后续查询数据单独核验，不将站点其他时段的搜索结果归因于这组内容。</p>
+      </section>
       <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
         <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
           <article><small>${esc(id)} · ${esc(type)}</small><h3 lang="en">${esc(title)}</h3><p lang="en">${esc(intent)}</p></article>`).join("")}</div>
@@ -885,20 +917,20 @@
   }
 
   function crmHandoff() {
-    return section("EDM｜节庆活动与用户邮件规划", "以邮件主题、受众、内容节奏和站内承接组织 EDM 工作", `
+    return section("EDM｜节庆邮件与用户生命周期规划", "节庆邮件策划、用户分组与邮件自动化规则设计案例", `
       <div class="g-story-note" id="crm-campaign-email-plan">
-        <h3>母亲节 EDM 活动内容规划</h3>
-        <p>围绕母亲节活动准备英文邮件主题、卖点、版式文案及 CTA。内容从节日送礼场景展开，衔接产品使用优势、活动优惠和截止提醒；邮件内容与社媒主题、Blog 和商品信息保持一致。</p>
+        <h3>母亲节邮件营销内容方案</h3>
+        <p>围绕节日送礼场景与活动档期安排邮件主题、英文预览文字、产品卖点、首屏文案、图文结构和 CTA，并配合预热、活动推进与截止提醒，核对社媒、Blog 与商品页信息一致性。</p>
       </div>
       <div class="g-project-list g-project-calendar-plan" id="crm-email-content">
-        <article><small>BRIEF</small><h3>确定受众与本封邮件的任务</h3><p>区分新订阅用户、已浏览产品的潜在客户与已购客户；活动邮件先说明目标、主推产品及要回答的购买疑问。</p></article>
-        <article><small>CONTENT</small><h3>主题行、首屏与产品内容</h3><p>把邮件主题、预览文字、首屏视觉、产品卖点和主 CTA 写进制作 Brief，检查移动端阅读与跳转后页面的一致性。</p></article>
-        <article><small>SEND PLAN</small><h3>安排发送节奏与名单排除</h3><p>按预热、活动进行和收尾安排内容，避免同一用户重复收到不适合其购买状态的促销邮件。</p></article>
-        <article><small>REVIEW</small><h3>评估邮件实际带来的访问</h3><p>分别看送达、有效点击、退订及站内访问与购买；将用户反应反馈给下一轮选题和邮件设计。</p></article>
+        <article><small>BRIEF</small><h3>活动目标与受众名单</h3><p>确认主推产品、阶段受众、节庆主题和购买疑问；新订阅、已浏览及已购客户使用不同内容和排除规则。</p></article>
+        <article><small>CONTENT</small><h3>英文文案与版式 Brief</h3><p>编写 Subject、Preheader、Hero、产品利益、证明点和主要 CTA；审核移动端阅读顺序及邮件承诺与落地页的一致性。</p></article>
+        <article><small>SEND PLAN</small><h3>活动节奏与发送限制</h3><p>针对预热、重点产品和活动收尾分别安排邮件任务；排除退订、已购买或已进入更高意向流程的用户，避免重复发送。</p></article>
+        <article><small>REVIEW</small><h3>衡量点击与站内后续行为</h3><p>设计送达、有效点击、退订和站内转化的观察口径，实际发送后的结果另经平台核验；不以打开率独立推断转化。</p></article>
       </div>
       <div class="g-story-note" id="crm-customer-state">
-        <h3>生命周期邮件怎样对应购物阶段</h3>
-        <p>订阅后先介绍品牌和重点产品；浏览后补充适用场景；加购或进入结账后核查是否已经下单；购后围绕使用说明、常见问题和适合的后续推荐。已退订、已购买或正在处理售后问题的用户不应继续收到不匹配的催购内容。</p>
+        <h3>用户购物状态决定邮件内容</h3>
+        <p>订阅后先说明品牌和产品选择；浏览用户需要适用场景和常见问题；加购、结账用户应核实购物状态；购买后改为上手指导、保养及 FAQ。每条自动化邮件都写明触发事件、用户资格、退出条件和优先级，订单完成后停止旧购物车提醒。</p>
       </div>
       <div class="g-project-list g-project-calendar-plan" id="crm-lifecycle-flow">
         <article><small>WELCOME</small><h3>新订阅欢迎邮件</h3><p>介绍品牌、产品分类和使用场景，承接订阅入口承诺。</p></article>
@@ -906,7 +938,12 @@
         <article><small>POST-PURCHASE</small><h3>购后使用教育</h3><p>结合商品类别提供上手指南、清洁保养和 FAQ，营销信息尊重订阅许可及售后状态。</p></article>
         <article><small>WINBACK / LOYALTY</small><h3>复访与会员沟通</h3><p>根据顾客实际使用与购买周期讨论内容，积分和优惠规则须与店铺最终配置一致。</p></article>
       </div>
-      <p class="g-chart-note">展示范围：节庆邮件内容方案与用户旅程规划；不将邮件自动化配置或发送量写成个人既有业绩。</p>
+      <div class="g-story-note" id="crm-platform-handoff">
+        <h3>邮件流程与 Shopify 用户数据如何配合</h3>
+        <p>方案以 Shopify 的客户、订单、结账和邮件许可作为购物状态依据；Omnisend 负责获客订阅环节，Klaviyo 为规划中的生命周期执行端，会员系统提供积分和权益信息。对同一用户的浏览、加购、结账与购买事件设置流程优先级和退出条件，检查频控、退订和重复发送。</p>
+        <p>我的职责是营销内容、邮件 Brief、用户分组、发送计划和跨渠道信息核对。系统启用、邮件发送、会员权益和商业优惠须经各平台负责人验证；这里展示的是已完成的邮件策划和流程方案，不宣称所有自动化均已上线。</p>
+      </div>
+      <p class="g-chart-note">邮件案例展示策划成果与触达流程，不公开用户记录，也不将未核实的邮件发送或复购结果记作个人业绩。</p>
     `, "crm-handoff");
   }
 
