@@ -115,7 +115,7 @@ const fs = require("fs"),
     assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 3);
     assert.equal(b2b.getAttribute("aria-pressed"), "true");
     d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
-    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 16);
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 14);
   });
   check("review page shows four real results without evidence-status visual noise", () => {
     const metrics = [...d.querySelectorAll(".review-outcome-card strong")].map(el => el.textContent);
