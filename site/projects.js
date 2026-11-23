@@ -541,7 +541,7 @@
         <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
         <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
         <h3>可核验的分发结果</h3>
-        <p>现有截图可核验 King Newswire 的新闻稿分发，刊载位置为 USA Today 的 Press Release 栏目。</p>
+        <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
         
       </div></div>`, "pr-project");
   }
@@ -567,6 +567,36 @@
         <div><span>联合活动</span><b>共用场景 → 活动主题 → 渠道素材</b></div>
       </div>
     `, "seasonal-creative-gallery");
+  }
+
+  function promotionCreative() {
+    return section("节庆促销与 Campaign KV｜营销视觉方案", "黑五、母亲节和父亲节传播主题的视觉与渠道内容安排", `
+      <div class="promotion-kv-grid" id="promotion-kv-gallery">
+        <figure class="promotion-kv-card promotion-kv-black">
+          <div class="promotion-kv-art promotion-kv-black-art"><small>BLACK FRIDAY / SEASONAL CAMPAIGN</small><strong>THE CLEANER<br>HOLIDAY</strong><span>PRODUCT BENEFITS · SEASONAL OFFER</span><b>Explore the Collection</b></div>
+          <figcaption><h4>黑五促销 KV｜信息层级</h4><p>促销主题、主推品类、优惠规则与行动入口各有位置；具体折扣根据活动审批版本填写。</p><small>活动版式提案 · 非历史发布海报</small></figcaption>
+        </figure>
+        <figure class="promotion-kv-card promotion-kv-mother">
+          <div class="promotion-kv-art promotion-kv-mother-art"><small>MOTHER'S DAY / GIFT CAMPAIGN</small><strong>A LITTLE CARE<br>GOES A LONG WAY</strong><span>GIFTS FOR EVERYDAY MOMENTS</span><b>Discover Gift Ideas</b></div>
+          <figcaption><h4>母亲节礼赠 KV｜情感与产品</h4><p>以送礼关系切入，再用家庭场景和产品利益解释选择理由；邮件、Feed 与活动页延续同一主题。</p><small>活动版式提案 · 英文营销内容</small></figcaption>
+        </figure>
+        <figure class="promotion-kv-card promotion-kv-father">
+          <div class="promotion-kv-art promotion-kv-father-art"><small>FATHER'S DAY / CONTENT CAMPAIGN</small><strong>FOR THE HANDS<br>THAT ALWAYS HELP</strong><span>EVERYDAY CARE · FAMILY STORY</span><b>See the Story</b></div>
+          <figcaption><h4>父亲节 Campaign｜主题视觉</h4><p>家庭关怀先建立情境，产品使用内容负责解释实际价值；配套图文、Reels 与社群互动选题。</p><small>传播主题版式 · 配套内容日历</small></figcaption>
+        </figure>
+      </div>
+      <div class="g-story-note" id="promotion-campaign-matrix">
+        <h3>促销视觉与整合传播的对应关系</h3>
+        <div class="operations-table-scroll"><table class="operations-sample-table"><thead><tr><th>内容资产</th><th>传播任务</th><th>主要信息</th><th>渠道安排</th></tr></thead>
+          <tbody>
+            <tr><td>Campaign KV</td><td>活动认知</td><td>主题、场景、时间和确认后的优惠</td><td>Facebook / Instagram / 活动页</td></tr>
+            <tr><td>产品轮播 / Reels</td><td>产品理解</td><td>使用情境、功能利益、操作镜头</td><td>Feed / Reels / Creator</td></tr>
+            <tr><td>EDM 与活动页面</td><td>转化承接</td><td>受众、主推产品、CTA、有效活动规则</td><td>Email / Shopify</td></tr>
+            <tr><td>UGC / Group</td><td>参与与反馈</td><td>提问、教程、互动机制和可使用素材</td><td>Facebook Group</td></tr>
+          </tbody></table></div>
+        <p><a href="#/case/social/fathers-day-calendar">父亲节内容日历 ↗</a> · <a href="#/case/crm/crm-campaign-email-plan">母亲节 EDM 方案 ↗</a></p>
+      </div>
+    `, "promotion-campaign-kv");
   }
 
   function brandCampaign() {
@@ -1081,7 +1111,7 @@
   }
 
   const extras = {
-    brand: { strategy: brand, execution: () => seasonalCreative() + pr() + brandCampaign() },
+    brand: { strategy: brand, execution: () => seasonalCreative() + promotionCreative() + pr() + brandCampaign() },
     gtm: { strategy: gtm },
     social: { execution: social },
     creative: { strategy: creativeStrategy, execution: creative },
