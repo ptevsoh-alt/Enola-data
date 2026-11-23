@@ -3188,3 +3188,50 @@
 .operations-process-details>summary{cursor:pointer;padding:.82rem 1rem;font-size:.82rem;font-weight:800;color:#365d45;list-style-position:inside}
 .operations-process-details>summary:focus-visible{outline:3px solid #bc9d43;outline-offset:1px}
 .operations-process-details[open]>.g-project-list{padding:0 .7rem .7rem}
+
+
+/* Case index v3 — actual project media, documented metrics and restrained color fields. */
+.visual-grid .case-card-editorial .project-cover.case-cover-v3{aspect-ratio:1.7;padding:clamp(.85rem,1.7vw,1.4rem);border:0;border-radius:0;min-height:0;display:flex;flex-direction:column;justify-content:space-between;position:relative;isolation:isolate;overflow:hidden;box-sizing:border-box}
+.project-cover.case-cover-v3::before,.project-cover.case-cover-v3::after{display:none!important;content:none!important}
+.case-cover-v3 .case-cover-v3-media{position:absolute;z-index:0;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .32s ease}
+.case-cover-v3 .case-cover-v3-overlay{position:absolute;z-index:1;inset:0;pointer-events:none}
+.case-cover-v3 .case-cover-v3-top,.case-cover-v3 .case-cover-v3-main,.case-cover-v3 .case-cover-v3-bottom{position:relative;z-index:2}
+.case-cover-v3 .case-cover-v3-top{display:flex;align-items:center;justify-content:space-between;gap:1rem;font-size:clamp(.58rem,.75vw,.7rem);font-weight:780;letter-spacing:.08em;line-height:1.5}
+.case-cover-v3 .case-cover-v3-top span:last-child{white-space:nowrap}
+.case-cover-v3 .case-cover-v3-main{display:flex;flex-direction:column;align-items:flex-start;gap:.4rem;margin:auto 0;max-width:77%;min-width:0}
+.case-cover-v3 .case-cover-v3-main strong{font-size:clamp(1.45rem,2.7vw,2.65rem);font-weight:760;letter-spacing:-.035em;line-height:1.2;overflow-wrap:anywhere}
+.case-cover-v3 .case-cover-v3-main span{font-size:clamp(.74rem,1vw,.94rem);line-height:1.6;font-weight:550}
+.case-cover-v3 .case-cover-v3-bottom{font-size:clamp(.68rem,.85vw,.78rem);font-weight:720;letter-spacing:.04em}
+.case-cover-v3--product{background:#f0f3e9;color:#203b2d}
+.case-cover-v3--gtm .case-cover-v3-media{inset:auto -6% -12% auto;width:61%;height:120%;object-fit:contain}
+.case-cover-v3--gtm .case-cover-v3-overlay{background:linear-gradient(90deg,#f0f3e9 0%,rgba(240,243,233,.97) 39%,rgba(240,243,233,.36) 67%,transparent)}
+.case-cover-v3--gtm .case-cover-v3-main{max-width:54%}
+.case-cover-v3--gtm .case-cover-v3-main strong{font-size:clamp(2rem,3.7vw,3.4rem)}
+.case-cover-v3--photo{color:#fff;background:#22362d}
+.case-cover-v3--photo .case-cover-v3-overlay{background:linear-gradient(180deg,rgba(13,31,28,.42) 0%,rgba(13,31,28,0) 33%,rgba(13,31,28,.10) 46%,rgba(13,31,28,.90) 100%)}
+.case-cover-v3--photo .case-cover-v3-main{margin:auto 0 0;max-width:100%;padding-bottom:.45rem}
+.case-cover-v3--photo .case-cover-v3-main strong{font-size:clamp(1.3rem,2.25vw,2.05rem);text-shadow:0 1px 10px rgba(0,0,0,.45)}
+.case-cover-v3--photo .case-cover-v3-main span{color:#f0f7f1;text-shadow:0 1px 5px rgba(0,0,0,.6)}
+.case-cover-v3--photo .case-cover-v3-bottom{margin-top:.4rem}
+.case-cover-v3--brand .case-cover-v3-media{object-position:50% 48%}
+.case-cover-v3--b2b .case-cover-v3-media{object-position:center 55%}
+.case-cover-v3--creative .case-cover-v3-media{object-position:center 45%}
+.case-cover-v3--creator .case-cover-v3-media{object-position:center 47%}
+.case-cover-v3--social{background:#213d33;color:#f3f6ee}
+.case-cover-v3--community{background:#dce6ca;color:#203d31}
+.case-cover-v3--operations{background:#dea977;color:#2d382e}
+.case-cover-v3--seo{background:#e8dfca;color:#263f39}
+.case-cover-v3--amazon{background:#d2d1ca;color:#213a37}
+.case-cover-v3--crm{background:#c6d5d9;color:#233c4b}
+.case-cover-v3--type .case-cover-v3-main,.case-cover-v3--number .case-cover-v3-main{max-width:100%}
+.case-cover-v3--number .case-cover-v3-main strong{font-size:clamp(2.8rem,5.1vw,4.8rem);font-variant-numeric:tabular-nums;letter-spacing:-.055em}
+.case-cover-v3--seo .case-cover-v3-main strong,.case-cover-v3--amazon .case-cover-v3-main strong,.case-cover-v3--crm .case-cover-v3-main strong{font-size:clamp(2.6rem,5vw,4.7rem)}
+.case-cover-v3--operations .case-cover-v3-main strong{font-size:clamp(1.8rem,3.3vw,3.05rem)}
+.visual-grid .case-card-editorial .case-card-body>p{-webkit-line-clamp:2;margin-bottom:.8rem}
+.visual-grid .case-card-editorial .case-card-result{margin-top:auto}
+.visual-grid .case-card-editorial .case-card-result>a{font-size:.75rem}
+.visual-grid .case-card-editorial:has(.case-cover-v3--type) .cover-link:hover .case-cover-v3-main{transform:translateY(-2px)}
+@media(max-width:850px){.case-cover-v3 .case-cover-v3-main strong{font-size:clamp(1.45rem,3.2vw,2.35rem)}.case-cover-v3--number .case-cover-v3-main strong{font-size:clamp(2.5rem,6vw,4rem)}}
+@media(max-width:650px){.visual-grid .case-card-editorial .project-cover.case-cover-v3{aspect-ratio:1.72;padding:1rem}.case-cover-v3 .case-cover-v3-top{font-size:.62rem}.case-cover-v3 .case-cover-v3-main strong{font-size:clamp(1.55rem,6vw,2.3rem)}.case-cover-v3--number .case-cover-v3-main strong{font-size:3rem}.case-cover-v3--gtm .case-cover-v3-main{max-width:55%}.case-cover-v3--gtm .case-cover-v3-media{right:-10%;width:67%}}
+@media(max-width:390px){.case-cover-v3--gtm .case-cover-v3-main strong{font-size:1.8rem}.case-cover-v3--gtm .case-cover-v3-main{max-width:58%}.case-cover-v3 .case-cover-v3-main span{font-size:.7rem}}
+@media(prefers-reduced-motion:reduce){.case-cover-v3 .case-cover-v3-media,.case-cover-v3 .case-cover-v3-main{transition:none!important;transform:none!important}}
