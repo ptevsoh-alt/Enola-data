@@ -112,11 +112,11 @@ const fs = require("fs"),
     const covers = [...d.querySelectorAll("#case-list .case-cover-v3")];
     assert.equal(covers.length, 11);
     assert.equal(new Set(covers.map((x) => x.className.match(/case-cover-v3--(gtm|social|community|brand|operations|b2b|seo|amazon|creative|crm|creator)/)?.[1])).size, 11);
-    assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
+    assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 3);
     assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
     const coverSubjects = {
       gtm:"M3",social:"96.5万",community:"4,009",brand:"品牌策略",
-      operations:"Campaign 管理",b2b:"储能展会",seo:"SEO 内容",amazon:"0 → 1",
+      operations:"团队排期",b2b:"储能展会",seo:"SEO 内容",amazon:"0 → 1",
       creative:"TVC",crm:"邮件旅程",creator:"Creator"
     };
     for (const [id, subject] of Object.entries(coverSubjects)) {
@@ -171,8 +171,8 @@ const fs = require("fs"),
   check("team case distinguishes directly managed social work from peer execution", () => {
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
-    assert.equal(d.querySelectorAll("#operations-control .operations-issue-copy li").length, 3);
-    assert.ok(d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
+    assert.equal(d.querySelectorAll("#operations-control .operations-issue-panel").length, 0);
+    assert.ok(d.querySelector("#operations-control").textContent.includes("主题、Brief 与内容审核"));
   });
 
   await route("/case/gtm");
@@ -320,10 +320,10 @@ const fs = require("fs"),
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
-    assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
-    assert.equal(d.querySelectorAll("#operations-kv-review .operations-qa-track article").length, 3);
+    assert.ok(d.querySelector("#asset-review").textContent.includes("社媒内容与制作交接"));
+    assert.equal(d.querySelectorAll("#operations-kv-review").length, 0);
     assert.equal(d.querySelectorAll("#operations-content-calendar .operations-calendar-rows article").length, 4);
-    assert.ok(d.querySelector("#operations-kv-review").textContent.includes("R4"));
+    assert.ok(!d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
