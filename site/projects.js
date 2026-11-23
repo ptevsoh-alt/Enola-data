@@ -174,12 +174,16 @@
               <div class="v-gantt-lane" data-gtm-group="support" role="row"><b role="rowheader">数据 / QA<small>跨部门联合验收</small></b><span class="is-plan" role="cell">目标及 Owner</span><span class="is-plan" role="cell">指标口径</span><span class="is-produce" role="cell">链接 / 事件检查</span><span class="is-launch" role="cell">上线观测</span><span class="is-learn" role="cell">复盘与行动项</span></div>
             </div>
           </div>
-          <div class="v-gantt-gates" aria-label="关键上市里程碑">
-            <a href="#/case/gtm/launch-decisions"><strong>G0</strong><span>4/28 · 立项</span></a>
-            <a href="#/case/gtm/english-brief"><strong>G1</strong><span>5/1–10 · Brief</span></a>
-            <a href="#/case/operations/asset-review"><strong>G2</strong><span>5/15–21 · 素材审核</span></a>
-            <a href="#/case/gtm/campaign-architecture"><strong>G3</strong><span>5/22–25 · 渠道放行</span></a>
-            <a href="#/case/gtm/launch-d7-d30"><strong>G4</strong><span>5/26–31 · 交接</span></a>
+          <div class="v-gantt-gates" role="group" aria-label="点击五个上市节点，查看计划中的负责人、交付与放行判断">
+            ${milestones.map(([date, owner, input, approval], i) => `<button type="button" data-gtm-gate="${i}" data-gate-owner="${esc(owner)}" data-gate-input="${esc(input)}" data-gate-approval="${esc(approval)}" aria-pressed="${i === 0 ? "true" : "false"}" aria-controls="v-gate-detail"><strong>G${i}</strong><span>${esc(date)}</span></button>`).join("")}
+          </div>
+          <div class="v-gate-detail" id="v-gate-detail" role="group" aria-label="上市计划节点的责任与验收详情">
+            <div class="v-gate-detail-title"><small data-gate-slot="number">G0 / PLANNING GATE</small><strong data-gate-slot="title">${esc(milestones[0][0])}</strong><span>计划检查点 · 非执行进度</span></div>
+            <dl class="v-gate-detail-fields">
+              <div><dt>决策与协作负责人</dt><dd data-gate-slot="owner">${esc(milestones[0][1])}</dd></div>
+              <div><dt>本阶段交付物</dt><dd data-gate-slot="input">${esc(milestones[0][2])}</dd></div>
+              <div><dt>放行条件 / 下一步</dt><dd data-gate-slot="approval">${esc(milestones[0][3])}</dd></div>
+            </dl>
           </div>
         </section>
         <details class="g-chart-disclosure campaign-milestone-details"><summary>查看五个里程碑的负责人、物料与验收要求</summary>
@@ -394,7 +398,7 @@
             <div class="v-creative-text"><span class="v-creative-method">创意机制 / 问题显化</span><h3>The After-Dinner Reset</h3><p>以餐后地面问题引入使用任务，让产品操作自然发生。</p><span><b>画面任务</b> 真实场景与连续操作</span></div>
           </article>
           <article class="v-creative-card">
-            <div class="v-creative-art is-motion"><span>02 / MECHANISM</span><b>SEE THE<br>MOTION</b><small>双盘动作被看见</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-art is-motion"><img class="v-creative-product-source" src="assets/projects/m3-yellow-main.webp" alt="" loading="lazy" decoding="async"><span>02 / MECHANISM</span><b>SEE THE<br>MOTION</b><small>双盘动作被看见</small><i aria-hidden="true"></i></div>
             <div class="v-creative-text"><span class="v-creative-method">创意机制 / 机制揭示</span><h3>See the Motion</h3><p>通过运转、接地与移动路径解释清洁工具如何工作。</p><span><b>画面任务</b> 真实运行和结构细节</span></div>
           </article>
           <article class="v-creative-card">
@@ -402,7 +406,7 @@
             <div class="v-creative-text"><span class="v-creative-method">创意机制 / 关系价值转移</span><h3>Make Room for What Matters</h3><p>将日常清洁动作放进人物关系中，用情绪承接品牌价值。</p><span><b>画面任务</b> 人物、生活与产品</span></div>
           </article>
           <article class="v-creative-card">
-            <div class="v-creative-art is-detail"><span>04 / PRODUCT DETAIL</span><b>A CLOSER<br>LOOK</b><small>让结构一目了然</small><i aria-hidden="true"></i></div>
+            <div class="v-creative-art is-detail"><img class="v-creative-product-source" src="assets/projects/m3-yellow-battery.webp" alt="" loading="lazy" decoding="async"><span>04 / PRODUCT DETAIL</span><b>A CLOSER<br>LOOK</b><small>让结构一目了然</small><i aria-hidden="true"></i></div>
             <div class="v-creative-text"><span class="v-creative-method">创意机制 / 细节证明</span><h3>A Closer Look at M3</h3><p>以双盘底座、手柄和电池位置降低产品理解成本。</p><span><b>画面任务</b> 官方结构图与已核准信息</span></div>
           </article>
           <article class="v-creative-card">
@@ -1044,6 +1048,20 @@
         }
         if (status) status.textContent = `正在展示 ${shown} 条工作流 · ${labels[focus]}`;
         if (scroller) scroller.scrollLeft = 0;
+      });
+      const gates = [...main.querySelectorAll("#gtm-visual-schedule [data-gtm-gate]")];
+      const gatePanel = main.querySelector("#v-gate-detail");
+      if (gatePanel) for (const button of gates) button.addEventListener("click", () => {
+        gates.forEach(item => item.setAttribute("aria-pressed", String(item === button)));
+        const field = (name, value) => {
+          const node = gatePanel.querySelector(`[data-gate-slot="${name}"]`);
+          if (node) node.textContent = value;
+        };
+        field("number", "G" + button.dataset.gtmGate + " / PLANNING GATE");
+        field("title", button.querySelector("span")?.textContent || "");
+        field("owner", button.dataset.gateOwner || "");
+        field("input", button.dataset.gateInput || "");
+        field("approval", button.dataset.gateApproval || "");
       });
     }
     if (id === "b2b") {
