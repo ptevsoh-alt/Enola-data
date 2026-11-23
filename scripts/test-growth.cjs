@@ -107,6 +107,22 @@ const fs = require("fs"),
       }
     });
   }
+  await route("/capabilities");
+  const capabilityLinks = [...d.querySelectorAll(".cap-links a")].map(a=>a.hash);
+  check("capability page has nonduplicated links to specific case chapters", () => {
+    assert.equal(d.querySelectorAll(".cap-list article").length, 10);
+    assert.ok(capabilityLinks.length >= 14);
+    assert.equal(new Set(capabilityLinks).size, capabilityLinks.length);
+    assert.ok(capabilityLinks.every(hash=>hash.startsWith("#/case/") && hash.split("/").length===4));
+  });
+  for (const hash of capabilityLinks) {
+    const parts = hash.split("/");
+    await route("/case/"+parts[2]+"/"+parts[3]);
+    check("capability anchor opens its matching section: "+parts[2]+"/"+parts[3], () => {
+      assert.ok(d.querySelector(".case-page-"+parts[2]), "wrong case for "+hash);
+      assert.ok(d.getElementById(parts[3]), "missing destination for "+hash);
+    });
+  }
   await route("/cases");
   check("all 11 case cards use project-specific cover art or editorial color fields", () => {
     const covers = [...d.querySelectorAll("#case-list .case-cover-v3")];
