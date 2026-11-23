@@ -3297,3 +3297,38 @@
  .case-cover-v3--gtm .case-cover-v3-main{max-width:55%}
  .case-cover-v3 .case-cover-v3-top{font-size:.58rem}
 }
+
+
+/* Final case index treatment: consistent brand / work-specific photographic art or neutral color, no generic slogans. */
+.visual-grid .case-card-editorial .project-cover.case-cover-v3{aspect-ratio:1.66;min-height:12.8rem;border-radius:0;position:relative}
+.case-cover-v3 .case-cover-v3-top{font-size:.65rem;letter-spacing:.06em;text-transform:uppercase}
+.case-cover-v3 .case-cover-v3-top span:last-child{font-size:.61rem;letter-spacing:.08em}
+.case-cover-v3--brand.case-cover-v3--product{background:#dfe8d9;color:#214430}
+.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-media{left:auto;right:0;top:0;bottom:0;width:57%;height:100%;object-fit:contain;padding:.35rem .2rem .35rem 0;filter:contrast(1.03)}
+.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-overlay{background:linear-gradient(90deg,#dfe8d9 0%,rgba(223,232,217,.96) 30%,rgba(223,232,217,.57) 58%,transparent 90%)}
+.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main{max-width:52%;margin:auto 0}
+.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main strong{font-size:clamp(1.55rem,2.75vw,2.65rem);color:#23422e;line-height:1.1}
+.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main span{font-size:.76rem;max-width:19ch;line-height:1.5;color:#45634c}
+.case-cover-v3--gtm .case-cover-v3-main{max-width:53%;margin:auto 0}
+.case-cover-v3--gtm .case-cover-v3-main strong{font-size:clamp(2.15rem,3.2vw,3.3rem)}
+.case-cover-v3--gtm .case-cover-v3-main span{max-width:23ch;font-size:.77rem}
+.case-cover-v3--gtm .case-cover-v3-media{right:-3%;bottom:-13%;width:64%;height:118%;object-fit:contain}
+.case-cover-v3--number .case-cover-v3-main strong{font-size:clamp(2.45rem,4.2vw,4.4rem)}
+.case-cover-v3--type .case-cover-v3-main strong{font-size:clamp(1.65rem,2.8vw,2.8rem)}
+.case-cover-v3--social{background:#23483c;color:#fafcf8}
+.case-cover-v3--community{background:#dce9d1;color:#203c2d}
+.case-cover-v3--operations{background:#e0b17f;color:#263b2f}
+.case-cover-v3--seo{background:#ece6d7;color:#233e34}
+.case-cover-v3--amazon{background:#d4dad5;color:#243f38}
+.case-cover-v3--crm{background:#d8e6e8;color:#23434d}
+.visual-grid .case-card-editorial .case-card-body>p{-webkit-line-clamp:3}
+.visual-grid .case-card-editorial .case-card-result{margin-top:auto}
+.career-side-creative .career-side-photo{background:#dde7d8}
+.career-side-creative .career-side-photo img{object-fit:contain;padding:.35rem}
+.v-creative-gallery{grid-template-columns:repeat(3,minmax(0,1fr))}
+.v-creative-aux{margin:.75rem 0 0;padding:.85rem 1rem;background:#f0f4ed;border:1px solid #d2dfd0;display:grid;grid-template-columns:minmax(0,.8fr) minmax(0,1fr);gap:.2rem 1.25rem;align-items:center}
+.v-creative-aux small{font-size:.64rem;letter-spacing:.08em;color:#426f50;font-weight:800;grid-column:1/-1}
+.v-creative-aux h3{font-size:1rem;line-height:1.5;margin:.3rem 0}
+.v-creative-aux p{font-size:.77rem;line-height:1.7;margin:.3rem 0;color:#526557}
+@media(max-width:900px){.v-creative-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.v-creative-aux{grid-template-columns:1fr}}
+@media(max-width:620px){.v-creative-gallery{grid-template-columns:minmax(0,1fr)}.visual-grid .case-card-editorial .project-cover.case-cover-v3{aspect-ratio:1.66;min-height:12rem}.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main{max-width:54%}.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main strong{font-size:clamp(1.48rem,5vw,2.1rem)}.case-cover-v3--gtm .case-cover-v3-main strong{font-size:2.15rem}.case-cover-v3--gtm .case-cover-v3-media{right:-12%;width:74%}}
