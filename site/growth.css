@@ -3332,3 +3332,56 @@
 .v-creative-aux p{font-size:.77rem;line-height:1.7;margin:.3rem 0;color:#526557}
 @media(max-width:900px){.v-creative-gallery{grid-template-columns:repeat(2,minmax(0,1fr))}.v-creative-aux{grid-template-columns:1fr}}
 @media(max-width:620px){.v-creative-gallery{grid-template-columns:minmax(0,1fr)}.visual-grid .case-card-editorial .project-cover.case-cover-v3{aspect-ratio:1.66;min-height:12rem}.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main{max-width:54%}.case-cover-v3--brand.case-cover-v3--product .case-cover-v3-main strong{font-size:clamp(1.48rem,5vw,2.1rem)}.case-cover-v3--gtm .case-cover-v3-main strong{font-size:2.15rem}.case-cover-v3--gtm .case-cover-v3-media{right:-12%;width:74%}}
+
+
+/* M3 Campaign cover layouts assembled only from the already approved-to-display portfolio product photo. */
+.m3-kv-showcase{margin:2.5rem 0 2.1rem}
+.m3-kv-showcase>header{margin-bottom:1.2rem}
+.m3-kv-showcase>header small,.operations-qa-showcase>header small,.operations-calendar-board>header small{font-size:.7rem;font-weight:800;letter-spacing:.12em;color:#416c53}
+.m3-kv-showcase>header h3,.operations-qa-showcase>header h3,.operations-calendar-board>header h3{font-size:clamp(1.3rem,2.2vw,1.85rem);line-height:1.3;margin:.45rem 0}
+.m3-kv-showcase>header p,.operations-qa-showcase>header p,.operations-calendar-board>header p{font-size:.85rem;color:#526354;line-height:1.7;max-width:68ch;margin:.4rem 0 .7rem}
+.m3-kv-comps{display:grid;grid-template-columns:minmax(0,1.34fr) minmax(0,.7fr);gap:1rem;align-items:start}
+.m3-kv-comps figure{margin:0;position:relative;overflow:hidden;border:1px solid #d2d9d2;box-shadow:0 8px 22px rgba(26,51,40,.07)}
+.m3-kv-landscape{aspect-ratio:16/9;background:#20392f;color:#fff;display:grid;grid-template-columns:minmax(0,1.08fr) minmax(0,.86fr)}
+.m3-kv-comps .m3-kv-copy{min-width:0;position:relative;z-index:1;display:flex;flex-direction:column;align-items:flex-start;justify-content:center;padding:clamp(1rem,3vw,2.7rem)}
+.m3-kv-comps .m3-kv-copy small{font-size:clamp(.56rem,.8vw,.75rem);color:#e9bd57;letter-spacing:.12em;font-weight:800}
+.m3-kv-comps .m3-kv-copy h4{font-size:clamp(1.65rem,3.4vw,3.6rem);line-height:1.04;letter-spacing:-.045em;margin:.9rem 0;font-weight:750}
+.m3-kv-comps .m3-kv-copy p{font-size:clamp(.7rem,1.1vw,1.05rem);line-height:1.55;color:#dce7df;margin:0}
+.m3-kv-comps .m3-kv-copy>span{font-weight:760;letter-spacing:.095em;margin-top:auto;padding-top:1rem;font-size:clamp(.53rem,.73vw,.72rem)}
+.m3-kv-comps figure>img{object-fit:contain;width:100%;height:100%;display:block;background:#fbfcfa;position:relative;z-index:1;padding:clamp(.3rem,.65vw,.7rem)}
+.m3-kv-landscape>img{border-left:4px solid #eabf59}
+.m3-kv-comps figcaption{position:absolute;left:.65rem;bottom:.45rem;background:rgba(252,254,250,.92);color:#234236;padding:.2rem .45rem;z-index:2;font-size:.6rem;font-weight:750;letter-spacing:.06em}
+.m3-kv-feed{aspect-ratio:4/5;max-width:32rem;background:#20392f;color:#fff;display:grid;grid-template-rows:43% 57%}
+.m3-kv-feed .m3-kv-copy{justify-content:flex-start;padding:clamp(.8rem,2vw,1.7rem)}
+.m3-kv-feed .m3-kv-copy h4{font-size:clamp(1.25rem,2.05vw,2.15rem);margin:.5rem 0;line-height:1.14}
+.m3-kv-feed .m3-kv-copy p{font-size:.82rem}
+.m3-kv-feed>img{border-top:3px solid #eac45f}
+.m3-kv-footer{margin:.7rem 0 0;font-size:.8rem;font-weight:710}
+.m3-kv-footer a{color:#315e46;text-underline-offset:3px}
+.operations-qa-showcase,.operations-calendar-board{margin:1.6rem 0;padding:clamp(1rem,2vw,1.7rem);border:1px solid #d4dfd4;background:#f6f8f3;border-radius:8px}
+.operations-qa-track{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem;margin:1rem 0}
+.operations-qa-track article{background:#fff;border:1px solid #d8e0d7;border-top:4px solid #a4b3aa;min-width:0;display:flex;flex-direction:column;gap:.35rem;padding:1.05rem}
+.operations-qa-track .needs-rework{border-top-color:#c7856b}
+.operations-qa-track .structure-checked{border-top-color:#bfa150}
+.operations-qa-track .exported{border-top-color:#638977}
+.operations-qa-track article small{font-weight:800;letter-spacing:.07em;font-size:.68rem;color:#627565}
+.operations-qa-track article h4{font-size:clamp(.95rem,1.45vw,1.13rem);margin:.2rem 0}
+.operations-qa-track article p{font-size:.77rem;line-height:1.7;color:#4c5d53;flex:1}
+.operations-qa-track article>span{font-size:.7rem;font-weight:760;border-top:1px solid #dfe5df;padding-top:.55rem;color:#41634c}
+.operations-qa-output{display:flex;align-items:center;gap:1.3rem;background:#e8eee6;padding:.9rem 1.2rem}
+.operations-qa-output figure{width:min(28%,11rem);margin:0;flex-shrink:0}
+.operations-qa-output img{width:100%;height:9rem;object-fit:contain;background:#fff}
+.operations-qa-output figcaption{font-size:.64rem;color:#53675b;margin-top:.3rem}
+.operations-qa-output>div{display:flex;flex-direction:column;gap:.38rem}
+.operations-qa-output>div span{font-size:.66rem;color:#557362;font-weight:780;letter-spacing:.06em}
+.operations-qa-output>div strong{font-size:1.06rem;color:#274737}
+.operations-qa-output>div p{font-size:.78rem;color:#536455;line-height:1.7}
+.operations-calendar-rows{display:grid;gap:.35rem}
+.operations-calendar-rows article{display:grid;grid-template-columns:minmax(0,5rem) minmax(0,1fr) minmax(0,10rem);gap:.75rem;align-items:center;background:#fff;padding:.75rem 1rem;border-left:3px solid #73977e}
+.operations-calendar-rows article time{font-size:.92rem;font-weight:800;white-space:nowrap;color:#3a6750}
+.operations-calendar-rows article div{display:flex;flex-direction:column;gap:.27rem;min-width:0}
+.operations-calendar-rows article div strong{font-size:.86rem}
+.operations-calendar-rows article div span{font-size:.7rem;color:#6f8170;line-height:1.35}
+.operations-calendar-rows article>b{font-size:.73rem;font-weight:690;color:#45634f;text-align:right}
+@media(max-width:800px){.m3-kv-comps{grid-template-columns:minmax(0,1fr) minmax(0,.65fr)}.operations-qa-track{grid-template-columns:minmax(0,1fr)}.operations-qa-track article{padding:.85rem}.operations-calendar-rows article{grid-template-columns:5rem minmax(0,1fr)}.operations-calendar-rows article>b{grid-column:2;text-align:left}}
+@media(max-width:650px){.m3-kv-comps{grid-template-columns:1fr}.m3-kv-landscape{aspect-ratio:1.45}.m3-kv-comps .m3-kv-copy h4{font-size:clamp(1.7rem,7vw,3rem)}.m3-kv-feed{max-width:26rem;width:100%;justify-self:center}.operations-qa-output{align-items:flex-start}.operations-qa-output figure{width:31%}.operations-qa-output img{height:7rem}}
