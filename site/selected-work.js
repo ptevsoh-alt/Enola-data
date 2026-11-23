@@ -37,8 +37,8 @@ window.PORTFOLIO_SELECTED_WORK = {
     "label": "Project Management · 团队协作",
     "title": "社媒团队｜从季度策划到项目交付",
     "role": "直接负责社媒小组任务分派、Brief 和创意审核，横向协调产品、设计、视频、电商与服务商。",
-    "decision": "把传播主题落实到负责人、交付节点和审核标准；M3 主视觉审核中识别双盘被遮挡的问题并提出明确返工要求。",
-    "output": "季度传播主题、月度内容日历、团队交付机制及实际视觉返工记录。",
+    "decision": "把季度传播主题拆成月度日历和各平台内容任务，统一 Brief、交付时间、素材反馈与发布前的内容检查。",
+    "output": "季度传播主题、月度内容日历、团队分工、素材 Brief 和渠道交付安排。",
     "highlight": "小组管理 · 月度排期 · 素材验收",
     "artifact": "查看项目管理与创意审核",
     "chapter": "asset-review"
@@ -51,9 +51,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "output": "感恩节约 101 秒、圣诞节 90 秒的 TVC 预览，以及楼梯和客厅两支独立 Creator 视频。",
     "highlight": "感恩节 TVC · 圣诞节 TVC · KOL 短视频",
     "artifact": "观看两支节庆 TVC 与 KOL 内容",
-    "chapter": "video-projects",
-    "image": "holiday-scene-1",
-    "alt": "节庆家庭清洁故事的视频画面"
+    "chapter": "video-projects"
   },
   "b2b": {
     "label": "Field Marketing · 海外 B2B",
