@@ -106,7 +106,7 @@
       review: "从客户来源、响应、询盘和合作阶段评估渠道质量，持续优化后续跟进。",
       output: "海外 B2B 客户开发月均触达潜客 100+，参与海外展会传播与客户跟进，配有匿名化现场作品。",
       chapter: "expo-project",
-      artifact: "展会与客户沟通工作样例",
+      artifact: "展会传播与客户沟通",
     },
     seo: {
       choice: "按任务和搜索意图分流。先以万圣节清洁总指南接住主题，再用专题回答黏污、边角和选型问题。",
@@ -165,7 +165,7 @@
       <div class="case-card-result"><strong>${esc(highlight)}</strong><a href="#/case/${c.id}/${esc(lead?.chapter || "insight")}">查看项目内容 ↗</a></div></div>
     </article>`;
   }
-  // Interview copy stays concise; audit details remain in expandable source notes.
+  // Editorial copy on primary reading surfaces; source definitions stay available in evidence details.
   const readerWindow = (m) => {
     const raw = String(m.window || "");
     if (["impressions", "engagements"].includes(m.id)) return "2025 年 Meta 阶段数据";
@@ -387,7 +387,7 @@
       ],
       [
         "授权机制",
-        "分别确认平台、地域、期限、用途、付费推广、改编、署名与撤回；发布不等于获得商用许可。",
+        "分别核验平台、地域、期限、用途、付费推广、改编、署名与撤回权限。",
       ],
     ]
       .map(
