@@ -242,6 +242,31 @@
         <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/case/creative/video-projects">观看 TVC 与 KOL 视频 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
+
+      <section class="career-showcase" id="career-showcase" aria-labelledby="career-showcase-heading">
+        <header class="career-showcase-heading"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">策略先于内容，交付连接结果</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
+        <div class="career-showcase-grid">
+          <a class="career-spotlight" href="#/case/gtm/gtm-value-to-launch">
+            <div class="career-spotlight-hero">
+              <div class="career-spotlight-copy"><small>01 / PRODUCT MARKETING · GTM</small><h3>M3 新品上市<br>策略与传播排期</h3><p>餐后硬地任务 → 产品价值与证明 → 视觉创意 → 渠道协作</p><span class="career-view">打开上市策略与排期 ↗</span></div>
+              <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘拖把主视觉" loading="lazy" decoding="async">
+            </div>
+            <div class="career-stage-strip" aria-label="五月上市传播的五阶段规划"><span><b>01</b>市场判断</span><span><b>02</b>卖点与 Brief</span><span><b>03</b>创意交付</span><span><b>04</b>渠道放行</span><span><b>05</b>复盘</span></div>
+            <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五阶段 Gate · 六条工作流</span></div>
+          </a>
+          <div class="career-side-projects">
+            <a href="#/case/brand/seasonal-creative-gallery" class="career-side-card career-side-creative">
+              <div class="career-side-photo"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="父亲节 BBQ Campaign 主视觉" loading="lazy" decoding="async"></div>
+              <div><small>02 / BRAND & IMC</small><h3>从 Big Idea 到 Campaign 视觉</h3><p>主题策略、创意概念、KV 与多触点素材</p><span>查看创意作品 ↗</span></div>
+            </a>
+            <a href="#/case/operations/asset-review" class="career-side-card career-side-operations">
+              <div><small>03 / MANAGEMENT & DELIVERY</small><h3>让团队按同一标准交付</h3><p>季度主题 · 月度排期 · 内容审核 · 跨部门协作</p></div>
+              <div class="career-mini-flow" aria-label="内容交付过程"><span>Brief</span><i>→</i><span>Review</span><i>→</i><span>Release</span></div>
+              <div class="career-operations-link">查看真实素材返工与协作 ↗</div>
+            </a>
+          </div>
+        </div>
+      </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看增长表现与内容决策 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
       <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
