@@ -313,6 +313,7 @@ const fs = require("fs"),
     assert.equal(d.querySelector("#campaign-mechanism-mapping").tagName, "SECTION");
     assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 3);
     assert.equal(d.querySelectorAll("#market-adaptation .v-locale-panel").length, 2);
+    assert.ok(d.querySelector("#market-adaptation").textContent.includes("美英市场内容与发布检查"));
   });
   await route("/case/social/fathers-day-channel-roles");
   check("Father's Day content plan distinguishes four channel responsibilities", () => {
