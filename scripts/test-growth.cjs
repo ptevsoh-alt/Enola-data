@@ -145,6 +145,26 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#operations-control .operations-issue-copy li").length, 3);
     assert.ok(d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
   });
+
+  await route("/case/gtm");
+  check("IMC media brief and regional GTM provide distinct channel and market decisions", () => {
+    assert.equal(d.querySelectorAll("#gtm-media-plan .campaign-media-brief-grid article").length, 2);
+    assert.equal(d.querySelectorAll("#locale-decision-matrix .locale-matrix-grid article").length, 4);
+    assert.ok(d.querySelector("#gtm-media-plan").textContent.includes("Paid"));
+    assert.ok(d.querySelector("#locale-decision-matrix").textContent.includes("UK"));
+  });
+  await route("/case/social");
+  check("documented social results are paired with decision loop without invented time series", () => {
+    assert.equal(d.querySelectorAll("#social-outcome-bridge .social-outcome-values strong").length, 2);
+    assert.equal(d.querySelectorAll("#social-outcome-bridge .social-decision-loop article").length, 3);
+    assert.ok(d.querySelector("#social-outcome-bridge").textContent.includes("96.5万"));
+  });
+  await route("/case/operations");
+  check("verbose operational detail is available on demand after the visual ownership view", () => {
+    assert.equal(d.querySelector("#operations-control").tagName, "SECTION");
+    assert.equal(d.querySelector(".operations-process-details").tagName, "DETAILS");
+    assert.ok(d.querySelector(".operations-process-details summary"));
+  });
   await route("/home");
   const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
   let scrolledSection;
