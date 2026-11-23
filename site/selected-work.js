@@ -45,17 +45,17 @@ window.PORTFOLIO_SELECTED_WORK = {
   },
   "creative": {
     "label": "Seasonal Campaign · TVC / Creator",
-    "title": "感恩节与圣诞节 TVC｜Campaign 创意与 KOL 内容",
+    "title": "品牌视频与社媒创意｜Campaign、产品演示、Creator",
     "role": "参与品牌宣传片、节庆视频、产品演示和 Creator 内容的创意策划、脚本审核与画面调整。",
     "decision": "感恩节以家庭餐叙与感谢切入，圣诞节以日常照料承接品牌情感；KOL / Creator 竖屏内容聚焦真实使用情境与产品动作。",
-    "output": "节庆品牌影片、产品演示与 Creator 短视频的创意策划和审核案例；页面展示现有代表素材。",
+    "output": "品牌视频、产品演示与 Creator 内容的创意策划、脚本和制作审核案例；当前影像仅为部分工作物。",
     "highlight": "品牌影片 · 产品演示 · Creator 内容",
     "artifact": "查看视频创意与产品演示",
     "chapter": "video-projects"
   },
   "b2b": {
     "label": "Field Marketing · 海外 B2B",
-    "title": "海外展会｜展位策划与现场营销",
+    "title": "海外展会｜展位、品牌物料与现场营销",
     "role": "参与储能展会展位策划、展墙与产品展示内容、物料准备、现场客户沟通及商务跟进。",
     "decision": "按展会现场陈列与目标客户需求准备品牌画面、产品资料和讲解内容，现场整理采购与合作问题。",
     "output": "储能行业展会传播、系统展示与客户沟通；B2B 展会品牌与空间设计。",

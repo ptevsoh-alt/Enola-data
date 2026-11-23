@@ -128,7 +128,7 @@
       choice: "品牌片先建立节庆家庭场景，操作短片直接切入工具如何接触、推进和转向。",
       handoff: "我参与创意策划与脚本、画面审核。产品确认结构和用途；制作交对应镜头；运营核渠道版本和使用权。",
       review: "按品牌情绪与产品演示的不同传播目标检查镜头，并根据观看反馈优化节奏。",
-      output: "感恩节与圣诞节完整 TVC 分别承载节庆叙事；Creator 独立展示楼梯实操与客厅产品介绍，结合脚本和画面审核说明内容决策。",
+      output: "以节庆视频及 Creator 场景片为代表，说明创意主题、脚本调整、产品演示和渠道版本审核；上传素材只覆盖部分工作内容。",
       chapter: "video-projects",
       artifact: "播放节庆故事和产品演示",
     },
@@ -187,12 +187,12 @@
       title:"储能行业展会与海外 B2B 客户开发",
       intro:"参与海外储能展位策划与品牌物料准备，负责客户需求沟通及会后跟进。",
       fact:"展位策划 · 视觉物料 · 客户开发",
-      cover:"储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"系统展示 · 现场沟通",
+      cover:"储能展会",eyebrow:"B2B / FIELD MARKETING",detail:"展位规划 · 物料 · 客户接待",
       media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"脱敏后的真实储能行业展会现场照片",kind:"photo"
     },
     seo: {
-      title:"SEO 主题内容与搜索增长",
-      intro:"组织 Pillar Blog、英文专题与 FAQ 选题，连接用户搜索需求和产品信息。",
+      title:"Halloween SEO 与内容策划",
+      intro:"以万圣节节后清洁为完整策划案例，组织英文选题、搜索意图、专题目录和站内内容承接。",
       fact:"1 篇主指南 + 9 篇专题规划",
       cover:"SEO 内容",eyebrow:"SEARCH / CONTENT",detail:"1 篇主指南 · 9 篇专题规划",kind:"type"
     },
@@ -211,7 +211,7 @@
     },
     crm: {
       title:"EDM 内容策划与用户生命周期运营",
-      intro:"围绕节庆活动规划英文邮件主题、受众、卖点与发送节奏，并设计欢迎、加购和购后沟通的内容规则。",
+      intro:"负责节庆英文邮件内容与发送排期，设计用户分层和购物旅程中的触发、排除与退出规则。",
       fact:"Campaign Email · Welcome · Cart · Post-purchase",
       cover:"邮件旅程",eyebrow:"CRM / LIFECYCLE",detail:"Welcome · Cart · Post-purchase",kind:"type"
     },
@@ -299,7 +299,7 @@
     ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
     ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
     ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
-    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本和镜头审核，节庆视频为其中部分案例。","#/case/creative/video-projects","感恩节 TVC · 圣诞节 TVC · KOL 内容"],
+    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本和镜头审核，节庆视频为其中部分案例。","#/case/creative/video-projects","节庆叙事 · 产品演示 · Creator 内容"],
     ["07","海外展会策划","参与海外储能展会的展位规划、品牌物料准备、现场产品介绍和客户需求跟进。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
   ];
 
@@ -319,7 +319,7 @@
         <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>产品上市与整合传播</em></h1>
         <p class="profile-direction">${esc(P.profile.direction)}</p>
         <p class="hero-summary">${esc(P.profile.summary)}</p>
-        <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/case/creative/video-projects">观看 TVC 与 KOL 视频 ↗</a><a href="#/experience">工作经历</a></div></div>
+        <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/case/creative/video-projects">查看视频与创意案例 ↗</a><a href="#/experience">工作经历</a></div></div>
         <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
       </section>
 
