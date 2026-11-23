@@ -633,204 +633,156 @@
   }
 
   function expo() {
-    return section("海外 B2B 展会与市场活动", "让产品系统陈列服务客户沟通，并把现场问题接入后续渠道营销与商务跟进。", `
+    return section("海外 B2B 展会与市场活动", "以往储能行业的参展经历，与可迁移的展会设计方法分别呈现。", `
+      <div class="expo-scope-banner actual" id="expo-real-work"><span>01 / ACTUAL EXPERIENCE · 真实经历</span><h3>海外储能行业 B2B 展会</h3><p>以参与工作、脱敏现场照片与任职期渠道记录为依据。</p></div>
       <div class="expo-cover" id="expo-cover">
-        <figure>${image("exhibition-booth-overview-redacted", "真实海外储能展会展位全景，品牌标识已脱敏", "jpg")}<figcaption>海外储能展会 · 现场展位与产品展示</figcaption></figure>
-        <div class="expo-cover-story">
-          <small>OVERSEAS B2B / EXHIBITION</small>
-          <h3>从系统展示到客户需求</h3>
-          <p>在海外渠道与市场推广岗位，我参与过储能行业线下展会的传播物料、现场产品展示及客户沟通。展会的价值不只在于品牌露出，更在于让客户把设备组合与自己的用电场景联系起来。</p>
-          <div class="expo-cover-tags"><span>海外市场</span><span>展会传播</span><span>产品陈列</span><span>客户沟通</span></div>
-          <p><a href="#/case/b2b/expo-visitor-route">看现场信息与客户动线 ↗</a></p>
+        <figure>${image("exhibition-booth-overview-redacted","储能行业真实展位照片，品牌标识已脱敏","jpg")}<figcaption>此前任职期间的海外储能展会现场 · 已匿名化</figcaption></figure>
+        <div class="expo-cover-story"><small>ENERGY STORAGE / OVERSEAS B2B</small><h3>从系统陈列到客户沟通</h3><p>我参与过储能行业海外展会的相关传播物料、系统设备展示与客户交流，结合设备构成和应用需求说明产品方案。以下照片来自实际参展，非后面方法示例的设计成果。</p>
+          <div class="expo-cover-tags"><span>海外市场</span><span>展会物料</span><span>系统展示</span><span>客户沟通</span></div>
+          <p><a href="#/case/b2b/expo-visitor-route">查看工作内容 ↗</a></p>
         </div>
       </div>
+      <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
+        <header><small>WORK EXPERIENCE / CONTEXT</small><h3 id="expo-visitor-title">实际工作：让系统方案与采购需求建立联系</h3><p>根据既有照片和任职经历归纳沟通内容，不推定现场访客人数、具体动线或未记录的业绩。</p></header>
+        <div class="expo-visitor-map">
+          <article><span>01</span><h4>应用领域</h4><p>使用展位信息和设备类别介绍面向的用电场景。</p></article>
+          <article><span>02</span><h4>系统组成</h4><p>围绕光伏、逆变器、储能电池、发电机及负载之间的关系说明方案。</p></article>
+          <article><span>03</span><h4>技术与商务问题</h4><p>讨论容量、安装、配置及交付条件，专业事项由对应人员确认。</p></article>
+          <article><span>04</span><h4>后续业务沟通</h4><p>整理客户意向与问题，衔接销售和渠道负责人。</p></article>
+        </div>
+      </section>
+      <div class="g-product-gallery expo-gallery" aria-label="真实海外储能展会脱敏照片">
+        <figure>${image("exhibition-booth-angle-redacted","真实海外储能展台侧面，品牌标识已脱敏","jpg")}<figcaption><b>展位展示</b><span>空间入口、展墙与设备陈列</span></figcaption></figure>
+        <figure>${image("exhibition-product-display-redacted","真实储能系统与设备展示墙，品牌标识已脱敏","jpg")}<figcaption><b>方案沟通</b><span>系统结构、应用与产品资料</span></figcaption></figure>
+      </div>
+      <section class="g-story-note b2b-compare" id="b2b-scale-comparison">
+        <h3>同期海外客户开发与渠道推广</h3>
+        <p>除展会相关工作外，我还通过 Google、LinkedIn、Facebook、Instagram 和邮件触达海外客户。以下为任职期渠道工作记录，<strong>不是单场展会带来的线索或成交</strong>。</p>
+        <div class="expo-results">
+          <article><span>月均潜在客户触达</span><strong>100+</strong><small>任职期海外 B2B 客户开发</small></article>
+          <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期渠道账号的阶段变化</small></article>
+        </div><p><a href="#/data/b2b">查看 B2B 项目结果 ↗</a></p>
+      </section>
+
+      <div class="expo-scope-banner method" id="expo-method-framework"><span>02 / GENERAL FRAMEWORK · 理论方法</span><h3>品牌策略 × 展位体验 × 活动传播 × 线索承接</h3><p>下面是通用 B2B 展会策划示例，与上方实际参展经历不构成同一个已执行项目。概念布局、物料规格与活动安排用于展示方法，不表示历史已制作或采购。</p></div>
       <section class="expo-brand-system" id="expo-brand-activation" aria-labelledby="expo-brand-system-title">
-        <div class="expo-system-header"><small>EXHIBITION DESIGN / INTEGRATED BRAND EXPERIENCE</small><h3 id="expo-brand-system-title">从品牌主张到现场体验</h3><p>将空间识别、内容创意、产品演示、媒体传播和线索承接安排为一套互相配合的展会方案。</p></div>
-        <div class="expo-brand-stage" aria-label="清洁电器展会创意主题与信息路径">
-          <div class="expo-brand-stage-copy"><span>BRAND PLATFORM / POWER EVERY MOVE</span><strong>SEE IT.<br>TRY IT.<br>TAKE IT HOME.</strong><p>远距吸引 → 近距验证 → 留下需求</p></div>
+        <div class="expo-system-header"><small>FIELD MARKETING / DESIGN FRAMEWORK</small><h3 id="expo-brand-system-title">一场展会，对应三段沟通任务</h3><p>先建立行业与品牌识别，再解释应用及系统方案，最后转为专业咨询与商务跟进。</p></div>
+        <div class="expo-brand-stage" aria-label="通用B2B展会信息路径">
+          <div class="expo-brand-stage-copy"><span>GENERIC B2B / NON-BRANDED CONCEPT</span><strong>DISCOVER.<br>UNDERSTAND.<br>CONNECT.</strong><p>识别 → 理解 → 交流</p></div>
           <div class="expo-brand-stage-journey">
-            <div><small>01 / ATTENTION</small><b>品牌识别</b><span>主 KV · 背景墙 · 导视</span></div>
-            <div><small>02 / EXPERIENCE</small><b>操作体验</b><span>M3 / Q3 场景 · Demo · FAQ</span></div>
-            <div><small>03 / RELATIONSHIP</small><b>持续沟通</b><span>媒体资料 · 授权留资 · EDM</span></div>
+            <div><small>01 / ATTENTION</small><b>品牌与行业</b><span>KV · 背景墙 · 导视</span></div>
+            <div><small>02 / EXPLAIN</small><b>应用与系统</b><span>系统图 · 专家讲解 · FAQ</span></div>
+            <div><small>03 / CONTACT</small><b>商务承接</b><span>资料包 · 需求分类 · CRM</span></div>
           </div>
         </div>
-
         <section class="expo-identity-editorial" id="expo-visual-language" aria-labelledby="expo-identity-title">
-          <header><small>VISUAL IDENTITY / EXPERIENCE SYSTEM</small><h4 id="expo-identity-title">让品牌在不同距离，都说同一句话</h4><p>把品牌识别、产品卖点和行动提示分别安排到背景墙、易拉宝、体验牌及后续传播画面。这是 M3 / Q3 展会概念的视觉语言提案，并非已批准的品牌 VI 手册。</p></header>
+          <header><small>VISUAL IDENTITY / NEUTRAL CONCEPT</small><h4 id="expo-identity-title">视觉识别：每段距离，只解决一个信息问题</h4><p>以无品牌的 B2B 系统方案为视觉示例；实际项目须依据品牌 VI 和技术信息重新设计。</p></header>
           <div class="expo-identity-grid">
-            <article class="expo-identity-poster" aria-label="展会主视觉排版提案">
-              <small>MASTER VISUAL / 6–10M</small>
-              <span class="expo-identity-poster-brand">POWER EVERY MOVE</span>
-              <strong>SEE THE JOB.<br>SEE THE TOOL.</strong>
-              <p>M3 FOR FLOORS&nbsp; / &nbsp;Q3 FOR CORNERS</p>
-              <div class="expo-identity-poster-rule"><span>01 / LOOK</span><span>02 / TRY</span><span>03 / ASK</span></div>
+            <article class="expo-identity-poster" aria-label="通用系统方案展位示例主视觉">
+              <small>MASTER VISUAL / EXAMPLE</small><span class="expo-identity-poster-brand">B2B SOLUTIONS</span><strong>FROM APPLICATION<br>TO SOLUTION.</strong><p>SYSTEMS / SCENARIOS / NEXT STEPS</p>
+              <div class="expo-identity-poster-rule"><span>01 / SEE</span><span>02 / LEARN</span><span>03 / TALK</span></div>
             </article>
-            <article class="expo-identity-hierarchy">
-              <small>MESSAGE HIERARCHY</small><h4>一张画面，三个阅读速度</h4>
-              <ol>
-                <li><b>3 秒｜品牌主张</b><span>远距只保留品牌识别与清洁品类，不塞入参数。</span></li>
-                <li><b>10 秒｜使用场景</b><span>中距区分 M3 地面和 Q3 浴室边角两类任务。</span></li>
-                <li><b>30 秒｜真实演示</b><span>近距提供动作说明、适用范围和技术问答。</span></li>
-              </ol>
-              <div class="expo-identity-swatches" aria-label="概念视觉色板"><span class="swatch-dark">深色背景</span><span class="swatch-yellow">产品黄色</span><span class="swatch-light">暖白信息区</span></div>
+            <article class="expo-identity-hierarchy"><small>MESSAGE HIERARCHY</small><h4>按观看距离安排信息</h4>
+              <ol><li><b>远距：品牌与领域</b><span>一眼识别业务场景与核心类别。</span></li><li><b>中距：应用与方案</b><span>展示系统结构、典型应用和关键价值。</span></li><li><b>近距：技术与决策</b><span>说明参数、适配要求与采购问题。</span></li></ol>
+              <div class="expo-identity-swatches" aria-label="通用概念色板"><span class="swatch-dark">深色背景</span><span class="swatch-blue">信息蓝</span><span class="swatch-light">暖白说明区</span></div>
             </article>
-            <article class="expo-identity-collateral">
-              <small>ONE STORY / MANY TOUCHPOINTS</small><h4>展前、展中与展后共用的视觉资产</h4>
+            <article class="expo-identity-collateral"><small>ONE STORY / MANY TOUCHPOINTS</small><h4>同一条信息路径，三套渠道物料</h4>
               <div class="expo-brand-touch">
-                <div><b>INVITE</b><span>社媒邀请与 EDM：说明为什么值得到场</span></div>
-                <div><b>EXPERIENCE</b><span>现场背景墙、产品卡与 Demo 指引</span></div>
-                <div><b>FOLLOW-UP</b><span>Brochure、Press Kit、FAQ 与会后沟通</span></div>
-              </div>
-              <p>图像提案优先采用产品源图；性能、尺寸和动作主张由产品负责人复核后再交付制作。</p>
+                <div><b>INVITE</b><span>定向邀请、会议预约和展前传播</span></div>
+                <div><b>EXPLAIN</b><span>Brochure、系统图与 Press Kit</span></div>
+                <div><b>FOLLOW UP</b><span>许可邮件、方案资料与销售跟进</span></div>
+              </div><p>场景图、设备参数与第三方素材须经核验和授权，概念设计不等于实际印制文件。</p>
             </article>
           </div>
         </section>
-        <div class="expo-workstream" aria-label="展会九类工作模块">
-          <article><span>01</span><b>品牌策略</b><small>展会主题 / 信息层级</small></article>
-          <article><span>02</span><b>空间设计</b><small>Booth Layout / 展位动线</small></article>
-          <article><span>03</span><b>视觉识别</b><small>KV / 背景墙 / 导视</small></article>
-          <article><span>04</span><b>宣传物料</b><small>Brochure / 产品卡 / 邀请函</small></article>
-          <article><span>05</span><b>产品体验</b><small>Demo / 脚本 / 讲解话术</small></article>
-          <article><span>06</span><b>活动物料</b><small>周边 / 参会证 / 包装</small></article>
-          <article><span>07</span><b>媒体传播</b><small>Press Kit / 采访 / 拍摄</small></article>
-          <article><span>08</span><b>现场执行</b><small>搭建 / 设备 / 排班 / 彩排</small></article>
-          <article><span>09</span><b>后续承接</b><small>Lead Capture / CRM / 销售跟进</small></article>
+        <div class="expo-workstream" aria-label="通用展会九类工作模块">
+          <article><span>01</span><b>品牌策略</b><small>定位 / 主题 / 信息层级</small></article>
+          <article><span>02</span><b>空间设计</b><small>Booth Layout / 动线</small></article>
+          <article><span>03</span><b>视觉识别</b><small>KV / 展墙 / 导视</small></article>
+          <article><span>04</span><b>宣传物料</b><small>Brochure / 邀请函</small></article>
+          <article><span>05</span><b>方案讲解</b><small>系统演示 / 技术 FAQ</small></article>
+          <article><span>06</span><b>活动物料</b><small>周边 / 证件 / 包装</small></article>
+          <article><span>07</span><b>媒体传播</b><small>Press Kit / 拍摄</small></article>
+          <article><span>08</span><b>现场执行</b><small>搭建 / 用电 / 人员</small></article>
+          <article><span>09</span><b>后续承接</b><small>Lead Capture / CRM</small></article>
         </div>
       </section>
-      <section class="expo-story" id="expo-visitor-route" aria-labelledby="expo-visitor-title">
-        <header><small>VISITOR JOURNEY / 信息层级</small><h3 id="expo-visitor-title">让客户从“看见展位”，走到“讨论需求”</h3><p>围绕现场照片所呈现的系统墙与设备陈列，采用场景、方案、产品和业务问题四个信息层次组织沟通。</p></header>
-        <div class="expo-visitor-map">
-          <article><span>01</span><h4>识别品牌与应用</h4><p>入口主视觉突出产品类别与使用领域，帮助客户判断是否值得停留。</p></article>
-          <article><span>02</span><h4>理解系统关系</h4><p>用系统展示墙连接光伏、逆变器、储能电池、发电机与家庭负载。</p></article>
-          <article><span>03</span><h4>看产品与提问题</h4><p>围绕设备陈列讨论容量、应用场景、安装与交付要求，技术问题交由产品或商务确认。</p></article>
-          <article><span>04</span><h4>形成后续沟通</h4><p>记录客户需求与下一步联系人，交给负责销售与履约的同事继续跟进。</p></article>
-        </div>
-      </section>
-      <div class="g-product-gallery expo-gallery" aria-label="真实海外储能展会照片">
-        <figure>${image("exhibition-booth-angle-redacted", "海外展台侧面，展示位置与物料层次，品牌标识已脱敏", "jpg")}<figcaption><b>展位视觉</b><span>主视觉、展位开放面与到访视角</span></figcaption></figure>
-        <figure>${image("exhibition-product-display-redacted", "储能系统与产品展示墙，品牌标识已脱敏", "jpg")}<figcaption><b>产品讲解</b><span>系统关系、设备组合与应用场景</span></figcaption></figure>
-      </div>
       <section class="expo-concept-lab" id="expo-concept-lab" aria-labelledby="expo-concept-heading">
-        <div class="expo-concept-heading">
-          <div><small>EXHIBITION / SPACE CONCEPT</small><h3 id="expo-concept-heading">展会空间策划｜先让人看懂，再邀请上手</h3><p>按照访客的观察距离组织信息：远处识别品牌、中距理解产品、近处体验动作、接待区完成需求沟通。M3 / Q3 展位方案作为独立的清洁电器项目策划呈现，与上方储能展会实拍分开。</p></div>
-          <div class="expo-concept-signal"><strong>6–10m</strong><span>品牌第一眼识别</span><b>→ 3–5m → 1m → 0.5m</b></div>
-        </div>
+        <div class="expo-concept-heading"><div><small>SPACE CONCEPT / HYPOTHETICAL BOOTH</small><h3 id="expo-concept-heading">概念展位：从远距识别走向商务讨论</h3><p>以下以假设的 10×20 ft B2B 展位解释分区，不是前面实际储能展会的尺寸或施工图。</p></div>
+          <div class="expo-concept-signal"><strong>6–10m</strong><span>远距识别示例</span><b>→ 3–5m → 1m → 0.5m</b></div></div>
         <div class="expo-space-map" id="expo-distance-route">
-          <div class="expo-space-map-header"><span>VISITOR JOURNEY / 访客视角</span><b>从外侧走向接待台</b></div>
-          <div class="expo-space-track" role="group" aria-label="按观展距离切换现场信息">
-            <button type="button" class="expo-space-stop is-active" data-expo-select="0" data-expo-summary="主背景板首先提供品牌与核心类别识别：6000 × 2400 mm。远处只呈现一个主题，不堆叠产品小字。" aria-pressed="true">
-              <small>01 / 远距</small><strong>6–10m</strong><span>品牌主视觉</span><em>3 秒判断这是哪里</em>
-            </button>
-            <button type="button" class="expo-space-stop" data-expo-select="1" data-expo-summary="M3 / Q3 两支易拉宝在 3–5 米的中距承担产品区分与场景解释；每款对应一个问题、一个产品作用。" aria-pressed="false">
-              <small>02 / 中距</small><strong>3–5m</strong><span>产品与场景</span><em>知道这里能解决什么</em>
-            </button>
-            <button type="button" class="expo-space-stop" data-expo-select="2" data-expo-summary="A3 体验操作牌在 1 米以内解释演示动作；A4 参数卡在 0.5–1 米帮助核对规格。产品接触、姿势与适用表面需要按真实操作展示。" aria-pressed="false">
-              <small>03 / 近距</small><strong>1m</strong><span>实际体验</span><em>近距离看清操作与证明</em>
-            </button>
-            <button type="button" class="expo-space-stop" data-expo-select="3" data-expo-summary="接待台以 0.5 米面对面交流为目标：先了解访客需求，再选择 B2B 洽谈或 B2C 产品咨询入口；经许可后完成扫码与下一步交接。" aria-pressed="false">
-              <small>04 / 台前</small><strong>0.5m</strong><span>接待与留资</span><em>形成后续联系</em>
-            </button>
-          </div>
-          <div class="expo-space-focus"><span>当前触点</span><p id="expo-selected-detail" aria-live="polite">主背景板首先提供品牌与核心类别识别：6000 × 2400 mm。远处只呈现一个主题，不堆叠产品小字。</p></div>
+          <div class="expo-space-map-header"><span>VISITOR JOURNEY / INFORMATION</span><b>按距离组织信息</b></div>
+          <div class="expo-space-track" role="group" aria-label="通用展位访客距离信息示例">
+            <button type="button" class="expo-space-stop is-active" data-expo-select="0" data-expo-summary="主背景墙在远距呈现业务领域与核心方案，内容密度应随场地与真实品牌调整。" aria-pressed="true"><small>01 / 远距</small><strong>6–10m</strong><span>品牌识别</span><em>知道这里做什么</em></button>
+            <button type="button" class="expo-space-stop" data-expo-select="1" data-expo-summary="两侧展示板分别介绍应用场景与系统方案，中距解释产品关系和客户问题。" aria-pressed="false"><small>02 / 中距</small><strong>3–5m</strong><span>应用与方案</span><em>看懂系统价值</em></button>
+            <button type="button" class="expo-space-stop" data-expo-select="2" data-expo-summary="A3 系统讲解牌和 A4 技术资料卡用于近距解释方案；关键技术信息须经专业人员确认。" aria-pressed="false"><small>03 / 近距</small><strong>1m</strong><span>技术解释</span><em>确认关键问题</em></button>
+            <button type="button" class="expo-space-stop" data-expo-select="3" data-expo-summary="接待区分类记录经销、采购与系统集成需求，在取得许可后安排下一步跟进。" aria-pressed="false"><small>04 / 接待</small><strong>0.5m</strong><span>商务咨询</span><em>建立后续联系</em></button>
+          </div><div class="expo-space-focus"><span>概念触点</span><p id="expo-selected-detail" aria-live="polite">主背景墙在远距呈现业务领域与核心方案，内容密度应随场地与真实品牌调整。</p></div>
         </div>
         <section class="expo-plan-board" id="expo-floorplan" aria-labelledby="expo-plan-title">
-          <div class="expo-plan-intro"><small>SPACE ZONING / CONCEPT LAYOUT</small><h4 id="expo-plan-title">展位空间设计｜让信息按距离出现</h4><p>主背景板负责远处吸引，M3 与 Q3 各自解释使用场景；中央体验区让访客看清实际操作，接待台把产品咨询和商务沟通衔接起来。</p><div class="expo-plan-legend"><span>品牌</span><span>产品</span><span>体验</span><span>咨询</span></div></div>
-          <div class="expo-plan-visual" role="img" aria-label="10乘20英尺展位的概念平面图：后方六米背景墙，中部为M3、Q3和体验区，前方为入口及接待">
+          <div class="expo-plan-intro"><small>SPACE ZONING / DESIGN EXAMPLE</small><h4 id="expo-plan-title">概念平面图：品牌、应用、讲解与接待</h4><p>主墙负责远距识别，左右两区解释场景和系统，中央进行专业讲解，前台承接业务咨询。</p><div class="expo-plan-legend"><span>品牌</span><span>应用</span><span>方案</span><span>咨询</span></div></div>
+          <div class="expo-plan-visual" role="img" aria-label="假设10乘20英尺B2B展位，后方主视觉，中部场景、系统与讲解，前方接待">
             <div class="expo-plan-dimensions"><span>CONCEPT / 10 × 20 FT</span><b>6.10m W × 3.05m D</b></div>
-            <div class="expo-plan-wall"><small>EXH-MAT-01 / 6m BACKDROP</small><strong>POWER EVERY MOVE</strong><span>品牌主视觉 · 远距离识别</span></div>
+            <div class="expo-plan-wall"><small>EXH-MAT-01 / BACKDROP</small><strong>B2B SOLUTIONS</strong><span>业务领域与核心方案</span></div>
             <div class="expo-plan-interior">
-              <div class="expo-plan-display"><small>M3 / PRODUCT ZONE</small><b>地面清洁</b><span>场景展示 · 3–5m</span></div>
-              <div class="expo-plan-demo"><small>DEMONSTRATION</small><b>TRY & SEE</b><span>实际操作 · 1m</span></div>
-              <div class="expo-plan-display"><small>Q3 / PRODUCT ZONE</small><b>浴室边角</b><span>产品教育 · 3–5m</span></div>
+              <div class="expo-plan-display"><small>APPLICATION ZONE</small><b>应用场景</b><span>中距解释客户任务</span></div>
+              <div class="expo-plan-demo"><small>SYSTEM BRIEFING</small><b>系统讲解</b><span>近距沟通技术问题</span></div>
+              <div class="expo-plan-display"><small>SOLUTION ZONE</small><b>系统方案</b><span>中距解释设备关系</span></div>
             </div>
-            <div class="expo-plan-front"><div class="expo-plan-entry"><b>↑ 访客动线</b><span>从通道进入</span></div><div class="expo-plan-reception"><small>EXH-MAT-06</small><b>接待与咨询</b><span>B2B / B2C 分流</span></div></div>
-          </div>
-          <p class="expo-plan-caption">10 × 20 ft 展位的空间分区概念；6m 背景墙与展位宽度配合，现场搭建以场地审批图纸为准。</p>
+            <div class="expo-plan-front"><div class="expo-plan-entry"><b>↑ 访客入口</b><span>通道视线</span></div><div class="expo-plan-reception"><small>EXH-MAT-06</small><b>商务咨询</b><span>渠道 / 采购 / 集成</span></div></div>
+          </div><p class="expo-plan-caption">假设展位概念，实际搭建须按主办方审批、场地、安全与用电条件确定。</p>
         </section>
       </section>
       <section class="expo-asset-studio" id="expo-asset-manifest" aria-labelledby="expo-asset-title">
-        <header><small>SPATIAL BRANDING / POSM</small><h3 id="expo-asset-title">六件物料，四层信息任务</h3><p>不把完整物料清单直接塞进表格，而是按照它们在展位中的角色呈现版式、阅读距离和对应规格。</p></header>
+        <header><small>EXAMPLE ASSET MANIFEST / POSM</small><h3 id="expo-asset-title">六种概念物料，四种阅读任务</h3><p>EXH-MAT-01～06 是理论设计示例，不代表此前展会的采购或印刷成果。</p></header>
         <div class="expo-asset-grid">
-          <article class="expo-asset-card expo-asset-wide"><div class="expo-asset-preview backdrop"><span>POWER EVERY MOVE</span><b>CLEANING MADE VISIBLE</b><i>M3 / Q3</i></div><div class="expo-asset-meta"><small>EXH-MAT-01 / BACKDROP</small><h4>展台主背景板</h4><p>远处优先显示品牌主张与核心品类，避免小参数夺走视觉焦点。</p><span>6000 × 2400 mm · 6–10m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>M3</b><span>地面清洁</span><i>双盘结构 / 使用场景</i></div><div class="expo-asset-meta"><small>EXH-MAT-02 / ROLL-UP A</small><h4>M3 场景易拉宝</h4><p>聚焦餐区硬地任务及双盘接地动作。</p><span>850 × 2000 mm · 3–5m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview rollup rollup-q3"><b>Q3</b><span>浴室边角</span><i>长柄 / 刷头角度</i></div><div class="expo-asset-meta"><small>EXH-MAT-03 / ROLL-UP B</small><h4>Q3 使用易拉宝</h4><p>说明长柄刷的站位、角度和接触位置。</p><span>850 × 2000 mm · 3–5m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview tabletop"><small>HOW TO TRY</small><b>握持 · 接地 · 推进</b><i>体验步骤</i></div><div class="expo-asset-meta"><small>EXH-MAT-04 / A3 GUIDE</small><h4>现场体验操作牌</h4><p>让访客在演示前看懂动作顺序与安全边界。</p><span>420 × 297 mm · 1m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview spec"><small>PRODUCT FACTS</small><b>M3</b><i>规格与适用说明</i></div><div class="expo-asset-meta"><small>EXH-MAT-05 / A4 CARD</small><h4>产品规格台卡</h4><p>近距回答参数、适用地面与操作问题。</p><span>210 × 297 mm · 0.5–1m</span></div></article>
-          <article class="expo-asset-card"><div class="expo-asset-preview reception"><b>WELCOME</b><span>LOOK · TALK · FOLLOW UP</span><i>扫码 · 咨询</i></div><div class="expo-asset-meta"><small>EXH-MAT-06 / RECEPTION</small><h4>接待台贴面与留资牌</h4><p>把 B2B 商务与 B2C 产品咨询分开引导，联系信息经许可记录。</p><span>1000 × 1000 mm 贴面 + A5 台牌</span></div></article>
+          <article class="expo-asset-card expo-asset-wide"><div class="expo-asset-preview backdrop"><span>BUSINESS SOLUTIONS</span><b>APPLICATION & SYSTEM</b><i>DISCOVER / CONNECT</i></div><div class="expo-asset-meta"><small>EXH-MAT-01 / BACKDROP</small><h4>主背景板</h4><p>远距突出业务领域与主张。</p><span>6000 × 2400 mm · 6–10m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>USE CASE</b><span>典型场景</span><i>客户问题 / 使用条件</i></div><div class="expo-asset-meta"><small>EXH-MAT-02 / ROLL-UP A</small><h4>应用场景展示板</h4><p>用场景说明方案价值。</p><span>850 × 2000 mm · 3–5m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview rollup"><b>SYSTEM</b><span>方案结构</span><i>组成 / 接口</i></div><div class="expo-asset-meta"><small>EXH-MAT-03 / ROLL-UP B</small><h4>系统方案展示板</h4><p>用结构图解释设备关系。</p><span>850 × 2000 mm · 3–5m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview tabletop"><small>HOW IT WORKS</small><b>场景 · 系统 · 配置</b><i>讲解步骤</i></div><div class="expo-asset-meta"><small>EXH-MAT-04 / A3 GUIDE</small><h4>系统讲解牌</h4><p>让专家讲解更有层次。</p><span>420 × 297 mm · 1m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview spec"><small>TECHNICAL FACTS</small><b>SPEC</b><i>规格与适配</i></div><div class="expo-asset-meta"><small>EXH-MAT-05 / A4 CARD</small><h4>技术规格台卡</h4><p>近距核实参数与适配条件。</p><span>210 × 297 mm · 0.5–1m</span></div></article>
+          <article class="expo-asset-card"><div class="expo-asset-preview reception"><b>LET'S TALK</b><span>DISCUSS · CONNECT</span><i>商务咨询</i></div><div class="expo-asset-meta"><small>EXH-MAT-06 / RECEPTION</small><h4>接待台与留资牌</h4><p>按 B2B 合作类型分类联络。</p><span>1000 × 1000 mm + A5 台牌</span></div></article>
         </div>
       </section>
       <section class="expo-activation-lab" id="expo-activation-program" aria-labelledby="expo-activation-heading">
-        <header><small>ON-SITE ACTIVATION / 活动设计</small><h3 id="expo-activation-heading">一次体验，三种传播内容</h3><p>品牌识别不是终点。现场活动围绕演示、沟通与可延展内容安排，让线下动作能衔接线上 Campaign 和后续客户跟进。</p></header>
+        <header><small>ACTIVATION / METHOD</small><h3 id="expo-activation-heading">现场活动：讲解、内容与需求承接</h3><p>以下为可迁移的活动形式，不是上方实际展会的执行清单。</p></header>
         <div class="expo-activation-grid">
-          <article><span>01 / DEMO</span><h4>现场产品体验</h4><p>M3 看双盘接地与推进，Q3 看杆长、刷头角度和边角触达。主持人先展示正确操作，再邀请访客按说明体验。</p><strong>体验牌 · 演示脚本 · 产品 FAQ</strong></article>
-          <article><span>02 / CONTENT</span><h4>可传播的内容片段</h4><p>设置不干扰动线的拍摄位，记录产品结构与动作。社媒、PR 和 Creator 使用同一套产品事实，人物拍摄与商业复用另按授权处理。</p><strong>照片位 · 短视频镜头 · 媒体资料</strong></article>
-          <article><span>03 / LEAD</span><h4>B2B / B2C 双路径接待</h4><p>客户咨询先问需求。经销商进入商务需求记录与销售跟进；个人用户进入产品咨询或许可订阅，不将扫码人数直接视为成交。</p><strong>接待话术 · 扫码入口 · 跟进分工</strong></article>
+          <article><span>01 / EXPLAIN</span><h4>方案介绍</h4><p>从应用场景进入系统组成，技术内容由专家确认。</p><strong>讲解脚本 · 系统图 · FAQ</strong></article>
+          <article><span>02 / CONTENT</span><h4>现场传播内容</h4><p>根据许可记录展位、系统图及专业讲解，注意肖像与素材用途。</p><strong>媒体资料 · 图片 · 视频</strong></article>
+          <article><span>03 / LEAD</span><h4>B2B 需求分流</h4><p>区分经销、采购、系统集成和后续商务问题。</p><strong>问题清单 · 表单 · CRM</strong></article>
         </div>
-        <div class="expo-activation-rhythm" aria-label="展会项目关键协作节点">
-          <div><small>展前 / 内容准备</small><b>KV、易拉宝、产品事实与预热邀约</b></div>
-          <div><small>展前 / 现场验收</small><b>搭建、通电、动线与扫码跨设备检查</b></div>
-          <div><small>展中 / 接待运营</small><b>演示排队、日常维护、需求记录与交接</b></div>
-          <div><small>展后 / 项目复盘</small><b>询盘跟进、内容复用、物料清点与项目总结</b></div>
+        <div class="expo-activation-rhythm">
+          <div><small>展前 / 准备</small><b>目标与受众、物料、邀约、展品检查</b></div>
+          <div><small>展前 / 验收</small><b>搭建、安全、用电、系统图、现场排班</b></div>
+          <div><small>展中 / 执行</small><b>专业讲解、访客交流、内容采集与记录</b></div>
+          <div><small>展后 / 跟进</small><b>商机分层、销售交接、内容复用与复盘</b></div>
         </div>
       </section>
-
       <section class="expo-experience-menu" id="expo-experience-menu" aria-labelledby="expo-experience-title">
-        <header><small>ON-SITE ACTIVATION × CONTENT DESIGN</small><h3 id="expo-experience-title">让一次体验，产生四种可延续的内容</h3><p>观众不只看产品：先观察真实动作，再提问、记录需求或自愿分享。每项活动都对应场景、现场物料、线上内容和后续负责人。</p></header>
+        <header><small>ACTIVITY DESIGN / GENERIC</small><h3 id="expo-experience-title">四种活动机制，服务不同 B2B 沟通需求</h3><p>可选的策划方法，不代表已实际举办。</p></header>
         <div class="expo-experience-grid">
-          <article class="expo-experience-card">
-            <div class="expo-experience-icon">01<span>DEMO</span></div><h4>90 秒场景演示</h4><p>M3 演示地面接触和连续推进；Q3 展示刷头角度与浴室边角。时长仅为活动脚本提案，不是产品清洁效率承诺。</p><dl><div><dt>现场</dt><dd>A3 操作牌＋主持人分步讲解</dd></div><div><dt>传播</dt><dd>Reels / Shorts 的动作特写</dd></div></dl>
-          </article>
-          <article class="expo-experience-card">
-            <div class="expo-experience-icon">02<span>ASK</span></div><h4>用户问题墙</h4><p>邀请访客选择清洁难题，现场记录产品适用条件与尚未解决的问题，交由产品和内容团队统一确认。</p><dl><div><dt>现场</dt><dd>问题卡、FAQ 台卡与讲解话术</dd></div><div><dt>传播</dt><dd>展后 FAQ 内容与社群问答</dd></div></dl>
-          </article>
-          <article class="expo-experience-card">
-            <div class="expo-experience-icon">03<span>SHARE</span></div><h4>体验视频拍摄位</h4><p>优先拍产品结构及操作动作；有人物出镜或用于商用传播时，须分别取得拍摄与复用许可。</p><dl><div><dt>现场</dt><dd>竖屏构图提示与拍摄同意说明</dd></div><div><dt>传播</dt><dd>现场短视频、Creator/PR 素材包</dd></div></dl>
-          </article>
-          <article class="expo-experience-card">
-            <div class="expo-experience-icon">04<span>CONNECT</span></div><h4>需求分流与会后跟进</h4><p>扫码选择经销合作、产品咨询或许可订阅。每类需求分别设置问题、资料与交接 Owner，不以扫码代替有效线索。</p><dl><div><dt>现场</dt><dd>接待 A5 台牌与分流问卷</dd></div><div><dt>传播</dt><dd>销售跟进、许可邮件与活动回顾</dd></div></dl>
-          </article>
-        </div>
-        <div class="expo-experience-close"><strong>从一次现场动作，延伸成一个传播周期</strong><span>邀请预热 → 产品体验 → 现场内容 → 用户问答 → 合规跟进</span></div>
+          <article class="expo-experience-card"><div class="expo-experience-icon">01<span>EXPLAIN</span></div><h4>专家系统讲解</h4><p>展示应用场景、系统架构与配置选择。</p><dl><div><dt>现场</dt><dd>技术图与 A3 讲解卡</dd></div><div><dt>传播</dt><dd>技术图解及 FAQ</dd></div></dl></article>
+          <article class="expo-experience-card"><div class="expo-experience-icon">02<span>ASK</span></div><h4>采购问题征集</h4><p>收集技术适配、交付和合作模式问题。</p><dl><div><dt>现场</dt><dd>问答卡与专家咨询</dd></div><div><dt>传播</dt><dd>解决方案文章和答疑</dd></div></dl></article>
+          <article class="expo-experience-card"><div class="expo-experience-icon">03<span>SHARE</span></div><h4>专业内容拍摄</h4><p>仅使用取得许可的讲解和展示画面。</p><dl><div><dt>现场</dt><dd>拍摄位、授权核验</dd></div><div><dt>传播</dt><dd>LinkedIn、PR 与展会回顾</dd></div></dl></article>
+          <article class="expo-experience-card"><div class="expo-experience-icon">04<span>CONNECT</span></div><h4>商务分流与跟进</h4><p>按照合作意向和阶段交给不同的销售负责人。</p><dl><div><dt>现场</dt><dd>接待表单与分层标签</dd></div><div><dt>传播</dt><dd>许可邮件与商务回访</dd></div></dl></article>
+        </div><div class="expo-experience-close"><strong>一次专业交流，连接后续业务动作</strong><span>邀请 → 系统讲解 → 答疑 → 内容复用 → 跟进</span></div>
       </section>
       <section class="expo-program expo-campaign-flight" id="expo-event-plan" aria-labelledby="expo-program-title">
-        <header><small>CAMPAIGN × OFFLINE × CRM</small><h3 id="expo-program-title">一次展会，三段传播与转化任务</h3><p>不把“到场人数”当作营销终点。展前建立目标客户预期，现场形成真实体验，会后按客户需求推进后续沟通。</p></header>
+        <header><small>FIELD MARKETING / PLAN</small><h3 id="expo-program-title">展前、现场、展后的整合协作</h3><p>通用传播和执行模型，与历史业务结果分开。</p></header>
         <div class="expo-flight-grid">
-          <article class="expo-flight-card"><div class="expo-flight-number">01</div><small>PRE-EVENT / 展前</small><h4>让对的人知道为什么来</h4>
-            <div class="expo-flight-channel"><b>线下准备</b><p>品牌主 KV、邀请函、六件物料、展品检查与现场动线规划</p></div>
-            <div class="expo-flight-channel online"><b>线上传播</b><p>社媒预热、EDM 邀约、官网信息页、商务定向联系</p></div>
-            <div class="expo-flight-outcome"><span>传播目标</span><strong>明确展会价值与到访理由</strong></div>
-          </article>
-          <article class="expo-flight-card"><div class="expo-flight-number">02</div><small>LIVE EVENT / 现场</small><h4>让品牌信息成为可验证体验</h4>
-            <div class="expo-flight-channel"><b>线下体验</b><p>分区导览、双产品 Demo、讲解话术、拍摄位与访客问题记录</p></div>
-            <div class="expo-flight-channel online"><b>线上互动</b><p>现场社媒内容、产品操作片段、媒体 Press Kit、Creator 内容接口</p></div>
-            <div class="expo-flight-outcome"><span>沟通目标</span><strong>让用户理解产品，再留下需求</strong></div>
-          </article>
-          <article class="expo-flight-card"><div class="expo-flight-number">03</div><small>POST-EVENT / 会后</small><h4>让一次接触进入持续对话</h4>
-            <div class="expo-flight-channel"><b>业务承接</b><p>按客户类型和需求分类线索，销售负责人处理跟进与报价问题</p></div>
-            <div class="expo-flight-channel online"><b>内容延续</b><p>许可邮件跟进、展会回顾、产品 FAQ、媒体与合作素材复用</p></div>
-            <div class="expo-flight-outcome"><span>复盘目标</span><strong>区分咨询、有效线索与后续进展</strong></div>
-          </article>
-        </div>
-        <div class="expo-flight-note"><b>协作交付</b><span>品牌 / 产品 / 设计 / 销售 / PR & Creator / CRM / 展会执行</span></div>
+          <article class="expo-flight-card"><div class="expo-flight-number">01</div><small>PRE-EVENT</small><h4>建立目标客户到访理由</h4><div class="expo-flight-channel"><b>线下</b><p>展位、物料、设备与专业接待准备</p></div><div class="expo-flight-channel online"><b>线上</b><p>LinkedIn、官网、许可邮件和商务预约</p></div><div class="expo-flight-outcome"><span>目的</span><strong>让合适客户找到展位</strong></div></article>
+          <article class="expo-flight-card"><div class="expo-flight-number">02</div><small>AT EVENT</small><h4>让客户理解系统方案</h4><div class="expo-flight-channel"><b>线下</b><p>场景讲解、设备展示与技术答疑</p></div><div class="expo-flight-channel online"><b>线上</b><p>获准的现场内容与媒体材料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>形成具体采购沟通</strong></div></article>
+          <article class="expo-flight-card"><div class="expo-flight-number">03</div><small>POST-EVENT</small><h4>把需求交接给业务负责人</h4><div class="expo-flight-channel"><b>线下</b><p>客户分类、专家答疑与销售跟进</p></div><div class="expo-flight-channel online"><b>线上</b><p>许可邮件、展会回顾与方案资料</p></div><div class="expo-flight-outcome"><span>目的</span><strong>区分线索与有效商机</strong></div></article>
+        </div><div class="expo-flight-note"><b>协作角色</b><span>市场 / 产品技术 / 销售 / 设计 / 执行供应商 / CRM</span></div>
       </section>
-      <section class="expo-collaboration" id="expo-team-handoff">
-        <div><small>CROSS-FUNCTIONAL DELIVERY / 协作结构</small><h3>展会不是一个部门的单独任务</h3><p>我参与市场传播、产品资料与客户沟通相关工作，现场项目需要品牌、产品技术、销售商务、物料供应和展会执行方在关键节点配合。</p></div>
+      <section class="expo-collaboration" id="expo-team-handoff"><div><small>CROSS-FUNCTIONAL SOP / METHOD</small><h3>谁负责什么，在哪个节点验收</h3><p>以下为通用协作模型，不表示本人曾独立负责这些职能的全部工作。</p></div>
         <div class="expo-handoff-rails">
-          <div><b>品牌与市场</b><span>场景主题、展位信息、传播物料</span></div>
-          <div><b>产品与技术</b><span>系统图、产品参数、演示说明</span></div>
-          <div><b>商务与销售</b><span>客户需求、报价条件、会后跟进</span></div>
-          <div><b>执行与供应商</b><span>展位搭建、运输、现场检查与撤展</span></div>
+          <div><b>市场与品牌</b><span>主题、视觉、传播、活动组织</span></div>
+          <div><b>产品与技术</b><span>架构、参数、演示内容审核</span></div>
+          <div><b>销售与商务</b><span>采购问题、客户分流与跟进</span></div>
+          <div><b>现场与供应商</b><span>搭建、安全、运输和人员安排</span></div>
         </div>
-        <details class="g-chart-disclosure" id="expo-handoff"><summary>查看展会项目交接与现场验收内容</summary><p>会前围绕展品清单、场地限制、物料版本、供应商交付和人员分工做检查；现场核对展示效果、设备安全、接待流程与异常处理；会后清点物料、整理客户沟通摘要、安排跟进人与复盘。跨境运输、签证、海关、设备认证及预算审批由相关负责人按目的地要求办理。</p></details>
-      </section>
-      <section class="g-story-note b2b-compare" id="b2b-scale-comparison" aria-label="任职期渠道推广成果">
-        <h3>海外渠道推广经历</h3>
-        <p>线下展会之外，我也通过 Google、LinkedIn、Facebook、Instagram 和邮件开展海外客户研究与分层触达。</p>
-        <div class="expo-results">
-          <article><span>月均潜在客户触达</span><strong>100+</strong><small>海外 B2B 客户开发</small></article>
-          <article><span>Facebook 账号粉丝规模</span><strong>400+ → 1,900+</strong><small>任职期不同阶段的规模记录</small></article>
-        </div>
-        <p><a href="#/data/b2b">查看海外 B2B 业务表现 ↗</a></p>
+        <details class="g-chart-disclosure" id="expo-handoff"><summary>展会执行 SOP 与交接核查</summary><p>展前核对场地与展品、图纸、审批、预算、人员和物流；现场核对安全、设备、导视、接待与数据许可；展后安排客户交接、授权素材归档、物料清点与效果复盘。</p></details>
       </section>
     `, "expo-project");
   }
