@@ -13,11 +13,11 @@ window.PORTFOLIO_SELECTED_WORK = {
   },
   "brand": {
     "label": "Brand Strategy / IMC · 品牌传播",
-    "title": "品牌传播｜产品价值、品牌屋与多触点表达",
+    "title": "品牌策略｜品牌屋、视觉与整合传播",
     "role": "参与品牌故事、产品价值表达和视觉物料评审，协同 PR、Creator、联合活动及品牌自有渠道。",
     "decision": "围绕餐区清洁、浴室边角与礼赠场景建立产品信息层级，再把同一品牌主张用于视觉、视频及媒体资料。",
     "output": "品牌屋、产品卖点视觉、联名活动素材和北美 PR 分发工作物。",
-    "highlight": "5 款产品 / 4 条产品线 · 品牌屋与传播作品",
+    "highlight": "五款产品、四条产品线 · 品牌屋与传播内容",
     "artifact": "查看品牌策略与内容资产",
     "chapter": "brand-positioning",
     "image": "brand-house",
