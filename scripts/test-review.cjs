@@ -97,7 +97,9 @@ const fs = require("fs"),
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
-    assert.equal(images.length, 16);
+    assert.equal(images.length, 14);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-1.webp"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-2.webp"]'), null);
     assert.equal(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'), null);
     assert.equal(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'), null);
     images.forEach((img) => {
