@@ -43,7 +43,7 @@
   }
 
   function brand() {
-    return section("用两种清洁任务讲清品牌定位", "美国市场 · 品牌屋与整合传播", `
+    return section("品牌定位与产品线传播", "美国市场 · 品牌屋与整合传播", `
       <div class="g-project-feature">
         <a href="assets/projects/brand-house.webp" target="_blank" rel="noopener noreferrer" aria-label="放大匿名品牌屋">${image("brand-house", "品牌屋总览，包含定位、四条产品线、目标人群和传播支柱")}</a>
         <div>
@@ -70,7 +70,7 @@
         <article><small>CHANNEL / SEASONAL & PR</small><h3>节庆与媒体传播</h3><p>节庆内容把清洁放进家庭故事；PR 用餐区黏污与浴室边角解释产品分工，并为每个场景匹配动作图和简明说明。</p></article>
       </div>
       <div class="g-story-note">
-        <h3>同一个品牌主张，三种具体交付</h3>
+        <h3>品牌传播素材与应用</h3>
         <ul>
           <li><a href="#/case/brand/brand-collaboration">联合抽奖海报</a>将家庭种植和清洁工具放进同一生活场景，交代奖品与参与时间。</li>
           <li><a href="#/case/brand/pr-project">北美新闻稿</a>按全屋清洁任务安排四条产品线，可核对 2026 年 5 月新闻稿栏目分发。</li>
@@ -78,7 +78,7 @@
         </ul>
       </div>
       <div class="g-story-note">
-        <h3>把用户反馈变成下一个故事</h3>
+        <h3>社群问题与后续选题</h3>
         <p>品牌故事从餐后硬地和浴室边角两个使用任务展开。下一轮选题时，从社群与客服的问题中找真实做法，核对在什么表面、用什么配件、哪一步卡住。共性问题优先补进 FAQ；有完整使用过程并取得授权的故事，进入创作者拍摄 Brief。</p>
         <p><a href="#/case/community">查看社群如何收集问题 ↗</a> · <a href="#/case/creative/video-projects">查看家庭场景如何转成镜头 ↗</a></p>
       </div>
@@ -100,7 +100,7 @@
     return `
       <details class="g-story-note v-supporting-evidence" id="launch-four-stages">
         <summary>四阶段传播逻辑 · 查看预热、首发与复盘</summary>
-        <h3>从预热到复盘｜新品上市传播节奏</h3>
+        <h3>M3 五月传播安排</h3>
         <p>从生活场景建立关注，再通过产品演示、上市内容及用户反馈，形成连续的营销节奏。</p>
         <ol class="v-stage-track" aria-label="新品上市传播的四段决策路径">
           <li><span class="v-stage-number">01</span><small>PREHEAT · 预热</small><h4>先识别问题</h4><p>餐后硬地场景、双盘结构、消费者疑问</p><b>阶段交付 · 场景与产品信息</b></li>
@@ -151,7 +151,7 @@
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
         <h3>五月上市协作｜内容、渠道与交付节奏</h3>
-        <p>围绕首发窗口，把产品核验、创意制作、广告准备、邮件触达、页面承接与数据复盘放进同一张营销排期图。我的主要交付是社媒内容计划、素材 Brief 和跨团队协调。</p>
+        <p>五月计划以社媒内容为主，列出 Brief、视觉与视频制作、审核、计划发布及复盘节点。Paid、PR、Creator 和 EDM 只展示需要配合的素材和时间，不代表由我负责投放或商业审批。</p>
         <section class="v-release-gantt" id="gtm-visual-schedule" aria-labelledby="v-release-heading">
           <header class="v-release-heading"><div><span>MARKETING DELIVERY / MAY 2026</span><h4 id="v-release-heading">2026 年 5 月｜M3 上市传播排期</h4></div><p>按周安排内容策划、KV 与视频制作、渠道素材准备和发布审核。可筛选社媒主责、渠道协同与业务支持。</p></header>
           <div class="v-gantt-legend" aria-label="排期图说明"><span><i class="v-legend-plan"></i>策略 / Brief</span><span><i class="v-legend-produce"></i>制作 / 准备</span><span><i class="v-legend-launch"></i>渠道放行</span><span><i class="v-legend-learn"></i>运营 / 复盘</span></div>
@@ -159,7 +159,7 @@
             <button type="button" data-gtm-focus="all" aria-controls="v-gantt-rows" aria-pressed="true">全部工作流 <b>6</b></button>
             <button type="button" data-gtm-focus="lead" aria-controls="v-gantt-rows" aria-pressed="false">内容主责 <b>1</b></button>
             <button type="button" data-gtm-focus="partner" aria-controls="v-gantt-rows" aria-pressed="false">渠道协同 <b>3</b></button>
-            <button type="button" data-gtm-focus="support" aria-controls="v-gantt-rows" aria-pressed="false">商业与验收 <b>2</b></button>
+            <button type="button" data-gtm-focus="support" aria-controls="v-gantt-rows" aria-pressed="false">其他部门接口 <b>2</b></button>
           </div>
           <p class="v-gantt-view-caption" aria-live="polite">正在展示 6 条工作流 · 2026 年 5 月营销传播计划</p>
           <p class="v-gantt-mobile-hint" aria-hidden="true">左右滑动排期图，可查看全部阶段 →</p>
@@ -365,8 +365,8 @@
           <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
         </div>
         <section class="v-content-map" id="campaign-content-matrix" aria-labelledby="v-content-heading">
-          <header><span class="v-section-kicker">CONTENT SYSTEM</span><h4 id="v-content-heading">八个内容支柱，在用户决策路径中各有位置</h4></header>
-          <div class="v-content-matrix" aria-label="八个内容支柱与四个传播阶段对应关系">
+          <header><span class="v-section-kicker">CONTENT SYSTEM</span><h4 id="v-content-heading">七类核心内容与一项品牌组合补充内容</h4></header>
+          <div class="v-content-matrix" aria-label="七类核心内容、一项辅助内容与四个传播阶段的对应关系">
             <div class="v-matrix-head"><b>内容支柱</b><span>认知</span><span>理解</span><span>行动</span><span>持续</span></div>
             <div class="v-matrix-row"><b>场景问题</b><i class="hit" aria-label="对应认知阶段">●</i><i>·</i><i>·</i><i>·</i></div>
             <div class="v-matrix-row"><b>情绪与品牌</b><i class="hit" aria-label="对应认知阶段">●</i><i>·</i><i>·</i><i>·</i></div>
@@ -900,12 +900,7 @@
   <article><span>03 / 设计与视频 · ASSET</span><h4>素材制作与版本</h4><p>制作 KV、轮播、演示镜头及渠道版本。</p><b>VERSION / REWORK</b></article>
   <article><span>04 / 渠道负责人 · RELEASE</span><h4>发布与商业承接</h4><p>按渠道核查链接、权限、发布和商业条件。</p><b>HANDOFF / RELEASE</b></article>
  </div>
- <div class="operations-issue-panel">
-   <div class="operations-issue-visual"><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品结构核对参考图" loading="lazy" decoding="async"><span>PRODUCT STRUCTURE / REFERENCE</span></div>
-   <div class="operations-issue-copy"><span>M3 / CREATIVE REVIEW</span><h4>CTA 遮挡双盘：一次具体的退回修改</h4>
-    <ol><li><b>发现</b><span>4:5 主视觉底部 CTA 侵占关键产品结构。</span></li><li><b>修订</b><span>调整 CTA 安全区，确保双盘完整露出。</span></li><li><b>验收</b><span>Feed / Story 分别检查产品外观、裁切与文字区域。</span></li></ol><a href="#/case/operations/asset-review">查看审核记录 ↗</a>
-   </div>
- </div>
+
 </section>
       <details class="operations-process-details"><summary>查看内容组排期与审核工作流程</summary><div class="g-project-list g-project-calendar-plan">
         <article><h3>选题与排期</h3><p>我从季度主推主题选定产品和场景，给 Facebook、Instagram 和 Group 分配内容任务，并确认每条内容的负责人和交付时间。</p></article>
@@ -914,18 +909,6 @@
         <article><h3>复盘与下月安排</h3><p>按平台看浏览、互动和反馈。把反复出现的产品问题补进 FAQ，把返工项写回审核清单和下一轮 Brief。</p></article>
       </div>
       </details>
-      <section class="operations-qa-showcase" id="operations-kv-review" aria-labelledby="operations-kv-review-heading">
-        <header><small>CAMPAIGN ASSET REVIEW / M3</small><h3 id="operations-kv-review-heading">主视觉审核：R2 到 R4 的三次调整</h3><p>最初的 CTA 挡住了双盘，后续改用官方右视图，再分别校对横竖版。</p></header>
-        <div class="operations-qa-track" role="list">
-          <article role="listitem" class="needs-rework"><small>R2 / FIRST DRAFT</small><h4>双盘被 CTA 遮挡</h4><p>4:5 主图的底部按钮压住了双盘；9:16 版本没充分展示辅助握把。</p><span>退回调整版式</span></article>
-          <article role="listitem" class="structure-checked"><small>R3 / PRODUCT STRUCTURE</small><h4>改用官方右视图</h4><p>黄色 D 型手柄、黑色辅助握把和双盘全部进入画面；竖版继续调整安全区。</p><span>外观复核</span></article>
-          <article role="listitem" class="exported"><small>R4 / ASSET DELIVERY</small><h4>横竖版分别导出</h4><p>4:5 与 9:16 独立输出，并完成文件尺寸及哈希校验。</p><span>视觉文件完成 · 发布签核另行确认</span></article>
-        </div>
-        <div class="operations-qa-output">
-          <figure><img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘拖把官方外观图，作为结构审核参考" loading="lazy" decoding="async"><figcaption>用于审核的官方产品外观</figcaption></figure>
-          <div><span>我负责的内容工作</span><strong>Brief、视觉反馈、渠道版本核对</strong><p>产品事实由产品同事核验，最终发布条件由对应负责人确认。</p></div>
-        </div>
-      </section>
       <section class="operations-calendar-board" id="operations-content-calendar" aria-labelledby="operations-content-calendar-heading">
         <header><small>CONTENT CALENDAR / MAY 2026 · PLANNING</small><h3 id="operations-content-calendar-heading">M3 五月内容制作排期</h3><p>同一主题下，社媒规划与设计、视频、产品审核按时间推进。</p></header>
         <div class="operations-calendar-rows" role="list">
@@ -936,21 +919,16 @@
         </div>
       </section>
       <div class="g-story-note" id="asset-review">
-        <h3>M3 主视觉｜审核与修改</h3>
-        <ul>
-          <li><strong>发现</strong> 4:5 版主视觉底部 CTA 框遮挡并裁切了双盘。静态首图的任务是让人看懂产品结构，这一版需要返工。</li>
-          <li><strong>修改与复核</strong> 制作样例保留产品原图，调整版式和 CTA 区域。后续版本的产品外观已复核，最终品牌与产品签核待确认。</li>
-          <li><strong>写回交付清单</strong> Feed 和 Story 分别查裁切、安全区和关键结构。涉及运行的表达回到连续实拍，由产品团队核对对应说明。</li>
-        </ul>
-        <p class="g-chart-note">M3 主视觉 · 审核退回与修订记录</p>
-        <a class="featured-detail" href="#/case/gtm/english-brief">查看对应英文 Brief ↗</a>
+        <h3>社媒内容与制作交接</h3>
+        <p>我负责季度主题、月度内容排期、素材 Brief 与内容审核。设计和视频团队根据平台要求制作不同尺寸；产品同事核对产品结构及功能说明。我汇总修改意见、确认内容版本，并与渠道负责人安排素材交接。</p>
+        <p><a class="featured-detail" href="#/case/gtm/english-brief">查看 M3 英文内容 Brief ↗</a></p>
       </div>
       <div class="g-story-note" id="cross-functional-governance">
         <h3>横向推进的三件事：催节点、收反馈、对齐口径</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>节点</small><h3>谁迟交，影响哪一步</h3><p>把素材输入、Owner、版本和截止时间写进工作单。产品事实尚未签核，相关视频、A+ 或页面不能直接放行；协调方提出替代交付和更新时点。</p></article>
-          <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>例如 M3 主视觉 CTA 遮挡双盘，返工要求是让关键结构完整可见，而非笼统反馈“再高级一点”。图片由制作方修改，内容侧复核。</p></article>
-          <article><small>口径</small><h3>同一 Claim，只能有一个已批准版本</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
+          <article><small>反馈</small><h3>用可复现的问题退回素材</h3><p>通过 Brief 指出产品信息、画面内容和渠道规格中的具体问题，设计与视频同事负责修改，内容组复核并更新交付版本。</p></article>
+          <article><small>口径</small><h3>产品参数须经产品同事确认</h3><p>社媒、商品页、渠道培训与 PR 表达可因受众不同而调整顺序，但参数、适用条件和权利要求由各自事实/审批 Owner 确认。</p></article>
           <article><small>升级</small><h3>不能用赶进度替代授权</h3><p>对于产品信息、素材权利和购买承接，使用 HOLD / REWORK 管理异常；社媒内容组负责 Brief 和审核，其他业务由对应负责人放行。</p></article>
         </div>
       </div>
