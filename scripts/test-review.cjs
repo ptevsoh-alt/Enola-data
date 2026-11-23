@@ -93,9 +93,9 @@ const fs = require("fs"),
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
-    assert.equal(images.length, 18);
-    assert.ok(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'));
-    assert.ok(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'));
+    assert.equal(images.length, 16);
+    assert.equal(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'), null);
     images.forEach((img) => {
       const url = new URL(img.getAttribute("src"), w.location.href);
       const relative = path.relative("/Enola-data", url.pathname).replace(/^\//, "");
@@ -109,7 +109,7 @@ const fs = require("fs"),
     assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 3);
     assert.equal(b2b.getAttribute("aria-pressed"), "true");
     d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
-    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 18);
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 16);
   });
   check("review page shows four real results without evidence-status visual noise", () => {
     const metrics = [...d.querySelectorAll(".review-outcome-card strong")].map(el => el.textContent);
