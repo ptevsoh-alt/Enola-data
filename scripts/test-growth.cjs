@@ -291,7 +291,8 @@ const fs = require("fs"),
     for (const phrase of ["以下以假设的", "不是前面实际", "不是此前", "不代表已实际举办", "以下为可迁移", "工作样例"]) {
       assert.equal(exhibitionCopy.includes(phrase), false, "Explanatory exhibition wording resurfaced: " + phrase);
     }
-    assert.ok(d.querySelector("#b2b-scale-comparison").textContent.includes("不是单场展会"));
+    assert.ok(d.querySelector("#b2b-scale-comparison h3").textContent.includes("同期海外客户开发"));
+    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
     for (const token of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!d.querySelector("#expo-project").textContent.includes(token), "Exhibition branding leakage: "+token);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
     assert.equal(d.querySelectorAll("#expo-experience-menu .expo-experience-card").length, 4);
