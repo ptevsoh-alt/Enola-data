@@ -51,7 +51,7 @@
           <p>面向美国市场的家用电动清洁工具，优先解决餐区硬地黏污，以及浴缸内沿、墙砖接缝和边角的刷洗问题。产品由电机带动清洁头，用户控制握持位置、角度和移动路径。</p>
           <h3>按三类购买任务组织沟通</h3>
           <p>餐区清洁者关注扫过后仍然粘脚的脚印和溅渍；浴室清洁者关注刷头够不到的内沿与接缝；替家人购买的人，需要先确认握持、转向、换刷头和适用表面。</p>
-          <p><a href="#/case/brand/seasonal-creative-gallery">查看父亲节与黑五视觉创意 ↗</a> · <a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
+          <p><a href="#/case/brand/promotion-campaign-kv">查看黑五、母亲节与父亲节 Campaign KV ↗</a> · <a href="#/case/brand/brand-collaboration">查看联合抽奖海报 ↗</a> · <a href="#/case/brand/pr-project">查看北美新闻稿分发 ↗</a></p>
         </div>
       </div>
       <div class="g-project-list">
@@ -570,31 +570,97 @@
   }
 
   function promotionCreative() {
-    return section("节庆促销与 Campaign KV｜营销视觉方案", "黑五、母亲节和父亲节传播主题的视觉与渠道内容安排", `
-      <div class="promotion-kv-grid" id="promotion-kv-gallery">
-        <figure class="promotion-kv-card promotion-kv-black">
-          <div class="promotion-kv-art promotion-kv-black-art"><small>BLACK FRIDAY / SEASONAL CAMPAIGN</small><strong>THE CLEANER<br>HOLIDAY</strong><span>PRODUCT BENEFITS · SEASONAL OFFER</span><b>Explore the Collection</b></div>
-          <figcaption><h4>黑五促销 KV｜信息层级</h4><p>促销主题、主推品类、优惠规则与行动入口各有位置；具体折扣根据活动审批版本填写。</p><small>活动版式提案 · 非历史发布海报</small></figcaption>
-        </figure>
-        <figure class="promotion-kv-card promotion-kv-mother">
-          <div class="promotion-kv-art promotion-kv-mother-art"><small>MOTHER'S DAY / GIFT CAMPAIGN</small><strong>A LITTLE CARE<br>GOES A LONG WAY</strong><span>GIFTS FOR EVERYDAY MOMENTS</span><b>Discover Gift Ideas</b></div>
-          <figcaption><h4>母亲节礼赠 KV｜情感与产品</h4><p>以送礼关系切入，再用家庭场景和产品利益解释选择理由；邮件、Feed 与活动页延续同一主题。</p><small>活动版式提案 · 英文营销内容</small></figcaption>
-        </figure>
-        <figure class="promotion-kv-card promotion-kv-father">
-          <div class="promotion-kv-art promotion-kv-father-art"><small>FATHER'S DAY / CONTENT CAMPAIGN</small><strong>FOR THE HANDS<br>THAT ALWAYS HELP</strong><span>EVERYDAY CARE · FAMILY STORY</span><b>See the Story</b></div>
-          <figcaption><h4>父亲节 Campaign｜主题视觉</h4><p>家庭关怀先建立情境，产品使用内容负责解释实际价值；配套图文、Reels 与社群互动选题。</p><small>传播主题版式 · 配套内容日历</small></figcaption>
-        </figure>
-      </div>
+    return section("节庆促销 Campaign KV｜三组视觉方案", "Black Friday · Mother's Day · Father's Day", `
+      <section class="promotion-campaign-editorial" id="promotion-kv-gallery" aria-labelledby="promotion-kv-heading">
+        <header class="promotion-kv-header">
+          <div><small>SEASONAL CREATIVE / MARKETING KV</small><h3 id="promotion-kv-heading">节庆促销视觉设计</h3>
+          <p>黑五聚焦节日采购与家居焕新；母亲节以日常关怀进入礼赠场景；父亲节结合家人关系与产品使用。视觉取自项目既有产品和生活场景素材。</p></div>
+          <span class="promo-visual-status">CREATIVE STUDIES / PORTFOLIO</span>
+        </header>
+        <div class="promotion-format-switch" role="group" aria-label="切换促销主视觉画幅">
+          <span>画幅预览</span>
+          <button type="button" data-promo-ratio="feed" aria-pressed="true">Feed · 4:5</button>
+          <button type="button" data-promo-ratio="story" aria-pressed="false">Story · 9:16</button>
+          <button type="button" data-promo-ratio="hero" aria-pressed="false">Hero · 16:9</button>
+        </div>
+        <div class="promotion-kv-grid" data-promo-layout="feed">
+          <figure class="promotion-kv-card promotion-kv-black">
+            <div class="promotion-kv-art promotion-kv-black-art" role="img" aria-label="黑五节庆主题 KV，清洁产品照片与英文活动文案">
+              <img class="promo-kv-scene" src="assets/projects/mop-kv-detail.webp" alt="清洁工具产品细节素材" loading="lazy" decoding="async">
+              <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
+              <div class="promo-kv-content" lang="en"><div class="promo-kv-edition"><span>HOLIDAY / 01</span><span>HOME CARE EDITION</span></div>
+                <div class="promo-kv-main"><small>BLACK FRIDAY / SEASONAL CAMPAIGN</small><strong><span>MAKE ROOM</span><span>FOR WHAT</span><span>MATTERS.</span></strong><p>Everyday cleaning. Thoughtful choices.</p></div>
+                <div class="promo-kv-action"><span>EXPLORE THE COLLECTION</span><i aria-hidden="true">↗</i></div>
+              </div>
+            </div>
+            <figcaption><small>THE HOLIDAY HOME EDIT</small><h4>Black Friday｜节日采购</h4><p>用家居焕新与产品价值组织主视觉、品类组合及选购入口。优惠数字留给实际审批后的版本。</p><div class="promo-kv-tags">Facebook / Landing / EDM</div></figcaption>
+          </figure>
+          <figure class="promotion-kv-card promotion-kv-mother">
+            <div class="promotion-kv-art promotion-kv-mother-art" role="img" aria-label="母亲节礼赠主题 KV，家庭场景照片和英文主张">
+              <img class="promo-kv-scene" src="assets/projects/pr-home-scene.webp" alt="既有家居清洁家庭场景素材" loading="lazy" decoding="async">
+              <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
+              <div class="promo-kv-content" lang="en"><div class="promo-kv-edition"><span>HOLIDAY / 02</span><span>HOME CARE EDITION</span></div>
+                <div class="promo-kv-main"><small>MOTHER'S DAY / GIFT CAMPAIGN</small><strong><span>A LITTLE</span><span>CARE GOES</span><span>A LONG WAY.</span></strong><p>For all the moments that matter.</p></div>
+                <div class="promo-kv-action"><span>DISCOVER GIFT IDEAS</span><i aria-hidden="true">↗</i></div>
+              </div>
+            </div>
+            <figcaption><small>GIFT OF EVERYDAY CARE</small><h4>Mother's Day｜家庭礼赠</h4><p>以关怀与家庭场景承接礼赠需求，关联英文邮件主题、内容轮播与产品使用教育。</p><div class="promo-kv-tags">Instagram / Facebook / EDM</div></figcaption>
+          </figure>
+          <figure class="promotion-kv-card promotion-kv-father">
+            <div class="promotion-kv-art promotion-kv-father-art" role="img" aria-label="父亲节家庭主题 KV，清洁产品使用画面与英文主张">
+              <img class="promo-kv-scene" src="assets/projects/vacuum-video-frame.webp" alt="已收录清洁产品操作视频的画面" loading="lazy" decoding="async">
+              <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
+              <div class="promo-kv-content" lang="en"><div class="promo-kv-edition"><span>HOLIDAY / 03</span><span>HOME CARE EDITION</span></div>
+                <div class="promo-kv-main"><small>FATHER'S DAY / FAMILY CAMPAIGN</small><strong><span>FOR THE</span><span>HANDS THAT</span><span>ALWAYS HELP.</span></strong><p>Make everyday moments count.</p></div>
+                <div class="promo-kv-action"><span>SEE GIFT IDEAS</span><i aria-hidden="true">↗</i></div>
+              </div>
+            </div>
+            <figcaption><small>THOUGHTFUL GIFTS FOR DAD</small><h4>Father's Day｜家人关怀</h4><p>借助产品演示画面和人物关系建立主题，延伸到 Reels、社群讨论与父亲节内容日历。</p><div class="promo-kv-tags">Facebook / Reels / Group</div></figcaption>
+          </figure>
+        </div>
+      </section>
+      <section class="promotion-channel-showcase" id="promotion-channel-adaptations" aria-labelledby="promo-channel-heading">
+        <header><small>CAMPAIGN APPLICATION / CHANNEL VERSIONS</small><h3 id="promo-channel-heading">视觉怎样延伸到不同渠道</h3><p>将同一主题按平台版位调整开场信息、场景比例、产品解释和行动入口。</p></header>
+        <div class="promotion-channel-mockups">
+          <article class="promo-device-preview">
+            <div class="promo-preview-label">FACEBOOK / INSTAGRAM FEED</div>
+            <div class="promo-social-mock">
+              <div class="promo-social-bar"><span class="promo-avatar" aria-hidden="true"></span><span>HOME CARE<small>Seasonal Campaign</small></span><span aria-hidden="true">···</span></div>
+              <div class="promo-social-photo"><img src="assets/projects/mop-kv-detail.webp" alt="用于社媒内容预览的产品场景" loading="lazy"><strong>THE HOLIDAY<br>HOME EDIT</strong></div>
+              <div class="promo-social-caption"><span aria-hidden="true">♡　↗　▣</span><p>Scene → benefit → next step</p></div>
+            </div>
+            <h4>Social Feed / Reels</h4><p>从家庭清洁场景或一个具体问题进入，重点呈现产品动作和核心利益。</p>
+          </article>
+          <article class="promo-device-preview">
+            <div class="promo-preview-label">LIFECYCLE / EDM</div>
+            <div class="promo-email-mock">
+              <div class="promo-email-chrome"><span>To: subscribers</span><span>Subject: A little extra care</span></div>
+              <div class="promo-email-heading"><small>MOTHER'S DAY</small><strong>A LITTLE CARE<br>GOES A LONG WAY.</strong></div>
+              <img src="assets/projects/pr-home-scene.webp" alt="用于邮件首屏预览的家庭场景" loading="lazy">
+              <div class="promo-email-bottom"><span>GIFT IDEAS</span><i>View the collection</i></div>
+            </div>
+            <h4>EDM / Email</h4><p>礼赠主题与邮件标题、主视觉、产品内容和 CTA 保持一致，按受众和发送节奏组织。</p>
+          </article>
+          <article class="promo-device-preview">
+            <div class="promo-preview-label">CAMPAIGN / LANDING PAGE</div>
+            <div class="promo-landing-mock">
+              <div class="promo-landing-nav"><span>HOME CARE</span><span>Explore　 ·　 About</span></div>
+              <div class="promo-landing-hero"><div><small>SEASONAL CAMPAIGN</small><strong>FOR THE HANDS<br>THAT ALWAYS HELP.</strong><span>EXPLORE GIFT IDEAS →</span></div>
+                <img src="assets/projects/vacuum-video-frame.webp" alt="用于活动页面预览的清洁工具使用场景" loading="lazy"></div>
+              <div class="promo-landing-trail" aria-hidden="true"><span></span><span></span><span></span></div>
+            </div>
+            <h4>Landing Page</h4><p>首屏解释节庆主题与用户价值，实际销售页面再承接产品信息和活动细则。</p>
+          </article>
+        </div>
+      </section>
       <div class="g-story-note" id="promotion-campaign-matrix">
-        <h3>促销视觉与整合传播的对应关系</h3>
-        <div class="operations-table-scroll"><table class="operations-sample-table"><thead><tr><th>内容资产</th><th>传播任务</th><th>主要信息</th><th>渠道安排</th></tr></thead>
-          <tbody>
-            <tr><td>Campaign KV</td><td>活动认知</td><td>主题、场景、时间和确认后的优惠</td><td>Facebook / Instagram / 活动页</td></tr>
-            <tr><td>产品轮播 / Reels</td><td>产品理解</td><td>使用情境、功能利益、操作镜头</td><td>Feed / Reels / Creator</td></tr>
-            <tr><td>EDM 与活动页面</td><td>转化承接</td><td>受众、主推产品、CTA、有效活动规则</td><td>Email / Shopify</td></tr>
-            <tr><td>UGC / Group</td><td>参与与反馈</td><td>提问、教程、互动机制和可使用素材</td><td>Facebook Group</td></tr>
-          </tbody></table></div>
-        <p><a href="#/case/social/fathers-day-calendar">父亲节内容日历 ↗</a> · <a href="#/case/crm/crm-campaign-email-plan">母亲节 EDM 方案 ↗</a></p>
+        <h3>活动内容与传播角色</h3>
+        <div class="operations-table-scroll"><table class="operations-sample-table"><thead><tr><th>节点</th><th>人群与创意</th><th>内容重点</th><th>渠道任务</th></tr></thead><tbody>
+          <tr><td>Black Friday</td><td>家庭采购与产品比较</td><td>品类组合、使用场景、确认后的活动规则</td><td>Social / Paid / EDM / Landing</td></tr>
+          <tr><td>Mother's Day</td><td>家庭礼赠与日常关怀</td><td>情感主题、生活场景、礼赠选择</td><td>Social / Email / Product</td></tr>
+          <tr><td>Father's Day</td><td>父亲节礼赠与家庭互动</td><td>人物故事、产品动作、社群参与</td><td>Feed / Reels / Facebook Group</td></tr>
+        </tbody></table></div>
+        <p><a href="#/case/social/fathers-day-calendar">父亲节内容日历 ↗</a> · <a href="#/case/crm/crm-campaign-email-plan">母亲节 EDM 策划 ↗</a> · <a href="#/case/gtm/campaign-architecture">IMC / Campaign 策略 ↗</a></p>
       </div>
     `, "promotion-campaign-kv");
   }
