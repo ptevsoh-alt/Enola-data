@@ -38,7 +38,7 @@
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
   };
   const workDetails = {
-    gtm: ["上市规划先明确美国市场、五月窗口和可售条件。价格、库存、支付和履约由商业及供应链确认。", "围绕餐后硬地设置传播主张，确定主视觉、连续演示和 FAQ 分别回答的问题，并把要求写入 Brief。", "按预热、首发、放量、收尾安排社媒内容和跨渠道依赖；四渠道分别由电商、站点、海外渠道和社媒负责人验收，不把横向协调误写成管理四个团队。", "上市计划设置 D7 / D30 两个复盘节点：首周检查内容与链接表现，月度关注订单、售后及用户反馈，形成下一轮传播动作。"],
+    gtm: ["上市规划先明确美国市场、五月窗口和可售条件。价格、库存、支付和履约由商业及供应链确认。", "围绕餐后硬地设置传播主张，确定主视觉、连续演示和 FAQ 分别回答的问题，并把要求写入 Brief。", "按预热、首发、放量、收尾安排社媒内容和跨渠道依赖，对接电商、站点、海外渠道与社媒负责人完成素材审核。", "上市计划设置 D7 / D30 两个复盘节点：首周检查内容与链接表现，月度关注订单、售后及用户反馈，形成下一轮传播动作。"],
     brand: ["统一品牌主张、用户利益和产品事实。", "梳理 Brand House、Message House 与视觉表达。", "按 Social、PR、Creator 和品牌合作活动分配传播任务。", "审核脚本、视觉与跨渠道信息一致性。"],
     social: ["制定季度传播主题与月度内容日历。", "围绕演示、家庭场景、教程、FAQ 和 UGC 规划栏目。", "按 Facebook、Instagram 与 Group 分配平台角色。", "结合触达、互动、点击和社群反馈调整选题。"],
     operations: ["确定季度目标、月度内容与活动排期。", "拆分文案、设计、视频、产品审核和发布任务。", "组织创意评审、脚本审核与视觉检查。", "开展周 / 月复盘，将问题写回 Brief 和审核清单。"],
@@ -264,7 +264,7 @@
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
     seo: "完成 Halloween 英文主指南、细分专题的搜索意图、内容结构和内部链接规划。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
-    creative: "以节庆品牌影片、演示短视频及 Creator 内容说明创意策划、脚本、画面审核和渠道适配；播放素材只是现有案例的一部分。",
+    creative: "负责节庆品牌影片、演示短视频及 Creator 内容的创意策划、脚本、画面审核和渠道适配。",
     crm: "策划节庆英文邮件、用户分组及购物旅程中的触发和退出规则，连接 Shopify 商品与内容信息。",
     creator: "负责美国 Creator 的筛选、邀约、议价、寄样和脚本审核，跟进内容交付与素材许可。",
   };
@@ -299,10 +299,10 @@
     ["01","GTM / 新品上市","从家庭清洁任务选择主推卖点，安排产品证明、上市节奏与多渠道物料。","#/case/gtm/gtm-value-to-launch","M3 上市策略与跨团队排期"],
     ["02","IMC / Campaign","把一个 Campaign 主张拆为 Social、Paid、PR / Creator、EDM 与商品页各自的任务。","#/case/gtm/campaign-architecture","Campaign 品牌屋与八条传播工作流"],
     ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
-    ["04","Project / Delivery","负责社媒小组的项目排期、创意审核和交付协作，用实际返工案例说明取舍。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
+    ["04","Project / Delivery","负责社媒小组的季度主题、月度日历、项目排期及创意审核。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
     ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
-    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本和镜头审核，节庆视频为其中部分案例。","#/case/creative/video-projects","节庆叙事 · 产品演示 · Creator 内容"],
-    ["07","海外展会策划","参与海外储能展会的展位规划、品牌物料准备、现场产品介绍和客户需求跟进。","#/case/b2b/expo-project","真实参展照片 · 海外客户开发"],
+    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本、镜头及内容审核。","#/case/creative/video-projects","节庆叙事 · 产品演示 · Creator 内容"],
+    ["07","海外展会策划","参与海外储能展会的展位规划、品牌物料准备、现场产品介绍和客户需求跟进。","#/case/b2b/expo-project","展会策划 · 海外客户开发"],
   ];
 
   function featuredCard(id, item) {
@@ -474,7 +474,7 @@
       );
   }
   function flow(c) {
-    return `<ol class="strategy-flow" aria-label="${esc(c.subtitle)}策略流程">${names[c.id].map((n, i) => `<li><span>0${i + 1}</span><h3>${esc(P.caseNarratives[c.id]?.stages[i]?.title || n)}</h3><p>${esc(P.caseNarratives[c.id]?.stages[i]?.detail || P.caseNarratives[c.id]?.stages[i]?.body || ["确认目标、输入与证据状态", "明确选择依据及优先级", "记录负责人、依赖与验收条件", "核对事实、权限并明确下一步"][i])}</p></li>`).join("")}</ol>`;
+    return `<ol class="strategy-flow" aria-label="${esc(c.subtitle)}策略流程">${names[c.id].map((n, i) => `<li><span>0${i + 1}</span><h3>${esc(P.caseNarratives[c.id]?.stages[i]?.title || n)}</h3><p>${esc(P.caseNarratives[c.id]?.stages[i]?.detail || P.caseNarratives[c.id]?.stages[i]?.body || ["确定目标与内容需求", "明确选择依据及优先级", "记录负责人、依赖与验收条件", "核对事实、权限并明确下一步"][i])}</p></li>`).join("")}</ol>`;
   }
   function brandHouse() {
     return `<div class="brand-house"><div class="house-roof"><small>BRAND PROMISE / 价值主张结构</small><h3>从产品能力，走向用户的生活价值</h3></div><div class="house-pillars"><div><b>用户任务</b><p>使用场景与购买顾虑</p></div><div><b>产品价值</b><p>特征 → 利益 → 证明</p></div><div><b>可信表达</b><p>确认事实与适用限制</p></div></div><div class="house-base">品牌定位 → 产品事实 → PMM 解释 → 渠道 Brief</div></div><div class="channel-grid">${[
@@ -493,7 +493,7 @@
     return `<div class="rights-grid">${[
       [
         "策略与筛选",
-        "合作目标、目标市场、受众适配、内容质量、表达可信度；不以粉丝量代替影响力判断。",
+        "综合合作目标、目标市场、受众匹配度、内容质量与互动表现筛选创作者。",
       ],
       [
         "合作流程",

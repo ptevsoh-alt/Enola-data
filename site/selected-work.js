@@ -48,7 +48,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "title": "品牌视频与社媒创意｜Campaign、产品演示、Creator",
     "role": "参与品牌宣传片、节庆视频、产品演示和 Creator 内容的创意策划、脚本审核与画面调整。",
     "decision": "感恩节以家庭餐叙与感谢切入，圣诞节以日常照料承接品牌情感；KOL / Creator 竖屏内容聚焦真实使用情境与产品动作。",
-    "output": "品牌视频、产品演示与 Creator 内容的创意策划、脚本和制作审核案例；当前影像仅为部分工作物。",
+    "output": "品牌视频、产品演示与 Creator 内容的创意策划、脚本和制作审核。",
     "highlight": "品牌影片 · 产品演示 · Creator 内容",
     "artifact": "查看视频创意与产品演示",
     "chapter": "video-projects"
@@ -59,7 +59,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "role": "参与储能展会展位策划、展墙与产品展示内容、物料准备、现场客户沟通及商务跟进。",
     "decision": "按展会现场陈列与目标客户需求准备品牌画面、产品资料和讲解内容，现场整理采购与合作问题。",
     "output": "储能行业展会传播、系统展示与客户沟通；B2B 展会品牌与空间设计。",
-    "highlight": "真实参展记录 · 展会传播与 B2B 客户开发",
+    "highlight": "展位策划 · 展会传播与 B2B 客户开发",
     "artifact": "查看展会与市场活动",
     "chapter": "expo-project",
     "image": "exhibition-booth-overview-redacted",
