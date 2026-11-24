@@ -74,7 +74,7 @@ async function screenshot(label){
   await send("Page.enable");await send("Runtime.enable");
   const report={date:"2026-11-24",screens:[],issues:[],ratio:[]};
   for(const [width,height] of [[1440,980],[390,844]]){
-    for(const name of ["cases",...cases,"experience","capabilities"]){
+    for(const name of ["cases",...cases.map(id=>"case/"+id),"experience","capabilities"]){
       console.log("VISUAL_ROUTE_BEGIN",width,name);
       const r=await navigate(port,name,width,height);report.screens.push({route:name,width,height,...r});
       console.log("VISUAL_ROUTE_DONE",width,name,r.imageCount,r.overflow,r.title.slice(0,55));
