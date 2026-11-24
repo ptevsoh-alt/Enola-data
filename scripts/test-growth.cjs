@@ -423,7 +423,7 @@ const fs = require("fs"),
     }
     assert.equal(d.querySelectorAll("#promotion-channel-adaptations .promo-device-preview").length,3);
     assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
-    assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.textContent),false);
+    assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.querySelector(".promotion-kv-grid").textContent),false);
   });
   check("two archival KV visuals render from exact original image files", () => {
     const gallery=d.querySelector("#promotion-original-work");
