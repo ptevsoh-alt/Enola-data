@@ -256,19 +256,19 @@
     return raw.replace(/（简历记录）|（字段待确认）/g, "").replace(/历史阶段；?/g, "").trim();
   };
   const caseResultCopy = {
-    gtm: "参与四条核心产品线的卖点分层与传播内容策划，相关产品内容上线期间销量约增长 3%；M3 项目展示五月上市 Campaign 策划、英文 Brief 与传播排期。",
+    gtm: "M3 案例展示五月上市传播计划、Campaign 策略、英文 Brief、内容矩阵及创意版式。四条产品线相关内容的历史销量变化另列在经营数据中，不作为 M3 单品上市实绩。",
     social: "2025 年 Meta 内容曝光 96.5 万次、互动 3.7 万次。通过季度主题、月度内容规划和跨平台运营机制，持续优化品牌传播与社群参与。",
     community: "围绕教程、清洁挑战和 UGC 分享持续运营美国 Facebook Group。现有成员规模快照为 4,009 人，另有超过 1,000 人的阶段增长记录与单阶段新增 227 人。",
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
     operations: "负责季度主题、月度内容日历、社媒创意和脚本审核，跟进素材制作、版本确认与发布计划。",
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
-    seo: "完成 Halloween 英文主指南、细分专题的搜索意图、内容结构和内部链接规划。",
+    seo: "形成 Halloween 英文主指南、9 篇专题选题、搜索意图与内链规划，并补充 PR 媒体选题延展；未取得逐篇上线、项目级搜索表现或该主题媒体报道证据。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
     creative: "负责节庆品牌影片、演示短视频及 Creator 内容的创意策划、脚本、画面审核和渠道适配。",
     crm: "策划节庆英文邮件、用户分组及购物旅程中的触发和退出规则，连接 Shopify 商品与内容信息。",
     creator: "负责美国 Creator 的筛选、邀约、议价、寄样和脚本审核，跟进内容交付与素材许可。",
   };
-  const caseExamples = {"gtm":[["gtm/m3-campaign-kv","上市 Campaign KV"],["gtm/launch-delivery","传播排期与英文 Brief"]],"social":[["social/social-data-decisions","社媒增长与内容分析"],["social/fathers-day-calendar","父亲节内容日历"]],"community":[["community/community-event-governance","社群互动与 UGC"]],"brand":[["brand/seasonal-creative-gallery","品牌屋及联合活动视觉"],["brand/promotion-campaign-kv","节庆促销 KV"]],"operations":[["operations/operations-control","季度规划、月历与制作 Brief"],["operations/asset-review","创意审核与交付"]],"b2b":[["b2b/expo-project","展会现场与物料"],["b2b/expo-material-delivery","展位策划与客户需求"]],"seo":[["seo/seo-cluster","Halloween 内容集群"],["seo/seo-method-and-pr","SEO 体系与评估"]],"amazon":[["amazon/amazon-priority","Amazon 广告和经营分析"]],"creative":[["creative/video-projects","品牌影片和 Creator 视频"],["creative/creative-production-scope","脚本、镜头与视频审核"]],"crm":[["crm/crm-handoff","母亲节 EDM 与用户旅程"],["crm/crm-platform-handoff","邮件流程与数据"]],"creator":[["creator/creator-assessment","创作者筛选与匹配"],["creator/creator-cooperation-brief","合作 Brief 与授权"]]};
+  const caseExamples = {"gtm":[["gtm/m3-campaign-kv","上市 Campaign KV"],["gtm/launch-delivery","传播排期与英文 Brief"]],"social":[["social/social-data-decisions","社媒增长与内容分析"],["social/fathers-day-calendar","父亲节内容日历"]],"community":[["community/community-event-governance","社群互动与 UGC"]],"brand":[["brand/seasonal-creative-gallery","品牌屋及联合活动视觉"],["brand/promotion-campaign-kv","节庆促销 KV"]],"operations":[["operations/operations-control","季度规划、月历与制作 Brief"],["operations/asset-review","创意审核与交付"]],"b2b":[["b2b/expo-project","展会现场与物料"],["b2b/expo-material-delivery","展位策划与客户需求"]],"seo":[["seo/seo-cluster","Halloween 内容集群"],["seo/seo-pr-extension","PR 媒体选题延展"]],"amazon":[["amazon/amazon-priority","Amazon 广告和经营分析"]],"creative":[["creative/video-projects","品牌影片和 Creator 视频"],["creative/creative-production-scope","脚本、镜头与视频审核"]],"crm":[["crm/crm-handoff","母亲节 EDM 与用户旅程"],["crm/crm-platform-handoff","邮件流程与数据"]],"creator":[["creator/creator-assessment","创作者筛选与匹配"],["creator/creator-cooperation-brief","合作 Brief 与授权"]]};
   const relatedCaseLinks = {"gtm":[["brand/brand-positioning","品牌屋与定位"],["creative/video-projects","视频制作"]],"social":[["operations/operations-control","社媒团队管理"],["community/community-event-governance","社群运营"]],"community":[["social/social-data-decisions","社媒增长分析"],["creator/partner-handoff","创作者合作"]],"brand":[["gtm/campaign-architecture","IMC Campaign 策划"],["creator/partner-handoff","Creator 业务合作"]],"operations":[["social/social-data-decisions","社媒内容策略"],["creative/video-projects","视频创意"]],"b2b":[["brand/pr-project","PR 传播"],["amazon/amazon-priority","商业经营"]],"seo":[["brand/pr-project","PR 新闻稿"],["crm/crm-handoff","邮件与生命周期"]],"amazon":[["b2b/expo-project","海外 B2B"],["gtm/gtm-value-to-launch","产品价值传播"]],"creative":[["brand/promotion-campaign-kv","促销 Campaign KV"],["creator/creator-cooperation-brief","Creator 内容合作"]],"crm":[["seo/seo-cluster","SEO 内容策划"],["brand/promotion-campaign-kv","节庆活动视觉"]],"creator":[["creative/video-projects","视频与场景实拍"],["brand/pr-project","PR 与外部传播"]]};
   const readerManagement = {
     gtm: ["我负责社媒内容计划、创意 Brief 与物料审核，对接产品、设计、视频及各商业渠道所需的产品信息和素材。", "以首周内容与链接表现定位传播断点，再结合月度订单、售后和用户反馈决定下阶段内容重点。"],
@@ -292,18 +292,10 @@
   function metricCard(m) {
     const period = readerWindow(m);
     const visiblePeriod = /^(历史阶段数据|社群增长记录)$/.test(period) || !period ? "" : `<small>${esc(period)}</small>`;
-    return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.label)}</span>${visiblePeriod}<span class="metric-source">查看数据详情 ↗</span></button>`;
+    return `<button class="metric" data-evidence="${esc(m.id)}"><strong>${esc(m.display)}</strong><span>${esc(m.id === "product-sales-stage" ? "相关产品内容上线期间销量变化（非 M3 单品）" : m.label)}</span>${visiblePeriod}<span class="metric-source">查看数据详情 ↗</span></button>`;
   }
   const featured = window.PORTFOLIO_SELECTED_WORK;
-  const homeRoutes = [
-    ["01","GTM / 新品上市","从家庭清洁任务选择主推卖点，安排产品证明、上市节奏与多渠道物料。","#/case/gtm/gtm-value-to-launch","M3 上市策略与跨团队排期"],
-    ["02","IMC / Campaign","把一个 Campaign 主张拆为 Social、Paid、PR / Creator、EDM 与商品页各自的任务。","#/case/gtm/campaign-architecture","Campaign 品牌屋与八条传播工作流"],
-    ["03","Brand / Insight","从清洁场景与用户疑问出发，组织品牌价值、产品线定位与多触点内容。","#/case/brand/brand-positioning","品牌屋 · PR · 联合活动"],
-    ["04","Project / Delivery","负责社媒小组的季度主题、月度日历、项目排期及创意审核。","#/case/operations/asset-review","月度计划 · Brief · 物料验收"],
-    ["05","Social / Growth","以季度主题和月度内容机制运营多个平台，并把内容互动与链接行为用于复盘。","#/case/social/social-data-decisions","96.5 万曝光 · 3.7 万互动"],
-    ["06","视频创意与 KOL 内容","围绕品牌影片、节庆传播与 Creator 产品演示组织脚本、镜头及内容审核。","#/case/creative/video-projects","节庆叙事 · 产品演示 · Creator 内容"],
-    ["07","海外展会策划","参与海外储能展会的展位规划、品牌物料准备、现场产品介绍和客户需求跟进。","#/case/b2b/expo-project","展会策划 · 海外客户开发"],
-  ];
+  // Primary cards appear once in the homepage showcase.
 
   function featuredCard(id, item) {
     const image = item.image ? `<img src="assets/projects/${item.image}.${item.imageExt || "webp"}" alt="${esc(item.alt)}" loading="lazy" decoding="async">` : "";
@@ -321,12 +313,12 @@
         <div><p class="eyebrow">黄文琳 · 个人作品集</p><h1 id="home-title">海外品牌营销<br><em>产品上市与整合传播</em></h1>
         <p class="profile-direction">${esc(P.profile.direction)}</p>
         <p class="hero-summary">${esc(P.profile.summary)}</p>
-        <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/case/creative/video-projects">查看视频与创意案例 ↗</a><a href="#/experience">工作经历</a></div></div>
-        <nav class="featured-nav" aria-label="代表项目"><h2>重点项目直达</h2>${Object.entries(featured).map(([id, item]) => `<a href="#/case/${id}"><div><strong>${item.title}</strong><span>${item.label}</span></div><span class="featured-arrow" aria-hidden="true">↗</span></a>`).join("")}</nav>
+        <div class="actions"><a class="btn" href="#/home/jd-case-path">先看核心案例 ↘</a><a href="#/cases">全部案例 ↗</a></div></div>
+        <aside class="featured-nav career-scope" aria-label="职业经验与职责"><h2>项目范围</h2><dl><div><dt>产品营销</dt><dd>4 条产品线</dd></div><div><dt>核心市场</dt><dd>北美家居清洁消费品</dd></div><div><dt>管理职责</dt><dd>社媒小组 · 季度主题 · 创意审核</dd></div></dl></aside>
       </section>
 
       <section class="career-showcase" id="career-showcase" aria-labelledby="career-showcase-heading">
-        <header class="career-showcase-heading"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">重点项目</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
+        <header class="career-showcase-heading" id="jd-case-path"><div><span>SELECTED PROJECTS / 核心案例</span><h2 id="career-showcase-heading">重点项目</h2></div><a href="#/cases">查看全部 11 个项目 ↗</a></header>
         <div class="career-showcase-grid">
           <a class="career-spotlight" href="#/case/gtm/gtm-positioning-decision">
             <div class="career-spotlight-hero">
@@ -334,7 +326,7 @@
               <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘拖把主视觉" loading="lazy" decoding="async">
             </div>
             <div class="career-stage-strip" aria-label="五月上市传播的五阶段规划"><span><b>01</b>市场判断</span><span><b>02</b>卖点与 Brief</span><span><b>03</b>创意交付</span><span><b>04</b>渠道放行</span><span><b>05</b>复盘</span></div>
-            <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五个传播阶段 · 六条协作工作流</span></div>
+            <div class="career-spotlight-foot"><strong>2026.05 / LAUNCH PLAN</strong><span>五个计划节点 · 六条协作工作流</span></div>
           </a>
           <div class="career-side-projects">
             <a href="#/case/brand/brand-positioning" class="career-side-card career-side-creative">
@@ -344,41 +336,18 @@
             <a href="#/case/operations/asset-review" class="career-side-card career-side-operations">
               <div><small>03 / MANAGEMENT & DELIVERY</small><h3>社媒排期与素材审核</h3><p>季度主题 · 月度排期 · 内容审核 · 跨部门协作</p></div>
               <div class="career-mini-flow" aria-label="内容交付过程"><span>Brief</span><i>→</i><span>Review</span><i>→</i><span>Release</span></div>
-              <div class="career-operations-link">查看真实素材返工与协作 ↗</div>
+              <div class="career-operations-link">查看内容审核与协作 ↗</div>
             </a>
           </div>
         </div>
       </section>
       <section class="home-summary results-band" aria-label="Meta 阶段数据"><div><h2>Meta 社媒表现</h2><p>2025 年 · 品牌内容与社媒增长</p><a href="#/case/social/results">查看 Meta 传播结果 ↗</a></div><div class="home-metrics">${["impressions", "engagements"].map((id) => metricCard(metric(id))).join("")}</div></section>
     </div></div><div class="wrap">
-      <section class="section home-decision-section" id="jd-case-path" aria-labelledby="jd-case-path-title">
-        <div class="section-head"><div><p class="eyebrow">重点工作 / 项目案例</p><h2 id="jd-case-path-title">新品上市、品牌传播与社媒团队管理</h2></div><a href="#/cases">查看 11 个项目案例 ↗</a></div>
-        <div class="home-decision-grid">
-          <a href="#/case/brand/brand-positioning"><small>01 / INSIGHT</small><h3>市场与用户判断</h3><p>从真实清洁任务、产品资料及用户问题识别传播机会，整理四条产品线的价值重点。</p><span>品牌屋与产品线定位 ↗</span></a>
-          <a href="#/case/gtm/campaign-architecture"><small>02 / STRATEGY</small><h3>GTM 与 Campaign 策划</h3><p>围绕 M3 餐后硬地场景规划上市节奏、Campaign 主题、渠道内容与交付节点。</p><span>M3 Campaign 品牌屋 ↗</span></a>
-          <a href="#/case/operations/asset-review"><small>03 / DELIVERY</small><h3>团队协作与项目推进</h3><p>直接管理社媒内容小组，协调产品、视觉、视频和电商；用内容日历和交付记录说明分工与审核。</p><span>社媒内容日历与团队协作 ↗</span></a>
-          <a href="#/case/social/social-data-decisions"><small>04 / RESULTS</small><h3>传播结果与优化动作</h3><p>2025 年 Meta 内容曝光 96.5 万、互动 3.7 万次；结合实际表现安排后续选题和渠道动作。</p><span>2025 Meta 数据与社媒复盘 ↗</span></a>
-        </div>
-        <nav class="home-visual-jumps" aria-label="直接查看 GTM 和 Campaign 关键可视化">
-          <span>项目图解 / QUICK VIEW</span>
-          <a href="#/case/gtm/campaign-architecture">Campaign 策略</a>
-          <a href="#/case/gtm/gtm-visual-schedule">五月上市排期</a>
-          <a href="#/case/gtm/gtm-channel-orchestration">跨渠道协作</a>
-          <a href="#/case/gtm/campaign-mechanism-mapping">三条创意主线</a>
-          <a href="#/case/gtm/market-adaptation">美英本地化</a>
-        </nav>
+      <section class="home-proof-bridge" aria-label="社群历史成果与成员规模">
+        <a href="#/case/community/results"><small>美国 Facebook Group · 历史增长记录</small><strong>${esc(metric("group-growth-1k").display)}</strong><span>查看社群增长与参与表现 ↗</span></a>
+        <a href="#/data/community"><small>美国 Facebook Group · 成员规模快照</small><strong>${esc(metric("group-members").display)}</strong><span>查看统计范围与指标定义 ↗</span></a>
       </section>
-      <section class="section home-route-section" id="strategy-map" aria-labelledby="strategy-map-title">
-        <div class="section-head"><div><p class="eyebrow">SELECTED PRACTICE / 项目导航</p><h2 id="strategy-map-title">按项目主题浏览</h2></div><a href="#/cases">查看所有案例 ↗</a></div>
-        <p class="home-route-intro">上市策略 · Campaign 创意 · 品牌视觉 · 团队管理 · 增长与展会</p>
-        <div class="home-route-grid">${homeRoutes.map(([no, title, note, href, evidence]) => `<a class="home-route-card" href="${href}"><span class="home-route-index">${no} / ${title}</span><p>${note}</p><strong>${evidence} <span aria-hidden="true">↗</span></strong></a>`).join("")}</div>
-      </section>
-      <section class="home-proof-bridge" aria-label="跨项目阶段数据入口">
-        <a href="#/data/community"><small>美国 Facebook Group · 成员快照</small><strong>${esc(metric("group-members").display)}</strong><span>查看社群规模与参与表现 ↗</span></a>
-        <a href="#/data/b2b"><small>瑞音博 · 任期内 Facebook 账号</small><strong>${esc(metric("fb-follower-scale").display)}</strong><span>查看海外 B2B 社媒增长成果 ↗</span></a>
-        <a href="#/case/creative/video-projects"><small>节庆品牌传播与 KOL 内容</small><strong>视频创意 · 产品演示 · KOL 内容</strong><span>感恩节 / 圣诞节 Campaign 与产品使用 ↗</span></a>
-      </section>
-      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head"><h2 id="featured-title">代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
+      <section class="section featured-section" id="selected-work" aria-labelledby="featured-title"><div class="section-head" id="strategy-map"><h2 id="featured-title">更多代表项目</h2><a href="#/cases">全部 ${P.cases.length} 个案例 ↗</a></div><div class="featured-grid">${Object.entries(featured).filter(([id]) => !["gtm","brand","operations"].includes(id)).map(([id, item]) => featuredCard(id, item)).join("")}</div></section>
       <section class="contact-band"><div><h2>工作经历与联系</h2><p>${esc(P.profile.focus)}</p></div><div class="actions"><a href="#/experience">工作经历 ↗</a><a class="btn" href="#/contact">联系 ↗</a></div></section>
     </div>`;
   }
@@ -419,7 +388,7 @@
           <div class="case-diagram-end">${esc(visualStoryboard.end)}</div>
         </div>`
       : `<div class="case-story-identity" aria-hidden="true"><span>CASE</span><strong>${esc(c.no)}</strong><small>${esc(c.subtitle)}</small></div>`;
-    const firstResult = c.metrics.map(metric).find(hasPublishableMetric);
+    const firstResult = c.id === "gtm" ? null : c.metrics.map(metric).find(hasPublishableMetric);
     return `<section class="g-case-overview case-story-lead case-story-${esc(c.id)}" aria-label="项目速览">
       <div class="case-story-primary">
         <div class="case-story-copy"><small>SELECTED WORK / CASE ${esc(c.no)}</small><h2>${esc(c.title)}</h2><p>${esc(item.role)}</p>
@@ -444,7 +413,7 @@
         </div>
         <div class="campaign-index-preview">
           <a href="#/case/brand/promotion-original-black" aria-label="查看 Black Friday 促销 KV"><img src="assets/projects/black-friday-suite-concept.jpg" alt="原有黑五黑金组合产品促销 KV" loading="lazy"><span>BLACK FRIDAY / ORIGINAL</span></a>
-          <a href="#/case/brand/promotion-kv-mother" aria-label="查看 Mother's Day 礼赠 KV"><img src="assets/projects/pr-home-scene.webp" alt="母亲节家庭礼赠主题生活场景视觉" loading="lazy"><span>MOTHER'S DAY</span></a>
+          <a href="#/case/brand/promotion-original-mother" aria-label="查看 Mother's Day 礼赠版式提案"><img src="assets/projects/pr-home-scene.webp" alt="母亲节家庭礼赠主题生活场景视觉" loading="lazy"><span>MOTHER'S DAY / LAYOUT STUDY</span></a>
           <a href="#/case/brand/promotion-original-father" aria-label="查看 Father's Day 家庭主题 KV"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="原有父亲节 BBQ 产品场景促销 KV" loading="lazy"><span>FATHER'S DAY / ORIGINAL</span></a>
         </div>
       </section><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
@@ -528,12 +497,12 @@
       ["strategy", "Strategy", "策略选择"],
       ["execution", "Execution", "执行与工作物"],
       ["management", "Team & Delivery", "我的协作"],
-      ["results", "Results", c.metrics.map(metric).some(hasPublishableMetric) ? "项目成果" : "工作成果"],
+      ["results", "Results", c.id !== "gtm" && c.metrics.map(metric).some(hasPublishableMetric) ? "项目成果" : "工作成果"],
       ["evidence", "Related Work", "相关项目"],
     ];
-    const metrics = c.metrics.map(metric).filter(hasPublishableMetric);
+    const metrics = c.id === "gtm" ? [] : c.metrics.map(metric).filter(hasPublishableMetric);
     const resultsLabel = metrics.length ? "项目成果" : "工作成果";
-    return `<div class="wrap page case-page case-page-${esc(c.id)}"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1></div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<a class="btn secondary" href="#/case/${c.id}/${c.id === "gtm" ? "m3-campaign-kv" : c.id === "brand" ? "seasonal-creative-gallery" : "video-projects"}">${c.id === "creative" ? "查看视频创意案例" : "查看项目视觉素材"} ↗</a>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Team & Delivery</div><div><h2>职责与跨部门协作</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>${resultsLabel}</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${!metrics.length ? `<div class="case-work-samples">${(caseExamples[c.id]||[]).map(([slug,title]) => `<a href="#/case/${slug}">${esc(title)} ↗</a>`).join("")}</div>` : ""}${c.id === "social" ? metaSummary() : ""}</div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / RELATED</div><div><h2>相关案例</h2><div class="case-related-links">${(relatedCaseLinks[c.id]||[]).map(([slug,title]) => `<a href="#/case/${slug}">${esc(title)} ↗</a>`).join("")}</div>${metrics.length ? `<p><a href="#/data/${metrics[0].domain}">查看阶段数据 ↗</a></p>` : ""}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
+    return `<div class="wrap page case-page case-page-${esc(c.id)}"><a class="text-link" href="#/cases">← 返回案例索引</a><div class="case-title"><div><p class="eyebrow">CASE ${c.no} / ${tags[c.id]}</p><h1>${esc(featured[c.id]?.title || c.title)}</h1></div>${featured[c.id] ? "" : `<p class="case-scope">${esc(c.role)}</p>`}</div>${caseOverview(c)}<nav class="case-tabs" aria-label="案例章节">${sections.map(([chapter, , label]) => `<a href="#/case/${c.id}/${chapter}">${label}</a>`).join("")}</nav>${featured[c.id] ? "" : cover(c, true)}<section id="background" class="case-section"><div class="chapter-label">01 / Background</div><div><h2>项目背景</h2><p>${esc(c.problem)}</p></div></section><section id="insight" class="case-section"><div class="chapter-label">02 / Insight</div><div><h2>从问题到判断</h2><p>${esc(c.decision)}</p></div></section><section id="strategy" class="case-section"><div class="chapter-label">03 / Strategy</div><div><h2>策略结构</h2><p>${esc(c.plan)}</p>${flow(c)}${["gtm", "brand"].includes(c.id) ? brandHouse() : ""}</div></section><section id="execution" class="case-section"><div class="chapter-label">04 / Execution</div><div><h2>执行与工作物</h2><p>${esc(c.execution)}</p>${c.id === "creator" ? rights() : `<div class="deliverable-grid">${names[c.id].map((n, i) => `<article><span>工作内容 / 0${i + 1}</span><h3>${n}</h3><p>${workDetails[c.id][i]}</p></article>`).join("")}</div>`}${["gtm", "brand", "creative"].includes(c.id) ? `<a class="btn secondary" href="#/case/${c.id}/${c.id === "gtm" ? "m3-campaign-kv" : c.id === "brand" ? "seasonal-creative-gallery" : "video-projects"}">${c.id === "creative" ? "查看视频创意案例" : "查看项目视觉素材"} ↗</a>` : ""}</div></section><section id="management" class="case-section"><div class="chapter-label">05 / Team & Delivery</div><div><h2>职责与跨部门协作</h2>${management(c)}</div></section><section id="results" class="case-section"><div class="chapter-label">06 / Results</div><div><h2>${resultsLabel}</h2><p>${esc(caseResultCopy[c.id] || c.result)}</p><div class="result-grid">${metrics.map(metricCard).join("")}</div>${c.id === "gtm" ? '<p><a href="#/data/commerce">查看四条产品线相关历史经营记录 ↗</a></p>' : ""}${!metrics.length ? `<div class="case-work-samples">${(caseExamples[c.id]||[]).map(([slug,title]) => `<a href="#/case/${slug}">${esc(title)} ↗</a>`).join("")}</div>` : ""}${c.id === "social" ? metaSummary() : ""}</div></section><section id="evidence" class="case-section"><div class="chapter-label">07 / RELATED</div><div><h2>相关案例</h2><div class="case-related-links">${(relatedCaseLinks[c.id]||[]).map(([slug,title]) => `<a href="#/case/${slug}">${esc(title)} ↗</a>`).join("")}</div>${metrics.length ? `<p><a href="#/data/${metrics[0].domain}">查看阶段数据 ↗</a></p>` : ""}</div></section><div class="case-end">${link(P.cases[(P.cases.indexOf(c) + 1) % P.cases.length].id, "下一个案例")}<a href="#/cases">全部案例 ↗</a></div></div>`;
   }
   function metaSummary() {
     const ids = ["impressions", "engagements"];
@@ -582,11 +551,27 @@
     return `<div class="wrap page"><p class="eyebrow">HOW I WORK</p><h1>从品牌判断到项目交付</h1><p class="lede">以业务目标为起点，梳理市场机会、产品价值与传播任务，协调内容、创意和渠道团队将策略落地。</p><div class="cap-list"><article><h2>品牌与市场</h2><p>整理用户需求、市场与竞品信息，确定值得放大的核心价值与传播主张。</p><a href="#/case/brand">查看品牌传播案例 ↗</a></article><article><h2>上市与整合营销</h2><p>制定传播主题、阶段目标、内容矩阵与跨渠道项目节奏。</p><a href="#/case/gtm">查看 M3 上市方案 ↗</a></article><article><h2>内容与创意</h2><p>将用户场景和产品卖点转化为视频、视觉、社媒及 Creator 工作物。</p><a href="#/case/creative">查看创意作品 ↗</a></article><article><h2>团队与增长</h2><p>组织季度主题、月度日历、创意审核及数据复盘，协调多方按节点交付。</p><a href="#/case/operations">查看团队管理案例 ↗</a></article></div></div>`;
   }
   function scrollToChapter(chapter) {
+    main.querySelector("[data-route-notice]")?.remove();
     const target = document.getElementById(chapter);
-    if (!target) return;
-    const disclosure = target.closest("details");
-    if (disclosure) disclosure.open = true;
+    if (!target || !main.contains(target)) {
+      const notice = document.createElement("p");
+      notice.className = "route-notice";
+      notice.dataset.routeNotice = "";
+      notice.setAttribute("role", "status");
+      notice.textContent = "该章节入口已调整，请从本页目录选择内容。";
+      (main.querySelector(".case-title") || main.firstElementChild || main).prepend(notice);
+      notice.scrollIntoView({block:"center"});
+      return false;
+    }
+    for (let node = target; node && node !== main; node = node.parentElement) {
+      if (node.tagName === "DETAILS") node.open = true;
+      if (node.hidden && node.dataset.opsPanel) {
+        const tab = [...main.querySelectorAll("[data-ops-tab]")].find(item => item.dataset.opsTab === node.dataset.opsPanel);
+        tab?.click();
+      }
+    }
     target.scrollIntoView();
+    return true;
   }
 
   function route() {
@@ -645,6 +630,10 @@
   document.addEventListener("click", (e) => {
     const t = e.target.closest("button,a");
     if (!t) return;
+    if (t.tagName === "A" && t.hash === location.hash && /^#\/(?:case\/[^/]+|home)\/[^/]+$/.test(t.hash)) {
+      e.preventDefault();
+      scrollToChapter(t.hash.split("/").at(-1));
+    }
     if (t.matches(".skip")) {
       e.preventDefault();
       main.focus();
@@ -670,7 +659,7 @@
       const m = metric(t.dataset.evidence);
       if (!m) return;
       const period = readerWindow(m);
-      const meaningfulPeriod = /^(历史阶段数据|社群增长记录)$/.test(period) ? "" : period;
+      const meaningfulPeriod = String(m.window || period || "原记录未注明统计时间");
       const platform = String(m.platform || "").replace(/（口径待核）/g, "").replace(/，字段待核/g, "");
       $("#evidence-content").innerHTML =
         `<h2 id="evidence-title">${esc(m.label)}</h2><p class="evidence-number">${esc(m.display)}</p><dl>${[
@@ -681,6 +670,7 @@
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
           .join("")}</dl><details class="evidence-method"><summary>数据出处</summary><dl>${[
           ["原始数据来源", m.source],
+          ["使用限制", m.limits],
         ]
           .map(([k, v]) => `<dt>${k}</dt><dd>${esc(v)}</dd>`)
           .join("")}</dl></details>${link(m.caseId, "查看对应项目")}`;

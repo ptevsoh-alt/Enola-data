@@ -109,6 +109,7 @@
           <li><span class="v-stage-number">04</span><small>CLOSEOUT · 收束</small><h4>整理下一轮判断</h4><p>统一过期信息、用户反馈与可复用内容</p><b>阶段交付 · 复盘与团队交接</b></li>
         </ol>
       </details>
+      <details class="editorial-disclosure"><summary>跨部门渠道交付与审核负责人</summary>
       <div class="g-story-note" id="launch-cross-channel">
         <h3>多渠道协同｜让每个触点承担不同任务</h3>
         <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
@@ -130,6 +131,7 @@
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
+      </details>
       <div class="g-story-note" id="launch-d7-d30">
         <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
         <div class="g-project-list g-project-calendar-plan">
@@ -207,7 +209,7 @@
           <div><dt>Deliverables</dt><dd>Provide a 4:5 Feed key visual, a 9:16 Story version and an eight-second demo cut. Include English captions, the opening frame and a link to the approved destination for each placement.</dd></div>
           <div><dt>Approval &amp; fallback</dt><dd>Keep the grip and both pads in frame. Use real footage for motion and approved wording for floor suitability. If motion footage is pending, submit a product-detail visual with “Explore M3.”</dd></div>
         </dl>
-        <p><a href="#/case/operations/asset-review">查看主视觉为什么退回修改 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
+        <p><a href="#/case/operations/asset-review">查看主视觉审核标准 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
       </div>`;
   }
 
@@ -222,7 +224,7 @@
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
       <section class="m3-kv-showcase" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
+        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>基于黄色 M3 产品图和品牌色制作的横版及 Feed 创意版式；用于展示传播方案，不代表已发布的历史成品。</p></header>
         <div class="m3-kv-comps">
           <figure class="m3-kv-landscape">
             <div class="m3-kv-copy"><small>M3 / PRODUCT MARKETING</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
@@ -235,7 +237,7 @@
             <figcaption>4:5 / Social Feed</figcaption>
           </figure>
         </div>
-        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
+        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 审核要点 ↗</a></p>
       </section>
       <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
   <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
@@ -267,6 +269,7 @@
         </details>
         <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
+      <details class="editorial-disclosure"><summary>产品营销到上市传播的四阶段交接</summary>
       <section class="gtm-market-map" id="gtm-value-to-launch" aria-labelledby="gtm-market-title">
         <header><small>PRODUCT MARKETING → GO-TO-MARKET</small><h3 id="gtm-market-title">M3 产品信息与上市传播方案</h3><p>在 M3 项目中，传播策划从具体清洁任务出发，再确定证明方式、素材组合和各渠道的上线准备。</p></header>
         <div class="gtm-market-steps">
@@ -278,6 +281,7 @@
         <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
         <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
       </section>
+      </details>
       <details class="g-story-note v-supporting-evidence" id="launch-channel-plan">
         <summary>渠道分工与用户任务 · 查看四类触点明细</summary>
         <h3>从识别场景到确认选购</h3>
@@ -349,6 +353,7 @@
         </div>
           
         </section>
+        <details class="editorial-disclosure"><summary>策略摘要与用户决策路径</summary>
         <section class="v-campaign-logic" id="campaign-decision-logic" aria-label="Campaign 策略决策路径">
           <header><small>THE STRATEGY IN ONE VIEW</small><h4>把一个生活问题，转化成整合传播的核心故事</h4></header>
           <div class="v-campaign-logic-steps">
@@ -364,6 +369,7 @@
           <div><span>03 · Conversion</span><strong>核对购买条件</strong><p>商品页 / CRM / Paid：价格、库存、支付和数据全通过后才开放购买型 CTA</p></div>
           <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
         </div>
+        </details>
         <section class="v-content-map" id="campaign-content-matrix" aria-labelledby="v-content-heading">
           <header><span class="v-section-kicker">CONTENT SYSTEM</span><h4 id="v-content-heading">七类核心内容与一项品牌组合补充内容</h4></header>
           <div class="v-content-matrix" aria-label="七类核心内容、一项辅助内容与四个传播阶段的对应关系">
@@ -384,7 +390,7 @@
             <tbody>
               <tr><th>场景问题</th><td>餐后仍需处理的地面清洁任务</td><td>FB / IG Feed、Story 与短视频建立相关性</td><td>Review / VOC 与家庭清洁场景</td></tr>
               <tr><th>情绪与品牌</th><td>把清洁放回家庭生活的情境</td><td>节庆 KV、短片和较长品牌故事</td><td>人物、音乐与场景使用权待确认</td></tr>
-              <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>真实 M3 运行视频不足时 HOLD_ASSET</td></tr>
+              <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>以真实 M3 连续操作素材为准</td></tr>
               <tr><th>操作教育</th><td>手柄控制、电池安装和结构细节</td><td>轮播、结构短片与商品信息说明</td><td>官方源图及产品功能核验</td></tr>
               <tr><th>FAQ 与异议</th><td>适用范围、操作方式和维护问题</td><td>Group、FAQ 内容及客服答疑</td><td>真实问题来源与产品签核</td></tr>
               <tr><th>Creator / UGC</th><td>真实家庭中的第三方使用过程</td><td>Creator 渠道；品牌复用需单独授权</td><td>真实交付、披露及 Paid Usage Rights</td></tr>
@@ -541,7 +547,7 @@
         <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
         <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
         <h3>新闻稿分发</h3>
-        <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
+        <p>历史项目资料记录经 King Newswire 分发至 USA Today 的 Press Release 栏目；这是新闻稿分发，不是独立采编报道。</p>
         
       </div></div>`, "pr-project");
   }
@@ -578,7 +584,7 @@
           <span class="promo-visual-status">CREATIVE STUDIES / PORTFOLIO</span>
         </header>
         <section class="promotion-original-work" id="promotion-original-work" aria-labelledby="promotion-original-title">
-          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">原始节庆 KV 创意稿</h4><p>节庆主视觉与 Feed、Story、Hero 渠道版式。</p></header>
+          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">黑五与父亲节创意原稿</h4><p>两张既有创意稿与一组母亲节重构版式；不以创意稿证明实际发布或促销成交。</p></header>
           <div class="promotion-original-grid">
             <figure class="promotion-original-card" id="promotion-original-black">
               <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看黑五促销原稿">
@@ -598,7 +604,7 @@
               <img src="assets/projects/pr-home-scene.webp" alt="母亲节创意版式使用的已有家居生活照片，非母亲节原始海报" loading="lazy" decoding="async">
               <div class="promotion-mother-copy" lang="en"><small>MOTHER'S DAY / CAMPAIGN BRIEF</small><strong>Mother's Day Sale</strong><span>Built for Big Messes</span><b>30% OFF</b></div>
             </div>
-            <div><small>MOTHER'S DAY / LAYOUT STUDY</small><h5>母亲节｜家务减负与家庭礼赠</h5><p>母亲节礼赠版式提案：厨房清洁场景、家庭关怀主题及 30% OFF 优惠信息。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
+            <div><small>MOTHER'S DAY / LAYOUT STUDY</small><h5>母亲节｜礼赠版式重构</h5><p>基于既有家庭清洁照片和节庆文案重构的礼赠版式，并非母亲节原始海报；优惠文案仅作为设计方案展示。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
           </div>
         </section>
         <div class="promotion-format-switch" role="group" aria-label="切换促销主视觉画幅">
@@ -963,55 +969,117 @@
 
   function seo() {
     const articles = [
-      ["ART-01", "The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor & Makeup Disasters", "Pillar", "Informational / Guide"],
-      ["ART-02", "How to Remove Fake Blood and Face Paint from Grout, Sinks, and Porcelain", "Cluster", "Problem-solving"],
-      ["ART-03", "Sticky Candy Meltdown: Safely Dissolving Sugar and Syrup from Hardwood Floors", "Cluster", "How-To / Educational"],
-      ["ART-04", "Pumpkin Guts, Candle Wax, and Porch Grime: Outdoor Entryway Restoration", "Cluster", "Seasonal Maintenance"],
-      ["ART-05", "Fall Costume Glitters and Faux Cobweb Cleanup: Vacuuming Without Bristle Tangles", "Cluster", "How-To / Product Selection"],
-      ["ART-06", "Hosting a Spooktacular Party? The 30-Minute Speed Cleaning Checklist", "Cluster", "Checklist / List"],
-      ["ART-07", "Bathroom Horror Stories: Eliminating Soap Scum, Hair Dye, and Tile Grime Fast", "Cluster", "Comparison / Problem-solving"],
-      ["ART-08", "Electric Spin Scrubber vs. Traditional Mop: Tackling High-Traffic Holiday Footprints", "Cluster", "Commercial Investigation"],
-      ["ART-09", "Pet Costumes, Shedding Season, and Autumn Flea Dirt: Whole-Home Hygiene Guide", "Cluster", "Hygiene / Lifestyle"],
-      ["ART-10", "Post-Party Kitchen Degreasing: Air Fryers, Stovetops, and Caramel Splatters", "Cluster", "How-To / Deep Cleaning"],
+      ["ART-01", "The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor & Makeup Disasters", "Pillar", "Informational / Guide", "post-Halloween cleaning guide", "汇总节后清洁任务，作为主题入口"],
+      ["ART-02", "How to Remove Fake Blood and Face Paint from Grout, Sinks, and Porcelain", "Cluster", "Problem-solving", "remove fake blood and face paint from grout", "按不同表面回答化妆残留与假血清洁问题"],
+      ["ART-03", "Sticky Candy Meltdown: Safely Dissolving Sugar and Syrup from Hardwood Floors", "Cluster", "How-To / Educational", "remove sticky candy syrup from hardwood floors", "围绕糖浆黏污解释清洁条件与操作步骤"],
+      ["ART-04", "Pumpkin Guts, Candle Wax, and Porch Grime: Outdoor Entryway Restoration", "Cluster", "Seasonal Maintenance", "clean pumpkin guts candle wax and porch grime", "处理门廊、入口和节庆后残留"],
+      ["ART-05", "Fall Costume Glitters and Faux Cobweb Cleanup: Vacuuming Without Bristle Tangles", "Cluster", "How-To / Product Selection", "vacuum costume glitter and faux cobwebs", "说明吸尘任务、工具使用和适用边界"],
+      ["ART-06", "Hosting a Spooktacular Party? The 30-Minute Speed Cleaning Checklist", "Cluster", "Checklist / List", "30-minute post-party cleaning checklist", "给派对后快速整理提供可执行顺序"],
+      ["ART-07", "Bathroom Horror Stories: Eliminating Soap Scum, Hair Dye, and Tile Grime Fast", "Cluster", "Comparison / Problem-solving", "remove soap scum hair dye and tile grime", "处理浴室污渍与不同表面的清洁疑问"],
+      ["ART-08", "Electric Spin Scrubber vs. Traditional Mop: Tackling High-Traffic Holiday Footprints", "Cluster", "Commercial Investigation", "electric spin scrubber vs traditional mop", "比较工具任务、使用场景与选择条件"],
+      ["ART-09", "Pet Costumes, Shedding Season, and Autumn Flea Dirt: Whole-Home Hygiene Guide", "Cluster", "Hygiene / Lifestyle", "pet costume shedding and autumn home cleanup", "将宠物节庆场景延展到全屋清洁"],
+      ["ART-10", "Post-Party Kitchen Degreasing: Air Fryers, Stovetops, and Caramel Splatters", "Cluster", "How-To / Deep Cleaning", "post-party kitchen grease and caramel cleanup", "解决厨房油污、焦糖和派对后残留"],
     ];
-    return section("Halloween SEO 主题集群规划", "No Scares, Just Spotless · 美国 / 北美市场 · 英文优先", `
-      <div class="g-project-list g-project-calendar-plan">
-        <article><h3>先用主指南承接节后清洁</h3><p>1 篇主指南负责把万圣节后的清洁任务讲清楚，9 篇专题再按地面、浴室、门廊、宠物毛发和厨房等具体问题展开。</p></article>
-        <article><h3>按搜索意图决定内容深度</h3><p>糖浆黏污专题先说明表面与操作条件，服务有明确清洁问题的读者。电动刷与传统拖把的对比服务正在选工具的人，按污渍、接触表面和操作方式组织比较。</p></article>
-      </div>
-      <div class="g-story-note">
-        <h3>Halloween 内容如何连接搜索与站内页面</h3>
-        <p>以万圣节节后清洁为选题，按地面污渍、浴室、厨房、宠物毛发与工具比较拆分英文专题。主指南汇总任务，细分文章回答不同搜索问题，FAQ 与商品内容进一步解释使用条件和工具选择；稿件按原有策划目录展示。</p>
-        <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看搜索表现 ↗</a></p>
-      </div>
-      <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
-        <article><small>KEYWORD / INTENT</small><h3>关键词与搜索意图分组</h3><p>按 Halloween 污渍类型、清洁表面、使用场景和产品比较分组关键词，分别识别教程型、选型型需求，避免同类文章重复覆盖同一查询。</p></article>
-        <article><small>CONTENT BRIEF / INTERNAL LINKS</small><h3>英文 Brief 与内部链接方案</h3><p>逐篇确定主要搜索问题、页面标题、H2/H3、素材和产品事实检查点；从主指南引向问题专题，再连接 FAQ 和相关产品说明，减少重复内容。</p></article>
-        <article><small>GSC / GA4</small><h3>搜索表现评估安排</h3><p>页面发布后使用 GSC Query / Page 检查收录、展示、点击和 CTR，并从 GA4 Landing Page 分析访问与页面承接。</p></article>
-      </div>
-      <section class="g-story-note" id="seo-method-and-pr">
-        <h3>SEO 内容策划与搜索增长能力</h3>
-        <div class="seo-method-matrix">
-          <article><small>INTENT</small><h4>关键词与意图匹配</h4><p>把信息型、解决问题型、比较型与购买型搜索需求映射到不同页面，不让多个专题重复覆盖同一查询。</p></article>
-          <article><small>ARCHITECTURE</small><h4>页面结构与内部链接</h4><p>安排 Pillar、专题、FAQ 和商品页的任务，检查内容重叠、孤立页面及内链关系。</p></article>
-          <article><small>TECHNICAL</small><h4>收录与技术基础</h4><p>核对可抓取性、Canonical、Robots、Sitemap、标题和移动端阅读体验，配合站点团队处理。</p></article>
-          <article><small>MEASUREMENT</small><h4>GSC、GA4 与转化承接</h4><p>按 Query/Page 检查展示、点击和 CTR，再用 Landing Page 数据分析访问与下一步行为。</p></article>
+    const clusters = [
+      ["01", "污渍与表面清洁", "围绕残留物、接触表面和清洁问题拆分，避免一篇文章同时争夺多个不同搜索任务。", ["ART-02", "ART-03", "ART-04", "ART-07", "ART-10"]],
+      ["02", "派对与节后快速整理", "先回答节后清洁顺序，再将读者引导至具体污渍专题。", ["ART-06"]],
+      ["03", "工具选择与产品教育", "比较不同工具承担的任务；产品适用范围和性能表述须由已核实资料支持。", ["ART-05", "ART-08"]],
+      ["04", "宠物与全屋卫生", "把节庆宠物场景纳入全屋清洁内容，不延伸未经验证的健康功效主张。", ["ART-09"]],
+    ];
+    const calendar = [
+      ["T−7 至 T−1", "内容准备与发布前检查", "ART-01 + ART-02–ART-10", "Blog / FAQ / PDP", "确认页面意图、英文标题结构、事实与素材、内部链接、负责人和 QA；PR 先完成事实包与媒体选题审核。"],
+      ["T0 至 T+1", "节后快速清洁入口", "ART-06 + ART-01", "Pillar Blog / Checklist / Social", "先提供派对后整理顺序，再由主指南承接完整清洁任务并连接专题。"],
+      ["T+1 至 T+3", "重点污渍问题解决", "ART-02 / ART-03 / ART-04 / ART-10", "Blog / FAQ", "按表面和污渍回答具体问题；FAQ 优先嵌入对应页面，避免为相似问题重复建页。"],
+      ["T+3 至 T+7", "全屋问题与工具选择", "ART-05 / ART-07 / ART-08 / ART-09", "Blog / PDP / Social", "补足浴室、宠物与工具比较内容；只有存在明确选型任务时才链接到相关商品页。"],
+      ["持续复盘", "内容更新与传播复盘", "按真实查询、页面和媒体反馈调整", "GSC / GA4 / PR Review", "按实际表现决定刷新、合并或保留；不预设固定发布频率或排名承诺。"],
+    ];
+    const prAngles = [
+      ["01", "The Morning After Halloween: A Room-by-Room Cleanup Guide", "季节性编辑选题 / 专栏稿", "家居、生活方式与家庭类编辑及读者", "可核实的分区清洁步骤、文章目录、已批准的素材与使用边界", "引导至 ART-01 主指南"],
+      ["02", "Candy, Makeup and Wax: Why Cleanup Depends on the Surface", "专家评论 / 媒体 Q&A", "家居清洁、家庭生活与消费类媒体", "不同表面处理方式、产品适用范围和可验证的操作依据", "引导至 ART-02 / 03 / 04 / 07 / 10"],
+      ["03", "Choosing the Right Tool for Post-Party Cleaning", "产品教育 / 媒体 Briefing", "家电、家居工具与消费产品类媒体", "经核验的规格、真实演示、适用条件、限制和比较方法", "引导至 ART-05 / 08 及相关商品信息"],
+    ];
+    return section("Halloween SEO｜搜索主题集群与内容策划", "No Scares, Just Spotless · 美国 / 北美市场 · SEO + Content + PR", `
+      <section class="seo-case-opening" id="seo-case-overview">
+        <div class="seo-case-eyebrow"><span>SEARCH GROWTH / CONTENT MARKETING / EARNED MEDIA</span><span>CONTENT PLAN · NOT PUBLISHING PROOF</span></div>
+        <h3>把万圣节后的清洁问题，整理成一套可搜索、可阅读、可延展的内容体系。</h3>
+        <p>围绕糖浆、化妆残留、蜡渍、门廊污垢、宠物毛发和派对后清洁等场景，先确定用户问题，再决定页面和内容类型。SEO 主体沿用既有 Halloween 英文选题；PR 部分是基于同一主题补充的传播策划延展。</p>
+        <div class="seo-case-kpis">
+          <article><strong>01</strong><span>Pillar Guide</span></article>
+          <article><strong>09</strong><span>Supporting Articles</span></article>
+          <article><strong>04</strong><span>Topic Clusters</span></article>
+          <article><strong>03</strong><span>PR Topic Clusters</span></article>
         </div>
-        <p>SEO 面向主动搜索需求；PR 围绕新闻价值、可信产品信息和媒体素材进行对外传播。两者共享已核准的事实，但分别评估搜索表现和新闻稿分发。</p>
-        <p><a href="#/case/brand/pr-project">查看 PR 新闻稿案例 ↗</a> · <a href="#/data/search">查看搜索表现 ↗</a></p>
+        <p class="seo-case-boundary">当前可核实的是英文选题目录、搜索意图与内容架构策划；尚未取得逐篇发布清单、实际 URL、媒体 Pitch / Coverage 记录或 Halloween 项目级搜索表现。</p>
       </section>
-      <section class="g-story-note" id="seo-case-workflow">
-        <h3>这次 Halloween SEO 策划的内容安排</h3>
-        <p>主指南围绕节后清洁的常见任务组织阅读路径；专题分别处理糖浆黏污、化妆残留、厨房、浴室、门廊和宠物毛发等问题，并安排清洁工具比较内容。文章 Brief 对应搜索意图、场景、标题结构、可核对的使用条件及下一步内容。</p>
-        <p>主指南、专题目录及内容 Brief 共同构成这次节庆搜索内容的策划成果。</p>
+      <section class="seo-owner-grid" id="seo-owner-boundaries">
+        <article><small>M13 / CAP-SEO-001</small><h4>搜索架构</h4><p>关键词研究、搜索意图、主题集群、URL 归属、内容重叠检查、内部链接与搜索表现解释。</p></article>
+        <article><small>M10 / CAP-CONT-001</small><h4>内容策略与排期</h4><p>内容任务、内容支柱、文章 Brief、渠道格式、生产依赖、审核与 CTA 承接。</p></article>
+        <article><small>CAP-EARNED-001</small><h4>PR 与媒体内容</h4><p>新闻角度、事实与证据、媒体受众、新闻素材、审批路径及传播质量评估。</p></article>
       </section>
-      <details class="g-chart-disclosure"><summary>查看十篇英文选题与搜索意图</summary>
-        <div class="g-project-list g-project-calendar-plan">${articles.map(([id, title, type, intent]) => `
-          <article><small>${esc(id)} · ${esc(type)}</small><h3 lang="en">${esc(title)}</h3><p lang="en">${esc(intent)}</p></article>`).join("")}</div>
+      <span id="seo-search-optimization"></span>
+      <section class="seo-content-section" id="seo-topic-cluster-map">
+        <header><small>01 / SEARCH ARCHITECTURE</small><h3>一个主指南，九篇问题型专题</h3><p>主指南负责汇总主题，专题只回答各自独立的搜索任务；是否新建 FAQ 页面，须先确认它是否具有独立的用户任务。</p></header>
+        <div class="seo-pillar-node"><div><small>HUB / PILLAR · ART-01</small><h4>The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor &amp; Makeup Disasters</h4><p>汇总节后清洁任务，提供进入不同污渍、表面与工具选择专题的入口。</p></div><span>HUB</span></div>
+        <div class="seo-topic-clusters">${clusters.map(([no, title, note, ids]) => `
+          <article class="seo-topic-card"><small>${esc(no)} / TOPIC CLUSTER</small><h4>${esc(title)}</h4><p>${esc(note)}</p><ul>${ids.map((articleId) => { const a = articles.find((item) => item[0] === articleId); return `<li data-seo-article="${esc(a[0])}"><b>${esc(a[0])}</b><span>${esc(a[1])}</span><small>${esc(a[3])}</small></li>`; }).join("")}</ul></article>
+        `).join("")}</div>
+      </section>
+      <section class="seo-content-section" id="seo-keyword-intent-map">
+        <header><small>02 / KEYWORD &amp; INTENT MAP</small><h3>从主题词到页面任务</h3><p>先按问题、对象和搜索意图分组，再决定页面类型；不是把相似关键词全部塞进同一篇文章。</p></header>
+        <div class="seo-intent-table-wrap"><table class="seo-intent-table" id="seo-intent-table"><thead><tr><th>主题词方向</th><th>搜索意图</th><th>页面任务</th><th>内容 ID</th></tr></thead><tbody>${articles.map(([id, title, type, intent, seed, job]) => `<tr><td>${esc(seed)}</td><td>${esc(intent)}</td><td>${esc(job)}</td><td>${esc(id)} · ${esc(type)}</td></tr>`).join("")}</tbody></table></div>
+        <p class="seo-data-note">表内主题词是从既有英文选题提炼的候选 Seed Phrases，不代表已验证的 GSC 查询或关键词工具结果。当前没有可核验的搜索量、KD、CPC 或排名目标，因此不展示推测数值。</p>
+      </section>
+      <section class="seo-content-section" id="seo-page-architecture">
+        <header><small>03 / PAGE MAP &amp; INTERNAL LINKS</small><h3>页面架构与内链关系</h3><p>每个 URL 只承担一个主要搜索任务；优先复用已有页面，只有在出现独立需求时才新增页面。</p></header>
+        <div class="seo-link-flow"><article><small>HUB</small><b>ART-01</b><span>Pillar Blog</span></article><i>↔</i><article><small>SPOKES</small><b>ART-02–ART-10</b><span>9 篇专题文章</span></article><i>→</i><article><small>HANDOFF</small><b>FAQ / PDP</b><span>相关问题与商品信息</span></article></div>
+        <div class="seo-link-rules"><article><b>主指南 ↔ 专题</b><p>主指南分发至各专题；专题回链主指南，形成清晰主题层级。</p></article><article><b>专题 → FAQ</b><p>高频补充问题优先放入对应文章；只有独立搜索任务成立时才考虑独立 FAQ 页面。</p></article><article><b>专题 → 商品页</b><p>比较型内容可连接相关 PDP / Collection，但须先核对产品事实、适用场景和页面是否真实存在。</p></article><article><b>防止关键词内耗</b><p>明确每个页面的主意图与 URL Owner，检查重复主题、孤立页面和无理由的新建页面。</p></article></div>
+      </section>
+      <span id="seo-case-workflow"></span>
+      <section class="seo-content-section" id="seo-content-calendar">
+        <header><small>04 / CONTENT STRATEGY &amp; PLANNING</small><h3>内容支柱与节庆内容排期</h3><p>内容支柱来自具体清洁任务，而不是套用固定行业栏目；每篇内容都要有明确的读者任务、证据要求和下一步动作。</p></header>
+        <div class="seo-content-pillars"><article><small>CONTENT JOB 01</small><h4>问题解决</h4><p>假血、糖浆、蜡渍、浴室与厨房污渍。</p><b>ART-02 / 03 / 04 / 07 / 10</b></article><article><small>CONTENT JOB 02</small><h4>快速整理</h4><p>派对结束后的清洁顺序与检查清单。</p><b>ART-06</b></article><article><small>CONTENT JOB 03</small><h4>工具选择</h4><p>吸尘任务、刷洗与拖地工具比较。</p><b>ART-05 / 08</b></article><article><small>CONTENT JOB 04</small><h4>全屋卫生</h4><p>宠物节庆场景与季节性家庭清洁。</p><b>ART-09</b></article></div>
+        <div class="seo-calendar-list">${calendar.map(([phase, title, assets, channel, task]) => `
+          <article><div class="seo-calendar-phase">${esc(phase)}</div><div><h4>${esc(title)}</h4><p><b>内容：</b>${esc(assets)}</p><p><b>渠道：</b>${esc(channel)}</p><p>${esc(task)}</p></div></article>
+        `).join("")}</div>
+        <p class="seo-data-note">T− / T+ 为围绕 Halloween 的建议性相对节奏，不是历史发布日期或已执行发布记录。具体频率应由内容产能、素材准备和实际搜索需求决定。</p>
+      </section>
+      <section class="seo-content-section" id="seo-delivery-handoff">
+        <header><small>05 / OWNERSHIP &amp; QA HANDOFF</small><h3>从选题到内容交付的分工与验收</h3><p>每个环节有明确的决策 Owner 和交付边界，避免 SEO、内容、PR 与产品事实互相替代。</p></header>
+        <div class="seo-intent-table-wrap"><table class="seo-intent-table"><thead><tr><th>工作环节</th><th>能力 Owner</th><th>交付内容</th><th>验收重点</th></tr></thead><tbody>
+          <tr><td>关键词与页面架构</td><td>M13 / CAP-SEO-001</td><td>Keyword / Intent Map、Topic Cluster、URL Owner、Internal Link Map</td><td>每个高价值主题有页面决策；不让两个 URL 争夺同一主搜索任务。</td></tr>
+          <tr><td>内容策略与文章 Brief</td><td>M10 / CAP-CONT-001</td><td>Content Pillars、Reader Task、Quick Answer、H2/H3、FAQ、CTA 与排期</td><td>每项内容有受众任务、证据、格式、依赖、Owner、QA 和测量对象。</td></tr>
+          <tr><td>产品事实与主张</td><td>M04–M06</td><td>产品规格、适用表面、使用条件、比较依据与禁用主张</td><td>没有核实的性能、兼容性或清洁效果不写成事实。</td></tr>
+          <tr><td>视觉与视频素材</td><td>M11 / M12</td><td>文章配图、ALT、产品演示、媒体图片与短视频素材</td><td>素材真实、授权范围清楚，产品结构与使用动作不失真。</td></tr>
+          <tr><td>PR 与媒体关系</td><td>CAP-EARNED-001</td><td>PR Topic Cluster、媒体受众、新闻角度、事实包、Q&amp;A 与审批</td><td>先判断新闻价值；无新事实时不把促销包装成新闻稿，付费合作与 Earned 分开。</td></tr>
+          <tr><td>数据与效果复盘</td><td>M16 / CAP-DATA-001</td><td>GSC / GA4 / UTM 事件、指标定义、来源与统计窗口</td><td>搜索表现、内容行为和 PR 结果分开记录，不把历史汇总归因给本项目。</td></tr>
+        </tbody></table></div>
+      </section>
+      <details class="seo-article-details" id="seo-article-briefs"><summary>展开查看 10 篇英文选题与 Brief 重点</summary>
+        <div class="seo-article-grid">${articles.map(([id, title, type, intent, seed, job]) => `
+          <article><small>${esc(id)} · ${esc(type)}</small><h4 lang="en">${esc(title)}</h4><p><b>Intent：</b>${esc(intent)}</p><p><b>Seed：</b>${esc(seed)}</p><p>${esc(job)}</p></article>
+        `).join("")}</div>
+        <div class="seo-brief-fields"><b>每篇 Brief 应包含</b><span>Page Goal</span><span>Reader Task</span><span>Quick Answer</span><span>H2 / H3</span><span>Required Evidence</span><span>First-hand Experience</span><span>Images / ALT</span><span>FAQ</span><span>Internal Links</span><span>External References</span><span>Schema（适用时）</span><span>CTA / Destination</span><span>Update Plan</span></div>
       </details>
+      <span id="seo-method-and-pr"></span>
+      <section class="seo-content-section" id="seo-pr-extension">
+        <header><small>05 / CAP-EARNED-001 · PR CONTENT EXTENSION</small><h3>把搜索主题延展为 PR 媒体主题簇</h3><p>以下为基于 Halloween 内容主题补充的 PR 策划方向，用于展示媒体选题与内容组织能力；不代表该主题已实际发稿、获得媒体报道或完成媒体合作。</p></header>
+        <div class="seo-pr-angle-grid">${prAngles.map(([no, title, format, audience, proof, destination]) => `
+          <article><small>PR TOPIC CLUSTER ${esc(no)}</small><h4>${esc(title)}</h4><p><b>形式：</b>${esc(format)}</p><p><b>目标受众：</b>${esc(audience)}</p><p><b>证据准备：</b>${esc(proof)}</p><p><b>内容承接：</b>${esc(destination)}</p></article>
+        `).join("")}</div>
+        <div class="seo-pr-package"><div><h4>媒体内容包</h4><ul><li>新闻角度与目标受众说明</li><li>已核实产品事实、清洁条件与来源清单</li><li>经批准的发言人、引用与媒体 Q&amp;A</li><li>新闻图片、产品素材、演示内容与主指南链接</li><li>媒体名单、联系人、发布时间与跟进负责人核验</li></ul></div><div><h4>新闻稿发布判断</h4><p>如果没有新事实、显著变化、可验证证据、明确时效或公共价值，不把普通促销包装成新闻稿；优先考虑季节性服务内容、专家评论或教育型 Pitch。付费合作必须披露，并与 Earned Editorial 分开统计。</p><p>PR 传播须经过事实、伤害、组织承接与信任检查；未通过时调整或暂停，不以曝光数量抵消风险。</p><p>Program Owner 按目标解析：上市与商业化由 M07 负责；整合 Campaign 与公共激活由 M08 负责；其他主题由原业务 Owner 负责。CAP-EARNED 保留 PR 专项判断与媒体关系边界。</p></div></div>
+      </section>
+      <section class="seo-content-section" id="seo-cross-channel">
+        <header><small>06 / CONTENT DISTRIBUTION</small><h3>同一主题，不同渠道各自承担任务</h3><p>内容复用不是把 Blog 复制到所有渠道，而是保留事实与核心信息，根据渠道任务重新组织表达。</p></header>
+        <div class="seo-channel-grid"><article><small>OWNED / SEO</small><h4>Pillar + 专题 Blog</h4><p>承接主动搜索，解决具体问题并组织主题深度。</p></article><article><small>FAQ / PDP</small><h4>购买顾虑与产品信息</h4><p>在页面真实存在且适用时，承接选型和购买前疑问。</p></article><article><small>EARNED / PR</small><h4>媒体选题与专家内容</h4><p>把已核实的季节性清洁知识转化为编辑可使用的故事角度。</p></article><article><small>ORGANIC SOCIAL</small><h4>短视频与轮播内容</h4><p>提炼清洁步骤、场景演示与问题清单，引导回主指南或专题。</p></article><article><small>EMAIL / CRM</small><h4>节后内容推荐</h4><p>仅在名单授权、发送资格和目的地核验后，安排内容型邮件触达。</p></article></div>
+      </section>
+      <section class="seo-content-section" id="seo-measurement">
+        <header><small>07 / MEASUREMENT &amp; REVIEW</small><h3>搜索表现、内容质量与 PR 结果分开评估</h3></header>
+        <div class="seo-measure-grid"><article><small>M13 / SEO</small><h4>搜索可见度</h4><p>GSC Query / Page：收录状态、Impressions、Clicks、CTR 与查询意图匹配；检查页面是否互相竞争。</p></article><article><small>M10 / CONTENT</small><h4>内容表现</h4><p>按文章版本记录主题、Hook、格式、市场、发布时间、自然 / 付费分发、访问、点击、有效行为与统计窗口。</p></article><article><small>CAP-EARNED / PR</small><h4>媒体传播质量</h4><p>看媒体相关性、受众匹配、核心信息准确度、有效引荐和关系变化；Coverage 数量不等于背书或收入增量。</p></article><article><small>M16 / DATA</small><h4>统一测量口径</h4><p>由数据能力确认事件定义、来源、追踪、对账与归因；PR 业务目标和 ROI 解释仍归 CAP-EARNED。</p></article></div>
+        <p class="seo-data-note">当前没有 Halloween 项目逐篇 GSC / GA4 表现或 PR Coverage 证据。历史自然搜索收入占比 82.46% 与 GSC 点击变化约 +20% 属于独立历史汇总，统计窗口不完整，不作为本项目成果。</p>
+        <p><a href="#/data/search">查看历史搜索渠道数据（非 Halloween 项目归因） ↗</a> · <a href="#/case/brand/pr-project">查看独立的北美新闻稿分发案例 ↗</a></p>
+      </section>
       `, "seo-cluster");
   }
-
   function operations() {
     const tabs = [
       ["quarter","PLAN","季度主题","主题、受众与内容支柱"],
@@ -1079,7 +1147,7 @@
       </section>
       <div class="g-story-note" id="asset-review">
         <h3>内容审核与发布管理</h3>
-        <p>把脚本与视觉逐项对照产品事实、画面动作、英文文案和平台规格。设计、视频完成修订后核对成片与发布版本，并根据内容表现调整下一期 Brief。</p>
+        <p>我负责内容 Brief、制作排期与创意审核；设计、视频团队执行制作，产品同事核对产品事实，渠道负责人确认各自的发布条件。</p><div class="g-proof-table"><table><thead><tr><th>审核决策示例</th><th>修改要求与验收标准</th><th>协作方</th></tr></thead><tbody><tr><th scope="row">M3 产品识别</th><td>D 型握把与双盘结构完整可见，不用静态产品图证明清洁效果。</td><td>设计 / 产品</td></tr><tr><th scope="row">产品动作与卖点</th><td>镜头交代握持、接地与推进；运行机制采用真实演示素材核对。</td><td>视频 / 产品</td></tr><tr><th scope="row">平台交付</th><td>确认英文文案、画幅、链接和发布版本；按各渠道职责完成审核。</td><td>内容 / 渠道</td></tr></tbody></table></div><p class="g-chart-note">以上是结合现有 M3 产品图与制作 Brief 展示的审核标准，不是历史返工截图。</p><p><a href="#/case/gtm/m3-campaign-kv">查看两种 M3 创意版式 ↗</a></p>
         <p><a href="#/case/gtm/english-brief">英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">视频案例 ↗</a></p>
       </div>
       <div class="g-story-note"><h3>父亲节 Campaign｜内容日历</h3>
