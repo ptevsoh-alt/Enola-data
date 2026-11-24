@@ -409,7 +409,43 @@ const fs = require("fs"),
     assert.ok(gallery.querySelector('img[src="assets/projects/joint-giveaway.webp"]'));
     assert.ok(gallery.textContent.includes("品牌屋"));
   });
-  await route("/case/b2b/expo-project");
+  await route("/case/brand/promotion-campaign-kv");
+  check("all three seasonal KVs show sourced images, accurate creative labels and channel previews", () => {
+    const gallery=d.querySelector("#promotion-kv-gallery");
+    assert.ok(gallery);
+    assert.deepEqual([...gallery.querySelectorAll(".promotion-kv-card")].map(el=>el.id),[
+      "promotion-kv-black","promotion-kv-mother","promotion-kv-father"
+    ]);
+    assert.equal(gallery.querySelectorAll(".promotion-kv-card .promo-kv-scene").length,3);
+    for (const img of gallery.querySelectorAll("img")) {
+      assert.ok(img.alt && !/待|占位/.test(img.alt));
+      assert.ok(fs.existsSync(path.join(root,"site",img.getAttribute("src"))),img.src);
+    }
+    assert.equal(d.querySelectorAll("#promotion-channel-adaptations .promo-device-preview").length,3);
+    assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
+    assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.textContent),false);
+  });
+  check("real 4:5 / 9:16 / 16:9 KV preview buttons change layout and ARIA state", () => {
+    const grid=d.querySelector("#promotion-kv-gallery .promotion-kv-grid");
+    const controls=[...d.querySelectorAll("#promotion-kv-gallery [data-promo-ratio]")];
+    assert.equal(controls.length,3);
+    for (const [name,button] of [["story",controls[1]],["hero",controls[2]],["feed",controls[0]]]) {
+      button.click();
+      assert.equal(grid.dataset.promoLayout,name);
+      assert.equal(button.getAttribute("aria-pressed"),"true");
+      assert.equal(controls.filter(el=>el.getAttribute("aria-pressed")==="true").length,1);
+    }
+  });
+  await route("/cases");
+  check("case index previews all three holiday KVs with distinct working chapter links", () => {
+    const links=[...d.querySelectorAll(".campaign-index-preview a")];
+    assert.equal(links.length,3);
+    assert.deepEqual(links.map(x=>x.hash),[
+      "#/case/brand/promotion-kv-black","#/case/brand/promotion-kv-mother","#/case/brand/promotion-kv-father"
+    ]);
+    assert.equal(d.querySelectorAll(".campaign-index-preview img").length,3);
+  });
+    await route("/case/b2b/expo-project");
   check("exhibition case shows real booth planning, materials and customer follow-up without fictional dimensions", () => {
     const block = d.querySelector("#expo-project");
     assert.ok(block);
