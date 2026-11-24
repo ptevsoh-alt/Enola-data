@@ -1007,7 +1007,7 @@
           <article><strong>01</strong><span>Pillar Guide</span></article>
           <article><strong>09</strong><span>Supporting Articles</span></article>
           <article><strong>04</strong><span>Topic Clusters</span></article>
-          <article><strong>03</strong><span>PR Editorial Angles</span></article>
+          <article><strong>03</strong><span>PR Topic Clusters</span></article>
         </div>
         <p class="seo-case-boundary">当前可核实的是英文选题目录、搜索意图与内容架构策划；尚未取得逐篇发布清单、实际 URL、媒体 Pitch / Coverage 记录或 Halloween 项目级搜索表现。</p>
       </section>
@@ -1043,6 +1043,17 @@
         `).join("")}</div>
         <p class="seo-data-note">T− / T+ 为围绕 Halloween 的建议性相对节奏，不是历史发布日期或已执行发布记录。具体频率应由内容产能、素材准备和实际搜索需求决定。</p>
       </section>
+      <section class="seo-content-section" id="seo-delivery-handoff">
+        <header><small>05 / OWNERSHIP &amp; QA HANDOFF</small><h3>从选题到内容交付的分工与验收</h3><p>每个环节有明确的决策 Owner 和交付边界，避免 SEO、内容、PR 与产品事实互相替代。</p></header>
+        <div class="seo-intent-table-wrap"><table class="seo-intent-table"><thead><tr><th>工作环节</th><th>能力 Owner</th><th>交付内容</th><th>验收重点</th></tr></thead><tbody>
+          <tr><td>关键词与页面架构</td><td>M13 / CAP-SEO-001</td><td>Keyword / Intent Map、Topic Cluster、URL Owner、Internal Link Map</td><td>每个高价值主题有页面决策；不让两个 URL 争夺同一主搜索任务。</td></tr>
+          <tr><td>内容策略与文章 Brief</td><td>M10 / CAP-CONT-001</td><td>Content Pillars、Reader Task、Quick Answer、H2/H3、FAQ、CTA 与排期</td><td>每项内容有受众任务、证据、格式、依赖、Owner、QA 和测量对象。</td></tr>
+          <tr><td>产品事实与主张</td><td>M04–M06</td><td>产品规格、适用表面、使用条件、比较依据与禁用主张</td><td>没有核实的性能、兼容性或清洁效果不写成事实。</td></tr>
+          <tr><td>视觉与视频素材</td><td>M11 / M12</td><td>文章配图、ALT、产品演示、媒体图片与短视频素材</td><td>素材真实、授权范围清楚，产品结构与使用动作不失真。</td></tr>
+          <tr><td>PR 与媒体关系</td><td>CAP-EARNED-001</td><td>PR Topic Cluster、媒体受众、新闻角度、事实包、Q&amp;A 与审批</td><td>先判断新闻价值；无新事实时不把促销包装成新闻稿，付费合作与 Earned 分开。</td></tr>
+          <tr><td>数据与效果复盘</td><td>M16 / CAP-DATA-001</td><td>GSC / GA4 / UTM 事件、指标定义、来源与统计窗口</td><td>搜索表现、内容行为和 PR 结果分开记录，不把历史汇总归因给本项目。</td></tr>
+        </tbody></table></div>
+      </section>
       <details class="seo-article-details" id="seo-article-briefs"><summary>展开查看 10 篇英文选题与 Brief 重点</summary>
         <div class="seo-article-grid">${articles.map(([id, title, type, intent, seed, job]) => `
           <article><small>${esc(id)} · ${esc(type)}</small><h4 lang="en">${esc(title)}</h4><p><b>Intent：</b>${esc(intent)}</p><p><b>Seed：</b>${esc(seed)}</p><p>${esc(job)}</p></article>
@@ -1051,9 +1062,9 @@
       </details>
       <span id="seo-method-and-pr"></span>
       <section class="seo-content-section" id="seo-pr-extension">
-        <header><small>05 / CAP-EARNED-001 · PR CONTENT EXTENSION</small><h3>从搜索主题延展为媒体叙事</h3><p>以下为基于 Halloween 内容主题补充的 PR 策划方向，用于展示媒体选题与内容组织能力；不代表该主题已实际发稿、获得媒体报道或完成媒体合作。</p></header>
+        <header><small>05 / CAP-EARNED-001 · PR CONTENT EXTENSION</small><h3>把搜索主题延展为 PR 媒体主题簇</h3><p>以下为基于 Halloween 内容主题补充的 PR 策划方向，用于展示媒体选题与内容组织能力；不代表该主题已实际发稿、获得媒体报道或完成媒体合作。</p></header>
         <div class="seo-pr-angle-grid">${prAngles.map(([no, title, format, audience, proof, destination]) => `
-          <article><small>PR ANGLE ${esc(no)}</small><h4>${esc(title)}</h4><p><b>形式：</b>${esc(format)}</p><p><b>目标受众：</b>${esc(audience)}</p><p><b>证据准备：</b>${esc(proof)}</p><p><b>内容承接：</b>${esc(destination)}</p></article>
+          <article><small>PR TOPIC CLUSTER ${esc(no)}</small><h4>${esc(title)}</h4><p><b>形式：</b>${esc(format)}</p><p><b>目标受众：</b>${esc(audience)}</p><p><b>证据准备：</b>${esc(proof)}</p><p><b>内容承接：</b>${esc(destination)}</p></article>
         `).join("")}</div>
         <div class="seo-pr-package"><div><h4>媒体内容包</h4><ul><li>新闻角度与目标受众说明</li><li>已核实产品事实、清洁条件与来源清单</li><li>经批准的发言人、引用与媒体 Q&amp;A</li><li>新闻图片、产品素材、演示内容与主指南链接</li><li>媒体名单、联系人、发布时间与跟进负责人核验</li></ul></div><div><h4>新闻稿发布判断</h4><p>如果没有新事实、显著变化、可验证证据、明确时效或公共价值，不把普通促销包装成新闻稿；优先考虑季节性服务内容、专家评论或教育型 Pitch。付费合作必须披露，并与 Earned Editorial 分开统计。</p><p>PR 传播须经过事实、伤害、组织承接与信任检查；未通过时调整或暂停，不以曝光数量抵消风险。</p></div></div>
       </section>
