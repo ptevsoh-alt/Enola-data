@@ -32,7 +32,7 @@
     creator: ["受众适配", "合作 Brief", "内容审核", "授权归档"],
     community: ["用户问题", "参与机制", "内容审核", "反馈回流"],
     b2b: ["客户研究", "分层触达", "询盘确认", "商务交接"],
-    seo: ["搜索意图", "内容集群", "站点承接", "字段复核"],
+    seo: ["搜索策略", "内容策划", "渠道协同", "媒体传播"],
     amazon: ["商品表达", "搜索流量", "经营协同", "结果复盘"],
     creative: ["创意主张", "叙事结构", "镜头任务", "事实审核"],
     crm: ["用户状态", "许可核验", "触发与频控", "旅程承接"],
@@ -45,7 +45,7 @@
     creator: ["筛选受众、内容类型与产品适配度。", "明确合作目标、产品事实和交付要求。", "审核脚本、成片与平台版本。", "确认素材授权范围、期限和使用方式。"],
     community: ["策划清洁教程、主题投票和挑战活动。", "组织 UGC 投稿与分享激励。", "核对产品信息、投稿内容和使用授权。", "整理高频问题，回流 FAQ 与下一轮选题。"],
     b2b: ["按客户类型梳理采购需求和应用场景。", "组合搜索、社媒和邮件触达。", "跟进询盘、报价、合同与交期确认。", "整理展会反馈，推进客户资料和后续跟进。"],
-    seo: ["按关键词和搜索意图规划内容主题。", "组织 Pillar Blog、FAQ 与内容集群。", "协同商品页、EDM 和社媒选题。", "观察 GSC 点击与自然搜索收入结构。"],
+    seo: ["按搜索意图规划主题和页面关系。", "组织英文选题、产品教育和节庆内容。", "协同 Blog、FAQ、商品页、EDM 与社媒。", "参与品牌新闻稿主题及媒体素材组织。"],
     amazon: ["优化 Listing、A+ 与 Store 商品信息。", "结合搜索词与竞争情况调整 CPC。", "协同促销、库存和售后。", "复盘转化、销售与经营表现。"],
     creative: ["明确使用场景、创意主张与叙事结构。", "安排产品动作、镜头顺序和画面重点。", "审核字幕、产品事实与操作画面。", "检查剪辑节奏、成片质量和导出文件。"],
     crm: ["区分新客、浏览、加购与购后状态。", "定义触发条件、同意记录和发送频控。", "规划邮件内容、会员权益与召回触点。", "完成域名、数据和权限核查后再上线。"],
@@ -58,7 +58,7 @@
     creator: "CREATOR GOVERNANCE",
     community: "COMMUNITY",
     b2b: "B2B / FIELD MARKETING",
-    seo: "SEARCH / CONTENT",
+    seo: "SEO / CONTENT / PR",
     amazon: "COMMERCE",
     creative: "CREATIVE DIRECTION",
     crm: "LIFECYCLE",
@@ -109,10 +109,10 @@
       artifact: "展会传播与客户沟通",
     },
     seo: {
-      choice: "按任务和搜索意图分流。先以万圣节清洁总指南接住主题，再用专题回答黏污、边角和选型问题。",
-      handoff: "我参与选题与内容协同。产品核使用条件，内容组写指南和 FAQ，商品信息负责选型与承接。",
+      choice: "根据用户的搜索任务安排主题指南、细分内容与产品选型信息，并组织品牌媒体内容。",
+      handoff: "我参与英文选题、内容策划与 PR 协同；产品、电商和内容团队分别支持使用事实、商品信息与内容表达。",
       review: "结合搜索查询、页面收录、点击和高意图内容表现调整主题集群。",
-      output: "1 篇主指南＋9 篇英文专题规划，连接 FAQ 与产品选型内容。",
+      output: "英文节庆专题策划、搜索主题与页面关系规划，以及北美家庭清洁主题新闻稿分发。",
       chapter: "seo-cluster",
       artifact: "主题集群规划",
     },
@@ -128,7 +128,7 @@
       choice: "品牌片先建立节庆家庭场景，操作短片直接切入工具如何接触、推进和转向。",
       handoff: "我参与创意策划与脚本、画面审核。产品确认结构和用途；制作交对应镜头；运营核渠道版本和使用权。",
       review: "按品牌情绪与产品演示的不同传播目标检查镜头，并根据观看反馈优化节奏。",
-      output: "以节庆视频及 Creator 场景片为代表，说明创意主题、脚本调整、产品演示和渠道版本审核；上传素材只覆盖部分工作内容。",
+      output: "以节庆视频及 Creator 场景片为代表，说明创意主题、脚本调整、产品演示和渠道版本审核；",
       chapter: "video-projects",
       artifact: "播放节庆故事和产品演示",
     },
@@ -191,10 +191,10 @@
       media:"assets/projects/exhibition-booth-overview-redacted.jpg",alt:"脱敏后的真实储能行业展会现场照片",kind:"photo"
     },
     seo: {
-      title:"Halloween SEO 与内容策划",
-      intro:"以万圣节节后清洁为完整策划案例，组织英文选题、搜索意图、专题目录和站内内容承接。",
-      fact:"1 篇主指南 + 9 篇专题规划",
-      cover:"SEO 内容",eyebrow:"SEARCH / CONTENT",detail:"1 篇主指南 · 9 篇专题规划",kind:"type"
+      title:"SEO / Content / PR｜搜索增长与品牌内容传播",
+      intro:"规划搜索主题、英文内容、产品教育及媒体传播，结合节庆专题和北美新闻稿展示工作。",
+      fact:"英文内容策划 · 北美 PR 分发",
+      cover:"SEO 内容",eyebrow:"SEO / CONTENT / PR",detail:"搜索主题 · 英文内容 · 新闻稿",kind:"type"
     },
     amazon: {
       title:"Amazon 店铺运营与广告优化",
@@ -262,13 +262,13 @@
     brand: "形成品牌屋、产品传播视觉、联合营销主视觉及北美新闻稿分发素材，让不同内容触点围绕清晰的品牌主张与产品任务展开。",
     operations: "负责季度主题、月度内容日历、社媒创意和脚本审核，跟进素材制作、版本确认与发布计划。",
     b2b: "海外客户开发任期内，月均触达潜客超过 100 人，线索转化约 3%，月度成交额约 30 万元；同步参与展会营销与销售资料优化。",
-    seo: "形成 Halloween 英文主指南、9 篇专题选题、搜索意图与内链规划，并补充 PR 媒体选题延展；未取得逐篇上线、项目级搜索表现或该主题媒体报道证据。",
+    seo: "形成英文节庆专题策划目录（1 篇主指南、9 篇专题选题）与搜索内容架构；参与北美家庭清洁主题新闻稿传播，历史分发记录见品牌案例。",
     amazon: "参与 Amazon 店铺从 0 到 1 的商品、广告和经营管理，阶段销售额约增长 10%、转化率约提升 5%，结合库存、广告和售后数据调整经营重点。",
     creative: "负责节庆品牌影片、演示短视频及 Creator 内容的创意策划、脚本、画面审核和渠道适配。",
     crm: "策划节庆英文邮件、用户分组及购物旅程中的触发和退出规则，连接 Shopify 商品与内容信息。",
     creator: "负责美国 Creator 的筛选、邀约、议价、寄样和脚本审核，跟进内容交付与素材许可。",
   };
-  const caseExamples = {"gtm":[["gtm/m3-campaign-kv","上市 Campaign KV"],["gtm/launch-delivery","传播排期与英文 Brief"]],"social":[["social/social-data-decisions","社媒增长与内容分析"],["social/fathers-day-calendar","父亲节内容日历"]],"community":[["community/community-event-governance","社群互动与 UGC"]],"brand":[["brand/seasonal-creative-gallery","品牌屋及联合活动视觉"],["brand/promotion-campaign-kv","节庆促销 KV"]],"operations":[["operations/operations-control","季度规划、月历与制作 Brief"],["operations/asset-review","创意审核与交付"]],"b2b":[["b2b/expo-project","展会现场与物料"],["b2b/expo-material-delivery","展位策划与客户需求"]],"seo":[["seo/seo-cluster","Halloween 内容集群"],["seo/seo-pr-extension","PR 媒体选题延展"]],"amazon":[["amazon/amazon-priority","Amazon 广告和经营分析"]],"creative":[["creative/video-projects","品牌影片和 Creator 视频"],["creative/creative-production-scope","脚本、镜头与视频审核"]],"crm":[["crm/crm-handoff","母亲节 EDM 与用户旅程"],["crm/crm-platform-handoff","邮件流程与数据"]],"creator":[["creator/creator-assessment","创作者筛选与匹配"],["creator/creator-cooperation-brief","合作 Brief 与授权"]]};
+  const caseExamples = {"gtm":[["gtm/m3-campaign-kv","上市 Campaign KV"],["gtm/launch-delivery","传播排期与英文 Brief"]],"social":[["social/social-data-decisions","社媒增长与内容分析"],["social/fathers-day-calendar","父亲节内容日历"]],"community":[["community/community-event-governance","社群互动与 UGC"]],"brand":[["brand/seasonal-creative-gallery","品牌屋及联合活动视觉"],["brand/promotion-campaign-kv","节庆促销 KV"]],"operations":[["operations/operations-control","季度规划、月历与制作 Brief"],["operations/asset-review","创意审核与交付"]],"b2b":[["b2b/expo-project","展会现场与物料"],["b2b/expo-material-delivery","展位策划与客户需求"]],"seo":[["seo/seo-topic-cluster-map","搜索主题与内容架构"],["seo/seo-pr-extension","PR 传播与新闻稿"]],"amazon":[["amazon/amazon-priority","Amazon 广告和经营分析"]],"creative":[["creative/video-projects","品牌影片和 Creator 视频"],["creative/creative-production-scope","脚本、镜头与视频审核"]],"crm":[["crm/crm-handoff","母亲节 EDM 与用户旅程"],["crm/crm-platform-handoff","邮件流程与数据"]],"creator":[["creator/creator-assessment","创作者筛选与匹配"],["creator/creator-cooperation-brief","合作 Brief 与授权"]]};
   const relatedCaseLinks = {"gtm":[["brand/brand-positioning","品牌屋与定位"],["creative/video-projects","视频制作"]],"social":[["operations/operations-control","社媒团队管理"],["community/community-event-governance","社群运营"]],"community":[["social/social-data-decisions","社媒增长分析"],["creator/partner-handoff","创作者合作"]],"brand":[["gtm/campaign-architecture","IMC Campaign 策划"],["creator/partner-handoff","Creator 业务合作"]],"operations":[["social/social-data-decisions","社媒内容策略"],["creative/video-projects","视频创意"]],"b2b":[["brand/pr-project","PR 传播"],["amazon/amazon-priority","商业经营"]],"seo":[["brand/pr-project","PR 新闻稿"],["crm/crm-handoff","邮件与生命周期"]],"amazon":[["b2b/expo-project","海外 B2B"],["gtm/gtm-value-to-launch","产品价值传播"]],"creative":[["brand/promotion-campaign-kv","促销 Campaign KV"],["creator/creator-cooperation-brief","Creator 内容合作"]],"crm":[["seo/seo-cluster","SEO 内容策划"],["brand/promotion-campaign-kv","节庆活动视觉"]],"creator":[["creative/video-projects","视频与场景实拍"],["brand/pr-project","PR 与外部传播"]]};
   const readerManagement = {
     gtm: ["我负责社媒内容计划、创意 Brief 与物料审核，对接产品、设计、视频及各商业渠道所需的产品信息和素材。", "以首周内容与链接表现定位传播断点，再结合月度订单、售后和用户反馈决定下阶段内容重点。"],
@@ -408,12 +408,12 @@
     return `<div class="wrap page"><p class="eyebrow">THE WORK / 案例索引</p><h1>项目案例</h1><p class="lede">产品上市、品牌传播、社媒增长、团队管理与海外 B2B。</p>
       <section class="campaign-index-spotlight" aria-labelledby="campaign-index-title">
         <div class="campaign-index-intro"><small>SELECTED CAMPAIGN WORK / HOLIDAY CREATIVE</small><h2 id="campaign-index-title">节庆促销视觉与营销内容</h2>
-          <p>Black Friday / Mother's Day / Father's Day · 从创意主视觉到社媒、邮件与活动页版式。</p>
+          <p>Black Friday / Father's Day 创意原稿 · Mother's Day 邮件内容策划。</p>
           <a href="#/case/brand/promotion-campaign-kv">查看 Campaign KV 与渠道应用 ↗</a>
         </div>
         <div class="campaign-index-preview">
           <a href="#/case/brand/promotion-original-black" aria-label="查看 Black Friday 促销 KV"><img src="assets/projects/black-friday-suite-concept.jpg" alt="原有黑五黑金组合产品促销 KV" loading="lazy"><span>BLACK FRIDAY / ORIGINAL</span></a>
-          <a href="#/case/brand/promotion-original-mother" aria-label="查看 Mother's Day 礼赠版式提案"><img src="assets/projects/pr-home-scene.webp" alt="母亲节家庭礼赠主题生活场景视觉" loading="lazy"><span>MOTHER'S DAY / LAYOUT STUDY</span></a>
+          <a href="#/case/crm/crm-campaign-email-plan" aria-label="查看母亲节邮件内容策划"><span>MOTHER'S DAY / EMAIL PLAN ↗</span></a>
           <a href="#/case/brand/promotion-original-father" aria-label="查看 Father's Day 家庭主题 KV"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="原有父亲节 BBQ 产品场景促销 KV" loading="lazy"><span>FATHER'S DAY / ORIGINAL</span></a>
         </div>
       </section><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
@@ -541,7 +541,7 @@
         "Earned Media / Creator": [["#/case/brand/pr-project","PR 与新闻稿"],["#/case/creator/partner-handoff","Creator 合作流程"]],
         "Social / Community": [["#/case/social/social-data-decisions","社媒内容与数据"],["#/case/community/community-event-governance","Facebook Group 运营"]],
         "Team & Project Delivery": [["#/case/operations/operations-content-calendar","月度内容日历"],["#/case/operations/asset-review","创意审核与交付"]],
-        "Measurement & Decision": [["#/case/social/social-outcome-bridge","社媒经营表现"],["#/case/seo/seo-search-optimization","搜索指标与评估"]],
+        "Measurement & Decision": [["#/case/social/social-outcome-bridge","社媒经营表现"],["#/case/seo/seo-measurement","搜索与内容评估"]],
         "Commercial & Channel Operations": [["#/case/amazon/amazon-priority","Amazon 经营优化"],["#/case/b2b/expo-project","海外 B2B 与展会"]]
       };
       return `<div class="wrap page"><p class="eyebrow">CAPABILITIES / EXPERIENCE</p><h1>营销能力</h1><p class="lede">以下能力与对应项目直接关联，点击可查看具体工作内容。</p><div class="cap-list">${P.capabilities.map((c) => `<article><small>${esc(c[1])}</small><h2>${esc(c[0])}</h2><p>${esc(c[2])}</p><nav class="cap-links" aria-label="${esc(c[0])}相关案例">${(paths[c[1]] || []).map(([url,label]) => `<a class="cap-case-link" href="${url}">${esc(label)} ↗</a>`).join("")}</nav></article>`).join("")}</div></div>`;

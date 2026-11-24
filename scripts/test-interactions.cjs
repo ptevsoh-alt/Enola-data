@@ -41,8 +41,8 @@ const fs = require("fs"),
       w.location.hash = s;
       await new Promise((r) => setTimeout(r, 5));
     };
-  check("homepage shows the career direction alongside six projects", () => {
-    assert.equal(d.querySelectorAll(".case-card").length, 3);
+  check("homepage shows the career direction alongside seven projects", () => {
+    assert.equal(d.querySelectorAll(".case-card").length, 4);
     assert.equal(d.querySelectorAll(".home-route-card").length, 0);
     assert.equal(d.querySelectorAll("#career-showcase .career-showcase-grid a").length, 3);
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 2);
