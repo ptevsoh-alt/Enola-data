@@ -1066,7 +1066,7 @@
         <div class="seo-pr-angle-grid">${prAngles.map(([no, title, format, audience, proof, destination]) => `
           <article><small>PR TOPIC CLUSTER ${esc(no)}</small><h4>${esc(title)}</h4><p><b>形式：</b>${esc(format)}</p><p><b>目标受众：</b>${esc(audience)}</p><p><b>证据准备：</b>${esc(proof)}</p><p><b>内容承接：</b>${esc(destination)}</p></article>
         `).join("")}</div>
-        <div class="seo-pr-package"><div><h4>媒体内容包</h4><ul><li>新闻角度与目标受众说明</li><li>已核实产品事实、清洁条件与来源清单</li><li>经批准的发言人、引用与媒体 Q&amp;A</li><li>新闻图片、产品素材、演示内容与主指南链接</li><li>媒体名单、联系人、发布时间与跟进负责人核验</li></ul></div><div><h4>新闻稿发布判断</h4><p>如果没有新事实、显著变化、可验证证据、明确时效或公共价值，不把普通促销包装成新闻稿；优先考虑季节性服务内容、专家评论或教育型 Pitch。付费合作必须披露，并与 Earned Editorial 分开统计。</p><p>PR 传播须经过事实、伤害、组织承接与信任检查；未通过时调整或暂停，不以曝光数量抵消风险。</p></div></div>
+        <div class="seo-pr-package"><div><h4>媒体内容包</h4><ul><li>新闻角度与目标受众说明</li><li>已核实产品事实、清洁条件与来源清单</li><li>经批准的发言人、引用与媒体 Q&amp;A</li><li>新闻图片、产品素材、演示内容与主指南链接</li><li>媒体名单、联系人、发布时间与跟进负责人核验</li></ul></div><div><h4>新闻稿发布判断</h4><p>如果没有新事实、显著变化、可验证证据、明确时效或公共价值，不把普通促销包装成新闻稿；优先考虑季节性服务内容、专家评论或教育型 Pitch。付费合作必须披露，并与 Earned Editorial 分开统计。</p><p>PR 传播须经过事实、伤害、组织承接与信任检查；未通过时调整或暂停，不以曝光数量抵消风险。</p><p>Program Owner 按目标解析：上市与商业化由 M07 负责；整合 Campaign 与公共激活由 M08 负责；其他主题由原业务 Owner 负责。CAP-EARNED 保留 PR 专项判断与媒体关系边界。</p></div></div>
       </section>
       <section class="seo-content-section" id="seo-cross-channel">
         <header><small>06 / CONTENT DISTRIBUTION</small><h3>同一主题，不同渠道各自承担任务</h3><p>内容复用不是把 Blog 复制到所有渠道，而是保留事实与核心信息，根据渠道任务重新组织表达。</p></header>
