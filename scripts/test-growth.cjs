@@ -107,17 +107,33 @@ const fs = require("fs"),
       }
     });
   }
+  await route("/capabilities");
+  const capabilityLinks = [...d.querySelectorAll(".cap-links a")].map(a=>a.hash);
+  check("capability page has nonduplicated links to specific case chapters", () => {
+    assert.equal(d.querySelectorAll(".cap-list article").length, 10);
+    assert.ok(capabilityLinks.length >= 14);
+    assert.equal(new Set(capabilityLinks).size, capabilityLinks.length);
+    assert.ok(capabilityLinks.every(hash=>hash.startsWith("#/case/") && hash.split("/").length===4));
+  });
+  for (const hash of capabilityLinks) {
+    const parts = hash.split("/");
+    await route("/case/"+parts[2]+"/"+parts[3]);
+    check("capability anchor opens its matching section: "+parts[2]+"/"+parts[3], () => {
+      assert.ok(d.querySelector(".case-page-"+parts[2]), "wrong case for "+hash);
+      assert.ok(d.getElementById(parts[3]), "missing destination for "+hash);
+    });
+  }
   await route("/cases");
   check("all 11 case cards use project-specific cover art or editorial color fields", () => {
     const covers = [...d.querySelectorAll("#case-list .case-cover-v3")];
     assert.equal(covers.length, 11);
     assert.equal(new Set(covers.map((x) => x.className.match(/case-cover-v3--(gtm|social|community|brand|operations|b2b|seo|amazon|creative|crm|creator)/)?.[1])).size, 11);
-    assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 5);
+    assert.equal(d.querySelectorAll("#case-list .case-cover-v3-media").length, 3);
     assert.equal(d.querySelectorAll("#case-list .cover-diagram").length, 0);
     const coverSubjects = {
-      gtm:"M3",social:"96.5万",community:"4,009",brand:"Campaign KV",
-      operations:"团队交付",b2b:"储能展会",seo:"01 / 09",amazon:"0 → 1",
-      creative:"TVC",crm:"EDM",creator:"Creator"
+      gtm:"M3",social:"海外社媒增长",community:"社群运营",brand:"品牌策略",
+      operations:"社媒团队管理",b2b:"储能展会",seo:"SEO 内容",amazon:"Amazon 运营",
+      creative:"视频创意",crm:"邮件旅程",creator:"Creator"
     };
     for (const [id, subject] of Object.entries(coverSubjects)) {
       const card = d.querySelector('#case-list [data-case-id="' + id + '"]');
@@ -129,7 +145,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll('#case-list img[src^="assets/concept-"]').length, 0);
     assert.ok(d.querySelector('#case-list .case-cover-v3--b2b img[src="assets/projects/exhibition-booth-overview-redacted.jpg"]'));
     assert.ok(d.querySelector('#case-list .case-cover-v3--gtm img[src="assets/projects/m3-yellow-main.webp"]'));
-    assert.ok(d.querySelector("#case-list .case-cover-v3--social").textContent.includes("96.5万"));
+    assert.ok(d.querySelector("#case-list .case-cover-v3--social").textContent.includes("海外社媒增长"));
     const copy = d.querySelector("#case-list").textContent;
     for (const phrase of ["先看任务", "再选工具", "项目方法与交付", "复盘的终点", "我的分工与项目推动"]) {
       assert.equal(copy.includes(phrase), false, phrase + " should not appear in the case index");
@@ -169,10 +185,16 @@ const fs = require("fs"),
   });
   await route("/case/operations");
   check("team case distinguishes directly managed social work from peer execution", () => {
-    assert.equal(d.querySelectorAll("#operations-control .operations-role-board article").length, 4);
+    assert.equal(d.querySelectorAll("#operations-control .operations-role-board button[role=tab]").length, 4);
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board .is-my-role").length, 1);
-    assert.equal(d.querySelectorAll("#operations-control .operations-issue-copy li").length, 3);
-    assert.ok(d.querySelector("#operations-control").textContent.includes("CTA 遮挡双盘"));
+    assert.equal(d.querySelectorAll("#operations-control .operations-issue-panel").length, 0);
+    assert.ok(d.querySelector("#operations-control").textContent.includes("月度内容日历"));
+    const tabs=d.querySelectorAll("#operations-control [data-ops-tab]");
+    tabs[2].click();
+    assert.equal(tabs[2].getAttribute("aria-selected"),"true");
+    assert.equal(d.querySelector("#ops-panel-brief").hidden,false);
+    assert.equal(d.querySelector("#ops-panel-quarter").hidden,true);
+    tabs[0].click();
   });
 
   await route("/case/gtm");
@@ -191,8 +213,10 @@ const fs = require("fs"),
   await route("/case/operations");
   check("verbose operational detail is available on demand after the visual ownership view", () => {
     assert.equal(d.querySelector("#operations-control").tagName, "SECTION");
-    assert.equal(d.querySelector(".operations-process-details").tagName, "DETAILS");
-    assert.ok(d.querySelector(".operations-process-details summary"));
+    assert.equal(d.querySelectorAll(".operations-work-panel").length,4);
+    assert.ok(d.querySelector("#ops-panel-month .operations-sample-table"));
+    assert.ok(d.querySelector("#ops-panel-brief .operations-brief-sheet"));
+    assert.equal(d.querySelectorAll("#ops-panel-review .operations-review-grid article").length,4);
   });
   await route("/home");
   const originalScrollIntoView = w.HTMLElement.prototype.scrollIntoView;
@@ -219,8 +243,13 @@ const fs = require("fs"),
       assert.equal(path.split("/")[2], id);
       assert.ok(d.getElementById(path.split("/")[3]));
       assert.equal(d.querySelectorAll(".case-tabs a").length, 7);
-      const evidencePath = d.querySelector("#evidence a").hash;
-      assert.ok(d.getElementById(evidencePath.split("/")[3]));
+      const related = [...d.querySelectorAll("#evidence .case-related-links a")];
+      assert.ok(related.length >= 1);
+      for (const a of related) {
+        const parts=a.hash.split("/");
+        assert.ok(w.PORTFOLIO.cases.some(x=>x.id === parts[2]), "unknown related case: "+a.hash);
+        assert.notEqual(parts[2], id, "related link must open a different case");
+      }
       assert.deepEqual([...d.querySelectorAll(".case-handoff-board h3")].map((h) => h.textContent), ["组织与协作", "复盘与下一步"]);
       const insight = d.querySelector("#insight");
       assert.notEqual(insight.querySelector("h2").textContent, "从问题到判断");
@@ -228,6 +257,24 @@ const fs = require("fs"),
       assert.equal(insight.querySelectorAll(".reader-source-note").length, 0);
     });
   }
+  await route("/case/gtm/m3-campaign-kv");
+  check("M3 Campaign exposes two product-accurate KV compositions", () => {
+    const view = d.querySelector("#m3-campaign-kv");
+    assert.ok(view);
+    assert.equal(view.querySelectorAll("figure").length, 2);
+    assert.equal(view.querySelectorAll("img[src='assets/projects/m3-yellow-main.webp']").length, 2);
+    assert.ok(view.textContent.includes("From grip"));
+    assert.ok(view.textContent.includes("Make Room for"));
+  });
+  await route("/case/gtm/gtm-visual-schedule");
+  check("May plan starts at marketing work, not personal product initiation", () => {
+    const schedule = d.querySelector("#gtm-visual-schedule");
+    assert.ok(schedule);
+    assert.ok(schedule.textContent.includes("05 / 01–03"));
+    assert.ok(schedule.textContent.includes("内容方向"));
+    assert.equal(schedule.textContent.includes("4/28"), false);
+    assert.equal(schedule.textContent.includes("立项"), false);
+  });
   await route("/case/gtm/campaign-paid-email-assets");
   check("Paid Ads and EDM creative variants are present", () => {
     assert.equal(d.querySelectorAll("#campaign-paid-email-assets article").length, 2);
@@ -243,9 +290,9 @@ const fs = require("fs"),
     const gateG2 = d.querySelector('#gtm-visual-schedule [data-gtm-gate="2"]');
     gateG2.click();
     assert.equal(gateG2.getAttribute("aria-pressed"), "true");
-    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="approval"]').textContent.includes("库存"));
+    assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="approval"]').textContent.includes("产品结构"));
     assert.ok(d.querySelector('#v-gate-detail [data-gate-slot="title"]').textContent.includes("5/15"));
-    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-product-source").length, 2);
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-product-source").length, 1);
     assert.ok(d.querySelector("#gtm-visual-schedule .v-gantt-scroll[tabindex='0']"));
     assert.equal(d.querySelectorAll(".v-gtm-quicknav a").length, 5);
     assert.equal(d.querySelectorAll("#gtm-visual-schedule [data-gtm-focus]").length, 4);
@@ -293,8 +340,9 @@ const fs = require("fs"),
   await route("/case/gtm/campaign-mechanism-mapping");
   check("a direct link from review opens the M3 creative directions", () => {
     assert.equal(d.querySelector("#campaign-mechanism-mapping").tagName, "SECTION");
-    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 5);
+    assert.equal(d.querySelectorAll("#campaign-mechanism-mapping .v-creative-card").length, 3);
     assert.equal(d.querySelectorAll("#market-adaptation .v-locale-panel").length, 2);
+    assert.ok(d.querySelector("#market-adaptation").textContent.includes("美英市场内容与发布检查"));
   });
   await route("/case/social/fathers-day-channel-roles");
   check("Father's Day content plan distinguishes four channel responsibilities", () => {
@@ -302,7 +350,10 @@ const fs = require("fs"),
   });
   await route("/case/operations/asset-review");
   check("the asset review links back to the relevant brief", () => {
-    assert.ok(d.querySelector("#asset-review").textContent.includes("遮挡并裁切了双盘"));
+    assert.ok(d.querySelector("#asset-review").textContent.includes("内容审核与发布管理"));
+    assert.equal(d.querySelectorAll("#operations-kv-review").length, 0);
+    assert.equal(d.querySelectorAll("#operations-content-calendar .operations-calendar-rows article").length, 4);
+    assert.ok(!d.getElementById("team-delivery").textContent.includes("社媒项目的协作分工"));
     assert.ok(d.querySelector('#asset-review a[href="#/case/gtm/english-brief"]'));
   });
   await route("/case/creative/video-projects");
@@ -319,7 +370,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector('#video-strategy a[href="#/case/creative/video-projects"]'));
     assert.ok(d.querySelector('#video-opening-comparison source[src="assets/video/creator-livingroom-7s.mp4"]'));
     const christmas = d.querySelector('#holiday-full-film iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]');
-    assert.ok(christmas?.getAttribute("title").includes("90"));
+    assert.ok(christmas?.getAttribute("title").includes("圣诞节"));
     const thanksgiving = d.querySelector('#thanksgiving-tvc iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]');
     assert.ok(thanksgiving?.getAttribute("title").includes("感恩节"));
     assert.ok(d.querySelector('#video-drive-editions iframe'));
@@ -335,61 +386,98 @@ const fs = require("fs"),
     assert.ok(!d.querySelector("#results .metric") || d.querySelector("#results .metric").textContent !== "待补充");
     assert.ok(d.getElementById("kol-shorts").textContent.includes("客厅"));
     assert.ok(!d.getElementById("video-projects").textContent.includes("另一版节庆广告"));
+    assert.ok(!d.getElementById("video-projects").textContent.includes("两支 TVC"));
+    assert.ok(!d.getElementById("video-projects").textContent.includes("完整七秒镜头"));
   });
   check("video editorial review compares three different viewing tasks", () => {
     assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
     assert.equal(d.querySelectorAll("#video-storyline .video-story-beats li").length, 4);
     assert.equal(d.querySelectorAll("#video-format-roles>div").length, 3);
   });
+  await route("/cases");
+  check("case index excludes synthetic imagery with unverified product structure or claims", () => {
+    assert.equal(d.querySelectorAll('#case-list img[src*="fathers-day-bbq-concept"]').length, 0);
+    assert.equal(d.querySelectorAll('#case-list img[src*="black-friday-suite-concept"]').length, 0);
+    assert.ok(d.querySelector('#case-list [data-case-id="brand"] img[src="assets/projects/brand-house.webp"]'));
+  });
   await route("/case/brand/seasonal-creative-gallery");
-  check("new Drive artwork is presented as Campaign concepts", () => {
+  check("brand visual gallery uses sourced brand and partner assets", () => {
     const gallery = d.querySelector("#seasonal-art-gallery");
     assert.ok(gallery);
     assert.equal(gallery.querySelectorAll("img").length, 2);
-    assert.ok(gallery.querySelector('img[src="assets/projects/fathers-day-bbq-concept.jpg"]'));
-    assert.ok(gallery.querySelector('img[src="assets/projects/black-friday-suite-concept.jpg"]'));
-    assert.ok(gallery.textContent.includes("创意提案"));
+    assert.ok(gallery.querySelector('img[src="assets/projects/brand-house.webp"]'));
+    assert.ok(gallery.querySelector('img[src="assets/projects/joint-giveaway.webp"]'));
+    assert.ok(gallery.textContent.includes("品牌屋"));
   });
-  await route("/case/b2b/expo-project");
-  check("overseas exhibition case combines original photos with visitor and follow-up work", () => {
+  await route("/case/brand/promotion-campaign-kv");
+  check("all three seasonal KVs show sourced images, accurate creative labels and channel previews", () => {
+    const gallery=d.querySelector("#promotion-kv-gallery");
+    assert.ok(gallery);
+    assert.deepEqual([...gallery.querySelectorAll(".promotion-kv-card")].map(el=>el.id),[
+      "promotion-kv-black","promotion-kv-mother","promotion-kv-father"
+    ]);
+    assert.equal(gallery.querySelectorAll(".promotion-kv-card .promo-kv-scene").length,3);
+    for (const img of gallery.querySelectorAll("img")) {
+      assert.ok(img.alt && !/待|占位/.test(img.alt));
+      assert.ok(fs.existsSync(path.join(root,"site",img.getAttribute("src"))),img.src);
+    }
+    assert.equal(d.querySelectorAll("#promotion-channel-adaptations .promo-device-preview").length,3);
+    assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
+    assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.querySelector(".promotion-kv-grid").textContent),false);
+  });
+  check("two archival KV visuals render from exact original image files", () => {
+    const gallery=d.querySelector("#promotion-original-work");
+    assert.ok(gallery);
+    const images=[...gallery.querySelectorAll(".promotion-original-card>a img")];
+    assert.deepEqual(images.map(im=>im.getAttribute("src")),[
+      "assets/projects/black-friday-suite-concept.jpg",
+      "assets/projects/fathers-day-bbq-concept.jpg"
+    ]);
+    for (const im of images) {
+      assert.ok(im.alt);
+      assert.ok(fs.existsSync(path.join(root,"site",im.getAttribute("src"))));
+      assert.equal(im.parentElement.getAttribute("href"),im.getAttribute("src"));
+    }
+    assert.ok(gallery.querySelector("#promotion-original-mother"));
+    assert.ok(gallery.textContent.includes("Mother's Day Sale"));
+  });
+  check("real 4:5 / 9:16 / 16:9 KV preview buttons change layout and ARIA state", () => {
+    const grid=d.querySelector("#promotion-kv-gallery .promotion-kv-grid");
+    const controls=[...d.querySelectorAll("#promotion-kv-gallery [data-promo-ratio]")];
+    assert.equal(controls.length,3);
+    for (const [name,button] of [["story",controls[1]],["hero",controls[2]],["feed",controls[0]]]) {
+      button.click();
+      assert.equal(grid.dataset.promoLayout,name);
+      assert.equal(button.getAttribute("aria-pressed"),"true");
+      assert.equal(controls.filter(el=>el.getAttribute("aria-pressed")==="true").length,1);
+    }
+  });
+  await route("/cases");
+  check("case index previews all three holiday KVs with distinct working chapter links", () => {
+    const links=[...d.querySelectorAll(".campaign-index-preview a")];
+    assert.equal(links.length,3);
+    assert.deepEqual(links.map(x=>x.hash),[
+      "#/case/brand/promotion-original-black","#/case/brand/promotion-kv-mother","#/case/brand/promotion-original-father"
+    ]);
+    assert.equal(d.querySelectorAll(".campaign-index-preview img").length,3);
+  });
+    await route("/case/b2b/expo-project");
+  check("exhibition case shows real booth planning, materials and customer follow-up without fictional dimensions", () => {
+    const block = d.querySelector("#expo-project");
+    assert.ok(block);
     assert.equal(d.querySelectorAll("#expo-visitor-route .expo-visitor-map article").length, 4);
     assert.equal(d.querySelectorAll("#expo-event-plan .expo-flight-card").length, 3);
-    assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 9);
+    assert.equal(d.querySelectorAll("#expo-brand-activation .expo-workstream article").length, 4);
     assert.equal(d.querySelectorAll("#expo-visual-language .expo-identity-grid>article").length, 3);
-    assert.ok(d.querySelector("#expo-real-work").textContent.includes("真实经历"));
-    assert.ok(d.querySelector("#expo-method-framework").textContent.includes("理论方法"));
-    assert.match(d.querySelector("#expo-floorplan").textContent, /10\s*[×x]\s*20\s*ft/i);
-    const exhibitionCopy = d.querySelector("#expo-project").textContent;
-    for (const phrase of ["以下以假设的", "不是前面实际", "不是此前", "不代表已实际举办", "以下为可迁移", "工作样例"]) {
-      assert.equal(exhibitionCopy.includes(phrase), false, "Explanatory exhibition wording resurfaced: " + phrase);
-    }
-    assert.ok(d.querySelector("#b2b-scale-comparison h3").textContent.includes("同期海外客户开发"));
-    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
-    for (const token of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!d.querySelector("#expo-project").textContent.includes(token), "Exhibition branding leakage: "+token);
-    assert.equal(d.querySelectorAll("#expo-visual-language .expo-brand-touch>div").length, 3);
-    assert.equal(d.querySelectorAll("#expo-experience-menu .expo-experience-card").length, 4);
-    assert.ok(d.querySelector("#expo-experience-menu").textContent.includes("Brochure") === false);
-    assert.ok(d.querySelector("#expo-visual-language").textContent.includes("Brochure"));
-
-    assert.ok(d.querySelector("#expo-brand-activation").textContent.includes("Press Kit"));
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-dimensions").textContent.includes("10 × 20 FT"));
-    assert.equal(d.querySelectorAll("#expo-team-handoff .expo-handoff-rails>div").length, 4);
+    assert.ok(d.querySelector("#expo-real-work").textContent.includes("海外储能行业展会"));
     assert.equal(d.querySelectorAll(".expo-gallery figure").length, 2);
-    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
-    assert.ok(d.querySelector("#expo-handoff"));
-    assert.equal(d.querySelectorAll("#expo-distance-route .expo-space-stop").length, 4);
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-wall"));
-    assert.equal(d.querySelectorAll("#expo-floorplan .expo-plan-interior>div").length, 3);
-    assert.ok(d.querySelector("#expo-floorplan .expo-plan-reception"));
     assert.equal(d.querySelectorAll("#expo-asset-manifest .expo-asset-card").length, 6);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-grid article").length, 3);
     assert.equal(d.querySelectorAll("#expo-activation-program .expo-activation-rhythm>div").length, 4);
-    const all = d.querySelector("#expo-asset-manifest").textContent;
-    for (let i = 1; i <= 6; i++) assert.ok(all.includes("EXH-MAT-0" + i));
-    const zone = d.querySelector('[data-expo-select="2"]');
-    zone.click();
-    assert.equal(zone.getAttribute("aria-pressed"), "true");
-    assert.ok(d.querySelector("#expo-selected-detail").textContent.includes("A3"));
+    assert.ok(d.querySelector("#expo-handoff"));
+    assert.equal(d.querySelectorAll("#b2b-scale-comparison .expo-results article").length, 2);
+    for (const phrase of ["概念展位", "HYPOTHETICAL BOOTH", "10 × 20 FT", "6–10m", "远距识别", "虚构尺寸"]) assert.ok(!block.textContent.includes(phrase), phrase);
+    for (const brand of ["M3","Q3","Qimedo","POWER EVERY MOVE","双盘","清洁电器"]) assert.ok(!block.textContent.includes(brand), "Exhibition brand leak: "+brand);
   });
   for (const item of w.PORTFOLIO.cases) {
     await route("/case/" + item.id);
@@ -412,9 +500,10 @@ const fs = require("fs"),
     assert.ok(d.querySelector(".g-foundation").textContent.includes("Facebook Group 社群运营"));
     assert.ok(d.querySelector(".g-foundation").textContent.includes("数据复盘与持续迭代"));
   });
-  check("social management case shows ownership and collaboration", () => {
+  check("social management case shows ownership and creative content work", () => {
     assert.equal(d.querySelectorAll(".g-social-ownership>article").length, 3);
-    assert.ok(d.querySelector(".g-social-ownership").textContent.includes("产品、设计、视频、电商"));
+    assert.ok(d.querySelector(".g-social-ownership").textContent.includes("创意主题与内容表现"));
+    assert.ok(!d.querySelector(".g-social-ownership").textContent.includes("从输入到发布的责任分工"));
   });
   check("social metrics are connected to management decisions without causal claims", () => {
     const section = d.querySelector("#social-data-decisions");
@@ -433,7 +522,7 @@ const fs = require("fs"),
     assert.ok(section.querySelector('a[href="#/case/community"]'));
   });
   check("editorial and campaign planning are connected to the social case", () => {
-    assert.ok(d.querySelector(".g-editorial"));
+    assert.equal(d.querySelector(".g-editorial"),null);
     assert.ok(d.querySelector(".g-campaign-wall"));
     assert.ok(d.querySelector(".g-social-loop"));
   });
@@ -524,18 +613,19 @@ const fs = require("fs"),
   check("GTM creative territories map to one primary mechanism and proof boundary", () => {
     const section = d.querySelector("#campaign-mechanism-mapping");
     assert.ok(section);
-    for (const term of ["问题显化", "机制揭示", "关系价值转移", "细节证明", "真实体验证明"])
+    for (const term of ["The After-Dinner Reset", "See the Motion", "Make Room for What Matters", "One Home, Different Cleaning Jobs"])
       assert.ok(section.textContent.includes(term), term);
-    assert.ok(section.textContent.includes("同一个 Big Idea，五种不同的画面切入"));
-    assert.equal(section.querySelectorAll(".v-creative-art").length, 5);
+    assert.ok(section.textContent.includes("M3 Campaign｜三条创意主线"));
+    assert.equal(section.querySelectorAll(".v-creative-art").length, 3);
     assert.ok(d.querySelector('#market-adaptation [lang="en-US"]').textContent.includes("entryway"));
     assert.ok(d.querySelector('#market-adaptation [lang="en-GB"]').textContent.includes("hallway"));
   });
-  d.querySelector("[data-image]").click();
-  await route("/case/gtm/strategy");
-  check("same case chapter route closes image modal", () =>
-    assert.equal(d.querySelector("#lightbox").open, false),
-  );
+  check("case visual opens real asset chapter instead of concept lightbox", () => {
+    assert.equal(d.querySelectorAll("[data-image]").length, 0);
+    assert.ok(d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
+  });
+  await route("/case/gtm/m3-campaign-kv");
+  check("GTM visual chapter is linked and available", () => assert.ok(d.getElementById("m3-campaign-kv")));
   await route("/case/community");
   check("community case shows both documented growth records without AI copy", () => {
     const copy = d.querySelector("main").textContent;

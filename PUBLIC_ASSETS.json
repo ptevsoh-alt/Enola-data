@@ -6,8 +6,8 @@
   },
   {
     "file": "app.js",
-    "bytes": 35754,
-    "sha256": "877cf2b9f40ca3e3a8304e0669053eae0ea8152bf3c1eaf4b57ccc8503943269"
+    "bytes": 35883,
+    "sha256": "6a80c3a08ca9f683f5bbb8c338cca0bccd5e2d3cae9b5dd6c823bbab171e7814"
   },
   {
     "file": "assets/concept-01.png",
@@ -126,33 +126,33 @@
   },
   {
     "file": "data.js",
-    "bytes": 82752,
-    "sha256": "b0d5be9d90606b96bdb5928020094a46591016d223871b40c3f78345ec7d88d2"
+    "bytes": 83380,
+    "sha256": "58f69e3960bce199264e1710c3a3ca05c341ce9da08040e914388c88b556feaa"
   },
   {
     "file": "growth.css",
-    "bytes": 161985,
-    "sha256": "2d082e265aebc42713625455877cbce312faba1d85bada868922a9ec9632d220"
+    "bytes": 195469,
+    "sha256": "c4361168030dbd9276539c765bec68a5f183150413df4d08b2529438cd469787"
   },
   {
     "file": "growth.js",
-    "bytes": 56959,
-    "sha256": "fa1bea60a60178e28b82ab4acbfe187bcf08e7b5beb17fca9892b1d8ef487c12"
+    "bytes": 62301,
+    "sha256": "3b8ec010fe3eaa7da331a37de3f7f2290af96033b3be1ac5675274002123efb2"
   },
   {
     "file": "index.html",
-    "bytes": 3496,
-    "sha256": "eef41bf71a4f0a3ca986c6dd8b45208fe51b9df3ff8ab1123a134e70cf069b1a"
+    "bytes": 3515,
+    "sha256": "8cfb225249b95aa6fc8cf02c62592144bf530ccb93052d8283a13ffca0235886"
   },
   {
     "file": "projects.js",
-    "bytes": 131884,
-    "sha256": "19b806a438209ac3173a503f546222af1613472b9034aeb78573719d831f81b2"
+    "bytes": 147285,
+    "sha256": "7c6168bebb36edc540da51e706955edb204576adee7e59eea8311c4312c45f50"
   },
   {
     "file": "review/index.html",
-    "bytes": 12616,
-    "sha256": "75ad26b014e3514ec5ed46aa5cdcfc72b71d3729efd798f68b9f85a7a66a065f"
+    "bytes": 12686,
+    "sha256": "af988e196ef70a64ca725bb2c76b137e7587da4e7703247c367cee4c5d3d85b0"
   },
   {
     "file": "review/review.css",
@@ -161,8 +161,8 @@
   },
   {
     "file": "review/review.js",
-    "bytes": 11992,
-    "sha256": "2cc31550e6bc0570d60fd3e30e360353e6687a42a4285e8cf3bb13a0b64c943c"
+    "bytes": 11040,
+    "sha256": "3889a3fc7d06c9d9a6fe46434f5df64d501daad17b4f89b73c22c09e31093ab1"
   },
   {
     "file": "robots.txt",
@@ -171,12 +171,12 @@
   },
   {
     "file": "selected-work.js",
-    "bytes": 4596,
-    "sha256": "9ca789aaa4cf006733641d24535054a704ee693d5bc959d0e2c4188283fd39f6"
+    "bytes": 4538,
+    "sha256": "ebb0780bcaee6488241af05f4bd825a5290a33d051ff4adeeb7ce10db47b67f4"
   },
   {
     "file": "styles.css",
-    "bytes": 24231,
-    "sha256": "19f6873e86976aa311118233ab4a73bbdcfa31b2943e15a080c5727832f4c981"
+    "bytes": 24541,
+    "sha256": "9cd6f5658b52420bddfded2a666dcb82f79ffa8e92838672c0384733657a1697"
   }
 ]

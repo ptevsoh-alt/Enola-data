@@ -64,11 +64,10 @@
   $("#review-campaign-flow").innerHTML = renderFlow(campaignFlow);
 
   const territories = [
-    ["The After-Dinner Reset", "问题显化", "以餐后地面任务切入；用真实、同条件的连续过程证明。"],
-    ["See the Motion", "机制揭示", "展示真实双头运行、接地与移动路径；静态 KV 不替代运行证明。"],
-    ["Make Room for What Matters", "关系价值转移", "让产品动作融入家庭生活情境，以真实使用镜头支撑传播表达。"],
-    ["A Closer Look at M3", "细节证明", "用官方源图、说明书或产品确认支撑结构与功能说明。"],
-    ["Real Home, Real Reset", "真实体验证明", "Creator 实际体验；披露、肖像、版权和 Paid Usage Rights 分别确认。"],
+    ["The After-Dinner Reset", "餐后清洁场景", "以餐后的真实地面问题进入产品故事，素材为场景 KV 和连续操作。"],
+    ["See the Motion", "双盘操作演示", "用产品原图交代结构，用真实镜头说明旋转、接地和推进路径。"],
+    ["Make Room for What Matters", "家庭生活叙事", "把日常清洁任务放进家庭生活中，以人物和场景表达品牌情绪。"],
+    ["One Home, Different Cleaning Jobs", "辅助 / 产品组合教育", "用四条产品线说明不同任务，作为常态内容补充，不作为第四条 M3 Campaign 主线。"],
   ];
   $("#review-territories").innerHTML = territories
     .map(
@@ -96,8 +95,8 @@
   const deliveryFlow = [
     ["排优先级", "从季度主题定月度重点，再分文案、设计和视频任务"],
     ["定验收项", "在 Brief 写清产品事实、渠道版本、交付日期与审核人"],
-    ["审物料", "主视觉如挡住产品结构，记录位置和修改要求后退回"],
-    ["复盘交接", "将常见返工原因写回审核清单，再调整下一轮排期"],
+    ["协调制作", "按平台任务交付 KV、轮播、短视频和 FAQ，产品同事核对公开信息"],
+    ["分析与调整", "分别核对平台内容表现和用户问题，再调整下一轮主题与内容日历"],
   ];
   $("#review-delivery-flow").innerHTML = renderFlow(deliveryFlow);
 
@@ -120,22 +119,15 @@
   $("#review-case-grid").innerHTML = cases;
 
   const visuals = [
-    ["../assets/concept-01.png", "GTM / Product Launch", "产品上市策略与视觉方向", "gtm", "contain", "launch"],
     ["../assets/projects/m3-yellow-main.webp", "M3 Product Identity", "产品外观与型号识别素材", "gtm", "contain", "launch"],
     ["../assets/projects/mop-kv-detail.webp", "M3 Campaign KV", "Campaign 主视觉细节", "gtm", "cover", "launch"],
     ["../assets/projects/m3-yellow-battery.webp", "M3 Battery Detail", "产品细节素材", "gtm", "contain", "launch"],
-    ["../assets/concept-02.png", "Brand / IMC", "品牌整合传播视觉方向", "brand", "contain", "brand"],
     ["../assets/projects/brand-house.webp", "Brand House", "品牌屋与信息架构工作物", "brand", "cover", "brand"],
     ["../assets/projects/joint-giveaway.webp", "Joint Campaign", "联合活动视觉素材", "brand", "cover", "brand"],
-    ["../assets/projects/fathers-day-bbq-concept.jpg", "Father’s Day / Gift Guide", "父亲节烧烤清洁主题 · AIGC 创意方案", "brand", "cover", "brand"],
-    ["../assets/projects/black-friday-suite-concept.jpg", "Black Friday / Product Suite", "黑五产品组合主视觉 · AIGC 创意方案", "brand", "cover", "brand"],
-    ["../assets/projects/holiday-scene-1.webp", "Seasonal Campaign", "节庆传播场景素材", "brand", "cover", "brand"],
     ["../assets/projects/pr-home-scene.webp", "PR / Home Scene", "家庭场景传播素材", "brand", "cover", "brand"],
-    ["../assets/projects/holiday-scene-2.webp", "Seasonal Visual", "节庆传播视觉素材", "brand", "cover", "brand"],
     ["../assets/projects/exhibition-booth-overview-redacted.jpg", "B2B Exhibition", "展会现场图 · 已匿名化", "b2b", "cover", "b2b"],
     ["../assets/projects/exhibition-booth-angle-redacted.jpg", "Exhibition Angle", "展位角度图 · 已匿名化", "b2b", "cover", "b2b"],
     ["../assets/projects/exhibition-product-display-redacted.jpg", "Product Display", "产品展示图 · 已匿名化", "b2b", "cover", "b2b"],
-    ["../assets/concept-03.png", "Creative Direction", "创意策略与视觉方向", "creative", "contain", "creative"],
     ["../assets/projects/vacuum-video-frame.webp", "Video Content", "产品演示视频画面", "creative", "cover", "creative"],
     ["../assets/projects/stairs-video-frame.webp", "Use Case / Video", "场景演示视频画面", "creative", "cover", "creative"],
   ];

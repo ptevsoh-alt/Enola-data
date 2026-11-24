@@ -51,9 +51,9 @@
       "RECONSTRUCTED",
     ],
     [
-      "Cross-functional Delivery",
-      "跨团队任务与质量管理",
-      "协调社媒小组、产品、设计、视频、电商与 Creator / KOL；明确事实提供、制作、审核和发布分工。",
+      "Creative Quality",
+      "创意形式与内容质量",
+      "围绕产品事实、用户问题和渠道格式审核视频开场、Before/After、字幕安全区与产品操作细节；将反馈更新到下一期选题。",
       "RECONSTRUCTED",
     ],
     [
@@ -331,13 +331,13 @@
     return `<section class="g-module g-social-story" id="social-foundation">
       ${header(
         "SOCIAL MEDIA MANAGEMENT / 2025.04—2026.09",
-        "从账号矩阵到内容经营，建立一套可持续的社媒管理机制。",
+        "从零搭建社媒内容体系，制定季度主题、月度日历并负责内容审核。",
         "负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略与小组交付；将平台定位、内容规划、活动组织、社群反馈和数据复盘连接起来。",
       )}
       <div class="g-social-ownership">
         <article><span>ROLE / 本人职责</span><b>社媒负责人 / 管理组长</b><p>制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本与视觉审核及周 / 月复盘。</p></article>
         <article><span>CHANNELS / 平台分工</span><b>Facebook · Instagram · Group</b><p>品牌信息与链接导流、产品视觉演示与活动沟通、用户交流与问题反馈分别承接。</p></article>
-        <article><span>COLLABORATION / 跨部门协作</span><b>从输入到发布的责任分工</b><p>协同社媒小组、产品、设计、视频、电商与 Creator / KOL，明确事实提供、制作、审核和发布责任。</p></article>
+        <article><span>CREATIVE / 社媒创意</span><b>创意主题与内容表现</b><p>围绕家庭清洁、Before/After、LED 显尘和操作教程安排视频 Hook、图文结构与版本审核。</p></article>
       </div>
       <div class="g-social-flow-heading">
         <span>OPERATING JOURNEY / 管理链路</span>
@@ -355,7 +355,6 @@
         <div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div>
       </div>
     </section>
-    ${editorial()}
     ${campaignWall()}
     ${communitySummary()}
     ${socialDecisionBridge()}
@@ -494,7 +493,7 @@
   }
   function visual(c) {
     if (c.art === "03")
-      return `<img src="assets/concept-03.png" alt="节日内容概念视觉，非历史已执行活动" width="1000" height="1200" loading="lazy">`;
+      return `<div class="g-campaign-art art-challenge" aria-label="节庆社群传播内容设计"><small>SEASONAL / SOCIAL CAMPAIGN</small><strong>家务日常<br>也有节日故事。</strong><div><span>节庆主题</span><i>→</i><span>场景</span><i>→</i><span>互动</span></div></div>`;
     if (c.art === "collab")
       return `<img src="assets/projects/joint-giveaway.webp" alt="匿名化联合抽奖海报，展示种植设备和电动清洁刷" loading="lazy" decoding="async">`;
     return `<div class="g-campaign-art art-challenge" aria-hidden="true"><small>COMMUNITY / PARTICIPATION</small><strong>一个小区域，<br>一次清洁分享。</strong><div><span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span></div></div>`;
