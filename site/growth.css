@@ -3563,3 +3563,7 @@
 .campaign-index-preview a:focus-visible{outline:3px solid #b78b47;outline-offset:2px}
 @media(max-width:750px){.campaign-index-spotlight{grid-template-columns:1fr;gap:1rem}.campaign-index-preview span{font-size:clamp(.55rem,2vw,.77rem)}}
 @media(prefers-reduced-motion:reduce){.campaign-index-preview img{transition:none}}
+
+/* Prevent legacy generic span sizing from shrinking campaign headlines. */
+.promo-kv-main strong span{font-size:inherit;line-height:inherit;letter-spacing:inherit;font-weight:inherit}
+.promotion-kv-black-art .promo-kv-overlay{background:linear-gradient(180deg,rgba(11,17,14,.77) 0%,rgba(10,18,15,.54) 43%,rgba(11,17,14,.97) 100%),linear-gradient(90deg,rgba(7,15,12,.68),transparent)}
