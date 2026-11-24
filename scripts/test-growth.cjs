@@ -201,6 +201,7 @@ const fs = require("fs"),
     assert.match(d.querySelector("#seo-case-overview").textContent, /PR Topic Clusters/);
     assert.match(d.querySelector("#seo-pr-extension").textContent, /不代表该主题已实际发稿/);
     assert.match(d.querySelector("#seo-pr-extension").textContent, /CAP-EARNED-001/);
+    assert.match(d.querySelector("#seo-pr-extension").textContent, /M07.*M08/);
     assert.match(d.querySelector("#seo-keyword-intent-map").textContent, /不展示推测数值/);
     assert.ok(d.getElementById("seo-search-optimization"));
     assert.ok(d.getElementById("seo-method-and-pr"));
