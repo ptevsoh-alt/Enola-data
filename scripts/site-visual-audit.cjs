@@ -90,28 +90,15 @@ async function screenshot(label){
     report.anchor.push({width,...anchor});
     if(anchor.artTop<anchor.navBottom-3)report.issues.push({width,anchorOverlap:anchor});
     if(width===1440){await screenshot("PROMO_DESKTOP")}else{await screenshot("PROMO_MOBILE")}
-    for(const ratio of ["feed","story","hero"]){
-      const expr=[
-        "(()=>{const key="+JSON.stringify(ratio)+";",
-        "document.querySelector('[data-promo-ratio='+key+']')?.click();",
-        "const grid=document.querySelector('#promotion-kv-gallery .promotion-kv-grid');",
-        "const cards=[...grid.querySelectorAll('.promotion-kv-art')];",
-        "const measured=cards.map(c=>{",
-        "const box=c.getBoundingClientRect();",
-        "const heading=c.querySelector('.promo-kv-main strong')?.getBoundingClientRect();",
-        "const action=c.querySelector('.promo-kv-action')?.getBoundingClientRect();",
-        "return {width:Math.round(box.width),height:Math.round(box.height),aspect:Number((box.width/box.height).toFixed(3)),",
-        "textOverflow:!!heading&&!!action&&(heading.left<box.left-4||heading.right>box.right+4||heading.bottom>action.top+2||action.bottom>box.bottom+4)};",
-        "});",
-        "return {ratio:key,selected:grid.dataset.promoLayout,pressed:[...document.querySelectorAll('#promotion-kv-gallery [data-promo-ratio]')].filter(b=>b.getAttribute('aria-pressed')==='true').length,measured};",
-        "})()"
-      ].join("");
-      const result=await evaluate(expr);
-      report.ratio.push({viewport:width,...result});
-      if(result.selected!==ratio||result.pressed!==1||result.measured.some(c=>c.textOverflow))report.issues.push({ratio,width,result});
+    const originals=await evaluate("(()=>{const gallery=document.querySelector('#promotion-kv-gallery');const items=[...gallery.querySelectorAll('#promotion-original-work .promotion-original-card>a img')].map(x=>({src:x.getAttribute('src'),complete:x.complete,width:x.naturalWidth}));const mother=!!gallery.querySelector('#promotion-original-mother a[href*=crm-campaign-email-plan]');const simulated=!!gallery.querySelector('.promotion-kv-grid');return {items,mother,simulated}})()");
+    report.originalKV ??=[];
+    report.originalKV.push({viewport:width,...originals});
+    const expected=["assets/projects/black-friday-suite-concept.jpg","assets/projects/fathers-day-bbq-concept.jpg"];
+    if(originals.items.length!==2 || originals.items.some((item,i)=>item.src!==expected[i]||!item.complete||item.width===0) || !originals.mother || originals.simulated){
+      report.issues.push({width,originalKV:originals});
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,ratio:report.ratio.length,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio||i.anchorOverlap))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
