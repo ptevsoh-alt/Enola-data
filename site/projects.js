@@ -1234,6 +1234,18 @@
         field("approval", button.dataset.gateApproval || "");
       });
     }
+    if (id === "brand") {
+      const ratios=[...main.querySelectorAll("#promotion-kv-gallery [data-promo-ratio]")];
+      const artboards=main.querySelector("#promotion-kv-gallery .promotion-kv-grid");
+      if (artboards && ratios.length === 3) for (const button of ratios) {
+        button.addEventListener("click", () => {
+          const ratio=button.dataset.promoRatio;
+          if (!["feed","story","hero"].includes(ratio)) return;
+          artboards.dataset.promoLayout=ratio;
+          for (const item of ratios) item.setAttribute("aria-pressed",String(item===button));
+        });
+      }
+    }
     if (id === "operations") {
       const tabs=[...main.querySelectorAll("[data-ops-tab]")];
       const panels=[...main.querySelectorAll("[data-ops-panel]")];
