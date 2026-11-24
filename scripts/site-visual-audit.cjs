@@ -82,6 +82,11 @@ async function screenshot(label){
       if(r.imagesWithoutAlt.length)report.issues.push({route:name,width,noAlt:r.imagesWithoutAlt});
       if(r.overflow>12)report.issues.push({route:name,width,overflow:r.overflow});
     }
+    await navigate(port,"case/seo/seo-keyword-intent-map",width,height);
+    const seoLayout=await evaluate("(()=>{const rows=[...document.querySelectorAll('#seo-keyword-intent-map .seo-topic-card li')];return {count:rows.length,narrow:rows.filter(li=>{const title=li.querySelector('span');return !title||title.getBoundingClientRect().width<li.clientWidth*.9}).map(li=>li.textContent.trim().slice(0,100))}})()");
+    report.seoLayout ??=[];
+    report.seoLayout.push({width,...seoLayout});
+    if(seoLayout.count!==9||seoLayout.narrow.length)report.issues.push({width,seoLayout});
     const r=await navigate(port,"case/brand/promotion-campaign-kv",width,height);
     await evaluate("document.getElementById('promotion-kv-gallery')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(200);
@@ -97,5 +102,5 @@ async function screenshot(label){
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
   console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,ratio:report.ratio.length,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio||i.anchorOverlap))process.exitCode=1;
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio||i.anchorOverlap||i.seoLayout))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
