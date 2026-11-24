@@ -77,7 +77,22 @@ async function screenshot(label){
     await delay(200);
     if(width===1440){await screenshot("PROMO_DESKTOP")}else{await screenshot("PROMO_MOBILE")}
     for(const ratio of ["feed","story","hero"]){
-      const result=await evaluate("(()=>{const key='"+ratio+"';document.querySelector('[data-promo-ratio='+key+']')?.click();const grid=document.querySelector('#promotion-kv-gallery .promotion-kv-grid'),cards=[...grid.querySelectorAll('.promotion-kv-art')];return {ratio:key,selected:grid.dataset.promoLayout,pressed:[...document.querySelectorAll('#promotion-kv-gallery [data-promo-ratio]')].filter(b=>b.getAttribute('aria-pressed')==='true').length,measured:cards.map(c=>{const r=c.getBoundingClientRect();return {width:Math.round(r.width),height:Math.round(r.height),aspect:Number((r.width/r.height).toFixed(3)),textOverflow:(()=>{const h=c.querySelector(".promo-kv-main strong")?.getBoundingClientRect(),a=c.querySelector(".promo-kv-action")?.getBoundingClientRect();return !!h&&!!a&&(h.right>r.right+4||h.left<r.left-4||h.bottom>a.top+2||a.bottom>r.bottom+4)})()}})}})()");
+      const expr=[
+        "(()=>{const key="+JSON.stringify(ratio)+";",
+        "document.querySelector('[data-promo-ratio='+key+']')?.click();",
+        "const grid=document.querySelector('#promotion-kv-gallery .promotion-kv-grid');",
+        "const cards=[...grid.querySelectorAll('.promotion-kv-art')];",
+        "const measured=cards.map(c=>{",
+        "const box=c.getBoundingClientRect();",
+        "const heading=c.querySelector('.promo-kv-main strong')?.getBoundingClientRect();",
+        "const action=c.querySelector('.promo-kv-action')?.getBoundingClientRect();",
+        "return {width:Math.round(box.width),height:Math.round(box.height),aspect:Number((box.width/box.height).toFixed(3)),",
+        "textOverflow:!!heading&&!!action&&(heading.left<box.left-4||heading.right>box.right+4||heading.bottom>action.top+2||action.bottom>box.bottom+4)};",
+        "});",
+        "return {ratio:key,selected:grid.dataset.promoLayout,pressed:[...document.querySelectorAll('#promotion-kv-gallery [data-promo-ratio]')].filter(b=>b.getAttribute('aria-pressed')==='true').length,measured};",
+        "})()"
+      ].join("");
+      const result=await evaluate(expr);
       report.ratio.push({viewport:width,...result});
       if(result.selected!==ratio||result.pressed!==1||result.measured.some(c=>c.textOverflow))report.issues.push({ratio,width,result});
     }
