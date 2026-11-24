@@ -919,18 +919,47 @@
         </tbody></table></div>
         <p><a href="#/case/social/fathers-day-calendar">父亲节内容日历 ↗</a> · <a href="#/case/crm/crm-campaign-email-plan">母亲节邮件策划 ↗</a></p>
       </section>
+
+      <section class="seo-content-section" id="seo-keyword-intent-map">
+        <header><small>04 / CONTENT CLUSTER CASE</small><h3>节庆内容策划示例｜主题与搜索意图</h3><p>以节后家庭清洁问题为例，将内容组织为一篇主题指南与九个细分专题的规划。这里展示的是内容结构和决策过程，不保留英文搜索选题或英文关键词清单，也不将规划数量视为上线篇数。</p></header>
+        <div class="seo-pillar-node"><div><small>CONTENT HUB / PILLAR</small><h4>节后家庭清洁主题指南</h4><p>作为专题入口，先帮助读者识别清洁任务，再分流至具体表面、家庭场景与工具选择内容。</p></div><span>1 篇主指南规划</span></div>
+        <div class="seo-topic-clusters">
+          <article class="seo-topic-card"><small>TOPIC GROUP 01</small><h4>污渍与表面清洁</h4><p>围绕不同表面、污渍残留与清洁处理方式建立五个细分内容方向。</p><p><strong>5 个专题规划</strong> · 问题解决 / How-to</p></article>
+          <article class="seo-topic-card"><small>TOPIC GROUP 02</small><h4>家庭聚会后快速整理</h4><p>把清洁优先级、动线与快速整理检查清单组织为独立的任务内容。</p><p><strong>1 个专题规划</strong> · Checklist</p></article>
+          <article class="seo-topic-card"><small>TOPIC GROUP 03</small><h4>产品使用与工具选型</h4><p>区分吸尘、刷洗、拖地的适用任务与操作条件，对接产品教育和比较信息。</p><p><strong>2 个专题规划</strong> · Product Education / Comparison</p></article>
+          <article class="seo-topic-card"><small>TOPIC GROUP 04</small><h4>宠物与全屋清洁</h4><p>延伸节日后的家庭卫生场景，结合实际使用问题规划指导性内容。</p><p><strong>1 个专题规划</strong> · Lifestyle / Hygiene</p></article>
+        </div>
+        <details class="seo-article-details" id="seo-article-briefs">
+          <summary>查看搜索意图与内容 Brief 规划（不含英文选题）</summary>
+          <div class="seo-intent-table-wrap"><table class="seo-intent-table" id="seo-intent-table"><thead><tr><th>主题组</th><th>用户任务</th><th>内容形式</th><th>页面及渠道承接</th></tr></thead><tbody>
+            <tr><td>污渍与表面清洁</td><td>识别材质、理解污渍处理方式</td><td>分步指南与常见问题</td><td>专题文章 → FAQ</td></tr>
+            <tr><td>家庭聚会后整理</td><td>确定清洁顺序与时间安排</td><td>检查清单与场景教程</td><td>主题指南 → 社媒内容</td></tr>
+            <tr><td>产品使用与选型</td><td>比较不同清洁工具与使用条件</td><td>工具比较、演示与操作指导</td><td>Blog → PDP / 产品说明</td></tr>
+            <tr><td>宠物与全屋清洁</td><td>解决家庭清洁与宠物使用场景问题</td><td>家庭场景指南与 FAQ</td><td>专题文章 → FAQ / Social</td></tr>
+          </tbody></table></div>
+          <p>内容 Brief 按用户任务、核心问题、回答结构、产品事实、H2/H3、素材与 ALT、FAQ、内部链接、CTA、审核责任和复盘指标进行整理。</p>
+        </details>
+        <div class="seo-calendar-list" aria-label="节庆内容相对排期示例">
+          <article><div class="seo-calendar-phase">T−7 至 T−1</div><div><h4>发布准备</h4><p>完成主题、搜索意图、事实依据、内容 Brief、页面分工及产品审核。</p></div></article>
+          <article><div class="seo-calendar-phase">T0 至 T+1</div><div><h4>主题指南与清洁清单</h4><p>以用户最先面临的节后整理任务组织主指南和快速清洁内容。</p></div></article>
+          <article><div class="seo-calendar-phase">T+1 至 T+3</div><div><h4>污渍与表面专题</h4><p>根据独立问题分批安排专题内容；需要时关联具体 FAQ。</p></div></article>
+          <article><div class="seo-calendar-phase">T+3 至 T+7</div><div><h4>工具选择与家庭场景</h4><p>连接已核实的产品使用说明、工具比较、宠物家庭场景及社媒内容。</p></div></article>
+          <article><div class="seo-calendar-phase">发布后复盘</div><div><h4>查询、页面与传播表现</h4><p>根据真实查询和页面表现更新主题、内链、内容格式与下一期策划。</p></div></article>
+        </div>
+        <p class="seo-data-note">以上为相对节庆内容策划示例，日期表示拟定节奏，不代表相应文章已经发布或取得搜索排名。</p>
+      </section>
       <span id="seo-method-and-pr"></span>
       <section class="seo-content-section" id="seo-pr-extension">
-        <header><small>04 / PUBLIC RELATIONS</small><h3>PR 传播主题与媒体内容</h3><p>以新闻价值与受众相关性组织传播主题，把品牌定位、家庭使用场景与产品信息转为媒体可理解的内容。</p></header>
+        <header><small>05 / PUBLIC RELATIONS</small><h3>PR 传播主题与媒体内容</h3><p>以新闻价值与受众相关性组织传播主题，把品牌定位、家庭使用场景与产品信息转为媒体可理解的内容。</p></header>
         <div class="seo-pr-angle-grid"><article><small>BRAND STORY</small><h4>品牌与家庭生活</h4><p>以北美家庭清洁任务为入口，说明品牌服务的生活需求。</p></article><article><small>PRODUCT COMMUNICATION</small><h4>产品与场景教育</h4><p>围绕地面、浴室、厨房、宠物和烧烤清洁建立产品分工，配合使用场景与产品素材。</p></article><article><small>MEDIA DISTRIBUTION</small><h4>新闻稿与媒体分发</h4><p>组织新闻主题、稿件结构和传播素材，区分新闻稿分发与独立编辑报道。</p></article></div>
         <div class="g-project-feature"><figure>${image("pr-home-scene","北美家庭清洁主题新闻稿场景配图")}<figcaption>新闻稿配图</figcaption></figure><div><h4>北美家庭清洁主题新闻稿</h4><p>2026 年 5 月 · King Newswire 分发至 USA Today Press Release 栏目。</p><p>以家庭清洁场景组织四条产品线的产品信息。</p><p><a href="#/case/brand/pr-project">查看新闻稿传播项目 ↗</a></p></div></div>
       </section>
       <section class="seo-content-section" id="seo-cross-channel">
-        <header><small>05 / CHANNEL COORDINATION</small><h3>内容在不同渠道的任务</h3></header>
+        <header><small>06 / CHANNEL COORDINATION</small><h3>内容在不同渠道的任务</h3></header>
         <div class="seo-channel-grid"><article><small>SEO / BLOG</small><h4>搜索需求</h4><p>回答问题，建立主题内容深度。</p></article><article><small>FAQ / PDP</small><h4>产品选择</h4><p>解释适用场景、购买顾虑及产品信息。</p></article><article><small>PR</small><h4>品牌传播</h4><p>将品牌和产品信息组织成媒体内容。</p></article><article><small>SOCIAL</small><h4>场景触达</h4><p>提炼操作演示、节庆话题与互动内容。</p></article><article><small>EDM</small><h4>用户沟通</h4><p>按节庆与用户阶段安排内容推荐。</p></article></div>
       </section>
       <section class="seo-content-section" id="seo-measurement">
-        <header><small>06 / PERFORMANCE REVIEW</small><h3>搜索、内容与媒体表现</h3></header>
+        <header><small>07 / PERFORMANCE REVIEW</small><h3>搜索、内容与媒体表现</h3></header>
         <div class="seo-measure-grid"><article><small>SEO</small><h4>GSC</h4><p>查询、收录、展示、点击和 CTR。</p></article><article><small>CONTENT</small><h4>GA4</h4><p>入口页面、阅读行为与后续行动。</p></article><article><small>PR</small><h4>媒体分发</h4><p>渠道相关性、核心信息表达与引荐。</p></article></div>
         <p><a href="#/data/search">查看历史搜索渠道数据 ↗</a></p>
       </section>

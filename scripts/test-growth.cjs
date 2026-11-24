@@ -427,9 +427,13 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#seo-case-overview"));
     assert.ok(d.querySelector("#seo-topic-cluster-map"));
     assert.ok(d.querySelector("#seo-pr-extension"));
-    assert.ok(!d.querySelector("#seo-article-briefs"));
-    assert.ok(!d.querySelector("#seo-keyword-intent-map"));
-    assert.ok(!/Halloween|ART-01|1 篇主指南|9 篇专题选题|英文搜索选题/.test(d.querySelector("main").textContent));
+    assert.ok(d.querySelector("#seo-article-briefs"));
+    assert.ok(d.querySelector("#seo-keyword-intent-map"));
+    assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-topic-card").length, 4);
+    assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-intent-table tbody tr").length, 4);
+    assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-calendar-list article").length, 5);
+    assert.ok(!/The Post-Halloween Survival Guide|Sticky Candy Meltdown|ART-01|post-Halloween cleaning guide|英文搜索选题/.test(d.querySelector("main").textContent));
+    assert.ok(!d.querySelector("#seo-keyword-intent-map [lang='en']"));
     assert.ok(d.querySelector("#seo-cross-channel"));
     assert.ok(d.querySelector("#seo-measurement"));
     assert.ok(!/CAP-EARNED|CAP-SEO|M13|M16|Enola-marketing/.test(d.querySelector("main").textContent));
