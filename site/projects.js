@@ -584,7 +584,7 @@
           <button type="button" data-promo-ratio="hero" aria-pressed="false">Hero · 16:9</button>
         </div>
         <div class="promotion-kv-grid" data-promo-layout="feed">
-          <figure class="promotion-kv-card promotion-kv-black">
+          <figure class="promotion-kv-card promotion-kv-black" id="promotion-kv-black">
             <div class="promotion-kv-art promotion-kv-black-art" role="img" aria-label="黑五节庆主题 KV，清洁产品照片与英文活动文案">
               <img class="promo-kv-scene" src="assets/projects/mop-kv-detail.webp" alt="清洁工具产品细节素材" loading="lazy" decoding="async">
               <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
@@ -595,7 +595,7 @@
             </div>
             <figcaption><small>THE HOLIDAY HOME EDIT</small><h4>Black Friday｜节日采购</h4><p>用家居焕新与产品价值组织主视觉、品类组合及选购入口。优惠数字留给实际审批后的版本。</p><div class="promo-kv-tags">Facebook / Landing / EDM</div></figcaption>
           </figure>
-          <figure class="promotion-kv-card promotion-kv-mother">
+          <figure class="promotion-kv-card promotion-kv-mother" id="promotion-kv-mother">
             <div class="promotion-kv-art promotion-kv-mother-art" role="img" aria-label="母亲节礼赠主题 KV，家庭场景照片和英文主张">
               <img class="promo-kv-scene" src="assets/projects/pr-home-scene.webp" alt="既有家居清洁家庭场景素材" loading="lazy" decoding="async">
               <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
@@ -606,7 +606,7 @@
             </div>
             <figcaption><small>GIFT OF EVERYDAY CARE</small><h4>Mother's Day｜家庭礼赠</h4><p>以关怀与家庭场景承接礼赠需求，关联英文邮件主题、内容轮播与产品使用教育。</p><div class="promo-kv-tags">Instagram / Facebook / EDM</div></figcaption>
           </figure>
-          <figure class="promotion-kv-card promotion-kv-father">
+          <figure class="promotion-kv-card promotion-kv-father" id="promotion-kv-father">
             <div class="promotion-kv-art promotion-kv-father-art" role="img" aria-label="父亲节家庭主题 KV，清洁产品使用画面与英文主张">
               <img class="promo-kv-scene" src="assets/projects/vacuum-video-frame.webp" alt="已收录清洁产品操作视频的画面" loading="lazy" decoding="async">
               <span class="promo-kv-overlay" aria-hidden="true"></span><span class="promo-kv-ornament" aria-hidden="true"></span>
