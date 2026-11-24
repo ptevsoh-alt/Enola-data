@@ -21,7 +21,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "artifact": "查看品牌策略与内容资产",
     "chapter": "brand-positioning",
     "image": "brand-house",
-    "alt": "匿名品牌屋与传播支柱示意"
+    "alt": "品牌屋与传播支柱"
   },
   "social": {
     "label": "Social Growth · 团队管理",

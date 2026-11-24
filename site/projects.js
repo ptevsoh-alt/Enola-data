@@ -910,7 +910,7 @@
       </section>
       <span id="seo-case-workflow"></span>
       <section class="seo-content-section" id="seo-content-calendar">
-        <header><small>03 / CONTENT PLANNING</small><h3>内容主题与渠道策划</h3><p>根据用户所处阶段决定选题，而不是让所有内容承担销售任务。</p></header>
+        <header><small>03 / CONTENT PLANNING</small><h3>内容主题与渠道策划</h3><p>按用户问题、产品教育、工具比较和节庆传播分别安排内容形式与渠道。</p></header>
         <div class="seo-intent-table-wrap"><table class="seo-intent-table"><thead><tr><th>内容主题</th><th>用户需求</th><th>内容形式</th><th>渠道承接</th></tr></thead><tbody>
           <tr><td>家庭清洁问题</td><td>解决污渍与操作疑问</td><td>指南、教程、FAQ</td><td>Blog / Social</td></tr>
           <tr><td>产品使用教育</td><td>理解结构、动作与适用条件</td><td>使用说明、操作演示</td><td>Blog / PDP / Video</td></tr>
@@ -921,7 +921,7 @@
       </section>
 
       <section class="seo-content-section" id="seo-keyword-intent-map">
-        <header><small>04 / CONTENT CLUSTER CASE</small><h3>节庆内容策划示例｜主题与搜索意图</h3><p>以节后家庭清洁问题为例，将内容组织为一篇主题指南与九个细分专题的规划。这里展示内容架构、用户任务与策划过程，规划数量不等同于实际上线篇数。</p></header>
+        <header><small>04 / SEASONAL CONTENT PLANNING</small><h3>节庆主题集群与内容排期</h3><p>围绕节后家庭清洁任务，规划一篇主题指南、九个细分专题，衔接 FAQ、产品使用教育及后续渠道传播。</p></header>
         <div class="seo-pillar-node"><div><small>CONTENT HUB / PILLAR</small><h4>节后家庭清洁主题指南</h4><p>作为专题入口，先帮助读者识别清洁任务，再分流至具体表面、家庭场景与工具选择内容。</p></div><span>1 篇主指南规划</span></div>
         <div class="seo-topic-clusters">
           <article class="seo-topic-card"><small>TOPIC GROUP 01</small><h4>污渍与表面清洁</h4><p>围绕不同表面、污渍残留与清洁处理方式建立五个细分内容方向。</p><p><strong>5 个专题规划</strong> · 问题解决 / How-to</p></article>
@@ -930,23 +930,18 @@
           <article class="seo-topic-card"><small>TOPIC GROUP 04</small><h4>宠物与全屋清洁</h4><p>延伸节日后的家庭卫生场景，结合实际使用问题规划指导性内容。</p><p><strong>1 个专题规划</strong> · Lifestyle / Hygiene</p></article>
         </div>
         <details class="seo-article-details" id="seo-article-briefs">
-          <summary>查看搜索意图与内容 Brief 规划（不含英文选题）</summary>
-          <div class="seo-intent-table-wrap"><table class="seo-intent-table" id="seo-intent-table"><thead><tr><th>主题组</th><th>用户任务</th><th>内容形式</th><th>页面及渠道承接</th></tr></thead><tbody>
-            <tr><td>污渍与表面清洁</td><td>识别材质、理解污渍处理方式</td><td>分步指南与常见问题</td><td>专题文章 → FAQ</td></tr>
-            <tr><td>家庭聚会后整理</td><td>确定清洁顺序与时间安排</td><td>检查清单与场景教程</td><td>主题指南 → 社媒内容</td></tr>
-            <tr><td>产品使用与选型</td><td>比较不同清洁工具与使用条件</td><td>工具比较、演示与操作指导</td><td>Blog → PDP / 产品说明</td></tr>
-            <tr><td>宠物与全屋清洁</td><td>解决家庭清洁与宠物使用场景问题</td><td>家庭场景指南与 FAQ</td><td>专题文章 → FAQ / Social</td></tr>
-          </tbody></table></div>
+          <summary>内容 Brief 与页面承接要求</summary>
+          
           <p>内容 Brief 按用户任务、核心问题、回答结构、产品事实、H2/H3、素材与 ALT、FAQ、内部链接、CTA、审核责任和复盘指标进行整理。</p>
         </details>
-        <div class="seo-calendar-list" aria-label="节庆内容相对排期示例">
+        <div class="seo-calendar-list" aria-label="节庆内容排期">
           <article><div class="seo-calendar-phase">T−7 至 T−1</div><div><h4>发布准备</h4><p>完成主题、搜索意图、事实依据、内容 Brief、页面分工及产品审核。</p></div></article>
           <article><div class="seo-calendar-phase">T0 至 T+1</div><div><h4>主题指南与清洁清单</h4><p>以用户最先面临的节后整理任务组织主指南和快速清洁内容。</p></div></article>
           <article><div class="seo-calendar-phase">T+1 至 T+3</div><div><h4>污渍与表面专题</h4><p>根据独立问题分批安排专题内容；需要时关联具体 FAQ。</p></div></article>
           <article><div class="seo-calendar-phase">T+3 至 T+7</div><div><h4>工具选择与家庭场景</h4><p>连接已核实的产品使用说明、工具比较、宠物家庭场景及社媒内容。</p></div></article>
           <article><div class="seo-calendar-phase">发布后复盘</div><div><h4>查询、页面与传播表现</h4><p>根据真实查询和页面表现更新主题、内链、内容格式与下一期策划。</p></div></article>
         </div>
-        <p class="seo-data-note">以上为相对节庆内容策划示例，日期表示拟定节奏，不代表相应文章已经发布或取得搜索排名。</p>
+        <p class="seo-data-note">以节庆节点安排内容制作、发布审核与效果复盘，具体发布时间依照物料与渠道准备情况调整。</p>
       </section>
       <span id="seo-method-and-pr"></span>
       <section class="seo-content-section" id="seo-pr-extension">
@@ -1092,12 +1087,12 @@
       "2026 年 5 月上市规划以餐后硬地为优先场景，串联 VOC、产品事实、内容制作与各渠道发布 Gate。",
     ],
     brand: [
-      "用户先选清洁任务，再认产品线",
+      "按家庭清洁场景组织产品线",
       "品牌屋把五款产品放回四条产品线。餐区黏污和浴室边角各有明确的接触表面、操作动作和对应工具，因此可作为品牌传播最先讲清的两个场景。",
       "围绕家庭任务组织品牌屋、新闻稿与联合营销素材，重点统一产品主张、使用场景和视觉信息层级。",
     ],
     social: [
-      "内容复盘先看用户停在哪一步",
+      "内容表现与下期选题调整",
       "同样是数据上涨，浏览、互动与点击回答的问题不同。复盘时先检查内容有没有吸引人停留，再看用户是在讨论场景、追问用法，还是进入下一步。",
       "负责季度主题、月度日历和社媒小组审核；以展示、互动、点击和社群反馈调整内容结构。",
     ],
@@ -1117,7 +1112,7 @@
       "展位策划、展品陈列、品牌物料与客户需求跟进。",
     ],
     seo: [
-      "用搜索问题决定页面分工",
+      "搜索需求与页面分工",
       "搜索内容分别回应用户的使用问题与选型需求。主题指南负责组织场景，FAQ 和商品页进一步说明使用条件及购买考虑。",
       "主题集群策划包括内容结构、页面分工与内部链接，并根据收录、查询和点击表现进行评估。",
     ],
@@ -1127,7 +1122,7 @@
       "按商品和统计周期对照流量、广告、库存与订单，确定经营优化重点。",
     ],
     creative: [
-      "开场由观众要解决的问题决定",
+      "品牌故事与产品演示的开场设计",
       "节庆短片用聚餐和污渍引出工具，在结尾回到人物。楼梯吸尘片面向操作疑问，开场就给吸头和踏面。两种开场各有需要拍到的动作。",
       "评估故事顺序、构图、操作动作与开场留存，优化脚本及剪辑。",
     ],
@@ -1137,7 +1132,7 @@
       "负责邮件主题、文案结构、受众与发送节奏的营销方案；触发与退出规则作为实施时的配置要求。",
     ],
     creator: [
-      "先看创作者能否拍清用户最关心的动作",
+      "Creator 筛选与产品演示审核",
       "为产品教育筛选创作者时，优先看目标受众、过往镜头和理解产品的能力。Brief 明确需要拍到的动作，验收时逐项对照片段、披露与可使用范围。",
       "以创作者筛选、合作 Brief、版本审核、授权记录和发布回链组织交付。",
     ],
