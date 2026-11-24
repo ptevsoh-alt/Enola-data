@@ -18,7 +18,7 @@ const getJSON=url=>new Promise((resolve,reject)=>{http.get(url,res=>{let t="";re
 const chromeList=[process.env.CHROME_BIN,"/usr/bin/google-chrome","/usr/bin/google-chrome-stable","/usr/bin/chromium","google-chrome","chromium"].filter(Boolean);
 const browser=chromeList.find(cmd=>cp.spawnSync(cmd,["--version"],{stdio:"ignore"}).status===0);
 if(!browser){console.error("VISUAL_BROWSER_UNAVAILABLE: Chrome/Chromium missing");process.exit(2)}
-let chrome,ws,seq=1,waiting=new Map();
+let chrome,ws,seq=1,waiting=new Map(),navigationReady=false;
 function send(method,params={}){
   const id=seq++;
   return new Promise((resolve,reject)=>{
@@ -34,7 +34,12 @@ async function evaluate(expression){
 }
 async function navigate(port,route,w,h){
   await send("Emulation.setDeviceMetricsOverride",{width:w,height:h,deviceScaleFactor:1,mobile:w<=450});
-  await send("Page.navigate",{url:"http://127.0.0.1:"+port+"/#/"+route});
+  if(!navigationReady){
+    await send("Page.navigate",{url:"http://127.0.0.1:"+port+"/#/"+route});
+    navigationReady=true;
+  }else{
+    await evaluate("location.hash="+JSON.stringify("#/"+route));
+  }
   for(let i=0;i<35;i++){
     await delay(130);
     const ready=await evaluate("document.readyState==='complete' && Boolean(document.querySelector('main .case-section,main #case-list,main .career-list,main .cap-list'))");
@@ -42,6 +47,11 @@ async function navigate(port,route,w,h){
   }
   await evaluate("(async()=>{const ims=[...document.querySelectorAll('main img')];ims.forEach(i=>i.loading='eager');await Promise.all(ims.map(i=>i.decode().catch(()=>null)));return ims.length})()");
   await delay(180);
+  if(route.startsWith("case/")){
+    const id=route.split("/")[1];
+    const exists=await evaluate("Boolean(document.querySelector('.case-page-"+id+"'))");
+    if(!exists)throw new Error("CASE_NOT_RENDERED "+route);
+  }
   return await evaluate("(()=>{const m=document.querySelector('main');const im=[...m.querySelectorAll('img')];return {title:m.querySelector('h1')?.textContent||'',imageCount:im.length,brokenImages:im.filter(i=>!i.complete||i.naturalWidth===0).map(i=>i.getAttribute('src')),imagesWithoutAlt:im.filter(i=>!i.hasAttribute('alt')).map(i=>i.src),overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth),width:innerWidth,scrollWidth:document.documentElement.scrollWidth,caseId:m.querySelector('.case-page-gtm,.case-page-social,.case-page-brand,.case-page-operations')?.className||''}})()");
 }
 async function screenshot(label){
@@ -67,7 +77,7 @@ async function screenshot(label){
     for(const name of ["cases",...cases,"experience","capabilities"]){
       console.log("VISUAL_ROUTE_BEGIN",width,name);
       const r=await navigate(port,name,width,height);report.screens.push({route:name,width,height,...r});
-      console.log("VISUAL_ROUTE_DONE",width,name,r.imageCount,r.overflow);
+      console.log("VISUAL_ROUTE_DONE",width,name,r.imageCount,r.overflow,r.title.slice(0,55));
       if(r.brokenImages.length)report.issues.push({route:name,width,brokenImages:r.brokenImages});
       if(r.imagesWithoutAlt.length)report.issues.push({route:name,width,noAlt:r.imagesWithoutAlt});
       if(r.overflow>12)report.issues.push({route:name,width,overflow:r.overflow});
