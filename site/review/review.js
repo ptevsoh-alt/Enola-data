@@ -67,7 +67,7 @@
     ["The After-Dinner Reset", "餐后清洁场景", "以餐后的真实地面问题进入产品故事，素材为场景 KV 和连续操作。"],
     ["See the Motion", "双盘操作演示", "用产品原图交代结构，用真实镜头说明旋转、接地和推进路径。"],
     ["Make Room for What Matters", "家庭生活叙事", "把日常清洁任务放进家庭生活中，以人物和场景表达品牌情绪。"],
-    ["One Home, Different Cleaning Jobs", "辅助 / 产品组合教育", "用四条产品线说明不同任务，作为常态内容补充，不作为第四条 M3 Campaign 主线。"],
+    ["One Home, Different Cleaning Jobs", "辅助 / 产品组合教育", "以四条产品线对应不同清洁任务，规划日常产品教育内容。"],
   ];
   $("#review-territories").innerHTML = territories
     .map(

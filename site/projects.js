@@ -151,7 +151,7 @@
     return `
       <div class="g-story-note g-launch-delivery" id="launch-delivery">
         <h3>五月上市协作｜内容、渠道与交付节奏</h3>
-        <p>五月计划以社媒内容为主，列出 Brief、视觉与视频制作、审核、计划发布及复盘节点。Paid、PR、Creator 和 EDM 只展示需要配合的素材和时间，不代表由我负责投放或商业审批。</p>
+        <p>五月社媒传播计划覆盖 Brief、视觉与视频制作、内容审核、发布安排及复盘，并同步 Paid、PR、Creator 与 EDM 所需素材和时间节点。</p>
         <section class="v-release-gantt" id="gtm-visual-schedule" aria-labelledby="v-release-heading">
           <header class="v-release-heading"><div><span>MARKETING DELIVERY / MAY 2026</span><h4 id="v-release-heading">2026 年 5 月｜M3 上市传播排期</h4></div><p>按周安排内容策划、KV 与视频制作、渠道素材准备和发布审核。可筛选社媒主责、渠道协同与业务支持。</p></header>
           <div class="v-gantt-legend" aria-label="排期图说明"><span><i class="v-legend-plan"></i>策略 / Brief</span><span><i class="v-legend-produce"></i>制作 / 准备</span><span><i class="v-legend-launch"></i>渠道放行</span><span><i class="v-legend-learn"></i>运营 / 复盘</span></div>
@@ -241,7 +241,7 @@
   <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
   <div class="pmm-decision-layout">
     <div class="pmm-decision-process" aria-label="从使用任务到传播交付的策略决策链">
-      <article><span>01 / USER TASK</span><h4>餐后地面整理</h4><p>以真实家庭的具体清洁任务作为产品理解入口。</p><strong>场景优先，而非参数优先</strong></article>
+      <article><span>01 / USER TASK</span><h4>餐后地面整理</h4><p>以真实家庭的具体清洁任务作为产品理解入口。</p><strong>餐后硬地清洁场景</strong></article>
       <article><span>02 / PRODUCT VALUE</span><h4>双盘接地与站姿推进</h4><p>将结构、握持和推进路径转为能够看见的使用价值。</p><strong>产品事实 → 用户收益</strong></article>
       <article><span>03 / PROOF</span><h4>外观、连续演示与 FAQ</h4><p>静态 KV 识别产品；连续实拍说明操作；FAQ 承接适用条件。</p><strong>视觉、视频和技术信息分工</strong></article>
       <article><span>04 / GO-TO-MARKET</span><h4>Social → Creator → Commerce</h4><p>场景内容建立认知，真实使用镜头解释动作，商品信息完成选购理解。</p><strong>传播与选购承接相连</strong></article>
@@ -343,7 +343,7 @@
           <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 渠道创意</small><h4>同一产品价值，在不同触点怎样表达</h4><p>从同一个用户问题出发，广告优先呈现注意力与动作，邮件负责解释产品和下一步。</p></div>
           <div class="campaign-assets-pair">
             <article class="campaign-ad-visual"><span>ADS / PAID CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>场景钩子 → 产品出场 → 双盘操作近景 → 观看完整演示</p><div class="campaign-asset-tags"><small>Hook A · 场景</small><small>Hook B · 结构</small><small>Hook C · 操作</small></div><p class="campaign-asset-caption">Meta / TikTok 广告创意方向；测试和预算由投放负责人核准。</p></article>
-            <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热邮件引导认知；上市邮件说明产品结构与适用场景；购后邮件围绕使用教育与 FAQ。</p><div class="campaign-asset-tags"><small>Subscribed</small><small>Interested</small><small>Purchased</small></div><p class="campaign-asset-caption">邮件内容、分层与退出逻辑为策划设计；实际发送受用户许可、系统就绪和商业条件约束。</p></article>
+            <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热邮件引导认知；上市邮件说明产品结构与适用场景；购后邮件围绕使用教育与 FAQ。</p><div class="campaign-asset-tags"><small>Subscribed</small><small>Interested</small><small>Purchased</small></div><p class="campaign-asset-caption">邮件内容、用户分层与退出规则设计。</p></article>
           </div>
           <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
         </div>
@@ -382,7 +382,7 @@
           <div class="g-proof-table"><table class="campaign-content-table">
             <thead><tr><th>内容支柱</th><th>对应用户问题 / 内容</th><th>主要渠道任务</th><th>当前依赖</th></tr></thead>
             <tbody>
-              <tr><th>场景问题</th><td>餐后仍需处理的地面清洁任务</td><td>FB / IG Feed、Story 与短视频建立相关性</td><td>真实场景，不以互动投票代替用户研究</td></tr>
+              <tr><th>场景问题</th><td>餐后仍需处理的地面清洁任务</td><td>FB / IG Feed、Story 与短视频建立相关性</td><td>Review / VOC 与家庭清洁场景</td></tr>
               <tr><th>情绪与品牌</th><td>把清洁放回家庭生活的情境</td><td>节庆 KV、短片和较长品牌故事</td><td>人物、音乐与场景使用权待确认</td></tr>
               <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>真实 M3 运行视频不足时 HOLD_ASSET</td></tr>
               <tr><th>操作教育</th><td>手柄控制、电池安装和结构细节</td><td>轮播、结构短片与商品信息说明</td><td>官方源图及产品功能核验</td></tr>
@@ -402,7 +402,7 @@
       ${englishBrief()}
       <p class="g-chart-note">已整理 23 个社媒内容与运营槽位、15 条 IMC 协同安排。复盘方案用观看和商品页访问定位问题，以对账后的净履约订单和净贡献评估商业表现。</p>
 <section class="campaign-media-brief" id="gtm-media-plan" aria-labelledby="gtm-media-plan-heading">
-  <header><small>IMC CHANNEL PLAN / PAID × EARNED</small><h3 id="gtm-media-plan-heading">不同渠道分工，不等于一份渠道清单</h3><p>Paid 负责受众与素材测试；PR / Creator 负责合作内容与可信表达。内容侧提供一致的产品事实、创意 Brief 和版本管理。</p></header>
+  <header><small>IMC CHANNEL PLAN / PAID × EARNED</small><h3 id="gtm-media-plan-heading">Paid、PR 与 Creator 的传播任务</h3><p>Paid 负责受众与素材测试；PR / Creator 负责合作内容与可信表达。内容侧提供一致的产品事实、创意 Brief 和版本管理。</p></header>
   <div class="campaign-media-brief-grid">
     <article class="media-brief-paid"><div class="media-brief-kicker"><span>01 / PAID MEDIA</span><b>创意测试接口</b></div>
       <div class="media-brief-route"><span>场景 Hook</span><i>→</i><span>产品动作</span><i>→</i><span>页面承接</span></div>
@@ -520,7 +520,7 @@
         <h3>父亲节 Campaign｜内容主张与渠道联动</h3>
         <div class="g-project-list g-project-calendar-plan">
           <article><small>FACEBOOK / 场景与互动</small><h3>先让人讲家庭清洁故事</h3><p>从“父亲教过你的生活小技巧”开启讨论，再用轮播回应常见使用情境；重点观察真实留言和重复出现的问题。</p></article>
-          <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，不将两种产品混成同一功能。</p></article>
+          <article><small>INSTAGRAM / 情境与可观察动作</small><h3>由节庆情绪进入产品演示</h3><p>Stories 和 Reels 分别承担主题传播与动作教育。长柄刷强调边角接触，双盘拖把展示餐后硬地推进，分别呈现产品操作与适用场景。</p></article>
           <article><small>GROUP / 关系与参与</small><h3>让成员提供真实做法</h3><p>教程、投票和 UGC 邀约是自愿参与。投稿并不自动允许商业复用，活动 Owner、资格与奖励由实际执行方确认。</p></article>
           <article><small>PR / CREATOR / 条件性协作</small><h3>有新闻价值和授权，才加外部传播</h3><p>围绕家庭故事与产品使用场景设计合作 Brief，同步规划创作者交付、内容披露和素材授权。</p></article>
           <article><small>PAID ADS / 创意放大</small><h3>用节庆主题形成广告创意变体</h3><p>规划家庭关系开场、清洁任务开场和产品动作开场，按受众阶段匹配素材与落地页，投放测试与预算由广告负责人审批。</p></article>
@@ -540,7 +540,7 @@
         <p>稿件以北美家庭常见清洁场景组织产品信息，包括宠物毛发、地面污渍、浴室污垢、厨房油污和烧烤后残渣，让不同工具对应不同家庭任务。</p>
         <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
         <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
-        <h3>可核验的分发结果</h3>
+        <h3>新闻稿分发</h3>
         <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
         
       </div></div>`, "pr-project");
@@ -578,13 +578,13 @@
           <span class="promo-visual-status">CREATIVE STUDIES / PORTFOLIO</span>
         </header>
         <section class="promotion-original-work" id="promotion-original-work" aria-labelledby="promotion-original-title">
-          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">原始节庆 KV 创意稿</h4><p>先看原始视觉，再看后面的 Feed / Story / Hero 版式模拟。以下图片保留原有构图与英文文案。</p></header>
+          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">原始节庆 KV 创意稿</h4><p>节庆主视觉与 Feed、Story、Hero 渠道版式。</p></header>
           <div class="promotion-original-grid">
             <figure class="promotion-original-card" id="promotion-original-black">
               <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看黑五促销原稿">
                 <img src="assets/projects/black-friday-suite-concept.jpg" width="2752" height="1536" alt="黑五原创意 KV：黑金 BLACK FRIDAY、清洁产品组合、限时促销文案" loading="lazy" decoding="async">
                 <span>放大原图 ↗</span>
-              </a><figcaption><small>BLACK FRIDAY / VISUAL STUDY</small><h5>黑五｜组合清洁工具促销</h5><p>产品组合陈列、黑金节庆色与促销行动入口。原画面 35% OFF 为创意草稿中的优惠提案。</p></figcaption>
+              </a><figcaption><small>BLACK FRIDAY / VISUAL STUDY</small><h5>黑五｜组合清洁工具促销</h5><p>黑金配色、产品组合陈列与 35% OFF 促销提案。</p></figcaption>
             </figure>
             <figure class="promotion-original-card" id="promotion-original-father">
               <a href="assets/projects/fathers-day-bbq-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看父亲节促销原稿">
@@ -598,9 +598,8 @@
               <img src="assets/projects/pr-home-scene.webp" alt="母亲节创意版式使用的已有家居生活照片，非母亲节原始海报" loading="lazy" decoding="async">
               <div class="promotion-mother-copy" lang="en"><small>MOTHER'S DAY / CAMPAIGN BRIEF</small><strong>Mother's Day Sale</strong><span>Built for Big Messes</span><b>30% OFF</b></div>
             </div>
-            <div><small>MOTHER'S DAY / ARCHIVE DIRECTION</small><h5>母亲节｜家务减负与家庭礼赠</h5><p>原始参考稿采用厨房清洁场景及 30% OFF 信息。此处暂以已收录场景展示原案文案结构；完整母亲节海报仍保留在个人素材档案中。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
+            <div><small>MOTHER'S DAY / LAYOUT STUDY</small><h5>母亲节｜家务减负与家庭礼赠</h5><p>母亲节礼赠版式提案：厨房清洁场景、家庭关怀主题及 30% OFF 优惠信息。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
           </div>
-          <p class="promotion-original-qa">原图按创意提案展示，产品结构与促销条款需按最终商业版本审核。</p>
         </section>
         <div class="promotion-format-switch" role="group" aria-label="切换促销主视觉画幅">
           <span>画幅预览</span>
@@ -618,7 +617,7 @@
                 <div class="promo-kv-action"><span>EXPLORE THE COLLECTION</span><i aria-hidden="true">↗</i></div>
               </div>
             </div>
-            <figcaption><small>THE HOLIDAY HOME EDIT</small><h4>Black Friday｜节日采购</h4><p>用家居焕新与产品价值组织主视觉、品类组合及选购入口。优惠数字留给实际审批后的版本。</p><div class="promo-kv-tags">Facebook / Landing / EDM</div></figcaption>
+            <figcaption><small>THE HOLIDAY HOME EDIT</small><h4>Black Friday｜节日采购</h4><p>以家居焕新为主题，突出产品组合、选购理由与行动入口。</p><div class="promo-kv-tags">Facebook / Landing / EDM</div></figcaption>
           </figure>
           <figure class="promotion-kv-card promotion-kv-mother" id="promotion-kv-mother">
             <div class="promotion-kv-art promotion-kv-mother-art" role="img" aria-label="母亲节礼赠主题 KV，家庭场景照片和英文主张">
@@ -716,18 +715,18 @@
           <li><strong>品牌 TVC：</strong>保留感恩节或圣诞节的完整人物故事、节庆识别与产品进入情节的过程，用于集中解释品牌价值与情绪主张。</li>
           <li><strong>短视频与渠道版本：</strong>按 Feed、Reels 和视频广告等版位调整开场、画面比例、字幕、产品证明与行动信息，保留已确认的产品事实。</li>
           <li><strong>KOL / Creator：</strong>把真实使用问题交给人物演示；先拍清接触位置与动作，再按渠道要求确定时长、画幅和说明重点。</li>
-          <li><strong>后续优化：</strong>分别观察完整观看、动作片段观看和用户问题，调整剪辑、产品解释或 FAQ，而非用一项数据评价所有视频。</li>
+          <li><strong>后续优化：</strong>分别观察完整观看、动作片段观看和用户问题，调整剪辑、产品解释或 FAQ。</li>
         </ul>
         <p><a href="#/case/creative/video-projects">查看节庆品牌片与 Creator 内容案例 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道角色 ↗</a></p>
       </div>`, "video-strategy");
   }
 
   function creative() {
-    return section("视频创意与 Campaign 内容案例", "展示部分节庆品牌影片与 Creator 产品演示，说明创意方向、脚本、镜头审核和渠道适配工作。", `
+    return section("视频创意与 Campaign 内容案例", "节庆品牌影片、产品演示与 Creator 内容的创意方向、脚本、镜头审核及渠道适配。", `
       <section class="tvc-creative-intro" id="video-campaign-showcase">
         <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
         <h3>节庆品牌叙事与产品演示</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。节庆影片将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍，画面和传播任务不重复。</p>
+        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。节庆影片将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍。</p>
       </section>
       <div class="tvc-work-grid" aria-label="节庆 Campaign 视频案例">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
@@ -813,7 +812,7 @@
       <section class="g-story-note" id="creative-production-scope">
         <h3>视频与社媒创意的实际工作范围</h3>
         <div class="g-project-list g-project-calendar-plan">
-          <article><small>CAMPAIGN CREATIVE</small><h4>节庆与日常主题创意</h4><p>结合用户清洁任务、节日情境和品牌主张确定创意主题，组织故事提案、场景选择和视觉风格，不以目前上传的样片数量代表所有项目。</p></article>
+          <article><small>CAMPAIGN CREATIVE</small><h4>节庆与日常主题创意</h4><p>结合用户清洁任务、节日情境和品牌主张确定创意主题，组织故事提案、场景选择和视觉风格。</p></article>
           <article><small>VIDEO BRIEF</small><h4>脚本、分镜与产品演示</h4><p>拆解视频开场、冲突、解决过程和结尾信息；明确产品需要拍到的接触表面、握持、移动方向及连续动作，逐项审核脚本和成片。</p></article>
           <article><small>SOCIAL FORMAT</small><h4>社媒短片与视觉表达</h4><p>根据 Feed、Reels、Story 的阅读方式调整 Hook、字幕、画幅和剪辑节奏；组合 POV、Before/After、产品特写和场景教育内容。</p></article>
           <article><small>CREATOR REVIEW</small><h4>创作者内容与素材验收</h4><p>在合作 Brief 中说明受众、演示任务、产品事实和披露要求，审阅初稿、修改版本及素材使用范围。</p></article>
@@ -822,7 +821,7 @@
       <div class="g-story-note" id="video-management">
         <h3>我的创意参与与项目交付</h3>
         <p>依据 Campaign 目标和受众场景提出创意方向，完成脚本修改、镜头要求及内容审核；制作过程中核对产品结构、真实操作、字幕与画幅，分别准备不同平台的发布版本。</p>
-        <p>当前影片与 Creator 片段只作案例节选，不代表历年视频产量。工作内容还包括 Campaign 创意主题、社媒短视频选题、内容 Hook、分镜脚本、人物与产品动作审核、成片修改及不同平台的内容适配。</p>
+        <p>负责 Campaign 创意主题、社媒短视频选题、内容 Hook、分镜脚本、人物与产品动作审核、成片修改及不同平台的内容适配。</p>
         <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
       </div>`, "video-projects");
   }
@@ -873,7 +872,7 @@
         </section>
       </section>
       <section class="expo-asset-studio" id="expo-asset-manifest">
-        <header><small>EXHIBITION MATERIALS</small><h3>展会物料准备</h3><p>按现场使用位置整理物料，提前核对内容、印刷尺寸与交付时间；不以未核实的数量或尺寸代替实际工作。</p></header>
+        <header><small>EXHIBITION MATERIALS</small><h3>展会物料准备</h3><p>按现场使用位置整理物料，提前核对内容、印刷尺寸与交付时间。</p></header>
         <div class="expo-asset-grid">
           <article class="expo-asset-card"><div class="expo-asset-meta"><small>BRANDING</small><h4>背景墙与品牌画面</h4><p>品牌识别、主营业务、产品与应用主题。</p></div></article>
           <article class="expo-asset-card"><div class="expo-asset-meta"><small>CATALOGUE</small><h4>产品画册与宣传页</h4><p>产品系列、用途、图片及核心信息。</p></div></article>
@@ -983,7 +982,7 @@
       <div class="g-story-note">
         <h3>Halloween 内容如何连接搜索与站内页面</h3>
         <p>以万圣节节后清洁为选题，按地面污渍、浴室、厨房、宠物毛发与工具比较拆分英文专题。主指南汇总任务，细分文章回答不同搜索问题，FAQ 与商品内容进一步解释使用条件和工具选择；稿件按原有策划目录展示。</p>
-        <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看现有搜索数据口径 ↗</a></p>
+        <p><a href="#/case/social/execution">查看节庆主题如何拆成社媒内容 ↗</a> · <a href="#/data/search">查看搜索表现 ↗</a></p>
       </div>
       <div class="g-project-list g-project-calendar-plan" id="seo-search-optimization">
         <article><small>KEYWORD / INTENT</small><h3>关键词与搜索意图分组</h3><p>按 Halloween 污渍类型、清洁表面、使用场景和产品比较分组关键词，分别识别教程型、选型型需求，避免同类文章重复覆盖同一查询。</p></article>
@@ -1110,7 +1109,7 @@
         <article><small>BRIEF</small><h3>活动目标与受众名单</h3><p>确认主推产品、阶段受众、节庆主题和购买疑问；新订阅、已浏览及已购客户使用不同内容和排除规则。</p></article>
         <article><small>CONTENT</small><h3>英文文案与版式 Brief</h3><p>编写 Subject、Preheader、Hero、产品利益、证明点和主要 CTA；审核移动端阅读顺序及邮件承诺与落地页的一致性。</p></article>
         <article><small>SEND PLAN</small><h3>活动节奏与发送限制</h3><p>针对预热、重点产品和活动收尾分别安排邮件任务；排除退订、已购买或已进入更高意向流程的用户，避免重复发送。</p></article>
-        <article><small>REVIEW</small><h3>衡量点击与站内后续行为</h3><p>设计送达、有效点击、退订和站内转化的观察口径，实际发送后的结果另经平台核验；不以打开率独立推断转化。</p></article>
+        <article><small>REVIEW</small><h3>衡量点击与站内后续行为</h3><p>规划送达率、有效点击、退订率和站内转化等指标，用于评估邮件内容与发送时机。</p></article>
       </div>
       <div class="g-story-note" id="crm-customer-state">
         <h3>用户购物状态决定邮件内容</h3>
@@ -1151,7 +1150,7 @@
     operations: [
       "季度主题与月度内容日历",
       "负责社媒季度主题与月度内容规划，按 Facebook、Instagram 和 Group 的内容任务安排产品演示、场景话题、互动活动及节庆专题。审核文案、视觉和视频版本，并根据内容表现调整后续排期。",
-      "工作覆盖主题规划、日历制作、内容 Brief、素材审核和周月复盘；相关栏目展示实际职责与已有排期工作物。",
+      "负责主题规划、月度内容日历、制作 Brief、素材审核及周月复盘。",
     ],
     community: [
       "把成员的使用问题带回内容和产品",
@@ -1161,22 +1160,22 @@
     b2b: [
       "从展位策划到现场客户沟通",
       "参展前准备展区展示方案、品牌视觉、产品资料与客户邀约；现场结合展品介绍系统应用并记录采购问题，会后跟进产品资料、报价需求和合作条件。",
-      "现有照片展示参展现场与产品陈列。同期 B2B 客户开发指标另作展示，不单独归因于展会。",
+      "展位策划、展品陈列、品牌物料与客户需求跟进。",
     ],
     seo: [
       "用搜索问题决定页面分工",
       "节后清洁既有人想解决眼前的黏污，也有人在比较工具。主指南按清洁任务分流，专题解释表面与操作条件，FAQ 或商品页承接需要选型的人。",
-      "现有工作物是主题集群规划。发布后可按页面核对收录、查询与点击，再观察读者是否进入下一页。",
+      "主题集群策划包括英文选题、页面结构及内链规划，配套收录、查询和点击的评估方法。",
     ],
     amazon: [
       "先找出经营瓶颈，再决定投入",
       "流量少时检查搜索词和点击。有浏览却少下单时，检查商品页是否讲清用途和规格。销量起来以后，再核对库存、退换和广告成本能否支撑继续投放。",
-      "任职期经营记录可用来说明阶段表现。判断某次改动的贡献，需要同商品、同窗口的流量、广告、库存与订单。",
+      "按商品和统计周期对照流量、广告、库存与订单，确定经营优化重点。",
     ],
     creative: [
       "开场由观众要解决的问题决定",
       "节庆短片用聚餐和污渍引出工具，在结尾回到人物。楼梯吸尘片面向操作疑问，开场就给吸头和踏面。两种开场各有需要拍到的动作。",
-      "现有节选可观察故事顺序、构图和接触位置。若要比较开场效果，可固定受众、版位、片长与后续镜头，再观察留存。",
+      "评估故事顺序、构图、操作动作与开场留存，优化脚本及剪辑。",
     ],
     crm: [
       "发送之前先核对用户的真实状态",

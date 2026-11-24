@@ -71,7 +71,7 @@
     [
       "Performance Review",
       "数据复盘与持续迭代",
-      "分别查看展示、互动、链接点击与社群反馈；不把不同账号和统计窗口拼成增长曲线或成交归因。",
+      "按账号、内容类型和统计周期分析展示、互动、链接点击与社群反馈。",
       "RECONSTRUCTED",
     ],
   ];
@@ -509,7 +509,7 @@
         ["UGC / Participation", c.participation],
         ["Measurement & Review", c.measurement],
       ];
-    return `<div class="g-campaign-detail"><header><div><span>${c.label} · ${P.statuses[c.kind]}</span><h3>${c.name}</h3></div><button class="g-preview-link" data-g-preview="${c.id}">预览视觉资产 ↗</button></header><div class="g-campaign-fields">${fields.map((f) => `<article><h4>${f[0]}</h4><p>${f[1]}</p></article>`).join("")}</div><h4>Communication Timeline / 相对节点示意</h4>${pathSteps(
+    return `<div class="g-campaign-detail"><header><div><span>${c.label} · ${P.statuses[c.kind]}</span><h3>${c.name}</h3></div><button class="g-preview-link" data-g-preview="${c.id}">预览视觉资产 ↗</button></header><div class="g-campaign-fields">${fields.map((f) => `<article><h4>${f[0]}</h4><p>${f[1]}</p></article>`).join("")}</div><h4>Communication Timeline / 活动排期</h4>${pathSteps(
       [
         ["准备", "目标 / 规则 / 事实与授权"],
         ["预热", "主题解释 / 场景与参与说明"],
@@ -641,7 +641,7 @@
       if (!dialog) {
         document.body.insertAdjacentHTML(
           "beforeend",
-          '<dialog id="growth-preview" class="g-preview" aria-labelledby="growth-preview-title"><div class="dialog-bar"><h2 id="growth-preview-title">活动视觉样张</h2><button data-g-close>关闭 ×</button></div><div data-growth-preview-body></div></dialog>',
+          '<dialog id="growth-preview" class="g-preview" aria-labelledby="growth-preview-title"><div class="dialog-bar"><h2 id="growth-preview-title">活动视觉</h2><button data-g-close>关闭 ×</button></div><div data-growth-preview-body></div></dialog>',
         );
         dialog = document.querySelector("#growth-preview");
         dialog.addEventListener("close", () => {
