@@ -123,15 +123,14 @@ const fs = require("fs"),
       const t = d.querySelector("#results").textContent;
       assert.ok(!/待补充|待核|暂无可核|未提供可核/.test(t));
       const heading = d.querySelector("#results h2").textContent;
-      assert.ok(["项目成果", "代表交付"].includes(heading));
+      assert.ok(["项目成果", "工作成果"].includes(heading));
     });
   }
   await route("/case/gtm");
-  d.querySelector("[data-image]").click();
-  check("concept image preview", () =>
-    assert.ok(d.querySelector("#lightbox").open),
-  );
-  d.querySelector('[data-close="lightbox"]').click();
+  check("case visual links directly to sourced project assets", () => {
+    assert.equal(d.querySelectorAll("[data-image]").length, 0);
+    assert.ok(d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
+  });
   d.querySelector(".menu-button").click();
   check("mobile menu toggles", () =>
     assert.equal(
@@ -148,7 +147,7 @@ const fs = require("fs"),
         assert.equal(jobs.length, 4);
         assert.equal(jobs[0].querySelector("time").textContent, "2025.04—2026.09");
         assert.equal(jobs[0].querySelector("h2").textContent, "社媒负责人 / 管理组长");
-        assert.deepEqual([...jobs[0].querySelectorAll("a")].map((a) => a.hash), ["#/case/gtm", "#/case/operations", "#/case/social"]);
+        assert.deepEqual([...jobs[0].querySelectorAll("a")].map((a) => a.hash), ["#/case/gtm", "#/case/social", "#/case/operations", "#/case/creative"]);
       }
       if (r === "contact") assert.equal(d.querySelector(".lede").textContent, w.PORTFOLIO.profile.direction);
     });

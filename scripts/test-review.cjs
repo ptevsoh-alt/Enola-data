@@ -63,7 +63,7 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#review-territories").textContent.includes("One Home, Different Cleaning Jobs"));
     assert.equal(d.querySelector("#review-territories").textContent.includes("Real Home, Real Reset"), false);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
-    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
+    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "协调制作", "分析与调整"]);
   });
   check("review gallery embeds two full TVCs and two distinct Creator scenes", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
@@ -97,7 +97,9 @@ const fs = require("fs"),
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
-    assert.equal(images.length, 16);
+    assert.equal(images.length, 11);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-1.webp"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-2.webp"]'), null);
     assert.equal(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'), null);
     assert.equal(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'), null);
     images.forEach((img) => {
@@ -113,7 +115,7 @@ const fs = require("fs"),
     assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 3);
     assert.equal(b2b.getAttribute("aria-pressed"), "true");
     d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
-    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 16);
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 11);
   });
   check("review page shows four real results without evidence-status visual noise", () => {
     const metrics = [...d.querySelectorAll(".review-outcome-card strong")].map(el => el.textContent);
