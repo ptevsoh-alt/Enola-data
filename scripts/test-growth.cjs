@@ -156,7 +156,7 @@ const fs = require("fs"),
   check("homepage presents six distinct selected cases without repeated project navigation", () => {
     assert.equal(d.querySelectorAll(".featured-nav a").length, 0);
     assert.equal(d.querySelectorAll("#career-showcase .career-showcase-grid a").length, 3);
-    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 3);
+    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 4);
     assert.equal(d.querySelectorAll(".home-route-card,.home-decision-grid").length, 0);
     assert.ok(d.querySelector(".career-scope").textContent.includes("4 条产品线"));
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 2);
@@ -188,27 +188,22 @@ const fs = require("fs"),
   });
 
   await route("/case/seo");
-  check("Halloween SEO case separates search architecture, content planning and PR extension", () => {
+  check("SEO Content PR case shows responsibility, search architecture and sourced examples", () => {
     assert.ok(d.querySelector("#seo-case-overview"));
     assert.equal(d.querySelectorAll("#seo-owner-boundaries article").length, 3);
     assert.equal(d.querySelectorAll("#seo-topic-cluster-map .seo-topic-card").length, 4);
-    assert.equal(d.querySelectorAll("#seo-topic-cluster-map [data-seo-article]").length, 9);
+    assert.equal(d.querySelectorAll("#seo-keyword-intent-map [data-seo-article]").length, 9);
     assert.equal(d.querySelectorAll("#seo-intent-table tbody tr").length, 10);
-    assert.equal(d.querySelectorAll("#seo-article-briefs .seo-article-grid article").length, 10);
-    assert.equal(d.querySelectorAll("#seo-content-calendar .seo-calendar-list article").length, 5);
-    assert.equal(d.querySelectorAll("#seo-delivery-handoff tbody tr").length, 6);
+    assert.equal(d.querySelectorAll("#seo-content-calendar tbody tr").length, 4);
     assert.equal(d.querySelectorAll("#seo-pr-extension .seo-pr-angle-grid article").length, 3);
-    assert.match(d.querySelector("#seo-case-overview").textContent, /PR Topic Clusters/);
-    assert.match(d.querySelector("#seo-pr-extension").textContent, /不代表该主题已实际发稿/);
-    assert.match(d.querySelector("#seo-pr-extension").textContent, /CAP-EARNED-001/);
-    assert.match(d.querySelector("#seo-pr-extension").textContent, /M07.*M08/);
-    assert.match(d.querySelector("#seo-keyword-intent-map").textContent, /不展示推测数值/);
-    assert.ok(d.getElementById("seo-search-optimization"));
-    assert.ok(d.getElementById("seo-method-and-pr"));
-    assert.ok(d.getElementById("seo-case-workflow"));
-    assert.equal(w.PORTFOLIO.cases.find((c) => c.id === "seo").metrics.length, 0);
-    assert.equal(d.querySelectorAll("#results .metric").length, 0);
-    assert.match(d.querySelector("#results").textContent, /未取得逐篇上线/);
+    assert.match(d.querySelector("#seo-pr-extension").textContent, /King Newswire/);
+    assert.ok(d.querySelector('#seo-pr-extension a[href="#/case/brand/pr-project"]'));
+    assert.ok(!/CAP-|ATOM-|M13|M16|NOT PUBLISHING PROOF/.test(d.querySelector("main").textContent));
+    assert.ok(!d.querySelector("h1").textContent.includes("Halloween"));
+    for (const id of ["seo-search-optimization","seo-method-and-pr","seo-case-workflow"]) assert.ok(d.getElementById(id));
+    assert.equal(w.PORTFOLIO.cases.find(c=>c.id==="seo").metrics.length,0);
+    assert.equal(d.querySelectorAll("#results .metric").length,0);
+    assert.match(d.querySelector("#results").textContent,/专题/);
   });
 
   await route("/case/operations");
@@ -438,56 +433,25 @@ const fs = require("fs"),
     assert.ok(gallery.textContent.includes("品牌屋"));
   });
   await route("/case/brand/promotion-campaign-kv");
-  check("all three seasonal KVs show sourced images, accurate creative labels and channel previews", () => {
+  check("archival KV visuals use source artwork and Mother's Day links to email planning", () => {
     const gallery=d.querySelector("#promotion-kv-gallery");
     assert.ok(gallery);
-    assert.deepEqual([...gallery.querySelectorAll(".promotion-kv-card")].map(el=>el.id),[
-      "promotion-kv-black","promotion-kv-mother","promotion-kv-father"
-    ]);
-    assert.equal(gallery.querySelectorAll(".promotion-kv-card .promo-kv-scene").length,3);
-    for (const img of gallery.querySelectorAll("img")) {
-      assert.ok(img.alt && !/待|占位/.test(img.alt));
-      assert.ok(fs.existsSync(path.join(root,"site",img.getAttribute("src"))),img.src);
-    }
-    assert.equal(d.querySelectorAll("#promotion-channel-adaptations .promo-device-preview").length,3);
-    assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
-    assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.querySelector(".promotion-kv-grid").textContent),false);
-  });
-  check("two archival KV visuals render from exact original image files", () => {
-    const gallery=d.querySelector("#promotion-original-work");
-    assert.ok(gallery);
     const images=[...gallery.querySelectorAll(".promotion-original-card>a img")];
-    assert.deepEqual(images.map(im=>im.getAttribute("src")),[
-      "assets/projects/black-friday-suite-concept.jpg",
-      "assets/projects/fathers-day-bbq-concept.jpg"
-    ]);
-    for (const im of images) {
+    assert.deepEqual(images.map(im=>im.getAttribute("src")),["assets/projects/black-friday-suite-concept.jpg","assets/projects/fathers-day-bbq-concept.jpg"]);
+    for(const im of images) {
       assert.ok(im.alt);
       assert.ok(fs.existsSync(path.join(root,"site",im.getAttribute("src"))));
       assert.equal(im.parentElement.getAttribute("href"),im.getAttribute("src"));
     }
-    assert.ok(gallery.querySelector("#promotion-original-mother"));
-    assert.ok(gallery.textContent.includes("Mother's Day Sale"));
-  });
-  check("real 4:5 / 9:16 / 16:9 KV preview buttons change layout and ARIA state", () => {
-    const grid=d.querySelector("#promotion-kv-gallery .promotion-kv-grid");
-    const controls=[...d.querySelectorAll("#promotion-kv-gallery [data-promo-ratio]")];
-    assert.equal(controls.length,3);
-    for (const [name,button] of [["story",controls[1]],["hero",controls[2]],["feed",controls[0]]]) {
-      button.click();
-      assert.equal(grid.dataset.promoLayout,name);
-      assert.equal(button.getAttribute("aria-pressed"),"true");
-      assert.equal(controls.filter(el=>el.getAttribute("aria-pressed")==="true").length,1);
-    }
+    assert.ok(gallery.querySelector('#promotion-original-mother a[href="#/case/crm/crm-campaign-email-plan"]'));
+    assert.equal(gallery.querySelectorAll("#promotion-original-mother img,.promotion-kv-grid,.promotion-format-switch").length,0);
+    assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
   });
   await route("/cases");
-  check("case index previews all three holiday KVs with distinct working chapter links", () => {
+  check("case index distinguishes original art and email planning", () => {
     const links=[...d.querySelectorAll(".campaign-index-preview a")];
-    assert.equal(links.length,3);
-    assert.deepEqual(links.map(x=>x.hash),[
-      "#/case/brand/promotion-original-black","#/case/brand/promotion-original-mother","#/case/brand/promotion-original-father"
-    ]);
-    assert.equal(d.querySelectorAll(".campaign-index-preview img").length,3);
+    assert.deepEqual(links.map(x=>x.hash),["#/case/brand/promotion-original-black","#/case/crm/crm-campaign-email-plan","#/case/brand/promotion-original-father"]);
+    assert.equal(d.querySelectorAll(".campaign-index-preview img").length,2);
   });
     await route("/case/b2b/expo-project");
   check("exhibition case shows real booth planning, materials and customer follow-up without fictional dimensions", () => {

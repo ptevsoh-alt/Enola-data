@@ -65,5 +65,15 @@ window.PORTFOLIO_SELECTED_WORK = {
     "image": "exhibition-booth-overview-redacted",
     "imageExt": "jpg",
     "alt": "已匿名化的海外储能展会展位全景"
+  },
+  "seo": {
+    "label": "SEO / Content / PR · 内容增长",
+    "title": "搜索增长与品牌内容传播",
+    "role": "参与英文选题、搜索内容规划、产品内容与品牌媒体协同。",
+    "decision": "按搜索意图区分指南、专题、FAQ 与产品信息，围绕家庭场景组织品牌新闻内容。",
+    "output": "英文节庆专题策划与北美家庭清洁主题新闻稿分发。",
+    "highlight": "主题集群 · 英文内容 · PR 传播",
+    "artifact": "查看搜索内容与媒体传播",
+    "chapter": "seo-topic-cluster-map"
   }
 };
