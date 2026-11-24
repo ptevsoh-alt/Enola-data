@@ -36,7 +36,7 @@ const fs = require("fs"),
   });
   check("selected work links to projects in the same personal portfolio", () => {
     const links = [...d.querySelectorAll("#review-path .review-path-card")];
-    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "social", "operations", "creative", "b2b", "seo"]);
+    assert.deepEqual(links.map((link) => link.hash.split("/")[2]), ["gtm", "brand", "social", "operations", "creative", "b2b"]);
     assert.equal(d.querySelector("#review-path h2").textContent, "代表项目");
     assert.equal(d.querySelectorAll("#review-cases .review-status").length, 0);
     assert.ok(!d.querySelector("#review-cases").textContent.includes("项关联指标"));
