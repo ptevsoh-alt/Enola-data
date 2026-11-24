@@ -921,7 +921,7 @@
       </section>
 
       <section class="seo-content-section" id="seo-keyword-intent-map">
-        <header><small>04 / CONTENT CLUSTER CASE</small><h3>节庆内容策划示例｜主题与搜索意图</h3><p>以节后家庭清洁问题为例，将内容组织为一篇主题指南与九个细分专题的规划。这里展示的是内容结构和决策过程，不保留英文搜索选题或英文关键词清单，也不将规划数量视为上线篇数。</p></header>
+        <header><small>04 / CONTENT CLUSTER CASE</small><h3>节庆内容策划示例｜主题与搜索意图</h3><p>以节后家庭清洁问题为例，将内容组织为一篇主题指南与九个细分专题的规划。这里展示内容架构、用户任务与策划过程，规划数量不等同于实际上线篇数。</p></header>
         <div class="seo-pillar-node"><div><small>CONTENT HUB / PILLAR</small><h4>节后家庭清洁主题指南</h4><p>作为专题入口，先帮助读者识别清洁任务，再分流至具体表面、家庭场景与工具选择内容。</p></div><span>1 篇主指南规划</span></div>
         <div class="seo-topic-clusters">
           <article class="seo-topic-card"><small>TOPIC GROUP 01</small><h4>污渍与表面清洁</h4><p>围绕不同表面、污渍残留与清洁处理方式建立五个细分内容方向。</p><p><strong>5 个专题规划</strong> · 问题解决 / How-to</p></article>
