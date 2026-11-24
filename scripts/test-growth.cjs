@@ -430,10 +430,16 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#seo-article-briefs"));
     assert.ok(d.querySelector("#seo-keyword-intent-map"));
     assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-topic-card").length, 4);
-    assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-intent-table tbody tr").length, 4);
+    assert.equal(d.querySelectorAll("#seo-keyword-intent-map #seo-intent-table").length, 0);
+    assert.match(d.querySelector("#seo-article-briefs").textContent, /内容 Brief|内部链接|CTA/);
+    assert.ok(!/不含英文选题|这里展示内容架构|规划数量不等同/.test(d.querySelector("#seo-keyword-intent-map").textContent));
     assert.equal(d.querySelectorAll("#seo-keyword-intent-map .seo-calendar-list article").length, 5);
     assert.ok(!/The Post-Halloween Survival Guide|Sticky Candy Meltdown|ART-01|post-Halloween cleaning guide|英文搜索选题/.test(d.querySelector("main").textContent));
     assert.ok(!d.querySelector("#seo-keyword-intent-map [lang='en']"));
+    assert.equal(d.querySelectorAll("#seo-topic-cluster-map .seo-topic-card").length, 4);
+    assert.equal(d.querySelectorAll("#seo-pr-extension .seo-pr-angle-grid article").length, 3);
+    assert.ok(d.querySelector("#seo-page-architecture"));
+    assert.ok(d.querySelector("#seo-content-calendar"));
     assert.ok(d.querySelector("#seo-cross-channel"));
     assert.ok(d.querySelector("#seo-measurement"));
     assert.ok(!/CAP-EARNED|CAP-SEO|M13|M16|Enola-marketing/.test(d.querySelector("main").textContent));

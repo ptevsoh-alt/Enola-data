@@ -339,7 +339,7 @@
           </a>
           <div class="career-side-projects">
             <a href="#/case/brand/brand-positioning" class="career-side-card career-side-creative">
-              <div class="career-side-photo"><img src="assets/projects/brand-house.webp" alt="匿名品牌屋与传播主张示意" loading="lazy" decoding="async"></div>
+              <div class="career-side-photo"><img src="assets/projects/brand-house.webp" alt="品牌屋与传播主张" loading="lazy" decoding="async"></div>
               <div><small>02 / BRAND & IMC</small><h3>品牌定位与整合传播</h3><p>品牌屋、信息层级、Campaign 与传播素材</p><span>查看品牌策略 ↗</span></div>
             </a>
             <a href="#/case/operations/asset-review" class="career-side-card career-side-operations">
