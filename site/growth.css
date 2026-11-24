@@ -3567,3 +3567,21 @@
 /* Prevent legacy generic span sizing from shrinking campaign headlines. */
 .promo-kv-main strong span{font-size:inherit;line-height:inherit;letter-spacing:inherit;font-weight:inherit}
 .promotion-kv-black-art .promo-kv-overlay{background:linear-gradient(180deg,rgba(11,17,14,.77) 0%,rgba(10,18,15,.54) 43%,rgba(11,17,14,.97) 100%),linear-gradient(90deg,rgba(7,15,12,.68),transparent)}
+
+
+/* Wide campaign hero has a shorter copy hierarchy; this keeps the actual 16:9 artboard legible. */
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-content{padding:clamp(.65rem,1.4vw,1.1rem);gap:.3rem}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main{margin:auto 0;padding:0}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main small{margin-bottom:.3rem;font-size:clamp(.51rem,.6vw,.68rem)}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main strong{font-size:clamp(1.45rem,2.8vw,2.65rem);line-height:.96}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main p{display:none}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-edition{padding-top:.32rem}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-action{padding-top:.4rem}
+@media(max-width:690px){
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-content{padding:.58rem .73rem}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main small{font-size:.52rem;letter-spacing:.05em}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-main strong{font-size:clamp(.98rem,3.8vw,1.45rem);line-height:.96}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-edition span{font-size:.48rem}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-action span{font-size:.52rem}
+.promotion-kv-grid[data-promo-layout="hero"] .promo-kv-action{padding-top:.2rem}
+}
