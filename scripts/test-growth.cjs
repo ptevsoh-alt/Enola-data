@@ -84,7 +84,7 @@ const fs = require("fs"),
     "about",
     "contact",
   ];
-  const featured = ["gtm", "brand", "social", "operations", "creative", "b2b"];
+  const featured = ["gtm", "brand", "social", "operations", "creative", "b2b", "seo"];
   for (const r of routes.filter((r) => r.startsWith("data/") || r === "about")) {
     await route("/" + r);
     check("data values and metric identities preserved: " + r, () => {
@@ -153,7 +153,7 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll('#case-list a[href^="#/case/"]').length >= 22, true);
   });
   await route("/home");
-  check("homepage presents six distinct selected cases without repeated project navigation", () => {
+  check("homepage presents seven distinct selected cases without repeated project navigation", () => {
     assert.equal(d.querySelectorAll(".featured-nav a").length, 0);
     assert.equal(d.querySelectorAll("#career-showcase .career-showcase-grid a").length, 3);
     assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 4);
