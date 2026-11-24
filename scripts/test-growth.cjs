@@ -196,7 +196,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#seo-intent-table tbody tr").length, 10);
     assert.equal(d.querySelectorAll("#seo-article-briefs .seo-article-grid article").length, 10);
     assert.equal(d.querySelectorAll("#seo-content-calendar .seo-calendar-list article").length, 5);
+    assert.equal(d.querySelectorAll("#seo-delivery-handoff tbody tr").length, 6);
     assert.equal(d.querySelectorAll("#seo-pr-extension .seo-pr-angle-grid article").length, 3);
+    assert.match(d.querySelector("#seo-case-overview").textContent, /PR Topic Clusters/);
     assert.match(d.querySelector("#seo-pr-extension").textContent, /不代表该主题已实际发稿/);
     assert.match(d.querySelector("#seo-pr-extension").textContent, /CAP-EARNED-001/);
     assert.match(d.querySelector("#seo-keyword-intent-map").textContent, /不展示推测数值/);
