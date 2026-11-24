@@ -43,7 +43,7 @@ const fs = require("fs"),
     };
   check("homepage shows the career direction alongside six projects", () => {
     assert.equal(d.querySelectorAll(".case-card").length, 6);
-    assert.equal(d.querySelectorAll(".home-route-card").length, 7);
+    assert.equal(d.querySelectorAll(".home-route-card").length, 8);
     assert.equal(d.querySelectorAll("#jd-case-path .home-decision-grid a").length, 4);
     assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".profile-direction").textContent, w.PORTFOLIO.profile.direction);
