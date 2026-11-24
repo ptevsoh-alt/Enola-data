@@ -59,15 +59,19 @@ const fs = require("fs"),
   check("review page renders Campaign, creative, community and delivery visual maps", () => {
     assert.deepEqual([...d.querySelectorAll("#review-campaign-flow li b")].map((node) => node.textContent), ["选场景", "定主张", "拆交付", "核上线"]);
     assert.ok(d.querySelector('#review-systems a[href="../#/case/gtm/campaign-mechanism-mapping"]'));
-    assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 5);
+    assert.equal(d.querySelectorAll("#review-territories .review-territory-card").length, 4);
+    assert.ok(d.querySelector("#review-territories").textContent.includes("One Home, Different Cleaning Jobs"));
+    assert.equal(d.querySelector("#review-territories").textContent.includes("Real Home, Real Reset"), false);
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
-    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "审物料", "复盘交接"]);
+    assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "协调制作", "分析与调整"]);
   });
   check("review gallery embeds two full TVCs and two distinct Creator scenes", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
     assert.equal(clips.length, 2);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
     assert.equal(d.querySelectorAll('#review-videos iframe').length, 2);
+    assert.ok([...d.querySelectorAll('#review-videos iframe')].every(frame => frame.getAttribute("title").includes("视频预览")));
+    assert.equal(d.querySelector('#review-territories').textContent.includes("五个 M3 创意方向"), false);
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
     assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
     assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
@@ -93,9 +97,11 @@ const fs = require("fs"),
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];
-    assert.equal(images.length, 18);
-    assert.ok(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'));
-    assert.ok(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'));
+    assert.equal(images.length, 11);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-1.webp"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/holiday-scene-2.webp"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/fathers-day-bbq-concept.jpg"]'), null);
+    assert.equal(d.querySelector('img[src="../assets/projects/black-friday-suite-concept.jpg"]'), null);
     images.forEach((img) => {
       const url = new URL(img.getAttribute("src"), w.location.href);
       const relative = path.relative("/Enola-data", url.pathname).replace(/^\//, "");
@@ -109,7 +115,7 @@ const fs = require("fs"),
     assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 3);
     assert.equal(b2b.getAttribute("aria-pressed"), "true");
     d.querySelector('[data-review-visual-filter="all"]').dispatchEvent(new w.MouseEvent("click", { bubbles: true }));
-    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 18);
+    assert.equal([...d.querySelectorAll("[data-review-visual-card]")].filter((x) => !x.hidden).length, 11);
   });
   check("review page shows four real results without evidence-status visual noise", () => {
     const metrics = [...d.querySelectorAll(".review-outcome-card strong")].map(el => el.textContent);

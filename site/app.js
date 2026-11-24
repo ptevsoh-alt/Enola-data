@@ -51,9 +51,9 @@
       "RECONSTRUCTED",
     ],
     [
-      "Cross-functional Delivery",
-      "跨团队任务与质量管理",
-      "协调社媒小组、产品、设计、视频、电商与 Creator / KOL；明确事实提供、制作、审核和发布分工。",
+      "Creative Quality",
+      "创意形式与内容质量",
+      "围绕产品事实、用户问题和渠道格式审核视频开场、Before/After、字幕安全区与产品操作细节；将反馈更新到下一期选题。",
       "RECONSTRUCTED",
     ],
     [
@@ -134,8 +134,8 @@
       mix: "Group 讨论承接；Facebook 解释规则；Instagram 以场景演示发起邀请。",
       participation: "提交使用场景与条件；不要求正面评价，不默认取得商用权。",
       measurement:
-        "分别查看成员新增、发帖评论人数与查看人数；原记录窗口不同，不据此归因活动效果。",
-      note: "依据社群案例中的清洁挑战、教程、投票和 UGC 机制整理；此卡没有已核实的单场活动日期或成果。",
+        "分别分析成员增长、讨论参与和内容查看情况。",
+      note: "社群参与机制与内容设计",
     },
     {
       id: "seasonal",
@@ -150,7 +150,7 @@
       mix: "节庆海报确定主张，短视频展示产品操作，社群话题邀请读者补充家庭经验。",
       participation: "通过问题征集和经验分享组织内容讨论，并明确参与入口与反馈方式。",
       measurement: "按内容曝光、视频互动与后续问题反馈区分不同传播任务，依据同平台数据调整创意。",
-      note: "以节庆场景的内容策划与创意方案展示 Campaign 方法。",
+      note: "节庆场景与 Campaign 创意",
     },
     {
       id: "collab",
@@ -331,13 +331,13 @@
     return `<section class="g-module g-social-story" id="social-foundation">
       ${header(
         "SOCIAL MEDIA MANAGEMENT / 2025.04—2026.09",
-        "从账号矩阵到内容经营，建立一套可持续的社媒管理机制。",
+        "从零搭建社媒内容体系，制定季度主题、月度日历并负责内容审核。",
         "负责 Facebook、Instagram 品牌账号及美国 Facebook Group 的内容策略与小组交付；将平台定位、内容规划、活动组织、社群反馈和数据复盘连接起来。",
       )}
       <div class="g-social-ownership">
         <article><span>ROLE / 本人职责</span><b>社媒负责人 / 管理组长</b><p>制定季度主题与月度日历，安排选题、任务分工、创意评审、脚本与视觉审核及周 / 月复盘。</p></article>
         <article><span>CHANNELS / 平台分工</span><b>Facebook · Instagram · Group</b><p>品牌信息与链接导流、产品视觉演示与活动沟通、用户交流与问题反馈分别承接。</p></article>
-        <article><span>COLLABORATION / 跨部门协作</span><b>从输入到发布的责任分工</b><p>协同社媒小组、产品、设计、视频、电商与 Creator / KOL，明确事实提供、制作、审核和发布责任。</p></article>
+        <article><span>CREATIVE / 社媒创意</span><b>创意主题与内容表现</b><p>围绕家庭清洁、Before/After、LED 显尘和操作教程安排视频 Hook、图文结构与版本审核。</p></article>
       </div>
       <div class="g-social-flow-heading">
         <span>OPERATING JOURNEY / 管理链路</span>
@@ -355,7 +355,6 @@
         <div class="g-pillars">${["产品演示", "家庭清洁场景", "教程与 FAQ", "互动挑战", "UGC 与用户反馈"].map((x, i) => `<span><b>0${i + 1}</b>${x}</span>`).join("")}</div>
       </div>
     </section>
-    ${editorial()}
     ${campaignWall()}
     ${communitySummary()}
     ${socialDecisionBridge()}
@@ -440,8 +439,8 @@
     return `<section class="g-module g-social-loop">
       ${header(
         "PERFORMANCE REVIEW / CONTINUOUS IMPROVEMENT",
-        "复盘的终点，是下一轮内容决策。",
-        "用平台表现、链接行为与社群反馈安排下轮内容方向、产品说明和渠道协作。",
+        "社媒数据复盘与内容调整",
+        "结合浏览、互动、链接点击与社群反馈，调整后续选题和产品演示内容。",
       )}
       ${pathSteps([
         ["读取平台信号", "分别看曝光 / 浏览、互动与链接点击"],
@@ -460,8 +459,8 @@
       <article><small>PROGRAM OWNER / 活动归属</small><h3>先按主要业务目标确定唯一负责人</h3><p>公开激活、上市传播、整合 Campaign 或联合营销，由 GTM / Campaign 负责人统筹；成员关系、支持、教育与生命周期活动由社群 / CRM 负责人负责；单纯内容帖或提醒文案由内容负责人承担。活动落在 Group 时，按品牌传播、用户参与或社区关系的目标分配相应负责人。</p></article>
       <article><small>EVENT CONTRACT / 活动准入</small><h3>先锁定规则，再开放参与</h3><p>每场活动明确一个主业务目标、目标成员状态、市场与平台、参与资格、日期窗口、用户动作、奖励与履约、素材、审核答疑、身份与许可、主指标、Guardrails、取消 / 回滚条件和活动后交接。</p></article>
       <article><small>PARTICIPATION / 参与路径</small><h3>让参与、审核和内容复用各有边界</h3><p>话题邀约 → 自愿讨论 / 投稿 → 内容审核与答疑 → 单独确认使用授权 → 归档与复用。参与不要求正面评价；投稿不自动取得品牌商业使用权。</p></article>
-      <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>报名、出席、参与、查看、发帖评论、UGC、点击和购买分别记录。出席不等于营销同意，RSVP 不等于购买意向，抽奖参与不等于高价值客户，Group 活动也不自动形成 CRM 身份。</p></article>
-    </div><p class="g-chart-note">活动后将内容资产交回内容团队，成员关系与后续沟通交回社群 / CRM，已验证的事件数据交给 Measurement，Campaign 复盘回到项目负责人。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
+      <article><small>MEASUREMENT / HANDOFF</small><h3>活动数据分开记录，结果交回对应负责人</h3><p>分开管理报名、活动参与、互动、UGC、链接点击及购买；营销许可独立确认。</p></article>
+    </div><p class="g-chart-note">内容素材交付内容团队，用户关系交接 CRM，活动表现由 Campaign 负责人复盘。</p><div class="g-topic-layout"><div class="g-topic-buttons" role="group" aria-label="社群参与机制">${topics.map((t, i) => `<button data-g-topic="${i}" aria-pressed="${i === 0}"><b>${t[1]}</b><span>${t[0]}</span></button>`).join("")}</div><div data-topic-panel aria-live="polite">${topicPanel()}</div></div>${pathSteps(
       [
         ["话题邀约", "清洁问题、教程或投票提供入口"],
         ["自愿参与", "成员讨论、投稿与问题答疑"],
@@ -494,7 +493,7 @@
   }
   function visual(c) {
     if (c.art === "03")
-      return `<img src="assets/concept-03.png" alt="节日内容概念视觉，非历史已执行活动" width="1000" height="1200" loading="lazy">`;
+      return `<div class="g-campaign-art art-challenge" aria-label="节庆社群传播内容设计"><small>SEASONAL / SOCIAL CAMPAIGN</small><strong>家务日常<br>也有节日故事。</strong><div><span>节庆主题</span><i>→</i><span>场景</span><i>→</i><span>互动</span></div></div>`;
     if (c.art === "collab")
       return `<img src="assets/projects/joint-giveaway.webp" alt="匿名化联合抽奖海报，展示种植设备和电动清洁刷" loading="lazy" decoding="async">`;
     return `<div class="g-campaign-art art-challenge" aria-hidden="true"><small>COMMUNITY / PARTICIPATION</small><strong>一个小区域，<br>一次清洁分享。</strong><div><span>话题</span><i>→</i><span>投稿</span><i>→</i><span>反馈</span></div></div>`;
@@ -517,7 +516,7 @@
         ["活动期", "内容分发 / 讨论与审核"],
         ["复盘", "内容表现 / 用户反馈 / 调整动作"],
       ],
-    )}<p class="g-campaign-note">${c.note} </p></div>`;
+    )}</div>`;
   }
   function campaignWall() {
     return `<section class="g-module g-campaign-wall" id="campaign-wall">${header("CAMPAIGNS", "活动项目", "清洁挑战、节庆内容与家居品牌联合抽奖。")}<div class="g-campaign-cards" role="group" aria-label="活动类型筛选">${campaigns.map((c, i) => `<button data-g-campaign="${i}" aria-pressed="${i === 0}"><div class="g-campaign-thumb">${visual(c)}<span class="g-art-label">${c.label}</span></div><b>${c.name}</b><small>${P.statuses[c.kind]}</small></button>`).join("")}</div><div data-campaign-panel aria-live="polite">${campaignPanel()}</div></section>`;
