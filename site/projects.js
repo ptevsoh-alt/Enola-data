@@ -109,6 +109,7 @@
           <li><span class="v-stage-number">04</span><small>CLOSEOUT · 收束</small><h4>整理下一轮判断</h4><p>统一过期信息、用户反馈与可复用内容</p><b>阶段交付 · 复盘与团队交接</b></li>
         </ol>
       </details>
+      <details class="editorial-disclosure"><summary>跨部门渠道交付与审核负责人</summary>
       <div class="g-story-note" id="launch-cross-channel">
         <h3>多渠道协同｜让每个触点承担不同任务</h3>
         <p>围绕统一的 Campaign 主题，将社媒内容、广告创意、创作者体验、邮件触达、搜索内容和商品信息安排在同一用户决策路径上。我的工作重点是社媒传播与内容侧协同，并与各触点负责人对齐需求、素材和上线节点。</p>
@@ -130,6 +131,7 @@
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
+      </details>
       <div class="g-story-note" id="launch-d7-d30">
         <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
         <div class="g-project-list g-project-calendar-plan">
@@ -207,7 +209,7 @@
           <div><dt>Deliverables</dt><dd>Provide a 4:5 Feed key visual, a 9:16 Story version and an eight-second demo cut. Include English captions, the opening frame and a link to the approved destination for each placement.</dd></div>
           <div><dt>Approval &amp; fallback</dt><dd>Keep the grip and both pads in frame. Use real footage for motion and approved wording for floor suitability. If motion footage is pending, submit a product-detail visual with “Explore M3.”</dd></div>
         </dl>
-        <p><a href="#/case/operations/asset-review">查看主视觉为什么退回修改 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
+        <p><a href="#/case/operations/asset-review">查看主视觉审核标准 ↗</a> · <a href="#/case/gtm/market-adaptation">查看美英文案如何适配 ↗</a></p>
       </div>`;
   }
 
@@ -222,7 +224,7 @@
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
       <section class="m3-kv-showcase" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
+        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>基于黄色 M3 产品图和品牌色制作的横版及 Feed 创意版式；用于展示传播方案，不代表已发布的历史成品。</p></header>
         <div class="m3-kv-comps">
           <figure class="m3-kv-landscape">
             <div class="m3-kv-copy"><small>M3 / PRODUCT MARKETING</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
@@ -235,7 +237,7 @@
             <figcaption>4:5 / Social Feed</figcaption>
           </figure>
         </div>
-        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
+        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 审核要点 ↗</a></p>
       </section>
       <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
   <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
@@ -267,6 +269,7 @@
         </details>
         <p><a href="#/case/brand/brand-positioning">查看餐区与浴室场景在品牌层如何分工 ↗</a></p>
       </div>
+      <details class="editorial-disclosure"><summary>产品营销到上市传播的四阶段交接</summary>
       <section class="gtm-market-map" id="gtm-value-to-launch" aria-labelledby="gtm-market-title">
         <header><small>PRODUCT MARKETING → GO-TO-MARKET</small><h3 id="gtm-market-title">M3 产品信息与上市传播方案</h3><p>在 M3 项目中，传播策划从具体清洁任务出发，再确定证明方式、素材组合和各渠道的上线准备。</p></header>
         <div class="gtm-market-steps">
@@ -278,6 +281,7 @@
         <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
         <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
       </section>
+      </details>
       <details class="g-story-note v-supporting-evidence" id="launch-channel-plan">
         <summary>渠道分工与用户任务 · 查看四类触点明细</summary>
         <h3>从识别场景到确认选购</h3>
@@ -349,6 +353,7 @@
         </div>
           
         </section>
+        <details class="editorial-disclosure"><summary>策略摘要与用户决策路径</summary>
         <section class="v-campaign-logic" id="campaign-decision-logic" aria-label="Campaign 策略决策路径">
           <header><small>THE STRATEGY IN ONE VIEW</small><h4>把一个生活问题，转化成整合传播的核心故事</h4></header>
           <div class="v-campaign-logic-steps">
@@ -364,6 +369,7 @@
           <div><span>03 · Conversion</span><strong>核对购买条件</strong><p>商品页 / CRM / Paid：价格、库存、支付和数据全通过后才开放购买型 CTA</p></div>
           <div><span>04 · Learning</span><strong>复盘决策</strong><p>早期看观看、疑问与有效访问；成熟后再核订单、退款、履约与净贡献</p></div>
         </div>
+        </details>
         <section class="v-content-map" id="campaign-content-matrix" aria-labelledby="v-content-heading">
           <header><span class="v-section-kicker">CONTENT SYSTEM</span><h4 id="v-content-heading">七类核心内容与一项品牌组合补充内容</h4></header>
           <div class="v-content-matrix" aria-label="七类核心内容、一项辅助内容与四个传播阶段的对应关系">
@@ -384,7 +390,7 @@
             <tbody>
               <tr><th>场景问题</th><td>餐后仍需处理的地面清洁任务</td><td>FB / IG Feed、Story 与短视频建立相关性</td><td>Review / VOC 与家庭清洁场景</td></tr>
               <tr><th>情绪与品牌</th><td>把清洁放回家庭生活的情境</td><td>节庆 KV、短片和较长品牌故事</td><td>人物、音乐与场景使用权待确认</td></tr>
-              <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>真实 M3 运行视频不足时 HOLD_ASSET</td></tr>
+              <tr><th>产品机制</th><td>双盘如何工作、如何接地和移动</td><td>Reels / Shorts、演示视频及结构轮播</td><td>以真实 M3 连续操作素材为准</td></tr>
               <tr><th>操作教育</th><td>手柄控制、电池安装和结构细节</td><td>轮播、结构短片与商品信息说明</td><td>官方源图及产品功能核验</td></tr>
               <tr><th>FAQ 与异议</th><td>适用范围、操作方式和维护问题</td><td>Group、FAQ 内容及客服答疑</td><td>真实问题来源与产品签核</td></tr>
               <tr><th>Creator / UGC</th><td>真实家庭中的第三方使用过程</td><td>Creator 渠道；品牌复用需单独授权</td><td>真实交付、披露及 Paid Usage Rights</td></tr>
@@ -541,7 +547,7 @@
         <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
         <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
         <h3>新闻稿分发</h3>
-        <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
+        <p>历史项目资料记录经 King Newswire 分发至 USA Today 的 Press Release 栏目；这是新闻稿分发，不是独立采编报道。</p>
         
       </div></div>`, "pr-project");
   }
@@ -578,7 +584,7 @@
           <span class="promo-visual-status">CREATIVE STUDIES / PORTFOLIO</span>
         </header>
         <section class="promotion-original-work" id="promotion-original-work" aria-labelledby="promotion-original-title">
-          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">原始节庆 KV 创意稿</h4><p>节庆主视觉与 Feed、Story、Hero 渠道版式。</p></header>
+          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">黑五与父亲节创意原稿</h4><p>两张既有创意稿与一组母亲节重构版式；不以创意稿证明实际发布或促销成交。</p></header>
           <div class="promotion-original-grid">
             <figure class="promotion-original-card" id="promotion-original-black">
               <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看黑五促销原稿">
@@ -598,7 +604,7 @@
               <img src="assets/projects/pr-home-scene.webp" alt="母亲节创意版式使用的已有家居生活照片，非母亲节原始海报" loading="lazy" decoding="async">
               <div class="promotion-mother-copy" lang="en"><small>MOTHER'S DAY / CAMPAIGN BRIEF</small><strong>Mother's Day Sale</strong><span>Built for Big Messes</span><b>30% OFF</b></div>
             </div>
-            <div><small>MOTHER'S DAY / LAYOUT STUDY</small><h5>母亲节｜家务减负与家庭礼赠</h5><p>母亲节礼赠版式提案：厨房清洁场景、家庭关怀主题及 30% OFF 优惠信息。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
+            <div><small>MOTHER'S DAY / LAYOUT STUDY</small><h5>母亲节｜礼赠版式重构</h5><p>基于既有家庭清洁照片和节庆文案重构的礼赠版式，并非母亲节原始海报；优惠文案仅作为设计方案展示。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
           </div>
         </section>
         <div class="promotion-format-switch" role="group" aria-label="切换促销主视觉画幅">
@@ -1079,7 +1085,7 @@
       </section>
       <div class="g-story-note" id="asset-review">
         <h3>内容审核与发布管理</h3>
-        <p>把脚本与视觉逐项对照产品事实、画面动作、英文文案和平台规格。设计、视频完成修订后核对成片与发布版本，并根据内容表现调整下一期 Brief。</p>
+        <p>我负责内容 Brief、制作排期与创意审核；设计、视频团队执行制作，产品同事核对产品事实，渠道负责人确认各自的发布条件。</p><div class="g-proof-table"><table><thead><tr><th>审核决策示例</th><th>修改要求与验收标准</th><th>协作方</th></tr></thead><tbody><tr><th scope="row">M3 产品识别</th><td>D 型握把与双盘结构完整可见，不用静态产品图证明清洁效果。</td><td>设计 / 产品</td></tr><tr><th scope="row">产品动作与卖点</th><td>镜头交代握持、接地与推进；运行机制采用真实演示素材核对。</td><td>视频 / 产品</td></tr><tr><th scope="row">平台交付</th><td>确认英文文案、画幅、链接和发布版本；按各渠道职责完成审核。</td><td>内容 / 渠道</td></tr></tbody></table></div><p class="g-chart-note">以上是结合现有 M3 产品图与制作 Brief 展示的审核标准，不是历史返工截图。</p><p><a href="#/case/gtm/m3-campaign-kv">查看两种 M3 创意版式 ↗</a></p>
         <p><a href="#/case/gtm/english-brief">英文制作 Brief ↗</a> · <a href="#/case/creative/video-projects">视频案例 ↗</a></p>
       </div>
       <div class="g-story-note"><h3>父亲节 Campaign｜内容日历</h3>

@@ -153,16 +153,16 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll('#case-list a[href^="#/case/"]').length >= 22, true);
   });
   await route("/home");
-  check("homepage links six selected works, seven practice modules and distinct period metrics", () => {
-    const links = [...d.querySelectorAll(".featured-nav a")];
-    assert.deepEqual(links.map((item) => item.hash.split("/").at(-1)), featured);
-    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 6);
-    assert.equal(d.querySelectorAll("#strategy-map .home-route-card").length, 7);
-    assert.equal(d.querySelectorAll("#jd-case-path .home-decision-grid a").length, 4);
-    assert.deepEqual([...d.querySelectorAll("#jd-case-path .home-decision-grid h3")].map((x) => x.textContent),
-      ["市场与用户判断", "GTM 与 Campaign 策划", "团队协作与项目推进", "传播结果与优化动作"]);
-    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
-    assert.equal(d.querySelector(".home-proof-bridge a strong").textContent, "4,009");
+  check("homepage presents six distinct selected cases without repeated project navigation", () => {
+    assert.equal(d.querySelectorAll(".featured-nav a").length, 0);
+    assert.equal(d.querySelectorAll("#career-showcase .career-showcase-grid a").length, 3);
+    assert.equal(d.querySelectorAll(".featured-grid .case-card").length, 3);
+    assert.equal(d.querySelectorAll(".home-route-card,.home-decision-grid").length, 0);
+    assert.ok(d.querySelector(".career-scope").textContent.includes("4 条产品线"));
+    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 2);
+    assert.deepEqual([...d.querySelectorAll(".home-proof-bridge a strong")].map(x=>x.textContent), [
+      w.PORTFOLIO.metrics.find(m=>m.id==="group-growth-1k").display, "4,009"
+    ]);
     const summary = d.querySelector(".home-summary");
     assert.ok(summary.textContent.includes("2025 年 · 品牌内容与社媒增长"));
     assert.deepEqual([...summary.querySelectorAll("[data-evidence]")].map((b) => b.dataset.evidence), ["impressions", "engagements"]);
@@ -182,6 +182,9 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#gtm-positioning-decision .pmm-decision-process article").length, 4);
     assert.equal(d.querySelectorAll("#campaign-proof-gallery figure").length, 3);
     assert.ok(d.querySelector("#gtm-positioning-decision").textContent.includes("餐后"));
+    assert.equal(d.querySelector("#results [data-evidence=product-sales-stage]"),null);
+    assert.equal(d.querySelector(".g-case-overview .case-story-evidence"),null);
+    assert.ok(d.querySelector("#results").textContent.includes("不作为 M3 单品上市实绩"));
   });
   await route("/case/operations");
   check("team case distinguishes directly managed social work from peer execution", () => {
@@ -457,7 +460,7 @@ const fs = require("fs"),
     const links=[...d.querySelectorAll(".campaign-index-preview a")];
     assert.equal(links.length,3);
     assert.deepEqual(links.map(x=>x.hash),[
-      "#/case/brand/promotion-original-black","#/case/brand/promotion-kv-mother","#/case/brand/promotion-original-father"
+      "#/case/brand/promotion-original-black","#/case/brand/promotion-original-mother","#/case/brand/promotion-original-father"
     ]);
     assert.equal(d.querySelectorAll(".campaign-index-preview img").length,3);
   });
@@ -817,6 +820,44 @@ const fs = require("fs"),
     check("trend gate rejects " + name, () =>
       assert.equal(validate({ ...valid, ...change }), null),
     );
+  // Verify every rendered case-chapter link from the main site, not only selected capabilities.
+  const allChapterLinks = new Set();
+  for (const r of routes) {
+    await route("/" + r);
+    for (const a of d.querySelectorAll('a[href^="#/case/"]')) {
+      if (/^#\/case\/[^/]+\/[^/]+$/.test(a.hash)) allChapterLinks.add(a.hash);
+    }
+  }
+  const reviewDoc = new JSDOM(read("site/review/index.html")).window.document;
+  for (const a of reviewDoc.querySelectorAll("a[href]")) {
+    const hash = a.getAttribute("href").split("#")[1];
+    if (hash && /^\/case\/[^/]+\/[^/]+$/.test(hash)) allChapterLinks.add("#"+hash);
+  }
+  const byCase = new Map();
+  for (const hash of allChapterLinks) {
+    const [, , id, chapter] = hash.split("/");
+    if (!byCase.has(id)) byCase.set(id, new Set());
+    byCase.get(id).add(chapter);
+  }
+  for (const [id, chapters] of byCase) {
+    await route("/case/" + id);
+    check("rendered chapter link targets exist: " + id, () => {
+      for (const chapter of chapters) assert.ok(d.getElementById(chapter), id + "/" + chapter);
+    });
+  }
+  await route("/case/gtm/campaign-decision-logic");
+  await new Promise(r=>setTimeout(r,40));
+  check("deep link opens collapsed GTM supporting material",()=>{
+    assert.ok(d.getElementById("campaign-decision-logic").closest("details").open);
+  });
+  await route("/case/gtm/nonexistent-review-chapter");
+  await new Promise(r=>setTimeout(r,40));
+  check("missing chapter explains fallback instead of silently doing nothing",()=>{
+    assert.ok(d.querySelector("[data-route-notice]"));
+  });
+  await route("/case/gtm/gtm-positioning-decision");
+  await new Promise(r=>setTimeout(r,40));
+  check("valid chapter clears fallback notice",()=>assert.equal(d.querySelector("[data-route-notice]"),null));
   check("no runtime exceptions", () => assert.deepEqual(cur.errors, []));
   console.log(
     JSON.stringify(
