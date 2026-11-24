@@ -186,6 +186,28 @@ const fs = require("fs"),
     assert.equal(d.querySelector(".g-case-overview .case-story-evidence"),null);
     assert.ok(d.querySelector("#results").textContent.includes("不作为 M3 单品上市实绩"));
   });
+
+  await route("/case/seo");
+  check("Halloween SEO case separates search architecture, content planning and PR extension", () => {
+    assert.ok(d.querySelector("#seo-case-overview"));
+    assert.equal(d.querySelectorAll("#seo-owner-boundaries article").length, 3);
+    assert.equal(d.querySelectorAll("#seo-topic-cluster-map .seo-topic-card").length, 4);
+    assert.equal(d.querySelectorAll("#seo-topic-cluster-map [data-seo-article]").length, 9);
+    assert.equal(d.querySelectorAll("#seo-intent-table tbody tr").length, 10);
+    assert.equal(d.querySelectorAll("#seo-article-briefs .seo-article-grid article").length, 10);
+    assert.equal(d.querySelectorAll("#seo-content-calendar .seo-calendar-list article").length, 5);
+    assert.equal(d.querySelectorAll("#seo-pr-extension .seo-pr-angle-grid article").length, 3);
+    assert.match(d.querySelector("#seo-pr-extension").textContent, /不代表该主题已实际发稿/);
+    assert.match(d.querySelector("#seo-pr-extension").textContent, /CAP-EARNED-001/);
+    assert.match(d.querySelector("#seo-keyword-intent-map").textContent, /不展示推测数值/);
+    assert.ok(d.getElementById("seo-search-optimization"));
+    assert.ok(d.getElementById("seo-method-and-pr"));
+    assert.ok(d.getElementById("seo-case-workflow"));
+    assert.equal(w.PORTFOLIO.cases.find((c) => c.id === "seo").metrics.length, 0);
+    assert.equal(d.querySelectorAll("#results .metric").length, 0);
+    assert.match(d.querySelector("#results").textContent, /未取得逐篇上线/);
+  });
+
   await route("/case/operations");
   check("team case distinguishes directly managed social work from peer execution", () => {
     assert.equal(d.querySelectorAll("#operations-control .operations-role-board button[role=tab]").length, 4);
