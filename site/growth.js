@@ -443,9 +443,9 @@
           <a href="#/case/brand/promotion-campaign-kv">查看 Campaign KV 与渠道应用 ↗</a>
         </div>
         <div class="campaign-index-preview">
-          <a href="#/case/brand/promotion-kv-black" aria-label="查看 Black Friday 促销 KV"><img src="assets/projects/mop-kv-detail.webp" alt="黑五家居清洁主题的产品细节视觉" loading="lazy"><span>BLACK FRIDAY</span></a>
+          <a href="#/case/brand/promotion-original-black" aria-label="查看 Black Friday 促销 KV"><img src="assets/projects/black-friday-suite-concept.jpg" alt="原有黑五黑金组合产品促销 KV" loading="lazy"><span>BLACK FRIDAY / ORIGINAL</span></a>
           <a href="#/case/brand/promotion-kv-mother" aria-label="查看 Mother's Day 礼赠 KV"><img src="assets/projects/pr-home-scene.webp" alt="母亲节家庭礼赠主题生活场景视觉" loading="lazy"><span>MOTHER'S DAY</span></a>
-          <a href="#/case/brand/promotion-kv-father" aria-label="查看 Father's Day 家庭主题 KV"><img src="assets/projects/vacuum-video-frame.webp" alt="父亲节家居清洁主题的产品使用视觉" loading="lazy"><span>FATHER'S DAY</span></a>
+          <a href="#/case/brand/promotion-original-father" aria-label="查看 Father's Day 家庭主题 KV"><img src="assets/projects/fathers-day-bbq-concept.jpg" alt="原有父亲节 BBQ 产品场景促销 KV" loading="lazy"><span>FATHER'S DAY / ORIGINAL</span></a>
         </div>
       </section><section class="filters" aria-label="案例筛选"><div class="filter-row">${["全部", "策略与上市", "传播与合作", "团队与交付", "商业与生命周期"].map((x) => `<button class="chip" data-filter="${x}" aria-pressed="${x === filter}">${x}</button>`).join("")}</div><label>搜索案例 <input type="search" id="case-search" placeholder="如 PMM、PR、品牌" value="${esc(query)}"></label><span id="filter-count" role="status"></span></section><div class="visual-grid" id="case-list"></div></div>`;
   }

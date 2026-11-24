@@ -425,6 +425,22 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#promotion-campaign-matrix").textContent.includes("Black Friday"));
     assert.equal(/\b(?:\d{1,2}% OFF|UP TO \d+%)\b/i.test(gallery.textContent),false);
   });
+  check("two archival KV visuals render from exact original image files", () => {
+    const gallery=d.querySelector("#promotion-original-work");
+    assert.ok(gallery);
+    const images=[...gallery.querySelectorAll(".promotion-original-card>a img")];
+    assert.deepEqual(images.map(im=>im.getAttribute("src")),[
+      "assets/projects/black-friday-suite-concept.jpg",
+      "assets/projects/fathers-day-bbq-concept.jpg"
+    ]);
+    for (const im of images) {
+      assert.ok(im.alt);
+      assert.ok(fs.existsSync(path.join(root,"site",im.getAttribute("src"))));
+      assert.equal(im.parentElement.getAttribute("href"),im.getAttribute("src"));
+    }
+    assert.ok(gallery.querySelector("#promotion-original-mother"));
+    assert.ok(gallery.textContent.includes("Mother's Day Sale"));
+  });
   check("real 4:5 / 9:16 / 16:9 KV preview buttons change layout and ARIA state", () => {
     const grid=d.querySelector("#promotion-kv-gallery .promotion-kv-grid");
     const controls=[...d.querySelectorAll("#promotion-kv-gallery [data-promo-ratio]")];
@@ -441,7 +457,7 @@ const fs = require("fs"),
     const links=[...d.querySelectorAll(".campaign-index-preview a")];
     assert.equal(links.length,3);
     assert.deepEqual(links.map(x=>x.hash),[
-      "#/case/brand/promotion-kv-black","#/case/brand/promotion-kv-mother","#/case/brand/promotion-kv-father"
+      "#/case/brand/promotion-original-black","#/case/brand/promotion-kv-mother","#/case/brand/promotion-original-father"
     ]);
     assert.equal(d.querySelectorAll(".campaign-index-preview img").length,3);
   });

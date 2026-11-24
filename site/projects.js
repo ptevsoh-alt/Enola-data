@@ -577,6 +577,31 @@
           <p>黑五聚焦节日采购与家居焕新；母亲节以日常关怀进入礼赠场景；父亲节结合家人关系与产品使用。视觉取自项目既有产品和生活场景素材。</p></div>
           <span class="promo-visual-status">CREATIVE STUDIES / PORTFOLIO</span>
         </header>
+        <section class="promotion-original-work" id="promotion-original-work" aria-labelledby="promotion-original-title">
+          <header><small>ORIGINAL CAMPAIGN ARTWORK</small><h4 id="promotion-original-title">原始节庆 KV 创意稿</h4><p>先看原始视觉，再看后面的 Feed / Story / Hero 版式模拟。以下图片保留原有构图与英文文案。</p></header>
+          <div class="promotion-original-grid">
+            <figure class="promotion-original-card" id="promotion-original-black">
+              <a href="assets/projects/black-friday-suite-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看黑五促销原稿">
+                <img src="assets/projects/black-friday-suite-concept.jpg" width="2752" height="1536" alt="黑五原创意 KV：黑金 BLACK FRIDAY、清洁产品组合、限时促销文案" loading="lazy" decoding="async">
+                <span>放大原图 ↗</span>
+              </a><figcaption><small>BLACK FRIDAY / VISUAL STUDY</small><h5>黑五｜组合清洁工具促销</h5><p>产品组合陈列、黑金节庆色与促销行动入口。原画面 35% OFF 为创意草稿中的优惠提案。</p></figcaption>
+            </figure>
+            <figure class="promotion-original-card" id="promotion-original-father">
+              <a href="assets/projects/fathers-day-bbq-concept.jpg" target="_blank" rel="noopener noreferrer" aria-label="放大查看父亲节促销原稿">
+                <img src="assets/projects/fathers-day-bbq-concept.jpg" width="2752" height="1536" alt="父亲节原创意 KV：父亲在户外烧烤区使用黄色电动烤架清洁工具" loading="lazy" decoding="async">
+                <span>放大原图 ↗</span>
+              </a><figcaption><small>FATHER'S DAY / VISUAL STUDY</small><h5>父亲节｜BBQ 场景礼赠</h5><p>以父亲与家庭聚会场景切入，突出烧烤清洁动作、节庆情绪及礼赠诉求。</p></figcaption>
+            </figure>
+          </div>
+          <div class="promotion-original-mother" id="promotion-original-mother">
+            <div class="promotion-mother-reference">
+              <img src="assets/projects/pr-home-scene.webp" alt="母亲节创意版式使用的已有家居生活照片，非母亲节原始海报" loading="lazy" decoding="async">
+              <div class="promotion-mother-copy" lang="en"><small>MOTHER'S DAY / CAMPAIGN BRIEF</small><strong>Mother's Day Sale</strong><span>Built for Big Messes</span><b>30% OFF</b></div>
+            </div>
+            <div><small>MOTHER'S DAY / ARCHIVE DIRECTION</small><h5>母亲节｜家务减负与家庭礼赠</h5><p>原始参考稿采用厨房清洁场景及 30% OFF 信息。此处暂以已收录场景展示原案文案结构；完整母亲节海报仍保留在个人素材档案中。</p><a href="#/case/crm/crm-handoff">关联母亲节 EDM 方案 ↗</a></div>
+          </div>
+          <p class="promotion-original-qa">原图按创意提案展示，产品结构与促销条款需按最终商业版本审核。</p>
+        </section>
         <div class="promotion-format-switch" role="group" aria-label="切换促销主视觉画幅">
           <span>画幅预览</span>
           <button type="button" data-promo-ratio="feed" aria-pressed="true">Feed · 4:5</button>
