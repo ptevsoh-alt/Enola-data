@@ -1026,7 +1026,7 @@
       </section>
       <section class="seo-content-section" id="seo-keyword-intent-map">
         <header><small>02 / KEYWORD &amp; INTENT MAP</small><h3>从主题词到页面任务</h3><p>先按问题、对象和搜索意图分组，再决定页面类型；不是把相似关键词全部塞进同一篇文章。</p></header>
-        <div class="seo-intent-table-wrap"><table class="seo-intent-table"><thead><tr><th>主题词方向</th><th>搜索意图</th><th>页面任务</th><th>内容 ID</th></tr></thead><tbody>${articles.map(([id, title, type, intent, seed, job]) => `<tr><td>${esc(seed)}</td><td>${esc(intent)}</td><td>${esc(job)}</td><td>${esc(id)} · ${esc(type)}</td></tr>`).join("")}</tbody></table></div>
+        <div class="seo-intent-table-wrap"><table class="seo-intent-table" id="seo-intent-table"><thead><tr><th>主题词方向</th><th>搜索意图</th><th>页面任务</th><th>内容 ID</th></tr></thead><tbody>${articles.map(([id, title, type, intent, seed, job]) => `<tr><td>${esc(seed)}</td><td>${esc(intent)}</td><td>${esc(job)}</td><td>${esc(id)} · ${esc(type)}</td></tr>`).join("")}</tbody></table></div>
         <p class="seo-data-note">表内主题词是从既有英文选题提炼的候选 Seed Phrases，不代表已验证的 GSC 查询或关键词工具结果。当前没有可核验的搜索量、KD、CPC 或排名目标，因此不展示推测数值。</p>
       </section>
       <section class="seo-content-section" id="seo-page-architecture">
