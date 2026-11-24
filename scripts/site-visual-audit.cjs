@@ -29,7 +29,7 @@ function send(method,params={}){
 async function evaluate(expression){
   const r=await send("Runtime.evaluate",{expression,returnByValue:true,awaitPromise:true});
   if(r.exceptionDetails)throw Error("Page JS: "+JSON.stringify(r.exceptionDetails));
-  return r.result.result?.value;
+  return r.result?.value;
 }
 async function navigate(port,route,w,h){
   await send("Emulation.setDeviceMetricsOverride",{width:w,height:h,deviceScaleFactor:1,mobile:w<=450});
