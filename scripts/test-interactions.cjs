@@ -41,11 +41,11 @@ const fs = require("fs"),
       w.location.hash = s;
       await new Promise((r) => setTimeout(r, 5));
     };
-  check("homepage shows the career direction alongside seven projects", () => {
-    assert.equal(d.querySelectorAll(".case-card").length, 4);
-    assert.equal(d.querySelectorAll(".home-route-card").length, 0);
-    assert.equal(d.querySelectorAll("#career-showcase .career-showcase-grid a").length, 3);
-    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 2);
+  check("homepage shows the career direction alongside six projects", () => {
+    assert.equal(d.querySelectorAll(".case-card").length, 6);
+    assert.equal(d.querySelectorAll(".home-route-card").length, 8);
+    assert.equal(d.querySelectorAll("#jd-case-path .home-decision-grid a").length, 4);
+    assert.equal(d.querySelectorAll(".home-proof-bridge a").length, 3);
     assert.equal(d.querySelector(".profile-direction").textContent, w.PORTFOLIO.profile.direction);
     assert.match(d.querySelector(".hero-summary").textContent, /近 6 年.*小组管理.*四条清洁产品线/);
   });

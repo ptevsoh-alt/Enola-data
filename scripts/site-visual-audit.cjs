@@ -90,10 +90,26 @@ async function screenshot(label){
     report.anchor.push({width,...anchor});
     if(anchor.artTop<anchor.navBottom-3)report.issues.push({width,anchorOverlap:anchor});
     if(width===1440){await screenshot("PROMO_DESKTOP")}else{await screenshot("PROMO_MOBILE")}
-    const actual=await evaluate("(()=>{const gallery=document.querySelector('#promotion-kv-gallery');const images=[...gallery.querySelectorAll('.promotion-original-card img')];return {count:images.length,broken:images.filter(i=>!i.complete||!i.naturalWidth).map(i=>i.src),motherImage:!!gallery.querySelector('#promotion-original-mother img')}})()");
-    report.originalArt ??=[];
-    report.originalArt.push({width,...actual});
-    if(actual.count!==2||actual.broken.length||actual.motherImage)report.issues.push({width,brokenImages:actual});
+    for(const ratio of ["feed","story","hero"]){
+      const expr=[
+        "(()=>{const key="+JSON.stringify(ratio)+";",
+        "document.querySelector('[data-promo-ratio='+key+']')?.click();",
+        "const grid=document.querySelector('#promotion-kv-gallery .promotion-kv-grid');",
+        "const cards=[...grid.querySelectorAll('.promotion-kv-art')];",
+        "const measured=cards.map(c=>{",
+        "const box=c.getBoundingClientRect();",
+        "const heading=c.querySelector('.promo-kv-main strong')?.getBoundingClientRect();",
+        "const action=c.querySelector('.promo-kv-action')?.getBoundingClientRect();",
+        "return {width:Math.round(box.width),height:Math.round(box.height),aspect:Number((box.width/box.height).toFixed(3)),",
+        "textOverflow:!!heading&&!!action&&(heading.left<box.left-4||heading.right>box.right+4||heading.bottom>action.top+2||action.bottom>box.bottom+4)};",
+        "});",
+        "return {ratio:key,selected:grid.dataset.promoLayout,pressed:[...document.querySelectorAll('#promotion-kv-gallery [data-promo-ratio]')].filter(b=>b.getAttribute('aria-pressed')==='true').length,measured};",
+        "})()"
+      ].join("");
+      const result=await evaluate(expr);
+      report.ratio.push({viewport:width,...result});
+      if(result.selected!==ratio||result.pressed!==1||result.measured.some(c=>c.textOverflow))report.issues.push({ratio,width,result});
+    }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
   console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,ratio:report.ratio.length,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));

@@ -4,7 +4,7 @@ window.PORTFOLIO_SELECTED_WORK = {
     "title": "M3 双盘拖把｜从用户场景到上市传播",
     "role": "负责社媒传播规划、内容 Brief 与审核，参与用户场景、产品卖点和跨渠道上市协同。",
     "decision": "选定餐后硬地清洁场景，将产品结构、实际使用动作和常见疑问拆成各渠道能够交付的传播内容。",
-    "output": "M3 五月上市传播计划、Campaign 品牌屋、跨渠道内容矩阵、英文 Brief 和创意版式。",
+    "output": "M3 五月上市排期、Campaign 品牌屋、跨渠道内容矩阵、英文 Brief 和视觉审核记录。",
     "highlight": "GTM 排期 · Campaign 品牌屋 · 八条渠道工作流",
     "artifact": "查看新品上市策略与整合传播",
     "chapter": "gtm-value-to-launch",
@@ -65,15 +65,5 @@ window.PORTFOLIO_SELECTED_WORK = {
     "image": "exhibition-booth-overview-redacted",
     "imageExt": "jpg",
     "alt": "已匿名化的海外储能展会展位全景"
-  },
-  "seo": {
-    "label": "SEO / Content / PR · 内容增长",
-    "title": "搜索增长与品牌内容传播",
-    "role": "参与英文选题、搜索内容规划、产品内容与品牌媒体协同。",
-    "decision": "按搜索意图区分指南、专题、FAQ 与产品信息，围绕家庭场景组织品牌新闻内容。",
-    "output": "英文节庆专题策划与北美家庭清洁主题新闻稿分发。",
-    "highlight": "主题集群 · 英文内容 · PR 传播",
-    "artifact": "查看搜索内容与媒体传播",
-    "chapter": "seo-topic-cluster-map"
   }
 };
