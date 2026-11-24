@@ -484,9 +484,16 @@ const fs = require("fs"),
     check("editorial copy avoids explanatory disclaimers in " + item.id, () => {
       const copy = d.querySelector(".case-page")?.textContent || "";
       assert.ok(copy.length > 300, item.id + " must retain case content");
-      for (const phrase of ["以下以假设的", "不代表已实际举办", "不是前面实际", "当前资料未显示", "本页旨在", "该章节呈现", "仅作工作样例"]) {
+      for (const phrase of ["以下以假设的","不代表已实际举办","不是前面实际","当前资料未显示","本页旨在","该章节呈现","仅作工作样例","不以未核实","不以目前上传","不以当前上传","不代表历年","不代表由我负责","不把横向协调","不把系统迁移计划","不将寄样","不把社媒曝光","不把不同账号","不把内容日历","不以打开率独立推断","完整母亲节海报仍保留","优惠数字留给实际审批","当前影像仅为部分工作物"]) {
         assert.equal(copy.includes(phrase), false, item.id + ": " + phrase);
       }
+    });
+  }
+  for (const page of ["/", "/cases", "/capabilities", "/experience"]) {
+    await route(page);
+    check("recruiter-facing copy is clear on " + page, () => {
+      const copy = d.querySelector("#main")?.textContent || "";
+      for (const phrase of ["以下以假设的","不代表已实际举办","不是前面实际","当前资料未显示","本页旨在","该章节呈现","仅作工作样例","不以未核实","不以目前上传","不以当前上传","不代表历年","不代表由我负责","不把横向协调","不把系统迁移计划","不将寄样","不把社媒曝光","不把不同账号","不把内容日历","不以打开率独立推断","完整母亲节海报仍保留","优惠数字留给实际审批","当前影像仅为部分工作物"]) assert.equal(copy.includes(phrase), false, page + ": " + phrase);
     });
   }
   await route("/case/creator/partner-handoff");
