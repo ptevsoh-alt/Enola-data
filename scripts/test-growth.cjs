@@ -423,12 +423,15 @@ const fs = require("fs"),
     assert.ok(d.querySelector("#promotion-campaign-matrix"));
   });
   await route("/case/seo/seo-case-overview");
-  check("SEO Content PR case shows real responsibilities with Halloween as one example", () => {
+  check("SEO Content PR case retains responsibilities and PR evidence without English search topic list", () => {
     assert.ok(d.querySelector("#seo-case-overview"));
     assert.ok(d.querySelector("#seo-topic-cluster-map"));
     assert.ok(d.querySelector("#seo-pr-extension"));
-    assert.ok(d.querySelector("#seo-article-briefs"));
-    assert.ok(!d.querySelector("h1").textContent.includes("Halloween"));
+    assert.ok(!d.querySelector("#seo-article-briefs"));
+    assert.ok(!d.querySelector("#seo-keyword-intent-map"));
+    assert.ok(!/Halloween|ART-01|1 篇主指南|9 篇专题选题|英文搜索选题/.test(d.querySelector("main").textContent));
+    assert.ok(d.querySelector("#seo-cross-channel"));
+    assert.ok(d.querySelector("#seo-measurement"));
     assert.ok(!/CAP-EARNED|CAP-SEO|M13|M16|Enola-marketing/.test(d.querySelector("main").textContent));
   });
   await route("/cases");

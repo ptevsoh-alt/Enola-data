@@ -882,32 +882,14 @@
   }
 
   function seo() {
-    const articles = [
-      ["ART-01", "The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor & Makeup Disasters", "Pillar", "Informational / Guide", "post-Halloween cleaning guide", "汇总节后清洁任务，作为主题入口"],
-      ["ART-02", "How to Remove Fake Blood and Face Paint from Grout, Sinks, and Porcelain", "Cluster", "Problem-solving", "remove fake blood and face paint from grout", "按不同表面回答化妆残留与假血清洁问题"],
-      ["ART-03", "Sticky Candy Meltdown: Safely Dissolving Sugar and Syrup from Hardwood Floors", "Cluster", "How-To / Educational", "remove sticky candy syrup from hardwood floors", "围绕糖浆黏污解释清洁条件与操作步骤"],
-      ["ART-04", "Pumpkin Guts, Candle Wax, and Porch Grime: Outdoor Entryway Restoration", "Cluster", "Seasonal Maintenance", "clean pumpkin guts candle wax and porch grime", "处理门廊、入口和节庆后残留"],
-      ["ART-05", "Fall Costume Glitters and Faux Cobweb Cleanup: Vacuuming Without Bristle Tangles", "Cluster", "How-To / Product Selection", "vacuum costume glitter and faux cobwebs", "说明吸尘任务、工具使用和适用边界"],
-      ["ART-06", "Hosting a Spooktacular Party? The 30-Minute Speed Cleaning Checklist", "Cluster", "Checklist / List", "30-minute post-party cleaning checklist", "给派对后快速整理提供可执行顺序"],
-      ["ART-07", "Bathroom Horror Stories: Eliminating Soap Scum, Hair Dye, and Tile Grime Fast", "Cluster", "Comparison / Problem-solving", "remove soap scum hair dye and tile grime", "处理浴室污渍与不同表面的清洁疑问"],
-      ["ART-08", "Electric Spin Scrubber vs. Traditional Mop: Tackling High-Traffic Holiday Footprints", "Cluster", "Commercial Investigation", "electric spin scrubber vs traditional mop", "比较工具任务、使用场景与选择条件"],
-      ["ART-09", "Pet Costumes, Shedding Season, and Autumn Flea Dirt: Whole-Home Hygiene Guide", "Cluster", "Hygiene / Lifestyle", "pet costume shedding and autumn home cleanup", "将宠物节庆场景延展到全屋清洁"],
-      ["ART-10", "Post-Party Kitchen Degreasing: Air Fryers, Stovetops, and Caramel Splatters", "Cluster", "How-To / Deep Cleaning", "post-party kitchen grease and caramel cleanup", "解决厨房油污、焦糖和派对后残留"],
-    ];
-    const groups = [
-      ["污渍与表面", ["ART-02","ART-03","ART-04","ART-07","ART-10"], "按污渍和材质拆解具体清洁问题。"],
-      ["家庭场景与快速整理", ["ART-06"], "为派对后清洁提供顺序和检查清单。"],
-      ["产品使用与选型", ["ART-05","ART-08"], "结合工具任务与操作场景，回答使用和比较问题。"],
-      ["宠物与全屋清洁", ["ART-09"], "延伸家庭清洁中的宠物场景。"],
-    ];
     return section("搜索增长与品牌内容传播", "SEO / Content Marketing / PR · 北美家居消费品", `
       <section class="seo-case-opening" id="seo-case-overview">
         <div class="seo-case-eyebrow"><span>SEARCH GROWTH / CONTENT / PR</span></div>
         <h3>从用户搜索问题出发，组织内容主题与品牌传播</h3>
-        <p>我的工作涉及英文内容选题、搜索意图与主题规划、产品内容协同，以及品牌新闻稿传播。搜索内容解决具体问题，产品内容回答选型顾虑，PR 则将产品价值放入适合媒体传播的家庭生活场景。</p>
+        <p>我的工作涉及搜索主题与内容架构规划、产品内容协同，以及品牌新闻稿传播。搜索内容解决具体问题，产品内容回答选型顾虑，PR 则将产品价值放入适合媒体传播的家庭生活场景。</p>
         <div class="seo-owner-grid" id="seo-owner-boundaries">
           <article><small>SEO</small><h4>搜索内容规划</h4><p>关键词主题、搜索意图、主题集群、页面结构与内链。</p></article>
-          <article><small>CONTENT MARKETING</small><h4>英文内容策划</h4><p>内容支柱、英文选题、产品教育、节庆内容及渠道协同。</p></article>
+          <article><small>CONTENT MARKETING</small><h4>内容营销策划</h4><p>内容支柱、产品教育、节庆内容及渠道协同。</p></article>
           <article><small>PR / MEDIA</small><h4>品牌传播协同</h4><p>新闻主题、产品价值表达、媒体素材和新闻稿分发。</p></article>
         </div>
       </section>
@@ -937,26 +919,18 @@
         </tbody></table></div>
         <p><a href="#/case/social/fathers-day-calendar">父亲节内容日历 ↗</a> · <a href="#/case/crm/crm-campaign-email-plan">母亲节邮件策划 ↗</a></p>
       </section>
-      <section class="seo-content-section" id="seo-keyword-intent-map">
-        <header><small>04 / SELECTED CONTENT PLAN</small><h3>节庆专题示例｜Halloween 英文搜索选题</h3><p>以节后清洁主指南串联九篇专题，将糖浆、化妆残留、门廊、厨房、宠物及工具选择分成不同搜索任务。这是英文内容策划目录。</p></header>
-        <div class="seo-pillar-node"><div><small>PILLAR GUIDE</small><h4 lang="en">${esc(articles[0][1])}</h4><p>节后清洁任务的综合入口。</p></div><span>01</span></div>
-        <div class="seo-topic-clusters">${groups.map(([name,ids,note])=>`<article class="seo-topic-card"><h4>${esc(name)}</h4><p>${esc(note)}</p><ul>${ids.map(id=>{const x=articles.find(a=>a[0]===id);return `<li data-seo-article="${esc(id)}"><span lang="en">${esc(x[1])}</span><small>${esc(x[3])}</small></li>`}).join("")}</ul></article>`).join("")}</div>
-        <details class="seo-article-details" id="seo-article-briefs"><summary>查看英文选题与搜索意图对应表</summary>
-          <div class="seo-intent-table-wrap"><table class="seo-intent-table" id="seo-intent-table"><thead><tr><th>主题词方向</th><th>搜索意图</th><th>页面任务</th></tr></thead><tbody>${articles.map(([id,title,type,intent,seed,job])=>`<tr><td lang="en">${esc(seed)}</td><td>${esc(intent)}</td><td>${esc(job)}</td></tr>`).join("")}</tbody></table></div>
-        </details>
-      </section>
       <span id="seo-method-and-pr"></span>
       <section class="seo-content-section" id="seo-pr-extension">
-        <header><small>05 / PUBLIC RELATIONS</small><h3>PR 传播主题与媒体内容</h3><p>以新闻价值与受众相关性组织传播主题，把品牌定位、家庭使用场景与产品信息转为媒体可理解的内容。</p></header>
+        <header><small>04 / PUBLIC RELATIONS</small><h3>PR 传播主题与媒体内容</h3><p>以新闻价值与受众相关性组织传播主题，把品牌定位、家庭使用场景与产品信息转为媒体可理解的内容。</p></header>
         <div class="seo-pr-angle-grid"><article><small>BRAND STORY</small><h4>品牌与家庭生活</h4><p>以北美家庭清洁任务为入口，说明品牌服务的生活需求。</p></article><article><small>PRODUCT COMMUNICATION</small><h4>产品与场景教育</h4><p>围绕地面、浴室、厨房、宠物和烧烤清洁建立产品分工，配合使用场景与产品素材。</p></article><article><small>MEDIA DISTRIBUTION</small><h4>新闻稿与媒体分发</h4><p>组织新闻主题、稿件结构和传播素材，区分新闻稿分发与独立编辑报道。</p></article></div>
         <div class="g-project-feature"><figure>${image("pr-home-scene","北美家庭清洁主题新闻稿场景配图")}<figcaption>新闻稿配图</figcaption></figure><div><h4>北美家庭清洁主题新闻稿</h4><p>2026 年 5 月 · King Newswire 分发至 USA Today Press Release 栏目。</p><p>以家庭清洁场景组织四条产品线的产品信息。</p><p><a href="#/case/brand/pr-project">查看新闻稿传播项目 ↗</a></p></div></div>
       </section>
       <section class="seo-content-section" id="seo-cross-channel">
-        <header><small>06 / CHANNEL COORDINATION</small><h3>内容在不同渠道的任务</h3></header>
+        <header><small>05 / CHANNEL COORDINATION</small><h3>内容在不同渠道的任务</h3></header>
         <div class="seo-channel-grid"><article><small>SEO / BLOG</small><h4>搜索需求</h4><p>回答问题，建立主题内容深度。</p></article><article><small>FAQ / PDP</small><h4>产品选择</h4><p>解释适用场景、购买顾虑及产品信息。</p></article><article><small>PR</small><h4>品牌传播</h4><p>将品牌和产品信息组织成媒体内容。</p></article><article><small>SOCIAL</small><h4>场景触达</h4><p>提炼操作演示、节庆话题与互动内容。</p></article><article><small>EDM</small><h4>用户沟通</h4><p>按节庆与用户阶段安排内容推荐。</p></article></div>
       </section>
       <section class="seo-content-section" id="seo-measurement">
-        <header><small>07 / PERFORMANCE REVIEW</small><h3>搜索、内容与媒体表现</h3></header>
+        <header><small>06 / PERFORMANCE REVIEW</small><h3>搜索、内容与媒体表现</h3></header>
         <div class="seo-measure-grid"><article><small>SEO</small><h4>GSC</h4><p>查询、收录、展示、点击和 CTR。</p></article><article><small>CONTENT</small><h4>GA4</h4><p>入口页面、阅读行为与后续行动。</p></article><article><small>PR</small><h4>媒体分发</h4><p>渠道相关性、核心信息表达与引荐。</p></article></div>
         <p><a href="#/data/search">查看历史搜索渠道数据 ↗</a></p>
       </section>
@@ -1115,8 +1089,8 @@
     ],
     seo: [
       "用搜索问题决定页面分工",
-      "节后清洁既有人想解决眼前的黏污，也有人在比较工具。主指南按清洁任务分流，专题解释表面与操作条件，FAQ 或商品页承接需要选型的人。",
-      "主题集群策划包括英文选题、页面结构及内链规划，配套收录、查询和点击的评估方法。",
+      "搜索内容分别回应用户的使用问题与选型需求。主题指南负责组织场景，FAQ 和商品页进一步说明使用条件及购买考虑。",
+      "主题集群策划包括内容结构、页面分工与内部链接，并根据收录、查询和点击表现进行评估。",
     ],
     amazon: [
       "先找出经营瓶颈，再决定投入",
