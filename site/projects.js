@@ -1016,6 +1016,7 @@
         <article><small>M10 / CAP-CONT-001</small><h4>内容策略与排期</h4><p>内容任务、内容支柱、文章 Brief、渠道格式、生产依赖、审核与 CTA 承接。</p></article>
         <article><small>CAP-EARNED-001</small><h4>PR 与媒体内容</h4><p>新闻角度、事实与证据、媒体受众、新闻素材、审批路径及传播质量评估。</p></article>
       </section>
+      <span id="seo-search-optimization"></span>
       <section class="seo-content-section" id="seo-topic-cluster-map">
         <header><small>01 / SEARCH ARCHITECTURE</small><h3>一个主指南，九篇问题型专题</h3><p>主指南负责汇总主题，专题只回答各自独立的搜索任务；是否新建 FAQ 页面，须先确认它是否具有独立的用户任务。</p></header>
         <div class="seo-pillar-node"><div><small>HUB / PILLAR · ART-01</small><h4>The Post-Halloween Survival Guide: Deep Cleaning Sticky Floor &amp; Makeup Disasters</h4><p>汇总节后清洁任务，提供进入不同污渍、表面与工具选择专题的入口。</p></div><span>HUB</span></div>
@@ -1033,6 +1034,7 @@
         <div class="seo-link-flow"><article><small>HUB</small><b>ART-01</b><span>Pillar Blog</span></article><i>↔</i><article><small>SPOKES</small><b>ART-02–ART-10</b><span>9 篇专题文章</span></article><i>→</i><article><small>HANDOFF</small><b>FAQ / PDP</b><span>相关问题与商品信息</span></article></div>
         <div class="seo-link-rules"><article><b>主指南 ↔ 专题</b><p>主指南分发至各专题；专题回链主指南，形成清晰主题层级。</p></article><article><b>专题 → FAQ</b><p>高频补充问题优先放入对应文章；只有独立搜索任务成立时才考虑独立 FAQ 页面。</p></article><article><b>专题 → 商品页</b><p>比较型内容可连接相关 PDP / Collection，但须先核对产品事实、适用场景和页面是否真实存在。</p></article><article><b>防止关键词内耗</b><p>明确每个页面的主意图与 URL Owner，检查重复主题、孤立页面和无理由的新建页面。</p></article></div>
       </section>
+      <span id="seo-case-workflow"></span>
       <section class="seo-content-section" id="seo-content-calendar">
         <header><small>04 / CONTENT STRATEGY &amp; PLANNING</small><h3>内容支柱与节庆内容排期</h3><p>内容支柱来自具体清洁任务，而不是套用固定行业栏目；每篇内容都要有明确的读者任务、证据要求和下一步动作。</p></header>
         <div class="seo-content-pillars"><article><small>CONTENT JOB 01</small><h4>问题解决</h4><p>假血、糖浆、蜡渍、浴室与厨房污渍。</p><b>ART-02 / 03 / 04 / 07 / 10</b></article><article><small>CONTENT JOB 02</small><h4>快速整理</h4><p>派对结束后的清洁顺序与检查清单。</p><b>ART-06</b></article><article><small>CONTENT JOB 03</small><h4>工具选择</h4><p>吸尘任务、刷洗与拖地工具比较。</p><b>ART-05 / 08</b></article><article><small>CONTENT JOB 04</small><h4>全屋卫生</h4><p>宠物节庆场景与季节性家庭清洁。</p><b>ART-09</b></article></div>
@@ -1047,6 +1049,7 @@
         `).join("")}</div>
         <div class="seo-brief-fields"><b>每篇 Brief 应包含</b><span>Page Goal</span><span>Reader Task</span><span>Quick Answer</span><span>H2 / H3</span><span>Required Evidence</span><span>First-hand Experience</span><span>Images / ALT</span><span>FAQ</span><span>Internal Links</span><span>External References</span><span>Schema（适用时）</span><span>CTA / Destination</span><span>Update Plan</span></div>
       </details>
+      <span id="seo-method-and-pr"></span>
       <section class="seo-content-section" id="seo-pr-extension">
         <header><small>05 / CAP-EARNED-001 · PR CONTENT EXTENSION</small><h3>从搜索主题延展为媒体叙事</h3><p>以下为基于 Halloween 内容主题补充的 PR 策划方向，用于展示媒体选题与内容组织能力；不代表该主题已实际发稿、获得媒体报道或完成媒体合作。</p></header>
         <div class="seo-pr-angle-grid">${prAngles.map(([no, title, format, audience, proof, destination]) => `
