@@ -13,6 +13,7 @@ const serve=http.createServer((req,res)=>{
   fs.createReadStream(file).pipe(res);
 });
 const delay=ms=>new Promise(resolve=>setTimeout(resolve,ms));
+const watchdog=setTimeout(()=>{console.error("VISUAL_QA_WATCHDOG_TIMEOUT");process.exit(2)},150000);
 const getJSON=url=>new Promise((resolve,reject)=>{http.get(url,res=>{let t="";res.on("data",x=>t+=x);res.on("end",()=>{try{resolve(JSON.parse(t))}catch(e){reject(e)}})}).on("error",reject)});
 const chromeList=[process.env.CHROME_BIN,"/usr/bin/google-chrome","/usr/bin/google-chrome-stable","/usr/bin/chromium","google-chrome","chromium"].filter(Boolean);
 const browser=chromeList.find(cmd=>cp.spawnSync(cmd,["--version"],{stdio:"ignore"}).status===0);
@@ -64,7 +65,9 @@ async function screenshot(label){
   const report={date:"2026-11-24",screens:[],issues:[],ratio:[]};
   for(const [width,height] of [[1440,980],[390,844]]){
     for(const name of ["cases",...cases,"experience","capabilities"]){
+      console.log("VISUAL_ROUTE_BEGIN",width,name);
       const r=await navigate(port,name,width,height);report.screens.push({route:name,width,height,...r});
+      console.log("VISUAL_ROUTE_DONE",width,name,r.imageCount,r.overflow);
       if(r.brokenImages.length)report.issues.push({route:name,width,brokenImages:r.brokenImages});
       if(r.imagesWithoutAlt.length)report.issues.push({route:name,width,noAlt:r.imagesWithoutAlt});
       if(r.overflow>12)report.issues.push({route:name,width,overflow:r.overflow});
@@ -82,4 +85,4 @@ async function screenshot(label){
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
   console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,ratio:report.ratio.length,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
   if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio))process.exitCode=1;
-})().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{if(ws)ws.close();if(chrome)chrome.kill();await new Promise(resolve=>serve.close(resolve))});
+})().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
