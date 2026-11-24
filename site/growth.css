@@ -3585,3 +3585,10 @@
 .promotion-kv-grid[data-promo-layout="hero"] .promo-kv-action span{font-size:.52rem}
 .promotion-kv-grid[data-promo-layout="hero"] .promo-kv-action{padding-top:.2rem}
 }
+
+
+/* Deep links target the actual artwork below the sticky chapter bar, not behind it. */
+.case-page [id]:not(.case-section){scroll-margin-top:7rem}
+@media(max-width:690px){.case-page [id]:not(.case-section){scroll-margin-top:8rem}}
+/* Suppress old text baked into source photography without obscuring the product scene. */
+.promotion-kv-black-art::before{content:"";position:absolute;inset:0 0 auto;height:17%;background:linear-gradient(180deg,rgba(8,14,12,.7),transparent);z-index:-1;pointer-events:none}
