@@ -75,6 +75,10 @@ async function screenshot(label){
     const r=await navigate(port,"case/brand/promotion-campaign-kv",width,height);
     await evaluate("document.getElementById('promotion-kv-gallery')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(200);
+    const anchor=await evaluate("(()=>{const el=document.getElementById('promotion-kv-gallery'),bar=document.querySelector('.case-page .case-tabs');return {artTop:el?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0}})()");
+    report.anchor ??=[];
+    report.anchor.push({width,...anchor});
+    if(anchor.artTop<anchor.navBottom-3)report.issues.push({width,anchorOverlap:anchor});
     if(width===1440){await screenshot("PROMO_DESKTOP")}else{await screenshot("PROMO_MOBILE")}
     for(const ratio of ["feed","story","hero"]){
       const expr=[
@@ -99,5 +103,5 @@ async function screenshot(label){
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
   console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,ratio:report.ratio.length,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio))process.exitCode=1;
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.ratio||i.anchorOverlap))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
