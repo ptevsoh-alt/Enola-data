@@ -125,9 +125,17 @@
     const page = path[0] || "home";
     if (page === "home") {
       const old = main.querySelector("#jd-case-path");
-      if (old && !old.classList.contains("jd-journeys")) old.outerHTML = board("jd-case-path", false);
+      if (old && !old.querySelector(".jd-journeys")) {
+        const existing = old.innerHTML;
+        old.innerHTML = board("jd-journeys-home", false) +
+          '<details class="jd-legacy-index"><summary>查看完整的四阶段工作说明</summary>' + existing + '</details>';
+      }
       const map = main.querySelector("#strategy-map");
-      if (map && !map.classList.contains("jd-other-work")) map.outerHTML = supplemental();
+      if (map && !map.querySelector(".jd-other-work")) {
+        const existing = map.innerHTML;
+        map.innerHTML = supplemental() +
+          '<details class="jd-legacy-index"><summary>按专业领域查看全部案例入口</summary>' + existing + '</details>';
+      }
     } else if (page === "capabilities") {
       const capList = main.querySelector(".cap-list");
       if (capList && !main.querySelector(".jd-journeys")) {
