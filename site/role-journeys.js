@@ -15,7 +15,7 @@
         ["Campaign 与内容交付", "安排五月传播阶段、主题、KV、演示与跨渠道素材", "#/case/gtm/campaign-architecture"],
         ["团队协作与审核", "组织内容排期，协调产品事实、视觉和视频版本审核", "#/case/operations/asset-review"]
       ],
-      output: "可查看的工作物：产品卖点结构、Campaign 方案、上市日历、英文 Brief 与视觉审核。",
+      output: "交付内容：产品卖点结构、Campaign 方案、上市日历、英文 Brief 与视觉审核。",
       scope: "M3 展示的是 2026 年 5 月策划方案；不将其他年度的品牌增长数据写成 M3 销售成果。"
     },
     {
@@ -30,7 +30,7 @@
         ["PR 与创作者协同", "北美新闻稿、Creator Brief、素材审核与授权管理", "#/case/brand/pr-project"],
         ["搜索与生命周期承接", "SEO / Content 主题规划与 EDM 阶段内容协同", "#/case/seo/seo-case-overview"]
       ],
-      output: "可查看的工作物：品牌屋、节庆 KV、传播物料、媒体内容与内容规划。",
+      output: "交付内容：品牌屋、节庆 KV、传播物料、媒体内容与内容规划。",
       scope: "各触点的素材与项目阶段分别呈现；渠道协同不代表本人独立负责全部投放、销售或审批。"
     },
     {
@@ -76,8 +76,8 @@
   function board(id, isCapabilities) {
     return '<section class="section jd-journeys" id="' + id + '" aria-labelledby="jd-journeys-title">' +
       '<div class="jd-journeys-header"><div><p class="eyebrow">PROJECT EXPERIENCE / BUSINESS OUTCOMES</p>' +
-      '<h2 id="jd-journeys-title">四条业务主线，串起完整营销能力</h2></div>' +
-      '<p>以目标岗位常见的市场判断、产品价值、Campaign、渠道增长及团队交付要求组织案例。每一步均可进入实际项目或工作物。</p></div>' +
+      '<h2 id="jd-journeys-title">从产品上市到海外市场增长</h2></div>' +
+      '<p>围绕新品上市、品牌传播、社媒团队与海外获客，展示项目判断、负责内容和阶段成果。</p></div>' +
       '<div class="jd-journey-grid">' +
       journeys.map((j, ix) =>
         '<article class="jd-journey-card" id="journey-' + j.id + '">' +
@@ -89,10 +89,9 @@
               '<li><a href="' + esc(s[2]) + '"><small>0' + (i + 1) + '</small>' +
               '<span><strong>' + esc(s[0]) + '</strong><em>' + esc(s[1]) + '</em></span>' +
               '<span aria-hidden="true">↗</span></a></li>').join("") +
-          '</ol><div class="jd-journey-foot"><p>' + esc(j.output) + '</p>' +
-          '<small>' + esc(j.scope) + '</small></div></article>'
+          '</ol><div class="jd-journey-foot"><p>' + esc(j.output) + '</p></div></article>'
       ).join("") + '</div>' +
-      (isCapabilities ? '<p class="jd-journeys-note">下方仍保留完整专业能力清单，供需要查看具体技能的招聘方展开。</p>' : '') +
+      '' +
       '</section>';
   }
 
@@ -111,11 +110,7 @@
     const key = byCase[caseId], j = journeys.find((x) => x.id === key);
     if (!j) return "";
     const other = j.stages.filter((s) => !s[2].startsWith("#/case/" + caseId + "/") && s[2] !== "#/case/" + caseId);
-    return '<section class="jd-case-bridge" aria-labelledby="jd-case-bridge-title">' +
-      '<div><p class="eyebrow">RELATED WORK / 项目关联</p><h2 id="jd-case-bridge-title">这项工作与哪些能力相连？</h2>' +
-      '<p>属于「' + esc(j.title) + '」主线。其他模块提供不同阶段的工作材料；项目和统计口径仍分别保留。</p></div>' +
-      '<nav aria-label="相关阶段案例">' + other.map((s) => '<a href="' + esc(s[2]) + '">' + esc(s[0]) + ' ↗</a>').join("") + '</nav>' +
-      '</section>';
+    return other.map((s) => '<a href="' + esc(s[2]) + '">' + esc(s[0]) + ' ↗</a>').join("");
   }
 
   function hydrate() {
@@ -136,6 +131,13 @@
         map.innerHTML = supplemental() +
           '<details class="jd-legacy-index"><summary>按专业领域查看全部案例入口</summary>' + existing + '</details>';
       }
+      // Lead with the integrated business journeys; follow with supporting visuals and metrics.
+      const showcase = main.querySelector(".career-showcase");
+      const summary = main.querySelector(".home-summary");
+      if (old && showcase && old.parentElement !== showcase.parentElement) {
+        old.after(showcase);
+        if (summary) showcase.after(summary);
+      }
     } else if (page === "capabilities") {
       const capList = main.querySelector(".cap-list");
       if (capList && !main.querySelector(".jd-journeys")) {
@@ -148,8 +150,11 @@
         details.append(summary, capList);
       }
     } else if (page === "case" && path[1]) {
-      const section = main.querySelector("#evidence");
-      if (section && !main.querySelector(".jd-case-bridge")) section.insertAdjacentHTML("beforebegin", related(path[1]));
+      const relatedLinks = main.querySelector("#evidence .case-related-links");
+      if (relatedLinks && !relatedLinks.hasAttribute("data-integrated")) {
+        relatedLinks.insertAdjacentHTML("afterbegin", related(path[1]));
+        relatedLinks.setAttribute("data-integrated", "true");
+      }
     }
   }
   // The existing router is registered first; this listener decorates its completed route.
