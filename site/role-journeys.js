@@ -97,7 +97,7 @@
   }
 
   function supplemental() {
-    return '<section class="section jd-other-work" id="strategy-map" aria-labelledby="jd-other-title">' +
+    return '<section class="section jd-other-work" id="jd-supporting-work" aria-labelledby="jd-other-title">' +
       '<div><p class="eyebrow">MORE PROJECTS</p><h2 id="jd-other-title">其他代表性工作</h2>' +
       '<p>四条业务主线以外的具体工作内容，仍可在详细案例中查看。</p></div>' +
       '<nav aria-label="其他项目案例">' +
