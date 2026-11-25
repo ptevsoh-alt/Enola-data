@@ -1,0 +1,57 @@
+/* Business-outcome journeys derived from the job-demand matrix. */
+.jd-journeys { margin-block: 3.4rem 3.8rem; }
+.jd-journeys-header { display:grid; grid-template-columns: minmax(0,1.15fr) minmax(0,.85fr); gap:2rem; align-items:end; margin-bottom:1.5rem; }
+.jd-journeys-header h2 { margin:.4rem 0 0; font-size:clamp(1.7rem,3vw,2.8rem); line-height:1.18; letter-spacing:-.035em; }
+.jd-journeys-header > p { max-width:42rem; margin:0; line-height:1.9; color:#555c5b; }
+.jd-journey-grid { display:grid; grid-template-columns: repeat(2,minmax(0,1fr)); gap:1.15rem; }
+.jd-journey-card { min-width:0; display:flex; flex-direction:column; overflow:hidden; background:#fff; border:1px solid #dddcd6; border-radius:15px; box-shadow:0 6px 25px rgba(30,36,32,.035); }
+.jd-journey-card:nth-child(2) { background:#f9f8f3; }
+.jd-journey-card:nth-child(3) { background:#f6f8f8; }
+.jd-journey-card:nth-child(4) { background:#faf8f4; }
+.jd-journey-head { padding:1.65rem 1.75rem 1rem; }
+.jd-journey-head > span { display:block; margin-bottom:.75rem; font-size:.69rem; letter-spacing:.1em; font-weight:700; color:#46706c; }
+.jd-journey-head h3 { margin:0 0 .7rem; font-size:clamp(1.35rem,2vw,1.9rem); line-height:1.25; letter-spacing:-.028em; color:#24332f; }
+.jd-journey-head p { margin:.55rem 0; line-height:1.75; color:#444f4a; }
+.jd-journey-context { font-weight:600; font-size:.85rem; color:#52706a !important; }
+.jd-journey-stages { margin:.2rem 1.75rem 1.2rem; padding:0; list-style:none; border-top:1px solid #d5dad5; }
+.jd-journey-stages li { border-bottom:1px solid #e1e4df; }
+.jd-journey-stages a { display:grid; grid-template-columns:1.65rem minmax(0,1fr) 1rem; align-items:start; gap:.8rem; padding:.95rem .1rem; text-decoration:none; color:#263831; }
+.jd-journey-stages a:hover, .jd-journey-stages a:focus-visible { background:rgba(58,111,102,.065); color:#145f57; }
+.jd-journey-stages a small { font-size:.72rem; font-weight:700; color:#72918a; padding-top:.18rem; }
+.jd-journey-stages a strong { display:block; font-size:.97rem; line-height:1.42; }
+.jd-journey-stages a em { display:block; font-size:.83rem; font-style:normal; line-height:1.65; color:#6b706d; margin-top:.15rem; }
+.jd-journey-stages a > span:last-child { font-size:1.05rem; }
+.jd-journey-foot { margin-top:auto; padding:1.1rem 1.75rem 1.45rem; background:rgba(31,71,61,.045); border-top:1px solid #e3e7e2; }
+.jd-journey-foot p { margin:0 0 .55rem; font-weight:700; color:#253e38; line-height:1.6; }
+.jd-journey-foot small { display:block; line-height:1.65; color:#6f7671; font-size:.76rem; }
+.jd-journeys-note { color:#686d68; font-size:.85rem; margin:1rem 0 0; }
+.jd-other-work { display:flex; align-items:center; justify-content:space-between; gap:2rem; padding:1.35rem 0 2rem; border-top:1px solid #e0dfd9; }
+.jd-other-work h2 { margin:.2rem 0 .5rem; font-size:1.4rem; }
+.jd-other-work p { margin:.3rem 0; color:#737874; }
+.jd-other-work nav { display:flex; flex-wrap:wrap; justify-content:flex-end; gap:.55rem; }
+.jd-other-work nav a, .jd-case-bridge nav a { display:inline-flex; align-items:center; padding:.6rem .8rem; border:1px solid #d6d9d4; border-radius:7px; text-decoration:none; color:#27554e; font-size:.82rem; }
+.jd-other-work nav a:hover, .jd-other-work nav a:focus-visible, .jd-case-bridge nav a:hover, .jd-case-bridge nav a:focus-visible { background:#eaf2ee; }
+.jd-capabilities-detail { margin:1.6rem 0 3rem; border:1px solid #d5d9d4; border-radius:10px; padding:1rem 1.2rem; }
+.jd-capabilities-detail > summary { cursor:pointer; font-weight:700; color:#2e594f; padding:.2rem; }
+.jd-capabilities-detail > .cap-list { margin-top:1.4rem; }
+.jd-case-bridge { display:grid; grid-template-columns:minmax(0,1fr) minmax(0,1.1fr); gap:2rem; background:#f5f7f4; padding:1.5rem 1.7rem; margin:2rem 0; border:1px solid #d8ded8; border-radius:12px; }
+.jd-case-bridge h2 { font-size:1.38rem; margin:.35rem 0 .6rem; color:#263d35; }
+.jd-case-bridge p { color:#626c65; line-height:1.7; margin:.35rem 0; }
+.jd-case-bridge nav { display:flex; flex-wrap:wrap; align-content:center; align-items:center; gap:.5rem; }
+@media (max-width:900px) { .jd-journeys-header,.jd-case-bridge { grid-template-columns:1fr;gap:1rem; } .jd-journey-grid { grid-template-columns:1fr; } .jd-other-work { flex-direction:column;align-items:flex-start; } .jd-other-work nav { justify-content:flex-start; } }
+@media (max-width:480px) { .jd-journeys { margin-block:2.25rem; } .jd-journey-head { padding:1.2rem 1.2rem .9rem; } .jd-journey-stages { margin-inline:1.2rem; } .jd-journey-stages a { grid-template-columns:1.3rem minmax(0,1fr) .7rem; gap:.52rem; } .jd-journey-foot { padding:1rem 1.2rem; } .jd-case-bridge { padding:1.2rem; } }
+
+.jd-legacy-index { margin-block:1rem 2rem; padding:1rem 1.25rem; border-top:1px solid #e4e4df; }
+.jd-legacy-index > summary { cursor:pointer; color:#44635b; font-size:.88rem; font-weight:600; padding:.5rem 0; }
+.jd-legacy-index > .section-head { margin-top:1.5rem; }
+.jd-legacy-index > .home-route-grid { margin-top:1.2rem; }
+.jd-legacy-index > .home-decision-grid { margin-top:1.2rem; }
+
+@media (max-width:570px) {
+  .application-hero .actions { flex-wrap:wrap; gap:.65rem 1.05rem; }
+  .application-hero .actions > a { white-space:nowrap; }
+  .application-hero .actions .btn { font-size:.82rem; padding:.7rem .85rem; min-height:44px; }
+  .application-hero .actions > a:not(.btn) { font-size:.84rem; }
+}
+
+@media(max-width:570px){.home-intro-band{padding-bottom:.8rem;}#jd-case-path{margin-top:1.2rem;}}

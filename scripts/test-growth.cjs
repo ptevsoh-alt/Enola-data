@@ -277,7 +277,8 @@ const fs = require("fs"),
   });
   await route("/case/gtm/campaign-paid-email-assets");
   check("Paid Ads and EDM creative variants are present", () => {
-    assert.equal(d.querySelectorAll("#campaign-paid-email-assets article").length, 2);
+    assert.equal(d.querySelectorAll("#campaign-paid-email-assets .campaign-assets-pair article").length, 2);
+    assert.equal(d.querySelectorAll("#campaign-paid-email-assets .campaign-adaptation-grid article").length, 4);
     assert.equal(d.querySelectorAll("#campaign-activation .campaign-workstreams article").length, 8);
   });
   await route("/case/gtm/launch-delivery");

@@ -131,8 +131,8 @@
   },
   {
     "file": "growth.css",
-    "bytes": 204107,
-    "sha256": "6a9bde3d9aa220a41fcfd93b79e813f1781c0a79d459bf66099ed388d2398364"
+    "bytes": 220118,
+    "sha256": "ec7aac39d325f774a72641d8565774ff576ea4e5d623147227f1ac90ac2d3465"
   },
   {
     "file": "growth.js",
@@ -141,13 +141,13 @@
   },
   {
     "file": "index.html",
-    "bytes": 3536,
-    "sha256": "e9dd152d62c097c463bad35bf6b6fd7316a97edef605d630e8404bdc352e7335"
+    "bytes": 3698,
+    "sha256": "6f7b295e3a04442dbf3c27ad0aeb4eaa19f7a366e932f4fe808fe31f7d356720"
   },
   {
     "file": "projects.js",
-    "bytes": 143052,
-    "sha256": "fd9be1044dff32690863c877e671be9297520663d890fcc5964fa84488b6f243"
+    "bytes": 168719,
+    "sha256": "32794e8f5230c9092e59407f014af21b9f1703f5f497e97481626913bb6de203"
   },
   {
     "file": "review/index.html",
@@ -156,8 +156,8 @@
   },
   {
     "file": "review/review.css",
-    "bytes": 20220,
-    "sha256": "29b9f5fe0b75ae68c4908a1cabbcba99dd9c855321bbef954cf966d90bd0e42f"
+    "bytes": 20380,
+    "sha256": "ada866a458ac7764939a65391a01adbff1d66e2dbc8e23b1eb0d0d5119c15c32"
   },
   {
     "file": "review/review.js",
@@ -170,9 +170,19 @@
     "sha256": "16ceb5ee3e0dc13aa9adf31a3ebbe45a1d965b8c2b9f72eaf84e5911e140ed95"
   },
   {
+    "file": "role-journeys.css",
+    "bytes": 5483,
+    "sha256": "1387e6b6e05641924c6f12793a64a3142f843eb207855713dd470d0db600181e"
+  },
+  {
+    "file": "role-journeys.js",
+    "bytes": 10227,
+    "sha256": "ffb83ea8d1a961dd7eb4be713c60a24a73eaac34a08ca02f0bacac62f13acab7"
+  },
+  {
     "file": "selected-work.js",
-    "bytes": 4478,
-    "sha256": "c0bbaf7e58a81e93fe3cdcd5cd80ba483136afe4d51f8ec9edbd59377505be66"
+    "bytes": 4554,
+    "sha256": "3c39f08220e0ff88853e9b6cab523dd1f5a408a7057dcfec2ee54d7af7eb0840"
   },
   {
     "file": "styles.css",
