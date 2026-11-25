@@ -242,16 +242,16 @@
   <header class="pmm-board-head pmm-board-lead">
     <small>PRODUCT POSITIONING / COMMERCIAL MESSAGE / M3</small>
     <h3 id="pmm-decision-heading">从餐后清洁任务，确定 M3 值得被选择的理由</h3>
-    <p>上市传播先回答三个问题：谁会在什么时候需要它、为什么考虑从现有清洁方式切换、哪些产品事实足以支持这个选择。<em>Make Room for What Matters</em> 是最终面向用户的 Campaign 主题，而不是用一句情绪文案替代产品定位。</p>
+    <p>M3 上市策划从具体的清洁任务出发：餐后什么时候需要整理地面？双盘拖地与常见方式有什么差别？什么样的演示和商品信息能支持选择？<em>Make Room for What Matters</em> 将这些产品价值放进一个有生活感的家庭故事。</p>
   </header>
   <div class="pmm-positioning-bridge" aria-label="品牌主张、产品定位和Campaign主题的关系">
-    <article><small>BRAND / 长期价值</small><strong>Power Every Move</strong><p>让不同清洁工具服务于真实家庭任务；品牌的价值来自产品与使用体验，不是一次上市口号。</p></article>
+    <article><small>BRAND / 长期价值</small><strong>Power Every Move</strong><p>围绕不同家庭清洁任务，用清晰的产品功能与实际操作体验支持日常生活。</p></article>
     <article class="is-product"><small>PMM / 本次选择理由</small><strong>可看懂的双盘拖地方式</strong><p>针对日常硬地清洁，让消费者先理解双盘动作、握持与地面适用条件，再判断是否值得选购。</p></article>
     <article><small>IMC / 上市传播主题</small><strong>Make Room for What Matters</strong><p>用“餐后还有地面要整理”建立生活关联，再以真实操作让情绪落回产品价值。</p></article>
   </div>
   <div class="pmm-target-frame">
-    <div><small>TARGET × JOB TO BE DONE</small><h4>谁、在什么任务中、考虑用什么来替代？</h4><p>本次以美国市场的家庭日常硬地清洁为沟通情境，优先展示餐后地面整理。考虑对象不是泛泛的“所有家庭”：而是正在比较手动拖地、电动拖地等方式，并希望确认操作、适用表面与维护要求的潜在购买者。</p><p class="pmm-frame-boundary">场景是本项目的创意与上市切口，不写成已经完成抽样验证的消费者洞察；购买意愿与场景优先级仍需由访谈、评论及实际行为继续验证。</p></div>
-    <aside><small>POSITIONING STATEMENT</small><strong>面向需要定期整理家中硬地、正在比较拖地方式的消费者，M3 是一款双盘旋转拖把。它的沟通差异不在未经验证的“更快、更省力”，而在于通过清晰可见的双盘操作与真实使用说明，帮助用户判断这种清洁方式是否适合自己。</strong></aside>
+    <div><small>TARGET × JOB TO BE DONE</small><h4>谁、在什么任务中、考虑用什么来替代？</h4><p>本次以美国市场的家庭日常硬地清洁为沟通情境，优先展示餐后地面整理。考虑对象不是泛泛的“所有家庭”：而是正在比较手动拖地、电动拖地等方式，并希望确认操作、适用表面与维护要求的潜在购买者。</p><p class="pmm-frame-boundary">餐后硬地整理是本次上市沟通的优先场景；其他家庭清洁任务按地面条件、操作需求与产品线分别安排。</p></div>
+    <aside><small>POSITIONING STATEMENT</small><strong>面向需要定期整理家中硬地、正在比较拖地方式的消费者，M3 是一款双盘旋转拖把。通过清晰可见的双盘操作、握持方式与使用说明，让用户在购买前判断这种清洁方式是否适合自己的家庭任务。</strong></aside>
   </div>
   <div class="pmm-decision-layout">
     <div class="pmm-decision-process" aria-label="用户任务、竞争参照、核心利益与证明的决策链">
@@ -280,7 +280,7 @@
     <div class="pmm-proof-boundary"><b>信息取舍</b><span>主推：场景问题、双盘工作方式、真实操作。</span><span>按需补充：型号规格、续航、适用地面、价格与售后。</span><span>不直接承诺：未经核验的清洁提升、省时、省力与所有地面通用。</span></div>
   </section>
   <section class="pmm-commercial-messages" aria-labelledby="pmm-commercial-title">
-    <div class="pmm-mini-heading"><small>BUYER AWARENESS / COMMERCIAL MESSAGE</small><h4 id="pmm-commercial-title">同一主张，面对不同认知阶段说不同的话</h4><p>按用户提出的问题设计信息深度，而不是把“认知、比较、购买”都塞进同一张海报。以下是消息与物料的策划分工，不代表已完成用户分群判定。</p></div>
+    <div class="pmm-mini-heading"><small>BUYER AWARENESS / COMMERCIAL MESSAGE</small><h4 id="pmm-commercial-title">同一主张，面对不同认知阶段说不同的话</h4><p>按用户提出的问题设计信息深度，而不是把“认知、比较、购买”都塞进同一张海报。针对不同的信息需求，分别安排场景内容、操作演示、选型 FAQ 与购买说明。</p></div>
     <div class="pmm-awareness-grid">
       <article><small>01 / PROBLEM AWARE</small><h5>先认出餐后待处理的地面</h5><blockquote lang="en">Dinner's done. The floor isn't.</blockquote><p>展示餐后真实情境，让用户知道这条内容与自己的任务有关。</p><b>Social / 情境短片 · CTA：了解清洁方式</b></article>
       <article><small>02 / SOLUTION AWARE</small><h5>理解双盘拖地与其他方式的差别</h5><blockquote lang="en">See dual-spin mopping in action.</blockquote><p>用连续动作、握持与地面接触说明机制，避免只看“神奇前后对比”。</p><b>Reels / Creator · CTA：观看完整演示</b></article>
@@ -290,7 +290,7 @@
     <div class="pmm-commercial-gate"><div><small>GTM / CONVERSION READINESS</small><strong>购买理由必须在商品信息中兑现</strong><p>广告说明的产品机制、视频中的具体型号、页面上的权益和售后条件应一致。未确认的销售承诺只做信息准备，不进入购买导向传播。</p></div><a href="#/case/gtm/campaign-architecture">继续看 Big Idea 与整合 Campaign ↗</a></div>
   </section>
   <div class="pmm-bigidea-bridge" aria-label="从产品价值到Make Room for What Matters的形成逻辑">
-    <small>WHY THIS BIG IDEA / 从产品价值到传播主题</small><h4>Make Room for What Matters</h4><p>餐后需要清洁，家人也期待生活继续。M3 的双盘动作能够在这一情境中成为可看见的解决方式，因此创意从“还有地面待整理”转向“整理之后，生活继续”。<b>主题承担情绪记忆，产品机制承担选择理由。</b> 它不证明产品比其他工具更快，也不承诺为每个家庭节约多少时间。</p>
+    <small>WHY THIS BIG IDEA / 从产品价值到传播主题</small><h4>Make Room for What Matters</h4><p>餐后需要清洁，家人也期待生活继续。M3 的双盘动作能够在这一情境中成为可看见的解决方式，因此创意从“还有地面待整理”转向“整理之后，生活继续”。<b>主题承担情绪记忆，产品机制承担选择理由。</b> 情绪表达与产品选择理由各有任务，由可复核的操作演示与适用说明负责支撑具体利益。</p>
     <div><span>场景：餐后硬地</span><span>选择理由：双盘操作可理解</span><span>证明：连续实拍与型号信息</span><span>表达：Make Room for What Matters</span></div>
   </div>
   <div class="pmm-tradeoff"><strong>MY STRATEGIC CHOICE</strong><p><b>放弃</b> 参数优先与无依据的效率竞赛；不将 Campaign 主题当成产品卖点。</p><p><b>选择</b> 场景开场、机制证明、分层沟通与可核验的购买承接。</p></div>
