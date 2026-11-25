@@ -3709,3 +3709,61 @@
 @media(max-width:620px){.seo-case-kpis{grid-template-columns:repeat(2,minmax(0,1fr))}.seo-owner-grid,.seo-topic-clusters,.seo-link-rules,.seo-content-pillars,.seo-article-grid,.seo-pr-angle-grid,.seo-pr-package,.seo-channel-grid,.seo-measure-grid{grid-template-columns:1fr}.seo-pillar-node{align-items:flex-start;flex-direction:column}.seo-link-flow{grid-template-columns:1fr}.seo-link-flow>i{transform:rotate(90deg);justify-self:center}.seo-calendar-list article{grid-template-columns:1fr;gap:.3rem}.seo-case-eyebrow{font-size:.62rem}}
 
 .campaign-index-preview a[href*="crm-campaign-email-plan"]{background:#51433b}.campaign-index-preview a[href*="crm-campaign-email-plan"] span{top:0;bottom:0;display:flex;align-items:center;justify-content:center;text-align:center;padding:.35rem;font-size:clamp(.62rem,1vw,.9rem)}
+
+
+/* M3 case | Brand → Campaign → creative adaptation editorial depth (2026-11-25) */
+.campaign-strategy-spine,
+.campaign-brand-thesis,
+.campaign-territory-grid,
+.campaign-integration-grid,
+.campaign-adaptation-grid{display:grid;gap:.7rem;min-width:0}
+.campaign-strategy-spine{grid-template-columns:repeat(2,minmax(0,1fr));margin:1.05rem 0 1.4rem}
+.campaign-strategy-spine article{padding:1.05rem 1.1rem;border-left:3px solid #406651;background:#f3f5ef;min-width:0}
+.campaign-strategy-spine span,.campaign-territory-heading span,.campaign-integration-heading span{display:block;font-size:.64rem;letter-spacing:.08em;font-weight:750;color:#315c45}
+.campaign-strategy-spine h4{margin:.35rem 0 .45rem;color:#254637;font-size:clamp(.95rem,1.55vw,1.08rem);line-height:1.4}
+.campaign-strategy-spine p{margin:0;font-size:.81rem;line-height:1.75;color:#43594a}
+.campaign-brand-thesis{grid-template-columns:repeat(3,minmax(0,1fr))}
+.campaign-brand-thesis article{padding:1rem;background:#f0f3ed;border:1px solid #dce5da;min-width:0}
+.campaign-brand-thesis small,.campaign-territory-grid small,.campaign-adaptation-grid small{font-size:.62rem;font-weight:750;letter-spacing:.055em;color:#55705a}
+.campaign-brand-thesis h5{margin:.4rem 0 .35rem;font-size:.89rem;line-height:1.5;color:#294736}
+.campaign-brand-thesis p{margin:0;font-size:.76rem;line-height:1.7;color:#526256}
+.campaign-house-message{padding:1.4rem clamp(.9rem,3vw,2rem)}
+.campaign-house-message .campaign-big-idea-lead{max-width:51rem;margin:.65rem auto 1rem;font-size:.94rem;line-height:1.75}
+.campaign-idea-logic{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.55rem;text-align:left}
+.campaign-idea-logic>div{padding:.85rem;background:rgba(255,255,255,.74);border:1px solid #c9d6c9;min-width:0}
+.campaign-idea-logic small{display:block;color:#4c6953;font-size:.62rem;font-weight:750;letter-spacing:.05em}
+.campaign-idea-logic b{display:block;margin-top:.4rem;font-size:.78rem;line-height:1.7;font-weight:630;overflow-wrap:anywhere}
+.campaign-house-insight p{max-width:47rem;margin:.75rem auto 0;color:#4e5d4b;font-size:.76rem;line-height:1.65}
+.campaign-territory-set{padding:1.15rem;background:#f9f7f0;border:1px solid #e8e2d5}
+.campaign-territory-heading h5{font-size:1.04rem;margin:.25rem 0 .9rem;color:#284939}
+.campaign-territory-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.campaign-territory-grid article{display:flex;flex-direction:column;padding:1rem;background:#fffdfa;border:1px solid #deded3;min-width:0}
+.campaign-territory-grid h6{margin:.45rem 0;font-size:1.03rem;line-height:1.4;color:#244a37;overflow-wrap:anywhere}
+.campaign-territory-grid p{margin:.25rem 0 .8rem;color:#4e5c50;font-size:.77rem;line-height:1.7}
+.campaign-territory-grid strong{margin-top:auto;font-size:.7rem;line-height:1.55;color:#385d43}
+.campaign-territory-decision{margin:.85rem 0 0;font-size:.79rem;line-height:1.7;color:#3e594a}
+.campaign-integration-guardrails{margin:1.15rem 0 1.4rem;padding:1rem 1.1rem;background:#edf3ed;border:1px solid #d2dfd4}
+.campaign-integration-heading h5{margin:.25rem 0;font-size:1.08rem;color:#2c4b38}
+.campaign-integration-heading p{margin:.35rem 0 .8rem;font-size:.8rem;line-height:1.65;color:#47604e}
+.campaign-integration-grid{grid-template-columns:repeat(3,minmax(0,1fr))}
+.campaign-integration-grid article{padding:.8rem .9rem;background:#fffefa;border-top:2px solid #4e795e;min-width:0}
+.campaign-integration-grid b{display:block;color:#2b503a;font-size:.84rem}
+.campaign-integration-grid p{margin:.35rem 0 0;font-size:.75rem;line-height:1.7;color:#4d5c50}
+.campaign-adaptation-grid{grid-template-columns:repeat(2,minmax(0,1fr));margin-top:.9rem}
+.campaign-adaptation-grid article{display:flex;flex-direction:column;padding:1rem;background:#f8f8f3;border:1px solid #dde2d9;min-width:0}
+.campaign-adaptation-grid h5{margin:.35rem 0 .4rem;font-size:.92rem;color:#284938}
+.campaign-adaptation-grid p{margin:0 0 .7rem;color:#516154;font-size:.77rem;line-height:1.7}
+.campaign-adaptation-grid b{margin-top:auto;font-size:.7rem;line-height:1.55;color:#3c654c}
+@media(max-width:960px){
+  .campaign-brand-thesis,.campaign-territory-grid,.campaign-integration-grid,.campaign-idea-logic{grid-template-columns:1fr}
+  .campaign-brand-thesis article,.campaign-territory-grid article{padding:.9rem}
+}
+@media(max-width:620px){
+  .campaign-strategy-spine,.campaign-adaptation-grid{grid-template-columns:1fr}
+  .campaign-house-message{padding:1.1rem .75rem}
+  .campaign-house-roof{padding:1.4rem .75rem .85rem;clip-path:polygon(50% 0,100% 18%,100% 100%,0 100%,0 18%)}
+  .campaign-house-roof h4{font-size:1.48rem}
+  .campaign-house-roof p{max-width:16rem;margin:.2rem auto 0;line-height:1.6}
+  .campaign-house-insight>div{justify-content:flex-start}
+  .campaign-strategy-spine article,.campaign-integration-guardrails,.campaign-territory-set{padding:.85rem}
+}
