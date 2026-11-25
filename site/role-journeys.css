@@ -46,3 +46,12 @@
 .jd-legacy-index > .section-head { margin-top:1.5rem; }
 .jd-legacy-index > .home-route-grid { margin-top:1.2rem; }
 .jd-legacy-index > .home-decision-grid { margin-top:1.2rem; }
+
+@media (max-width:570px) {
+  .application-hero .actions { flex-wrap:wrap; gap:.65rem 1.05rem; }
+  .application-hero .actions > a { white-space:nowrap; }
+  .application-hero .actions .btn { font-size:.82rem; padding:.7rem .85rem; min-height:44px; }
+  .application-hero .actions > a:not(.btn) { font-size:.84rem; }
+}
+
+@media(max-width:570px){.home-intro-band{padding-bottom:.8rem;}#jd-case-path{margin-top:1.2rem;}}
