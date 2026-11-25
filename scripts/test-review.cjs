@@ -133,6 +133,10 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll('.review-domain-card a[href^="../#/data/"]').length, 6);
     assert.ok(d.querySelector('a[href="../#/home"]'));
   });
+  check("case search hidden cards are actually removed from layout", () => {
+    const css = fs.readFileSync(path.join(site, "review/review.css"), "utf8");
+    assert.ok(css.includes(".review-case-card[hidden], .review-empty[hidden] { display: none !important; }"));
+  });
   check("case search filters and restores the full index", () => {
     const input = d.querySelector("#review-search");
     input.value = "Amazon";
