@@ -171,13 +171,13 @@
   },
   {
     "file": "role-journeys.css",
-    "bytes": 5068,
-    "sha256": "1d8b9bc92ee647f1f055dae84cc4d0e37717c704113921cf8d209f4933558250"
+    "bytes": 5483,
+    "sha256": "1387e6b6e05641924c6f12793a64a3142f843eb207855713dd470d0db600181e"
   },
   {
     "file": "role-journeys.js",
-    "bytes": 10439,
-    "sha256": "45911260e5cf90d6e517944a182318f6b319cab3d4e6a7bdae275fda80ef7a70"
+    "bytes": 10227,
+    "sha256": "ffb83ea8d1a961dd7eb4be713c60a24a73eaac34a08ca02f0bacac62f13acab7"
   },
   {
     "file": "selected-work.js",
