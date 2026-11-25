@@ -32,7 +32,8 @@ const {JSDOM, VirtualConsole} = require("jsdom");
     await route(a.slice(1));
     if(match[2])check(Boolean(d.getElementById(match[2])),"Missing target chapter: "+a);
     check(d.querySelectorAll(".case-section").length===7,"Case sections must remain intact: "+a);
-    check(d.querySelector(".jd-case-bridge"),"Related-case block missing: "+a);
+    check(d.querySelector("#evidence .case-related-links[data-integrated]"),"Integrated case links missing: "+a);
+    check(!d.querySelector(".jd-case-bridge"),"Duplicate related-work panel found: "+a);
   }
   await route("/capabilities");
   check(d.querySelectorAll(".jd-journey-card").length===4,"Capabilities page has integrated pathways");
