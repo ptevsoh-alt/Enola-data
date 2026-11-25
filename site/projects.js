@@ -454,25 +454,43 @@
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
           </details>
-          <div class="campaign-integration-guardrails" aria-label="Campaign 管理与跨渠道交付">
-            <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / 协同与审核</span><h5>一份主张，三处关键交接</h5><p>传播策划不代替各渠道负责人决策；我负责把产品事实、素材需求、审核意见和日历节点对齐。</p></div>
+          <div class="campaign-integration-guardrails" aria-label="Campaign 传播方案与团队交付管理">
+            <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / FROM BRIEF TO DELIVERY</span><h5>从品牌主张到跨团队交付</h5><p>我将核心传播信息、产品证据、创意物料与社媒日历组织成同一份执行计划，并协调产品、视觉、视频、Creator 及渠道同事按节点交付。</p></div>
+            <div class="campaign-management-sequence" aria-label="品牌定位到执行的四步链条">
+              <article><small>BRAND</small><b>Power Every Move</b><p>品牌一致性</p></article>
+              <article><small>IMC / BIG IDEA</small><b>Make Room for What Matters</b><p>餐后生活场景</p></article>
+              <article><small>CREATIVE</small><b>三个创意切入点</b><p>情境反差 · 动作演示 · 家庭情绪</p></article>
+              <article><small>DELIVERY</small><b>不同渠道分工</b><p>KV、视频、社群、PR、邮件</p></article>
+            </div>
             <div class="campaign-integration-grid">
-              <article><b>内容与版本</b><p>先确认主视觉、产品实拍、FAQ 和英文 Brief 的源版本，再适配各平台开场、画幅、CTA 与信息密度。</p></article>
-              <article><b>放行与责任</b><p>产品核对功能与适用条件；视觉/视频核对真实结构；渠道 Owner 分别负责发布、预算、授权、优惠和页面可售状态。</p></article>
-              <article><b>复盘与调整</b><p>按创意方向对照观看、互动、有效访问和高频疑问；商业表现只采用订单与数据负责人的同口径核验结果。</p></article>
+              <article><b>01 / Brief 与素材组织</b><p>统一英文主题、用户情境、M3 型号与卖点证据；把主 KV、分镜、Creator Brief、FAQ 和渠道文案对应到各自的任务。</p></article>
+              <article><b>02 / 制作、版本与放行</b><p>按阶段确认产品结构与操作镜头、字幕和场景用法；与产品及渠道负责人核对事实、素材授权、链接与发布窗口。</p></article>
+              <article><b>03 / 上线反馈与复盘</b><p>分别观察观看与互动、FAQ 问题、访问及已核实的商业信号，再决定后续内容重点；不把曝光直接写成订单成果。</p></article>
+            </div>
+            <div class="campaign-release-checkpoints" aria-label="Campaign四个关键发布节点">
+              <div><small>PREPARE</small><strong>锁定信息与物料</strong><span>产品事实、Brief、主视觉、授权</span></div>
+              <div><small>PRODUCE</small><strong>形成渠道版本</strong><span>脚本、实拍、剪辑、文案与 FAQ</span></div>
+              <div><small>LAUNCH</small><strong>按窗口发布</strong><span>渠道 Owner、链接、适用条件、CRM 承接</span></div>
+              <div><small>LEARN</small><strong>让反馈回到策划</strong><span>创意表现、用户疑问、后续选题</span></div>
             </div>
           </div>
         <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
-          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 内容策略到创意版本</small><h4>保留同一 Big Idea，改变每个渠道的叙事方式</h4><p>Hero 负责让人记住“餐后还有一件清洁小事”；短视频让动作可信；社群负责征集问题；PR 和产品内容负责核实。不是把同一张 KV 缩放成不同尺寸。</p></div>
+          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / CHANNEL-NATIVE CAMPAIGN</small><h4>主题统一，内容职责与创意动作各不相同</h4><p>同一个 Make Room for What Matters，KV 讲生活情绪，短视频交代双盘动作，社群讨论真实问题，PR 与搜索内容提供可查的产品事实；各渠道以不同信息深度支持同一选择过程。</p></div>
           <div class="campaign-assets-pair">
             <article class="campaign-ad-visual"><span>PAID / DISCOVERY CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>首屏呈现餐后待清理的地面；随后以产品出场和连续操作兑现开场提出的问题。</p><div class="campaign-asset-tags"><small>A · 餐后场景冲突</small><small>B · 双盘动作揭示</small><small>C · 握持操作细节</small></div><p class="campaign-asset-caption">三条 Hook 对应不同理解障碍，非同一视频换字幕；具体测试、预算和购买型 CTA 须由 Paid Owner 核准。</p></article>
             <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热先讲日常地面任务，上市期重点回答产品怎么用、是否适合自己的地面；购后以操作说明和维护 FAQ 延续体验。</p><div class="campaign-asset-tags"><small>订阅认知</small><small>产品考虑</small><small>已购教育</small></div><p class="campaign-asset-caption">不同阶段提供不同的信息深度；许可、触发、排除与发送由 CRM Owner 确认。</p></article>
           </div>
-          <div class="campaign-adaptation-grid" aria-label="跨渠道创意表达与内容任务">
-            <article><small>HERO / KV</small><h5>一眼看懂主题</h5><p>以餐桌到地面的视觉关系建立反差，M3 产品主体清晰可识别；品牌主题不遮挡双盘结构。</p><b>检验：品牌、产品与任务是否同屏可读</b></article>
-            <article><small>REELS / CREATOR</small><h5>让产品动作说话</h5><p>从任务切入，连续拍到握持、接地和推进。创作者保持真实体验与必要披露，不用无依据的结果字幕。</p><b>检验：动作完整、事实准确、复用获授权</b></article>
-            <article><small>FACEBOOK / GROUP</small><h5>把场景变成问题</h5><p>从“饭后地面最难处理什么”发起讨论，评论与社群 FAQ 反过来为下一轮短视频补充题目。</p><b>检验：问题具体、互动门槛低、反馈可归类</b></article>
-            <article><small>PR / SEARCH</small><h5>把兴趣变成可核信息</h5><p>用品牌背景、产品结构、适用场景及官方 FAQ 支撑理解；媒体和搜索内容不借情绪概念夸大功能。</p><b>检验：新闻角度、事实和适用限制一致</b></article>
+          <div class="campaign-adaptation-grid" aria-label="按渠道不同任务分工的创意方案">
+            <article><small>BRAND / HERO KV</small><h5>让观众记住生活情境</h5><p><strong>创意：</strong>餐桌收尾与待整理地面的画面转场。<strong>证明：</strong>M3 主体及双盘结构同屏可见。<strong>用途：</strong>品牌 Campaign 视觉与首轮主题触达。</p><b>交付：KV 主视觉、英文主题与产品识别</b></article>
+            <article><small>REELS / CREATOR</small><h5>把生活故事拍成产品动作</h5><p><strong>创意：</strong>从地面问题开场，接连展示握持、双盘接地和移动。<strong>证明：</strong>连贯实拍与型号一致；合作内容保留披露与使用许可。</p><b>交付：竖屏 Hook、镜头清单、Creator Brief</b></article>
+            <article><small>FACEBOOK / GROUP</small><h5>用问题引出教程和讨论</h5><p><strong>创意：</strong>询问餐后地面最难整理的环节，将常见回答拆成操作演示与 FAQ。<strong>判断：</strong>区分真实用户疑问与短期互动热度。</p><b>交付：讨论话题、教程短片、FAQ 衍生</b></article>
+            <article><small>PR / CONTENT / SEARCH</small><h5>让用户能够继续查证</h5><p><strong>创意：</strong>从家庭清洁场景进入产品差异，分别提供品牌故事、操作说明和选购信息。<strong>证明：</strong>使用条件与产品事实一致。</p><b>交付：媒体内容结构、FAQ 与选购承接</b></article>
+          </div>
+          <div class="campaign-adaptation-journey" aria-label="同一品牌主题下的渠道信息深度">
+            <div><small>01 / REMEMBER</small><strong>记住场景</strong><span>Hero KV / 情境短片</span></div>
+            <div><small>02 / UNDERSTAND</small><strong>看懂机制</strong><span>Reels / Creator 演示</span></div>
+            <div><small>03 / VERIFY</small><strong>确认适配性</strong><span>PR / FAQ / 产品内容</span></div>
+            <div><small>04 / ENGAGE</small><strong>带走真实问题</strong><span>社群讨论与后续选题</span></div>
           </div>
           <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
         </div>
@@ -662,17 +680,60 @@
   }
 
   function pr() {
-    return section("北美家庭清洁主题新闻稿发布", "King Newswire 分发 · USA Today Press Release 页面 · 2026 年 5 月", `
-      <div class="g-project-feature g-project-wide-image"><figure>${image("pr-home-scene", "北美家庭客厅和厨房的清洁场景配图")}<figcaption>新闻稿配图 · 家庭清洁场景</figcaption></figure>
-      <div>
-        <h3>传播主题：从单品功能转向全屋清洁任务</h3>
-        <p>稿件以北美家庭常见清洁场景组织产品信息，包括宠物毛发、地面污渍、浴室污垢、厨房油污和烧烤后残渣，让不同工具对应不同家庭任务。</p>
-        <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
-        <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
-        <h3>新闻稿分发</h3>
-        <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
-        
-      </div></div>`, "pr-project");
+    return section("北美品牌传播｜从产品线信息到 PR 主题", "2026 年 5 月 · 家庭清洁主题新闻稿与整合内容策划", `
+      <section class="pr-editorial-hero" id="pr-strategy-overview" aria-labelledby="pr-story-heading">
+        <figure>${image("pr-home-scene", "北美家庭厨房与客厅清洁主题新闻稿配图")}<figcaption>北美家庭清洁主题新闻稿使用的场景配图</figcaption></figure>
+        <div class="pr-editorial-intro">
+          <small>BRAND STORY / EARNED CONTENT / NORTH AMERICA</small>
+          <h3 id="pr-story-heading">不按产品目录写新闻稿，先讲一个家庭为什么需要不同清洁工具</h3>
+          <p>这次选择“全屋清洁任务”作为新闻稿的内容主线：从地面污渍、宠物毛发和浴室刷洗，到厨房与烧烤后的清洁。不同场景对应不同工具，让四条产品线出现在同一条可理解的品牌故事里。</p>
+          <div class="pr-editorial-decision"><span>品牌主张</span><strong>Power Every Move</strong><span>内容选择</span><strong>家庭任务先于产品参数</strong><span>传播形式</span><strong>英文新闻稿与场景配图</strong></div>
+        </div>
+      </section>
+      <section class="pr-strategy-frame" aria-labelledby="pr-frame-heading">
+        <header class="pr-section-heading"><small>MARKET × CUSTOMER × BRAND</small><h3 id="pr-frame-heading">先确定说什么，再决定向谁传播</h3><p>把市场类别、实际使用问题和品牌能够提供的产品信息放在一起，形成内容方向，而不直接套用宽泛的“生活方式”标签。</p></header>
+        <div class="pr-intelligence-grid">
+          <article><small>01 / 市场与品类</small><h4>按清洁任务识别产品类别</h4><p>旋转拖把、无绳吸尘器、电动刷与烧烤刷解决的问题并不相同。新闻稿选择“一个家庭，多类清洁任务”作为连接方式，而非把各产品参数直接并排。</p><b>决策：让产品组合具有同一品牌语境</b></article>
+          <article><small>02 / 用户与使用场景</small><h4>让读者先认出自己面对的问题</h4><p>宠物毛发与碎屑、地面溅渍、浴室边沿、烧烤残渣是不同的使用入口。内容按任务解释工具角色；适用地面、污物类型及操作限制依型号材料核对。</p><b>决策：用场景分工代替笼统的“全能清洁”</b></article>
+          <article><small>03 / 品牌与传播主张</small><h4>让产品价值支撑品牌记忆</h4><p>Power Every Move 作为长期品牌主张；对外信息落在清洁头如何运动、怎样接触表面和用户如何操作。消费者看得懂动作，品牌故事才有可信的产品基础。</p><b>决策：品牌情绪后面必须跟得上产品证明</b></article>
+        </div>
+      </section>
+      <section class="pr-message-house" aria-labelledby="pr-message-heading">
+        <header class="pr-section-heading"><small>MESSAGE ARCHITECTURE / FOUR PRODUCT LINES</small><h3 id="pr-message-heading">一条品牌故事，四种产品角色</h3><p>新闻稿主体围绕不同清洁情境展开。每一段内容回答一类问题，并安排能支持该说法的产品资料与画面。</p></header>
+        <div class="pr-message-roof"><span>POWER EVERY MOVE</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
+        <div class="pr-message-grid">
+          <article><small>FLOOR CARE</small><h4>地面污渍与日常拖洗</h4><p>用餐区与硬地情境说明旋转拖地工具的任务；画面要能看见双盘接地、推进和转向。</p><b>素材：地面动作与适用条件</b></article>
+          <article><small>VACUUM</small><h4>宠物毛发与日常吸尘</h4><p>用毛发和碎屑收集任务说明吸尘工具的分工，不能把吸尘与拖洗描述为同一种能力。</p><b>素材：吸头、接触位置与清理过程</b></article>
+          <article><small>SCRUBBING</small><h4>浴室内沿与墙砖接缝</h4><p>通过杆体与刷头角度，展示长柄清洁刷如何到达具体位置；配件适配以对应型号为准。</p><b>素材：站位、角度、刷头与表面</b></article>
+          <article><small>GRILL CARE</small><h4>烧烤后的烤炉清洁</h4><p>将户外烧烤作为独立任务，交代刷头用途、操作方式及表面限制，避免借用浴室或地面清洁的效果承诺。</p><b>素材：烤炉使用画面与安全说明</b></article>
+        </div>
+      </section>
+      <section class="pr-distribution-system" aria-labelledby="pr-distribution-heading">
+        <header class="pr-section-heading"><small>PR × CONTENT × SOCIAL × PARTNERSHIPS</small><h3 id="pr-distribution-heading">围绕同一个品牌主题，安排不同的传播任务</h3><p>媒体内容解决“品牌是谁、产品分别做什么”；搜索内容回答更具体的选购问题；社交和创作者内容让使用动作可见。不是把同一篇新闻稿复制到所有平台。</p></header>
+        <div class="pr-channel-grid">
+          <article><small>PR / DISTRIBUTION</small><h4>媒体发布与事实留档</h4><p>英文稿件用标题、导语、产品任务与可验证资料组织信息。此次经 King Newswire 分发，并出现于 USA Today 的 Press Release 栏目。</p><b>实际交付：主题新闻稿与分发刊载记录</b></article>
+          <article><small>CONTENT / SEARCH</small><h4>从品牌主题延伸到用户问题</h4><p>按地面、宠物、浴室等任务延展教程与 FAQ，解释工具差异、操作方法和适用范围，并衔接相关产品内容。</p><b>内容衍生方向：问题型教育与选购信息</b></article>
+          <article><small>SOCIAL / COMMUNITY</small><h4>让场景变成可讨论的问题</h4><p>把新闻稿里较长的产品叙述拆成短视频、操作图和社区提问；优先从已有用户问题中选择值得演示的片段。</p><b>渠道衍生方向：教程、提问、社群反馈</b></article>
+          <article><small>CREATOR / PARTNERSHIPS</small><h4>由真实使用过程建立第三方视角</h4><p>围绕实际使用场景选择适合的创作者，确认脚本边界、利益关系披露与素材许可；联合活动则要求双方先统一产品事实和参与规则。</p><b>关联工作：创作者 Brief 与合作活动视觉</b></article>
+          <article><small>REGIONAL / ENGLISH CONTENT</small><h4>北美表达与区域内容适配</h4><p>本次稿件面向北美英语内容环境。其他国家若复用主题，需要重新核对类别用语、场景、型号、单位、购买入口和售后，不将美国刊载直接算作多国媒体覆盖。</p><b>区域约束：事实统一，表达按市场调整</b></article>
+        </div>
+      </section>
+      <section class="pr-editorial-delivery" aria-labelledby="pr-delivery-heading">
+        <header class="pr-section-heading"><small>PLANNING / APPROVAL / DELIVERY</small><h3 id="pr-delivery-heading">把传播主题变成能实际交付的媒体内容</h3></header>
+        <div class="pr-delivery-flow">
+          <article><span>01</span><h4>主题与结构</h4><p>明确家庭清洁总议题，按产品任务分配稿件段落。</p></article>
+          <article><span>02</span><h4>产品事实与配图</h4><p>统一名称、功能、使用条件及配图对应的产品版本。</p></article>
+          <article><span>03</span><h4>英文稿件与确认</h4><p>调整英文表达、标题信息与媒体问答，交由相关负责人核对。</p></article>
+          <article><span>04</span><h4>刊载与内容复用</h4><p>区分付费/新闻稿分发刊载与独立编辑报道；按渠道重写内容。</p></article>
+        </div>
+        <div class="pr-published-evidence"><div><small>DOCUMENTED DISTRIBUTION / MAY 2026</small><strong>King Newswire → USA Today Press Release</strong><p>已呈现的是新闻稿分发和 Press Release 栏目刊载；不据此推断独立编辑推荐、自然媒体口碑或销售转化。相关传播效果须以实际流量与媒体记录单独判断。</p></div><a href="#/case/brand/brand-positioning">查看品牌定位与产品线信息 ↗</a></div>
+        <nav class="pr-related-work" aria-label="品牌传播相关案例">
+          <a href="#/case/brand/brand-collaboration">品牌联合活动视觉 ↗</a>
+          <a href="#/case/creative/video-strategy">视频与 Creator 创意方向 ↗</a>
+          <a href="#/case/community">社群内容与用户问题 ↗</a>
+          <a href="#/case/gtm/campaign-architecture">M3 整合传播与 Campaign 管理 ↗</a>
+        </nav>
+      </section>`, "pr-project");
   }
 
   function seasonalCreative() {
