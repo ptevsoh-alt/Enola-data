@@ -28,3 +28,6 @@
 - User-visible page explains strategic choice, value proposition, competitor frame, FABE/RTB, message depth and Big Idea.
 - No unsupported `fastest`, `effortless`, time-saving, floor compatibility, sales or ROI claim is invented.
 - `npm test`, site visual audit and public-asset manifest integrity should pass before review and publication.
+
+## Validation execution
+- GitHub Actions check is triggered against the repository's `main` workflow filter; the review PR is returned to its narrower predecessor branch after validation. This does not deploy the site.
