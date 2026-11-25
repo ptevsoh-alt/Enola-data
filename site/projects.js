@@ -700,7 +700,7 @@
       </section>
       <section class="pr-message-house" aria-labelledby="pr-message-heading">
         <header class="pr-section-heading"><small>MESSAGE ARCHITECTURE / FOUR PRODUCT LINES</small><h3 id="pr-message-heading">一条品牌故事，四种产品角色</h3><p>新闻稿主体围绕不同清洁情境展开。每一段内容回答一类问题，并安排能支持该说法的产品资料与画面。</p></header>
-        <div class="pr-message-roof"><span>POWER EVERY MOVE</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
+        <div class="pr-message-roof"><span>Power Every Move</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
         <div class="pr-message-grid">
           <article><small>FLOOR CARE</small><h4>地面污渍与日常拖洗</h4><p>用餐区与硬地情境说明旋转拖地工具的任务；画面要能看见双盘接地、推进和转向。</p><b>素材：地面动作与适用条件</b></article>
           <article><small>VACUUM</small><h4>宠物毛发与日常吸尘</h4><p>用毛发和碎屑收集任务说明吸尘工具的分工，不能把吸尘与拖洗描述为同一种能力。</p><b>素材：吸头、接触位置与清理过程</b></article>
