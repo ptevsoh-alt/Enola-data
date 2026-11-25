@@ -23,6 +23,8 @@ const {JSDOM, VirtualConsole} = require("jsdom");
   check(d.querySelectorAll("#strategy-map .home-route-card").length===8,"Legacy eight topic links retained");
   check(d.querySelector(".jd-legacy-index")?.matches("details"),"Legacy index must be optional");
   check(d.querySelectorAll(".jd-journey-stages a").length===16,"Four complete four-stage links");
+  check(w.PORTFOLIO_SELECTED_WORK.gtm.chapter==="gtm-positioning-decision","GTM featured case must open positioning first for the hiring reader");
+  check(d.querySelector('.case-card[data-case-id="gtm"] a[href="#/case/gtm/gtm-positioning-decision"]'),"GTM homepage card must lead to the positioning decision");
   const anchors=[...d.querySelectorAll(".jd-journey-stages a")].map(x=>x.getAttribute("href"));
   const unique=[...new Set(anchors)];
   const ids=new Set(w.PORTFOLIO.cases.map(c=>c.id));
