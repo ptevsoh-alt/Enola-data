@@ -475,7 +475,7 @@
             </div>
           </div>
         <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
-          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / CHANNEL-NATIVE CAMPAIGN</small><h4>主题统一，内容职责与创意动作各不相同</h4><p>同一个 Make Room for What Matters，KV 讲生活情绪，短视频交代双盘动作，社群讨论真实问题，PR 与搜索内容提供可查的产品事实；各渠道以不同信息深度支持同一选择过程。</p></div>
+          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / CHANNEL-NATIVE CAMPAIGN</small><h4>主题统一，内容职责与创意动作各不相同</h4><p>同一个 Make Room for What Matters，KV 讲生活情绪，短视频交代双盘动作，社群讨论真实问题，PR 与搜索内容提供可查的产品事实；各渠道以不同信息深度支持同一选择过程。</p><p><a href="#/case/creative/video-projects">查看品牌视频如何安排叙事、Paid 创意供给与 Lifecycle 内容承接 ↗</a></p></div>
           <div class="campaign-assets-pair">
             <article class="campaign-ad-visual"><span>PAID / DISCOVERY CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>首屏呈现餐后待清理的地面；随后以产品出场和连续操作兑现开场提出的问题。</p><div class="campaign-asset-tags"><small>A · 餐后场景冲突</small><small>B · 双盘动作揭示</small><small>C · 握持操作细节</small></div><p class="campaign-asset-caption">三条 Hook 对应不同理解障碍，非同一视频换字幕；具体测试、预算和购买型 CTA 须由 Paid Owner 核准。</p></article>
             <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热先讲日常地面任务，上市期重点回答产品怎么用、是否适合自己的地面；购后以操作说明和维护 FAQ 延续体验。</p><div class="campaign-asset-tags"><small>订阅认知</small><small>产品考虑</small><small>已购教育</small></div><p class="campaign-asset-caption">不同阶段提供不同的信息深度；许可、触发、排除与发送由 CRM Owner 确认。</p></article>
