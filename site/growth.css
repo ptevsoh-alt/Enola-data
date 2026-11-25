@@ -3767,3 +3767,59 @@
   .campaign-house-insight>div{justify-content:flex-start}
   .campaign-strategy-spine article,.campaign-integration-guardrails,.campaign-territory-set{padding:.85rem}
 }
+
+
+/* M3 strategy | evidence-led PMM positioning, KSP proof, buyer-message fit */
+.m3-positioning{margin:1.3rem 0 1.7rem;padding:clamp(1rem,2.5vw,1.4rem);border:1px solid #d8e0d3;background:#f9faf6}
+.m3-section-intro>span,.m3-product-message-house header>span{display:block;font-size:.67rem;letter-spacing:.08em;font-weight:800;color:#315b45}
+.m3-section-intro h4,.m3-product-message-house h5{margin:.4rem 0 .55rem;color:#234736;font-size:clamp(1.05rem,1.9vw,1.38rem);line-height:1.4}
+.m3-section-intro>p,.m3-product-message-house header>p{max-width:49rem;margin:.4rem 0 1rem;color:#526355;font-size:.82rem;line-height:1.74}
+.m3-positioning-statement{background:#264b3a;padding:1.25rem 1.35rem;color:#f8fcf5;margin:.75rem 0 1.15rem}
+.m3-positioning-statement small,.m3-product-roof small{font-size:.63rem;font-weight:780;letter-spacing:.1em;opacity:.8}
+.m3-positioning-statement p{font-size:clamp(.9rem,1.65vw,1.12rem);line-height:1.85;margin:.55rem 0 .65rem;color:#fcfff9}
+.m3-positioning-statement p b{color:#e2f2cf}
+.m3-positioning-statement>span{display:block;font-size:.72rem;line-height:1.65;color:#c5dfcb;border-top:1px solid #5d8069;padding-top:.7rem}
+.m3-choice-head{display:flex;align-items:baseline;flex-wrap:wrap;gap:.5rem 1rem;margin-bottom:.6rem}
+.m3-choice-head b{color:#2c513d;font-size:.9rem}
+.m3-choice-head p{margin:0;color:#58695b;font-size:.76rem}
+.m3-alternatives,.m3-product-pillars,.m3-message-state-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.m3-alternatives article{min-width:0;background:#fffefa;padding:1.05rem;border:1px solid #e0e4d9;display:flex;flex-direction:column}
+.m3-alternatives small,.m3-product-pillars small,.m3-message-state-grid small{font-size:.64rem;font-weight:800;color:#57715a;letter-spacing:.05em}
+.m3-alternatives h5{font-size:.9rem;line-height:1.48;margin:.45rem 0;color:#2a503b}
+.m3-alternatives p,.m3-product-pillars p,.m3-message-state-grid p{font-size:.77rem;line-height:1.75;margin:.2rem 0 .65rem;color:#4e5f51}
+.m3-alternatives strong,.m3-product-pillars b,.m3-message-state-grid b{display:block;margin-top:auto;color:#315d47;font-size:.73rem;line-height:1.6}
+.m3-product-message-house{background:#f4f7f0;border:1px solid #d7e2d4;padding:clamp(.9rem,2.5vw,1.3rem)}
+.m3-product-message-house header p{font-size:.8rem}
+.m3-product-roof{background:#e0ead9;border-left:4px solid #4b8060;padding:1rem 1.1rem;color:#224738}
+.m3-product-roof strong{display:block;margin:.45rem 0 0;font-size:clamp(.9rem,1.9vw,1.13rem);line-height:1.75;font-weight:750}
+.m3-product-pillars{grid-template-columns:repeat(4,minmax(0,1fr));margin:.7rem 0 0}
+.m3-product-pillars article{min-width:0;display:flex;flex-direction:column;padding:.95rem .85rem;background:#fffefa;border:1px solid #dce3d6}
+.m3-product-pillars h6,.m3-message-state-grid h6{color:#284b39;font-size:.88rem;line-height:1.5;margin:.45rem 0}
+.m3-product-pillars p{font-size:.74rem}
+.m3-product-pillars b{font-size:.7rem}
+.m3-fabe-detail{margin-top:.75rem;padding:.85rem 1rem;border:1px solid #d6e0d4;background:#fffefa}
+.m3-fabe-detail summary{cursor:pointer;font-size:.81rem;font-weight:700;color:#2a573c}
+.m3-fabe-detail .g-proof-table{overflow-x:auto;margin-top:.65rem}
+.m3-fabe-detail th,.m3-fabe-detail td{font-size:.75rem;line-height:1.65;vertical-align:top}
+.campaign-house-message .m3-big-idea-distinction{max-width:50rem;margin:.7rem auto 1rem;color:#335744;font-size:.81rem;line-height:1.75}
+.campaign-house-message .m3-big-idea-distinction~.campaign-idea-logic{grid-template-columns:repeat(3,minmax(0,1fr))}
+.m3-message-states{background:#f8f6ef;border:1px solid #e7dfcd;padding:clamp(.9rem,2.5vw,1.35rem)}
+.m3-message-states .m3-section-intro h5{margin:.3rem 0;font-size:1.1rem;color:#2c4c39}
+.m3-message-state-grid{grid-template-columns:repeat(4,minmax(0,1fr))}
+.m3-message-state-grid article{display:flex;flex-direction:column;padding:.9rem;background:#fffefa;border:1px solid #e4e1d6;min-width:0}
+.m3-message-state-grid b{font-size:.69rem}
+.m3-message-state-grid em{display:block;margin-top:.45rem;font-style:normal;color:#6c6656;font-size:.69rem;line-height:1.6}
+@media(max-width:1060px){
+.m3-product-pillars,.m3-message-state-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+.m3-alternatives{grid-template-columns:1fr}
+.campaign-house-message .m3-big-idea-distinction~.campaign-idea-logic{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:620px){
+.m3-product-pillars,.m3-message-state-grid,.campaign-house-message .m3-big-idea-distinction~.campaign-idea-logic{grid-template-columns:1fr}
+.m3-positioning-statement{padding:1rem}
+.m3-positioning-statement p{font-size:.92rem}
+.m3-product-message-house,.m3-message-states,.m3-positioning{padding:.9rem}
+.m3-alternatives article,.m3-product-pillars article,.m3-message-state-grid article{padding:.8rem}
+.m3-fabe-detail{padding:.65rem}
+.m3-fabe-detail table{min-width:580px}
+}
