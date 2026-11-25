@@ -297,13 +297,23 @@
       <section class="g-story-note campaign-lens" id="campaign-architecture" aria-labelledby="campaign-architecture-title">
         <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
         <h3 id="campaign-architecture-title">从品牌定位，到一句能被记住的上市主张</h3>
-        <p>这次 M3 上市传播的首要任务不是罗列转速或刷头，而是让第一次接触产品的人理解：餐后地面整理为什么与自己有关，双盘拖把如何参与这个任务，以及下一步到哪里核对产品信息。我的工作集中在场景选择、内容主张、创意 Brief、跨渠道素材和交付审核。</p>
+        <p>我先梳理 M3 在日常硬地清洁中的产品角色、替代方案与选购问题，再将双盘结构和实际操作转化为能支撑上市的核心信息。<i>Make Room for What Matters</i> 是这套产品信息之上的 Campaign 表达：它负责让人记住家庭场景，具体卖点则由演示、FAQ 和商业信息承担。我参与场景取舍、内容主张、创意 Brief、跨渠道素材和审核协同。</p>
         <div class="campaign-strategy-spine" aria-label="M3 品牌与上市传播的四项策略判断">
           <article><span>01 / BUSINESS CONTEXT</span><h4>上市要解决的问题</h4><p>四条清洁产品线承担不同家庭任务。M3 首发需要一个容易看懂、能够衔接产品演示和购买信息的传播入口，而不是让新品成为参数集合。</p></article>
           <article><span>02 / AUDIENCE TENSION</span><h4>生活已进入下一幕，清洁还没结束</h4><p>以美国家庭餐后硬地整理为创意切口：做完饭、吃完饭，地面仍需要处理。这是传播选取的场景张力，不冒充消费者调研结论。</p></article>
           <article><span>03 / PRODUCT ROLE</span><h4>让工具在真实动作中出现</h4><p>M3 的双盘结构、站姿握持和推进动作承担产品解释；主视觉负责识别，连续演示负责回答如何使用，FAQ 负责回答适用限制。</p></article>
           <article><span>04 / STRATEGIC CHOICE</span><h4>场景先行，证明随后</h4><p>优先让人看见“餐后还要清理地面”的问题，再展示产品操作。品牌情绪负责记忆，产品事实负责可信度；不将省时幅度或清洁效果写成未验证承诺。</p></article>
         </div>
+        <section class="m3-positioning" id="m3-product-positioning" aria-labelledby="m3-positioning-title">
+          <div class="m3-section-intro"><span>PRODUCT MARKETING / M3 市场定位</span><h4 id="m3-positioning-title">先决定 M3 为哪项清洁任务提供价值，再谈创意</h4><p>在美国市场的上市沟通中，我将 M3 置于家庭日常硬地清洁的选择情境。用户需要的不只是“一个电动工具”，而是判断它是否适合自己家的地面、是否看得懂操作，以及为什么值得进一步了解。</p></div>
+          <div class="m3-positioning-statement"><small>PRODUCT POSITIONING / 本项目的沟通定位</small><p>对于需要处理日常硬地清洁、正考虑从手动拖地转向电动清洁方式的家庭，<b>M3 是一款双盘旋转拖把</b>。传播重点是把站姿握持、双盘接地与推进动作展示清楚，帮助用户判断它是否适合自己的清洁习惯与地面条件。</p><span>差异表达聚焦“可观察的操作方式”，不声称清洁效率、价格或性能全面优于替代方案。</span></div>
+          <div class="m3-choice-head"><b>选择与竞争参照</b><p>不把所有清洁工具都当成同一类竞品；比较的是用户当前要完成的任务。</p></div>
+          <div class="m3-alternatives" aria-label="M3 与日常硬地清洁替代方式的决策比较">
+            <article><small>手动平板拖把</small><h5>用户熟悉，使用方式直观</h5><p>属于需要手动往复操作的基础方案。M3 要回答的不是“手动一定不好”，而是电动双盘如何操作，为什么这种方式适合某类任务。</p><strong>M3 需要证明：动作机制与使用门槛</strong></article>
+            <article><small>洗吸一体设备</small><h5>解决的任务可能更复杂</h5><p>不同产品对干湿污物、清理流程和维护要求有不同定位。M3 不承诺替代吸污功能，避免以“全能清洁”模糊选型边界。</p><strong>M3 需要说明：适用情境与不适用任务</strong></article>
+            <article><small>其他电动拖地工具</small><h5>真正的比较发生在使用细节</h5><p>同类电动产品的转速、操控、配件与价格必须按具体型号和相同条件比较。未完成同条件测试前，传播只展示 M3 自身的结构和操作。</p><strong>M3 需要补强：可复核演示与决策 FAQ</strong></article>
+          </div>
+        </section>
 <div class="campaign-proof-gallery" id="campaign-proof-gallery" aria-label="M3 上市的产品与视觉素材">
  <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>KV · 外观与品牌信息</span></figcaption></figure>
  <figure><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节" loading="lazy" decoding="async"><figcaption><b>02 / 机制展示</b><span>操作镜头 Brief · 结构细节</span></figcaption></figure>
@@ -316,11 +326,36 @@
             <article><small>BRAND ROLE / 品牌角色</small><h5>让清洁方式更容易理解和选择</h5><p>用清楚的场景、产品结构和可核实的使用说明，降低用户理解工具及比较方案时的负担。</p></article>
             <article><small>REASON TO BELIEVE / 支撑依据</small><h5>产品事实与真实操作相互印证</h5><p>可见的产品结构、连续的使用动作、官方适用说明和售后信息共同支撑品牌表达，不用情绪画面代替性能证明。</p></article>
           </div>
-          <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA / M3 上市主题</span><h4>Make Room for What Matters</h4><p class="campaign-big-idea-lead">晚餐结束了，地面的工作还没结束。让清洁成为生活中的一个自然动作，而不是夺走故事主角的位置。</p>
+          <section class="m3-product-message-house" id="m3-product-value" aria-labelledby="m3-product-value-title">
+            <header><span>PRODUCT MESSAGE HOUSE / 核心卖点与证明</span><h5 id="m3-product-value-title">先让用户理解产品，再让主题产生意义</h5><p>这不是品牌屋的另一套口号。产品主张回答“为什么看 M3”，四条支撑信息分别解释操作、体验、选型和使用边界。</p></header>
+            <div class="m3-product-roof"><small>PRIMARY VALUE PROPOSITION / 主价值</small><strong>把日常硬地清洁的操作方式讲清楚，让用户看得见双盘如何参与地面整理，再决定它是否适合自己。</strong></div>
+            <div class="m3-product-pillars">
+              <article><small>01 / FUNCTIONAL PROOF</small><h6>双盘旋转，动作可见</h6><p>先展示双盘结构，再用不跳切的操作镜头说明接地、转动和推进，而不是只报转速数字。</p><b>证据：产品结构图 + 经核实的真实演示</b></article>
+              <article><small>02 / EXPERIENCE</small><h6>用完整过程解释怎么使用</h6><p>让握持位置、站姿、转向与清洁路径出现在同一使用情境中，降低首次理解的门槛。</p><b>证据：握持与连续移动实拍</b></article>
+              <article><small>03 / DECISION VALUE</small><h6>帮助比较，而非强行宣称更好</h6><p>对照手动拖地、洗吸一体与其他电动工具的任务差异，重点解释 M3 的使用方式和选择条件。</p><b>证据：型号资料、同条件比较和 FAQ</b></article>
+              <article><small>04 / FIT & LIMITS</small><h6>说清楚适合什么地面</h6><p>按当地说明书确认可用表面、液体使用、维护与清洁限制；不将餐后场景泛化为所有污物皆可处理。</p><b>证据：官方适用说明与产品核验</b></article>
+            </div>
+            <details class="m3-fabe-detail"><summary>查看核心卖点如何从产品事实转化为 FABE 与 RTB</summary>
+              <div class="g-proof-table"><table>
+                <thead><tr><th>Product Truth / Feature</th><th>Advantage / Benefit</th><th>Evidence / RTB</th></tr></thead>
+                <tbody>
+                  <tr><th>双盘旋转底座</th><td>区别于手动往复拖动的工作方式；主要传播利益是让操作机制直观可见，不承诺未经测试的效率优势。</td><td>现有产品主视觉能支持外观识别；持续转动、接地及清洁效果需要真实连贯演示分别核验。</td></tr>
+                  <tr><th>握把与操控结构</th><td>围绕站姿握持、前进与转向组织使用教育。用户是否觉得更省力应由实际体验验证。</td><td>结构图展示外形与握持位置；行动便利性与人体工学结果不能由静态图推出。</td></tr>
+                  <tr><th>产品电池组件</th><td>回答电源安装、维护与使用连续性问题，而非用电池外观推导续航。</td><td>现有电池部件图支持外观说明；续航、拆装与使用限制需型号资料及演示。</td></tr>
+                  <tr><th>具体适用地面</th><td>减少“我家地面能否使用”的购买疑虑，帮助判断是否进入下一步比较。</td><td>按美国销售型号说明书、真实场景和客服信息核验；缺确认时不发布通用兼容承诺。</td></tr>
+                </tbody>
+              </table></div>
+            </details>
+          </section>
+          <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA / M3 上市主题</span><h4>Make Room for What Matters</h4><p class="campaign-big-idea-lead">晚饭结束，家里的下一段生活正在发生；地面清洁却还没完成。这个主题不是承诺“省下多少分钟”，而是把常被忽略的家务动作放回家庭故事：<b>生活是主角，M3 是参与完成清洁的工具。</b></p>
+            <p class="m3-big-idea-distinction">选择这句主题，是因为它能同时容纳两种表达：用真实的双盘动作解释产品，用餐后人物与空间的变化延展品牌情绪；两者共享同一个清洁任务，而不依赖虚构清洁效果。</p>
             <div class="campaign-idea-logic">
-              <div><small>INSIGHT / 场景张力</small><b>餐桌收拾好了，脚下仍有待处理的地面。</b></div>
-              <div><small>CREATIVE MECHANISM / 创意机制</small><b>用“生活被打断 → 工具参与 → 回到生活”的连续变化呈现主题。</b></div>
-              <div><small>CORE MESSAGE / 希望记住</small><b>M3 是日常硬地清洁任务中的一个具体选择，理解产品从看见操作开始。</b></div>
+              <div><small>HUMAN TENSION / 生活张力</small><b>饭后仍要整理地面，但人的注意力已经回到家人和日常生活。</b></div>
+              <div><small>PRODUCT BRIDGE / 产品连接</small><b>M3 通过可见的双盘、握持与推进动作，承担“怎么完成地面任务”的解释。</b></div>
+              <div><small>CREATIVE MECHANISM / 故事机制</small><b>餐桌已结束 → 视线落到地面 → M3 进入真实操作 → 画面回到生活。</b></div>
+              <div><small>MEMORY / 核心信息</small><b>清洁是生活的一部分，不必成为全部；选择工具前，先看清它如何工作。</b></div>
+              <div><small>PROOF / 可信条件</small><b>产品主体、持续操作、适用地面与 FAQ 各自承担证明，不用情绪镜头充当性能证据。</b></div>
+              <div><small>ACTION / 下一步</small><b>感兴趣就看完整操作；准备选购则核对地面适配、维护与获批的价格供货信息。</b></div>
             </div>
           </div>
           <div class="campaign-house-insight"><span>CREATIVE PATH / 统一叙事顺序</span><div><b>餐后未完的地面</b><b>任务冲突</b><b>M3 自然出场</b><b>双盘连续演示</b><b>回到家庭生活</b></div><p>情绪画面负责建立关联；真实操作和使用说明负责解释产品，不用虚构清洁成果制造反差。</p></div>
@@ -333,6 +368,15 @@
             </div>
             <p class="campaign-territory-decision"><b>选择依据：</b>上市首轮用场景反差建立相关性；用户开始了解产品时加强动作证明；品牌情绪在故事型内容中延伸。三者不是换背景颜色的同一张海报。</p>
           </div>
+          <section class="m3-message-states" id="m3-commercial-message" aria-labelledby="m3-message-states-title">
+            <div class="m3-section-intro"><span>COMMERCIAL MESSAGE / 认知状态与信息深度</span><h5 id="m3-message-states-title">不同了解程度，回答不同问题</h5><p>用户不会因为看过一张情绪海报就准备购买。以下是内容承接的设计，而不是把观众未经验证地划分成已识别的人群标签。</p></div>
+            <div class="m3-message-state-grid">
+              <article><small>场景认知</small><h6>“饭后地面怎么处理？”</h6><p>先让人认出熟悉的日常任务，以餐后地面和人物行动建立相关性。</p><b>社媒 Hero / 短视频 Hook</b><em>下一步：了解这一类解决方式</em></article>
+              <article><small>方案理解</small><h6>“双盘拖把到底怎么用？”</h6><p>介绍手动拖地与电动双盘的操作差别，让完整动作和结构细节回答问题。</p><b>Reels / Creator / 产品轮播</b><em>下一步：观看真实操作</em></article>
+              <article><small>产品比较</small><h6>“适合我家、值得选吗？”</h6><p>按地面、维护、产品规格及有依据的竞品比较回答疑虑；证据缺口不靠话术填补。</p><b>FAQ / 产品内容 / 搜索</b><em>下一步：核对具体型号与条件</em></article>
+              <article><small>行动准备</small><h6>“价格、供货和保障是什么？”</h6><p>只有当地型号、Offer、可售、售后与归因条件获得核准后，才在对应触点提供购买型信息。</p><b>商品页 / 合规邮件 / 获批广告</b><em>下一步：根据真实条件作决定</em></article>
+            </div>
+          </section>
           <div class="campaign-house-channels">
             <article><small>OWNED SOCIAL</small><h5>Facebook / Instagram</h5><p>场景认知、产品演示与互动</p></article>
             <article><small>PAID MEDIA</small><h5>Meta Ads / TikTok Ads</h5><p>素材测试、受众触达与有效引流</p></article>
@@ -390,12 +434,12 @@
           
         </section>
         <section class="v-campaign-logic" id="campaign-decision-logic" aria-label="Campaign 策略决策路径">
-          <header><small>THE STRATEGY IN ONE VIEW</small><h4>把一个生活问题，转化成整合传播的核心故事</h4></header>
+          <header><small>THE STRATEGY IN ONE VIEW</small><h4>从产品的选择理由，走到一条有生活感的传播主题</h4></header>
           <div class="v-campaign-logic-steps">
             <article><span>CONTEXT</span><strong>餐后硬地清洁</strong><small>用户真正面对的日常任务</small></article>
             <article><span>INSIGHT</span><strong>晚餐结束，地面仍待整理</strong><small>首发选定的生活张力，而非问卷统计结论</small></article>
             <article class="is-idea"><span>BIG IDEA</span><strong>Make Room for What Matters</strong><small>以生活中断与恢复的故事，承接产品动作</small></article>
-            <article><span>PROOF</span><strong>结构 × 连续操作</strong><small>产品外观、动作与 FAQ 各有证据</small></article>
+            <article><span>PROOF / RTB</span><strong>双盘结构 × 完整操作 × 适配条件</strong><small>证明可观察的过程，不虚构省时和性能优势</small></article>
           </div>
         </section>
         <div class="campaign-journey" aria-label="Campaign 用户决策阶段与渠道任务">
