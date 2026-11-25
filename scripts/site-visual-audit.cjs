@@ -82,6 +82,15 @@ async function screenshot(label){
       if(r.imagesWithoutAlt.length)report.issues.push({route:name,width,noAlt:r.imagesWithoutAlt});
       if(r.overflow>12)report.issues.push({route:name,width,overflow:r.overflow});
     }
+    const vm=await navigate(port,"case/creative/video-projects",width,height);
+    await evaluate("document.getElementById('video-brand-positioning')?.scrollIntoView({block:'start',behavior:'instant'})");
+    await delay(200);
+    const videoAudit=await evaluate("(()=>{const root=document.getElementById('video-projects'),anchor=document.getElementById('video-brand-positioning'),bar=document.querySelector('.case-page .case-tabs');return {exists:!!root,anchorTop:anchor?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,market:root?.querySelectorAll('.video-positioning-grid article').length||0,imc:root?.querySelectorAll('.video-imc-framework .tvc-campaign-bridge-grid article').length||0,journey:root?.querySelectorAll('.video-journey-grid article').length||0,paid:root?.querySelectorAll('.video-hook-grid article').length||0,management:root?.querySelectorAll('.video-delivery-grid article').length||0,videoClips:root?.querySelectorAll('.g-video-gallery video').length||0,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_VIDEO_IMC="+JSON.stringify({width,...videoAudit}));
+    report.videoImc ??=[];
+    report.videoImc.push({width,...videoAudit});
+    if(!videoAudit.exists||videoAudit.market!==3||videoAudit.imc!==4||videoAudit.journey!==5||videoAudit.paid!==3||videoAudit.management!==5||videoAudit.videoClips!==2||videoAudit.overflow>12||videoAudit.anchorTop<videoAudit.navBottom-4)report.issues.push({videoImc:{width,...videoAudit}});
+    if(width===1440){await screenshot("VIDEO_IMC_DESKTOP")}else{await screenshot("VIDEO_IMC_MOBILE")}
     const pr=await navigate(port,"case/brand/pr-project",width,height);
     await evaluate("document.getElementById('pr-strategy-overview')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
@@ -121,6 +130,6 @@ async function screenshot(label){
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.overflow))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,videoImc:report.videoImc?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.videoImc||i.overflow))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
