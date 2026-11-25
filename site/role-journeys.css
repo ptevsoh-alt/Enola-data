@@ -40,3 +40,9 @@
 .jd-case-bridge nav { display:flex; flex-wrap:wrap; align-content:center; align-items:center; gap:.5rem; }
 @media (max-width:900px) { .jd-journeys-header,.jd-case-bridge { grid-template-columns:1fr;gap:1rem; } .jd-journey-grid { grid-template-columns:1fr; } .jd-other-work { flex-direction:column;align-items:flex-start; } .jd-other-work nav { justify-content:flex-start; } }
 @media (max-width:480px) { .jd-journeys { margin-block:2.25rem; } .jd-journey-head { padding:1.2rem 1.2rem .9rem; } .jd-journey-stages { margin-inline:1.2rem; } .jd-journey-stages a { grid-template-columns:1.3rem minmax(0,1fr) .7rem; gap:.52rem; } .jd-journey-foot { padding:1rem 1.2rem; } .jd-case-bridge { padding:1.2rem; } }
+
+.jd-legacy-index { margin-block:1rem 2rem; padding:1rem 1.25rem; border-top:1px solid #e4e4df; }
+.jd-legacy-index > summary { cursor:pointer; color:#44635b; font-size:.88rem; font-weight:600; padding:.5rem 0; }
+.jd-legacy-index > .section-head { margin-top:1.5rem; }
+.jd-legacy-index > .home-route-grid { margin-top:1.2rem; }
+.jd-legacy-index > .home-decision-grid { margin-top:1.2rem; }
