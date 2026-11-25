@@ -32,6 +32,20 @@ jobs:
         run: |
           npm ci
           npm test
+      - name: Validate desktop and mobile layout in real Chrome
+        if: github.event_name == 'pull_request'
+        timeout-minutes: 4
+        run: |
+          command -v google-chrome || command -v chromium
+          node scripts/site-visual-audit.cjs > /tmp/portfolio-pr-visual.log 2>&1 || { tail -n 65 /tmp/portfolio-pr-visual.log; exit 1; }
+          grep 'VISUAL_QA_RESULT=' /tmp/portfolio-pr-visual.log | tail -n 1
+      - name: Archive responsive visual QA metrics
+        if: always() && github.event_name == 'pull_request'
+        uses: actions/upload-artifact@v4
+        with:
+          name: portfolio-responsive-qa
+          path: qa/live-visual-audit.json
+          if-no-files-found: warn
       - name: Upload isolated pull-request preview
         if: github.event_name == 'pull_request'
         uses: actions/upload-artifact@v4

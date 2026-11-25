@@ -131,8 +131,8 @@
   },
   {
     "file": "growth.css",
-    "bytes": 204107,
-    "sha256": "6a9bde3d9aa220a41fcfd93b79e813f1781c0a79d459bf66099ed388d2398364"
+    "bytes": 220118,
+    "sha256": "ec7aac39d325f774a72641d8565774ff576ea4e5d623147227f1ac90ac2d3465"
   },
   {
     "file": "growth.js",
@@ -141,13 +141,13 @@
   },
   {
     "file": "index.html",
-    "bytes": 3670,
-    "sha256": "b94ef53fd1e85412ee8a70ba6d2d2faf516ad0fe0d67421c0d874e630cecad9a"
+    "bytes": 3698,
+    "sha256": "6f7b295e3a04442dbf3c27ad0aeb4eaa19f7a366e932f4fe808fe31f7d356720"
   },
   {
     "file": "projects.js",
-    "bytes": 143052,
-    "sha256": "fd9be1044dff32690863c877e671be9297520663d890fcc5964fa84488b6f243"
+    "bytes": 168719,
+    "sha256": "32794e8f5230c9092e59407f014af21b9f1703f5f497e97481626913bb6de203"
   },
   {
     "file": "review/index.html",
@@ -181,8 +181,8 @@
   },
   {
     "file": "selected-work.js",
-    "bytes": 4478,
-    "sha256": "c0bbaf7e58a81e93fe3cdcd5cd80ba483136afe4d51f8ec9edbd59377505be66"
+    "bytes": 4532,
+    "sha256": "78558c276c096aa40a283740aeb01fcb3adb2dd41e567551c786d740171b534b"
   },
   {
     "file": "styles.css",

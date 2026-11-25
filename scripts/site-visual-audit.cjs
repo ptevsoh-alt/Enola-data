@@ -82,6 +82,17 @@ async function screenshot(label){
       if(r.imagesWithoutAlt.length)report.issues.push({route:name,width,noAlt:r.imagesWithoutAlt});
       if(r.overflow>12)report.issues.push({route:name,width,overflow:r.overflow});
     }
+    const pm=await navigate(port,"case/gtm/gtm-positioning-decision",width,height);
+    await evaluate("document.getElementById('gtm-positioning-decision')?.scrollIntoView({block:'start',behavior:'instant'})");
+    await delay(220);
+    const pmm=await evaluate("(()=>{const root=document.getElementById('gtm-positioning-decision'),bar=document.querySelector('.case-page .case-tabs');return {exists:!!root,top:root?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,brandRoles:root?.querySelectorAll('.pmm-positioning-bridge article').length||0,competitors:root?.querySelectorAll('.pmm-competitive-grid article').length||0,fabe:root?.querySelectorAll('.pmm-fabe-grid article').length||0,messages:root?.querySelectorAll('.pmm-awareness-grid article').length||0,visibleIdea:root?.textContent.includes('Make Room for What Matters')||false,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_PMM_ANCHOR="+JSON.stringify({width,...pmm}));
+    report.positioning ??=[];
+    report.positioning.push({width,...pmm});
+    if(!pmm.exists||pmm.brandRoles!==3||pmm.competitors!==3||pmm.fabe!==3||pmm.messages!==4||!pmm.visibleIdea||pmm.overflow>12||pmm.top<pmm.navBottom-4){
+      report.issues.push({positioning:{width,...pmm}});
+    }
+    if(width===1440){await screenshot("M3_POSITIONING_DESKTOP")}else{await screenshot("M3_POSITIONING_MOBILE")}
     const r=await navigate(port,"case/brand/promotion-campaign-kv",width,height);
     await evaluate("document.getElementById('promotion-kv-gallery')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(200);
@@ -99,6 +110,6 @@ async function screenshot(label){
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.overflow))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
