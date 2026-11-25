@@ -296,17 +296,43 @@
       </details>
       <section class="g-story-note campaign-lens" id="campaign-architecture" aria-labelledby="campaign-architecture-title">
         <p class="eyebrow">CAMPAIGN STRATEGY / 策略到交付</p>
-        <h3 id="campaign-architecture-title">Make Room for What Matters｜从用户情境到跨渠道传播</h3>
-        <p>我把产品放回日常餐后清洁场景：用真实的生活问题引起注意，再通过双盘结构、操作演示和场景内容传达产品价值。Campaign 围绕一个核心主题展开，社媒、广告、内容、Creator 与邮件各自承担不同沟通任务。</p>
+        <h3 id="campaign-architecture-title">从品牌定位，到一句能被记住的上市主张</h3>
+        <p>这次 M3 上市传播的首要任务不是罗列转速或刷头，而是让第一次接触产品的人理解：餐后地面整理为什么与自己有关，双盘拖把如何参与这个任务，以及下一步到哪里核对产品信息。我的工作集中在场景选择、内容主张、创意 Brief、跨渠道素材和交付审核。</p>
+        <div class="campaign-strategy-spine" aria-label="M3 品牌与上市传播的四项策略判断">
+          <article><span>01 / BUSINESS CONTEXT</span><h4>上市要解决的问题</h4><p>四条清洁产品线承担不同家庭任务。M3 首发需要一个容易看懂、能够衔接产品演示和购买信息的传播入口，而不是让新品成为参数集合。</p></article>
+          <article><span>02 / AUDIENCE TENSION</span><h4>生活已进入下一幕，清洁还没结束</h4><p>以美国家庭餐后硬地整理为创意切口：做完饭、吃完饭，地面仍需要处理。这是传播选取的场景张力，不冒充消费者调研结论。</p></article>
+          <article><span>03 / PRODUCT ROLE</span><h4>让工具在真实动作中出现</h4><p>M3 的双盘结构、站姿握持和推进动作承担产品解释；主视觉负责识别，连续演示负责回答如何使用，FAQ 负责回答适用限制。</p></article>
+          <article><span>04 / STRATEGIC CHOICE</span><h4>场景先行，证明随后</h4><p>优先让人看见“餐后还要清理地面”的问题，再展示产品操作。品牌情绪负责记忆，产品事实负责可信度；不将省时幅度或清洁效果写成未验证承诺。</p></article>
+        </div>
 <div class="campaign-proof-gallery" id="campaign-proof-gallery" aria-label="M3 上市的产品与视觉素材">
  <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>KV · 外观与品牌信息</span></figcaption></figure>
  <figure><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节" loading="lazy" decoding="async"><figcaption><b>02 / 机制展示</b><span>操作镜头 Brief · 结构细节</span></figcaption></figure>
  <figure><img src="assets/projects/m3-yellow-battery.webp" alt="M3 电池部件外观图" loading="lazy" decoding="async"><figcaption><b>03 / 产品教育</b><span>FAQ · 产品细节与信息承接</span></figcaption></figure>
 </div>
 <div class="campaign-house" aria-label="M3 Campaign 品牌屋式策略与渠道架构">
-          <div class="campaign-house-roof"><span>BRAND IDEA</span><h4>Power Every Move</h4><p>用动力支持每一次日常清洁行动</p></div>
-          <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA</span><h4>Make Room for What Matters</h4><p>餐后清洁 × 家庭生活 × 看得见的产品动作</p></div>
-          <div class="campaign-house-insight"><span>CREATIVE PATH</span><div><b>真实场景</b><b>双盘机制</b><b>操作细节</b><b>家庭时刻</b><b>用户体验</b></div></div>
+          <div class="campaign-house-roof"><span>BRAND IDEA / 长期品牌主张</span><h4>Power Every Move</h4><p>清洁工具支持人的日常行动，而不是让人围着工具转。</p></div>
+          <div class="campaign-brand-thesis" aria-label="品牌定位的受众、角色与价值">
+            <article><small>AUDIENCE / 受众任务</small><h5>需要打理不同家庭空间的人</h5><p>餐区硬地、浴室边角与局部清洁具有不同操作任务；传播按场景帮助用户识别适合的产品线。</p></article>
+            <article><small>BRAND ROLE / 品牌角色</small><h5>让清洁方式更容易理解和选择</h5><p>用清楚的场景、产品结构和可核实的使用说明，降低用户理解工具及比较方案时的负担。</p></article>
+            <article><small>REASON TO BELIEVE / 支撑依据</small><h5>产品事实与真实操作相互印证</h5><p>可见的产品结构、连续的使用动作、官方适用说明和售后信息共同支撑品牌表达，不用情绪画面代替性能证明。</p></article>
+          </div>
+          <div class="campaign-house-message"><span>CAMPAIGN BIG IDEA / M3 上市主题</span><h4>Make Room for What Matters</h4><p class="campaign-big-idea-lead">晚餐结束了，地面的工作还没结束。让清洁成为生活中的一个自然动作，而不是夺走故事主角的位置。</p>
+            <div class="campaign-idea-logic">
+              <div><small>INSIGHT / 场景张力</small><b>餐桌收拾好了，脚下仍有待处理的地面。</b></div>
+              <div><small>CREATIVE MECHANISM / 创意机制</small><b>用“生活被打断 → 工具参与 → 回到生活”的连续变化呈现主题。</b></div>
+              <div><small>CORE MESSAGE / 希望记住</small><b>M3 是日常硬地清洁任务中的一个具体选择，理解产品从看见操作开始。</b></div>
+            </div>
+          </div>
+          <div class="campaign-house-insight"><span>CREATIVE PATH / 统一叙事顺序</span><div><b>餐后未完的地面</b><b>任务冲突</b><b>M3 自然出场</b><b>双盘连续演示</b><b>回到家庭生活</b></div><p>情绪画面负责建立关联；真实操作和使用说明负责解释产品，不用虚构清洁成果制造反差。</p></div>
+          <div class="campaign-territory-set" id="campaign-creative-territories" aria-label="由一个 Big Idea 延展出的三条差异化创意方向">
+            <div class="campaign-territory-heading"><span>CREATIVE TERRITORIES</span><h5>同一主题，三种不同的创意任务</h5></div>
+            <div class="campaign-territory-grid">
+              <article><small>01 / SCENE CONTRAST</small><h6>Dinner's Done. The Floor Isn't.</h6><p>从餐桌与地面的状态反差切入：饭后场景把清洁任务带出来，产品顺着人物行动进入画面。</p><strong>优先用于：Hero KV、短视频开场、Paid Hook</strong></article>
+              <article><small>02 / MECHANISM REVEAL</small><h6>See the Move</h6><p>把注意力从“强大参数”转向“怎样握持、双盘如何接地、如何连续推进”，用实拍解答操作疑问。</p><strong>优先用于：Reels、Creator Brief、结构轮播</strong></article>
+              <article><small>03 / LIFE AFTER THE TASK</small><h6>Make Room for Moments</h6><p>让人物关系成为情绪主线，产品承担生活中的辅助角色。家庭故事可以延展，但不暗示未经验证的节省时间。</p><strong>优先用于：品牌短片、节庆延展、社群故事</strong></article>
+            </div>
+            <p class="campaign-territory-decision"><b>选择依据：</b>上市首轮用场景反差建立相关性；用户开始了解产品时加强动作证明；品牌情绪在故事型内容中延伸。三者不是换背景颜色的同一张海报。</p>
+          </div>
           <div class="campaign-house-channels">
             <article><small>OWNED SOCIAL</small><h5>Facebook / Instagram</h5><p>场景认知、产品演示与互动</p></article>
             <article><small>PAID MEDIA</small><h5>Meta Ads / TikTok Ads</h5><p>素材测试、受众触达与有效引流</p></article>
@@ -339,11 +365,25 @@
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
           </details>
+          <div class="campaign-integration-guardrails" aria-label="Campaign 管理与跨渠道交付">
+            <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / 协同与审核</span><h5>一份主张，三处关键交接</h5><p>传播策划不代替各渠道负责人决策；我负责把产品事实、素材需求、审核意见和日历节点对齐。</p></div>
+            <div class="campaign-integration-grid">
+              <article><b>内容与版本</b><p>先确认主视觉、产品实拍、FAQ 和英文 Brief 的源版本，再适配各平台开场、画幅、CTA 与信息密度。</p></article>
+              <article><b>放行与责任</b><p>产品核对功能与适用条件；视觉/视频核对真实结构；渠道 Owner 分别负责发布、预算、授权、优惠和页面可售状态。</p></article>
+              <article><b>复盘与调整</b><p>按创意方向对照观看、互动、有效访问和高频疑问；商业表现只采用订单与数据负责人的同口径核验结果。</p></article>
+            </div>
+          </div>
         <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
-          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 渠道创意</small><h4>同一产品价值，在不同触点怎样表达</h4><p>从同一个用户问题出发，广告优先呈现注意力与动作，邮件负责解释产品和下一步。</p></div>
+          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 内容策略到创意版本</small><h4>保留同一 Big Idea，改变每个渠道的叙事方式</h4><p>Hero 负责让人记住“餐后还有一件清洁小事”；短视频让动作可信；社群负责征集问题；PR 和产品内容负责核实。不是把同一张 KV 缩放成不同尺寸。</p></div>
           <div class="campaign-assets-pair">
-            <article class="campaign-ad-visual"><span>ADS / PAID CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>场景钩子 → 产品出场 → 双盘操作近景 → 观看完整演示</p><div class="campaign-asset-tags"><small>Hook A · 场景</small><small>Hook B · 结构</small><small>Hook C · 操作</small></div><p class="campaign-asset-caption">Meta / TikTok 广告创意方向；测试和预算由投放负责人核准。</p></article>
-            <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热邮件引导认知；上市邮件说明产品结构与适用场景；购后邮件围绕使用教育与 FAQ。</p><div class="campaign-asset-tags"><small>Subscribed</small><small>Interested</small><small>Purchased</small></div><p class="campaign-asset-caption">邮件内容、用户分层与退出规则设计。</p></article>
+            <article class="campaign-ad-visual"><span>PAID / DISCOVERY CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>首屏呈现餐后待清理的地面；随后以产品出场和连续操作兑现开场提出的问题。</p><div class="campaign-asset-tags"><small>A · 餐后场景冲突</small><small>B · 双盘动作揭示</small><small>C · 握持操作细节</small></div><p class="campaign-asset-caption">三条 Hook 对应不同理解障碍，非同一视频换字幕；具体测试、预算和购买型 CTA 须由 Paid Owner 核准。</p></article>
+            <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热先讲日常地面任务，上市期重点回答产品怎么用、是否适合自己的地面；购后以操作说明和维护 FAQ 延续体验。</p><div class="campaign-asset-tags"><small>订阅认知</small><small>产品考虑</small><small>已购教育</small></div><p class="campaign-asset-caption">不同阶段提供不同的信息深度；许可、触发、排除与发送由 CRM Owner 确认。</p></article>
+          </div>
+          <div class="campaign-adaptation-grid" aria-label="跨渠道创意表达与内容任务">
+            <article><small>HERO / KV</small><h5>一眼看懂主题</h5><p>以餐桌到地面的视觉关系建立反差，M3 产品主体清晰可识别；品牌主题不遮挡双盘结构。</p><b>检验：品牌、产品与任务是否同屏可读</b></article>
+            <article><small>REELS / CREATOR</small><h5>让产品动作说话</h5><p>从任务切入，连续拍到握持、接地和推进。创作者保持真实体验与必要披露，不用无依据的结果字幕。</p><b>检验：动作完整、事实准确、复用获授权</b></article>
+            <article><small>FACEBOOK / GROUP</small><h5>把场景变成问题</h5><p>从“饭后地面最难处理什么”发起讨论，评论与社群 FAQ 反过来为下一轮短视频补充题目。</p><b>检验：问题具体、互动门槛低、反馈可归类</b></article>
+            <article><small>PR / SEARCH</small><h5>把兴趣变成可核信息</h5><p>用品牌背景、产品结构、适用场景及官方 FAQ 支撑理解；媒体和搜索内容不借情绪概念夸大功能。</p><b>检验：新闻角度、事实和适用限制一致</b></article>
           </div>
           <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
         </div>
@@ -353,8 +393,8 @@
           <header><small>THE STRATEGY IN ONE VIEW</small><h4>把一个生活问题，转化成整合传播的核心故事</h4></header>
           <div class="v-campaign-logic-steps">
             <article><span>CONTEXT</span><strong>餐后硬地清洁</strong><small>用户真正面对的日常任务</small></article>
-            <article><span>INSIGHT</span><strong>希望清洁更顺手</strong><small>先理解场景，再介绍工具</small></article>
-            <article class="is-idea"><span>BIG IDEA</span><strong>Make Room for What Matters</strong><small>让清洁行动回到家庭生活</small></article>
+            <article><span>INSIGHT</span><strong>晚餐结束，地面仍待整理</strong><small>首发选定的生活张力，而非问卷统计结论</small></article>
+            <article class="is-idea"><span>BIG IDEA</span><strong>Make Room for What Matters</strong><small>以生活中断与恢复的故事，承接产品动作</small></article>
             <article><span>PROOF</span><strong>结构 × 连续操作</strong><small>产品外观、动作与 FAQ 各有证据</small></article>
           </div>
         </section>
