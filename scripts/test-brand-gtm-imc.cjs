@@ -14,7 +14,8 @@ const { JSDOM, VirtualConsole } = require("jsdom");
   for (const phrase of [
     "CAMPAIGN BIG IDEA", "Power Every Move", "Make Room for What Matters",
     "campaign-strategy-spine", "campaign-brand-thesis", "campaign-territory-set",
-    "campaign-adaptation-grid", "campaign-integration-guardrails"
+    "campaign-adaptation-grid", "campaign-integration-guardrails",
+    "m3-product-positioning", "m3-product-value", "m3-commercial-message", "m3-fabe-detail"
   ]) {
     assert.ok(projects.includes(phrase), `M3 strategy content missing: ${phrase}`);
   }
@@ -40,6 +41,16 @@ const { JSDOM, VirtualConsole } = require("jsdom");
   assert.equal(count("#campaign-architecture"), 1, "Campaign section missing or duplicated");
   assert.equal(count(".campaign-strategy-spine article"), 4, "Business/insight/value/tradeoff missing");
   assert.equal(count(".campaign-brand-thesis article"), 3, "Brand positioning layer incomplete");
+  assert.equal(count(".m3-alternatives article"), 3, "Competitive positioning references incomplete");
+  assert.equal(count(".m3-product-pillars article"), 4, "Product message pillars incomplete");
+  assert.equal(count(".m3-fabe-detail tbody tr"), 4, "FABE / RTB evidence mapping incomplete");
+  assert.equal(count(".m3-message-state-grid article"), 4, "Buyer-message information depth incomplete");
+  assert.equal(count("#m3-product-positioning"), 1, "Product positioning section missing");
+  assert.equal(count("#m3-product-value"), 1, "Product message house missing");
+  assert.equal(count("#m3-commercial-message"), 1, "Commercial awareness strategy missing");
+  assert.ok(d.querySelector(".m3-product-roof")?.textContent.includes("双盘"), "Primary proposition must be product-specific");
+  assert.ok(d.querySelector(".campaign-idea-logic")?.textContent.includes("PROOF"), "Big Idea must connect to proof");
+  assert.ok(d.querySelector(".campaign-house-message")?.textContent.includes("不用情绪镜头充当性能证据"), "Truth boundary absent");
   assert.equal(count(".campaign-territory-grid article"), 3, "Three distinct creative territories required");
   assert.equal(count(".campaign-integration-grid article"), 3, "Campaign ownership handoffs required");
   assert.equal(count(".campaign-adaptation-grid article"), 4, "Creative channel transformation missing");
