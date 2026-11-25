@@ -237,18 +237,63 @@
         </div>
         <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
       </section>
-      <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
-  <header class="pmm-board-head"><small>PRODUCT MARKETING / POSITIONING</small><h3 id="pmm-decision-heading">为什么优先选择餐后硬地场景</h3></header>
-  <div class="pmm-decision-layout">
-    <div class="pmm-decision-process" aria-label="从使用任务到传播交付的策略决策链">
-      <article><span>01 / USER TASK</span><h4>餐后地面整理</h4><p>以真实家庭的具体清洁任务作为产品理解入口。</p><strong>餐后硬地清洁场景</strong></article>
-      <article><span>02 / PRODUCT VALUE</span><h4>双盘接地与站姿推进</h4><p>将结构、握持和推进路径转为能够看见的使用价值。</p><strong>产品事实 → 用户收益</strong></article>
-      <article><span>03 / PROOF</span><h4>外观、连续演示与 FAQ</h4><p>静态 KV 识别产品；连续实拍说明操作；FAQ 承接适用条件。</p><strong>视觉、视频和技术信息分工</strong></article>
-      <article><span>04 / GO-TO-MARKET</span><h4>Social → Creator → Commerce</h4><p>场景内容建立认知，真实使用镜头解释动作，商品信息完成选购理解。</p><strong>传播与选购承接相连</strong></article>
-    </div>
-    <figure class="pmm-decision-photo"><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节视觉" loading="lazy" decoding="async"><figcaption><small>POSITIONING / DECISION</small><b>让用户先看懂使用价值</b><span>餐后硬地 · 产品机制 · 连续动作</span></figcaption></figure>
+      
+<section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
+  <header class="pmm-board-head pmm-board-lead">
+    <small>PRODUCT POSITIONING / COMMERCIAL MESSAGE / M3</small>
+    <h3 id="pmm-decision-heading">从餐后清洁任务，确定 M3 值得被选择的理由</h3>
+    <p>上市传播先回答三个问题：谁会在什么时候需要它、为什么考虑从现有清洁方式切换、哪些产品事实足以支持这个选择。<em>Make Room for What Matters</em> 是最终面向用户的 Campaign 主题，而不是用一句情绪文案替代产品定位。</p>
+  </header>
+  <div class="pmm-positioning-bridge" aria-label="品牌主张、产品定位和Campaign主题的关系">
+    <article><small>BRAND / 长期价值</small><strong>Power Every Move</strong><p>让不同清洁工具服务于真实家庭任务；品牌的价值来自产品与使用体验，不是一次上市口号。</p></article>
+    <article class="is-product"><small>PMM / 本次选择理由</small><strong>可看懂的双盘拖地方式</strong><p>针对日常硬地清洁，让消费者先理解双盘动作、握持与地面适用条件，再判断是否值得选购。</p></article>
+    <article><small>IMC / 上市传播主题</small><strong>Make Room for What Matters</strong><p>用“餐后还有地面要整理”建立生活关联，再以真实操作让情绪落回产品价值。</p></article>
   </div>
-  <div class="pmm-tradeoff"><strong>STRATEGIC CHOICE</strong><p><b>弱化</b> 以转速、单一规格作内容开场</p><p><b>强化</b> 场景问题、结构证明与可连续复核的演示</p></div>
+  <div class="pmm-target-frame">
+    <div><small>TARGET × JOB TO BE DONE</small><h4>谁、在什么任务中、考虑用什么来替代？</h4><p>本次以美国市场的家庭日常硬地清洁为沟通情境，优先展示餐后地面整理。考虑对象不是泛泛的“所有家庭”：而是正在比较手动拖地、电动拖地等方式，并希望确认操作、适用表面与维护要求的潜在购买者。</p><p class="pmm-frame-boundary">场景是本项目的创意与上市切口，不写成已经完成抽样验证的消费者洞察；购买意愿与场景优先级仍需由访谈、评论及实际行为继续验证。</p></div>
+    <aside><small>POSITIONING STATEMENT</small><strong>面向需要定期整理家中硬地、正在比较拖地方式的消费者，M3 是一款双盘旋转拖把。它的沟通差异不在未经验证的“更快、更省力”，而在于通过清晰可见的双盘操作与真实使用说明，帮助用户判断这种清洁方式是否适合自己。</strong></aside>
+  </div>
+  <div class="pmm-decision-layout">
+    <div class="pmm-decision-process" aria-label="用户任务、竞争参照、核心利益与证明的决策链">
+      <article><span>01 / CUSTOMER TASK</span><h4>餐后地面整理</h4><p>用具体家庭时刻带出清洁任务，避免一开始就向不熟悉电动拖地的用户罗列参数。</p><strong>先回答：我为什么需要了解它？</strong></article>
+      <article><span>02 / REFERENCE FRAME</span><h4>替代方案，而非空泛竞品</h4><p>手动拖把强调熟悉与简便；洗吸设备可能覆盖不同污物；同类电动工具则需要比较实际操作与条件。</p><strong>再回答：它与我现在的方式有何区别？</strong></article>
+      <article><span>03 / VALUE PROPOSITION</span><h4>双盘动作可见，选型更清楚</h4><p>把结构、握持与使用路径组织成可以理解的产品故事，而不是把转速直接等同于清洁效果。</p><strong>让卖点与选购问题对应</strong></article>
+      <article><span>04 / PROOF &amp; RTB</span><h4>有证据，再谈利益</h4><p>产品图说明外观；连贯的真实演示说明动作；适用表面、保养与售后由当地型号资料确认。</p><strong>区分已展示事实与待核验效果</strong></article>
+    </div>
+    <figure class="pmm-decision-photo"><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把产品结构细节，用于说明外观而非性能测试" loading="lazy" decoding="async"><figcaption><small>PRODUCT TRUTH / M3</small><b>用结构与操作建立信任</b><span>外观识别 → 真实演示 → 适用条件</span></figcaption></figure>
+  </div>
+  <section class="pmm-competitive-frame" aria-labelledby="pmm-competitive-title">
+    <div class="pmm-mini-heading"><small>COMPETITIVE VALUE / 选择参照</small><h4 id="pmm-competitive-title">决定比较维度，而不是宣称全面领先</h4></div>
+    <div class="pmm-competitive-grid">
+      <article><small>手动平板拖把</small><h5>熟悉、购入门槛直观</h5><p>消费者已经理解基本操作。M3 需要展示双盘运动方式及实际使用步骤，才能让“换一种方式”有具体意义。</p><b>决策问题：操作差异值不值得？</b></article>
+      <article><small>洗吸一体设备</small><h5>任务覆盖范围不同</h5><p>有些购买者还在比较干湿污物的处理方式。M3 应明确它是拖地工具，不以虚构吸污能力赢得比较。</p><b>决策问题：我需要的是拖地还是吸洗？</b></article>
+      <article><small>其他电动拖地工具</small><h5>需要同条件证明的同类选择</h5><p>比较要落在具体型号、地面、操作、配件、价格与维护上。缺少可比实测时，不写“更强、更快、第一”。</p><b>决策问题：凭什么选择这一款？</b></article>
+    </div>
+  </section>
+  <section class="pmm-ksp-system" aria-labelledby="pmm-ksp-title">
+    <div class="pmm-mini-heading"><small>KSP / VALUE PROPOSITION / FABE</small><h4 id="pmm-ksp-title">把产品事实转化为用户听得懂的价值</h4><p>主价值只保留一个：<b>让用户看清 M3 怎样参与日常硬地清洁，并能据此判断适配性。</b> 卖点按用户疑问排序，参数只在需要解释机制和型号差异时出现。</p></div>
+    <div class="pmm-fabe-grid" aria-label="M3产品特征、机制优势、用户利益与证明的FABE映射">
+      <article><div><small>KSP 01 / CORE MECHANISM</small><h5>双盘旋转底座</h5></div><dl><div><dt>F / 产品事实</dt><dd>可见的两片圆形拖布与双盘结构。</dd></div><div><dt>A / 机制差异</dt><dd>相较手动往复拖动，产品采用电动双盘旋转的工作形式。</dd></div><div><dt>B / 任务利益</dt><dd>便于消费者通过画面理解拖地动作与地面接触方式；不推导省时比例。</dd></div><div><dt>E / RTB</dt><dd>产品细节图证明外观；旋转、接地与效果要用原始连续实拍分别支持。</dd></div></dl></article>
+      <article><div><small>KSP 02 / USE EXPERIENCE</small><h5>站姿握持与推进</h5></div><dl><div><dt>F / 产品事实</dt><dd>手柄、杆体与底座构成完整操作结构。</dd></div><div><dt>A / 操作方式</dt><dd>可在同一镜头内展示握持、转向及地面移动路径。</dd></div><div><dt>B / 任务利益</dt><dd>降低首次了解产品时的操作理解成本；不直接宣称省力或人体工学优势。</dd></div><div><dt>E / RTB</dt><dd>结构主视觉 + 可复核的实际操作镜头；主观体验需进一步证据。</dd></div></dl></article>
+      <article><div><small>KSP 03 / OWNERSHIP FIT</small><h5>组件、地面与维护</h5></div><dl><div><dt>F / 产品事实</dt><dd>产品电池等组件可展示；具体型号及配件以销售资料为准。</dd></div><div><dt>A / 决策信息</dt><dd>把适用地面、维护、使用限制与套装配置列成选购 FAQ。</dd></div><div><dt>B / 任务利益</dt><dd>帮助消费者排除不适合的使用情境，降低买错型号的风险。</dd></div><div><dt>E / RTB</dt><dd>当地说明书、实际配件清单及获准的售后政策；不可只用产品图证明兼容或续航。</dd></div></dl></article>
+    </div>
+    <div class="pmm-proof-boundary"><b>信息取舍</b><span>主推：场景问题、双盘工作方式、真实操作。</span><span>按需补充：型号规格、续航、适用地面、价格与售后。</span><span>不直接承诺：未经核验的清洁提升、省时、省力与所有地面通用。</span></div>
+  </section>
+  <section class="pmm-commercial-messages" aria-labelledby="pmm-commercial-title">
+    <div class="pmm-mini-heading"><small>BUYER AWARENESS / COMMERCIAL MESSAGE</small><h4 id="pmm-commercial-title">同一主张，面对不同认知阶段说不同的话</h4><p>按用户提出的问题设计信息深度，而不是把“认知、比较、购买”都塞进同一张海报。以下是消息与物料的策划分工，不代表已完成用户分群判定。</p></div>
+    <div class="pmm-awareness-grid">
+      <article><small>01 / PROBLEM AWARE</small><h5>先认出餐后待处理的地面</h5><blockquote lang="en">Dinner's done. The floor isn't.</blockquote><p>展示餐后真实情境，让用户知道这条内容与自己的任务有关。</p><b>Social / 情境短片 · CTA：了解清洁方式</b></article>
+      <article><small>02 / SOLUTION AWARE</small><h5>理解双盘拖地与其他方式的差别</h5><blockquote lang="en">See dual-spin mopping in action.</blockquote><p>用连续动作、握持与地面接触说明机制，避免只看“神奇前后对比”。</p><b>Reels / Creator · CTA：观看完整演示</b></article>
+      <article><small>03 / PRODUCT AWARE</small><h5>判断 M3 是否适合自己的家</h5><blockquote lang="en">Is M3 right for your floors?</blockquote><p>提供适用表面、配件、操作限制及选型比较，回应具体疑虑。</p><b>Product FAQ / PR · CTA：查看使用条件</b></article>
+      <article><small>04 / READY TO CHOOSE</small><h5>商业信息齐全后，才推动购买</h5><blockquote lang="en">Check the details before you choose.</blockquote><p>按当前销售版本核对 SKU、套装、价格、库存、配送、保修和退货条件。</p><b>PDP / CRM / Paid · CTA：查看获准购买信息</b></article>
+    </div>
+    <div class="pmm-commercial-gate"><div><small>GTM / CONVERSION READINESS</small><strong>购买理由必须在商品信息中兑现</strong><p>广告说明的产品机制、视频中的具体型号、页面上的权益和售后条件应一致。未确认的销售承诺只做信息准备，不进入购买导向传播。</p></div><a href="#/case/gtm/campaign-architecture">继续看 Big Idea 与整合 Campaign ↗</a></div>
+  </section>
+  <div class="pmm-bigidea-bridge" aria-label="从产品价值到Make Room for What Matters的形成逻辑">
+    <small>WHY THIS BIG IDEA / 从产品价值到传播主题</small><h4>Make Room for What Matters</h4><p>餐后需要清洁，家人也期待生活继续。M3 的双盘动作能够在这一情境中成为可看见的解决方式，因此创意从“还有地面待整理”转向“整理之后，生活继续”。<b>主题承担情绪记忆，产品机制承担选择理由。</b> 它不证明产品比其他工具更快，也不承诺为每个家庭节约多少时间。</p>
+    <div><span>场景：餐后硬地</span><span>选择理由：双盘操作可理解</span><span>证明：连续实拍与型号信息</span><span>表达：Make Room for What Matters</span></div>
+  </div>
+  <div class="pmm-tradeoff"><strong>MY STRATEGIC CHOICE</strong><p><b>放弃</b> 参数优先与无依据的效率竞赛；不将 Campaign 主题当成产品卖点。</p><p><b>选择</b> 场景开场、机制证明、分层沟通与可核验的购买承接。</p></div>
 </section>
       <div class="g-story-note" id="launch-decisions">
         <h3>产品主张｜站着推进，清理餐后硬地</h3>
