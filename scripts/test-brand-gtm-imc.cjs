@@ -22,7 +22,7 @@ const { JSDOM, VirtualConsole } = require("jsdom");
   const html = fs.readFileSync(path.join(site, "index.html"), "utf8")
     .replace(new RegExp("<script[^>]*src[^>]*></script>", "g"), "");
   const dom = new JSDOM(html, {
-    url: "https://portfolio.test/#/case/gtm/campaign-architecture",
+    url: "https://portfolio.test/",
     runScripts: "outside-only",
     pretendToBeVisual: true,
     virtualConsole: new VirtualConsole()
