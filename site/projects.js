@@ -244,7 +244,7 @@
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
       <section class="m3-kv-showcase m3-kv-truth" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>BRAND × PMM / M3 CAMPAIGN VISUAL PLANNING</small><h3 id="m3-kv-heading">M3｜从产品事实到 Campaign 视觉表达</h3><p>不同传播画面承担不同任务：品牌主张让人记住方向，餐后情境让用户理解需求，产品源图与真实演示分别回答“M3 是什么”和“它如何操作”。这里不把网页组合图当作实际交付 KV。</p></header>
+        <header><small>BRAND × PMM / M3 CAMPAIGN CONTENT</small><h3 id="m3-kv-heading">M3｜产品价值与渠道传播信息</h3><p>从 M3 的真实产品结构出发，梳理品牌主张、用户场景与产品选择理由，再明确不同渠道分别需要说明什么。尚未核实的 Campaign KV 不作为作品展示。</p></header>
         <div class="m3-kv-source-layout">
           <figure class="m3-kv-source-figure">
             <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘电动拖把产品外观参考，D 型主手柄、辅助握把、伸缩杆与双盘结构" loading="lazy" decoding="async">
@@ -272,7 +272,7 @@
           </div>
           <p class="m3-kv-handoff-link"><a href="#/case/gtm/campaign-activation">查看 Owned、Paid、Creator、PR、CRM 的具体渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看视觉和产品事实审核 ↗</a></p>
         </section>
-        <details class="m3-kv-evidence-disclosure"><summary>查看真实 KV 素材的版本与展示依据</summary><p>现有页面原先用同一张产品源图叠加文字，分别标记“16:9 Campaign KV”和“4:5 Social Feed”；这并非独立的原始 KV 文件。已在 M3 专属视觉素材目录核对到 R8 的 16:9、4:5、9:16 三份画面候选，但项目文档状态为 PLANNING DRAFT，发布、审核与对外使用授权尚未由本次资料证明。因此本公开页面先展示已入库产品源图、品牌信息层级与版式决策，不把候选稿声明为已投放成品。</p></details>
+        <p class="m3-kv-evidence-disclosure">本章节展示产品外观参考与传播信息的组织方式，不展示未经确认的 KV 成品，也不据此声称已经投放。</p>
       </section>
       
 <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
