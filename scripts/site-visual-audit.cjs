@@ -93,6 +93,21 @@ async function screenshot(label){
       report.issues.push({brandPr:{width,...prAudit}});
     }
     if(width===1440){await screenshot("BRAND_PR_DESKTOP")}else{await screenshot("BRAND_PR_MOBILE")}
+    const video=await navigate(port,"case/creative/video-projects",width,height);
+    await evaluate("document.getElementById('video-imc-strategy')?.scrollIntoView({block:'start',behavior:'instant'})");
+    await delay(200);
+    const videoAudit=await evaluate("(()=>{const root=document.getElementById('video-projects'),a=document.getElementById('video-imc-strategy'),bar=document.querySelector('.case-page .case-tabs');return {exists:!!root,anchorTop:a?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,tvc:root?.querySelectorAll('.tvc-work-card').length||0,creator:root?.querySelectorAll('#kol-shorts video').length||0,insight:root?.querySelectorAll('.video-insight-grid article').length||0,stages:root?.querySelectorAll('.video-stage-grid article').length||0,paid:root?.querySelectorAll('.video-paid-family-grid article').length||0,lifecycle:root?.querySelectorAll('.video-handoff-map article').length||0,production:root?.querySelectorAll('.video-production-steps article').length||0,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_VIDEO_IMC="+JSON.stringify({width,...videoAudit}));
+    report.videoImc ??=[];
+    report.videoImc.push({width,...videoAudit});
+    if(!videoAudit.exists||videoAudit.tvc!==2||videoAudit.creator!==2||videoAudit.insight!==3||videoAudit.stages!==5||videoAudit.paid!==3||videoAudit.lifecycle!==4||videoAudit.production!==4||videoAudit.overflow>12||videoAudit.anchorTop<videoAudit.navBottom-4)report.issues.push({videoImc:{width,...videoAudit}});
+    if(width===1440)await screenshot("VIDEO_IMC_DESKTOP");else await screenshot("VIDEO_IMC_MOBILE");
+    await evaluate("document.getElementById('video-paid-to-lifecycle')?.scrollIntoView({block:'start',behavior:'instant'})");
+    await delay(180);
+    const lifeAnchor=await evaluate("(()=>{const el=document.getElementById('video-paid-to-lifecycle'),bar=document.querySelector('.case-page .case-tabs');return {top:el?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_VIDEO_LIFECYCLE="+JSON.stringify({width,...lifeAnchor}));
+    if(lifeAnchor.top<lifeAnchor.navBottom-4||lifeAnchor.overflow>12)report.issues.push({videoLifecycle:{width,...lifeAnchor}});
+    if(width===1440)await screenshot("VIDEO_LIFECYCLE_DESKTOP");else await screenshot("VIDEO_LIFECYCLE_MOBILE");
     const pm=await navigate(port,"case/gtm/gtm-positioning-decision",width,height);
     await evaluate("document.getElementById('gtm-positioning-decision')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
@@ -121,6 +136,6 @@ async function screenshot(label){
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.overflow))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,videoImc:report.videoImc?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.videoImc||i.videoLifecycle||i.overflow))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
