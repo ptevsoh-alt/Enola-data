@@ -130,14 +130,36 @@
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
-      <div class="g-story-note" id="launch-d7-d30">
-        <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
-        <div class="g-project-list g-project-calendar-plan">
-          <article><small>D+7 / EARLY SIGNAL</small><h3>先找渠道和物料断点</h3><p>对齐发布日期、资产版本和有效链接，查看首屏观看、点击及 FAQ 问题。若渠道漏发或某版视频动作不清，先补发布和返工；不要由单周互动推断销量提升。</p></article>
-          <article><small>D+30 / BUSINESS & LEARNING</small><h3>判断该保留、迭代还是停止</h3><p>按相同市场和统计窗口核对渠道表现、站点访问、净履约订单与售后反馈；区分素材问题、承接问题和供货限制，再确定下期资源与 Owner。</p></article>
+      <section class="g-story-note m3-knowledge-review" id="launch-d7-d30" aria-labelledby="m3-knowledge-heading">
+        <header class="m3-knowledge-header"><small>CAMPAIGN REVIEW / DATA × MARKETING OPERATIONS</small><h3 id="m3-knowledge-heading">上市复盘｜从首周信号到下一轮传播决策</h3><p>本案例来源于 2026 年 5 月的上市规划稿，目前没有附带可对账的 M3 首周平台导出、订单记录及完整月度经营报表。以下展示我如何组织复盘、定位问题和决定下一步，不将计划节点视作已发生的经营成果。</p></header>
+        <div class="m3-review-stage-grid">
+          <article><small>D+7 / EARLY SIGNAL</small><h4>先确认内容是否正确触达与被理解</h4><p>核对发布链接、KV／视频版本、平台原生触达和有效观看；结合评论问题、FAQ 点击，判断断点在发布、开场、产品解释还是承接。</p><b>产出：继续 / 修改 / 暂停的内容决策</b></article>
+          <article><small>D+30 / BUSINESS REVIEW</small><h4>再核对订单质量与经营反馈</h4><p>在同一美国市场、产品 SKU、时区和订单成熟窗口下，对齐有效访问、净履约订单、退款取消、库存与客服反馈，区分营销与履约问题。</p><b>产出：资源调整、待补证据和下一轮 Brief</b></article>
         </div>
-        
-      </div>`;
+        <div class="m3-review-table-wrap" role="region" aria-label="M3 上市内容与经营复盘证据表" tabindex="0">
+          <table class="m3-review-evidence-table">
+            <thead><tr><th scope="col">观察什么</th><th scope="col">去哪里核对</th><th scope="col">发现问题后先查什么</th><th scope="col">可以决定的动作</th></tr></thead>
+            <tbody>
+              <tr><th scope="row">内容交付与触达</th><td>排期表、实际发布链接、平台原生报表；按渠道保留窗口和版本。</td><td>漏发、错误链接、广告未获批、素材不可用，还是传播入口没有触达目标人群？</td><td>补发布、修正版位与 CTA；未完成发布不写作表现失败。</td></tr>
+              <tr><th scope="row">观看与产品理解</th><td>视频实际观看口径、有效互动、评论疑问、FAQ 内容日志。</td><td>观众能否看到真实双盘动作、握持和地面适用边界？是否只记得情绪画面？</td><td>补充操作镜头、产品说明与问题型短片；保留有效内容。</td></tr>
+              <tr><th scope="row">有效访问与考虑</th><td>UTM、GA4 归属一致的有效会话、目标页面与版本记录。</td><td>点击后是否到达正确资料页？地区、设备、加载、产品事实或 Offer 是否一致？</td><td>修复承接页面与链接；不能由点击单独推断购买意向。</td></tr>
+              <tr><th scope="row">订单与经营质量</th><td>订单系统／Finance 的 SKU、净履约订单、退款、取消、履约与成本。</td><td>库存、支付、退款、客服或供货问题是否影响结果？Paid 归因和真实订单口径是否不同？</td><td>继续、调整或暂停购买入口；商业结果由业务与数据负责人核准。</td></tr>
+              <tr><th scope="row">体验反馈与长期内容</th><td>客服／社群使用问题、授权反馈、已购状态与有效触达许可。</td><td>哪些使用疑问重复出现？哪些是产品说明缺口，而非创意表达问题？</td><td>更新 FAQ／教程，交接合规的购后内容；不把一次互动写成忠诚度。</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="m3-knowledge-cycle" id="m3-knowledge-loop">
+          <header><small>KNOWLEDGE LOOP / 决策复核</small><h4>一次复盘，最后要回到下一轮内容与资源决策</h4></header>
+          <ol>
+            <li><span>01 / OBSERVE</span><strong>记录有效信号</strong><p>锁定市场、素材版本、时间窗、原始来源与数据质量。</p></li>
+            <li><span>02 / DIAGNOSE</span><strong>排查最可能的断点</strong><p>区分素材、渠道、站点、产品事实与供应链；同时记录其他解释。</p></li>
+            <li><span>03 / ACT</span><strong>做有边界的调整</strong><p>保持、返工、暂停或补充教程，明确 Owner、资源及审核条件。</p></li>
+            <li><span>04 / VERIFY</span><strong>同口径复测</strong><p>按预设窗口比对后续行为和负向指标，结果不成熟时暂缓结论。</p></li>
+            <li><span>05 / WRITE BACK</span><strong>带证据沉淀可复用经验</strong><p>新结论先进入候选记录，核验通过后才能升级为可复用规则。</p></li>
+          </ol>
+        </div>
+        <details class="m3-review-source-detail"><summary>复盘口径、数据边界与 Knowledge Loop 状态</summary><p>每项指标保留对象、公式／分母、平台、市场、窗口、时区、来源、采集时间、素材版本与负责人。跨平台 Reach 不能相加为去重人数；平台归因订单不等于增量订单；未提供订单对账与成本资料时，不计算净贡献、CAC 或 ROAS。</p><p>本页没有足以证明 M3 2026 年 5 月上市实际结果的同期数据，因此暂无被验证的 Campaign learning。新规则以 CANDIDATE 记录假设和证据指针，经数据负责人确认测量定义、项目负责人复验后，才有资格进入 VALIDATED / ACTIVE；不把“计划做一次实验”写成已完成复盘。</p></details>
+      </section>`;
   }
 
   function launchDelivery() {
@@ -221,21 +243,36 @@
         <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
-      <section class="m3-kv-showcase" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
-        <div class="m3-kv-comps">
-          <figure class="m3-kv-landscape">
-            <div class="m3-kv-copy"><small>M3 / PRODUCT MARKETING</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
-            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘电动拖把官方产品图，包含手柄与双盘结构" loading="lazy" decoding="async">
-            <figcaption>16:9 / Campaign KV</figcaption>
+      <section class="m3-kv-showcase m3-kv-truth" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
+        <header><small>BRAND × PMM / M3 CAMPAIGN VISUAL PLANNING</small><h3 id="m3-kv-heading">M3｜从产品事实到 Campaign 视觉表达</h3><p>不同传播画面承担不同任务：品牌主张让人记住方向，餐后情境让用户理解需求，产品源图与真实演示分别回答“M3 是什么”和“它如何操作”。这里不把网页组合图当作实际交付 KV。</p></header>
+        <div class="m3-kv-source-layout">
+          <figure class="m3-kv-source-figure">
+            <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘电动拖把产品外观参考，D 型主手柄、辅助握把、伸缩杆与双盘结构" loading="lazy" decoding="async">
+            <figcaption>产品外观参考｜已收录的 M3 产品源图，不是 Campaign KV 成片</figcaption>
           </figure>
-          <figure class="m3-kv-feed">
-            <div class="m3-kv-copy"><small>M3 / BRAND CAMPAIGN</small><h4>Make Room for<br>What Matters.</h4><p>Meet M3.</p></div>
-            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 产品主视觉用于社媒 Feed 版式" loading="lazy" decoding="async">
-            <figcaption>4:5 / Social Feed</figcaption>
-          </figure>
+          <div class="m3-kv-source-explanation">
+            <small>THE POSITIONING DECISION</small>
+            <h4>让产品进入生活故事，但不让故事代替产品证明</h4>
+            <p>美国市场的传播切口选择餐后硬地整理。画面先呈现生活还在继续、地面仍待清理的时刻，再明确介绍 M3 是双盘电动拖把；产品是否适合具体地面、如何握持与移动，交给经过核验的演示和使用说明。</p>
+            <div class="m3-kv-core-copy"><span>场景入口</span><strong>Dinner’s done. The floor isn’t.</strong><span>上市创意</span><strong>Make Room for What Matters.</strong><span>产品身份</span><strong>Meet M3. Qimedo’s dual-head electric mop.</strong></div>
+            <p class="m3-kv-copy-boundary">“节省多少时间”“任何地面都适用”“比手动清洁更高效”均不是这组画面的已证实结论。</p>
+          </div>
         </div>
-        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
+        <div class="m3-kv-message-layers" aria-label="M3 品牌主张、产品价值和Campaign创意的不同任务">
+          <article><small>01 / BRAND PROMISE</small><h4>Power Every Move</h4><p>长期品牌主张。强调不同清洁任务中人的行动与生活，而不是单一 M3 产品的性能口号。</p></article>
+          <article><small>02 / PRODUCT VALUE / PMM</small><h4>双盘结构与可观察的操作方式</h4><p>以双盘底座、D 型握持和推进路径解释产品的实际使用方式；用官方型号资料和连续实拍支撑功能信息。</p></article>
+          <article><small>03 / CAMPAIGN BIG IDEA</small><h4>Make Room for What Matters</h4><p>从餐后需要处理的地面任务转向家庭相处时刻。情绪表达用于建立关联，具体产品能力仍需独立证明。</p></article>
+        </div>
+        <section class="m3-kv-channel-adaptation" id="m3-kv-channel-adaptation" aria-labelledby="m3-kv-channel-title">
+          <header><small>CREATIVE ADAPTATION / 渠道信息次序</small><h4 id="m3-kv-channel-title">同一主题，三种比例不等于同一张画面粗裁</h4><p>版式随内容任务变化；图像完成度、Claim、CTA 与可用权限由发布前审核确认。</p></header>
+          <div class="m3-kv-format-roles">
+            <article><span>16:9 / HERO</span><h5>完整生活情境与品牌记忆</h5><p>家庭场景承接 Big Idea，产品信息明确但不抢夺人物关系。适合横版传播提案或完整主题叙事。</p><b>核心信息：Make Room for What Matters</b></article>
+            <article><span>4:5 / SOCIAL FEED</span><h5>快速识别主题和产品</h5><p>让首屏能同时看见生活场景、品牌与产品身份，文字与产品结构各有安全区域。</p><b>核心信息：Meet M3 / 了解产品</b></article>
+            <article><span>9:16 / STORY & REELS</span><h5>优先突出场景钩子和下一步</h5><p>按竖屏重新安排人物、产品和 CTA。真正的双盘旋转及清洁过程需要实拍，不能由静态 KV 代替。</p><b>核心信息：Dinner’s done. The floor isn’t.</b></article>
+          </div>
+          <p class="m3-kv-handoff-link"><a href="#/case/gtm/campaign-activation">查看 Owned、Paid、Creator、PR、CRM 的具体渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看视觉和产品事实审核 ↗</a></p>
+        </section>
+        <details class="m3-kv-evidence-disclosure"><summary>查看真实 KV 素材的版本与展示依据</summary><p>现有页面原先用同一张产品源图叠加文字，分别标记“16:9 Campaign KV”和“4:5 Social Feed”；这并非独立的原始 KV 文件。已在 M3 专属视觉素材目录核对到 R8 的 16:9、4:5、9:16 三份画面候选，但项目文档状态为 PLANNING DRAFT，发布、审核与对外使用授权尚未由本次资料证明。因此本公开页面先展示已入库产品源图、品牌信息层级与版式决策，不把候选稿声明为已投放成品。</p></details>
       </section>
       
 <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
@@ -360,7 +397,7 @@
           </div>
         </section>
 <div class="campaign-proof-gallery" id="campaign-proof-gallery" aria-label="M3 上市的产品与视觉素材">
- <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>KV · 外观与品牌信息</span></figcaption></figure>
+ <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>产品外观源图 · 不是完整 KV</span></figcaption></figure>
  <figure><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节" loading="lazy" decoding="async"><figcaption><b>02 / 机制展示</b><span>操作镜头 Brief · 结构细节</span></figcaption></figure>
  <figure><img src="assets/projects/m3-yellow-battery.webp" alt="M3 电池部件外观图" loading="lazy" decoding="async"><figcaption><b>03 / 产品教育</b><span>FAQ · 产品细节与信息承接</span></figcaption></figure>
 </div>
