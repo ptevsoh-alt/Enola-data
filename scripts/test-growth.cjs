@@ -257,14 +257,16 @@ const fs = require("fs"),
       assert.equal(insight.querySelectorAll(".reader-source-note").length, 0);
     });
   }
-  await route("/case/gtm/m3-campaign-kv");
-  check("M3 Campaign exposes two product-accurate KV compositions", () => {
-    const view = d.querySelector("#m3-campaign-kv");
-    assert.ok(view);
-    assert.equal(view.querySelectorAll("figure").length, 2);
-    assert.equal(view.querySelectorAll("img[src='assets/projects/m3-yellow-main.webp']").length, 2);
-    assert.ok(view.textContent.includes("From grip"));
-    assert.ok(view.textContent.includes("Make Room for"));
+  await route("/case/gtm/launch-knowledge-loop");
+  check("M3 uses a source-aware Knowledge Loop instead of fixed review dates or fabricated KV", () => {
+    const review=d.getElementById("launch-knowledge-loop");
+    assert.ok(review);
+    assert.equal(review.querySelectorAll(".m3-knowledge-cycle li").length,5);
+    assert.equal(review.querySelectorAll(".m3-review-evidence-table tbody tr").length,4);
+    assert.equal(review.querySelectorAll(".m3-learning-focus article").length,3);
+    assert.equal(d.querySelectorAll(".m3-kv-showcase,.m3-kv-source-layout,.m3-kv-format-roles").length,0);
+    assert.ok(!review.textContent.includes("D+7")&&!review.textContent.includes("D+30"));
+    assert.ok(review.textContent.includes("CANDIDATE") && review.textContent.includes("VALIDATED"));
   });
   await route("/case/gtm/gtm-visual-schedule");
   check("May plan starts at marketing work, not personal product initiation", () => {
@@ -319,7 +321,7 @@ const fs = require("fs"),
   await route("/case/gtm/gtm-value-to-launch");
   check("GTM case links consumer task, product proof, channel readiness and D7/D30", () => {
     assert.equal(d.querySelectorAll("#gtm-value-to-launch .gtm-market-steps article").length, 4);
-    assert.ok(d.querySelector('#gtm-value-to-launch a[href="#/case/gtm/launch-d7-d30"]'));
+    assert.ok(d.querySelector('#gtm-value-to-launch a[href="#/case/gtm/launch-knowledge-loop"]'));
   });
   await route("/case/gtm/campaign-architecture");
   check("M3 Campaign architecture preserves business targets, channel roles and content pillars", () => {
@@ -623,10 +625,10 @@ const fs = require("fs"),
   });
   check("case visual opens real asset chapter instead of concept lightbox", () => {
     assert.equal(d.querySelectorAll("[data-image]").length, 0);
-    assert.ok(d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
+    assert.ok(d.querySelector('a[href="#/case/gtm/gtm-positioning-decision"]'));
   });
-  await route("/case/gtm/m3-campaign-kv");
-  check("GTM visual chapter is linked and available", () => assert.ok(d.getElementById("m3-campaign-kv")));
+  await route("/case/gtm/gtm-positioning-decision");
+  check("M3 product positioning replaces the unsupported KV chapter", () => assert.ok(d.getElementById("gtm-positioning-decision") && !d.getElementById("m3-campaign-kv")));
   await route("/case/community");
   check("community case shows both documented growth records without AI copy", () => {
     const copy = d.querySelector("main").textContent;

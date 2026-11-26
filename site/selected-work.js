@@ -47,10 +47,10 @@ window.PORTFOLIO_SELECTED_WORK = {
     "label": "Seasonal Campaign · TVC / Creator",
     "title": "品牌视频与社媒创意｜Campaign、产品演示、Creator",
     "role": "参与品牌宣传片、节庆视频、产品演示和 Creator 内容的创意策划、脚本审核与画面调整。",
-    "decision": "感恩节以家庭餐叙与感谢切入，圣诞节以日常照料承接品牌情感；KOL / Creator 竖屏内容聚焦真实使用情境与产品动作。",
-    "output": "品牌视频、产品演示与 Creator 内容的创意策划、脚本和制作审核。",
-    "highlight": "品牌影片 · 产品演示 · Creator 内容",
-    "artifact": "查看视频创意与产品演示",
+    "decision": "区分节庆品牌影片的情感任务与 Creator 演示的产品证明任务，再围绕认知、兴趣和使用问题安排 Social、Paid 及购后内容承接。",
+    "output": "感恩节与圣诞节主题影片、两组 Creator 演示、视频 Brief、分镜审核和跨渠道内容版本规划。",
+    "highlight": "Brand Video · Social / Paid · Lifecycle",
+    "artifact": "查看视频的品牌策略、创意与 Campaign 交付",
     "chapter": "video-projects"
   },
   "b2b": {

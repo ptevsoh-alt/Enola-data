@@ -130,14 +130,51 @@
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
-      <div class="g-story-note" id="launch-d7-d30">
-        <h3>上市后怎么复盘｜首周内容表现与月度经营反馈</h3>
-        <div class="g-project-list g-project-calendar-plan">
-          <article><small>D+7 / EARLY SIGNAL</small><h3>先找渠道和物料断点</h3><p>对齐发布日期、资产版本和有效链接，查看首屏观看、点击及 FAQ 问题。若渠道漏发或某版视频动作不清，先补发布和返工；不要由单周互动推断销量提升。</p></article>
-          <article><small>D+30 / BUSINESS & LEARNING</small><h3>判断该保留、迭代还是停止</h3><p>按相同市场和统计窗口核对渠道表现、站点访问、净履约订单与售后反馈；区分素材问题、承接问题和供货限制，再确定下期资源与 Owner。</p></article>
+      <section class="g-story-note m3-knowledge-review m3-knowledge-only" id="launch-knowledge-loop" aria-labelledby="m3-knowledge-heading">
+        <header class="m3-knowledge-header">
+          <small>CAMPAIGN LEARNING / KNOWLEDGE LOOP</small>
+          <h3 id="m3-knowledge-heading">Campaign 复盘｜把传播问题转成下一轮营销决策</h3>
+          <p>围绕 M3 上市内容，我以产品理解、渠道触达、用户疑问和商业承接为线索，设计从问题到证据、假设、行动、验证和经验复用的复盘方法。现有资料主要是上市传播策划，不包含足以证明具体成效的完整同期数据；以下展示决策方法与可核对的依据，不虚构已发生的经营结论。</p>
+        </header>
+        <div class="m3-learning-focus" aria-label="复盘要回答的三个业务问题">
+          <article><small>BRAND × PMM</small><h4>用户是否理解产品价值？</h4><p>品牌情境能否引出清洁任务？双盘旋转、握持方式与适用地面是否有明确说明？</p></article>
+          <article><small>CONTENT × CHANNELS</small><h4>信息在哪个触点断开？</h4><p>核对社媒内容、Creator 演示、产品说明与落地页是否表达一致，再排查发布或访问异常。</p></article>
+          <article><small>OPERATIONS × BUSINESS</small><h4>问题该交给谁解决？</h4><p>内容、站点、商品、客服和供应链分别核实自身环节；商业结果必须由订单和数据负责人确认。</p></article>
         </div>
-        
-      </div>`;
+        <div class="m3-knowledge-cycle" id="m3-knowledge-loop">
+          <header><small>PROBLEM → EVIDENCE → HYPOTHESIS → ACTION → RESULT → LEARNING</small><h4>复盘不以报表结束，而以可检验的下一步结束</h4></header>
+          <ol>
+            <li><span>01 / PROBLEM + EVIDENCE</span><strong>明确问题与证据</strong><p>结合已发布内容、原始平台数据、用户提问和实际页面记录，先区分事实、缺失数据与待验证的判断。</p></li>
+            <li><span>02 / HYPOTHESIS</span><strong>提出可能的原因</strong><p>例如：产品动作没有讲清、渠道信息不一致，或目标页面承接有问题；保留其他解释，不凭单一指标下结论。</p></li>
+            <li><span>03 / ACTION</span><strong>选择有边界的调整</strong><p>根据问题改进连续操作镜头、FAQ、开场文案或链接；明确内容负责人、产品事实审核与渠道放行。</p></li>
+            <li><span>04 / RESULT + EXCEPTIONS</span><strong>验证效果与失败条件</strong><p>在可比市场、素材版本和观察窗口内复核原指标，同时查看负反馈、链接异常和供货等干扰因素；结果不成熟则继续验证。</p></li>
+            <li><span>05 / LEARNING + REUSE</span><strong>沉淀规则与触发条件</strong><p>记录适用人群、情境、证据、下一次触发条件和重新核验节点；未经验证的经验只作为候选，不直接变成团队规范。</p></li>
+          </ol>
+        </div>
+        <section class="m3-learning-diagnosis" aria-labelledby="m3-learning-diagnosis-title">
+          <div class="m3-learning-subheading"><small>CHANNEL SIGNALS × DECISION ROUTING</small><h4 id="m3-learning-diagnosis-title">从哪种问题出发，决定下一步先查什么</h4></div>
+          <div class="m3-review-table-wrap" role="region" aria-label="M3传播问题、证据与决策对照表" tabindex="0">
+            <table class="m3-review-evidence-table">
+              <thead><tr><th scope="col">问题类型</th><th scope="col">核对的证据</th><th scope="col">下一轮动作</th><th scope="col">验证与协作边界</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">产品价值没有讲清</th><td>完整产品演示、观看口径、评论与 FAQ 问题；核对产品型号和真实操作。</td><td>优先补握持、双盘接地及连续操作镜头，再更新产品说明。</td><td>观察理解类疑问及有效访问；产品负责人确认使用条件。</td></tr>
+                <tr><th scope="row">社媒内容与渠道信息脱节</th><td>实际发布链接、内容版本、渠道 Brief、素材授权与发布时间。</td><td>修复错误版本、统一信息顺序和渠道承接入口。</td><td>内容组检查交付；渠道 Owner 确认发布或广告状态。</td></tr>
+                <tr><th scope="row">有点击但后续体验不顺畅</th><td>同窗口 UTM、GA4 页面到达、加载与退出，商品信息和页面可用性。</td><td>排查链接、移动端页面、FAQ 和商品信息，不直接归咎于创意。</td><td>由站点与数据负责人核实原因；不把点击等同订单。</td></tr>
+                <tr><th scope="row">用户问题持续出现</th><td>社群／客服问题分类、适用表面、售后说明与获许可的用户反馈。</td><td>补教程、修改 FAQ 或交接产品问题，必要时停止无法证明的说法。</td><td>复核相同问题是否减少，并确认产品和客服的处理结果。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="m3-learning-example" aria-label="未执行的候选复盘判断示例">
+          <div><small>ILLUSTRATIVE DECISION / NOT A MEASURED RESULT</small><h4>一个可验证的内容调整判断</h4><p>如果真实评论反复询问双盘拖把怎样握持和移动，首先检查是否缺少连贯操作镜头，而不是立即增加卖点或优惠。由内容组补充示范、产品端核对适用条件，后续在可比窗口观察同类问题与有效访问变化。</p></div>
+          <aside><small>STATUS / CANDIDATE</small><strong>仅为待验证的决策示例</strong><p>尚无本项目已完成的实验结果；不能据此写成增长结论或自动执行规则。</p></aside>
+        </div>
+        <details class="m3-review-source-detail"><summary>查看 Knowledge Loop 的证据、状态与复核要求</summary>
+          <p>依据 Growth Knowledge Loop Registry，每条可复用经验需保留业务范围、触发条件、主要障碍、数据来源、行动 Owner、主指标、负向约束、观察窗口、失败信号和重新复核条件。仅记录报告或提出假设，不等于证实了因果关系。</p>
+          <p>经验应按 CANDIDATE → PROVISIONAL → VALIDATED → ACTIVE 的规则接受证据、QA 和业务审批；若市场、产品、数据定义或结果改变，必须重新检查甚至降级。当前 M3 案例没有可复核的实际 Campaign 成效数据，不将候选判断展示为已验证知识资产。</p>
+        </details>
+        <nav class="m3-learning-followups" aria-label="复盘相关能力案例"><a href="#/case/gtm/campaign-architecture">返回整合传播与渠道角色 ↗</a><a href="#/case/creative/video-projects">查看视频创意与产品动作演示 ↗</a><a href="#/case/operations/asset-review">查看内容审核及团队交付 ↗</a></nav>
+      </section>`;
   }
 
   function launchDelivery() {
@@ -221,24 +258,7 @@
         <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
-      <section class="m3-kv-showcase" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>CAMPAIGN VISUAL / MAY 2026</small><h3 id="m3-kv-heading">M3 Campaign KV｜主视觉与渠道适配</h3><p>官方黄色 M3 产品图、品牌色和两套传播主张，分别用于横版传播与社媒 Feed。</p></header>
-        <div class="m3-kv-comps">
-          <figure class="m3-kv-landscape">
-            <div class="m3-kv-copy"><small>M3 / PRODUCT MARKETING</small><h4>From grip<br>to floor.</h4><p>Dual-head electric mop.<br>D-shaped handle.</p><span>POWER EVERY MOVE.</span></div>
-            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 双盘电动拖把官方产品图，包含手柄与双盘结构" loading="lazy" decoding="async">
-            <figcaption>16:9 / Campaign KV</figcaption>
-          </figure>
-          <figure class="m3-kv-feed">
-            <div class="m3-kv-copy"><small>M3 / BRAND CAMPAIGN</small><h4>Make Room for<br>What Matters.</h4><p>Meet M3.</p></div>
-            <img src="assets/projects/m3-yellow-main.webp" alt="黄色 M3 产品主视觉用于社媒 Feed 版式" loading="lazy" decoding="async">
-            <figcaption>4:5 / Social Feed</figcaption>
-          </figure>
-        </div>
-        <p class="m3-kv-footer"><a href="#/case/operations/asset-review">查看 M3 KV 修改与审核过程 ↗</a></p>
-      </section>
-      
-<section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
+      <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
   <header class="pmm-board-head pmm-board-lead">
     <small>PRODUCT POSITIONING / COMMERCIAL MESSAGE / M3</small>
     <h3 id="pmm-decision-heading">从餐后清洁任务，确定 M3 值得被选择的理由</h3>
@@ -321,7 +341,7 @@
           <article><span>04 / LAUNCH & LEARN</span><h4>发布节奏与后续复盘相连</h4><p>产品/商业同事确认 SKU、Offer、库存、履约和追踪条件，内容侧按审核结果出片；上市后分 D7 / D30 复核内容与承接。</p><b>我的参与</b><small>物料准备、内容质量验收与项目复盘协作</small></article>
         </div>
         <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
-        <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
+        <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-knowledge-loop">查看 D7 / D30 复盘逻辑 ↗</a></p>
       </section>
       <details class="g-story-note v-supporting-evidence" id="launch-channel-plan">
         <summary>渠道分工与用户任务 · 查看四类触点明细</summary>
@@ -360,7 +380,7 @@
           </div>
         </section>
 <div class="campaign-proof-gallery" id="campaign-proof-gallery" aria-label="M3 上市的产品与视觉素材">
- <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>KV · 外观与品牌信息</span></figcaption></figure>
+ <figure><img src="assets/projects/m3-yellow-main.webp" alt="M3 产品主体主视觉" loading="lazy" decoding="async"><figcaption><b>01 / 产品识别</b><span>产品外观源图 · 不是完整 KV</span></figcaption></figure>
  <figure><img src="assets/projects/mop-kv-detail.webp" alt="M3 双盘拖把结构细节" loading="lazy" decoding="async"><figcaption><b>02 / 机制展示</b><span>操作镜头 Brief · 结构细节</span></figcaption></figure>
  <figure><img src="assets/projects/m3-yellow-battery.webp" alt="M3 电池部件外观图" loading="lazy" decoding="async"><figcaption><b>03 / 产品教育</b><span>FAQ · 产品细节与信息承接</span></figcaption></figure>
 </div>
@@ -454,25 +474,43 @@
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
           </details>
-          <div class="campaign-integration-guardrails" aria-label="Campaign 管理与跨渠道交付">
-            <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / 协同与审核</span><h5>一份主张，三处关键交接</h5><p>传播策划不代替各渠道负责人决策；我负责把产品事实、素材需求、审核意见和日历节点对齐。</p></div>
+          <div class="campaign-integration-guardrails" aria-label="Campaign 传播方案与团队交付管理">
+            <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / FROM BRIEF TO DELIVERY</span><h5>从品牌主张到跨团队交付</h5><p>我将核心传播信息、产品证据、创意物料与社媒日历组织成同一份执行计划，并协调产品、视觉、视频、Creator 及渠道同事按节点交付。</p></div>
+            <div class="campaign-management-sequence" aria-label="品牌定位到执行的四步链条">
+              <article><small>BRAND</small><b>Power Every Move</b><p>品牌一致性</p></article>
+              <article><small>IMC / BIG IDEA</small><b>Make Room for What Matters</b><p>餐后生活场景</p></article>
+              <article><small>CREATIVE</small><b>三个创意切入点</b><p>情境反差 · 动作演示 · 家庭情绪</p></article>
+              <article><small>DELIVERY</small><b>不同渠道分工</b><p>KV、视频、社群、PR、邮件</p></article>
+            </div>
             <div class="campaign-integration-grid">
-              <article><b>内容与版本</b><p>先确认主视觉、产品实拍、FAQ 和英文 Brief 的源版本，再适配各平台开场、画幅、CTA 与信息密度。</p></article>
-              <article><b>放行与责任</b><p>产品核对功能与适用条件；视觉/视频核对真实结构；渠道 Owner 分别负责发布、预算、授权、优惠和页面可售状态。</p></article>
-              <article><b>复盘与调整</b><p>按创意方向对照观看、互动、有效访问和高频疑问；商业表现只采用订单与数据负责人的同口径核验结果。</p></article>
+              <article><b>01 / Brief 与素材组织</b><p>统一英文主题、用户情境、M3 型号与卖点证据；把主 KV、分镜、Creator Brief、FAQ 和渠道文案对应到各自的任务。</p></article>
+              <article><b>02 / 制作、版本与放行</b><p>按阶段确认产品结构与操作镜头、字幕和场景用法；与产品及渠道负责人核对事实、素材授权、链接与发布窗口。</p></article>
+              <article><b>03 / 上线反馈与复盘</b><p>分别观察观看与互动、FAQ 问题、访问及已核实的商业信号，再决定后续内容重点；不把曝光直接写成订单成果。</p></article>
+            </div>
+            <div class="campaign-release-checkpoints" aria-label="Campaign四个关键发布节点">
+              <div><small>PREPARE</small><strong>锁定信息与物料</strong><span>产品事实、Brief、主视觉、授权</span></div>
+              <div><small>PRODUCE</small><strong>形成渠道版本</strong><span>脚本、实拍、剪辑、文案与 FAQ</span></div>
+              <div><small>LAUNCH</small><strong>按窗口发布</strong><span>渠道 Owner、链接、适用条件、CRM 承接</span></div>
+              <div><small>LEARN</small><strong>让反馈回到策划</strong><span>创意表现、用户疑问、后续选题</span></div>
             </div>
           </div>
         <div class="campaign-assets-showcase" id="campaign-paid-email-assets" aria-label="广告和邮件沟通创意样例">
-          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / 内容策略到创意版本</small><h4>保留同一 Big Idea，改变每个渠道的叙事方式</h4><p>Hero 负责让人记住“餐后还有一件清洁小事”；短视频让动作可信；社群负责征集问题；PR 和产品内容负责核实。不是把同一张 KV 缩放成不同尺寸。</p></div>
+          <div class="campaign-assets-heading"><small>CREATIVE ADAPTATION / CHANNEL-NATIVE CAMPAIGN</small><h4>主题统一，内容职责与创意动作各不相同</h4><p>同一个 Make Room for What Matters，KV 讲生活情绪，短视频交代双盘动作，社群讨论真实问题，PR 与搜索内容提供可查的产品事实；各渠道以不同信息深度支持同一选择过程。</p><p><a href="#/case/creative/video-projects">查看品牌视频如何安排叙事、Paid 创意供给与 Lifecycle 内容承接 ↗</a></p></div>
           <div class="campaign-assets-pair">
             <article class="campaign-ad-visual"><span>PAID / DISCOVERY CREATIVE</span><h5 lang="en">Dinner's done.<br>The floor isn't.</h5><p>首屏呈现餐后待清理的地面；随后以产品出场和连续操作兑现开场提出的问题。</p><div class="campaign-asset-tags"><small>A · 餐后场景冲突</small><small>B · 双盘动作揭示</small><small>C · 握持操作细节</small></div><p class="campaign-asset-caption">三条 Hook 对应不同理解障碍，非同一视频换字幕；具体测试、预算和购买型 CTA 须由 Paid Owner 核准。</p></article>
             <article class="campaign-email-visual"><span>EDM / LIFECYCLE</span><div class="campaign-email-head"><b>New arrival</b><small>US / EN</small></div><h5 lang="en">Meet M3. Made for everyday floor care.</h5><p>预热先讲日常地面任务，上市期重点回答产品怎么用、是否适合自己的地面；购后以操作说明和维护 FAQ 延续体验。</p><div class="campaign-asset-tags"><small>订阅认知</small><small>产品考虑</small><small>已购教育</small></div><p class="campaign-asset-caption">不同阶段提供不同的信息深度；许可、触发、排除与发送由 CRM Owner 确认。</p></article>
           </div>
-          <div class="campaign-adaptation-grid" aria-label="跨渠道创意表达与内容任务">
-            <article><small>HERO / KV</small><h5>一眼看懂主题</h5><p>以餐桌到地面的视觉关系建立反差，M3 产品主体清晰可识别；品牌主题不遮挡双盘结构。</p><b>检验：品牌、产品与任务是否同屏可读</b></article>
-            <article><small>REELS / CREATOR</small><h5>让产品动作说话</h5><p>从任务切入，连续拍到握持、接地和推进。创作者保持真实体验与必要披露，不用无依据的结果字幕。</p><b>检验：动作完整、事实准确、复用获授权</b></article>
-            <article><small>FACEBOOK / GROUP</small><h5>把场景变成问题</h5><p>从“饭后地面最难处理什么”发起讨论，评论与社群 FAQ 反过来为下一轮短视频补充题目。</p><b>检验：问题具体、互动门槛低、反馈可归类</b></article>
-            <article><small>PR / SEARCH</small><h5>把兴趣变成可核信息</h5><p>用品牌背景、产品结构、适用场景及官方 FAQ 支撑理解；媒体和搜索内容不借情绪概念夸大功能。</p><b>检验：新闻角度、事实和适用限制一致</b></article>
+          <div class="campaign-adaptation-grid" aria-label="按渠道不同任务分工的创意方案">
+            <article><small>BRAND / HERO KV</small><h5>让观众记住生活情境</h5><p><strong>创意：</strong>餐桌收尾与待整理地面的画面转场。<strong>证明：</strong>M3 主体及双盘结构同屏可见。<strong>用途：</strong>品牌 Campaign 视觉与首轮主题触达。</p><b>交付：KV 主视觉、英文主题与产品识别</b></article>
+            <article><small>REELS / CREATOR</small><h5>把生活故事拍成产品动作</h5><p><strong>创意：</strong>从地面问题开场，接连展示握持、双盘接地和移动。<strong>证明：</strong>连贯实拍与型号一致；合作内容保留披露与使用许可。</p><b>交付：竖屏 Hook、镜头清单、Creator Brief</b></article>
+            <article><small>FACEBOOK / GROUP</small><h5>用问题引出教程和讨论</h5><p><strong>创意：</strong>询问餐后地面最难整理的环节，将常见回答拆成操作演示与 FAQ。<strong>判断：</strong>区分真实用户疑问与短期互动热度。</p><b>交付：讨论话题、教程短片、FAQ 衍生</b></article>
+            <article><small>PR / CONTENT / SEARCH</small><h5>让用户能够继续查证</h5><p><strong>创意：</strong>从家庭清洁场景进入产品差异，分别提供品牌故事、操作说明和选购信息。<strong>证明：</strong>使用条件与产品事实一致。</p><b>交付：媒体内容结构、FAQ 与选购承接</b></article>
+          </div>
+          <div class="campaign-adaptation-journey" aria-label="同一品牌主题下的渠道信息深度">
+            <div><small>01 / REMEMBER</small><strong>记住场景</strong><span>Hero KV / 情境短片</span></div>
+            <div><small>02 / UNDERSTAND</small><strong>看懂机制</strong><span>Reels / Creator 演示</span></div>
+            <div><small>03 / VERIFY</small><strong>确认适配性</strong><span>PR / FAQ / 产品内容</span></div>
+            <div><small>04 / ENGAGE</small><strong>带走真实问题</strong><span>社群讨论与后续选题</span></div>
           </div>
           <div class="campaign-asset-links"><a href="#/case/crm/crm-handoff">查看 CRM 触达与排除逻辑 ↗</a><a href="#/case/creative/video-strategy">查看视频创意与开场设计 ↗</a></div>
         </div>
@@ -662,17 +700,60 @@
   }
 
   function pr() {
-    return section("北美家庭清洁主题新闻稿发布", "King Newswire 分发 · USA Today Press Release 页面 · 2026 年 5 月", `
-      <div class="g-project-feature g-project-wide-image"><figure>${image("pr-home-scene", "北美家庭客厅和厨房的清洁场景配图")}<figcaption>新闻稿配图 · 家庭清洁场景</figcaption></figure>
-      <div>
-        <h3>传播主题：从单品功能转向全屋清洁任务</h3>
-        <p>稿件以北美家庭常见清洁场景组织产品信息，包括宠物毛发、地面污渍、浴室污垢、厨房油污和烧烤后残渣，让不同工具对应不同家庭任务。</p>
-        <h3>传播结构：场景问题 → 产品分工 → 使用价值</h3>
-        <p>以家庭日常场景作为入口，再说明地面清洁、浴室刷洗、吸尘和烤炉清洁等工具的使用边界；传播表达围绕已确认的产品功能展开。</p>
-        <h3>新闻稿分发</h3>
-        <p>新闻稿经 King Newswire 分发，刊载于 USA Today 的 Press Release 栏目。</p>
-        
-      </div></div>`, "pr-project");
+    return section("北美品牌传播｜从产品线信息到 PR 主题", "2026 年 5 月 · 家庭清洁主题新闻稿与整合内容策划", `
+      <section class="pr-editorial-hero" id="pr-strategy-overview" aria-labelledby="pr-story-heading">
+        <figure>${image("pr-home-scene", "北美家庭厨房与客厅清洁主题新闻稿配图")}<figcaption>北美家庭清洁主题新闻稿使用的场景配图</figcaption></figure>
+        <div class="pr-editorial-intro">
+          <small>BRAND STORY / EARNED CONTENT / NORTH AMERICA</small>
+          <h3 id="pr-story-heading">不按产品目录写新闻稿，先讲一个家庭为什么需要不同清洁工具</h3>
+          <p>这次选择“全屋清洁任务”作为新闻稿的内容主线：从地面污渍、宠物毛发和浴室刷洗，到厨房与烧烤后的清洁。不同场景对应不同工具，让四条产品线出现在同一条可理解的品牌故事里。</p>
+          <div class="pr-editorial-decision"><span>品牌主张</span><strong>Power Every Move</strong><span>内容选择</span><strong>家庭任务先于产品参数</strong><span>传播形式</span><strong>英文新闻稿与场景配图</strong></div>
+        </div>
+      </section>
+      <section class="pr-strategy-frame" aria-labelledby="pr-frame-heading">
+        <header class="pr-section-heading"><small>MARKET × CUSTOMER × BRAND</small><h3 id="pr-frame-heading">先确定说什么，再决定向谁传播</h3><p>把市场类别、实际使用问题和品牌能够提供的产品信息放在一起，形成内容方向，而不直接套用宽泛的“生活方式”标签。</p></header>
+        <div class="pr-intelligence-grid">
+          <article><small>01 / 市场与品类</small><h4>按清洁任务识别产品类别</h4><p>旋转拖把、无绳吸尘器、电动刷与烧烤刷解决的问题并不相同。新闻稿选择“一个家庭，多类清洁任务”作为连接方式，而非把各产品参数直接并排。</p><b>决策：让产品组合具有同一品牌语境</b></article>
+          <article><small>02 / 用户与使用场景</small><h4>让读者先认出自己面对的问题</h4><p>宠物毛发与碎屑、地面溅渍、浴室边沿、烧烤残渣是不同的使用入口。内容按任务解释工具角色；适用地面、污物类型及操作限制依型号材料核对。</p><b>决策：用场景分工代替笼统的“全能清洁”</b></article>
+          <article><small>03 / 品牌与传播主张</small><h4>让产品价值支撑品牌记忆</h4><p>Power Every Move 作为长期品牌主张；对外信息落在清洁头如何运动、怎样接触表面和用户如何操作。消费者看得懂动作，品牌故事才有可信的产品基础。</p><b>决策：品牌情绪后面必须跟得上产品证明</b></article>
+        </div>
+      </section>
+      <section class="pr-message-house" aria-labelledby="pr-message-heading">
+        <header class="pr-section-heading"><small>MESSAGE ARCHITECTURE / FOUR PRODUCT LINES</small><h3 id="pr-message-heading">一条品牌故事，四种产品角色</h3><p>新闻稿主体围绕不同清洁情境展开。每一段内容回答一类问题，并安排能支持该说法的产品资料与画面。</p></header>
+        <div class="pr-message-roof"><span>Power Every Move</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
+        <div class="pr-message-grid">
+          <article><small>FLOOR CARE</small><h4>地面污渍与日常拖洗</h4><p>用餐区与硬地情境说明旋转拖地工具的任务；画面要能看见双盘接地、推进和转向。</p><b>素材：地面动作与适用条件</b></article>
+          <article><small>VACUUM</small><h4>宠物毛发与日常吸尘</h4><p>用毛发和碎屑收集任务说明吸尘工具的分工，不能把吸尘与拖洗描述为同一种能力。</p><b>素材：吸头、接触位置与清理过程</b></article>
+          <article><small>SCRUBBING</small><h4>浴室内沿与墙砖接缝</h4><p>通过杆体与刷头角度，展示长柄清洁刷如何到达具体位置；配件适配以对应型号为准。</p><b>素材：站位、角度、刷头与表面</b></article>
+          <article><small>GRILL CARE</small><h4>烧烤后的烤炉清洁</h4><p>将户外烧烤作为独立任务，交代刷头用途、操作方式及表面限制，避免借用浴室或地面清洁的效果承诺。</p><b>素材：烤炉使用画面与安全说明</b></article>
+        </div>
+      </section>
+      <section class="pr-distribution-system" aria-labelledby="pr-distribution-heading">
+        <header class="pr-section-heading"><small>PR × CONTENT × SOCIAL × PARTNERSHIPS</small><h3 id="pr-distribution-heading">围绕同一个品牌主题，安排不同的传播任务</h3><p>媒体内容解决“品牌是谁、产品分别做什么”；搜索内容回答更具体的选购问题；社交和创作者内容让使用动作可见。不是把同一篇新闻稿复制到所有平台。</p></header>
+        <div class="pr-channel-grid">
+          <article><small>PR / DISTRIBUTION</small><h4>媒体发布与事实留档</h4><p>英文稿件用标题、导语、产品任务与可验证资料组织信息。此次经 King Newswire 分发，并出现于 USA Today 的 Press Release 栏目。</p><b>实际交付：主题新闻稿与分发刊载记录</b></article>
+          <article><small>CONTENT / SEARCH</small><h4>从品牌主题延伸到用户问题</h4><p>按地面、宠物、浴室等任务延展教程与 FAQ，解释工具差异、操作方法和适用范围，并衔接相关产品内容。</p><b>内容衍生方向：问题型教育与选购信息</b></article>
+          <article><small>SOCIAL / COMMUNITY</small><h4>让场景变成可讨论的问题</h4><p>把新闻稿里较长的产品叙述拆成短视频、操作图和社区提问；优先从已有用户问题中选择值得演示的片段。</p><b>渠道衍生方向：教程、提问、社群反馈</b></article>
+          <article><small>CREATOR / PARTNERSHIPS</small><h4>由真实使用过程建立第三方视角</h4><p>围绕实际使用场景选择适合的创作者，确认脚本边界、利益关系披露与素材许可；联合活动则要求双方先统一产品事实和参与规则。</p><b>关联工作：创作者 Brief 与合作活动视觉</b></article>
+          <article><small>REGIONAL / ENGLISH CONTENT</small><h4>北美表达与区域内容适配</h4><p>本次稿件面向北美英语内容环境。其他国家若复用主题，需要重新核对类别用语、场景、型号、单位、购买入口和售后，不将美国刊载直接算作多国媒体覆盖。</p><b>区域约束：事实统一，表达按市场调整</b></article>
+        </div>
+      </section>
+      <section class="pr-editorial-delivery" aria-labelledby="pr-delivery-heading">
+        <header class="pr-section-heading"><small>PLANNING / APPROVAL / DELIVERY</small><h3 id="pr-delivery-heading">把传播主题变成能实际交付的媒体内容</h3></header>
+        <div class="pr-delivery-flow">
+          <article><span>01</span><h4>主题与结构</h4><p>明确家庭清洁总议题，按产品任务分配稿件段落。</p></article>
+          <article><span>02</span><h4>产品事实与配图</h4><p>统一名称、功能、使用条件及配图对应的产品版本。</p></article>
+          <article><span>03</span><h4>英文稿件与确认</h4><p>调整英文表达、标题信息与媒体问答，交由相关负责人核对。</p></article>
+          <article><span>04</span><h4>刊载与内容复用</h4><p>区分付费/新闻稿分发刊载与独立编辑报道；按渠道重写内容。</p></article>
+        </div>
+        <div class="pr-published-evidence"><div><small>DOCUMENTED DISTRIBUTION / MAY 2026</small><strong>King Newswire → USA Today Press Release</strong><p>已呈现的是新闻稿分发和 Press Release 栏目刊载；不据此推断独立编辑推荐、自然媒体口碑或销售转化。相关传播效果须以实际流量与媒体记录单独判断。</p></div><a href="#/case/brand/brand-positioning">查看品牌定位与产品线信息 ↗</a></div>
+        <nav class="pr-related-work" aria-label="品牌传播相关案例">
+          <a href="#/case/brand/brand-collaboration">品牌联合活动视觉 ↗</a>
+          <a href="#/case/creative/video-strategy">视频与 Creator 创意方向 ↗</a>
+          <a href="#/case/community">社群内容与用户问题 ↗</a>
+          <a href="#/case/gtm/campaign-architecture">M3 整合传播与 Campaign 管理 ↗</a>
+        </nav>
+      </section>`, "pr-project");
   }
 
   function seasonalCreative() {
@@ -772,10 +853,25 @@
 
   function creative() {
     return section("视频创意与 Campaign 内容案例", "节庆品牌影片、产品演示与 Creator 内容的创意方向、脚本、镜头审核及渠道适配。", `
+
       <section class="tvc-creative-intro" id="video-campaign-showcase">
-        <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
-        <h3>节庆品牌叙事与产品演示</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。节庆影片将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍。</p>
+        <span>BRAND CAMPAIGN / VIDEO STRATEGY / CREATOR</span>
+        <h3>从品牌要被记住的理由，决定视频要讲什么</h3>
+        <p>节庆影片负责让人认识品牌的生活温度，产品演示负责回答“这件工具具体怎么用”。我将家庭关系、真实清洁任务和产品操作分别组织成不同镜头任务，再按 Social、Paid 与用户后续内容需求安排版本；不是一支成片适用于所有渠道。</p>
+      </section>
+      <section class="video-positioning-board" id="video-brand-positioning" aria-labelledby="video-positioning-title">
+        <div class="video-section-lead"><small>MARKET / CUSTOMER / BRAND</small><h3 id="video-positioning-title">视频创意从三个判断开始</h3><p>品牌影片既要与品类中常见的功能演示区分，又不能为了情绪故事牺牲产品事实。视频的角色由受众当下想知道的问题决定。</p></div>
+        <div class="video-positioning-grid">
+          <article><small>01 / MARKET CONTEXT</small><h4>清洁工具需要被看懂</h4><p>消费者比较不同清洁方式时，画面需要明确工具类型、实际接触面和操作任务。只展示“干净的房间”无法说明产品为什么值得进入选择范围。</p><b>创意选择：让产品动作承担可信度</b></article>
+          <article><small>02 / CUSTOMER QUESTION</small><h4>家庭情绪与选购疑问分别回应</h4><p>节庆触达阶段先建立生活关联；进入产品比较时，回答怎么握持、接触什么表面、需要注意什么。楼梯吸尘与硬地拖洗不能混为一种功能证明。</p><b>信息选择：问题不同，视频叙事也不同</b></article>
+          <article><small>03 / BRAND ROLE</small><h4>Power Every Move 不只出现在片尾</h4><p>人物的关心通过实际行动呈现，工具则在具体清洁任务中自然出现。品牌主张通过“人做了什么、产品帮了什么”建立记忆，而不是只叠加一句口号。</p><b>品牌选择：情感有情境，功能有证据</b></article>
+        </div>
+        <div class="video-campaign-positioning-line">
+          <div><small>BRAND PROMISE</small><strong>Power Every Move</strong><span>长期品牌价值：真实家庭任务中的行动与照料</span></div>
+          <div><small>SEASONAL CREATIVE</small><strong>Thanksgiving / Christmas</strong><span>两种节日关系叙事，不复制同一支视频</span></div>
+          <div><small>PRODUCT PROOF</small><strong>Creator Demonstration</strong><span>楼梯吸尘与客厅介绍分别承担使用证明和产品识别</span></div>
+        </div>
+        <p class="video-context-note">节庆影片的情感创意属于品牌内容；<em>Make Room for What Matters</em> 是 M3 上市 Campaign 的独立创意主题。两者共用品牌价值与产品事实，但不混写为同一次已发布活动。</p>
       </section>
       <div class="tvc-work-grid" aria-label="节庆 Campaign 视频案例">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
@@ -807,14 +903,20 @@
           </div>
         </article>
       </div>
-      <section class="tvc-campaign-bridge" id="video-campaign-strategy">
-        <header><small>CAMPAIGN → STORY → CHANNEL</small><h3>从节庆主题，到可用于渠道传播的创意内容</h3><p>节庆影片的任务是情绪联结与产品价值沟通；短视频与商品内容进一步解释使用方式。Campaign 中的素材分工围绕同一产品信息展开。</p></header>
+
+      <section class="tvc-campaign-bridge video-imc-framework" id="video-campaign-strategy">
+        <header><small>BRAND POSITIONING → IMC → VIDEO CREATIVE</small><h3>同一个品牌方向，不同视频要完成不同的传播任务</h3><p>品牌视频建立关系感，短视频让问题在前几秒出现，Creator 内容用人物与真实动作解释产品。Paid 版本按广告任务决定 Hook 与证据顺序，产品教育则延伸至选购和使用阶段。</p></header>
         <div class="tvc-campaign-bridge-grid">
-          <article><span>BRAND / TVC</span><h4>情绪与记忆</h4><p>感恩节围绕感谢与相聚，圣诞节围绕日常关怀。让人物和产品动作在故事中发生联系。</p></article>
-          <article><span>SOCIAL / PAID CREATIVE</span><h4>节奏与创意适配</h4><p>从完整故事中选取场景、人物和产品镜头，分别适配 Feed、Reels、视频广告等渠道的信息顺序。</p></article>
-          <article><span>KOL / CREATOR</span><h4>使用体验与产品教育</h4><p>楼梯清洁审核吸头接触与行进路径，客厅介绍审核人物讲解、产品识别与握持展示；不同版本按平台和任务分别剪辑。</p></article>
+          <article><span>BRAND TVC / AWARENESS</span><h4>情绪记忆：让人认识品牌</h4><p>感恩节用餐桌团聚建立感谢；圣诞节用默默照料建立亲密感。产品出现时仍要符合实际使用场景。</p><b>作品：两支节庆主题影片</b></article>
+          <article><span>SOCIAL / COMMUNITY</span><h4>话题与参与：让用户提出问题</h4><p>拆出“餐后谁来整理”“哪些角落最难清洁”等真实任务，形成 POV、问题型短片和社群讨论，再用反馈决定演示题材。</p><b>渠道任务：话题视频、教程与 FAQ</b></article>
+          <article><span>PAID ARCHITECTURE / GROWTH</span><h4>创意供给：让不同开场接受验证</h4><p>情境反差、产品动作、人物讲述对应不同的关注障碍；拆分首屏、节奏和主要证据，由 Paid Owner 确认投放资格、受众与测试窗口。</p><b>素材任务：Hook 版本、比例、字幕与广告落点</b></article>
+          <article><span>CREATOR / PRODUCT EDUCATION</span><h4>使用证明：让产品选择更具体</h4><p>楼梯片段重点审查吸头与踏面接触，客厅片段重点审查讲解与握持。素材许可、型号、配件与使用条件随版本核对。</p><b>作品：两个不同任务的 Creator 竖屏片段</b></article>
         </div>
-        <p><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道协同 ↗</a> · <a href="#/case/operations/asset-review">查看创意与物料审核 ↗</a></p>
+        <div class="video-imc-related">
+          <a href="#/case/brand/brand-positioning">查看品牌定位与产品角色 ↗</a>
+          <a href="#/case/brand/pr-project">查看品牌 PR 信息架构 ↗</a>
+          <a href="#/case/gtm/campaign-architecture">查看 M3 Campaign Big Idea 与管理 ↗</a>
+        </div>
       </section>
       <section class="video-storyline" id="video-storyline" aria-label="圣诞 TVC 四段叙事结构">
         <header><small>CHRISTMAS STORY / 画面叙事</small><h3>圣诞 TVC：四个镜头任务</h3><p>从家庭氛围出发，让清洁动作成为人物关系的一部分，最后以团聚收束。</p></header>
@@ -867,12 +969,43 @@
           <article><small>CREATOR REVIEW</small><h4>创作者内容与素材验收</h4><p>在合作 Brief 中说明受众、演示任务、产品事实和披露要求，审阅初稿、修改版本及素材使用范围。</p></article>
         </div>
       </section>
-      <div class="g-story-note" id="video-management">
-        <h3>我的创意参与与项目交付</h3>
-        <p>依据 Campaign 目标和受众场景提出创意方向，完成脚本修改、镜头要求及内容审核；制作过程中核对产品结构、真实操作、字幕与画幅，分别准备不同平台的发布版本。</p>
-        <p>负责 Campaign 创意主题、社媒短视频选题、内容 Hook、分镜脚本、人物与产品动作审核、成片修改及不同平台的内容适配。</p>
-        <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
-      </div>`, "video-projects");
+
+      <section class="video-journey-strategy" id="video-awareness-lifecycle" aria-labelledby="video-journey-title">
+        <header class="video-section-lead"><small>BRAND TRAFFIC / SOCIAL → PAID → LIFECYCLE</small><h3 id="video-journey-title">视频先承担认知任务，后续由不同渠道接住用户问题</h3><p>这是一套内容与触点的规划方式，不将视频观看者直接认定为潜客或会员。每个阶段必须有独立的行动与验证依据。</p></header>
+        <div class="video-journey-grid">
+          <article><small>01 / REACH</small><h4>看见品牌</h4><p>节庆 TVC、情境视频围绕家庭关系和生活任务建立第一印象。</p><b>关注：覆盖、有效观看、品牌相关反馈</b></article>
+          <article><small>02 / ENGAGE</small><h4>产生兴趣</h4><p>Social Reels 与社群提问用真实清洁问题引发讨论，把高频疑问转入教程脚本。</p><b>关注：有效互动、问题类别、后续观看</b></article>
+          <article><small>03 / UNDERSTAND</small><h4>看懂产品</h4><p>Creator 演示补足动作、持握、产品识别和适用条件；对照内容回答“用什么、怎么用”。</p><b>关注：内容完成度、FAQ 访问与理解障碍</b></article>
+          <article><small>04 / CONSIDER</small><h4>评估与选择</h4><p>Paid 创意与产品资料保持承诺一致，落地内容提供型号、配置、适用范围及购买条件。</p><b>关注：合格访问、页面继续行为与已核实转化</b></article>
+          <article><small>05 / AFTER PURCHASE</small><h4>使用与关系维护</h4><p>获准的购后内容可提供安装、保养、刷头更换、故障排查与真实使用示例；会员推荐和 UGC 需要同意、权益及授权。</p><b>关注：实际使用反馈、服务问题及有效参与</b></article>
+        </div>
+        <div class="video-lifecycle-handoff">
+          <article><small>LIFECYCLE MARKETING</small><h4>把视频变成对用户真正有用的内容</h4><p>订阅许可、购买与使用状态由 CRM / Lifecycle Owner 确认。未购买者可以查看选型或操作说明；已购买者接收适合型号的教程与维护提示，不因观看视频就自动触发购买催促。</p></article>
+          <article><small>LOYALTY / COMMUNITY</small><h4>支持长期关系，不把推荐看作播放的结果</h4><p>真实购后经验与授权 UGC 可以成为下一轮内容来源；会员、推荐奖励与 Ambassador 身份须由相应规则确认，不能把评论、转发或一次视频观看当作有效推荐。</p></article>
+        </div>
+        <p class="video-journey-links"><a href="#/case/crm">查看 CRM 与 Lifecycle 内容 ↗</a> · <a href="#/case/community">查看社群问题与真实反馈 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 渠道承接 ↗</a></p>
+      </section>
+      <section class="video-paid-framework" id="video-paid-creative-architecture" aria-labelledby="video-paid-heading">
+        <header class="video-section-lead"><small>VIDEO CREATIVE SUPPLY / PAID ARCHITECTURE</small><h3 id="video-paid-heading">同一素材库，按认知障碍开发不同的广告开场</h3><p>视频供给先区分情绪、任务和功能证明，再考虑适配 Feed / Reels / 广告版位；预算、受众、实验和最终效果由 Paid 业务口径判定。</p></header>
+        <div class="video-hook-grid">
+          <article><small>A / EMOTIONAL ENTRY</small><h4>人物关系先行</h4><p>以节庆团聚、默默照料等情节建立情绪，再自然让产品承担生活任务。</p><b>适用：品牌认知与故事传播</b></article>
+          <article><small>B / TASK ENTRY</small><h4>清洁问题先行</h4><p>前几秒直接展示楼梯、硬地或其他实际问题，随后以连贯动作解释解决路径。</p><b>适用：Social Hook 与兴趣型创意</b></article>
+          <article><small>C / PROOF ENTRY</small><h4>产品动作先行</h4><p>直接交代握持、接触面、工具运动和相关限制，降低观看者对产品工作方式的疑问。</p><b>适用：产品教育与有证据的广告内容</b></article>
+        </div>
+        <div class="video-test-boundary"><b>素材版本与实验边界</b><span>制作交付：母片、9:16 / 4:5 / 16:9 版本需求、字幕、首屏 Hook 与演示证据。</span><span>投放决策：广告目标、预算、受众、落地页、指标窗口与变体测试由 Paid Owner 校准。</span><span>没有实际广告实验或归因数据时，只展示创意方案，不宣称赢得 ROAS、CPA 或订单增长。</span></div>
+      </section>
+      <section class="video-production-management" id="video-production-management" aria-labelledby="video-production-title">
+        <header class="video-section-lead"><small>CREATIVE PLANNING / PRODUCTION / CAMPAIGN MANAGEMENT</small><h3 id="video-production-title">我的工作重点：让视频策略进入脚本、制作与渠道交付</h3><p>将 Campaign 的受众任务与品牌信息写进 Brief，审核每一个重要镜头如何支持剧情和产品真实操作，再协调不同渠道使用符合任务的版本。</p></header>
+        <div class="video-delivery-grid">
+          <article><span>01 / PLAN</span><h4>创意主题与 Brief</h4><p>确认用户场景、品牌语气、影片任务及产品角色；建立剧情、功能演示和 CTA 之间的优先级。</p><b>交付：创意提案、拍摄 Brief、脚本结构</b></article>
+          <article><span>02 / PRODUCE</span><h4>分镜与素材生产</h4><p>规划场景、人物动作、镜头次序与剪辑节奏，明确需要拍到的实际产品结构和连续操作。</p><b>交付：分镜、镜头要求、初版视频</b></article>
+          <article><span>03 / REVIEW</span><h4>产品事实和版权审核</h4><p>审查型号、接触表面、持握动作、字幕、音乐及素材使用许可；逐项记录需要修改的镜头和版本。</p><b>交付：修改反馈、审核版本、发布确认</b></article>
+          <article><span>04 / DISTRIBUTE</span><h4>多渠道内容适配</h4><p>依据 Feed、Reels、Creator 与 Paid 信息任务调整开场、时长、画幅和结束提示；与渠道负责人确认上线窗口。</p><b>交付：渠道版本、发布 Brief 与排期</b></article>
+          <article><span>05 / LEARN</span><h4>由反馈安排下一轮视频</h4><p>对照有效观看、互动问题和使用反馈复核内容表现，再决定补充教程、换开场或调整创意方向；结果与 attribution 分开判断。</p><b>交付：内容复盘、下一轮选题建议</b></article>
+        </div>
+        <div class="video-project-links"><a href="#/case/gtm/campaign-architecture">查看 M3 IMC 与 Campaign 管理 ↗</a><a href="#/case/operations/asset-review">查看实际审核与修改过程 ↗</a><a href="#/case/creative/video-strategy">查看视频创意拆解 ↗</a></div>
+      </section>
+`, "video-projects");
   }
 
   function expo() {

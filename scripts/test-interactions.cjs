@@ -127,9 +127,10 @@ const fs = require("fs"),
     });
   }
   await route("/case/gtm");
-  check("case visual links directly to sourced project assets", () => {
+  check("M3 project opens factual PMM positioning instead of discontinued KV", () => {
     assert.equal(d.querySelectorAll("[data-image]").length, 0);
-    assert.ok(d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
+    assert.ok(d.querySelector('a[href="#/case/gtm/gtm-positioning-decision"]'));
+    assert.ok(!d.querySelector('a[href="#/case/gtm/m3-campaign-kv"]'));
   });
   d.querySelector(".menu-button").click();
   check("mobile menu toggles", () =>
