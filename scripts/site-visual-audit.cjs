@@ -93,6 +93,17 @@ async function screenshot(label){
       report.issues.push({brandPr:{width,...prAudit}});
     }
     if(width===1440){await screenshot("BRAND_PR_DESKTOP")}else{await screenshot("BRAND_PR_MOBILE")}
+    const videoCase=await navigate(port,"case/creative/video-projects",width,height);
+    await evaluate("document.getElementById('video-brand-foundation')?.scrollIntoView({block:'start',behavior:'instant'})");
+    await delay(210);
+    const videoAudit=await evaluate("(()=>{const section=document.getElementById('video-projects'),hero=document.getElementById('video-brand-foundation'),bar=document.querySelector('.case-page .case-tabs');return {exists:!!section,top:hero?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,foundation:section?.querySelectorAll('.video-foundation-grid article').length||0,assets:section?.querySelectorAll('.video-asset-architecture-grid article').length||0,paid:section?.querySelectorAll('.video-paid-stage-grid article').length||0,lifecycle:section?.querySelectorAll('.video-lifecycle-journey article').length||0,production:section?.querySelectorAll('.video-production-grid article').length||0,tvcs:section?.querySelectorAll('.tvc-work-grid iframe').length||0,creator:section?.querySelectorAll('.g-video-gallery video').length||0,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_VIDEO_CAMPAIGN="+JSON.stringify({width,...videoAudit}));
+    report.videoCampaign ??=[];
+    report.videoCampaign.push({width,...videoAudit});
+    if(!videoAudit.exists||videoAudit.foundation!==3||videoAudit.assets!==4||videoAudit.paid!==4||videoAudit.lifecycle!==4||videoAudit.production!==3||videoAudit.tvcs!==2||videoAudit.creator!==2||videoAudit.overflow>12||videoAudit.top<videoAudit.navBottom-4){
+      report.issues.push({videoCampaign:{width,...videoAudit}});
+    }
+    if(width===1440){await screenshot("VIDEO_CAMPAIGN_DESKTOP")}else{await screenshot("VIDEO_CAMPAIGN_MOBILE")}
     const pm=await navigate(port,"case/gtm/gtm-positioning-decision",width,height);
     await evaluate("document.getElementById('gtm-positioning-decision')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
@@ -121,6 +132,6 @@ async function screenshot(label){
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.overflow))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,videoCampaign:report.videoCampaign?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.videoCampaign||i.overflow))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
