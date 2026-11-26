@@ -860,10 +860,10 @@
       <section class="video-asset-architecture" id="video-asset-architecture" aria-labelledby="video-asset-architecture-title">
         <header class="video-case-section-heading"><small>IMC / VIDEO CONTENT SYSTEM</small><h3 id="video-asset-architecture-title">四支现有视频，分别完成不同的传播任务</h3><p>按受众理解阶段确定资产角色，而非先有视频再寻找投放理由。下面的影片与片段均在本页保留原始播放入口。</p></header>
         <div class="video-asset-architecture-grid">
-          <article><small>HERO / BRAND AWARENESS</small><h4>感恩节 TVC</h4><p><b>情绪机制：</b>团聚、感谢、家人之间的照料。<b>传播任务：</b>让家庭情境与品牌价值建立联系，随后以双盘使用镜头补充产品识别。</p><a href="#thanksgiving-tvc">查看视频 ↗</a></article>
-          <article><small>HERO / BRAND ASSOCIATION</small><h4>圣诞节 TVC</h4><p><b>情绪机制：</b>默默整理地面，再回到家人的相聚。<b>传播任务：</b>用人物动作建立关怀主题，让产品出现在故事因果中。</p><a href="#holiday-full-film">查看视频 ↗</a></article>
-          <article><small>PRODUCT / DEMONSTRATION</small><h4>楼梯吸尘 Creator</h4><p><b>证明机制：</b>看吸头怎样接触踏面、人物如何握持和移动。<b>传播任务：</b>让操作过程可见，而不是替没有验证的效果背书。</p><a href="#kol-shorts">查看演示 ↗</a></article>
-          <article><small>CREATOR / INTRODUCTION</small><h4>客厅人物介绍</h4><p><b>沟通机制：</b>人物面对镜头介绍和展示产品。<b>传播任务：</b>快速识别产品与使用情境，为后续更完整的功能说明提供入口。</p><a href="#video-opening-comparison">查看片段 ↗</a></article>
+          <article><small>HERO / BRAND AWARENESS</small><h4>感恩节 TVC</h4><p><b>情绪机制：</b>团聚、感谢、家人之间的照料。<b>传播任务：</b>让家庭情境与品牌价值建立联系，随后以双盘使用镜头补充产品识别。</p><span class="video-asset-visit">下方视频 01 · 感恩节</span></article>
+          <article><small>HERO / BRAND ASSOCIATION</small><h4>圣诞节 TVC</h4><p><b>情绪机制：</b>默默整理地面，再回到家人的相聚。<b>传播任务：</b>用人物动作建立关怀主题，让产品出现在故事因果中。</p><span class="video-asset-visit">下方视频 02 · 圣诞节</span></article>
+          <article><small>PRODUCT / DEMONSTRATION</small><h4>楼梯吸尘 Creator</h4><p><b>证明机制：</b>看吸头怎样接触踏面、人物如何握持和移动。<b>传播任务：</b>让操作过程可见，而不是替没有验证的效果背书。</p><span class="video-asset-visit">下方 Creator 实拍演示</span></article>
+          <article><small>CREATOR / INTRODUCTION</small><h4>客厅人物介绍</h4><p><b>沟通机制：</b>人物面对镜头介绍和展示产品。<b>传播任务：</b>快速识别产品与使用情境，为后续更完整的功能说明提供入口。</p><span class="video-asset-visit">下方 Creator 人物介绍</span></article>
         </div>
       </section>
       <div class="tvc-work-grid" aria-label="节庆 Campaign 视频案例">
