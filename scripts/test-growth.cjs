@@ -390,10 +390,15 @@ const fs = require("fs"),
     assert.ok(!d.getElementById("video-projects").textContent.includes("两支 TVC"));
     assert.ok(!d.getElementById("video-projects").textContent.includes("完整七秒镜头"));
   });
-  check("video editorial review compares three different viewing tasks", () => {
-    assert.equal(d.querySelectorAll("#video-decision-strip article").length, 3);
+  check("video page keeps three real content modes and links video to Campaign and lifecycle", () => {
+    assert.equal(d.querySelectorAll("#video-campaign-strategy .tvc-campaign-bridge-grid article").length, 3);
     assert.equal(d.querySelectorAll("#video-storyline .video-story-beats li").length, 4);
-    assert.equal(d.querySelectorAll("#video-format-roles>div").length, 3);
+    assert.equal(d.querySelectorAll("#video-insight-choices .video-insight-grid article").length, 3);
+    assert.equal(d.querySelectorAll("#video-awareness-to-lifecycle .video-stage-grid article").length, 5);
+    assert.equal(d.querySelectorAll("#video-paid-architecture .video-paid-family-grid article").length, 3);
+    assert.equal(d.querySelectorAll("#video-paid-to-lifecycle .video-handoff-map article").length, 4);
+    assert.equal(d.querySelectorAll("#video-production-process .video-production-steps article").length, 4);
+    assert.ok(d.getElementById("creative-production-scope"), "Original production deep link retained");
   });
   await route("/cases");
   check("case index excludes synthetic imagery with unverified product structure or claims", () => {
