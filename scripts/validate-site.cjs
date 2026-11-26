@@ -143,6 +143,36 @@ check(
     }
   },
 );
+
+check("public identity minimization and video case preservation", () => {
+  const pathText = [
+    "index.html", "app.js", "data.js", "growth.js", "projects.js",
+    "role-journeys.js", "selected-work.js", "review/index.html",
+    "review/review.js"
+  ].map((file) => fs.readFileSync(path.join(site, file), "utf8")).join("\n");
+  const unapprovedNames = [/\u745e\u97f3\u535a/, /\u78b3\u5b9d\u8d1d/, /Qimedo/i];
+  assert.ok(unapprovedNames.every((pattern) => !pattern.test(pathText)),
+    "Employer or brand identifier leaked into public website");
+  assert.ok(!/[A-Z]:[\\\/](?:Users|Documents|Projects)/i.test(pathText),
+    "Private local directory exposed");
+  assert.ok(!/(?:[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?<![\d.])(?:\+?86[- ]?)?1[3-9]\d{9}(?!\d))/.test(pathText),
+    "Direct email/phone identifier exposed");
+  const videoCase = fs.readFileSync(path.join(site,"projects.js"),"utf8");
+  const videoReview = fs.readFileSync(path.join(site,"review/index.html"),"utf8");
+  assert.ok(videoCase.includes('id="video-brand-positioning"'));
+  assert.ok(videoCase.includes('id="video-campaign-showcase"'));
+  assert.ok(videoReview.includes('id="review-videos"'));
+  for (const key of ["1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y",
+                     "15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]) {
+    assert.ok(videoCase.includes(key) && videoReview.includes(key),
+      "One full TVC playback link was removed");
+  }
+  for (const name of ["creator-staircase-7s.mp4","creator-livingroom-7s.mp4"]) {
+    assert.ok(fs.existsSync(path.join(site,"assets/video",name)),
+      "Locally hosted video excerpt removed");
+  }
+});
+
 console.log(
   JSON.stringify(
     { checks, passed: checks.length, total: checks.length },
