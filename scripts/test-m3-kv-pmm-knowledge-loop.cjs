@@ -23,7 +23,8 @@ assert.equal(count("#m3-campaign-kv .m3-kv-format-roles article"),3,"16:9, 4:5, 
 assert.ok(kv.querySelector('img[src="assets/projects/m3-yellow-main.webp"]'),"Verified original M3 asset missing");
 assert.ok(!kv.querySelector(".m3-kv-comps,.m3-kv-landscape,.m3-kv-feed,.m3-kv-copy"),"Invented overlay KV still rendered");
 assert.ok(kv.textContent.includes("Power Every Move") && kv.textContent.includes("Make Room for What Matters") && kv.textContent.includes("Dinner’s done"),"Message hierarchy incomplete");
-assert.ok(kv.textContent.includes("不是 Campaign KV")&&kv.textContent.includes("PLANNING DRAFT"),"Artifact proof boundary absent");
+assert.ok(kv.textContent.includes("不是 Campaign KV")&&kv.textContent.includes("不展示未经确认的 KV 成品"),"Artifact proof boundary absent");
+assert.ok(!kv.textContent.includes("R8")&&!kv.textContent.includes("M3_KV_16x9"),"Rejected KV candidates must not appear in public case");
 assert.ok(kv.querySelector('a[href="#/case/gtm/campaign-activation"]'),"Channel activation handoff missing");
 await route("case/gtm/launch-d7-d30");
 const review=d.getElementById("launch-d7-d30");assert.ok(review,"D7/D30 review missing");
