@@ -254,7 +254,7 @@
             <small>THE POSITIONING DECISION</small>
             <h4>让产品进入生活故事，但不让故事代替产品证明</h4>
             <p>美国市场的传播切口选择餐后硬地整理。画面先呈现生活还在继续、地面仍待清理的时刻，再明确介绍 M3 是双盘电动拖把；产品是否适合具体地面、如何握持与移动，交给经过核验的演示和使用说明。</p>
-            <div class="m3-kv-core-copy"><span>场景入口</span><strong>Dinner’s done. The floor isn’t.</strong><span>上市创意</span><strong>Make Room for What Matters.</strong><span>产品身份</span><strong>Meet M3. Qimedo’s dual-head electric mop.</strong></div>
+            <div class="m3-kv-core-copy"><span>场景入口</span><strong>Dinner’s done. The floor isn’t.</strong><span>上市创意</span><strong>Make Room for What Matters.</strong><span>产品身份</span><strong>Meet M3. A dual-head electric mop.</strong></div>
             <p class="m3-kv-copy-boundary">“节省多少时间”“任何地面都适用”“比手动清洁更高效”均不是这组画面的已证实结论。</p>
           </div>
         </div>
