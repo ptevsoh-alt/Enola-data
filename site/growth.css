@@ -3952,3 +3952,58 @@
 .pr-published-evidence{padding:.9rem}
 .pr-section-heading>p{font-size:.78rem}
 }
+
+
+/* 2026-11-26: Video portfolio, Brand/IMC, Paid and Lifecycle narrative */
+.video-strategy-hero{max-width:72rem;margin:1.1rem 0 1.45rem}
+.video-strategy-hero h3{color:#264b38;font-size:clamp(1.28rem,2.5vw,2rem)}
+.video-campaign-intro-links{display:flex;gap:.65rem 1.15rem;flex-wrap:wrap;margin-top:.9rem}
+.video-campaign-intro-links a,.video-production-links a,.campaign-video-handoff>a,.video-asset-architecture-grid a,.video-lifecycle-note a{font-size:.77rem;font-weight:700;color:#286443;text-decoration:underline;text-underline-offset:.18rem}
+.video-brand-foundation,.video-asset-architecture,.video-paid-system,.video-production-system,.video-lifecycle-system,.video-delivery-management{margin:1.35rem 0 1.75rem;border-top:1px solid #cbd9ca;padding-top:1.35rem;min-width:0}
+.video-case-section-heading{margin-bottom:.95rem}
+.video-case-section-heading>small{font-size:.64rem;font-weight:800;color:#436850;letter-spacing:.09em}
+.video-case-section-heading>h3{font-size:clamp(1.14rem,2vw,1.55rem);line-height:1.44;color:#28503b;margin:.35rem 0 .4rem}
+.video-case-section-heading>p{font-size:.82rem;line-height:1.8;color:#4c6454;max-width:65rem;margin:.45rem 0}
+.video-foundation-grid,.video-production-grid,.campaign-video-handoff-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:.65rem}
+.video-foundation-grid article,.video-production-grid article,.campaign-video-handoff-grid article{display:flex;flex-direction:column;min-width:0;padding:1.05rem 1rem;border:1px solid #d8e1d5;background:#fffefa}
+.video-foundation-grid article{border-top:3px solid #6f9574}
+.video-foundation-grid small,.video-asset-architecture-grid small,.video-paid-stage-grid small,.video-production-grid small,.video-lifecycle-journey small,.video-delivery-grid small,.campaign-video-handoff-grid small{font-size:.64rem;font-weight:800;letter-spacing:.05em;color:#55735c;line-height:1.55}
+.video-foundation-grid h4,.video-asset-architecture-grid h4,.video-paid-stage-grid h4,.video-production-grid h4,.video-lifecycle-journey h4,.video-delivery-grid h4{font-size:.94rem;line-height:1.46;color:#2a503a;margin:.4rem 0 .48rem}
+.video-foundation-grid p,.video-asset-architecture-grid p,.video-paid-stage-grid p,.video-production-grid p,.video-lifecycle-journey p,.video-delivery-grid p,.campaign-video-handoff-grid p{font-size:.77rem;line-height:1.78;color:#4a6251;margin:0 0 .66rem;overflow-wrap:anywhere}
+.video-foundation-grid b,.video-paid-stage-grid article>b{font-size:.72rem;line-height:1.65;color:#3b6646;margin-top:auto}
+.video-strategy-roof{background:#2d5140;padding:1rem 1.25rem;margin-top:.7rem;color:#fff}
+.video-strategy-roof small{display:block;font-size:.62rem;letter-spacing:.08em;color:#cfdfcc}
+.video-strategy-roof strong{display:block;font-size:clamp(1.2rem,2.4vw,1.65rem);line-height:1.4;margin:.35rem 0}
+.video-strategy-roof p{font-size:.76rem;line-height:1.75;color:#e0eade;margin:.35rem 0}
+.video-asset-architecture-grid,.video-paid-stage-grid,.video-lifecycle-journey,.video-delivery-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.65rem}
+.video-asset-architecture-grid article,.video-paid-stage-grid article,.video-lifecycle-journey article,.video-delivery-grid article{display:flex;flex-direction:column;min-width:0;background:#eff3eb;padding:1rem .9rem;border:1px solid #d5e0d3;border-top:3px solid #8aa88c}
+.video-asset-architecture-grid p b,.video-paid-stage-grid p b{font-size:inherit;color:#355743}
+.video-asset-architecture-grid a{margin-top:auto}
+.video-paid-stage-grid article{background:#f7f8f3}
+.video-production-grid article{background:#eaf1e8}
+.video-production-links{display:flex;gap:.6rem 1.1rem;flex-wrap:wrap;margin-top:1rem}
+.video-lifecycle-journey article{background:#e8f0e7}
+.video-lifecycle-journey span{font-size:.71rem;font-weight:700;line-height:1.7;color:#416549;margin-top:auto}
+.video-lifecycle-note{padding:1.05rem 1.1rem;background:#f8f8f3;border-left:3px solid #7ea080;margin-top:.8rem}
+.video-lifecycle-note strong{font-size:.87rem;color:#2c533c}
+.video-lifecycle-note p{font-size:.77rem;line-height:1.78;color:#4a6452;margin:.4rem 0}
+.video-delivery-grid article{background:#fffefa}
+.campaign-video-handoff{padding:1.05rem 1.15rem;margin:1rem 0 1.25rem;background:#f1f5ed;border-left:4px solid #658a6b}
+.campaign-video-handoff header small{font-size:.64rem;font-weight:800;color:#496e54;letter-spacing:.07em}
+.campaign-video-handoff header h5{font-size:1.02rem;line-height:1.45;color:#2a513b;margin:.4rem 0}
+.campaign-video-handoff header p{font-size:.8rem;line-height:1.75;color:#4c6654;margin:.4rem 0 .8rem}
+.campaign-video-handoff-grid{margin:1rem 0}
+.campaign-video-handoff-grid article{background:#fffefa;padding:.9rem}
+.campaign-video-handoff-grid b{font-size:.84rem;color:#2d533e;margin:.4rem 0;line-height:1.5}
+@media(max-width:1050px){
+.video-asset-architecture-grid,.video-paid-stage-grid,.video-lifecycle-journey,.video-delivery-grid{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:760px){
+.video-foundation-grid,.video-production-grid,.campaign-video-handoff-grid{grid-template-columns:minmax(0,1fr)}
+}
+@media(max-width:620px){
+.video-asset-architecture-grid,.video-paid-stage-grid,.video-lifecycle-journey,.video-delivery-grid{grid-template-columns:minmax(0,1fr)}
+.video-foundation-grid article,.video-production-grid article,.video-asset-architecture-grid article,.video-paid-stage-grid article,.video-lifecycle-journey article,.video-delivery-grid article{padding:.92rem}
+.video-strategy-roof,.campaign-video-handoff,.video-lifecycle-note{padding:.92rem}
+.video-case-section-heading>p{font-size:.79rem}
+}
