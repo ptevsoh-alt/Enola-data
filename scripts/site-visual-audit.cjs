@@ -102,26 +102,14 @@ async function screenshot(label){
       report.issues.push({brandPr:{width,...prAudit}});
     }
     if(width===1440){await screenshot("BRAND_PR_DESKTOP")}else{await screenshot("BRAND_PR_MOBILE")}
-    const mkv=await navigate(port,"case/gtm/m3-campaign-kv",width,height);
-    await evaluate("document.getElementById('m3-campaign-kv')?.scrollIntoView({block:'start',behavior:'instant'})");
+    const mreview=await navigate(port,"case/gtm/launch-knowledge-loop",width,height);
+    await evaluate("document.getElementById('launch-knowledge-loop')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
-    const mkvAudit=await evaluate("(()=>{const k=document.getElementById('m3-campaign-kv'),img=k?.querySelector('.m3-kv-source-figure img'),bar=document.querySelector('.case-page .case-tabs');return {exists:!!k,top:k?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,source:img?.getAttribute('src')||'',ready:!!img?.complete&&img?.naturalWidth>0,messageLayers:k?.querySelectorAll('.m3-kv-message-layers article').length||0,formats:k?.querySelectorAll('.m3-kv-format-roles article').length||0,oldComposite:!!k?.querySelector('.m3-kv-comps,.m3-kv-landscape,.m3-kv-feed'),overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
-    console.log("VISUAL_M3_KV_TRUTH="+JSON.stringify({width,...mkvAudit}));
-    report.m3KV ??=[];report.m3KV.push({width,...mkvAudit});
-    if(!mkvAudit.exists||mkvAudit.messageLayers!==3||mkvAudit.formats!==3||!mkvAudit.ready||mkvAudit.source!=='assets/projects/m3-yellow-main.webp'||mkvAudit.oldComposite||mkvAudit.overflow>12||mkvAudit.top<mkvAudit.navBottom-4){
-      report.issues.push({m3KV:{width,...mkvAudit}});
-    }
-    if(width===1440){await screenshot("M3_KV_STRATEGY_DESKTOP")}else{await screenshot("M3_KV_STRATEGY_MOBILE")}
-    const mreview=await navigate(port,"case/gtm/launch-d7-d30",width,height);
-    await evaluate("document.getElementById('launch-d7-d30')?.scrollIntoView({block:'start',behavior:'instant'})");
-    await delay(220);
-    const mrevAudit=await evaluate("(()=>{const r=document.getElementById('launch-d7-d30'),bar=document.querySelector('.case-page .case-tabs'),table=r?.querySelector('.m3-review-table-wrap');return {exists:!!r,top:r?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,windows:r?.querySelectorAll('.m3-review-stage-grid article').length||0,signals:r?.querySelectorAll('.m3-review-evidence-table tbody tr').length||0,knowledge:r?.querySelectorAll('.m3-knowledge-cycle li').length||0,tableScrollable:!!table&&table.scrollWidth>=table.clientWidth,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
-    console.log("VISUAL_M3_KNOWLEDGE_LOOP="+JSON.stringify({width,...mrevAudit}));
+    const mrevAudit=await evaluate("(()=>{const r=document.getElementById('launch-knowledge-loop'),bar=document.querySelector('.case-page .case-tabs'),table=r?.querySelector('.m3-review-table-wrap');return {exists:!!r,top:r?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,focus:r?.querySelectorAll('.m3-learning-focus article').length||0,signals:r?.querySelectorAll('.m3-review-evidence-table tbody tr').length||0,knowledge:r?.querySelectorAll('.m3-knowledge-cycle li').length||0,forbiddenKV:!!document.querySelector('.m3-kv-showcase,.m3-kv-source-layout'),fixedDays:(r?.textContent||'').includes('D+7')||(r?.textContent||'').includes('D+30'),tableScrollable:!!table&&table.scrollWidth>=table.clientWidth,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    console.log("VISUAL_M3_KNOWLEDGE_ONLY="+JSON.stringify({width,...mrevAudit}));
     report.m3Review ??=[];report.m3Review.push({width,...mrevAudit});
-    if(!mrevAudit.exists||mrevAudit.windows!==2||mrevAudit.signals!==5||mrevAudit.knowledge!==5||mrevAudit.overflow>12||mrevAudit.top<mrevAudit.navBottom-4){
-      report.issues.push({m3Review:{width,...mrevAudit}});
-    }
-    if(width===1440){await screenshot("M3_KNOWLEDGE_DESKTOP")}else{await screenshot("M3_KNOWLEDGE_MOBILE")}
+    if(!mrevAudit.exists||mrevAudit.focus!==3||mrevAudit.signals!==4||mrevAudit.knowledge!==5||mrevAudit.forbiddenKV||mrevAudit.fixedDays||mrevAudit.overflow>12||mrevAudit.top<mrevAudit.navBottom-4)report.issues.push({m3Review:{width,...mrevAudit}});
+    if(width===1440){await screenshot("M3_KNOWLEDGE_ONLY_DESKTOP")}else{await screenshot("M3_KNOWLEDGE_ONLY_MOBILE")}
     const pm=await navigate(port,"case/gtm/gtm-positioning-decision",width,height);
     await evaluate("document.getElementById('gtm-positioning-decision')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
@@ -150,6 +138,6 @@ async function screenshot(label){
     }
   }
   fs.writeFileSync(path.join(__dirname,"../qa/live-visual-audit.json"),JSON.stringify(report,null,2)+"\n");
-  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,videoImc:report.videoImc?.length||0,m3KV:report.m3KV?.length||0,m3Review:report.m3Review?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
-  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.videoImc||i.m3KV||i.m3Review||i.overflow))process.exitCode=1;
+  console.log("VISUAL_QA_RESULT="+JSON.stringify({screens:report.screens.length,originalKV:report.originalKV?.length||0,positioning:report.positioning?.length||0,brandPr:report.brandPr?.length||0,videoImc:report.videoImc?.length||0,m3Review:report.m3Review?.length||0,issueCount:report.issues.length,issues:report.issues.slice(0,18)}));
+  if(report.issues.some(i=>i.brokenImages||i.noAlt||i.originalKV||i.anchorOverlap||i.positioning||i.brandPr||i.videoImc||i.m3Review||i.overflow))process.exitCode=1;
 })().catch(e=>{console.error("VISUAL_QA_ERROR",e.stack||String(e));process.exitCode=1}).finally(async()=>{clearTimeout(watchdog);if(ws)ws.close();if(chrome)chrome.kill();serve.closeAllConnections?.();serve.close();setTimeout(()=>process.exit(process.exitCode||0),1200)});
