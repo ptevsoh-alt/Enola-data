@@ -131,33 +131,33 @@
   },
   {
     "file": "growth.css",
-    "bytes": 241045,
-    "sha256": "5e87cb341274a419b20282622d01e4dad5a277dd26960eb6e19d13c5b731d669"
+    "bytes": 241798,
+    "sha256": "6bc66b78ad62f7a01e2f74a9d4e825f2e50319a9f6bfad62c63b051a61d90b4c"
   },
   {
     "file": "growth.js",
-    "bytes": 62565,
-    "sha256": "d4f7c9e69a36e12cebcf8ec5c7067f8db39ae7203abf21bb9a3830b32c4f23b5"
+    "bytes": 62566,
+    "sha256": "17e00e99151ab2ba8475088362fe3bc3675c84df302a857fc2704fcdb371a9b6"
   },
   {
     "file": "index.html",
-    "bytes": 3670,
-    "sha256": "10a4a3787d66d2318be8fb14a77b46d1c8c527790b890da7a56f564052d566b9"
+    "bytes": 3656,
+    "sha256": "b39ac64923191e216371d878fc4bde784304e081eaa7d3e44597370e6e9854cf"
   },
   {
     "file": "projects.js",
-    "bytes": 193194,
-    "sha256": "bb64b8f8c5dcef517a21efc743b88aca6667c33463006b9a8abcac9fd2d37ebf"
+    "bytes": 193140,
+    "sha256": "4108c0f57d41bf5bee0734db9a16123fc9d918617ee3fc5ac823d4f09e8ae3bc"
   },
   {
     "file": "review/index.html",
-    "bytes": 12733,
-    "sha256": "98256ee749103655cdba54cacdfb719f034fc2b3cfbe315b01af14f1540a1ca8"
+    "bytes": 12333,
+    "sha256": "8f8a1d5607bebf912b56a34d16e2e29ee9ea122dc5b6bff9bc18a8f1bb63ef02"
   },
   {
     "file": "review/review.css",
-    "bytes": 20380,
-    "sha256": "ada866a458ac7764939a65391a01adbff1d66e2dbc8e23b1eb0d0d5119c15c32"
+    "bytes": 21135,
+    "sha256": "656b54fc7398510e4dbc9ea31d44f299dba89596e3f7eb575e9de574d63d94b6"
   },
   {
     "file": "review/review.js",

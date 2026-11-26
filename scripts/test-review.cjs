@@ -65,15 +65,15 @@ const fs = require("fs"),
     assert.equal(d.querySelectorAll("#review-community-flow li").length, 4);
     assert.deepEqual([...d.querySelectorAll("#review-delivery-flow li b")].map((node) => node.textContent), ["排优先级", "定验收项", "协调制作", "分析与调整"]);
   });
-  check("review gallery embeds two full TVCs and two distinct Creator scenes", () => {
+  check("review gallery retains two anonymized film summaries and local Creator scenes", () => {
     const clips = [...d.querySelectorAll("#review-videos video")];
     assert.equal(clips.length, 2);
     assert.ok(d.querySelector('nav a[href="#review-videos"]'));
-    assert.equal(d.querySelectorAll('#review-videos iframe').length, 2);
-    assert.ok([...d.querySelectorAll('#review-videos iframe')].every(frame => frame.getAttribute("title").includes("视频预览")));
+    assert.equal(d.querySelectorAll("#review-videos iframe").length, 0);
+    assert.equal(d.querySelectorAll("#review-videos .review-film-safe-preview").length, 2);
     assert.equal(d.querySelector('#review-territories').textContent.includes("五个 M3 创意方向"), false);
-    assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview"]'));
-    assert.ok(d.querySelector('#review-videos iframe[src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview"]'));
+    assert.ok(!d.querySelector("#review-videos [src^=\"https://drive.google.com\"]"));
+    assert.ok(d.querySelector("#review-videos").textContent.includes("原片不在公开站点播放"));
     assert.ok(d.querySelector('#review-videos').textContent.includes("KOL / Creator"));
     assert.ok(d.querySelector('#review-videos source[src="../assets/video/creator-livingroom-7s.mp4"]'));
     assert.ok(d.querySelector('#review-videos source[src="../assets/video/creator-staircase-7s.mp4"]'));
@@ -88,12 +88,11 @@ const fs = require("fs"),
       assert.ok(fs.existsSync(path.join(site, relative)), relative);
     });
   });
-  check("review links both themed Campaign TVCs and the creative strategy", () => {
+  check("film access is private but creative strategy link remains", () => {
     const links = [...d.querySelectorAll(".review-film-editions a")];
-    assert.equal(links.length, 3);
-    assert.ok(links.some(link => link.getAttribute("href").includes("15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view")));
-    assert.ok(links.some(link => link.getAttribute("href").includes("1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view")));
-    assert.ok(links.some(link => link.getAttribute("href") === "../#/case/creative/video-campaign-strategy"));
+    assert.equal(links.length, 1);
+    assert.equal(links[0].getAttribute("href"), "../#/case/creative/video-campaign-strategy");
+    assert.ok(!d.querySelector("#review-videos").outerHTML.includes("drive.google.com/file/d/"));
   });
   check("visual gallery points to existing local assets", () => {
     const images = [...d.querySelectorAll(".review-visual-image img")];

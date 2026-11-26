@@ -119,16 +119,9 @@ check(
       .filter((f) => /\.(js|html|css|txt)$/.test(f))
       .forEach((f) => {
         const s = fs.readFileSync(f, "utf8");
-        // The two explicitly approved, publicly readable Drive films are embedded as media,
-        // never as scripts or API calls; every other outbound URL remains prohibited.
-        const approvedMedia = s.replace(
-          /https:\/\/drive\.google\.com\/file\/d\/(?:15m5TOYZh90NUqTmSbHget8BJbeBEhLKE|1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y)\/(?:preview|view(?:\?usp=drivesdk)?)/g,
-          "APPROVED_DRIVE_VIDEO",
-        );
+        // Public site payloads must not reveal named employers or remote raw-film URLs.
         assert.ok(
-          !/(?:[CD]:[\\/]|sourceImage|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon)/.test(
-            approvedMedia,
-          ),
+          !/(?:[CD]:[\\/]|sourceImage|https?:\/\/|fetch\(|XMLHttpRequest|sendBeacon|瑞音博|碳宝贝|韵衫|传盛)/.test(s),
           f,
         );
       });

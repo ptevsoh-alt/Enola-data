@@ -877,7 +877,7 @@
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
           <div class="tvc-work-heading"><small>01 / THANKSGIVING · SEASONAL TVC</small><h3 id="thanksgiving-heading">感恩节｜感谢藏在日常照料里</h3><p>节日餐桌、火鸡和家人之间的互动建立节庆氛围；地面清洁成为人物彼此照顾的动作，随后进入双盘清洁工具的使用与功能演示。</p></div>
           <div class="tvc-work-player" id="video-drive-editions">
-            <iframe loading="lazy" title="播放感恩节主题 TVC 作品片段" src="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="tvc-work-safe-preview" role="img" aria-label="感恩节影片：仅公开创意结构，未公开原始视频"><span>SEASONAL FILM / CASE STUDY</span><strong>感恩节品牌短片</strong><p>保留传播场景、叙事逻辑及制作判断。原始视频未公开展示。</p></div>
           </div>
           <div class="tvc-work-copy">
             <dl>
@@ -885,13 +885,13 @@
               <div><dt>创意机制</dt><dd>团聚场景 → 生活中的清洁任务 → 家人互助 → 产品使用特写</dd></div>
               <div><dt>传播价值</dt><dd>用情感故事建立关注，以连续操作和功能画面补充产品理解</dd></div>
             </dl>
-            <a href="https://drive.google.com/file/d/1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y/view" target="_blank" rel="noopener noreferrer">观看感恩节 TVC 完整视频 ↗</a>
+            <p class="tvc-access-note">原片仅用于获得授权后的审阅，公开案例保留创意与执行说明。</p>
           </div>
         </article>
         <article class="tvc-work-card" id="holiday-full-film" aria-labelledby="christmas-heading">
           <div class="tvc-work-heading"><small>02 / CHRISTMAS · SEASONAL TVC</small><h3 id="christmas-heading">圣诞节｜把关心放进每一个小动作</h3><p>圣诞树、礼物与夜晚的家庭空间建立情绪，年长者默默整理地面、使用黄色双盘拖把，最后让镜头回到一家人的相聚时刻。</p></div>
           <div class="tvc-work-player">
-            <iframe loading="lazy" title="播放圣诞节主题 TVC 作品片段" src="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/preview" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen referrerpolicy="strict-origin-when-cross-origin"></iframe>
+            <div class="tvc-work-safe-preview" role="img" aria-label="圣诞节影片：仅公开创意结构，未公开原始视频"><span>SEASONAL FILM / CASE STUDY</span><strong>圣诞节品牌短片</strong><p>保留传播场景、叙事逻辑及制作判断。原始视频未公开展示。</p></div>
           </div>
           <div class="tvc-work-copy" id="long-film-note">
             <dl>
@@ -899,7 +899,7 @@
               <div><dt>创意机制</dt><dd>节日空间 → 地面清洁 → 产品操作 → 家人团聚</dd></div>
               <div><dt>传播价值</dt><dd>让功能表达融入人物关系，用完整叙事承载品牌情绪</dd></div>
             </dl>
-            <a href="https://drive.google.com/file/d/15m5TOYZh90NUqTmSbHget8BJbeBEhLKE/view" target="_blank" rel="noopener noreferrer">观看圣诞节 TVC 视频预览 ↗</a>
+            <p class="tvc-access-note">原片仅用于获得授权后的审阅，公开案例保留创意与执行说明。</p>
           </div>
         </article>
       </div>
