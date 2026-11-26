@@ -838,6 +838,7 @@
 
   function creative() {
     return section("视频创意与 Campaign 内容案例", "节庆品牌影片、产品演示与 Creator 内容的创意方向、脚本、镜头审核及渠道适配。", `
+      <span id="video-campaign-showcase" aria-hidden="true"></span>
       <section class="video-imc-hero" id="video-imc-strategy" aria-labelledby="video-imc-heading">
         <div class="video-imc-main">
           <small>BRAND × CAMPAIGN × VIDEO</small>
