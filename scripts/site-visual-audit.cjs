@@ -94,11 +94,11 @@ async function screenshot(label){
     const pr=await navigate(port,"case/brand/pr-project",width,height);
     await evaluate("document.getElementById('pr-strategy-overview')?.scrollIntoView({block:'start',behavior:'instant'})");
     await delay(220);
-    const prAudit=await evaluate("(()=>{const el=document.getElementById('pr-strategy-overview'),bar=document.querySelector('.case-page .case-tabs'),root=document.getElementById('pr-project');return {exists:!!el,top:el?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,intelligence:root?.querySelectorAll('.pr-intelligence-grid article').length||0,productRoles:root?.querySelectorAll('.pr-message-grid article').length||0,channelJobs:root?.querySelectorAll('.pr-channel-grid article').length||0,delivery:root?.querySelectorAll('.pr-delivery-flow article').length||0,proof:root?.querySelector('.pr-published-evidence')?.textContent.includes('King Newswire')||false,overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
+    const prAudit=await evaluate("(()=>{const el=document.getElementById('pr-strategy-overview'),bar=document.querySelector('.case-page .case-tabs'),root=document.getElementById('pr-project');return {exists:!!el,top:el?.getBoundingClientRect().top??-1,navBottom:bar?.getBoundingClientRect().bottom??0,intelligence:root?.querySelectorAll('.pr-intelligence-grid article').length||0,productRoles:root?.querySelectorAll('.pr-message-grid article').length||0,channelJobs:root?.querySelectorAll('.pr-channel-grid article').length||0,delivery:root?.querySelectorAll('.pr-delivery-flow article').length||0,proof:root?.querySelector('.pr-published-evidence')?.textContent.includes('King Newswire')||false,prImageReady:(()=>{const img=el?.querySelector('figure img');return !!img&&img.complete&&img.naturalWidth>0})(),prImageEager:el?.querySelector('figure img')?.getAttribute('loading')==='eager',overflow:Math.max(0,document.documentElement.scrollWidth-innerWidth)}})()");
     console.log("VISUAL_BRAND_PR="+JSON.stringify({width,...prAudit}));
     report.brandPr ??=[];
     report.brandPr.push({width,...prAudit});
-    if(!prAudit.exists||prAudit.intelligence!==3||prAudit.productRoles!==4||prAudit.channelJobs!==5||prAudit.delivery!==4||!prAudit.proof||prAudit.overflow>12||prAudit.top<prAudit.navBottom-4){
+    if(!prAudit.exists||prAudit.intelligence!==3||prAudit.productRoles!==4||prAudit.channelJobs!==5||prAudit.delivery!==4||!prAudit.proof||!prAudit.prImageReady||!prAudit.prImageEager||prAudit.overflow>12||prAudit.top<prAudit.navBottom-4){
       report.issues.push({brandPr:{width,...prAudit}});
     }
     if(width===1440){await screenshot("BRAND_PR_DESKTOP")}else{await screenshot("BRAND_PR_MOBILE")}

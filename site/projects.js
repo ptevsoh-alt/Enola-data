@@ -265,7 +265,7 @@
     <p>M3 上市策划从具体的清洁任务出发：餐后什么时候需要整理地面？双盘拖地与常见方式有什么差别？什么样的演示和商品信息能支持选择？<em>Make Room for What Matters</em> 将这些产品价值放进一个有生活感的家庭故事。</p>
   </header>
   <div class="pmm-positioning-bridge" aria-label="品牌主张、产品定位和Campaign主题的关系">
-    <article><small>BRAND / 长期价值</small><strong>Power Every Move</strong><p>围绕不同家庭清洁任务，用清晰的产品功能与实际操作体验支持日常生活。</p></article>
+    <article><small>BRAND / 长期价值</small><strong>让清洁服务日常生活</strong><p>围绕不同家庭清洁任务，用清晰的产品功能与实际操作体验支持日常生活。</p></article>
     <article class="is-product"><small>PMM / 本次选择理由</small><strong>可看懂的双盘拖地方式</strong><p>针对日常硬地清洁，让消费者先理解双盘动作、握持与地面适用条件，再判断是否值得选购。</p></article>
     <article><small>IMC / 上市传播主题</small><strong>Make Room for What Matters</strong><p>用“餐后还有地面要整理”建立生活关联，再以真实操作让情绪落回产品价值。</p></article>
   </div>
@@ -385,7 +385,7 @@
  <figure><img src="assets/projects/m3-yellow-battery.webp" alt="M3 电池部件外观图" loading="lazy" decoding="async"><figcaption><b>03 / 产品教育</b><span>FAQ · 产品细节与信息承接</span></figcaption></figure>
 </div>
 <div class="campaign-house" aria-label="M3 Campaign 品牌屋式策略与渠道架构">
-          <div class="campaign-house-roof"><span>BRAND IDEA / 长期品牌主张</span><h4>Power Every Move</h4><p>清洁工具支持人的日常行动，而不是让人围着工具转。</p></div>
+          <div class="campaign-house-roof"><span>BRAND IDEA / 长期品牌主张</span><h4>以家庭清洁任务连接品牌价值</h4><p>清洁工具支持人的日常行动，而不是让人围着工具转。</p></div>
           <div class="campaign-brand-thesis" aria-label="品牌定位的受众、角色与价值">
             <article><small>AUDIENCE / 受众任务</small><h5>需要打理不同家庭空间的人</h5><p>餐区硬地、浴室边角与局部清洁具有不同操作任务；传播按场景帮助用户识别适合的产品线。</p></article>
             <article><small>BRAND ROLE / 品牌角色</small><h5>让清洁方式更容易理解和选择</h5><p>用清楚的场景、产品结构和可核实的使用说明，降低用户理解工具及比较方案时的负担。</p></article>
@@ -477,7 +477,7 @@
           <div class="campaign-integration-guardrails" aria-label="Campaign 传播方案与团队交付管理">
             <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / FROM BRIEF TO DELIVERY</span><h5>从品牌主张到跨团队交付</h5><p>我将核心传播信息、产品证据、创意物料与社媒日历组织成同一份执行计划，并协调产品、视觉、视频、Creator 及渠道同事按节点交付。</p></div>
             <div class="campaign-management-sequence" aria-label="品牌定位到执行的四步链条">
-              <article><small>BRAND</small><b>Power Every Move</b><p>品牌一致性</p></article>
+              <article><small>BRAND</small><b>长期品牌价值</b><p>品牌一致性</p></article>
               <article><small>IMC / BIG IDEA</small><b>Make Room for What Matters</b><p>餐后生活场景</p></article>
               <article><small>CREATIVE</small><b>三个创意切入点</b><p>情境反差 · 动作演示 · 家庭情绪</p></article>
               <article><small>DELIVERY</small><b>不同渠道分工</b><p>KV、视频、社群、PR、邮件</p></article>
@@ -584,7 +584,7 @@
 </section>
       <section class="g-module g-project v-localization" id="market-adaptation" aria-labelledby="market-adaptation-heading">
         <header><span class="v-section-kicker">LOCAL MARKET ADAPTATION</span><h2 id="market-adaptation-heading">美英市场传播内容适配</h2><p>产品信息保持一致，美国与英国分别校对内容用词、场景和发布渠道。</p></header>
-        <div class="v-localization-common"><small>M3 / 市场文案对照</small><h3 lang="en">POWER EVERY MOVE.</h3><p lang="en">MAKE ROOM FOR WHAT MATTERS.</p><span>共享产品原图、场景主题与视觉识别</span></div>
+        <div class="v-localization-common"><small>M3 / 市场文案对照</small><h3 lang="en">BRAND STORY / HOME CARE.</h3><p lang="en">MAKE ROOM FOR WHAT MATTERS.</p><span>共享产品原图、场景主题与视觉识别</span></div>
         <div class="v-localization-compare" aria-label="美国和英国市场本地化英文文案并排对照">
           <article lang="en-US" class="v-locale-panel is-us">
             <header><span>US / EN-US</span><b>United States · 美国</b></header>
@@ -702,12 +702,12 @@
   function pr() {
     return section("北美品牌传播｜从产品线信息到 PR 主题", "2026 年 5 月 · 家庭清洁主题新闻稿与整合内容策划", `
       <section class="pr-editorial-hero" id="pr-strategy-overview" aria-labelledby="pr-story-heading">
-        <figure>${image("pr-home-scene", "北美家庭厨房与客厅清洁主题新闻稿配图")}<figcaption>北美家庭清洁主题新闻稿使用的场景配图</figcaption></figure>
+        <figure><img src="assets/projects/pr-home-scene.webp" alt="北美家庭厨房与客厅清洁主题新闻稿配图" width="850" height="488" loading="eager" fetchpriority="high" decoding="async"><figcaption>北美家庭清洁主题新闻稿使用的场景配图</figcaption></figure>
         <div class="pr-editorial-intro">
           <small>BRAND STORY / EARNED CONTENT / NORTH AMERICA</small>
           <h3 id="pr-story-heading">不按产品目录写新闻稿，先讲一个家庭为什么需要不同清洁工具</h3>
           <p>这次选择“全屋清洁任务”作为新闻稿的内容主线：从地面污渍、宠物毛发和浴室刷洗，到厨房与烧烤后的清洁。不同场景对应不同工具，让四条产品线出现在同一条可理解的品牌故事里。</p>
-          <div class="pr-editorial-decision"><span>品牌主张</span><strong>Power Every Move</strong><span>内容选择</span><strong>家庭任务先于产品参数</strong><span>传播形式</span><strong>英文新闻稿与场景配图</strong></div>
+          <div class="pr-editorial-decision"><span>品牌主张</span><strong>让清洁工具融入日常生活</strong><span>内容选择</span><strong>家庭任务先于产品参数</strong><span>传播形式</span><strong>英文新闻稿与场景配图</strong></div>
         </div>
       </section>
       <section class="pr-strategy-frame" aria-labelledby="pr-frame-heading">
@@ -715,12 +715,12 @@
         <div class="pr-intelligence-grid">
           <article><small>01 / 市场与品类</small><h4>按清洁任务识别产品类别</h4><p>旋转拖把、无绳吸尘器、电动刷与烧烤刷解决的问题并不相同。新闻稿选择“一个家庭，多类清洁任务”作为连接方式，而非把各产品参数直接并排。</p><b>决策：让产品组合具有同一品牌语境</b></article>
           <article><small>02 / 用户与使用场景</small><h4>让读者先认出自己面对的问题</h4><p>宠物毛发与碎屑、地面溅渍、浴室边沿、烧烤残渣是不同的使用入口。内容按任务解释工具角色；适用地面、污物类型及操作限制依型号材料核对。</p><b>决策：用场景分工代替笼统的“全能清洁”</b></article>
-          <article><small>03 / 品牌与传播主张</small><h4>让产品价值支撑品牌记忆</h4><p>Power Every Move 作为长期品牌主张；对外信息落在清洁头如何运动、怎样接触表面和用户如何操作。消费者看得懂动作，品牌故事才有可信的产品基础。</p><b>决策：品牌情绪后面必须跟得上产品证明</b></article>
+          <article><small>03 / 品牌与传播主张</small><h4>让产品价值支撑品牌记忆</h4><p>长期品牌主张强调工具与日常生活的联系；对外信息落在清洁头如何运动、怎样接触表面和用户如何操作。消费者看得懂动作，品牌故事才有可信的产品基础。</p><b>决策：品牌情绪后面必须跟得上产品证明</b></article>
         </div>
       </section>
       <section class="pr-message-house" aria-labelledby="pr-message-heading">
         <header class="pr-section-heading"><small>MESSAGE ARCHITECTURE / FOUR PRODUCT LINES</small><h3 id="pr-message-heading">一条品牌故事，四种产品角色</h3><p>新闻稿主体围绕不同清洁情境展开。每一段内容回答一类问题，并安排能支持该说法的产品资料与画面。</p></header>
-        <div class="pr-message-roof"><span>Power Every Move</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
+        <div class="pr-message-roof"><span>家庭清洁 · 品牌长期价值</span><strong>从具体家庭清洁任务解释电动工具的价值</strong><p>品牌层讲日常生活；产品层讲结构、动作与适用边界。</p></div>
         <div class="pr-message-grid">
           <article><small>FLOOR CARE</small><h4>地面污渍与日常拖洗</h4><p>用餐区与硬地情境说明旋转拖地工具的任务；画面要能看见双盘接地、推进和转向。</p><b>素材：地面动作与适用条件</b></article>
           <article><small>VACUUM</small><h4>宠物毛发与日常吸尘</h4><p>用毛发和碎屑收集任务说明吸尘工具的分工，不能把吸尘与拖洗描述为同一种能力。</p><b>素材：吸头、接触位置与清理过程</b></article>
@@ -864,10 +864,10 @@
         <div class="video-positioning-grid">
           <article><small>01 / MARKET CONTEXT</small><h4>清洁工具需要被看懂</h4><p>消费者比较不同清洁方式时，画面需要明确工具类型、实际接触面和操作任务。只展示“干净的房间”无法说明产品为什么值得进入选择范围。</p><b>创意选择：让产品动作承担可信度</b></article>
           <article><small>02 / CUSTOMER QUESTION</small><h4>家庭情绪与选购疑问分别回应</h4><p>节庆触达阶段先建立生活关联；进入产品比较时，回答怎么握持、接触什么表面、需要注意什么。楼梯吸尘与硬地拖洗不能混为一种功能证明。</p><b>信息选择：问题不同，视频叙事也不同</b></article>
-          <article><small>03 / BRAND ROLE</small><h4>Power Every Move 不只出现在片尾</h4><p>人物的关心通过实际行动呈现，工具则在具体清洁任务中自然出现。品牌主张通过“人做了什么、产品帮了什么”建立记忆，而不是只叠加一句口号。</p><b>品牌选择：情感有情境，功能有证据</b></article>
+          <article><small>03 / BRAND ROLE</small><h4>品牌主张不只出现在片尾</h4><p>人物的关心通过实际行动呈现，工具则在具体清洁任务中自然出现。品牌主张通过“人做了什么、产品帮了什么”建立记忆，而不是只叠加一句口号。</p><b>品牌选择：情感有情境，功能有证据</b></article>
         </div>
         <div class="video-campaign-positioning-line">
-          <div><small>BRAND PROMISE</small><strong>Power Every Move</strong><span>长期品牌价值：真实家庭任务中的行动与照料</span></div>
+          <div><small>BRAND PROMISE</small><strong>帮助家庭处理日常清洁任务</strong><span>长期品牌价值：真实家庭任务中的行动与照料</span></div>
           <div><small>SEASONAL CREATIVE</small><strong>Thanksgiving / Christmas</strong><span>两种节日关系叙事，不复制同一支视频</span></div>
           <div><small>PRODUCT PROOF</small><strong>Creator Demonstration</strong><span>楼梯吸尘与客厅介绍分别承担使用证明和产品识别</span></div>
         </div>

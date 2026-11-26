@@ -12,7 +12,7 @@ const { JSDOM, VirtualConsole } = require("jsdom");
   const css = fs.readFileSync(path.join(site, "growth.css"), "utf8");
   new vm.Script(projects, { filename: "projects.js" });
   for (const phrase of [
-    "CAMPAIGN BIG IDEA", "Power Every Move", "Make Room for What Matters",
+    "CAMPAIGN BIG IDEA", "以家庭清洁任务连接品牌价值", "Make Room for What Matters",
     "campaign-strategy-spine", "campaign-brand-thesis", "campaign-territory-set",
     "campaign-adaptation-grid", "campaign-integration-guardrails",
     "m3-product-positioning", "m3-product-value", "m3-commercial-message", "m3-fabe-detail"

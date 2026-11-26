@@ -150,7 +150,7 @@ check("public identity minimization and video case preservation", () => {
     "role-journeys.js", "selected-work.js", "review/index.html",
     "review/review.js"
   ].map((file) => fs.readFileSync(path.join(site, file), "utf8")).join("\n");
-  const unapprovedNames = [/\u745e\u97f3\u535a/, /\u78b3\u5b9d\u8d1d/, /Qimedo/i];
+  const unapprovedNames = [/\u745e\u97f3\u535a/, /\u78b3\u5b9d\u8d1d/, /Qimedo/i, /Power Every Move/i];
   assert.ok(unapprovedNames.every((pattern) => !pattern.test(pathText)),
     "Employer or brand identifier leaked into public website");
   assert.ok(!/[A-Z]:[\\\/](?:Users|Documents|Projects)/i.test(pathText),
