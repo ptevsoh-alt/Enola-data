@@ -130,35 +130,50 @@
         <p>我负责社媒内容排期、创意审核与交付跟进，推动产品、视频、设计、广告及电商团队对齐核心信息、素材版本和发布节点。</p>
         <p><a href="#/case/gtm/english-brief">查看社媒英文物料 Brief ↗</a> · <a href="#/case/operations/asset-review">查看内容排期与制作交接 ↗</a></p>
       </div>
-      <section class="g-story-note m3-knowledge-review" id="launch-d7-d30" aria-labelledby="m3-knowledge-heading">
-        <header class="m3-knowledge-header"><small>CAMPAIGN REVIEW / DATA × MARKETING OPERATIONS</small><h3 id="m3-knowledge-heading">上市复盘｜从首周信号到下一轮传播决策</h3><p>本案例来源于 2026 年 5 月的上市规划稿，目前没有附带可对账的 M3 首周平台导出、订单记录及完整月度经营报表。以下展示我如何组织复盘、定位问题和决定下一步，不将计划节点视作已发生的经营成果。</p></header>
-        <div class="m3-review-stage-grid">
-          <article><small>D+7 / EARLY SIGNAL</small><h4>先确认内容是否正确触达与被理解</h4><p>核对发布链接、KV／视频版本、平台原生触达和有效观看；结合评论问题、FAQ 点击，判断断点在发布、开场、产品解释还是承接。</p><b>产出：继续 / 修改 / 暂停的内容决策</b></article>
-          <article><small>D+30 / BUSINESS REVIEW</small><h4>再核对订单质量与经营反馈</h4><p>在同一美国市场、产品 SKU、时区和订单成熟窗口下，对齐有效访问、净履约订单、退款取消、库存与客服反馈，区分营销与履约问题。</p><b>产出：资源调整、待补证据和下一轮 Brief</b></article>
-        </div>
-        <div class="m3-review-table-wrap" role="region" aria-label="M3 上市内容与经营复盘证据表" tabindex="0">
-          <table class="m3-review-evidence-table">
-            <thead><tr><th scope="col">观察什么</th><th scope="col">去哪里核对</th><th scope="col">发现问题后先查什么</th><th scope="col">可以决定的动作</th></tr></thead>
-            <tbody>
-              <tr><th scope="row">内容交付与触达</th><td>排期表、实际发布链接、平台原生报表；按渠道保留窗口和版本。</td><td>漏发、错误链接、广告未获批、素材不可用，还是传播入口没有触达目标人群？</td><td>补发布、修正版位与 CTA；未完成发布不写作表现失败。</td></tr>
-              <tr><th scope="row">观看与产品理解</th><td>视频实际观看口径、有效互动、评论疑问、FAQ 内容日志。</td><td>观众能否看到真实双盘动作、握持和地面适用边界？是否只记得情绪画面？</td><td>补充操作镜头、产品说明与问题型短片；保留有效内容。</td></tr>
-              <tr><th scope="row">有效访问与考虑</th><td>UTM、GA4 归属一致的有效会话、目标页面与版本记录。</td><td>点击后是否到达正确资料页？地区、设备、加载、产品事实或 Offer 是否一致？</td><td>修复承接页面与链接；不能由点击单独推断购买意向。</td></tr>
-              <tr><th scope="row">订单与经营质量</th><td>订单系统／Finance 的 SKU、净履约订单、退款、取消、履约与成本。</td><td>库存、支付、退款、客服或供货问题是否影响结果？Paid 归因和真实订单口径是否不同？</td><td>继续、调整或暂停购买入口；商业结果由业务与数据负责人核准。</td></tr>
-              <tr><th scope="row">体验反馈与长期内容</th><td>客服／社群使用问题、授权反馈、已购状态与有效触达许可。</td><td>哪些使用疑问重复出现？哪些是产品说明缺口，而非创意表达问题？</td><td>更新 FAQ／教程，交接合规的购后内容；不把一次互动写成忠诚度。</td></tr>
-            </tbody>
-          </table>
+      <section class="g-story-note m3-knowledge-review m3-knowledge-only" id="launch-knowledge-loop" aria-labelledby="m3-knowledge-heading">
+        <header class="m3-knowledge-header">
+          <small>CAMPAIGN LEARNING / KNOWLEDGE LOOP</small>
+          <h3 id="m3-knowledge-heading">Campaign 复盘｜把传播问题转成下一轮营销决策</h3>
+          <p>围绕 M3 上市内容，我以产品理解、渠道触达、用户疑问和商业承接为线索，设计从问题到证据、假设、行动、验证和经验复用的复盘方法。现有资料主要是上市传播策划，不包含足以证明具体成效的完整同期数据；以下展示决策方法与可核对的依据，不虚构已发生的经营结论。</p>
+        </header>
+        <div class="m3-learning-focus" aria-label="复盘要回答的三个业务问题">
+          <article><small>BRAND × PMM</small><h4>用户是否理解产品价值？</h4><p>品牌情境能否引出清洁任务？双盘旋转、握持方式与适用地面是否有明确说明？</p></article>
+          <article><small>CONTENT × CHANNELS</small><h4>信息在哪个触点断开？</h4><p>核对社媒内容、Creator 演示、产品说明与落地页是否表达一致，再排查发布或访问异常。</p></article>
+          <article><small>OPERATIONS × BUSINESS</small><h4>问题该交给谁解决？</h4><p>内容、站点、商品、客服和供应链分别核实自身环节；商业结果必须由订单和数据负责人确认。</p></article>
         </div>
         <div class="m3-knowledge-cycle" id="m3-knowledge-loop">
-          <header><small>KNOWLEDGE LOOP / 决策复核</small><h4>一次复盘，最后要回到下一轮内容与资源决策</h4></header>
+          <header><small>PROBLEM → EVIDENCE → HYPOTHESIS → ACTION → RESULT → LEARNING</small><h4>复盘不以报表结束，而以可检验的下一步结束</h4></header>
           <ol>
-            <li><span>01 / OBSERVE</span><strong>记录有效信号</strong><p>锁定市场、素材版本、时间窗、原始来源与数据质量。</p></li>
-            <li><span>02 / DIAGNOSE</span><strong>排查最可能的断点</strong><p>区分素材、渠道、站点、产品事实与供应链；同时记录其他解释。</p></li>
-            <li><span>03 / ACT</span><strong>做有边界的调整</strong><p>保持、返工、暂停或补充教程，明确 Owner、资源及审核条件。</p></li>
-            <li><span>04 / VERIFY</span><strong>同口径复测</strong><p>按预设窗口比对后续行为和负向指标，结果不成熟时暂缓结论。</p></li>
-            <li><span>05 / WRITE BACK</span><strong>带证据沉淀可复用经验</strong><p>新结论先进入候选记录，核验通过后才能升级为可复用规则。</p></li>
+            <li><span>01 / PROBLEM + EVIDENCE</span><strong>明确问题与证据</strong><p>结合已发布内容、原始平台数据、用户提问和实际页面记录，先区分事实、缺失数据与待验证的判断。</p></li>
+            <li><span>02 / HYPOTHESIS</span><strong>提出可能的原因</strong><p>例如：产品动作没有讲清、渠道信息不一致，或目标页面承接有问题；保留其他解释，不凭单一指标下结论。</p></li>
+            <li><span>03 / ACTION</span><strong>选择有边界的调整</strong><p>根据问题改进连续操作镜头、FAQ、开场文案或链接；明确内容负责人、产品事实审核与渠道放行。</p></li>
+            <li><span>04 / RESULT + EXCEPTIONS</span><strong>验证效果与失败条件</strong><p>在可比市场、素材版本和观察窗口内复核原指标，同时查看负反馈、链接异常和供货等干扰因素；结果不成熟则继续验证。</p></li>
+            <li><span>05 / LEARNING + REUSE</span><strong>沉淀规则与触发条件</strong><p>记录适用人群、情境、证据、下一次触发条件和重新核验节点；未经验证的经验只作为候选，不直接变成团队规范。</p></li>
           </ol>
         </div>
-        <details class="m3-review-source-detail"><summary>复盘口径、数据边界与 Knowledge Loop 状态</summary><p>每项指标保留对象、公式／分母、平台、市场、窗口、时区、来源、采集时间、素材版本与负责人。跨平台 Reach 不能相加为去重人数；平台归因订单不等于增量订单；未提供订单对账与成本资料时，不计算净贡献、CAC 或 ROAS。</p><p>本页没有足以证明 M3 2026 年 5 月上市实际结果的同期数据，因此暂无被验证的 Campaign learning。新规则以 CANDIDATE 记录假设和证据指针，经数据负责人确认测量定义、项目负责人复验后，才有资格进入 VALIDATED / ACTIVE；不把“计划做一次实验”写成已完成复盘。</p></details>
+        <section class="m3-learning-diagnosis" aria-labelledby="m3-learning-diagnosis-title">
+          <div class="m3-learning-subheading"><small>CHANNEL SIGNALS × DECISION ROUTING</small><h4 id="m3-learning-diagnosis-title">从哪种问题出发，决定下一步先查什么</h4></div>
+          <div class="m3-review-table-wrap" role="region" aria-label="M3传播问题、证据与决策对照表" tabindex="0">
+            <table class="m3-review-evidence-table">
+              <thead><tr><th scope="col">问题类型</th><th scope="col">核对的证据</th><th scope="col">下一轮动作</th><th scope="col">验证与协作边界</th></tr></thead>
+              <tbody>
+                <tr><th scope="row">产品价值没有讲清</th><td>完整产品演示、观看口径、评论与 FAQ 问题；核对产品型号和真实操作。</td><td>优先补握持、双盘接地及连续操作镜头，再更新产品说明。</td><td>观察理解类疑问及有效访问；产品负责人确认使用条件。</td></tr>
+                <tr><th scope="row">社媒内容与渠道信息脱节</th><td>实际发布链接、内容版本、渠道 Brief、素材授权与发布时间。</td><td>修复错误版本、统一信息顺序和渠道承接入口。</td><td>内容组检查交付；渠道 Owner 确认发布或广告状态。</td></tr>
+                <tr><th scope="row">有点击但后续体验不顺畅</th><td>同窗口 UTM、GA4 页面到达、加载与退出，商品信息和页面可用性。</td><td>排查链接、移动端页面、FAQ 和商品信息，不直接归咎于创意。</td><td>由站点与数据负责人核实原因；不把点击等同订单。</td></tr>
+                <tr><th scope="row">用户问题持续出现</th><td>社群／客服问题分类、适用表面、售后说明与获许可的用户反馈。</td><td>补教程、修改 FAQ 或交接产品问题，必要时停止无法证明的说法。</td><td>复核相同问题是否减少，并确认产品和客服的处理结果。</td></tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+        <div class="m3-learning-example" aria-label="未执行的候选复盘判断示例">
+          <div><small>ILLUSTRATIVE DECISION / NOT A MEASURED RESULT</small><h4>一个可验证的内容调整判断</h4><p>如果真实评论反复询问双盘拖把怎样握持和移动，首先检查是否缺少连贯操作镜头，而不是立即增加卖点或优惠。由内容组补充示范、产品端核对适用条件，后续在可比窗口观察同类问题与有效访问变化。</p></div>
+          <aside><small>STATUS / CANDIDATE</small><strong>仅为待验证的决策示例</strong><p>尚无本项目已完成的实验结果；不能据此写成增长结论或自动执行规则。</p></aside>
+        </div>
+        <details class="m3-review-source-detail"><summary>查看 Knowledge Loop 的证据、状态与复核要求</summary>
+          <p>依据 Growth Knowledge Loop Registry，每条可复用经验需保留业务范围、触发条件、主要障碍、数据来源、行动 Owner、主指标、负向约束、观察窗口、失败信号和重新复核条件。仅记录报告或提出假设，不等于证实了因果关系。</p>
+          <p>经验应按 CANDIDATE → PROVISIONAL → VALIDATED → ACTIVE 的规则接受证据、QA 和业务审批；若市场、产品、数据定义或结果改变，必须重新检查甚至降级。当前 M3 案例没有可复核的实际 Campaign 成效数据，不将候选判断展示为已验证知识资产。</p>
+        </details>
+        <nav class="m3-learning-followups" aria-label="复盘相关能力案例"><a href="#/case/gtm/campaign-architecture">返回整合传播与渠道角色 ↗</a><a href="#/case/creative/video-projects">查看视频创意与产品动作演示 ↗</a><a href="#/case/operations/asset-review">查看内容审核及团队交付 ↗</a></nav>
       </section>`;
   }
 
@@ -243,39 +258,7 @@
         <a href="#/case/gtm/campaign-mechanism-mapping"><b>04</b> 创意方向</a>
         <a href="#/case/gtm/market-adaptation"><b>05</b> 美英本地化</a>
       </nav>
-      <section class="m3-kv-showcase m3-kv-truth" id="m3-campaign-kv" aria-labelledby="m3-kv-heading">
-        <header><small>BRAND × PMM / M3 CAMPAIGN CONTENT</small><h3 id="m3-kv-heading">M3｜产品价值与渠道传播信息</h3><p>从 M3 的真实产品结构出发，梳理品牌主张、用户场景与产品选择理由，再明确不同渠道分别需要说明什么。尚未核实的 Campaign KV 不作为作品展示。</p></header>
-        <div class="m3-kv-source-layout">
-          <figure class="m3-kv-source-figure">
-            <img src="assets/projects/m3-yellow-main.webp" alt="M3 黄色双盘电动拖把产品外观参考，D 型主手柄、辅助握把、伸缩杆与双盘结构" loading="lazy" decoding="async">
-            <figcaption>产品外观参考｜已收录的 M3 产品源图，不是 Campaign KV 成片</figcaption>
-          </figure>
-          <div class="m3-kv-source-explanation">
-            <small>THE POSITIONING DECISION</small>
-            <h4>让产品进入生活故事，但不让故事代替产品证明</h4>
-            <p>美国市场的传播切口选择餐后硬地整理。画面先呈现生活还在继续、地面仍待清理的时刻，再明确介绍 M3 是双盘电动拖把；产品是否适合具体地面、如何握持与移动，交给经过核验的演示和使用说明。</p>
-            <div class="m3-kv-core-copy"><span>场景入口</span><strong>Dinner’s done. The floor isn’t.</strong><span>上市创意</span><strong>Make Room for What Matters.</strong><span>产品身份</span><strong>Meet M3. A dual-head electric mop.</strong></div>
-            <p class="m3-kv-copy-boundary">“节省多少时间”“任何地面都适用”“比手动清洁更高效”均不是这组画面的已证实结论。</p>
-          </div>
-        </div>
-        <div class="m3-kv-message-layers" aria-label="M3 品牌主张、产品价值和Campaign创意的不同任务">
-          <article><small>01 / BRAND PROMISE</small><h4>Power Every Move</h4><p>长期品牌主张。强调不同清洁任务中人的行动与生活，而不是单一 M3 产品的性能口号。</p></article>
-          <article><small>02 / PRODUCT VALUE / PMM</small><h4>双盘结构与可观察的操作方式</h4><p>以双盘底座、D 型握持和推进路径解释产品的实际使用方式；用官方型号资料和连续实拍支撑功能信息。</p></article>
-          <article><small>03 / CAMPAIGN BIG IDEA</small><h4>Make Room for What Matters</h4><p>从餐后需要处理的地面任务转向家庭相处时刻。情绪表达用于建立关联，具体产品能力仍需独立证明。</p></article>
-        </div>
-        <section class="m3-kv-channel-adaptation" id="m3-kv-channel-adaptation" aria-labelledby="m3-kv-channel-title">
-          <header><small>CREATIVE ADAPTATION / 渠道信息次序</small><h4 id="m3-kv-channel-title">同一主题，三种比例不等于同一张画面粗裁</h4><p>版式随内容任务变化；图像完成度、Claim、CTA 与可用权限由发布前审核确认。</p></header>
-          <div class="m3-kv-format-roles">
-            <article><span>16:9 / HERO</span><h5>完整生活情境与品牌记忆</h5><p>家庭场景承接 Big Idea，产品信息明确但不抢夺人物关系。适合横版传播提案或完整主题叙事。</p><b>核心信息：Make Room for What Matters</b></article>
-            <article><span>4:5 / SOCIAL FEED</span><h5>快速识别主题和产品</h5><p>让首屏能同时看见生活场景、品牌与产品身份，文字与产品结构各有安全区域。</p><b>核心信息：Meet M3 / 了解产品</b></article>
-            <article><span>9:16 / STORY & REELS</span><h5>优先突出场景钩子和下一步</h5><p>按竖屏重新安排人物、产品和 CTA。真正的双盘旋转及清洁过程需要实拍，不能由静态 KV 代替。</p><b>核心信息：Dinner’s done. The floor isn’t.</b></article>
-          </div>
-          <p class="m3-kv-handoff-link"><a href="#/case/gtm/campaign-activation">查看 Owned、Paid、Creator、PR、CRM 的具体渠道分工 ↗</a> · <a href="#/case/operations/asset-review">查看视觉和产品事实审核 ↗</a></p>
-        </section>
-        <p class="m3-kv-evidence-disclosure">本章节展示产品外观参考与传播信息的组织方式，不展示未经确认的 KV 成品，也不据此声称已经投放。</p>
-      </section>
-      
-<section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
+      <section class="pmm-strategy-board" id="gtm-positioning-decision" aria-labelledby="pmm-decision-heading">
   <header class="pmm-board-head pmm-board-lead">
     <small>PRODUCT POSITIONING / COMMERCIAL MESSAGE / M3</small>
     <h3 id="pmm-decision-heading">从餐后清洁任务，确定 M3 值得被选择的理由</h3>
@@ -358,7 +341,7 @@
           <article><span>04 / LAUNCH & LEARN</span><h4>发布节奏与后续复盘相连</h4><p>产品/商业同事确认 SKU、Offer、库存、履约和追踪条件，内容侧按审核结果出片；上市后分 D7 / D30 复核内容与承接。</p><b>我的参与</b><small>物料准备、内容质量验收与项目复盘协作</small></article>
         </div>
         <div class="gtm-message-translation"><span>VALUE TO MARKET / 同一产品信息的落地路径</span><div><b>产品事实</b><i>→</i><b>用户场景</b><i>→</i><b>卖点证明</b><i>→</i><b>渠道内容</b><i>→</i><b>反馈优化</b></div></div>
-        <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-d7-d30">查看 D7 / D30 复盘逻辑 ↗</a></p>
+        <p class="gtm-market-links"><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 品牌屋 ↗</a><a href="#/case/gtm/launch-delivery">查看上市传播排期 ↗</a><a href="#/case/gtm/launch-knowledge-loop">查看 D7 / D30 复盘逻辑 ↗</a></p>
       </section>
       <details class="g-story-note v-supporting-evidence" id="launch-channel-plan">
         <summary>渠道分工与用户任务 · 查看四类触点明细</summary>
