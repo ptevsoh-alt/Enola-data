@@ -961,6 +961,7 @@
         <p class="video-life-footer">这是一条内容资产的承接方案；实际客户分层、广告再营销、邮件触发、会员权益与归因，由各负责人与数据源单独确认。</p>
         <nav class="video-life-links" aria-label="视频内容与用户关系项目"><a href="#/case/crm/crm-handoff">CRM / 用户生命周期承接 ↗</a><a href="#/case/community">社群与用户关系 ↗</a><a href="#/case/creator">Creator 合作与素材权利 ↗</a></nav>
       </section>
+      <span id="creative-production-scope" aria-hidden="true"></span>
       <section class="video-production-system" id="video-production-process" aria-labelledby="video-production-heading">
         <header class="video-section-heading"><small>VIDEO PRODUCTION × CAMPAIGN DELIVERY</small><h3 id="video-production-heading">从策略 Brief 到可发布的视频版本</h3><p>我的工作重点是创意方向、脚本与镜头要求、真实结构审查，以及不同渠道的素材版本协调；制作、投放、预算与业务结果分别由对应岗位承担。</p></header>
         <div class="video-production-steps">
