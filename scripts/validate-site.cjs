@@ -155,7 +155,7 @@ check("public identity minimization and video case preservation", () => {
     "Employer or brand identifier leaked into public website");
   assert.ok(!/[A-Z]:[\\\/](?:Users|Documents|Projects)/i.test(pathText),
     "Private local directory exposed");
-  assert.ok(!/(?:[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?:\+?86[- ]?)?1[3-9]\d{9})/.test(pathText),
+  assert.ok(!/(?:[\w.+-]+@[\w.-]+\.[A-Za-z]{2,}|(?<![\d.])(?:\+?86[- ]?)?1[3-9]\d{9}(?!\d))/.test(pathText),
     "Direct email/phone identifier exposed");
   const videoCase = fs.readFileSync(path.join(site,"projects.js"),"utf8");
   const videoReview = fs.readFileSync(path.join(site,"review/index.html"),"utf8");
