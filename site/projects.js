@@ -894,7 +894,7 @@
         </article>
       </div>
       <section class="tvc-campaign-bridge" id="video-campaign-strategy" aria-labelledby="video-campaign-story-heading">
-        <header><small>IMC / CREATIVE ROLES</small><h3 id="video-campaign-story-heading">品牌表达统一，但不同视频不承担同一项任务</h3><p>长期品牌主张决定内容的共同基调。感恩节、圣诞节与 Creator 演示属于不同的内容项目；在 M3 上市 Campaign 中，这些已经形成的视频方法可以复用，但不能直接把节庆片称为同一次上市的投放成果。</p></header>
+        <header><small>IMC / CREATIVE ROLES</small><h3 id="video-campaign-story-heading">品牌表达统一，但不同视频不承担同一项任务</h3><p>长期品牌主张决定内容基调。感恩节与圣诞节分别讲家庭故事，Creator 负责真实使用；M3 的 Make Room for What Matters 则围绕餐后清洁任务组织上市传播。它们共享场景、产品动作与渠道版本的创意方法，但对应不同的活动及交付。</p></header>
         <div class="tvc-campaign-bridge-grid">
           <article><span>THANKSGIVING / TVC</span><h4>让清洁成为表达感谢的动作</h4><p>从餐桌和家人相聚建立相关性，随后交代双盘工具如何进入日常照料。视频的主要任务是品牌联想与产品初步认识。</p></article>
           <article><span>CHRISTMAS / TVC</span><h4>用完整人物故事建立品牌记忆</h4><p>圣诞树、长者整理地面和家庭团聚构成情绪推进；产品镜头不能脱离人物逻辑，也不能用情绪画面充当性能证明。</p></article>
