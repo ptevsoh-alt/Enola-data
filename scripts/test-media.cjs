@@ -52,9 +52,11 @@ for(const name of ["stair-demo.mp4","creator-livingroom-intro.mp4","product-open
   assert.ok(!page.includes('assets/video/'+name),'retired short file in case page: '+name);
   assert.ok(!review.includes('../assets/video/'+name),'retired short file in review: '+name);
 }
-for(const id of ["1xuDMGJbNw4RZt9nBuyLkjy7Hl6MZZm6y","15m5TOYZh90NUqTmSbHget8BJbeBEhLKE"]){
-  assert.ok(page.includes('drive.google.com/file/d/'+id+'/preview'),'full TVC missing in case: '+id);
-  assert.ok(review.includes('drive.google.com/file/d/'+id+'/preview'),'full TVC missing in review: '+id);
+for (const [name,content] of [["case",page],["review",review]]) {
+  assert.ok(!content.includes("drive.google.com/file/d/"),"public "+name+" leaks raw-film file identifiers");
+  assert.ok(!/<iframe[^>]+src=["']https?:/.test(content),"public "+name+" has external film embed");
 }
+assert.equal((page.match(/class="tvc-work-safe-preview"/g)||[]).length,2,"Two film creative cases must remain");
+assert.equal((review.match(/class="review-film-safe-preview"/g)||[]).length,2,"Two film review summaries must remain");
 assert.ok(!page.includes("video-holiday-cutdown")&&!review.includes("video-holiday-cutdown"),"TVC cutdown control must not exist");
-console.log("PASS two full seasonal TVCs and two distinct seven-second Creator scenes; no TVC short cutdown.");
+console.log("PASS two anonymized seasonal film summaries and two local Creator clips; no raw-film URL.");
