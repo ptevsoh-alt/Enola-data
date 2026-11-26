@@ -454,6 +454,15 @@
             <article><span>08 / DATA & DELIVERY</span><h5>测量、排期与项目管理</h5><p>将素材版本、渠道任务、发布时间和跨团队责任汇总；数据分析侧统一指标与来源，识别内容或承接环节的问题。</p><dl><dt>交付</dt><dd>里程碑、协作清单、UTM / 测量需求、复盘会议</dd><dt>复盘</dt><dd>内容表现、页面承接、运营问题与下一轮调整</dd></dl></article>
           </div>
           </details>
+          <section class="campaign-video-handoff" id="campaign-video-handoff" aria-labelledby="campaign-video-handoff-heading">
+            <header><small>VIDEO / CAMPAIGN CONTENT ROLES</small><h5 id="campaign-video-handoff-heading">视频不是独立交付物，而是整合传播中的一组内容任务</h5><p>这页的 M3 上市方案沿用长期品牌主张 Power Every Move；<i>Make Room for What Matters</i> 是本次上市的活动创意。节庆 TVC 和 Creator 则在独立视频案例中，展示相同的品牌与视频制作方法如何服务不同传播任务。</p></header>
+            <div class="campaign-video-handoff-grid">
+              <article><small>BRAND / HERO</small><b>建立场景与品牌记忆</b><p>从生活矛盾与情绪进入，把产品安放在真实家庭任务中。</p></article>
+              <article><small>PRODUCT / CREATOR</small><b>让选择理由可见</b><p>用连续操作、真实结构和适用条件回答用户的具体疑问。</p></article>
+              <article><small>PAID / SOCIAL / LIFECYCLE</small><b>按受众状态分配内容</b><p>发现阶段讲品牌，考虑阶段讲操作；购后以许可和有效状态为前提提供使用教育。</p></article>
+            </div>
+            <a href="#/case/creative/video-projects">查看实际节庆 TVC、Creator 视频与渠道／生命周期内容架构 ↗</a>
+          </section>
           <div class="campaign-integration-guardrails" aria-label="Campaign 传播方案与团队交付管理">
             <div class="campaign-integration-heading"><span>CAMPAIGN MANAGEMENT / FROM BRIEF TO DELIVERY</span><h5>从品牌主张到跨团队交付</h5><p>我将核心传播信息、产品证据、创意物料与社媒日历组织成同一份执行计划，并协调产品、视觉、视频、Creator 及渠道同事按节点交付。</p></div>
             <div class="campaign-management-sequence" aria-label="品牌定位到执行的四步链条">
@@ -833,10 +842,29 @@
 
   function creative() {
     return section("视频创意与 Campaign 内容案例", "节庆品牌影片、产品演示与 Creator 内容的创意方向、脚本、镜头审核及渠道适配。", `
-      <section class="tvc-creative-intro" id="video-campaign-showcase">
-        <span>SEASONAL CAMPAIGN / TVC & CREATOR CONTENT</span>
-        <h3>节庆品牌叙事与产品演示</h3>
-        <p>感恩节关注团聚之后的照料与陪伴，圣诞节关注家人之间默默付出的日常行动。节庆影片将产品作用融入人物关系和家庭情境。KOL / Creator 内容分别展示楼梯踏面清洁与客厅中的产品介绍。</p>
+      <section class="tvc-creative-intro video-strategy-hero" id="video-campaign-showcase">
+        <span>BRAND STORY · CAMPAIGN FILM · CREATOR CONTENT</span>
+        <h3>让品牌被记住，也让产品的使用方式被看懂</h3>
+        <p>视频是品牌传播的一部分，而不是独立的拍摄任务。我将节庆 TVC 用于讲述家庭照料与陪伴，将 Creator 片段用于展示真实使用动作；两类内容分别解决情绪连接和产品理解的问题，再按社媒、广告和后续用户教育的不同目的安排版本。</p>
+        <div class="video-campaign-intro-links"><a href="#/case/brand/brand-positioning">品牌定位与产品线 ↗</a><a href="#/case/gtm/campaign-architecture">M3 整合传播策略 ↗</a><a href="#/case/brand/pr-project">品牌 PR 内容策略 ↗</a></div>
+      </section>
+      <section class="video-brand-foundation" id="video-brand-foundation" aria-labelledby="video-brand-foundation-title">
+        <header class="video-case-section-heading"><small>MARKET / CUSTOMER / BRAND</small><h3 id="video-brand-foundation-title">先判断用户为什么看，再决定这支视频承担什么</h3><p>品牌层面的“Power Every Move”是长期表达。感恩节和圣诞节片以生活关系承接品牌价值，Creator 演示片则帮助用户判断工具是否适合手头的清洁任务。</p></header>
+        <div class="video-foundation-grid">
+          <article><small>01 / CATEGORY CONTEXT</small><h4>不同工具，不同清洁任务</h4><p>电动拖地、吸尘与刷洗并非可以直接互换的产品类别。品牌片可以使用同一个家庭语境，但具体镜头必须回到相应产品线的操作方式。</p><b>内容取舍：不靠“全能清洁”模糊产品边界</b></article>
+          <article><small>02 / CUSTOMER JOB</small><h4>情绪共鸣之外，还要解决疑问</h4><p>品牌 TVC 让观众想到家庭照料；有使用疑虑的人则需要看清握持、吸头接触、推进路线和适用表面。这里是本次内容策划的受众任务，不冒充消费者访谈结论。</p><b>内容取舍：情绪故事与操作证明分开承担</b></article>
+          <article><small>03 / BRAND ROLE</small><h4>让清洁工具服务生活故事</h4><p>节庆影像把产品放进家人相聚与照料的场景，操作视频则用产品结构和连续动作支撑真实使用价值。共同传递长期品牌主张 Power Every Move。</p><b>内容取舍：品牌记忆要有可见的产品依据</b></article>
+        </div>
+        <div class="video-strategy-roof"><small>BRAND MESSAGE</small><strong>Power Every Move</strong><p>节庆情绪帮助记住品牌；产品镜头帮助理解选择理由。M3 的 <i>Make Room for What Matters</i> 属于另一套上市 Campaign 创意，不能把这几支节庆视频误写成同一活动的投放成果。</p></div>
+      </section>
+      <section class="video-asset-architecture" id="video-asset-architecture" aria-labelledby="video-asset-architecture-title">
+        <header class="video-case-section-heading"><small>IMC / VIDEO CONTENT SYSTEM</small><h3 id="video-asset-architecture-title">四支现有视频，分别完成不同的传播任务</h3><p>按受众理解阶段确定资产角色，而非先有视频再寻找投放理由。下面的影片与片段均在本页保留原始播放入口。</p></header>
+        <div class="video-asset-architecture-grid">
+          <article><small>HERO / BRAND AWARENESS</small><h4>感恩节 TVC</h4><p><b>情绪机制：</b>团聚、感谢、家人之间的照料。<b>传播任务：</b>让家庭情境与品牌价值建立联系，随后以双盘使用镜头补充产品识别。</p><a href="#thanksgiving-tvc">查看视频 ↗</a></article>
+          <article><small>HERO / BRAND ASSOCIATION</small><h4>圣诞节 TVC</h4><p><b>情绪机制：</b>默默整理地面，再回到家人的相聚。<b>传播任务：</b>用人物动作建立关怀主题，让产品出现在故事因果中。</p><a href="#holiday-full-film">查看视频 ↗</a></article>
+          <article><small>PRODUCT / DEMONSTRATION</small><h4>楼梯吸尘 Creator</h4><p><b>证明机制：</b>看吸头怎样接触踏面、人物如何握持和移动。<b>传播任务：</b>让操作过程可见，而不是替没有验证的效果背书。</p><a href="#kol-shorts">查看演示 ↗</a></article>
+          <article><small>CREATOR / INTRODUCTION</small><h4>客厅人物介绍</h4><p><b>沟通机制：</b>人物面对镜头介绍和展示产品。<b>传播任务：</b>快速识别产品与使用情境，为后续更完整的功能说明提供入口。</p><a href="#video-opening-comparison">查看片段 ↗</a></article>
+        </div>
       </section>
       <div class="tvc-work-grid" aria-label="节庆 Campaign 视频案例">
         <article class="tvc-work-card" id="thanksgiving-tvc" aria-labelledby="thanksgiving-heading">
@@ -877,6 +905,24 @@
         </div>
         <p><a href="#/case/gtm/campaign-architecture">查看 IMC / Campaign 渠道协同 ↗</a> · <a href="#/case/operations/asset-review">查看创意与物料审核 ↗</a></p>
       </section>
+      <section class="video-paid-system" id="video-paid-architecture" aria-labelledby="video-paid-title">
+        <header class="video-case-section-heading"><small>PAID ARCHITECTURE / CREATIVE SUPPLY</small><h3 id="video-paid-title">品牌视频如何进入 Paid、Organic 与 Creator 的内容组合</h3><p>这是一套基于已展示视频资产的创意供给与渠道适配方案，而非已执行的投放账户或预算成果。先区分业务传播目标，再为每类创意准备不同的证明内容。</p></header>
+        <div class="video-paid-stage-grid">
+          <article><small>01 / DISCOVERY</small><h4>品牌认知与场景识别</h4><p><b>资产：</b>感恩节／圣诞节 TVC 的情绪片段。<b>设计：</b>优先保留人物情境、产品出场及品牌识别，让首次接触者记住传播主题。</p><b>观察：有效触达、观看与品牌关联线索</b></article>
+          <article><small>02 / EDUCATION</small><h4>从兴趣进入操作理解</h4><p><b>资产：</b>楼梯与客厅 Creator 片段。<b>设计：</b>围绕“怎么使用”“适合哪个位置”安排开场与连续动作，并衔接操作说明和产品 FAQ。</p><b>观察：关键片段观看、有效点击、具体疑问</b></article>
+          <article><small>03 / PAID TESTING</small><h4>创意变量与广告适配</h4><p><b>资产：</b>同一产品事实下的故事型、动作型与人物讲解型版本。<b>设计：</b>先区分创意机制，再测试开场、信息顺序或版位；真实预算、出价与结果由 Paid Owner 审批。</p><b>观察：同目标、同窗口、同口径的素材表现</b></article>
+          <article><small>04 / HANDOFF</small><h4>把理解送到正确的下一步</h4><p><b>资产：</b>操作说明、FAQ、产品信息及许可触达内容。<b>设计：</b>访客可继续查证；已购用户转入使用指导。再营销须核对身份、资格、排除与授权，不以观看次数认定购买意图。</p><b>观察：有效到达、用户问题与已核实的后续行动</b></article>
+        </div>
+      </section>
+      <section class="video-production-system" id="video-production-system" aria-labelledby="video-production-title">
+        <header class="video-case-section-heading"><small>VIDEO PRODUCTION / PROOF / QA</small><h3 id="video-production-title">创意落地时，我把重点放在镜头是否交代清楚</h3><p>不同视频可以有不同叙事节奏，但产品外观、动作连续性、表面条件与字幕说法要一致。视频制作不只检验“好不好看”，还要看信息是否能够被真实画面支持。</p></header>
+        <div class="video-production-grid">
+          <article><small>STORY & SHOT DESIGN</small><h4>脚本到分镜</h4><p>把节庆氛围、人物关系与产品出场拆成可拍镜头；对 Creator 内容分别确认开场问题、人物演示和结束信息。</p></article>
+          <article><small>PRODUCT & CONTINUITY</small><h4>动作与真实结构</h4><p>审阅双盘、吸头、握持姿势、接触位置、移动方向和镜头衔接；避免跨镜头出现产品结构或演示条件不一致。</p></article>
+          <article><small>FORMAT & RIGHTS</small><h4>剪辑、字幕及使用权</h4><p>按实际 Feed、Reels 或广告版位确定开场、画幅、文字密度和 CTA；创作者授权、商业关系披露与音乐／视频使用范围分别核对。</p></article>
+        </div>
+        <div class="video-production-links"><a href="#/case/operations/asset-review">查看创意审核与版本管理 ↗</a><a href="#/case/gtm/campaign-architecture">查看 Campaign 如何分配渠道任务 ↗</a></div>
+      </section>
       <section class="video-storyline" id="video-storyline" aria-label="圣诞 TVC 四段叙事结构">
         <header><small>CHRISTMAS STORY / 画面叙事</small><h3>圣诞 TVC：四个镜头任务</h3><p>从家庭氛围出发，让清洁动作成为人物关系的一部分，最后以团聚收束。</p></header>
         <ol class="video-story-beats">
@@ -906,6 +952,16 @@
         </div>
         <p class="kol-role-note">竖屏内容与完整 TVC 的叙事方式不同：先交代清洁问题，再用人物、产品和接触动作完成体验表达。审核重点放在动作是否清晰、产品外观是否准确、开场能否快速传递主题。</p>
       </section>
+      <section class="video-lifecycle-system" id="video-lifecycle-handoff" aria-labelledby="video-lifecycle-heading">
+        <header class="video-case-section-heading"><small>LIFECYCLE MARKETING / COMMUNITY / LOYALTY</small><h3 id="video-lifecycle-heading">视频发布之后，内容如何继续服务用户</h3><p>把传播内容变成长期可用的教育资产：新访客需要看懂产品，已购用户需要操作与维护说明，愿意参与的人可以在社群分享经验。不同用户状态不能仅凭点赞、观看或评论推定。</p></header>
+        <div class="video-lifecycle-journey">
+          <article><small>DISCOVER</small><h4>第一次认识品牌</h4><p>节庆品牌片、场景短片提供有记忆点的入口；社媒讨论帮助识别用户想继续了解的问题。</p><span>下一步：观看演示或阅读产品信息</span></article>
+          <article><small>CONSIDER</small><h4>确认是否适合使用</h4><p>产品片、Creator 演示和 FAQ 回答握持、路径、适用表面等问题。避免把短视频观看者直接归入高购买意向人群。</p><span>下一步：核实产品、条件和购买信息</span></article>
+          <article><small>ONBOARD</small><h4>已购后的使用教育</h4><p>在订单与许可数据确认后，把开箱、操作、清洁和维护视频用于售后指导；停止与已购状态冲突的购买催促内容。</p><span>下一步：完成首次使用与问题解决</span></article>
+          <article><small>RELATE</small><h4>社群、反馈与自愿推荐</h4><p>将真实问题用于教程更新，邀请用户自愿分享使用经验；UGC 复用需单独授权。会员、推荐权益与奖励规则必须由对应业务负责人批准。</p><span>下一步：教育、社区参与或合规的推荐计划</span></article>
+        </div>
+        <div class="video-lifecycle-note"><strong>营销承接，不等于已实现的 CRM / Loyalty 成果</strong><p>视频页展示内容如何衔接用户旅程与会员关系的设计方法；不虚构已投放素材的 CPA、ROAS、成交归因、自动化流程上线率、积分兑换率或推荐增长。</p><p><a href="#/case/crm/crm-handoff">查看 CRM 与 Lifecycle 触达逻辑 ↗</a> · <a href="#/case/community">查看社群关系与用户问题 ↗</a></p></div>
+      </section>
       <div class="video-format-roles" id="video-format-roles" aria-label="节庆 TVC 与 KOL 内容的传播分工">
         <div><small>THANKSGIVING TVC</small><b>节庆情境与感谢</b><p>用餐桌与家庭互助进入故事，让产品功能自然承接生活场景。</p></div>
         <div><small>CHRISTMAS TVC</small><b>关怀与家庭陪伴</b><p>以默默照料建立品牌情绪，产品实际使用推动人物关系。</p></div>
@@ -928,12 +984,16 @@
           <article><small>CREATOR REVIEW</small><h4>创作者内容与素材验收</h4><p>在合作 Brief 中说明受众、演示任务、产品事实和披露要求，审阅初稿、修改版本及素材使用范围。</p></article>
         </div>
       </section>
-      <div class="g-story-note" id="video-management">
-        <h3>我的创意参与与项目交付</h3>
-        <p>依据 Campaign 目标和受众场景提出创意方向，完成脚本修改、镜头要求及内容审核；制作过程中核对产品结构、真实操作、字幕与画幅，分别准备不同平台的发布版本。</p>
-        <p>负责 Campaign 创意主题、社媒短视频选题、内容 Hook、分镜脚本、人物与产品动作审核、成片修改及不同平台的内容适配。</p>
-        <p><a href="#/case/creative/video-strategy">查看视频创意判断 ↗</a> · <a href="#/case/gtm/campaign-architecture">查看 Campaign 协同 ↗</a></p>
-      </div>`, "video-projects");
+      <section class="video-delivery-management" id="video-management" aria-labelledby="video-management-heading">
+        <header class="video-case-section-heading"><small>CREATIVE LEAD / CAMPAIGN DELIVERY</small><h3 id="video-management-heading">我如何把创意方向变成可交付的视频</h3><p>负责节庆主题、社媒视频选题与创意 Brief，组织脚本修改、镜头要求、产品动作核对、成片反馈和渠道版本。产品、媒体投放、CRM 与会员机制则由相应负责人批准执行。</p></header>
+        <div class="video-delivery-grid">
+          <article><small>01 / CAMPAIGN BRIEF</small><h4>确定内容任务</h4><p>确认主题、使用场景、受众需要理解的内容及品牌产品角色；区分品牌片和操作演示。</p></article>
+          <article><small>02 / CREATIVE HANDOFF</small><h4>组织脚本与拍摄要点</h4><p>把 Hook、人物情节、产品出场、连续动作、字幕和画幅整理给视频及创作者团队。</p></article>
+          <article><small>03 / QA & VERSION</small><h4>审核产品事实与渠道版本</h4><p>核对型号与结构、演示场景、授权、CTA 和渠道要求；记录需修改的镜头及素材版本。</p></article>
+          <article><small>04 / LEARNING</small><h4>复盘内容与用户问题</h4><p>按同窗口观察观看、互动、有效访问及问题类型，调整下一轮脚本；商业效果只使用核实后的数据。</p></article>
+        </div>
+        <div class="video-production-links"><a href="#/case/creative/video-strategy">视频创意与分镜判断 ↗</a><a href="#/case/gtm/campaign-architecture">Campaign 管理及创意适配 ↗</a><a href="#/case/brand/pr-project">PR 与品牌内容协同 ↗</a></div>
+      </section>`, "video-projects");
   }
 
   function expo() {
