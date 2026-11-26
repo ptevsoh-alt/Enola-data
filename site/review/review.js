@@ -120,7 +120,7 @@
 
   const visuals = [
     ["../assets/projects/m3-yellow-main.webp", "M3 Product Identity", "产品外观与型号识别素材", "gtm", "contain", "launch"],
-    ["../assets/projects/mop-kv-detail.webp", "M3 Campaign KV", "Campaign 主视觉细节", "gtm", "cover", "launch"],
+    ["../assets/projects/mop-kv-detail.webp", "Product Detail", "产品局部图 · 非活动主视觉成品", "gtm", "cover", "launch"],
     ["../assets/projects/m3-yellow-battery.webp", "M3 Battery Detail", "产品细节素材", "gtm", "contain", "launch"],
     ["../assets/projects/brand-house.webp", "Brand House", "品牌屋与信息架构工作物", "brand", "cover", "brand"],
     ["../assets/projects/joint-giveaway.webp", "Joint Campaign", "联合活动视觉素材", "brand", "cover", "brand"],
