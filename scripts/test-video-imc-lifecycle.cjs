@@ -33,7 +33,7 @@ const {JSDOM,VirtualConsole}=require("jsdom");
   assert.equal(count("#video-projects .video-lifecycle-handoff article"),2,"Lifecycle and loyalty need distinct evidence boundaries");
   assert.equal(count("#video-projects .video-hook-grid article"),3,"Paid creative angle hypotheses incomplete");
   assert.equal(count("#video-projects .video-delivery-grid article"),5,"Campaign video management chain incomplete");
-  assert.ok(root.querySelector(".video-campaign-positioning-line")?.textContent.includes("Power Every Move"),"Long-term brand promise missing");
+  assert.ok(root.querySelector(".video-campaign-positioning-line")?.textContent.includes("帮助家庭处理日常清洁任务"),"Anonymized long-term brand value missing");
   assert.ok(root.querySelector(".video-context-note")?.textContent.includes("Make Room for What Matters"),"Cross-campaign context should be explicit");
   assert.ok(root.querySelector(".video-test-boundary")?.textContent.includes("Paid Owner"),"Paid experiment ownership must remain distinct");
   assert.ok(root.querySelector(".video-lifecycle-handoff")?.textContent.includes("CRM / Lifecycle Owner"),"CRM consent/status boundaries missing");
