@@ -258,13 +258,15 @@ const fs = require("fs"),
     });
   }
   await route("/case/gtm/m3-campaign-kv");
-  check("M3 Campaign exposes two product-accurate KV compositions", () => {
+  check("M3 Campaign shows verified product reference and truthful KV strategy", () => {
     const view = d.querySelector("#m3-campaign-kv");
     assert.ok(view);
-    assert.equal(view.querySelectorAll("figure").length, 2);
-    assert.equal(view.querySelectorAll("img[src='assets/projects/m3-yellow-main.webp']").length, 2);
-    assert.ok(view.textContent.includes("From grip"));
-    assert.ok(view.textContent.includes("Make Room for"));
+    assert.equal(view.querySelectorAll(".m3-kv-source-figure").length, 1);
+    assert.equal(view.querySelectorAll("img[src='assets/projects/m3-yellow-main.webp']").length, 1);
+    assert.equal(view.querySelectorAll(".m3-kv-message-layers article").length, 3);
+    assert.equal(view.querySelectorAll(".m3-kv-format-roles article").length, 3);
+    assert.equal(view.querySelectorAll(".m3-kv-comps").length, 0);
+    assert.ok(view.textContent.includes("Make Room for What Matters"));
   });
   await route("/case/gtm/gtm-visual-schedule");
   check("May plan starts at marketing work, not personal product initiation", () => {
